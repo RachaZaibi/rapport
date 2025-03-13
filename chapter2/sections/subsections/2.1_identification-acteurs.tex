@@ -1,0 +1,23 @@
+\subsection{Identification des acteurs}
+
+Dans un premier temps, nous identifions les acteurs du système, c'est-à-dire les entités externes qui interagiront avec l'application. Ces acteurs jouent un rôle central dans la définition des fonctionnalités et des services que le système doit fournir.
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabular}{| m{3cm} | m{7cm} |}
+        \hline
+        \textbf{Acteur} & \textbf{Description} \\
+        \hline
+        \textbf{Médecin} & Consulte les données des patients, reçoit les alertes critiques et valide les actions nécessaires. \\
+        \hline
+        \textbf{Infirmier(ère)} & Surveille les patients, reçoit les alertes en fonction de ses horaires et prend des mesures immédiates. \\
+        \hline
+        \textbf{Administrateur du Système} & Gère les utilisateurs, configure les seuils d'alerte et assure le bon fonctionnement du système. \\
+        \hline
+        \textbf{Moniteur de Signes Vitaux} & Source de données : envoie des informations vitales via API ou caméra. \\
+        \hline
+        \textbf{Caméra OCR} & Capture les données des machines plus anciennes et les transmet pour analyse. \\
+        \hline
+    \end{tabular}
+    \caption{Acteurs du système et leurs rôles}
+\end{table}

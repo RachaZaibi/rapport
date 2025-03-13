@@ -1,0 +1,62 @@
+Pour le développement du système, les outils suivants seront utilisés :
+
+\begin{itemize}
+    \item \textbf{Langages de programmation} :
+    \begin{itemize}
+        \item \textbf{Python} :
+            \begin{itemize}
+                \item Version : Python 3.9 ou supérieur.
+                \item Rôle : Utilisé pour le traitement des données, la collecte via API/HL7, et l'intégration des bibliothèques de vision par ordinateur (OpenCV, Tesseract OCR).
+                \item Frameworks : Flask ou Django pour le développement backend.
+            \end{itemize}
+        \item \textbf{Laravel} :
+            \begin{itemize}
+                \item Version : Laravel 8.x ou supérieur.
+                \item Rôle : Utilisé pour le développement du backend, la gestion des utilisateurs, et l'intégration des services de notification (e-mail, FCM).
+                \item Fonctionnalités clés : ORM (Eloquent), gestion des routes, et système de templates (Blade).
+            \end{itemize}
+        \item \textbf{React} :
+            \begin{itemize}
+                \item Version : React 17.x ou supérieur.
+                \item Rôle : Utilisé pour le développement de l'interface web, permettant une visualisation interactive des données des patients et la gestion des alertes.
+                \item Bibliothèques associées : Redux pour la gestion de l'état, Axios pour les requêtes HTTP.
+            \end{itemize}
+        \item \textbf{Flutter} :
+            \begin{itemize}
+                \item Version : Flutter 2.x ou supérieur.
+                \item Rôle : Utilisé pour le développement de l'application mobile, permettant au personnel médical de recevoir des notifications et d'accéder aux données des patients en temps réel.
+                \item Fonctionnalités clés : Interface native pour Android et iOS, intégration avec Firebase pour les notifications push.
+            \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Bibliothèques et outils} :
+    \begin{itemize}
+        \item \textbf{OpenCV} :
+            \begin{itemize}
+                \item Version : OpenCV 4.5 ou supérieur.
+                \item Rôle : Utilisé pour le traitement d'images et la détection des régions d'intérêt (ROI) dans les moniteurs de signes vitaux.
+                \item Fonctionnalités clés : Manipulation d'images, détection de texte, et prétraitement des données pour l'OCR.
+            \end{itemize}
+        \item \textbf{Tesseract OCR} :
+            \begin{itemize}
+                \item Version : Tesseract 5.0 ou supérieur.
+                \item Rôle : Utilisé pour la reconnaissance optique de caractères (OCR) afin d'extraire les valeurs vitales des images capturées par les caméras.
+                \item Fonctionnalités clés : Support multilingue, haute précision pour les chiffres et les textes médicaux.
+            \end{itemize}
+        \item \textbf{Firebase Cloud Messaging (FCM)} :
+            \begin{itemize}
+                \item Rôle : Utilisé pour envoyer des notifications push en temps réel aux appareils mobiles du personnel médical.
+                \item Fonctionnalités clés : Intégration avec Flutter et Laravel, support pour Android et iOS.
+            \end{itemize}
+        \item \textbf{Docker} :
+            \begin{itemize}
+                \item Rôle : Utilisé pour la conteneurisation des applications, permettant un déploiement facile et une gestion des dépendances.
+                \item Fonctionnalités clés : Isolation des environnements, déploiement sur différents serveurs.
+            \end{itemize}
+        \item \textbf{Git} :
+            \begin{itemize}
+                \item Rôle : Utilisé pour le contrôle de version et la collaboration entre les membres de l'équipe de développement.
+                \item Plateforme : GitHub ou GitLab pour le stockage des dépôts et la gestion des branches.
+            \end{itemize}
+    \end{itemize}
+\end{itemize}

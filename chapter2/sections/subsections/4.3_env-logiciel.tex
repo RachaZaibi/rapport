@@ -1,0 +1,82 @@
+Pour assurer le bon fonctionnement du système, les exigences logicielles suivantes doivent être respectées :
+
+\begin{itemize}
+    \item \textbf{Systèmes d'exploitation} :
+    \begin{itemize}
+        \item \textbf{Serveurs} :
+            \begin{itemize}
+                \item Linux : Distributions recommandées (Ubuntu Server 20.04 LTS, CentOS 8).
+                \item Rôle : Hébergement des serveurs backend, gestion des bases de données, et traitement des données en temps réel.
+                \item Configuration minimale : 4 cœurs CPU, 8 Go de RAM, 50 Go de stockage.
+            \end{itemize}
+        \item \textbf{Postes de développement} :
+            \begin{itemize}
+                \item Windows 11.
+                \item Rôle : Environnement de développement (backend \& frontend \& mobile).
+                \item Configuration minimale : 16 Go de RAM, processeur Intel i5.
+            \end{itemize}
+        \item \textbf{Appareils mobiles} :
+            \begin{itemize}
+                \item Android : Version 8.0 .
+                \item Rôle : Exécution de l'application mobile pour le personnel médical.
+            \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Systèmes de base de données} :
+    \begin{itemize}
+        \item \textbf{Base de données principale} :
+            \begin{itemize}
+                \item MySQL : Version 8.0 ou supérieure.
+                \item Rôle : Stockage des données des patients, des alertes, et des historiques.
+                \item Configuration : Base de données relationnelle avec support des transactions ACID.
+            \end{itemize}
+        % \item \textbf{Base de données pour le cache} :
+        %     \begin{itemize}
+        %         \item Redis : Version 6.x ou supérieure.
+        %         \item Rôle : Gestion du cache pour améliorer les performances du système, notamment pour les requêtes fréquentes.
+        %         \item Configuration : Stockage en mémoire pour un accès ultra-rapide aux données.
+        %     \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Protocoles de communication} :
+    \begin{itemize}
+        \item \textbf{HL7 (Health Level Seven)} :
+            \begin{itemize}
+                \item Version : HL7 FHIR (Fast Healthcare Interoperability Resources) R4.
+                \item Rôle : Standard pour l'échange de données médicales entre les moniteurs Mindray et le système central.
+                \item Fonctionnalités : Support des messages en temps réel (ex. résultats de tests, alertes).
+            \end{itemize}
+        \item \textbf{API REST} :
+            \begin{itemize}
+                \item Rôle : Interface de communication entre les différents composants du système (frontend, backend, mobile).
+                \item Sécurité : Utilisation de tokens JWT (JSON Web Tokens) pour l'authentification et l'autorisation.
+                \item Documentation : Swagger/OpenAPI pour une documentation interactive des API.
+            \end{itemize}
+        \item \textbf{WebSockets} :
+            \begin{itemize}
+                \item Rôle : Communication en temps réel entre le backend et les applications mobiles/web pour les notifications push.
+                \item Utilisation : Envoi instantané des alertes critiques au personnel médical.
+            \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Autres logiciels et outils} :
+    \begin{itemize}
+        \item \textbf{IDE (Environnements de développement intégrés)} :
+            \begin{itemize}
+                \item Visual Studio Code : Pour le développement en Python, React, et Flutter.
+                \item PHPStorm : Pour le développement en Laravel.
+            \end{itemize}
+        \item \textbf{Gestion des dépendances} :
+            \begin{itemize}
+                \item Composer : Pour la gestion des packages PHP (Laravel).
+                \item npm : Pour la gestion des packages JavaScript (React).
+                \item pip : Pour la gestion des packages Python.
+            \end{itemize}
+        \item \textbf{Outils de tests} :
+            \begin{itemize}
+                \item Postman : Pour tester les API REST.
+                \item Jest : Pour les tests unitaires en React.
+                \item PHPUnit : Pour les tests unitaires en Laravel.
+            \end{itemize}
+    \end{itemize}
+\end{itemize}
