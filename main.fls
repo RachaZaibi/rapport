@@ -484,9 +484,9 @@ INPUT .\chapter2\sections\diagrams\architecture.png
 INPUT .\chapter2\sections\diagrams\architecture.png
 INPUT .\chapter2\sections\diagrams\architecture.png
 INPUT .\chapter2\sections\diagrams\architecture.png
-INPUT .\chapter2\sections\subsections\5.4_diagramme-deploy.tex
-INPUT .\chapter2\sections\subsections\5.4_diagramme-deploy.tex
-INPUT chapter2\sections\subsections\5.4_diagramme-deploy.tex
+INPUT .\chapter2\sections\subsections\5.4_diagramme-deploy copy 2.tex
+INPUT .\chapter2\sections\subsections\5.4_diagramme-deploy copy 2.tex
+INPUT chapter2\sections\subsections\5.4_diagramme-deploy copy 2.tex
 INPUT .\chapter2\sections\diagrams\deployment_diagram.png
 INPUT .\chapter2\sections\diagrams\deployment_diagram.png
 INPUT .\chapter2\sections\diagrams\deployment_diagram.png
@@ -494,6 +494,22 @@ INPUT .\chapter2\sections\diagrams\deployment_diagram.png
 INPUT .\chapter2\sections\diagrams\deployment_diagram.png
 INPUT .\chapter2\sections\diagrams\deployment_diagram.png
 INPUT .\chapter2\sections\diagrams\deployment_diagram.png
+INPUT .\chapter2\sections\subsections\5.5_composants_deploiement.tex
+INPUT .\chapter2\sections\subsections\5.5_composants_deploiement.tex
+INPUT chapter2\sections\subsections\5.5_composants_deploiement.tex
+INPUT .\chapter2\sections\subsections\5.6_flux_de_communication.tex
+INPUT .\chapter2\sections\subsections\5.6_flux_de_communication.tex
+INPUT chapter2\sections\subsections\5.6_flux_de_communication.tex
+INPUT .\chapter2\sections\diagrams\communication_flow.png
+INPUT .\chapter2\sections\diagrams\communication_flow.png
+INPUT .\chapter2\sections\diagrams\communication_flow.png
+INPUT .\chapter2\sections\diagrams\communication_flow.png
+INPUT .\chapter2\sections\diagrams\communication_flow.png
+INPUT .\chapter2\sections\diagrams\communication_flow.png
+INPUT .\chapter2\sections\diagrams\communication_flow.png
+INPUT .\chapter2\sections\subsections\5.7_justification.tex
+INPUT .\chapter2\sections\subsections\5.7_justification.tex
+INPUT chapter2\sections\subsections\5.7_justification.tex
 INPUT .\chapter3\chapter3.tex
 INPUT .\chapter3\chapter3.tex
 OUTPUT chapter3\chapter3.aux

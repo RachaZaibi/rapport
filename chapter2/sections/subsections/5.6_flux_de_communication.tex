@@ -1,0 +1,9 @@
+Le flux de communication du système débute par la \textbf{collecte des données} à partir des moniteurs Mindray (via HL7) ou des machines anciennes (via OCR). Ces données sont ensuite \textbf{transmises au backend} via le réseau de surveillance interne. Le backend \textbf{analyse les données en temps réel} et les stocke dans une base de données MySQL. En cas de détection d’anomalies (par rapport aux seuils prédéfinis), le système \textbf{envoie des alertes} au personnel médical via e-mail, SMS, ou notifications push (FCM). Le personnel médical peut alors \textbf{consulter les alertes et les données} via l’application web ou mobile et \textbf{prendre les mesures nécessaires} pour répondre aux situations critiques. Ce flux, illustré dans la \textbf{\ref{fig:communication_flow}}, assure une communication fluide et efficace entre les appareils médicaux, le système central, et le personnel médical.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{chapter2/sections/diagrams/communication_flow.png}
+    \caption{Flux de Communication}
+    \label{fig:communication_flow}
+\end{figure}
+
