@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.9)  18 MAR 2025 03:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.9)  27 MAR 2025 11:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -694,7 +694,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.51 ...’authentification}{22}{subsection.3.4.1}
+l.51 ... la liste des colis}{22}{subsection.3.4.1}
                                                   % [1
 
 ])
@@ -865,28 +865,28 @@ Underfull \hbox (badness 1168) in paragraph at lines 28--30
 []|\OT1/cmr/m/n/10 - Fa-ciliter les r^^Seunions Scrum (Daily Stand-up,
  []
 
-[10] [11]
+[10] [11] (chapter2/sections/subsections/3.1.use-case.tex
 <chapter2/sections/diagrams/use_case.png, id=467, 3392.675pt x 3352.525pt>
 File: chapter2/sections/diagrams/use_case.png Graphic file (type png)
 <use chapter2/sections/diagrams/use_case.png>
-Package pdftex.def Info: chapter2/sections/diagrams/use_case.png  used on input line 122.
+Package pdftex.def Info: chapter2/sections/diagrams/use_case.png  used on input line 7.
 (pdftex.def)             Requested size: 452.9679pt x 447.55814pt.
- [12] [13
+) [12] (chapter2/sections/subsections/3.2_sprints.tex [13
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.137                 \item I
-                             ntégration de la caméra avec le système. <./chapter2/sections/diagrams/use_case.png>]) (chapter2/sections/4_env-travaill.tex (chapter2/sections/subsections/4.1_env-materiel.tex [14]
+l.13                 \item V
+                            alidation des données collectées par rapport a... <./chapter2/sections/diagrams/use_case.png>]) (chapter2/sections/subsections/3.3_interfaces.tex)) (chapter2/sections/4_env-travaill.tex (chapter2/sections/subsections/4.1_env-materiel.tex [14]
 Overfull \hbox (4.47243pt too wide) in paragraph at lines 36--37
 []\OT1/cmr/m/n/10 S^^Securit^^Se : Chiffre-ment des donn^^Sees (ex. SSL/TLS) pour prot^^Seger les in-for-ma-tions m^^Sedicales
  []
 
-) (chapter2/sections/subsections/4.2_env-dev.tex [15]
+) (chapter2/sections/subsections/4.2_env-dev.tex
 Overfull \hbox (0.89943pt too wide) in paragraph at lines 15--16
 []\OT1/cmr/m/n/10 R^ole : Utilis^^Se pour le d^^Seveloppement du back-end, la ges-tion des util-isa-teurs, et l'int^^Segration
  []
 
-) (chapter2/sections/subsections/4.3_env-logiciel.tex [16])) (chapter2/sections/5_architecture.tex (chapter2/sections/subsections/5.1_archi-physique.tex [17]) (chapter2/sections/subsections/5.2_fonctionnement-archi.tex) (chapter2/sections/subsections/5.3_specification-logicielle.tex [18]
+[15]) (chapter2/sections/subsections/4.3_env-logiciel.tex [16])) (chapter2/sections/5_architecture.tex (chapter2/sections/subsections/5.1_archi-physique.tex [17]) (chapter2/sections/subsections/5.2_fonctionnement-archi.tex) (chapter2/sections/subsections/5.3_specification-logicielle.tex [18]
 <chapter2/sections/diagrams/architecture.png, id=504, 1672.2475pt x 619.31375pt>
 File: chapter2/sections/diagrams/architecture.png Graphic file (type png)
 <use chapter2/sections/diagrams/architecture.png>
@@ -955,18 +955,18 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 149D917D2DF39CD41F21914C8B8557ED;14864.
+(rerunfilecheck)             Checksum: 61F97CD8B9A2E5E989BAE4A6B4F5B1AF;14864.
  ) 
 Here is how much of TeX's memory you used:
- 25085 strings out of 474486
- 482615 string characters out of 5743756
+ 25103 strings out of 474486
+ 483491 string characters out of 5743756
  1949542 words of memory out of 5000000
- 46662 multiletter control sequences out of 15000+600000
+ 46671 multiletter control sequences out of 15000+600000
  568515 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,12n,107p,1172b,660s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,12n,107p,1172b,664s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\racha\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on main.pdf (26 pages, 2613498 bytes).
+Output written on main.pdf (26 pages, 2613550 bytes).
 PDF statistics:
  605 PDF objects out of 1000 (max. 8388607)
  127 named destinations out of 1000 (max. 500000)

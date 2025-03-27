@@ -24,13 +24,13 @@
 \contentsline {subsection}{\numberline {2.2.1}Identification des acteurs}{9}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Besoins fonctionnels et non fonctionnels}{9}{subsection.2.2.2}%
 \contentsline {section}{\numberline {2.3}Pilotage du projet avec Scrum}{10}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Diagramme des cas d’utilisation global}{13}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.1}Diagramme des cas d’utilisation global}{12}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}Planification des sprints}{13}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Prototypage des interfaces}{15}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.3}Prototypage des interfaces}{14}{subsection.2.3.3}%
 \contentsline {section}{\numberline {2.4}Environnement de travail}{15}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}Environnement matériel}{15}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Environnement de développement}{16}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Environnement logiciel}{17}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.2}Environnement de développement}{15}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Environnement logiciel}{16}{subsection.2.4.3}%
 \contentsline {section}{\numberline {2.5}Architecture générale de l’application}{18}{section.2.5}%
 \contentsline {subsection}{\numberline {2.5.1}Architecture physique}{18}{subsection.2.5.1}%
 \contentsline {subsection}{\numberline {2.5.2}Fonctionnement de l’Architecture}{18}{subsection.2.5.2}%
@@ -48,8 +48,8 @@
 \contentsline {subsection}{\numberline {3.3.1}Diagrammes des séquences détaillés}{22}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Diagramme de Classes}{22}{subsection.3.3.2}%
 \contentsline {section}{\numberline {3.4}Réalisation}{22}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Interface d’authentification}{22}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Interface de Création d’un modèle de cycle de vie d’un colis}{22}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.1}Interface d’affichage de la liste des colis}{22}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Interface de recherche d’un colis}{22}{subsection.3.4.2}%
 \contentsline {section}{\numberline {3.5}Test}{22}{section.3.5}%
 \contentsline {chapter}{\numberline {4}Étude et réalisation du Sprint 2}{23}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Backlog du sprint}{23}{section.4.1}%
@@ -60,8 +60,8 @@
 \contentsline {subsection}{\numberline {4.3.1}Diagrammes des séquences détaillés}{23}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}Diagramme de Classes}{23}{subsection.4.3.2}%
 \contentsline {section}{\numberline {4.4}Réalisation}{23}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Interface d’affichage de la liste des colis}{23}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Interface de recherche d’un colis}{23}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.1}Interface d’authentification}{23}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Interface de Création d’un modèle de cycle de vie d’un colis}{23}{subsection.4.4.2}%
 \contentsline {section}{\numberline {4.5}Test}{23}{section.4.5}%
 \contentsline {chapter}{\numberline {5}Étude et réalisation du Sprint 3}{24}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Backlog du sprint}{24}{section.5.1}%

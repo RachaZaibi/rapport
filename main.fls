@@ -446,6 +446,9 @@ INPUT .\chapter2\sections\3_methodologie-outils.tex
 INPUT .\chapter2\sections\3_methodologie-outils.tex
 INPUT chapter2\sections\3_methodologie-outils.tex
 INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
+INPUT .\chapter2\sections\subsections\3.1.use-case.tex
+INPUT .\chapter2\sections\subsections\3.1.use-case.tex
+INPUT chapter2\sections\subsections\3.1.use-case.tex
 INPUT .\chapter2\sections\diagrams\use_case.png
 INPUT .\chapter2\sections\diagrams\use_case.png
 INPUT .\chapter2\sections\diagrams\use_case.png
@@ -453,6 +456,12 @@ INPUT .\chapter2\sections\diagrams\use_case.png
 INPUT .\chapter2\sections\diagrams\use_case.png
 INPUT .\chapter2\sections\diagrams\use_case.png
 INPUT .\chapter2\sections\diagrams\use_case.png
+INPUT .\chapter2\sections\subsections\3.2_sprints.tex
+INPUT .\chapter2\sections\subsections\3.2_sprints.tex
+INPUT chapter2\sections\subsections\3.2_sprints.tex
+INPUT .\chapter2\sections\subsections\3.3_interfaces.tex
+INPUT .\chapter2\sections\subsections\3.3_interfaces.tex
+INPUT chapter2\sections\subsections\3.3_interfaces.tex
 INPUT .\chapter2\sections\4_env-travaill.tex
 INPUT .\chapter2\sections\4_env-travaill.tex
 INPUT chapter2\sections\4_env-travaill.tex
