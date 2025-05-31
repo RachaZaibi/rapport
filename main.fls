@@ -272,6 +272,10 @@ INPUT C:\Program Files\MiKTeX\tex\latex\filehook\filehook.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\filehook\filehook-2020.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\filehook\filehook-2020.sty
 OUTPUT main.pytxcode
+INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\tex\latex\tools\tabularx.sty
+INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\tex\latex\tools\tabularx.sty
+INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\tex\latex\tools\calc.sty
+INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\tex\latex\tools\calc.sty
 INPUT .\main.aux
 INPUT .\main.aux
 INPUT main.aux
@@ -525,6 +529,28 @@ OUTPUT chapter3\chapter3.aux
 INPUT .\chapter3\chapter3.tex
 INPUT .\chapter3\chapter3.tex
 INPUT chapter3\chapter3.tex
+INPUT .\chapter3\sections\1_sprintBacklog.tex
+INPUT .\chapter3\sections\1_sprintBacklog.tex
+INPUT chapter3\sections\1_sprintBacklog.tex
+INPUT .\chapter3\sections\2_specificationFonctionnelle.tex
+INPUT .\chapter3\sections\2_specificationFonctionnelle.tex
+INPUT chapter3\sections\2_specificationFonctionnelle.tex
+INPUT .\chapter3\sections\subsection\2.1_useCaseDiagram.tex
+INPUT .\chapter3\sections\subsection\2.1_useCaseDiagram.tex
+INPUT chapter3\sections\subsection\2.1_useCaseDiagram.tex
+INPUT .\chapter3\sections\diagrams\Sprint 1 - Capture et Reconnaissance Texte.png
+INPUT .\chapter3\sections\diagrams\Sprint 1 - Capture et Reconnaissance Texte.png
+INPUT .\chapter3\sections\diagrams\Sprint 1 - Capture et Reconnaissance Texte.png
+INPUT .\chapter3\sections\diagrams\Sprint 1 - Capture et Reconnaissance Texte.png
+INPUT .\chapter3\sections\diagrams\Sprint 1 - Capture et Reconnaissance Texte.png
+INPUT .\chapter3\sections\diagrams\Sprint 1 - Capture et Reconnaissance Texte.png
+INPUT .\chapter3\sections\diagrams\Sprint 1 - Capture et Reconnaissance Texte.png
+INPUT .\chapter3\sections\subsection\2.2_acteurs.tex
+INPUT .\chapter3\sections\subsection\2.2_acteurs.tex
+INPUT chapter3\sections\subsection\2.2_acteurs.tex
+INPUT .\chapter3\sections\subsection\2.3_useCase.tex
+INPUT .\chapter3\sections\subsection\2.3_useCase.tex
+INPUT chapter3\sections\subsection\2.3_useCase.tex
 INPUT .\chapter4\chapter4.tex
 INPUT .\chapter4\chapter4.tex
 OUTPUT chapter4\chapter4.aux
@@ -564,6 +590,8 @@ INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\c
 INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
+INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
