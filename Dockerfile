@@ -19,3 +19,4 @@ RUN tlmgr update --self && \
     mktexlsr
 
 CMD ["latexmk", "-pdf", "main.tex"]
+# docker run --rm -v ${PWD}:/data -w /data rapport-latex pdflatex main.tex
