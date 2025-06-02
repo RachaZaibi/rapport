@@ -1,6 +1,6 @@
-PWD c:\Users\racha\rapport
+PWD c:\Users\racha\Documents\PFE\project\rapport
 INPUT C:\Users\racha\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\racha\rapport\main.tex
+INPUT c:\Users\racha\Documents\PFE\project\rapport\main.tex
 OUTPUT main.log
 INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\tex\latex\base\report.cls
 INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\tex\latex\base\report.cls

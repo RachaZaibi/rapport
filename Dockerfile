@@ -1,9 +1,7 @@
-FROM texlive/texlive:latest
+FROM ghcr.io/xu-cheng/texlive-full:latest
 
-WORKDIR /rapport
+WORKDIR /data
 
-COPY . .
+COPY . /data
 
-RUN pdflatex -interaction=nonstopmode main.tex
-
-CMD ["pdflatex", "-interaction=nonstopmode", "main.tex"]
+CMD ["pdflatex", "main.tex"]
