@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.9)  7 JUN 2025 19:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.9)  7 JUN 2025 19:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -615,7 +615,8 @@ LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count353
 \calc@Cskip=\skip62
-) (main.aux)
+)
+No file main.aux.
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
@@ -636,7 +637,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
 LaTeX Font Info:    ... okay on input line 22.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 22.
 LaTeX Font Info:    ... okay on input line 22.
- (C:\Users\racha\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+(C:\Users\racha\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count354
 \scratchdimen=\dimen310
@@ -914,164 +915,7 @@ Overfull \hbox (0.89943pt too wide) in paragraph at lines 15--16
 []\OT1/cmr/m/n/10 R^ole : Utilis^^Se pour le d^^Seveloppement du back-end, la ges-tion des util-isa-teurs, et l'int^^Segration
  []
 
-[14]) (chapter2/sections/subsections/4.3_env-logiciel.tex [15])) (chapter2/sections/5_architecture.tex (chapter2/sections/subsections/5.1_archi-physique.tex) (chapter2/sections/subsections/5.2_fonctionnement-archi.tex [16]
-
-chapter2/sections/subsections/5.2_fonctionnement-archi.tex:7: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.7         \item L
-                   es données sont collectées à partir des moniteurs Mind...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-chapter2/sections/subsections/5.2_fonctionnement-archi.tex:7: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.7         \item L
-                   es données sont collectées à partir des moniteurs Mind...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-chapter2/sections/subsections/5.2_fonctionnement-archi.tex:7: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.7         \item L
-                   es données sont collectées à partir des moniteurs Mind...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-chapter2/sections/subsections/5.2_fonctionnement-archi.tex:8: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.8         \item L
-                   es données des machines anciennes sont capturées via de...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-chapter2/sections/subsections/5.2_fonctionnement-archi.tex:8: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.8         \item L
-                   es données des machines anciennes sont capturées via de...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-chapter2/sections/subsections/5.2_fonctionnement-archi.tex:8: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.8         \item L
-                   es données des machines anciennes sont capturées via de...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-chapter2/sections/subsections/5.2_fonctionnement-archi.tex:10: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.10         \item L
-                    es données sont collectées à partir des moniteurs Min...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-chapter2/sections/subsections/5.2_fonctionnement-archi.tex:10: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.10         \item L
-                    es données sont collectées à partir des moniteurs Min...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-chapter2/sections/subsections/5.2_fonctionnement-archi.tex:10: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.10         \item L
-                    es données sont collectées à partir des moniteurs Min...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-chapter2/sections/subsections/5.2_fonctionnement-archi.tex:11: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.11         \item L
-                    es données des machines anciennes sont capturées via d...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-chapter2/sections/subsections/5.2_fonctionnement-archi.tex:11: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.11         \item L
-                    es données des machines anciennes sont capturées via d...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-chapter2/sections/subsections/5.2_fonctionnement-archi.tex:11: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.11         \item L
-                    es données des machines anciennes sont capturées via d...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-chapter2/sections/subsections/5.2_fonctionnement-archi.tex:13: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.13     \end{itemize}
-                      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-) (chapter2/sections/subsections/5.3_specification-logicielle.tex
+[14]) (chapter2/sections/subsections/4.3_env-logiciel.tex [15])) (chapter2/sections/5_architecture.tex (chapter2/sections/subsections/5.1_archi-physique.tex) (chapter2/sections/subsections/5.2_fonctionnement-archi.tex [16]) (chapter2/sections/subsections/5.3_specification-logicielle.tex
 <chapter2/sections/diagrams/architecture.png, id=146, 1672.2475pt x 619.31375pt>
 File: chapter2/sections/diagrams/architecture.png Graphic file (type png)
 <use chapter2/sections/diagrams/architecture.png>
@@ -1255,15 +1099,15 @@ Package rerunfilecheck Info: Checksums for `main.out':
 ### semi simple group (level 1) entered at line 5 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 25173 strings out of 474486
- 485675 string characters out of 5743756
+ 25170 strings out of 474486
+ 485615 string characters out of 5743756
  1948542 words of memory out of 5000000
- 46740 multiletter control sequences out of 15000+600000
+ 46739 multiletter control sequences out of 15000+600000
  568515 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,12n,107p,976b,761s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\racha\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on main.pdf (27 pages, 2772677 bytes).
+Output written on main.pdf (27 pages, 2772452 bytes).
 PDF statistics:
  302 PDF objects out of 1000 (max. 8388607)
  121 named destinations out of 1000 (max. 500000)
