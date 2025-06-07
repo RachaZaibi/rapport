@@ -1,6 +1,4 @@
-Le système est composé des éléments suivants
-% , comme illustré dans la figure \textbf{\ref{fig:system_architecture}} 
-:
+Le système est composé des éléments suivants :
 
 \begin{itemize}
     \item \textbf{Serveur Local / Cloud} :
@@ -9,14 +7,16 @@ Le système est composé des éléments suivants
         \item \textbf{Base de Données} : Stockage des données des patients et des alertes.
         \item \textbf{Service de Notifications} : Envoi d’alertes (e-mails, notifications push).
     \end{itemize}
+    
     \item \textbf{Appareils Médicaux} :
     \begin{itemize}
-        \item \textbf{Moniteur Mindray} : Envoie les données via API HL7.
-        \item \textbf{Caméra OCR} : Capture et extrait les valeurs vitales.
+        \item \textbf{Moniteur Mindray} : Envoie les données vers le système central via un module d'intégration personnalisé.
+        \item \textbf{Caméra OCR} : Capture et extrait les valeurs vitales affichées sur les écrans des machines.
     \end{itemize}
+    
     \item \textbf{Applications Mobiles \& Web} :
     \begin{itemize}
-        \item \textbf{Application Web / Mobile} : Consultation des données via REST API.
+        \item \textbf{Application Web / Mobile} : Consultation des données des patients et réception des alertes via REST API.
     \end{itemize}
 \end{itemize}
 
