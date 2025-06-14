@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.9)  14 JUN 2025 12:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.9)  14 JUN 2025 14:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -615,27 +615,31 @@ LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count353
 \calc@Cskip=\skip62
+) (C:\Program Files\MiKTeX\tex/latex/cite\cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
 ) (main.aux (chapter0/introduction.aux) (chapter1/chapter1.aux) (chapter2/chapter2.aux) (chapter3/chapter3.aux) (chapter4/chapter4.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
  (C:\Users\racha\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count354
@@ -655,7 +659,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\racha\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 17.
+Package hyperref Info: Link coloring OFF on input line 18.
  (main.out) (main.out)
 \@outlinefile=\write6
 \openout6 = `main.out'.
@@ -699,9 +703,9 @@ Package newfloat Info: Trying Plan B...
 Package newfloat Info: `float' package detected.
 No file pythontex-files-main/main.pytxmcr.
 Run PythonTeX to create it.
-Package newfloat Info: New float `listing' with options `fileext=lopytx' on input line 17.
+Package newfloat Info: New float `listing' with options `fileext=lopytx' on input line 18.
 \c@listing=\count360
-Package newfloat Info: float type `listing'=4 on input line 17.
+Package newfloat Info: float type `listing'=4 on input line 18.
 [1
 
 {C:/Users/racha/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (main.toc
@@ -787,7 +791,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.2.1}) ha
                                                   \__shipout_drop_firstpage_...
 l.53 \begin{itemize}
                     ]
-<chapter2/images/scrum.png, id=325, 811.833pt x 389.0535pt>
+<chapter2/images/scrum.png, id=326, 811.833pt x 389.0535pt>
 File: chapter2/images/scrum.png Graphic file (type png)
 <use chapter2/images/scrum.png>
 Package pdftex.def Info: chapter2/images/scrum.png  used on input line 64.
@@ -800,8 +804,8 @@ LaTeX Warning: Reference `sec:' on page 8 undefined on input line 76.
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.78     \item \textbf
-                      {Incrément~:} Chaque sprint produit un incrément fon... <./chapter2/images/scrum.png>]
+l.79 \end{itemize}
+                   <./chapter2/images/scrum.png>]
 
 LaTeX Warning: Reference `tab:backlog_sprint1' on page 9 undefined on input line 85.
 
@@ -824,7 +828,7 @@ l.128     \item \textbf
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.38 \include{chapter2/chapter2}
+l.39 \include{chapter2/chapter2}
                                  % Include the content of chapter2.tex]
 \openout2 = `chapter3/chapter3.aux'.
 
@@ -846,42 +850,38 @@ Package pdftex.def Info: chapter3/diagrams/system_architecture.png  used on inpu
 
 
 ]
-<chapter3/diagrams/deployment_diagram.png, id=380, 1593.955pt x 793.96625pt>
+<chapter3/diagrams/deployment_diagram.png, id=380, 1711.39375pt x 793.96625pt>
 File: chapter3/diagrams/deployment_diagram.png Graphic file (type png)
 <use chapter3/diagrams/deployment_diagram.png>
 Package pdftex.def Info: chapter3/diagrams/deployment_diagram.png  used on input line 89.
-(pdftex.def)             Requested size: 362.37569pt x 180.5004pt.
+(pdftex.def)             Requested size: 362.37569pt x 168.10681pt.
  [13
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.93 
       <./chapter3/diagrams/system_architecture.png (PNG copy)>]
-<chapter3/diagrams/component_diagram.png, id=390, 1302.8675pt x 830.10126pt>
+<chapter3/diagrams/component_diagram.png, id=390, 1678.27pt x 830.10126pt>
 File: chapter3/diagrams/component_diagram.png Graphic file (type png)
 <use chapter3/diagrams/component_diagram.png>
 Package pdftex.def Info: chapter3/diagrams/component_diagram.png  used on input line 110.
-(pdftex.def)             Requested size: 362.37569pt x 230.88148pt.
+(pdftex.def)             Requested size: 362.37569pt x 179.22827pt.
  [14
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.123         \item U
-                     tilisé pour détecter les zones de données (régions ...
+l.125         \item C
+                     omplète OpenCV pour le prétraitement des images et Te...
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.123         \item U
-                     tilisé pour détecter les zones de données (régions ... <./chapter3/diagrams/deployment_diagram.png (PNG copy)> <./chapter3/diagrams/component_diagram.png (PNG copy)>]
-
-LaTeX Warning: Citation `yolo2023' on page 15 undefined on input line 123.
-
-
+l.125         \item C
+                     omplète OpenCV pour le prétraitement des images et Te... <./chapter3/diagrams/deployment_diagram.png (PNG copy)> <./chapter3/diagrams/component_diagram.png (PNG copy)>]
 Overfull \hbox (34.06067pt too wide) in paragraph at lines 134--135
 []\OT1/cmr/m/n/10 Laravel four-nit un frame-work ro-buste bas^^Se sur l'architecture MVC, prenant en charge l'authentification
  []
 
-<chapter3/diagrams/data_flow_sequence.png, id=402, 251.94125pt x 507.8975pt>
+<chapter3/diagrams/data_flow_sequence.png, id=404, 251.94125pt x 507.8975pt>
 File: chapter3/diagrams/data_flow_sequence.png Graphic file (type png)
 <use chapter3/diagrams/data_flow_sequence.png>
 Package pdftex.def Info: chapter3/diagrams/data_flow_sequence.png  used on input line 165.
@@ -892,7 +892,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.4}) h
                                                   \__shipout_drop_firstpage_...
 l.187     \item \textbf
                        {Collecte des données~:} <./chapter3/diagrams/data_flow_sequence.png (PNG copy)>]
-<chapter3/diagrams/communication_flow_chart.png, id=417, 534.99875pt x 456.70625pt>
+<chapter3/diagrams/communication_flow_chart.png, id=419, 534.99875pt x 456.70625pt>
 File: chapter3/diagrams/communication_flow_chart.png Graphic file (type png)
 <use chapter3/diagrams/communication_flow_chart.png>
 Package pdftex.def Info: chapter3/diagrams/communication_flow_chart.png  used on input line 237.
@@ -901,7 +901,7 @@ Package pdftex.def Info: chapter3/diagrams/communication_flow_chart.png  used on
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.39 \include{chapter3/chapter3}
+l.40 \include{chapter3/chapter3}
                                  % Include the content of chapter3.tex <./chapter3/diagrams/communication_flow_chart.png>]
 \openout2 = `chapter4/chapter4.aux'.
 
@@ -943,7 +943,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.4.1}) ha
                                                   \__shipout_drop_firstpage_...
 l.10     \item \textbf
                       {Détection et reconnaissance des valeurs vitales} : U...])) (chapter4/sections/subsections/3.1.use-case.tex
-<chapter4/sections/diagrams/use_case.png, id=437, 3513.125pt x 3834.325pt>
+<chapter4/sections/diagrams/use_case.png, id=439, 3513.125pt x 3834.325pt>
 File: chapter4/sections/diagrams/use_case.png Graphic file (type png)
 <use chapter4/sections/diagrams/use_case.png>
 Package pdftex.def Info: chapter4/sections/diagrams/use_case.png  used on input line 7.
@@ -995,17 +995,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 54A1B63B30DB6F8260585E6C393D7939;10059.
  ) 
 Here is how much of TeX's memory you used:
- 25263 strings out of 474486
- 484019 string characters out of 5743756
+ 25362 strings out of 474486
+ 485436 string characters out of 5743756
  1950542 words of memory out of 5000000
- 46871 multiletter control sequences out of 15000+600000
+ 46966 multiletter control sequences out of 15000+600000
  564037 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,12n,107p,945b,681s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\racha\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on main.pdf (29 pages, 2713121 bytes).
+Output written on main.pdf (29 pages, 2723969 bytes).
 PDF statistics:
- 562 PDF objects out of 1000 (max. 8388607)
- 130 named destinations out of 1000 (max. 500000)
+ 565 PDF objects out of 1000 (max. 8388607)
+ 131 named destinations out of 1000 (max. 500000)
  479 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -17,7 +17,7 @@
 \contentsline {section}{\numberline {2.1}Choix de la méthodologie}{7}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Comparaison des méthodologies courantes}{7}{subsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.1.2}Rationale détaillé pour le choix de Scrum}{7}{subsection.2.1.2}%
-\contentsline {section}{\numberline {2.2}Présentation de Scrum}{8}{section.2.2}%
+\contentsline {section}{\numberline {2.2}Présentation de Scrum}{7}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Artefacts Scrum et leur application}{8}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Événements Scrum et leur implémentation}{9}{subsection.2.2.2}%
 \contentsline {section}{\numberline {2.3}Les rôles Scrum}{9}{section.2.3}%

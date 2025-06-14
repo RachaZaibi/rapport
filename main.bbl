@@ -48,6 +48,12 @@ Scott Chacon and Ben Straub.
 \newblock {\em Pro Git}.
 \newblock Apress, 2nd edition, 2014.
 
+\bibitem{yolo2023}
+Joseph Redmon.
+\newblock Yolo: Real-time object detection.
+\newblock \url{https://pjreddie.com/darknet/yolo/}, 2023.
+\newblock Accessed: 2023-10-01.
+
 \bibitem{tesseract2023}
 Tesseract~OCR Team.
 \newblock Tesseract ocr documentation.

@@ -28,6 +28,7 @@ node "Couche de traitement et stockage" #87CEEB {
     node "Serveur Flask" {
         artifact "OpenCV"
         artifact "Tesseract OCR"
+        artifact "YOLO"
     }
     database "Base de Données MySQL" #90EE90 {
         artifact "Données patient, mesures, alertes"
