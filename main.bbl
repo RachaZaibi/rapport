@@ -79,4 +79,61 @@ Google.
 \newblock Firebase cloud messaging performance guide.
 \newblock \url{https://firebase.google.com/docs/cloud-messaging}, 2023.
 
+\bibitem{redmon_yolo_2023}
+Joseph Redmon.
+\newblock Yolo: Real-time object detection.
+\newblock \url{https://pjreddie.com/darknet/yolo/}, 2023.
+
+\bibitem{tesseract_ocr_2023}
+Tesseract~OCR Team.
+\newblock Tesseract ocr documentation.
+\newblock \url{https://github.com/tesseract-ocr/tesseract}, 2023.
+
+\bibitem{laravel_docs_2023}
+Laravel Team.
+\newblock Laravel documentation.
+\newblock \url{https://laravel.com/docs}, 2023.
+
+\bibitem{firebase_fcm_2023}
+Google.
+\newblock Firebase cloud messaging performance guide.
+\newblock \url{https://firebase.google.com/docs/cloud-messaging}, 2023.
+
+\bibitem{mysql_docs_2023}
+MySQL Team.
+\newblock Mysql documentation.
+\newblock \url{https://dev.mysql.com/doc}, 2023.
+
+\bibitem{clickup_docs_2025}
+ClickUp.
+\newblock Clickup documentation: Product and agile management tools.
+\newblock
+  \url{https://docs.clickup.com/en/articles/2095287-getting-started-with-clickup},
+  2025.
+
+\bibitem{labelimg_2023}
+LabelImg Team.
+\newblock Labelimg: Image annotation tool.
+\newblock \url{https://github.com/tzutalin/labelImg}, 2023.
+
+\bibitem{opencv_2023}
+OpenCV Team.
+\newblock Opencv: Computer vision with python.
+\newblock \url{https://opencv.org}, 2023.
+
+\bibitem{react_docs_2023}
+React Team.
+\newblock React documentation.
+\newblock \url{https://reactjs.org/docs}, 2023.
+
+\bibitem{flutter_docs_2023}
+Flutter Team.
+\newblock Flutter documentation.
+\newblock \url{https://flutter.dev/docs}, 2023.
+
+\bibitem{pro_git_2014}
+Scott Chacon and Ben Straub.
+\newblock {\em Pro Git}.
+\newblock Apress, 2nd edition, 2014.
+
 \end{thebibliography}

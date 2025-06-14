@@ -11,48 +11,52 @@ Reallocating 'name_of_file' (item size: 1) to 22 items.
 A level-1 auxiliary file: chapter3/chapter3.aux
 Reallocating 'name_of_file' (item size: 1) to 22 items.
 A level-1 auxiliary file: chapter4/chapter4.aux
+Reallocating 'name_of_file' (item size: 1) to 22 items.
+A level-1 auxiliary file: chapter5/chapter5.aux
 Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: unsrt.bst
 Reallocating 'name_of_file' (item size: 1) to 11 items.
 Database file #1: references.bib
-You've used 15 entries,
+Warning--I didn't find a database entry for "albumentations_2023"
+You've used 26 entries,
             1791 wiz_defined-function locations,
-            518 strings with 5087 characters,
-and the built_in function-call counts, 2153 in all, are:
-= -- 185
-> -- 68
+            544 strings with 5620 characters,
+and the built_in function-call counts, 3615 in all, are:
+= -- 310
+> -- 116
 < -- 0
-+ -- 32
-- -- 17
-* -- 45
-:= -- 344
-add.period$ -- 46
-call.type$ -- 15
-change.case$ -- 12
++ -- 55
+- -- 29
+* -- 62
+:= -- 571
+add.period$ -- 79
+call.type$ -- 26
+change.case$ -- 23
 chr.to.int$ -- 0
-cite$ -- 15
-duplicate$ -- 99
-empty$ -- 279
-format.name$ -- 17
-if$ -- 507
+cite$ -- 26
+duplicate$ -- 159
+empty$ -- 478
+format.name$ -- 29
+if$ -- 858
 int.to.chr$ -- 0
-int.to.str$ -- 15
-missing$ -- 9
-newline$ -- 79
-num.names$ -- 15
-pop$ -- 88
+int.to.str$ -- 26
+missing$ -- 11
+newline$ -- 134
+num.names$ -- 26
+pop$ -- 154
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 41
+skip$ -- 74
 stack$ -- 0
 substring$ -- 19
-swap$ -- 15
+swap$ -- 26
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 17
-width$ -- 17
-write$ -- 156
+while$ -- 28
+width$ -- 28
+write$ -- 267
+(There was 1 warning)
