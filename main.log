@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.9)  7 JUN 2025 19:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.9)  14 JUN 2025 12:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -615,29 +615,28 @@ LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count353
 \calc@Cskip=\skip62
-)
-No file main.aux.
+) (main.aux (chapter0/introduction.aux) (chapter1/chapter1.aux) (chapter2/chapter2.aux) (chapter3/chapter3.aux) (chapter4/chapter4.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-(C:\Users\racha\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+ (C:\Users\racha\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count354
 \scratchdimen=\dimen310
@@ -656,7 +655,8 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\racha\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 22.
+Package hyperref Info: Link coloring OFF on input line 17.
+ (main.out) (main.out)
 \@outlinefile=\write6
 \openout6 = `main.out'.
 
@@ -699,34 +699,35 @@ Package newfloat Info: Trying Plan B...
 Package newfloat Info: `float' package detected.
 No file pythontex-files-main/main.pytxmcr.
 Run PythonTeX to create it.
-Package newfloat Info: New float `listing' with options `fileext=lopytx' on input line 22.
+Package newfloat Info: New float `listing' with options `fileext=lopytx' on input line 17.
 \c@listing=\count360
-Package newfloat Info: float type `listing'=4 on input line 22.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 27.
-(C:\Users\racha\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+Package newfloat Info: float type `listing'=4 on input line 17.
+[1
+
+{C:/Users/racha/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (main.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
+ (C:\Users\racha\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 27.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
  (C:\Users\racha\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
-
-{C:/Users/racha/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-No file main.toc.
-\tf@toc=\write7
-\openout7 = `main.toc'.
-
-
+)
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.29 \newpage
-              [1
+l.52 ...et non fonctionnels}{19}{subsection.4.2.2}
+                                                  % [1
 
-]
+])
+\tf@toc=\write7
+\openout7 = `main.toc'.
+
+ [2]
 \openout2 = `chapter0/introduction.aux'.
 
- (chapter0/introduction.tex) [2
+ (chapter0/introduction.tex) [3
+
 
 ]
 \openout2 = `chapter1/chapter1.aux'.
@@ -735,17 +736,17 @@ l.29 \newpage
 Chapter 1.
 Package newfloat Info: Setting Plan B file extension to `lof'... on input line 2.
 (chapter1/sections/1.1_organisme_daccueil.tex
-<chapter1/images/logo1-fmm.png, id=24, 255.95625pt x 93.34875pt>
+<chapter1/images/logo1-fmm.png, id=288, 255.95625pt x 93.34875pt>
 File: chapter1/images/logo1-fmm.png Graphic file (type png)
 <use chapter1/images/logo1-fmm.png>
 Package pdftex.def Info: chapter1/images/logo1-fmm.png  used on input line 8.
 (pdftex.def)             Requested size: 203.83417pt x 74.34009pt.
-<chapter1/images/logo2-smartlab.png, id=26, 299.61937pt x 109.6095pt>
+<chapter1/images/logo2-smartlab.png, id=290, 299.61937pt x 109.6095pt>
 File: chapter1/images/logo2-smartlab.png Graphic file (type png)
 <use chapter1/images/logo2-smartlab.png>
 Package pdftex.def Info: chapter1/images/logo2-smartlab.png  used on input line 14.
 (pdftex.def)             Requested size: 203.83417pt x 74.57025pt.
-) (chapter1/sections/1.2_presentation_projet.tex) (chapter1/sections/1.3.1_presentation_etude_existant.tex [3
+) (chapter1/sections/1.2_presentation_projet.tex [4
 
 
 
@@ -754,97 +755,159 @@ Package pdftex.def Info: chapter1/images/logo2-smartlab.png  used on input line 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.3     \item \textbf
-                     {Un écran de surveillance centralisé} installé dans ...
+l.20     \end{itemize}
+                      
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.3     \item \textbf
-                     {Un écran de surveillance centralisé} installé dans ... <./chapter1/images/logo1-fmm.png> <./chapter1/images/logo2-smartlab.png>]) (chapter1/sections/1.3.2_critiques_existant.tex) (chapter1/sections/1.4_solution_proposee.tex) (chapter1/sections/1.5_objectifs.tex [4]) (chapter1/sections/1.6.1_choix_methodologie.tex
-
-LaTeX Warning: Reference `tab:comparaison_methodologies' on page 5 undefined on input line 4.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 14--14
-[]|\OT1/cmr/bx/n/10 Livraisons
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 16--16
-[]|\OT1/cmr/bx/n/10 Collaboration
- []
-
-
-Underfull \hbox (badness 5756) in paragraph at lines 18--18
-[]|\OT1/cmr/bx/n/10 R^^Seponse rapide
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--20
-[]|\OT1/cmr/bx/n/10 Gestion des
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 22--22
-[]|\OT1/cmr/bx/n/10 Niveau
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 22--22
-\OT1/cmr/bx/n/10 d'implication
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 24--24
-[]|\OT1/cmr/bx/n/10 Efficacit^^Se des
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 26--26
-[]|\OT1/cmr/bx/n/10 Assurance
- []
-
-
-Underfull \hbox (badness 6032) in paragraph at lines 30--30
-[]|\OT1/cmr/bx/n/10 Maintenance et
- []
-
-[5
+l.20     \end{itemize}
+                       <./chapter1/images/logo1-fmm.png> <./chapter1/images/logo2-smartlab.png>]) (chapter1/sections/1.3.1_presentation_etude_existant.tex) (chapter1/sections/1.3.2_critiques_existant.tex) (chapter1/sections/1.4_solution_proposee.tex) (chapter1/sections/1.5_objectifs.tex [5
 pdfTeX warning (ext4): destination with the same identifier (name{table.1.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.46 \end{itemize}
-                  ]) (chapter1/sections/1.6.2_peresent_scrum.tex
-
-LaTeX Warning: Reference `fig:scrum_process' on page 6 undefined on input line 1.
-
-<chapter1/images/scrum.png, id=64, 811.833pt x 389.0535pt>
-File: chapter1/images/scrum.png Graphic file (type png)
-<use chapter1/images/scrum.png>
-Package pdftex.def Info: chapter1/images/scrum.png  used on input line 14.
-(pdftex.def)             Requested size: 452.9679pt x 217.07892pt.
-) (chapter1/sections/1.6.3_roles_scrum.tex
-<chapter1/images/scrum-roles.png, id=65, 258.36525pt x 151.16475pt>
-File: chapter1/images/scrum-roles.png Graphic file (type png)
-<use chapter1/images/scrum-roles.png>
-Package pdftex.def Info: chapter1/images/scrum-roles.png  used on input line 13.
-(pdftex.def)             Requested size: 452.9679pt x 265.04277pt.
-) [6
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1.3}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.38 
-      <./chapter1/images/scrum.png>]) [7
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1.4}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.34 \include{chapter1/chapter1}
-                                 % Include the content of chapter1.tex <./chapter1/images/scrum-roles.png>]
+l.3     \item L
+               ivraison des alertes en fonction de seuils définis.])) [6]
 \openout2 = `chapter2/chapter2.aux'.
 
  (chapter2/chapter2.tex
 Chapter 2.
-(chapter2/sections/1_introduction.tex) (chapter2/sections/2_capture-besoins.tex (chapter2/sections/subsections/2.1_identification-acteurs.tex
+
+Overfull \hbox (8.11612pt too wide) in paragraph at lines 52--53
+\OT1/cmr/m/n/10 Comme pr^^Sesent^^Se dans la fig-ure []2.1[], Scrum est un frame-work ag-ile qui re-pose sur des cy-cles de d^^Seveloppement
+ []
+
+[7
+
+
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{table.2.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.53 \begin{itemize}
+                    ]
+<chapter2/images/scrum.png, id=325, 811.833pt x 389.0535pt>
+File: chapter2/images/scrum.png Graphic file (type png)
+<use chapter2/images/scrum.png>
+Package pdftex.def Info: chapter2/images/scrum.png  used on input line 64.
+(pdftex.def)             Requested size: 452.9679pt x 217.07892pt.
+
+
+LaTeX Warning: Reference `sec:' on page 8 undefined on input line 76.
+
+[8
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.78     \item \textbf
+                      {Incrément~:} Chaque sprint produit un incrément fon... <./chapter2/images/scrum.png>]
+
+LaTeX Warning: Reference `tab:backlog_sprint1' on page 9 undefined on input line 85.
+
+<chapter2/images/scrum-roles.png, id=342, 258.36525pt x 151.16475pt>
+File: chapter2/images/scrum-roles.png Graphic file (type png)
+<use chapter2/images/scrum-roles.png>
+Package pdftex.def Info: chapter2/images/scrum-roles.png  used on input line 106.
+(pdftex.def)             Requested size: 452.9679pt x 265.04277pt.
+[9]
+Overfull \hbox (22.38469pt too wide) in paragraph at lines 119--120
+\OT1/cmr/m/n/10 d^^Seveloppement et le per-son-nel m^^Sedical. Par ex-em-ple, si des re-tours in-diquent des be-soins suppl^^Sementaires
+ []
+
+[10
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.128     \item \textbf
+                       {Affinement du Product Backlog~:} Le Product Owner co... <./chapter2/images/scrum-roles.png>]) [11
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.38 \include{chapter2/chapter2}
+                                 % Include the content of chapter2.tex]
+\openout2 = `chapter3/chapter3.aux'.
+
+ (chapter3/chapter3.tex
+Chapter 3.
+
+Overfull \hbox (2.55945pt too wide) in paragraph at lines 25--26
+\OT1/cmr/m/n/10 (e.g., fr^^Sequence car-diaque, SpO2) dans les im-ages cap-tur^^Sees, et Tesser-act OCR pour l'extraction
+ []
+
+<chapter3/diagrams/system_architecture.png, id=373, 2070.73625pt x 494.84875pt>
+File: chapter3/diagrams/system_architecture.png Graphic file (type png)
+<use chapter3/diagrams/system_architecture.png>
+Package pdftex.def Info: chapter3/diagrams/system_architecture.png  used on input line 42.
+(pdftex.def)             Requested size: 362.37569pt x 86.59227pt.
+[12
+
+
+
+
+]
+<chapter3/diagrams/deployment_diagram.png, id=380, 1593.955pt x 793.96625pt>
+File: chapter3/diagrams/deployment_diagram.png Graphic file (type png)
+<use chapter3/diagrams/deployment_diagram.png>
+Package pdftex.def Info: chapter3/diagrams/deployment_diagram.png  used on input line 89.
+(pdftex.def)             Requested size: 362.37569pt x 180.5004pt.
+ [13
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.93 
+      <./chapter3/diagrams/system_architecture.png (PNG copy)>]
+<chapter3/diagrams/component_diagram.png, id=390, 1302.8675pt x 830.10126pt>
+File: chapter3/diagrams/component_diagram.png Graphic file (type png)
+<use chapter3/diagrams/component_diagram.png>
+Package pdftex.def Info: chapter3/diagrams/component_diagram.png  used on input line 110.
+(pdftex.def)             Requested size: 362.37569pt x 230.88148pt.
+ [14
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.123         \item U
+                     tilisé pour détecter les zones de données (régions ...
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.123         \item U
+                     tilisé pour détecter les zones de données (régions ... <./chapter3/diagrams/deployment_diagram.png (PNG copy)> <./chapter3/diagrams/component_diagram.png (PNG copy)>]
+
+LaTeX Warning: Citation `yolo2023' on page 15 undefined on input line 123.
+
+
+Overfull \hbox (34.06067pt too wide) in paragraph at lines 134--135
+[]\OT1/cmr/m/n/10 Laravel four-nit un frame-work ro-buste bas^^Se sur l'architecture MVC, prenant en charge l'authentification
+ []
+
+<chapter3/diagrams/data_flow_sequence.png, id=402, 251.94125pt x 507.8975pt>
+File: chapter3/diagrams/data_flow_sequence.png Graphic file (type png)
+<use chapter3/diagrams/data_flow_sequence.png>
+Package pdftex.def Info: chapter3/diagrams/data_flow_sequence.png  used on input line 165.
+(pdftex.def)             Requested size: 226.48395pt x 456.57654pt.
+[15] [16
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.187     \item \textbf
+                       {Collecte des données~:} <./chapter3/diagrams/data_flow_sequence.png (PNG copy)>]
+<chapter3/diagrams/communication_flow_chart.png, id=417, 534.99875pt x 456.70625pt>
+File: chapter3/diagrams/communication_flow_chart.png Graphic file (type png)
+<use chapter3/diagrams/communication_flow_chart.png>
+Package pdftex.def Info: chapter3/diagrams/communication_flow_chart.png  used on input line 237.
+(pdftex.def)             Requested size: 407.66833pt x 348.02719pt.
+ [17]) [18
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.5}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.39 \include{chapter3/chapter3}
+                                 % Include the content of chapter3.tex <./chapter3/diagrams/communication_flow_chart.png>]
+\openout2 = `chapter4/chapter4.aux'.
+
+ (chapter4/chapter4.tex
+Chapter 4.
+(chapter4/sections/1_introduction.tex) (chapter4/sections/2_capture-besoins.tex (chapter4/sections/subsections/2.1_identification-acteurs.tex
 Underfull \hbox (badness 1688) in paragraph at lines 11--12
 []|\OT1/cmr/m/n/10 Consulte les donn^^Sees des pa-tients, re^^Xcoit
  []
@@ -869,17 +932,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--17
 []|\OT1/cmr/bx/n/10 Moniteur de
  []
 
-) (chapter2/sections/subsections/2.2_besoins-fonctionnels-non-fonctionnels.tex [8
+) (chapter4/sections/subsections/2.2_besoins-fonctionnels-non-fonctionnels.tex [19
 
 
 
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{table.2.1}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.10     \item \textbf
-                      {Détection et reconnaissance des valeurs vitales} : U...])) (chapter2/sections/3_methodologie-outils.tex
+                      {Détection et reconnaissance des valeurs vitales} : U...])) (chapter4/sections/subsections/3.1.use-case.tex
+<chapter4/sections/diagrams/use_case.png, id=437, 3513.125pt x 3834.325pt>
+File: chapter4/sections/diagrams/use_case.png Graphic file (type png)
+<use chapter4/sections/diagrams/use_case.png>
+Package pdftex.def Info: chapter4/sections/diagrams/use_case.png  used on input line 7.
+(pdftex.def)             Requested size: 452.9679pt x 494.38426pt.
+) [20] (chapter4/sections/3_methodologie-outils.tex
 Underfull \hbox (badness 10000) in paragraph at lines 19--20
 []|\OT1/cmr/m/n/10 Pr Am-meri
  []
@@ -894,186 +963,26 @@ Underfull \hbox (badness 1168) in paragraph at lines 28--30
 []|\OT1/cmr/m/n/10 - Fa-ciliter les r^^Seunions Scrum (Daily Stand-up,
  []
 
-[9]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 2.3 on input line 104.
-
-[10] (chapter2/sections/subsections/3.1.use-case.tex
-<chapter2/sections/diagrams/use_case.png, id=108, 3513.125pt x 3834.325pt>
-File: chapter2/sections/diagrams/use_case.png Graphic file (type png)
-<use chapter2/sections/diagrams/use_case.png>
-Package pdftex.def Info: chapter2/sections/diagrams/use_case.png  used on input line 7.
-(pdftex.def)             Requested size: 452.9679pt x 494.38426pt.
-) [11] (chapter2/sections/subsections/3.2_sprints.tex [12
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1}) has been already used, duplicate ignored
+[21
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.11         \item \textbf
-                          {Deliverables} : <./chapter2/sections/diagrams/use_case.png>]) (chapter2/sections/subsections/3.3_interfaces.tex)) (chapter2/sections/4_env-travaill.tex (chapter2/sections/subsections/4.1_env-materiel.tex [13]) (chapter2/sections/subsections/4.2_env-dev.tex
+l.34 \end{longtable}
+                     <./chapter4/sections/diagrams/use_case.png>] [22] (chapter4/sections/subsections/3.2_sprints.tex [23]
+Overfull \hbox (9.23262pt too wide) in paragraph at lines 85--86
+[]\OT1/cmr/m/n/10 Le tableau de bord af-fiche les donn^^Sees vi-tales et alertes en temps r^^Seel avec un rafra^^^Pchissement
+ []
+
+)) (chapter4/sections/4_env-travaill.tex (chapter4/sections/subsections/4.1_env-materiel.tex [24]) (chapter4/sections/subsections/4.2_env-dev.tex
 Overfull \hbox (0.89943pt too wide) in paragraph at lines 15--16
 []\OT1/cmr/m/n/10 R^ole : Utilis^^Se pour le d^^Seveloppement du back-end, la ges-tion des util-isa-teurs, et l'int^^Segration
  []
 
-[14]) (chapter2/sections/subsections/4.3_env-logiciel.tex [15])) (chapter2/sections/5_architecture.tex (chapter2/sections/subsections/5.1_archi-physique.tex) (chapter2/sections/subsections/5.2_fonctionnement-archi.tex [16]) (chapter2/sections/subsections/5.3_specification-logicielle.tex
-<chapter2/sections/diagrams/architecture.png, id=146, 1672.2475pt x 619.31375pt>
-File: chapter2/sections/diagrams/architecture.png Graphic file (type png)
-<use chapter2/sections/diagrams/architecture.png>
-Package pdftex.def Info: chapter2/sections/diagrams/architecture.png  used on input line 38.
-(pdftex.def)             Requested size: 452.9679pt x 167.75558pt.
-) [17] (chapter2/sections/subsections/5.4_diagramme-deploy copy 2.tex
-
-LaTeX Warning: Reference `fig:diagramme_deploiement' on page 18 undefined on input line 1.
-
-<chapter2/sections/diagrams/deployment_diagram.png, id=156, 1361.085pt x 666.49pt>
-File: chapter2/sections/diagrams/deployment_diagram.png Graphic file (type png)
-<use chapter2/sections/diagrams/deployment_diagram.png>
-Package pdftex.def Info: chapter2/sections/diagrams/deployment_diagram.png  used on input line 5.
-(pdftex.def)             Requested size: 452.9679pt x 221.80345pt.
-) (chapter2/sections/subsections/5.5_composants_deploiement.tex
-Overfull \hbox (12.14183pt too wide) in paragraph at lines 13--14
-[]\OT1/cmr/bx/n/10 Moniteur Min-dray \OT1/cmr/m/n/10 : En-voie les donn^^Sees vers le syst^^Reme cen-tral via un mod-ule d'int^^Segration
- []
-
-[18
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.15     \end{itemize}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.3}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.15     \end{itemize}
-                       <./chapter2/sections/diagrams/architecture.png (PNG copy)> <./chapter2/sections/diagrams/deployment_diagram.png (PNG copy)>]) (chapter2/sections/subsections/5.6_flux_de_communication.tex
-
-LaTeX Warning: Reference `fig:communication_flow' on page 19 undefined on input line 3.
-
-) (chapter2/sections/subsections/5.7_justification.tex))) [19]
-\openout2 = `chapter3/chapter3.aux'.
-
- (chapter3/chapter3.tex
-Chapter 3.
-(chapter3/sections/1_sprintBacklog.tex
-
-LaTeX Warning: Reference `tab:backlog_sprint1' on page 20 undefined on input line 12.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-[]|\OT1/cmr/m/n/10 D^^Setection des
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 26--27
-[]|\OT1/cmr/m/n/10 Int^^Segration de Tesser-act pour
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
-[]\OT1/cmr/m/n/10 Utilisation d'OpenCV pour le
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 31--31
-[]|\OT1/cmr/m/n/10 G^^Sen^^Seration
- []
-
-
-Underfull \hbox (badness 5331) in paragraph at lines 34--35
-[]\OT1/cmr/m/n/10 D^^Seveloppement d'un mo-teur de
- []
-
-
-Underfull \hbox (badness 1527) in paragraph at lines 37--37
-[]|\OT1/cmr/m/n/10 Envoi de no-ti-fi-ca-
- []
-
-
-Underfull \hbox (badness 4168) in paragraph at lines 40--41
-[]\OT1/cmr/m/n/10 Configuration du ser-vice SMTP
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 43--43
-[]|\OT1/cmr/m/n/10 Validation des
- []
-
-
-Underfull \hbox (badness 2073) in paragraph at lines 44--45
-[]|\OT1/cmr/m/n/10 V^^Serification des valeurs ex-traites
- []
-
-
-Overfull \hbox (7.73283pt too wide) in alignment at lines 24--51
- [] [] [] [] [] 
- []
-
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 3.1 on input line 51.
-
-) (chapter3/sections/2_specificationFonctionnelle.tex (chapter3/sections/subsection/2.1_useCaseDiagram.tex
-
-LaTeX Warning: Reference `fig:use_case_diagram' on page 20 undefined on input line 2.
-
-<chapter3/sections/diagrams/Sprint 1 - Capture et Reconnaissance Texte.png, id=172, 1866.975pt x 2549.525pt>
-File: chapter3/sections/diagrams/Sprint 1 - Capture et Reconnaissance Texte.png Graphic file (type png)
-<use chapter3/sections/diagrams/Sprint 1 - Capture et Reconnaissance Texte.png>
-Package pdftex.def Info: chapter3/sections/diagrams/Sprint 1 - Capture et Reconnaissance Texte.png  used on input line 6.
-(pdftex.def)             Requested size: 362.37569pt x 494.84068pt.
-[20
+[25]) (chapter4/sections/subsections/4.3_env-logiciel.tex [26]))) [27] (main.bbl) [28
 
 
 
-
-]) (chapter3/sections/subsection/2.2_acteurs.tex) (chapter3/sections/subsection/2.3_useCase.tex [21
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.3     \item \textbf
-                     {Capture d'images} : La caméra capture les images du m... <./chapter3/sections/diagrams/Sprint 1 - Capture et Reconnaissance Texte.png>])) [22
-pdfTeX warning (ext4): destination with the same identifier (name{table.3.2}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.62 \end{itemize}
-                  ]) [23]
-\openout2 = `chapter4/chapter4.aux'.
-
- (chapter4/chapter4.tex
-Chapter 4.
-) [24
-
-
-
-
-]
-\openout2 = `chapter5/chapter5.aux'.
-
- (chapter5/chapter5.tex
-Chapter 5.
-[25
-
-
-
-
-]) [26]
-
-Package longtable Warning: Table widths have changed. Rerun LaTeX.
-
-
-c:/Users/racha/rapport/main.tex:40: LaTeX Error: \begin{itemize} on input line 5 ended by \end{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.40 \end{document}
-                   
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-(main.aux (chapter0/introduction.aux) (chapter1/chapter1.aux) (chapter2/chapter2.aux) (chapter3/chapter3.aux) (chapter4/chapter4.aux) (chapter5/chapter5.aux))
+] (main.aux (chapter0/introduction.aux) (chapter1/chapter1.aux) (chapter2/chapter2.aux) (chapter3/chapter3.aux) (chapter4/chapter4.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -1082,34 +991,21 @@ L3 programming layer <2024-01-04>
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  823A6652277D30A3F7AD7C86D2C1A6A6;12713.
- )
-(\end occurred inside a group at level 1)
-
-### semi simple group (level 1) entered at line 5 (\begingroup)
-### bottom level 
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 54A1B63B30DB6F8260585E6C393D7939;10059.
+ ) 
 Here is how much of TeX's memory you used:
- 25170 strings out of 474486
- 485615 string characters out of 5743756
- 1948542 words of memory out of 5000000
- 46739 multiletter control sequences out of 15000+600000
- 568515 words of font info for 75 fonts, out of 8000000 for 9000
+ 25263 strings out of 474486
+ 484019 string characters out of 5743756
+ 1950542 words of memory out of 5000000
+ 46871 multiletter control sequences out of 15000+600000
+ 564037 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,12n,107p,976b,761s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\racha\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on main.pdf (27 pages, 2772452 bytes).
+ 99i,12n,107p,945b,681s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\racha\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on main.pdf (29 pages, 2713121 bytes).
 PDF statistics:
- 302 PDF objects out of 1000 (max. 8388607)
- 121 named destinations out of 1000 (max. 500000)
- 53 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 562 PDF objects out of 1000 (max. 8388607)
+ 130 named destinations out of 1000 (max. 500000)
+ 479 words of extra memory for PDF output out of 10000 (max. 10000000)
 

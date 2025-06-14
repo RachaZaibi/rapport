@@ -1,0 +1,62 @@
+Pour assurer le bon fonctionnement du système, les exigences logicielles suivantes doivent être respectées :
+
+\begin{itemize}
+    \item \textbf{Systèmes d'exploitation} :
+    \begin{itemize}
+        \item \textbf{Postes de développement} :
+            \begin{itemize}
+                \item Windows 11.
+                \item Rôle : Environnement de développement (backend \& frontend \& mobile).
+                \item Configuration : 16 Go de RAM, processeur Intel i5.
+            \end{itemize}
+        \item \textbf{Appareils mobiles} :
+            \begin{itemize}
+                \item Android : Version 14.
+                \item Rôle : Exécution de l'application mobile pour le personnel médical.
+            \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Systèmes de base de données} :
+    \begin{itemize}
+        \item \textbf{Base de données principale} :
+            \begin{itemize}
+                \item MySQL : Version 9.1.0 .
+                \item Rôle : Stockage des données des patients, des alertes, et des historiques.
+                \item Configuration : Base de données relationnelle avec support des transactions ACID.
+            \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Protocoles de communication} :
+    \begin{itemize}
+        \item \textbf{API REST} :
+            \begin{itemize}
+                \item Rôle : Interface de communication entre les différents composants du système (frontend, backend, mobile).
+                \item Sécurité : Utilisation de tokens (Bearer Tokens) pour l'authentification et l'autorisation.
+                \item Documentation : Swagger/OpenAPI pour une documentation interactive des API.
+            \end{itemize}
+        \item \textbf{WebSockets} :
+            \begin{itemize}
+                \item Rôle : Communication en temps réel entre le backend et les applications mobiles/web pour les notifications push.
+                \item Utilisation : Envoi instantané des alertes critiques au personnel médical.
+            \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Autres logiciels et outils} :
+    \begin{itemize}
+        \item \textbf{IDE (Environnements de développement intégrés)} :
+            \begin{itemize}
+                \item Visual Studio Code : Pour le développement en Python, React, et Laravel.
+                \item Android Studio : Pour le développement de l'application mobile Flutter.
+            \end{itemize}
+        \item \textbf{Gestion des dépendances} :
+            \begin{itemize}
+                \item Composer : Pour la gestion des packages PHP (Laravel).
+                \item npm : Pour la gestion des packages JavaScript (React).
+                \item pip : Pour la gestion des packages Python.
+            \end{itemize}
+        \item \textbf{Outils de tests} :
+            \begin{itemize}
+                \item Postman \& Swagger : Pour tester les API.
+            \end{itemize}
+    \end{itemize}
+\end{itemize}

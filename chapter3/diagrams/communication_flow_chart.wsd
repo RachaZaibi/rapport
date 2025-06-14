@@ -1,0 +1,52 @@
+@startuml
+title Flux de communication
+
+skinparam activity {
+    BackgroundColor #E6E6FA
+    BorderColor #4B0082
+    FontColor #000000
+}
+skinparam note {
+    BackgroundColor #FFFFFF
+    BorderColor #4B0082
+    FontColor #000000
+}
+
+start
+:Collecte des données;
+note right
+  <b>Étape 1</b>
+  - Données capturées via OCR depuis moniteurs
+  - Transmission sécurisée au backend
+end note
+
+:Analyse et stockage;
+note right
+  <b>Étape 2</b>
+  - Analyse en temps réel des données
+  - Stockage dans base de données MySQL
+end note
+
+:Détection des anomalies;
+note right
+  <b>Étape 3</b>
+  - Comparaison avec seuils prédéfinis
+  - Génération d'alertes en cas d'écarts
+end note
+
+:Distribution des alertes;
+note right
+  <b>Étape 4</b>
+  - Envoi via FCM, e-mails, ou SMS
+  - Affichage sur interfaces web/mobile
+end note
+
+:Consultation par le personnel;
+note right
+  <b>Étape 5</b>
+  - Accès aux données et alertes via web ou mobile
+end note
+
+stop
+
+@enduml

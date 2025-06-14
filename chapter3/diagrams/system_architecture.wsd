@@ -1,0 +1,60 @@
+@startuml
+left to right direction
+title Architecture logique en couches du système
+
+skinparam linetype ortho
+skinparam defaultFontName Arial
+skinparam defaultFontSize 14
+
+skinparam frame {
+  BackgroundColor #EEEEEE
+  BorderColor #666666
+  RoundCorner 25
+  FontSize 16
+  FontStyle bold
+  Padding 20
+}
+
+skinparam component {
+  BackgroundColor #FFFFFF
+  BorderColor #666666
+  RoundCorner 15
+  FontSize 14
+  Padding 10
+}
+
+
+' Service de Notification
+frame "Service de Notification" as Notif {
+  component "Firebase Cloud Messaging" as FCM #FAD4D4
+}
+' Couche 1 : Collecte des données
+frame "Couche 1 : Collecte des données" as L1 {
+  component "Moniteur Médical" as Monitor #D9E8FB
+  component "Caméra IP" as Camera #D9E8FB
+}
+
+' Couche 3 : Visualisation et notification
+frame "Couche 3 : Visualisation et notification" as L3 {
+  component "Application Web\nReact" as ReactApp #FFF3C4
+  component "Application Mobile\nFlutter" as FlutterApp #FFF3C4
+}
+
+
+' Couche 2 : Traitement et stockage
+frame "Couche 2 : Traitement et stockage" as L2 {
+  component "Serveur Flask\n(OpenCV + Tesseract + YOLO)" as Flask #E8FAD9
+  component "Serveur Laravel\n(API REST, Alertes)" as Laravel #E8FAD9
+  component "Base de Données\nMySQL" as DB #E8FAD9
+}
+' Flows
+Monitor -----> Camera : "signiaux vitaux"
+Camera ---> Flask : "Frames"
+Flask ----> Laravel : "Traitement"
+Laravel ---> DB : "Stockage"
+Laravel --> ReactApp : "API REST"
+Laravel --> FlutterApp : "API REST"
+Laravel --> Notif : "Alertes"
+Notif ---> FlutterApp : "Notifications"
+
+@enduml

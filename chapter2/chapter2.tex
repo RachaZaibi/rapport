@@ -1,19 +1,160 @@
-% Sprint 0
-\chapter{Sprint 0}
+\chapter{Méthodologie adoptée}
+\label{chap:methodologie}
 
-\section{Introduction}
-\input{chapter2/sections/1_introduction.tex}
+\section{Choix de la méthodologie}
+\label{sec:choix_methodologie}
 
-\section{Capture des besoins}
-\input{chapter2/sections/2_capture-besoins.tex}
+\subsection{Comparaison des méthodologies courantes}
+\label{subsec:comparaison_methodologies}
+Le tableau suivant (Tableau~\ref{tab:comparaison_methodologies}) compare les méthodologies les plus couramment utilisées dans le développement logiciel, en mettant en évidence leurs caractéristiques clés~:
 
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|p{6cm}|c|c|c|c|}
+        \hline
+        \textbf{Caractéristiques} & \textbf{Scrum} & \textbf{Waterfall} & \textbf{Lean} & \textbf{Kanban} \\
+        \hline
+        \textbf{Adaptabilité aux changements} & \checkmark & X & X & \checkmark \\
+        \hline
+        \textbf{Livraisons fréquentes} & \checkmark & X & X & X \\
+        \hline
+        \textbf{Collaboration renforcée} & \checkmark & X & X & \checkmark \\
+        \hline
+        \textbf{Réponse rapide aux changements} & \checkmark & X & X & X \\
+        \hline
+        \textbf{Gestion des risques} & \checkmark & \checkmark & \checkmark & \checkmark \\
+        \hline
+        \textbf{Niveau d'implication du client} & Élevé & Faible & Moyen & Moyen \\
+        \hline
+        \textbf{Efficacité des coûts} & Élevée & Moyenne & Élevée & Moyenne \\
+        \hline
+        \textbf{Assurance qualité} & Continue & Finale & Continue & Continue \\
+        \hline
+        \textbf{Scalabilité} & Moyenne & Élevée & Élevée & Moyenne \\
+        \hline
+        \textbf{Maintenance et support} & Facile & Difficile & Facile & Facile \\
+        \hline
+    \end{tabular}
+    \caption{Comparaison des méthodologies de développement logiciel}
+    \label{tab:comparaison_methodologies}
+\end{table}
 
-\section{Pilotage du projet avec Scrum}
-\input{chapter2/sections/3_methodologie-outils.tex}
+\subsection{Rationale détaillé pour le choix de Scrum}
+\label{subsec:rationale_scrum}
+Le choix de la méthodologie Scrum pour ce projet est motivé par plusieurs facteurs spécifiques au contexte du développement d’un système de collecte de données en temps réel et de gestion des alertes dans un environnement médical. Premièrement, l’approche itérative de Scrum permet de recueillir des retours continus des parties prenantes, notamment le personnel médical du SmartLab de la Faculté de Médecine de Monastir, pour affiner les exigences fonctionnelles et non fonctionnelles. Cela est particulièrement crucial dans un projet médical où la précision et la réactivité sont essentielles pour garantir la sécurité des patients.
 
-\section{Environnement de travail}
-\input{chapter2/sections/4_env-travaill.tex}
+Deuxièmement, Scrum offre une grande adaptabilité face aux incertitudes techniques, telles que l’extraction de données à partir de moniteurs via OCR. Ces sources de données présentent des défis distincts, notamment en termes de précision de l’OCR. Scrum permet de tester et valider ces composants dès les premiers sprints, réduisant ainsi les risques d’échec technique.
 
+Enfin, la méthodologie Scrum favorise une collaboration étroite entre les développeurs, le Product Owner et le Scrum Master, assurant une communication fluide avec les parties prenantes médicales. Cette collaboration est essentielle pour répondre aux exigences changeantes du domaine médical, où les besoins peuvent évoluer rapidement en fonction des retours des utilisateurs ou des contraintes réglementaires \cite{schwaber2004, rubin2012}.
 
-\section{Architecture générale de l’application}
-\input{chapter2/sections/5_architecture.tex}
+\section{Présentation de Scrum}
+\label{sec:presentation_scrum}
+Comme présenté dans la figure~\ref{fig:processus_scrum}, Scrum est un framework agile qui repose sur des cycles de développement appelés sprints. Chaque sprint a une durée définie (généralement entre 2 et 4 semaines) et aboutit à un produit fonctionnel et potentiellement livrable. Le processus Scrum comprend plusieurs éléments clés~ \cite{atlassian2023scrum}:
+\begin{itemize}
+    \item \textbf{Product Backlog~:} Liste des fonctionnalités à développer, priorisée par le Product Owner en fonction des besoins des utilisateurs et des objectifs du projet.
+    \item \textbf{Sprint Backlog~:} Ensemble des tâches à réaliser pendant un sprint, défini par l’équipe de développement.
+    \item \textbf{Sprint Planning~:} Réunion permettant de définir les objectifs et les tâches du sprint.
+    \item \textbf{Daily Scrum~:} Brève réunion quotidienne de l’équipe pour suivre l’avancement et identifier les obstacles.
+    \item \textbf{Sprint Review~:} Présentation de l’incrément produit aux parties prenantes à la fin de chaque sprint.
+    \item \textbf{Sprint Retrospective~:} Analyse du sprint pour identifier les axes d’amélioration.
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{chapter2/images/scrum.png}
+    \caption{Processus Scrum.}
+    \label{fig:processus_scrum}
+\end{figure}
+
+\subsection{Artefacts Scrum et leur application}
+\label{subsec:artefacts_scrum}
+Scrum repose sur trois artefacts principaux qui structurent le développement du projet~: le \textit{Product Backlog}, le \textit{Sprint Backlog} et l'\textit{Incrément}. Ces artefacts sont appliqués comme suit dans le cadre du projet~ \cite{atlassian2023artifacts}:
+
+\begin{itemize}
+    \item \textbf{Product Backlog~:} Le \textit{Product Backlog} regroupe l’ensemble des fonctionnalités à développer, telles que définies dans le tableau~\ref{tab:backlog_moscow} (voir section~\ref{sec:backlog_projet}). Il est géré par le Product Owner, qui priorise les tâches en utilisant la méthode MoSCoW pour classer les fonctionnalités en \textit{Must}, \textit{Should}, \textit{Could} et \textit{Won’t}. Ce backlog est régulièrement affiné pour intégrer les retours des parties prenantes, notamment le personnel médical, afin de garantir que les fonctionnalités prioritaires répondent aux besoins critiques du système.
+
+    \item \textbf{Sprint Backlog~:} À chaque sprint, un sous-ensemble de tâches est sélectionné à partir du \textit{Product Backlog} pour constituer le \textit{Sprint Backlog}. Par exemple, pour le Sprint 1, les tâches se concentrent sur l’intégration de la collecte de données basée sur caméra et l’extraction OCR (voir section~\ref{sec:}). Ces tâches sont définies lors de la réunion de planification du sprint, en collaboration avec l’équipe de développement.
+
+    \item \textbf{Incrément~:} Chaque sprint produit un incrément fonctionnel et potentiellement livrable. Par exemple, à l’issue du Sprint 1, un pipeline OCR fonctionnel est livré, permettant la capture et l’extraction des données vitales à partir des moniteurs. Cet incrément peut être testé par le personnel médical pour valider sa précision et sa fiabilité avant d’intégrer de nouvelles fonctionnalités dans les sprints suivants.
+\end{itemize}
+
+\subsection{Événements Scrum et leur implémentation}
+\label{subsec:evenements_scrum}
+Scrum repose sur des événements clés qui structurent le processus de développement. Ces événements sont implémentés comme suit dans le cadre du projet~\cite{schwaber2004}:
+\begin{itemize}
+    \item \textbf{Planification de sprint~:} Lors de la réunion de planification, l’équipe sélectionne les tâches du \textit{Product Backlog} à inclure dans le \textit{Sprint Backlog}, en estimant l’effort requis (voir tableau~\ref{tab:backlog_sprint1} pour le Sprint 1). Par exemple, pour le Sprint 1, l’intégration de l’OCR a été estimée à 5 jours, en tenant compte de la configuration des caméras et du pipeline de traitement d’images.
+
+    \item \textbf{Daily Scrum~:} Des réunions quotidiennes de 15 minutes sont organisées pour suivre l’avancement des tâches et identifier les obstacles. Par exemple, si des problèmes de qualité d’image affectent l’OCR, ils sont discutés et résolus rapidement, souvent en ajustant les paramètres de prétraitement d’OpenCV.
+
+    \item \textbf{Revue de sprint~:} À la fin de chaque sprint, l’incrément est présenté aux parties prenantes, comme le pipeline OCR fonctionnel à la fin du Sprint 1. Les médecins et infirmiers testent l’incrément pour valider sa précision et son utilité clinique, fournissant des retours pour le sprint suivant.
+
+    \item \textbf{Rétrospective de sprint~:} Après chaque sprint, l’équipe analyse les succès et les défis rencontrés. Par exemple, si des erreurs d’OCR sont détectées lors du Sprint 1, la rétrospective peut conduire à l’ajout de tests supplémentaires ou à l’amélioration du prétraitement des images dans le Sprint 2.
+\end{itemize}
+
+\section{Les rôles Scrum}
+\label{sec:roles_scrum}
+Dans Scrum, trois rôles principaux sont définies pour assurer le bon fonctionnement du processus de développement~\cite{atlassian2023roles}:
+
+\begin{itemize}
+    \item \textbf{Product Owner~:} Représentant des parties prenantes, il définit et priorise les fonctionnalités à développer en fonction des besoins des utilisateurs et des objectifs du projet.
+    \item \textbf{Scrum Master~:} Responsable de la bonne application du framework Scrum. Il facilite la communication, aide à surmonter les obstacles et veille à l’amélioration continue des processus.
+    \item \textbf{Équipe de développement~:} Composée de développeurs, designers et autres spécialistes, elle est responsable de la mise en œuvre des fonctionnalités et de la livraison des incréments du produit.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{chapter2/images/scrum-roles.png}
+    \caption{Rôles Scrum.}
+    \label{fig:roles_scrum}
+\end{figure}
+
+\section{Gestion des risques avec Scrum}
+\label{subsec:risques_scrum}
+Le développement d’un système de collecte de données en temps réel et de gestion des alertes dans un contexte médical implique plusieurs risques, notamment techniques et opérationnels. Scrum offre un cadre efficace pour identifier, gérer et atténuer ces risques grâce à son approche itérative et ses mécanismes de revue réguliers \cite{cohn2009}.
+\begin{itemize}
+    \item \textbf{Risques techniques~:} L’extraction des données via OCR peut souffrir d’une précision insuffisante en raison de la qualité des images capturées ou de la variabilité des écrans des moniteurs. Ces risques sont atténués par des tests précoces dans les sprints initiaux, comme le Sprint 1, qui se concentre sur la validation de la collecte de données .
+
+    \item \textbf{Risques opérationnels~:} Les retards dans la livraison des alertes en temps réel peuvent compromettre la réactivité du personnel médical. Scrum permet de tester les performances des notifications dès le Sprint 2, en intégrant Firebase Cloud Messaging (FCM) et en validant les temps de réponse .
+
+    \item \textbf{Revue et amélioration~:} Les rétrospectives de sprint permettent d’identifier les problèmes liés aux processus, comme les goulots d’étranglement dans la communication entre l’équipe de développement et le personnel médical. Par exemple, si des retours indiquent des besoins supplémentaires pour l’interface utilisateur, ceux-ci peuvent être intégrés dans le \textit{Product Backlog} pour le sprint suivant.
+\end{itemize}
+
+\section{Engagement des parties prenantes dans Scrum}
+\label{subsec:stakeholders_scrum}
+L’implication des parties prenantes est un pilier central de la méthodologie Scrum, particulièrement dans un projet médical où les besoins des utilisateurs finaux (médecins, infirmiers, administrateurs) sont critiques~\cite{schwaber2004, rubin2012}. Dans ce projet, les parties prenantes, notamment le personnel médical du SmartLab et les chercheurs de la Faculté de Médecine de Monastir, jouent un rôle actif à plusieurs niveaux~:
+
+\begin{itemize}
+    \item \textbf{Revue de sprint~:} À la fin de chaque sprint, les parties prenantes participent aux réunions de revue pour évaluer les incréments livrés, tels que le pipeline OCR du Sprint 1 ou le système de notification du Sprint 2. Leurs retours permettent de valider la conformité des fonctionnalités aux besoins cliniques, par exemple en vérifiant la précision des données extraites ou l’ergonomie de l’interface utilisateur.
+    \item \textbf{Affinement du Product Backlog~:} Le Product Owner collabore avec les parties prenantes pour prioriser les fonctionnalités, en utilisant la méthode MoSCoW pour classer les tâches (voir tableau~\ref{tab:backlog_moscow})~\cite{atlassian2023scrum}. Par exemple, les médecins peuvent insister sur la priorisation des alertes critiques (M-02) pour garantir une réactivité maximale.
+    \item \textbf{Conformité réglementaire~:} Les parties prenantes, en particulier les experts médicaux, contribuent à garantir que le système respecte les réglementations médicales, comme la protection des données des patients via le chiffrement (M-07). Leur expertise est essentielle pour aligner le développement sur les normes éthiques et légales.
+\end{itemize}
+
+\section{Outils de support à Scrum}
+\label{subsec:outils_scrum}
+Pour faciliter la mise en œuvre de Scrum, plusieurs outils numériques sont utilisés pour gérer les processus, la communication et le suivi des tâches~:
+
+\begin{itemize}
+    \item \textbf{ClickUp~:} Utilisé pour gérer le \textit{Product Backlog} et le \textit{Sprint Backlog}, ClickUp permet de suivre les tâches, d’assigner des responsabilités et de visualiser l’avancement des sprints à l’aide de tableaux Kanban ou Scrum~\cite{clickupdocs}. Par exemple, les tâches du Sprint 1, comme l’intégration de l’OCR (M-02), sont suivies via des tickets ClickUp avec des estimations de temps et des statuts mis à jour quotidiennement.
+    \item \textbf{Slack~:} Cette plateforme de communication permet des échanges en temps réel entre l’équipe de développement, le Product Owner et le Scrum Master~\cite{slackdocs}. Les \textit{Daily Scrum} peuvent être partiellement gérés via des canaux dédiés, où les membres signalent leurs progrès et obstacles.
+    \item \textbf{Git~:} Utilisé pour le contrôle de version, Git permet de gérer le code source du projet et de faciliter la collaboration entre les développeurs~\cite{chacon2014progit}. Les commits sont alignés avec les tâches du \textit{Sprint Backlog}, garantissant une traçabilité des contributions.
+\end{itemize}
+
+\section{Représentation visuelle du processus Scrum}
+\label{subsec:visuel_scrum}
+La figure~\ref{fig:scrum_workflow} illustre le processus Scrum adapté au projet, montrant la séquence des événements et les boucles de rétroaction. Chaque sprint commence par une planification, suivie de réunions quotidiennes (\textit{Daily Scrum}), d’une revue de sprint pour présenter l’incrément, et d’une rétrospective pour améliorer le processus. Ce cycle itératif garantit que les fonctionnalités, comme la collecte de données via OCR ou la gestion des alertes, sont développées et validées progressivement.
+
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}
+        \node[draw, rectangle, minimum width=2cm, minimum height=1cm] (plan) at (0,0) {Planification};
+        \node[draw, rectangle, minimum width=2cm, minimum height=1cm] (daily) at (4,0) {Daily Scrum};
+        \node[draw, rectangle, minimum width=2cm, minimum height=1cm] (review) at (8,0) {Revue};
+        \node[draw, rectangle, minimum width=2cm, minimum height=1cm] (retro) at (12,0) {Rétrospective};
+        \draw[->] (plan) -- (daily);
+        \draw[->] (daily) -- (review);
+        \draw[->] (review) -- (retro);
+        \draw[->, dashed] (retro) to[out=270, in=270] (plan);
+    \end{tikzpicture}
+    \caption{Processus Scrum adapté au projet.}
+    \label{fig:scrum_workflow}
+\end{figure}

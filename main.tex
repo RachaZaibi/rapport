@@ -12,18 +12,21 @@
 \usepackage{plantuml}
 \usepackage{tabularx}
 \usepackage{calc}
-
-
 \geometry{a4paper, margin=1in}
 
-\title{Rapport de Projet de Fin d'Études : Développement d'un système de collecte de données en temps réel et de gestion des alertes pour les machines en salle de réveil}
-\author{Zaibi Racha}
-
 \begin{document}
-\setlength{\tabcolsep}{10pt} % Pour augmenter l'espacement des colonnes des tableaux
-\renewcommand{\arraystretch}{1.5} % Pour augmenter l'espacement des lignes des tableaux
 
-\maketitle
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    \textbf{\Large Rapport de Projet de Fin d'Études} \\
+    \vspace{0.5cm}
+    \textbf{Développement d’un système de collecte de données en temps réel et de gestion des alertes pour les machines en salle de réveil} \\
+    \vspace{1cm}
+    \textbf{Zaibi Racha} \\
+    \vspace{0.5cm}
+    June 10, 2025
+\end{titlepage}
 
 \tableofcontents
 \newpage
@@ -35,6 +38,15 @@
 \include{chapter2/chapter2} % Include the content of chapter2.tex
 \include{chapter3/chapter3} % Include the content of chapter3.tex
 \include{chapter4/chapter4} % Include the content of chapter4.tex
-\include{chapter5/chapter5} % Include the content of chapter5.tex
+% \include{chapter5/chapter5} % Include the content of chapter5.tex
+% \include{chapter6/chapter6} % Include the content of chapter6.tex
+% \include{chapter7/chapter7} % Include the content of chapter7.tex
+% bibliography 
+% orner the bibliography
+\newpage
+\bibliographystyle{unsrt} % Choose a bibliography style (e.g., plain, unsrt, alpha, etc.)
+\bibliography{references} % Ensure you have a references.bib file with your bibliography entries
+% Appendices
+
 
 \end{document}

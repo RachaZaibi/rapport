@@ -1,0 +1,29 @@
+@startuml
+title Flux de Communication
+
+start
+
+:Collecte des données via HL7 ou OCR;
+note right #FFD700: <b>Étape 1</b>\nLes données sont collectées à partir des moniteurs Mindray (HL7) \nLes ou des machines anciennes (OCR).
+
+:Transmission des données au backend;
+note right #FFD700: <b>Étape 1.1</b>\nLes données sont transmises au backend \nLes via le réseau de surveillance interne.
+
+:Analyse et stockage par le backend;
+note right #87CEEB: <b>Étape 2</b>\nLes données sont analysées en temps réel \nLes et stockées dans la base de données MySQL.
+
+:Détection des anomalies;
+note right #90EE90: <b>Étape 3</b>\nLe système détecte les anomalies \nLes en comparant les données aux seuils prédéfinis.
+
+:Envoi d’alertes au personnel médical;
+note right #90EE90: <b>Étape 3.1</b>\nLes alertes sont envoyées via e-mail, SMS, ou notifications push (FCM).
+
+:Consultation des alertes et données par le personnel médical;
+note right #FFA07A: <b>Étape 4</b>\nLe personnel médical consulte les alertes \nLes et les données via l'application web ou mobile.
+
+:Validation des actions nécessaires;
+note right #FFA07A: <b>Étape 4.1</b>\nLe personnel médical prend des mesures en fonction des alertes reçues.
+
+stop
+
+@enduml

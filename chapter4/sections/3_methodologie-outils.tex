@@ -1,0 +1,111 @@
+Le projet sera géré selon la méthodologie \textbf{Scrum}  \ref{sec:presentation_scrum}, favorisant une approche agile avec des cycles itératifs appelés \textbf{sprints}. Le \textbf{Product Owner}, l’\textbf{équipe de développement} et le \textbf{Scrum Master} collaboreront pour assurer une livraison progressive des fonctionnalités clés.
+
+\subsection*{Acteurs Scrum et Missions}
+\begin{longtable}{|m{3cm}|m{8cm}|m{2cm}|}
+\hline
+\textbf{Rôle} & \textbf{Mission} & \textbf{Acteur} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Rôle} & \textbf{Mission} & \textbf{Acteur} \\
+\hline
+\endhead
+% \hline
+\endfoot
+Product Owner & 
+- Définir et prioriser les fonctionnalités du produit (Product Backlog). \newline
+- Assurer que l'équipe travaille sur les fonctionnalités les plus importantes. \newline
+- Valider les livrables à la fin de chaque sprint. &
+Pr Ammeri Charfeddine \\
+\hline
+Équipe de Développement & 
+- Concevoir, développer et tester les fonctionnalités du produit. \newline
+- Participer aux réunions de planification et de revue de sprint. \newline
+- Assurer la qualité du code et des livrables. &
+Zaibi Racha \\
+\hline
+Scrum Master & 
+- Faciliter les réunions Scrum (Daily Stand-up, Sprint Planning, Sprint Review, Retrospective). \newline
+- Supprimer les obstacles qui empêchent l'équipe de progresser. \newline
+- Assurer que l'équipe suit les principes Scrum. &
+Ouni Ghada\\
+\hline
+\caption{Acteurs du projet} 
+\end{longtable}
+
+\subsection*{Organisation du Backlog}
+Le \textbf{Product Backlog} géré via ClickUp \ref{subsec:outils_scrum} regroupe l’ensemble des fonctionnalités à développer pour le système. Chacune est formulée sous forme de \textit{User Story}, garantissant une approche centrée sur l’utilisateur.
+
+Chaque fonctionnalité sera développée et livrée en plusieurs \textbf{sprints}, selon les priorités établies par le \textit{Product Owner}. Elles sont classées selon la méthode \textbf{MoSCoW}, qui définit les niveaux de priorité pour chaque tâche.
+
+\section*{Backlog du Projet}
+\label{sec:backlog_projet} 
+% Le \textbf{Backlog} est un élément central de la méthodologie \textbf{Scrum}. Il regroupe toutes les spécifications fonctionnelles et techniques du produit.
+
+\begin{longtable}{|c|p{9cm}|c|}
+    \hline
+    \textbf{ID} & \textbf{Tâche} & \textbf{Priority} \\
+    \hline
+    \endfirsthead
+    \hline
+    \textbf{ID} & \textbf{Tâche} & \textbf{Priority} \\
+    \hline
+    \endhead
+    % \hline
+    \endfoot
+    M-01& Détection et reconnaissance des valeurs vitales via OCR pour les moniteurs des signes vitaux. & M \\
+    \hline
+    M-02 & Génération et gestion des alertes en fonction des seuils prédéfinis. & M \\
+    \hline
+    M-03 & Envoi d’alertes aux médecins et infirmiers via notifications push (FCM) et e-mail. & M \\
+    \hline
+    M-04 & Interface web et mobile pour visualiser les données des patients et gérer les alertes. & M \\
+    \hline
+    M-05 & Authentification et gestion des utilisateurs (médecins, infirmiers, administrateurs). & M \\
+    \hline
+    M-06 & Stockage et historique des données. & M \\
+    \hline
+    M-07 & Conformité aux réglementations médicales (sécurité des données). & M \\
+    \hline
+    S-02 & Configuration des seuils d’alerte personnalisés par patient. & S \\
+    \hline
+    S-03 & Gestion des horaires de filtrage des alertes pour le personnel médical. & S \\
+    \hline
+    S-04 & Interface d’administration pour configurer les seuils d’alerte et gérer les utilisateurs. & S \\
+    \hline
+    S-05 & Notifications push. & S \\
+    \hline
+    C-04 & Support multilingue pour l’interface utilisateur. & C \\
+    \hline
+    C-05 & Gestion des alertes par priorité (critique, moyen, faible). & C \\
+    \hline
+    C-06 & Historique des alertes avec possibilité de filtrage par date, patient, ou type d’alerte. & C \\
+    \hline
+    % W-01 & Intégration avec des systèmes de gestion hospitalière (HIS) tiers. &W \\
+    % % \hline
+    % W-02 & Déploiement du système dans plusieurs hôpitaux ou centres médicaux. &W \\
+    % \hline
+    W-03 & Analyse avancée des données avec intelligence artificielle pour le diagnostic médical. &W \\
+    % \hline
+    % W-04 & Support pour d’autres langues de programmation ou frameworks non prévus initialement. &W \\
+    % \hline
+    % W-05 & Développement d’une application desktop en plus des interfaces web et mobile. &W \\
+    \hline
+\caption{Backlog du Projet avec Priorités MoSCoW} 
+\label{tab:backlog_moscow}
+\end{longtable}
+\section*{Clé des Priorités MoSCoW}
+\begin{itemize}
+    \item \textbf{M (Must)} : Tâches critiques nécessaires au bon fonctionnement du système.
+    \item \textbf{S (Should)} : Tâches importantes qui apportent une valeur significative mais ne sont pas essentielles pour la première version.
+    \item \textbf{C (Could)} : Fonctionnalités optionnelles pouvant être ajoutées si le temps et les ressources le permettent.
+    \item \textbf{W (Won't Have)} : Tâches hors du périmètre de la phase actuelle du projet.
+\end{itemize}
+
+% \subsection{Diagramme des cas d’utilisation global}
+% \input{chapter4/sections/subsections/3.1.use-case.tex} 
+\subsection{Planification des sprints}
+\input{chapter4/sections/subsections/3.2_sprints.tex} 
+% \subsection{Prototypage des interfaces}
+% \input{chapter4/sections/subsections/3.3_interfaces.tex} 
+

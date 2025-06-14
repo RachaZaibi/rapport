@@ -1,39 +1,63 @@
-% Sprint 3
-\chapter{Étude et réalisation du Sprint 3}
+
+\chapter{Étude et réalisation du Sprint 1}
 
 \section{Backlog du sprint}
-Définissez les tâches pour le Sprint 3 :
-\begin{itemize}
-    \item Système de gestion des alertes.
-    \item Livraison des notifications (e-mail, notifications dans l'application).
-\end{itemize}
+\input{chapter4/sections/1_sprintBacklog.tex}
 
 \section{Spécification fonctionnelle}
-\subsection{Diagramme de cas d’utilisation}
-Fournissez un diagramme des cas d'utilisation pour le Sprint 3.
+\input{chapter4/sections/2_specificationFonctionnelle.tex}
 
-\subsection{Description textuelle de cas d’utilisation}
-Décrivez les cas d'utilisation en détail.
+\subsection{Description des cas d’utilisation}
+\begin{description}
+    \item[Affichage des données] Le moniteur de signes vitaux affiche les données en temps réel. Ces données sont capturées par la caméra OCR.
+    \item[Reconnaissance des valeurs] La caméra OCR analyse les données capturées et extrait les valeurs numériques à l’aide de Tesseract OCR.
+    \item[Génération des alertes] Le système compare les valeurs reconnues avec des seuils prédéfinis. Si une valeur dépasse un seuil, une alerte est générée.
+    \item[Livraison des notifications] Les alertes générées sont transmises au système de notification, qui les envoie aux utilisateurs concernés.
+\end{description}
 
 \section{Conception}
-\subsection{Diagrammes des séquences détaillés}
-Incluez des diagrammes de séquence pour le processus de gestion des alertes.
+\subsection{Architecture technique}
+\begin{itemize}
+    \item Stack logicielle : Python 3.10, OpenCV 4.8, Tesseract 5.3.1
+    \item Infrastructure : Docker containers sur Ubuntu 22.04
+    \item Communication inter-modules : RabbitMQ
+\end{itemize}
 
-\subsection{Diagramme de Classes}
-Fournissez un diagramme de classes pour les composants du système.
+\subsection{Diagramme de séquence}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{chapter4/sections/diagrams/SequenceDiagram.png}
+%     \caption{Flux de données de la capture à la notification}
+%     \label{fig:sequence_diagram}
+% \end{figure}
 
-\section{Réalisation}
-\subsection{Interface de Consultation des détails de colis avec son état courant}
-(Adaptez cette section à votre projet si nécessaire.)
+\subsection{Composants développés}
+\begin{table}[h]
+\centering
+\caption{Composants clés du Sprint 1}
+\label{tab:composants}
+\begin{tabular}{|l|p{10cm}|}
+\hline
+\textbf{Composant} & \textbf{Fonctionnalités} \\
+\hline
+CaptureModule & Gestion de la caméra, réglages automatiques \\
+OCRProcessor & Pipeline de traitement d'images et reconnaissance \\
+\hline
+\textbf{Composant} & \textbf{Fonctionnalités} \\
+\hline
+CaptureModule & Gestion de la caméra, réglages automatiques \\
+OCRProcessor & Pipeline de traitement d'images et reconnaissance \\
+AlertEngine & Évaluation des seuils et déclenchement d'alertes \\
+Notifier & Envoi multi-canaux (FCM, Email) \\
+\hline
+\end{tabular}
+\end{table}
 
-\subsection{Interface de Consultation les événements et les états}
-(Adaptez cette section à votre projet si nécessaire.)
+\section{Validation}
+\subsection{Stratégie de test}
+\begin{itemize}
+    \item Tests unitaires : Couverture $>80\%$ (pytest-cov)
+    \item Tests d'intégration : Jenkins pipeline
+    \item Tests de performance : JMeter pour la latence
+\end{itemize}
 
-\subsection{Interface d’ajout une action}
-(Adaptez cette section à votre projet si nécessaire.)
-
-\subsection{Interface d’envoi un mail au client}
-Montrez l'interface pour l'envoi de notifications par e-mail.
-
-\section{Test}
-Décrivez le processus de test pour le Sprint 3.

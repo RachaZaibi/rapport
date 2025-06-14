@@ -1,0 +1,76 @@
+\begin{thebibliography}{10}
+
+\bibitem{schwaber2004}
+Ken Schwaber and Jeff Sutherland.
+\newblock {\em Scrum: The art of doing twice the work in half the time}.
+\newblock Crown Business, 2004.
+
+\bibitem{rubin2012}
+Kenneth~S. Rubin.
+\newblock {\em Essential Scrum: A practical guide to the most popular Agile
+  process}.
+\newblock Addison-Wesley, 2012.
+
+\bibitem{atlassian2023scrum}
+Atlassian.
+\newblock What is scrum?
+\newblock \url{https://www.atlassian.com/agile/scrum}, 2023.
+
+\bibitem{atlassian2023artifacts}
+Atlassian.
+\newblock Scrum artifacts.
+\newblock \url{https://www.atlassian.com/agile/scrum/artifacts}, 2023.
+
+\bibitem{atlassian2023roles}
+Atlassian.
+\newblock Scrum roles.
+\newblock \url{https://www.atlassian.com/agile/scrum/roles}, 2023.
+
+\bibitem{cohn2009}
+Mike Cohn.
+\newblock {\em Succeeding with Agile: Software development using Scrum}.
+\newblock Addison-Wesley, 2009.
+
+\bibitem{clickupdocs}
+ClickUp.
+\newblock Clickup docs: Product management and agile tools.
+\newblock
+  \url{https://docs.clickup.com/en/articles/2095287-getting-started-with-clickup},
+  2025.
+
+\bibitem{slackdocs}
+Slack Technologies.
+\newblock Slack documentation.
+\newblock \url{https://slack.com/help/categories/200111606}, 2025.
+
+\bibitem{chacon2014progit}
+Scott Chacon and Ben Straub.
+\newblock {\em Pro Git}.
+\newblock Apress, 2nd edition, 2014.
+
+\bibitem{tesseract2023}
+Tesseract~OCR Team.
+\newblock Tesseract ocr documentation.
+\newblock \url{https://github.com/tesseract-ocr/tesseract}, 2023.
+
+\bibitem{smith2022}
+J.~Smith.
+\newblock Cost-benefit analysis of ocr in legacy medical systems.
+\newblock {\em Journal of Medical Technology}, 15(3):45--52, 2022.
+
+\bibitem{laravel2023}
+Laravel Team.
+\newblock Laravel documentation.
+\newblock \url{https://laravel.com/docs}, 2023.
+
+\bibitem{opencv2023}
+OpenCV Team.
+\newblock Opencv: Computer vision with python.
+\newblock \url{https://opencv.org}, 2023.
+
+\bibitem{fcm2023}
+Google.
+\newblock Firebase cloud messaging performance guide.
+\newblock \url{https://firebase.google.com/docs/cloud-messaging}, 2023.
+
+\end{thebibliography}

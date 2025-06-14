@@ -1,0 +1,60 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+Reallocating 'name_of_file' (item size: 1) to 26 items.
+A level-1 auxiliary file: chapter0/introduction.aux
+Reallocating 'name_of_file' (item size: 1) to 22 items.
+A level-1 auxiliary file: chapter1/chapter1.aux
+Reallocating 'name_of_file' (item size: 1) to 22 items.
+A level-1 auxiliary file: chapter2/chapter2.aux
+Reallocating 'name_of_file' (item size: 1) to 22 items.
+A level-1 auxiliary file: chapter3/chapter3.aux
+Reallocating 'name_of_file' (item size: 1) to 22 items.
+A level-1 auxiliary file: chapter4/chapter4.aux
+Reallocating 'name_of_file' (item size: 1) to 6 items.
+The style file: unsrt.bst
+Reallocating 'name_of_file' (item size: 1) to 11 items.
+Database file #1: references.bib
+Warning--I didn't find a database entry for "yolo2023"
+You've used 14 entries,
+            1791 wiz_defined-function locations,
+            514 strings with 4982 characters,
+and the built_in function-call counts, 2015 in all, are:
+= -- 172
+> -- 64
+< -- 0
++ -- 30
+- -- 16
+* -- 44
+:= -- 322
+add.period$ -- 42
+call.type$ -- 14
+change.case$ -- 11
+chr.to.int$ -- 0
+cite$ -- 14
+duplicate$ -- 94
+empty$ -- 261
+format.name$ -- 16
+if$ -- 474
+int.to.chr$ -- 0
+int.to.str$ -- 14
+missing$ -- 9
+newline$ -- 73
+num.names$ -- 14
+pop$ -- 82
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 39
+stack$ -- 0
+substring$ -- 19
+swap$ -- 14
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 16
+width$ -- 16
+write$ -- 144
+(There was 1 warning)
