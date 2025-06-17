@@ -125,7 +125,7 @@ L’implication des parties prenantes est un pilier central de la méthodologie 
 
 \begin{itemize}
     \item \textbf{Revue de sprint~:} À la fin de chaque sprint, les parties prenantes participent aux réunions de revue pour évaluer les incréments livrés, tels que le pipeline OCR du Sprint 1 ou le système de notification du Sprint 2. Leurs retours permettent de valider la conformité des fonctionnalités aux besoins cliniques, par exemple en vérifiant la précision des données extraites ou l’ergonomie de l’interface utilisateur.
-    \item \textbf{Affinement du Product Backlog~:} Le Product Owner collabore avec les parties prenantes pour prioriser les fonctionnalités, en utilisant la méthode MoSCoW pour classer les tâches (voir tableau~\ref{tab:backlog_moscow})~\cite{atlassian2023scrum}. Par exemple, les médecins peuvent insister sur la priorisation des alertes critiques (M-02) pour garantir une réactivité maximale.
+    \item \textbf{Affinement du Product Backlog~:} Le Product Owner collabore avec les parties prenantes pour prioriser les fonctionnalités, en utilisant la méthode MoSCoW pour classer les tâches (voir tableau~\ref{tab:backlog})~\cite{atlassian2023scrum}. Par exemple, les médecins peuvent insister sur la priorisation des alertes critiques (M-02) pour garantir une réactivité maximale.
     \item \textbf{Conformité réglementaire~:} Les parties prenantes, en particulier les experts médicaux, contribuent à garantir que le système respecte les réglementations médicales, comme la protection des données des patients via le chiffrement (M-07). Leur expertise est essentielle pour aligner le développement sur les normes éthiques et légales.
 \end{itemize}
 
@@ -135,8 +135,30 @@ Pour faciliter la mise en œuvre de Scrum, plusieurs outils numériques sont uti
 
 \begin{itemize}
     \item \textbf{ClickUp~:} Utilisé pour gérer le \textit{Product Backlog} et le \textit{Sprint Backlog}, ClickUp permet de suivre les tâches, d’assigner des responsabilités et de visualiser l’avancement des sprints à l’aide de tableaux Kanban ou Scrum~\cite{clickupdocs}. Par exemple, les tâches du Sprint 1, comme l’intégration de l’OCR (M-02), sont suivies via des tickets ClickUp avec des estimations de temps et des statuts mis à jour quotidiennement.
+    % add ClickUp logo figure
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.3\linewidth]{chapter2/images/Clickup.png}
+        \caption{Logo de ClickUp.}
+        \label{fig:clickup_logo}
+    \end{figure}
+
     \item \textbf{Slack~:} Cette plateforme de communication permet des échanges en temps réel entre l’équipe de développement, le Product Owner et le Scrum Master~\cite{slackdocs}. Les \textit{Daily Scrum} peuvent être partiellement gérés via des canaux dédiés, où les membres signalent leurs progrès et obstacles.
+    
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.3\linewidth]{chapter2/images/slack-logo-slide.png}
+        \caption{Logo de Slack.}
+        \label{fig:slack_logo}
+    \end{figure}
+    
     \item \textbf{Git~:} Utilisé pour le contrôle de version, Git permet de gérer le code source du projet et de faciliter la collaboration entre les développeurs~\cite{chacon2014progit}. Les commits sont alignés avec les tâches du \textit{Sprint Backlog}, garantissant une traçabilité des contributions.
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.3\linewidth]{chapter2/images/Git-Logo-2Color.png}
+        \caption{Logo de Git.}
+    \end{figure}
 \end{itemize}
 
 \section{Représentation visuelle du processus Scrum}

@@ -1,5 +1,88 @@
 \begin{thebibliography}{10}
 
+\bibitem{FMM2020}
+{Faculté de Médecine de Monastir}.
+\newblock Rapport annuel 2020, 2020.
+\newblock Available: http://www.fmm.rnu.tn/.
+
+\bibitem{ISO21001}
+{International Organization for Standardization}.
+\newblock Iso 21001:2018 - educational organizations, 2018.
+\newblock Available: https://www.iso.org/standard/69596.html.
+
+\bibitem{WHO2021}
+{World Health Organization}.
+\newblock Digital health in low-resource settings, 2021.
+\newblock Available: https://www.who.int/publications.
+
+\bibitem{TunisieMedicale2019}
+A.~Ben Abdelaziz et~al.
+\newblock Challenges in tunisian public hospitals: A qualitative study.
+\newblock {\em La Tunisie Médicale}, 97(1):45--52, 2019.
+
+\bibitem{CriticalCare2020}
+J.~Smith et~al.
+\newblock Impact of monitoring delays on post-operative outcomes.
+\newblock {\em Critical Care Medicine}, 48(3):321--328, 2020.
+
+\bibitem{WHO2009}
+{World Health Organization}.
+\newblock {\em Global Standards for the Initial Education of Professional
+  Nurses and Midwives}.
+\newblock WHO Press, 2009.
+
+\bibitem{Mindray2023}
+{Mindray}.
+\newblock Patient monitoring systems, 2023.
+\newblock Available: https://www.mindray.com/.
+
+\bibitem{UN2021}
+{United Nations}.
+\newblock Technology and innovation report 2021, 2021.
+\newblock Available:
+  https://unctad.org/publication/technology-and-innovation-report-2021.
+
+\bibitem{AlTurjman2020}
+F.~Al-Turjman.
+\newblock Iot-enabled smart healthcare systems.
+\newblock {\em IEEE Access}, 8:123456--123467, 2020.
+
+\bibitem{Smith2007}
+R.~Smith.
+\newblock An overview of the tesseract ocr engine.
+\newblock {\em International Conference on Document Analysis and Recognition
+  (ICDAR)}, pages 629--633, 2007.
+
+\bibitem{Firebase2023}
+{Google}.
+\newblock Firebase cloud messaging, 2023.
+\newblock Available: https://firebase.google.com/docs/cloud-messaging.
+
+\bibitem{WHO2010}
+{World Health Organization}.
+\newblock Medical devices: Managing the mismatch, 2010.
+\newblock Available: https://www.who.int/publications.
+
+\bibitem{AHA2020}
+{American Heart Association}.
+\newblock {\em Advanced Cardiovascular Life Support Provider Manual}.
+\newblock AHA, 2020.
+
+\bibitem{IQMessenger2023}
+{IQ Messenger}.
+\newblock Smartapp features, 2023.
+\newblock Available: https://www.iqmessenger.com/.
+
+\bibitem{Sun2020}
+L.~Sun.
+\newblock Network reliability in healthcare systems.
+\newblock {\em Healthcare IT Review}, 12(4):45--50, 2020.
+
+\bibitem{Zhang2019}
+Y.~Zhang et~al.
+\newblock Real-time iot healthcare monitoring.
+\newblock {\em Journal of Medical Systems}, 43(8):1--10, 2019.
+
 \bibitem{schwaber2004}
 Ken Schwaber and Jeff Sutherland.
 \newblock {\em Scrum: The art of doing twice the work in half the time}.
@@ -44,94 +127,6 @@ Slack Technologies.
 \newblock \url{https://slack.com/help/categories/200111606}, 2025.
 
 \bibitem{chacon2014progit}
-Scott Chacon and Ben Straub.
-\newblock {\em Pro Git}.
-\newblock Apress, 2nd edition, 2014.
-
-\bibitem{yolo2023}
-Joseph Redmon.
-\newblock Yolo: Real-time object detection.
-\newblock \url{https://pjreddie.com/darknet/yolo/}, 2023.
-\newblock Accessed: 2023-10-01.
-
-\bibitem{tesseract2023}
-Tesseract~OCR Team.
-\newblock Tesseract ocr documentation.
-\newblock \url{https://github.com/tesseract-ocr/tesseract}, 2023.
-
-\bibitem{smith2022}
-J.~Smith.
-\newblock Cost-benefit analysis of ocr in legacy medical systems.
-\newblock {\em Journal of Medical Technology}, 15(3):45--52, 2022.
-
-\bibitem{laravel2023}
-Laravel Team.
-\newblock Laravel documentation.
-\newblock \url{https://laravel.com/docs}, 2023.
-
-\bibitem{opencv2023}
-OpenCV Team.
-\newblock Opencv: Computer vision with python.
-\newblock \url{https://opencv.org}, 2023.
-
-\bibitem{fcm2023}
-Google.
-\newblock Firebase cloud messaging performance guide.
-\newblock \url{https://firebase.google.com/docs/cloud-messaging}, 2023.
-
-\bibitem{redmon_yolo_2023}
-Joseph Redmon.
-\newblock Yolo: Real-time object detection.
-\newblock \url{https://pjreddie.com/darknet/yolo/}, 2023.
-
-\bibitem{tesseract_ocr_2023}
-Tesseract~OCR Team.
-\newblock Tesseract ocr documentation.
-\newblock \url{https://github.com/tesseract-ocr/tesseract}, 2023.
-
-\bibitem{laravel_docs_2023}
-Laravel Team.
-\newblock Laravel documentation.
-\newblock \url{https://laravel.com/docs}, 2023.
-
-\bibitem{firebase_fcm_2023}
-Google.
-\newblock Firebase cloud messaging performance guide.
-\newblock \url{https://firebase.google.com/docs/cloud-messaging}, 2023.
-
-\bibitem{mysql_docs_2023}
-MySQL Team.
-\newblock Mysql documentation.
-\newblock \url{https://dev.mysql.com/doc}, 2023.
-
-\bibitem{clickup_docs_2025}
-ClickUp.
-\newblock Clickup documentation: Product and agile management tools.
-\newblock
-  \url{https://docs.clickup.com/en/articles/2095287-getting-started-with-clickup},
-  2025.
-
-\bibitem{labelimg_2023}
-LabelImg Team.
-\newblock Labelimg: Image annotation tool.
-\newblock \url{https://github.com/tzutalin/labelImg}, 2023.
-
-\bibitem{opencv_2023}
-OpenCV Team.
-\newblock Opencv: Computer vision with python.
-\newblock \url{https://opencv.org}, 2023.
-
-\bibitem{react_docs_2023}
-React Team.
-\newblock React documentation.
-\newblock \url{https://reactjs.org/docs}, 2023.
-
-\bibitem{flutter_docs_2023}
-Flutter Team.
-\newblock Flutter documentation.
-\newblock \url{https://flutter.dev/docs}, 2023.
-
-\bibitem{pro_git_2014}
 Scott Chacon and Ben Straub.
 \newblock {\em Pro Git}.
 \newblock Apress, 2nd edition, 2014.

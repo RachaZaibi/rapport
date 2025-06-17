@@ -1,0 +1,267 @@
+
+\chapter{Étude architecturale du projet}
+\label{chap:architecture}
+
+\section{Introduction}
+\label{sec:introduction}
+
+Ce chapitre présente l'architecture globale du système de collecte de données en temps réel et de gestion des alertes pour les machines en salle de réveil. L'objectif est de décrire les choix technologiques, les composants clés et les interactions entre les différents modules pour répondre aux besoins fonctionnels et non fonctionnels identifiés.
+
+Ce système est conçu pour répondre à un contexte hospitalier sensible, exigeant une haute disponibilité, une sécurité accrue des données, et une capacité d’adaptation à différents environnements techniques.
+
+\section{Architecture globale}
+\label{sec:architecture_globale}
+
+Le système repose sur une architecture modulaire et évolutive, organisée en trois couches principales~:
+
+\begin{itemize}
+    \item \textbf{Couche de collecte des données~:}
+    \begin{itemize}
+        \item Intègre des \textit{Moniteurs} médicaux avec \textit{Caméras IP} pour capturer les frames des écrans.
+    \end{itemize}
+
+    \item \textbf{Couche de traitement et stockage~:}
+    \begin{itemize}
+        \item Utilise OpenCV pour le prétraitement des images, \textit{YOLO} pour détecter les zones de données (e.g., fréquence cardiaque, SpO2) dans les images capturées, et Tesseract OCR pour l'extraction des valeurs vitales.
+        \item \textit{Flask} pour le service de traitement d'images, qui communique avec le \textit{Backend} Laravel.
+        \item Un \textit{Backend} Laravel pour la gestion des utilisateurs, des données et des alertes.
+        \item Une base de données MySQL pour le stockage des données des patients, des mesures et des historiques d'alertes.
+    \end{itemize}
+
+    \item \textbf{Couche de visualisation et notification~:}
+    \begin{itemize}
+        \item Interfaces \textit{Application Web} (React) et \textit{Application Mobile} (Flutter) pour la consultation des données et la gestion des alertes, connectées via REST API.
+        \item Notifications en temps réel via Firebase Cloud Messaging (FCM) pour les alertes push, et envoi d’e-mails pour les alertes critiques.
+    \end{itemize}
+\end{itemize}
+
+La figure~\ref{fig:architecture_globale} illustre cette organisation en couches.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{chapter3/diagrams/system_architecture.png}
+    \caption{Architecture globale du système} % Updated caption
+    \label{fig:architecture_globale}
+\end{figure}
+
+\section{Diagrammes d'architecture}
+\label{sec:diagrammes}
+
+\subsection{Diagramme de déploiement}
+\label{subsec:deploiement}
+
+Le système repose sur une architecture distribuée intégrant des dispositifs médicaux, des serveurs applicatifs, des services de traitement d’image, et des interfaces utilisateur. Voici les principaux composants matériels et logiciels déployés, regroupés par couche~:
+
+\paragraph{Couche de collecte des données :}
+\begin{itemize}
+    \item \textbf{Moniteurs médicaux} : collecte des données vitales.
+    \item \textbf{Caméras IP} : capture des écrans des moniteurs.
+\end{itemize}
+
+\paragraph{Couche de traitement et stockage :}
+\begin{itemize}
+    \item \textbf{Serveur backend} : héberge l’API Laravel, le service Flask de traitement d’images, et le modèle YOLO pour la détection des zones de données. % Added YOLO
+    \item \textbf{Base de données MySQL} : stockage des données patient, mesures et alertes.
+    \item \textbf{Services de traitement d’images} : YOLO pour la détection des régions d’intérêt, OpenCV pour le prétraitement, et Tesseract pour l’extraction OCR, exécutés sur le serveur Flask. % Added YOLO
+\end{itemize}
+
+\paragraph{Couche de visualisation et notification :}
+\begin{itemize}
+    \item \textbf{Appareils mobiles} : consultation en temps réel des alertes via l’application Flutter.
+    \item \textbf{Application web React} : interface utilisateur pour le personnel médical.
+    \item \textbf{Services de notification} : Firebase Cloud Messaging pour les alertes push.
+\end{itemize}
+
+\paragraph{Infrastructure et support :}
+\begin{itemize}
+    \item \textbf{Réseau sécurisé} : assure la communication sécurisée entre tous les composants.
+\end{itemize}
+
+\paragraph{Connexions et protocoles :}
+\begin{itemize}
+    \item Communication via \textbf{REST API} (HTTP/HTTPS) et \textbf{WebSockets}, sécurisée par des mécanismes d’authentification (Sanctum) et d’autorisation.
+    \item Flux vidéo des caméras traité localement ou sur le cloud, avec analyse par YOLO et OCR. % Added YOLO
+    \item Notifications push envoyées via \textbf{Firebase Cloud Messaging (FCM)}.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{chapter3/diagrams/deployment_diagram.png}
+    \caption{Diagramme de déploiement du système, incluant YOLO pour la détection des zones de données.} % Updated caption
+    \label{fig:diagramme_deploiement}
+\end{figure}
+
+\subsection{Diagramme de composants}
+\label{subsec:composants}
+\textbf{Backend~:}
+\begin{itemize}
+    \item Modules Python pour la détection des zones de données (YOLO), l'OCR (Tesseract), et l'analyse des données. % Added YOLO
+    \item Services Laravel pour l'authentification, la gestion des alertes et les notifications.
+\end{itemize}
+
+\textbf{Frontend~:}
+\begin{itemize}
+    \item Tableaux de bord React pour la visualisation des données.
+    \item Application Flutter pour les alertes mobiles.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{chapter3/diagrams/component_diagram.png}
+    \caption{Diagramme de composants du système, incluant le module YOLO.} % Updated caption
+    \label{fig:composants}
+\end{figure}
+
+\section{System Architecture}
+\subsection{Database Design}
+The VitalSync system uses a MySQL database to store patient data, vital signs, and alerts. The class diagram below illustrates the database schema, including key entities and relationships. For implementation details, see Chapter~\ref{chap:sprint1}.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.9\textwidth]{chapte
+    \caption{Class diagram of the VitalSync database schema.}
+    \label{fig:class_diagram}
+\end{figure}
+
+\section{Justification des choix technologiques}
+\label{sec:justification_techno}
+
+Cette section détaille les raisons ayant conduit au choix des technologies clés, en conciliant performance, efficacité économique, évolutivité et intégration avec les systèmes existants.
+
+\begin{itemize}
+    \item \textbf{YOLO (You Only Look Once)~:}
+    \begin{itemize}
+        \item Utilisé pour détecter les zones de données (régions d’intérêt) sur les écrans des moniteurs médicaux, permettant une extraction précise des valeurs vitales par OCR \cite{yolo2023}. % Added reference
+        \item Offre une détection rapide et robuste des bounding boxes autour des paramètres vitaux (e.g., fréquence cardiaque, SpO2), même dans des conditions d'éclairage variables.
+        \item Complète OpenCV pour le prétraitement des images et Tesseract pour l'extraction de texte, réduisant les erreurs d'OCR en isolant les zones pertinentes.
+    \end{itemize}
+    \item \textbf{Tesseract OCR~:}
+    \begin{itemize}
+        \item Offre une solution efficace pour extraire des données des zones identifiées par YOLO, avec une grande précision pour les données numériques \cite{tesseract2023}. % Updated to reference YOLO
+        \item Constitue une alternative économique à la modernisation des moniteurs de signes vitaux, réduisant ainsi les coûts matériels \cite{smith2022}.
+    \end{itemize}
+    \item \textbf{Laravel et Python~:}
+    \begin{itemize}
+        \item Laravel fournit un framework robuste basé sur l'architecture MVC, prenant en charge l'authentification sécurisée des utilisateurs, le développement d'API et l'évolutivité \cite{laravel2023}.
+        \item Python améliore le traitement d'images grâce à des bibliothèques comme OpenCV et PyTorch (pour YOLO), offrant une flexibilité pour l'analyse en temps réel \cite{opencv2023}. % Added PyTorch for YOLO
+    \end{itemize}
+    \item \textbf{Firebase Cloud Messaging (FCM)~:}
+    \begin{itemize}
+        \item Garantit des notifications push rapides et multiplateformes (Android/iOS) avec une latence minimale, optimisées pour les alertes médicales \cite{fcm2023}.
+    \end{itemize}
+\end{itemize}
+
+\section{Flux de données}
+\label{sec:flux_donnees}
+
+Cette section décrit le flux de données à travers le système, organisé en trois étapes clés : collecte, traitement et notification.
+
+\begin{itemize}
+    \item \textbf{Collecte~:}
+    \begin{itemize}
+        \item Les caméras capturent les données affichées sur les écrans des appareils médicaux. Le modèle YOLO détecte les zones de données (e.g., fréquence cardiaque, pression artérielle) dans les images, qui sont ensuite prétraitées avec OpenCV et analysées par Tesseract OCR pour extraire les données des signes vitaux. % Added YOLO
+    \end{itemize}
+    \item \textbf{Traitement~:}
+    \begin{itemize}
+        \item Le backend traite les données extraites, les compare à des seuils critiques prédéfinis et génère des alertes lorsque ces seuils sont dépassés.
+    \end{itemize}
+    \item \textbf{Notification~:}
+    \begin{itemize}
+        \item Les alertes sont distribuées via Firebase Cloud Messaging (FCM) pour les notifications push, par e-mail, SMS, et affichées sur les interfaces web et mobiles en temps réel.
+    \end{itemize}
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{chapter3/diagrams/data_flow_sequence.png}
+    \caption{Schéma général du flux de données, incluant la détection des zones par YOLO.} % Updated caption
+    \label{fig:flux_donnees}
+\end{figure}
+
+\section{Architecture physique et fonctionnement}
+\label{sec:architecture_physique}
+
+\subsection{Composants matériels}
+\label{subsec:composants_materiels}
+\begin{itemize}
+    \item \textbf{Moniteurs~:} Collectent les données vitales (fréquence cardiaque, pression artérielle, saturation en oxygène, etc.) et les affichent sur leurs écrans.
+    \item \textbf{Caméras~:} Capturent les écrans des moniteurs et transmettent les images au service de traitement pour analyse par YOLO et OCR. % Added YOLO
+    \item \textbf{Serveurs~:} Stockent et traitent les données, hébergés localement, exécutant YOLO, OpenCV, et Tesseract pour l’analyse d’images. % Added YOLO
+    \item \textbf{Réseau de communication~:} Assure la transmission sécurisée des données entre les moniteurs, caméras, serveurs et applications.
+    \item \textbf{Appareils mobiles~:} Permettent au personnel médical de recevoir des notifications push et d'accéder aux données en temps réel.
+\end{itemize}
+
+\subsection{Fonctionnement}
+\label{subsec:fonctionnement}
+Le système fonctionne en trois étapes principales~:
+\begin{enumerate}
+    \item \textbf{Collecte des données~:}
+    \begin{itemize}
+        \item Les écrans des moniteurs sont capturés par des caméras. Le modèle YOLO identifie les zones de données (e.g., fréquence cardiaque, SpO2), suivies par un prétraitement avec OpenCV et une extraction des valeurs vitales via Tesseract OCR. % Added YOLO
+    \end{itemize}
+    \item \textbf{Traitement des données~:}
+    \begin{itemize}
+        \item Les données sont analysées en temps réel pour détecter des anomalies par rapport aux seuils prédéfinis.
+        \item Les données sont stockées dans une base MySQL pour une analyse ultérieure.
+    \end{itemize}
+    \item \textbf{Génération des alertes~:}
+    \begin{itemize}
+        \item Les alertes sont générées en cas de dépassement des seuils.
+        \item Elles sont envoyées via FCM, e-mails ou SMS, et affichées sur les interfaces web/mobile.
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Spécifications logicielles}
+\label{subsec:spec_logiciels}
+\begin{itemize}
+    \item \textbf{Backend~:}
+    \begin{itemize}
+        \item \textit{Laravel~:} Gestion des utilisateurs, des données et des services de notification (FCM).
+        \item \textit{Python~:} Traitement des données, intégration de YOLO pour la détection des zones de données, OCR (OpenCV, Tesseract), et analyse d'images. % Added YOLO
+    \end{itemize}
+    \item \textbf{Frontend~:}
+    \begin{itemize}
+        \item \textit{React~:} Interface web pour la visualisation interactive des données et la gestion des alertes.
+        \item \textit{Flutter~:} Application mobile pour les notifications et l'accès aux données en temps réel.
+    \end{itemize}
+    \item \textbf{Base de données~:} MySQL pour le stockage des données des patients, des alertes et des historiques.
+    \item \textbf{Protocoles de communication~:}
+    \begin{itemize}
+        \item REST API pour les échanges entre frontend, backend et application mobile.
+        \item WebSockets pour les notifications en temps réel.
+    \end{itemize}
+    \item \textbf{Outils complémentaires~:}
+    \begin{itemize}
+        \item YOLOv8 pour la détection des zones de données, intégré avec PyTorch. % Added YOLO
+        \item Docker pour la conteneurisation.
+        \item Git pour le contrôle de version.
+        \item Swagger pour tester les API REST.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Flux de communication}
+\label{subsec:flux_communication}
+Le flux commence par la collecte des données à partir des moniteurs (via YOLO pour la détection des zones de données et OCR pour l’extraction). Les données sont transmises au backend via un réseau sécurisé. Le backend analyse les données en temps réel, les stocke dans MySQL, et génère des alertes en cas d'anomalies. Ces alertes sont envoyées au personnel médical via FCM. Les utilisateurs peuvent consulter les données et alertes via l'application web ou mobile. % Added YOLO
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{chapter3/diagrams/communication_flow_chart.png}
+    \caption{Schéma général du flux de communication, incluant YOLO pour la détection des zones.} % Updated caption
+    \label{fig:flux_communication}
+\end{figure}
+
+\section{Justification de l'architecture}
+\label{sec:justification_architecture}
+L'architecture proposée garantit~:
+\begin{itemize}
+    \item \textbf{Modularité~:} Séparation claire des couches (collecte avec YOLO, traitement, notification) pour une maintenance aisée. % Added YOLO
+    \item \textbf{Réactivité~:} Alertes en temps réel pour une réponse rapide aux situations critiques, soutenues par une détection précise via YOLO.
+    \item \textbf{Interopérabilité~:} Compatibilité avec les technologies YOLO, OCR, et les standards d'échange de données médicales. % Added YOLO
+    \item \textbf{Flexibilité~:} Déploiement possible sur serveurs locaux ou cloud, adaptable aux besoins hospitaliers.
+\end{itemize}
+
+\section{Conclusion}
+\label{sec:conclusion}
+L'architecture proposée, enrichie par l’intégration de YOLO pour une détection précise des zones de données, assure une collecte fiable, un traitement efficace et une diffusion rapide des alertes, tout en respectant les contraintes de sécurité et d'interopérabilité. Sa modularité permet des évolutions futures, comme l'intégration de nouveaux appareils ou l'ajout de fonctionnalités analytiques. % Added YOLO reference
+
+

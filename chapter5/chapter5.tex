@@ -1,63 +1,137 @@
+\chapter{Sprint 1 : Création du dataset et mise en place du pipeline OCR}
+\label{chap:sprint1}
 
-\chapter{Étude et réalisation du Sprint 1}
+\section{Introduction}
+\label{sec:intro_sprint1}
 
-\section{Backlog du sprint}
-\input{chapter4/sections/1_sprintBacklog.tex}
+Ce chapitre décrit le Sprint 1, première itération du développement d’un système de collecte de données en temps réel et de gestion des alertes pour les appareils médicaux en salle de réveil, comme présenté dans les chapitres d’introduction générale et d’étude architecturale. Selon la planification établie dans le chapitre précédent, cette phase se concentre sur la création d’un dataset annoté à partir de moniteurs médicaux et sur le développement d’un pipeline OCR basé sur des technologies de détection et de reconnaissance de texte pour extraire les signes vitaux, tels que la fréquence cardiaque, la pression artérielle et la saturation en oxygène. Cette itération pose les bases techniques pour la collecte automatisée des données, un objectif central du projet, en suivant la méthodologie Scrum décrite dans le chapitre consacré à la méthode.
 
-\section{Spécification fonctionnelle}
-\input{chapter4/sections/2_specificationFonctionnelle.tex}
+\section{Objectifs du Sprint 1}
+\label{sec:objectifs_sprint1}
 
-\subsection{Description des cas d’utilisation}
-\begin{description}
-    \item[Affichage des données] Le moniteur de signes vitaux affiche les données en temps réel. Ces données sont capturées par la caméra OCR.
-    \item[Reconnaissance des valeurs] La caméra OCR analyse les données capturées et extrait les valeurs numériques à l’aide de Tesseract OCR.
-    \item[Génération des alertes] Le système compare les valeurs reconnues avec des seuils prédéfinis. Si une valeur dépasse un seuil, une alerte est générée.
-    \item[Livraison des notifications] Les alertes générées sont transmises au système de notification, qui les envoie aux utilisateurs concernés.
-\end{description}
+L’objectif principal du Sprint 1 est de développer un pipeline fonctionnel permettant la collecte en temps réel des données affichées sur les écrans des moniteurs à l’aide de caméras IP. Cette phase vise à créer un dataset annoté d’images des moniteurs, avec des annotations précises pour identifier les signes vitaux. Un modèle de détection est entraîné pour repérer les régions d’intérêt contenant ces données. Des outils de traitement d’image et de reconnaissance optique de caractères (OCR) sont intégrés pour extraire les valeurs textuelles de ces régions. Les caméras IP sont configurées pour garantir une capture stable et optimale des images. Enfin, une API REST est développée pour permettre l’intégration du pipeline dans les phases suivantes. Ces objectifs s’alignent sur les tâches prioritaires du Product Backlog et les besoins fonctionnels d’interopérabilité avec différents moniteurs, comme détaillé dans le chapitre précédent.
 
-\section{Conception}
-\subsection{Architecture technique}
-\begin{itemize}
-    \item Stack logicielle : Python 3.10, OpenCV 4.8, Tesseract 5.3.1
-    \item Infrastructure : Docker containers sur Ubuntu 22.04
-    \item Communication inter-modules : RabbitMQ
-\end{itemize}
+\subsection{Sprint Backlog}
+\label{subsec:sprint_backlog}
 
-\subsection{Diagramme de séquence}
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.9\textwidth]{chapter4/sections/diagrams/SequenceDiagram.png}
-%     \caption{Flux de données de la capture à la notification}
-%     \label{fig:sequence_diagram}
-% \end{figure}
+Le Sprint Backlog pour le Sprint 1 regroupe les tâches sélectionnées du Product Backlog (voir Tableau \ref{tab:backlog}) pour répondre aux objectifs de cette itération. Chaque tâche est associée à une priorité, une estimation de l’effort en heures, et des critères d’acceptation pour garantir la qualité des livrables. Les tâches incluent la configuration du matériel, la capture et l’annotation des images, l’entraînement du modèle de détection, et le développement du pipeline OCR avec une API REST.
 
-\subsection{Composants développés}
 \begin{table}[h]
 \centering
-\caption{Composants clés du Sprint 1}
-\label{tab:composants}
-\begin{tabular}{|l|p{10cm}|}
+\caption{Sprint Backlog du Sprint 1}
+\label{tab:sprint_backlog_sprint1}
+\begin{tabular}{|p{1.5cm}|p{6cm}|p{1.5cm}|p{2cm}|p{3cm}|}
 \hline
-\textbf{Composant} & \textbf{Fonctionnalités} \\
+\textbf{ID} & \textbf{Tâche} & \textbf{Priorité} & \textbf{Effort (h)} & \textbf{Critères d’Acceptation} \\
 \hline
-CaptureModule & Gestion de la caméra, réglages automatiques \\
-OCRProcessor & Pipeline de traitement d'images et reconnaissance \\
+M-01 & Détection et reconnaissance des valeurs vitales via YOLO et OCR pour les moniteurs. & M & 80 & Précision de détection > 90\%, OCR extrait les valeurs avec < 5\% d’erreurs, compatible avec 3 moniteurs différents. \\
 \hline
-\textbf{Composant} & \textbf{Fonctionnalités} \\
+M-06 & Stockage et historique des données dans une base de données. & M & 20 & Base de données relationnelle configurée, stockage des données extraites testé avec succès. \\
 \hline
-CaptureModule & Gestion de la caméra, réglages automatiques \\
-OCRProcessor & Pipeline de traitement d'images et reconnaissance \\
-AlertEngine & Évaluation des seuils et déclenchement d'alertes \\
-Notifier & Envoi multi-canaux (FCM, Email) \\
+S-04 & Interface d’administration pour configurer les seuils et gérer les utilisateurs. & S & 30 & Interface de base fonctionnelle pour configurer les paramètres de capture et d’OCR. \\
 \hline
 \end{tabular}
 \end{table}
 
-\section{Validation}
-\subsection{Stratégie de test}
-\begin{itemize}
-    \item Tests unitaires : Couverture $>80\%$ (pytest-cov)
-    \item Tests d'intégration : Jenkins pipeline
-    \item Tests de performance : JMeter pour la latence
-\end{itemize}
+\section{Tâches réalisées}
+\label{sec:taches_sprint1}
 
+Les tâches réalisées reflètent les engagements pris lors de la planification du Sprint 1 et sont organisées en sous-sections pour plus de clarté.
+
+\subsection{Configuration du matériel}
+\label{subsec:config_materiel}
+
+L’environnement matériel a été préparé pour répondre aux besoins du pipeline. Des caméras IP ont été configurées à l’aide d’une application mobile dédiée, offrant une interface intuitive pour gérer les paramètres de capture. Un serveur local a été mis en place pour supporter l’entraînement du modèle de détection et l’exécution du pipeline OCR. Ce serveur utilise un système d’exploitation adapté, avec une accélération matérielle pour optimiser les performances. Les bibliothèques nécessaires au traitement des images et à l’extraction de texte ont été installées via un gestionnaire de dépendances.
+
+\subsection{Capture et annotation des images}
+\label{subsec:capture_annotation}
+
+La création du dataset a débuté par la capture d’images des écrans des moniteurs médicaux à l’aide de caméras IP. Ces images, prises dans des conditions d’éclairage contrôlé pour minimiser les reflets, ont été annotées à l’aide d’une plateforme spécialisée, en traçant des régions d’intérêt autour des paramètres vitaux, tels que la fréquence cardiaque, la pression artérielle et la saturation en oxygène. Le dataset a été divisé en ensembles pour l’entraînement, la validation et les tests, suivant une répartition standard. Pour améliorer la robustesse du modèle, des techniques d’augmentation des données, comme la rotation, le recadrage et l’ajustement de la luminosité, ont été appliquées, augmentant ainsi la taille du dataset d’entraînement.
+
+\subsection{Entraînement du modèle de détection}
+\label{subsec:entrainement_yolo}
+
+Un modèle de détection, choisi pour son équilibre entre précision et rapidité, a été entraîné sur la plateforme sélectionnée. Les paramètres d’entraînement ont été ajustés pour optimiser les performances, et le modèle a atteint une précision satisfaisante sur l’ensemble de validation, dépassant les critères d’acceptation établis. Des techniques comme l’ajustement du seuil de confiance et la suppression des détections redondantes ont été appliquées pour réduire les erreurs. Les résultats par catégorie de signes vitaux sont présentés dans un tableau dédié.
+
+\begin{table}[h]
+\centering
+\caption{Précision par classe pour le modèle de détection sur le jeu de validation}
+\label{tab:precision_classes_sprint1}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Classe} & \textbf{Précision} \\
+\hline
+Fréquence cardiaque & Bonne \\
+Pression systolique & Très bonne \\
+Pression diastolique & Très bonne \\
+Saturation en oxygène & Très bonne \\
+Pouls & Satisfaisante \\
+Autres paramètres vitaux & Variable \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\caption{Courbe d’apprentissage du modèle de détection}
+\label{fig:courbe_yolo}
+\includegraphics[width=0.8\textwidth]{chapter5/sections/diagrams/yolo_learning_curve.png}
+\caption{Courbe d’apprentissage du modèle de détection}
+\end{figure}
+
+\subsection{Développement du pipeline OCR}
+\label{subsec:pipeline_ocr}
+
+Le pipeline OCR a été conçu pour traiter les images capturées et extraire les données textuelles. Les images ont d’abord été prétraitées avec des outils de traitement d’image pour convertir les images en niveaux de gris, améliorer le contraste et réduire le bruit tout en préservant les contours. Les régions d’intérêt détectées ont été recadrées avec une marge suffisante pour inclure le texte complet. Une technologie OCR a été configurée avec des paramètres optimisés pour extraire les valeurs numériques, et des expressions régulières ont été utilisées pour valider les formats des données extraites, rejetant les sorties non conformes. Le pipeline a été implémenté dans un langage de programmation adapté, avec un framework web pour exposer une API REST. Cette API accepte des flux vidéo ou des images individuelles et renvoie les valeurs extraites dans un format structuré. La documentation de l’API a été générée pour faciliter son utilisation future. Les performances du pipeline, en termes de précision et de latence, ont respecté les critères d’acceptation.
+
+\subsection{Tests d’intégration et déploiement initial}
+\label{subsec:integration_deploiement}
+
+Le pipeline a été testé en conditions réelles en connectant les caméras IP au serveur via un réseau sécurisé. Le flux vidéo a été capturé en continu, et les images ont été traitées à une fréquence adaptée pour simuler la collecte en temps réel. Le pipeline a été conteneurisé pour simplifier son déploiement sur le serveur, intégrant toutes les dépendances nécessaires. L’intégration a été validée sur plusieurs scénarios avec différents moniteurs et conditions d’éclairage, confirmant une compatibilité robuste.
+
+\section{Livrables du Sprint 1}
+\label{sec:livrables_sprint1}
+
+Les livrables produits sont alignés sur les objectifs du Sprint 1. Un dataset annoté, comprenant des images des moniteurs pour l’entraînement, la validation et les tests, a été créé et stocké dans un dépôt avec des métadonnées. Un modèle de détection entraîné, sauvegardé dans un format standard, a été déployé sur le serveur. Le pipeline OCR, intégrant les technologies de détection, de traitement d’image et d’extraction de texte, expose une API REST avec une précision et une latence conformes aux attentes. Les caméras IP ont été configurées pour un flux vidéo stable, testées pour leur compatibilité avec différents moniteurs. Enfin, une documentation complète, incluant celle de l’API, un guide d’installation du pipeline et un rapport sur l’entraînement du modèle, a été produite.
+
+\section{Tests et validation}
+\label{sec:tests_sprint1}
+
+Les tests ont été conçus pour valider les critères d’acceptation définis dans le chapitre précédent. Le modèle de détection a atteint une précision satisfaisante, dépassant les attentes, avec des erreurs mineures corrigées par un prétraitement renforcé. L’OCR a extrait les données avec une précision élevée, respectant les critères, malgré une erreur isolée liée à une police floue, résolue par un ajustement du contraste. La latence du pipeline a été conforme aux exigences, et la compatibilité avec différents moniteurs a été validée dans tous les scénarios testés. La stabilité du flux vidéo a également été confirmée, avec un taux de perte de trames négligeable.
+
+\begin{table}[h]
+\centering
+\caption{Résultats des tests du Sprint 1}
+\label{tab:resultats_tests_sprint1}
+\begin{tabular}{|p{6cm}|p{3cm}|p{3cm}|}
+\hline
+\textbf{Critère} & \textbf{Résultat} & \textbf{Statut} \\
+\hline
+Précision du modèle de détection & Très bonne & Validé \\
+Précision de l’OCR & Très bonne & Valé avec validation \\
+Latence du pipeline & Conforme & Validé \\
+Compatibilité avec moniteurs & Complète & Validé \\
+Stabilité du flux vidéo & Excellente & Validé \\
+\hline
+\end{tabular}
+\end{table}
+
+\section{Défis et solutions}
+\label{subsec:defis_sprint1}
+
+Plusieurs défis ont été rencontrés lors du Sprint 1. Les reflets et variations d’éclairage sur les écrans des moniteurs ont affecté la détection et l’extraction des données. Ces problèmes ont été résolus par un réglage de l’exposition des caméras, l’application de filtres de prétraitement et un ajustement physique des angles de capture. La taille initiale du dataset était limitée, ce qui aurait pu compromettre la robustesse du modèle. Une augmentation des données a permis de compenser ce manque, et des captures supplémentaires sont prévues pour le sprint suivant. Certaines polices floues ou petites ont posé des difficultés à l’OCR, mais des optimisations des paramètres et une validation rigoureuse des sorties ont permis de surmonter ce problème. Enfin, des contraintes d’accès aux ressources matérielles ont causé des retards, résolus par la mise en place d’un calendrier partagé pour les sprints futurs.
+
+\section{Rétrospective du Sprint 1}
+\label{sec:retrospective_sprint1}
+
+La rétrospective Scrum a permis d’évaluer les performances de l’équipe et d’identifier des axes d’amélioration. Le pipeline OCR a atteint les objectifs fixés, validant la faisabilité technique du projet. La collaboration a été efficace grâce à l’utilisation d’un outil de gestion de projet et à des réunions quotidiennes facilitées par le Scrum Master. La communication via une plateforme dédiée a permis de résoudre rapidement les problèmes techniques. Cependant, le temps d’annotation des images a été sous-estimé, nécessitant une planification plus réaliste pour le prochain sprint. Des tests précoces sur des conditions d’éclairage extrêmes auraient pu être anticipés, et une action corrective consistera à intégrer ces tests dès le début du Sprint 2. Les contraintes d’accès aux ressources matérielles et les difficultés initiales de configuration des caméras ont également été notées, avec des mesures prévues pour documenter les paramètres et réserver les ressources à l’avance.
+
+\section{Planification pour le Sprint 2}
+\label{sec:plan_sprint2}
+
+Le Sprint 1 a jeté les bases pour le Sprint 2, qui se concentre sur la validation des données extraites et la mise en place du système d’alertes. Les tâches préparatoires incluent l’intégration du pipeline OCR avec un module de validation pour garantir une précision élevée, la configuration des seuils d’alerte pour les signes vitaux, et l’intégration d’un service de notifications push basé sur l’API REST développée.
+
+\section{Conclusion}
+\label{sec:conclusion_sprint1}
+
+Le Sprint 1 a établi une fondation technique pour la collecte automatisée des données en temps réel, grâce à un format pipeline performant et un dataset annoté adapté aux moniteurs médicaux. Les livrables respectent les critères d’acceptation en termes de précision, de latence et de compatibilité, et les défis rencontrés, tels que les reflets, les polices floues ou les contraintes matérielles, ont été résolus par des optimisations techniques et organisationnelles. La rétrospective a permis d’identifier des améliorations pour les sprints futurs, notamment en matière de planification et de tests précoces. Ce sprint prépare efficacement le terrain pour le Sprint 2, qui développera le système d’alertes et de notifications, renforçant l’alignement avec les objectifs du projet décrits dans le chapitre d’introduction.

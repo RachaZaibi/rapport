@@ -37,7 +37,7 @@ end note
 :Distribution des alertes;
 note right
   <b>Étape 4</b>
-  - Envoi via FCM, e-mails, ou SMS
+  - Envoi via FCM
   - Affichage sur interfaces web/mobile
 end note
 

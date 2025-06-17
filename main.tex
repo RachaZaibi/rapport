@@ -1,57 +1,136 @@
-\documentclass{report}
-\usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage{float}
-\usepackage{booktabs} % For professional table formatting
-\usepackage{array}    % For better column control
-\usepackage{multirow} % For multi-row cells (if needed)
-\usepackage{amssymb} % Pour le symbole de validation
-\usepackage{pifont}  % Pour le symbole d'annulation
-\usepackage{longtable}
-\usepackage{geometry}
-\usepackage{plantuml}
-\usepackage{tabularx}
-\usepackage{calc}
+\documentclass[12pt,a4paper]{report}
+
+% ================== PACKAGES ==================
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[french]{babel}
-\usepackage{url}                    % Pour les URLs
-\usepackage{hyperref}   
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{amssymb}
+\usepackage{pifont}
+\usepackage{tabularx}
+\usepackage{calc}
+\usepackage{url}
+\usepackage{setspace}
+\usepackage{times}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{titlesec}
+\usepackage{subcaption}
+\usepackage{etoolbox}
+\usepackage{enumitem}
+\usepackage{changepage}
+\usepackage{multicol}
+\usepackage{ragged2e}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\usepackage{plantuml} % Optional: for UML diagrams
+\usepackage{pdfpages}
+\usepackage{amssymb} % For \checkmark
+\usepackage{textcomp} % For \texttimes
+\usepackage{fontawesome5} % For \textwarning (if not available, use \faExclamationTriangle)
+\usepackage{amssymb} % for \checkmark
+\usepackage{pifont}  % for \ding
+\usepackage{xcolor}  % for colored symbols
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows.meta, fit, positioning}
 
-\geometry{a4paper, margin=1in}
+% Define missing symbols if not provided by packages
+% \newcommand{\texttimes}{\ding{55}} % cross mark
+\newcommand{\textwarning}{\textcolor{orange}{\ding{46}}} % warning sign
+% ================ PAGE SETTINGS ================
+\geometry{top=2.5cm, bottom=2.5cm, left=3cm, right=2.5cm}
+\onehalfspacing
+
+% ================ HEADER / FOOTER ================
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[R]{\thepage/\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% ================ TITLES FORMAT ================
+\titleformat{\chapter}[display]
+  {\centering\normalfont\bfseries\LARGE}{\chaptername~\thechapter}{20pt}{\LARGE}
+\titlespacing*{\chapter}{0pt}{-1cm}{1cm}
+
+\titleformat{\section}
+  {\normalfont\bfseries\Large}{\thesection}{0.2cm}{}
+\titlespacing*{\section}{0pt}{1cm}{0.5cm}
+
+\titleformat{\subsection}
+  {\normalfont\bfseries\large}{\thesubsection}{0.2cm}{}
+\titlespacing*{\subsection}{0pt}{0.8cm}{0.4cm}
+
+% ================ PARAGRAPH STYLE ================
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{0.5em}
+
+% ================ FIGURE/TABLE STYLE ================
+\captionsetup{
+  labelfont=bf,
+  font=small,
+  labelsep=colon,
+  justification=justified
+}
+\renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
+\renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}
+
+% ================ MISC ================
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue,
+    citecolor=blue
+}
+\renewcommand{\bibname}{Bibliographie/Netographie}
+\widowpenalty=10000
+\clubpenalty=10000
+\hyphenpenalty=10000
+
+\newcommand{\smallurl}[1]{{\footnotesize\url{#1}}}
+\renewcommand{\quote}[1]{«~#1~»}
+\newcommand{\example}[1]{\textit{#1}}
+\newcommand{\definition}[1]{\textbf{#1}}
+
+% ================== DOCUMENT ==================
 \begin{document}
 
-\begin{titlepage}
-    \centering
-    \vspace*{2cm}
-    \textbf{\Large Rapport de Projet de Fin d'Études} \\
-    \vspace{0.5cm}
-    \textbf{Développement d’un système de collecte de données en temps réel et de gestion des alertes pour les machines en salle de réveil} \\
-    \vspace{1cm}
-    \textbf{Zaibi Racha} \\
-    \vspace{0.5cm}
-    June 10, 2025
-\end{titlepage}
+% ---------- Cover Page ----------
+% inport pdf cover page
+\includepdf[pages=-]{gard.pdf}
 
+% ---------- TOC ----------
 \tableofcontents
+\listoffigures
+\listoftables
 \newpage
 
-% Introduction Générale% Import the introduction content
-% \include{chapter/v1} % Include the content of introduction.tex
-\include{chapter0/introduction} % Include the content of introduction.tex
-\include{chapter1/chapter1} % Include the content of chapter1.tex
-\include{chapter2/chapter2} % Include the content of chapter2.tex
-\include{chapter3/chapter3} % Include the content of chapter3.tex
-\include{chapter4/chapter4} % Include the content of chapter4.tex
-\include{chapter5/chapter5} % Include the content of chapter5.tex
-% \include{chapter6/chapter6} % Include the content of chapter6.tex
-% \include{chapter7/chapter7} % Include the content of chapter7.tex
-% bibliography 
-% orner the bibliography
-\newpage
-\bibliographystyle{unsrt} % Choose a bibliography style (e.g., plain, unsrt, alpha, etc.)
-\bibliography{references} % Ensure you have a references.bib file with your bibliography entries
-% Appendices
+% ---------- Chapters ----------
+\include{chapter0/introduction} 
+\include{chapter1/chapter1} 
+\include{chapter2/chapter2} 
+\include{chapter3/chapter3} 
+\include{chapter4/chapter4} 
+\include{chapter5/chapter5} 
+\include{chapter6/chapter6} 
+% \include{chapter7/chapter7} 
+% \include{chapter8/chapter8} 
 
+% ---------- Bibliography ----------
+\newpage
+\addcontentsline{toc}{chapter}{Bibliographie}
+\bibliographystyle{unsrt}
+\bibliography{references}
+
+% ---------- Annexes ----------
+\appendix
+\include{annexes/annexeA}
+\include{annexes/annexeB}
 
 \end{document}

@@ -1,14 +1,17 @@
 \chapter{Sprint 0}
+\label{chap:sprint0}
+
 \section{Introduction}
 \label{sec:intro_sprint0}
 
-Ce chapitre présente le Sprint 0, la phase initiale du projet visant à développer un système de collecte de données en temps réel et de gestion des alertes pour les appareils médicaux en salle de réveil. Le Sprint 0 pose les bases en identifiant les acteurs clés, en capturant les besoins fonctionnels et non fonctionnels, et en définissant la méthodologie Scrum qui guidera les phases de développement ultérieures. Cette phase garantit l'alignement avec les objectifs du projet d'améliorer la surveillance post-opératoire grâce à la collecte automatisée de données et aux alertes en temps réel, comme décrit dans les chapitres \ref{chap:introduction} et \ref{chap:architecture}.
+Le Sprint 0 constitue la phase initiale du projet, qui vise à développer un système de collecte de données en temps réel et de gestion des alertes pour les appareils médicaux en salle de réveil. Cette étape fondamentale permet d’identifier les acteurs clés, de recueillir les besoins fonctionnels et non fonctionnels, et de définir la méthodologie Scrum qui guidera les phases ultérieures du développement. L’objectif est d’assurer un alignement avec les ambitions du projet, à savoir améliorer la surveillance post-opératoire grâce à une collecte automatisée des données et à des alertes en temps réel, comme décrit dans les chapitres d’introduction générale et d’étude architecturale.
 
 \section{Capture des besoins}
+
 \subsection{Identification des acteurs}
 \label{subsec:acteurs}
 
-Le système interagit avec plusieurs acteurs clés, chacun ayant des rôles distincts essentiels à son fonctionnement. Ces acteurs, résumés dans le tableau \ref{tab:acteurs}, sont alignés sur le contexte médical décrit dans le chapitre \ref{chap:introduction} et les composants architecturaux du chapitre \ref{chap:architecture}.
+Le système interagit avec plusieurs acteurs essentiels, chacun jouant un rôle distinct dans son fonctionnement. Ces acteurs, résumés dans un tableau dédié, sont en phase avec le contexte médical et les composants architecturaux décrits dans les chapitres précédents. Le médecin consulte les données des patients, reçoit les alertes critiques et valide les actions nécessaires. L’infirmier ou l’infirmière surveille les patients, reçoit des notifications adaptées à ses horaires et agit immédiatement en cas de besoin. L’administrateur du système gère les utilisateurs, configure les seuils d’alerte et veille au bon fonctionnement de l’ensemble. Les moniteurs de signes vitaux fournissent les données vitales, transmises via une interface API ou par extraction optique à l’aide de caméras. Enfin, les caméras capturent les écrans des moniteurs pour permettre l’extraction des données grâce à des technologies de détection et de reconnaissance de texte.
 
 \begin{table}[h]
 \centering
@@ -34,51 +37,33 @@ Caméra & Capture les écrans des moniteurs pour l'extraction des données via Y
 \subsection{Besoins fonctionnels et non fonctionnels}
 \label{subsec:besoins}
 
-Les besoins fonctionnels et non fonctionnels reflètent les objectifs du système d'automatiser la collecte de données, d'améliorer la gestion des alertes et de garantir l'évolutivité et la conformité, comme introduit dans le chapitre \ref{chap:introduction}.
+Les besoins fonctionnels et non fonctionnels traduisent les objectifs du système, qui consistent à automatiser la collecte des données, optimiser la gestion des alertes, et garantir l’évolutivité ainsi que la conformité aux normes médicales, comme mentionné dans le chapitre d’introduction.
 
-\textbf{Besoins Fonctionnels :}
-\begin{itemize}
-    \item \textbf{Collecte des données :} Collecte en temps réel des données des moniteurs de signes vitaux (par exemple, Mindray, Edan) à l'aide de caméras et d'OCR, comme détaillé dans la section \ref{sec:architecture_globale}.
-    \item \textbf{Détection et reconnaissance des valeurs vitales :} Extraction des signes vitaux (fréquence cardiaque, pression artérielle, SpO2) en utilisant YOLOv8 pour la détection des régions et Tesseract OCR pour l'extraction de texte \cite{redmon_yolo_2023, tesseract_ocr_2023}.
-    \item \textbf{Génération et gestion des alertes :} Déclenchement des alertes en fonction de seuils prédéfinis, configurables dynamiquement.
-    \item \textbf{Afficher les données :} Interfaces web (React) et mobile (Flutter) pour la visualisation des données en temps réel et la gestion des alertes.
-    \item \textbf{Authentification et gestion des utilisateurs :} Contrôle d'accès basé sur les rôles pour les médecins, infirmiers et administrateurs à l'aide de Sanctum de Laravel \cite{laravel_docs_2023}.
-    \item \textbf{Notifications :} Notifications push en temps réel via Firebase Cloud Messaging (FCM), e-mails et SMS \cite{firebase_fcm_2023}.
-    \item \textbf{Stockage et historique des données :} Stockage des mesures et des alertes dans une base de données MySQL pour analyse et suivi \cite{mysql_docs_2023}.
-\end{itemize}
+En termes de fonctionnalités, le système collecte en temps réel les données issues des moniteurs de signes vitaux, tels que ceux des fabricants courants, en utilisant des caméras associées à une technologie de reconnaissance optique de caractères (OCR). Il extrait les signes vitaux, comme la fréquence cardiaque, la pression artérielle ou la saturation en oxygène, grâce à des outils de détection avancés et d’OCR, permettant une reconnaissance précise des valeurs affichées. Le système génère et gère des alertes en fonction de seuils prédéfinis, ajustables dynamiquement selon les besoins. Les données et les alertes sont accessibles via des interfaces web et mobiles, conçues pour offrir une visualisation en temps réel et une gestion intuitive. L’authentification et la gestion des utilisateurs s’appuient sur un système sécurisé basé sur les rôles, garantissant un accès adapté aux médecins, infirmiers et administrateurs. Les notifications sont envoyées en temps réel par des canaux variés, tels que des notifications push. Enfin, les données et l’historique des alertes sont stockés dans une base de données relationnelle pour permettre un suivi et une analyse ultérieure.
 
-\textbf{Besoins Non Fonctionnels :}
-\begin{itemize}
-    \item \textbf{Disponibilité :} Accessibilité du système 24/7 avec un temps d'arrêt minimal (< 0,01 \%).
-    \item \textbf{Sécurité :} Chiffrement des données (AES-256) et authentification sécurisée pour protéger les données des patients, conforme aux réglementations médicales (par exemple, RGPD, HIPAA).
-    \item \textbf{Interopérabilité :} Compatibilité avec divers modèles de moniteurs (Mindray, Edan).
-    \item \textbf{Évolutivité :} Capacité à gérer une augmentation du nombre de patients et d'appareils (jusqu'à 1000 patients simultanés).
-    \item \textbf{Temps de réponse :} Traitement instantané des alertes pour les situations critiques (< 2 secondes).
-    \item \textbf{Conformité :} Respect des réglementations de protection des données médicales.
-\end{itemize}
+En ce qui concerne les besoins non fonctionnels, le système doit être disponible en continu avec un temps d’arrêt minimal, garantissant une accessibilité constante pour les utilisateurs. La sécurité des données est assurée par un chiffrement robuste et des mécanismes d’authentification fiables, protégeant ainsi les informations sensibles des patients. Le système est conçu pour être compatible avec une variété de moniteurs médicaux, assurant une interopérabilité efficace. Il est également capable de s’adapter à une augmentation du nombre de patients et d’appareils, garantissant une évolutivité optimale. Les alertes critiques sont traitées instantanément pour répondre aux situations urgentes, et le système respecte les réglementations en vigueur concernant la protection des données médicales.
 
 \subsection{Diagramme des cas d'utilisation global}
 \label{subsec:cas_utilisation}
 
-Le diagramme global des cas d'utilisation (Figure \ref{fig:cas_utilisation}) illustre les interactions entre les acteurs et le système, y compris la consultation des données, la réception des alertes et l'administration du système. Des prototypes pour les interfaces web et mobile ont été développés pour visualiser les données et gérer les alertes, garantissant l'alignement avec les besoins des utilisateurs identifiés dans la section \ref{subsec:acteurs}.
+Le diagramme global des cas d’utilisation illustre les interactions entre les acteurs et le système, incluant la consultation des données, la réception des alertes et la gestion administrative. Des prototypes d’interfaces web et mobiles ont été conçus pour visualiser les données et gérer les alertes, en tenant compte des besoins des utilisateurs identifiés précédemment.
 
 \begin{figure}[h]
 \centering
-\caption{Diagramme des cas d'utilisation global}
 \label{fig:cas_utilisation}
 \includegraphics[width=0.8\textwidth]{chapter4/sections/diagrams/use_case.png}
+\caption{Diagramme des cas d'utilisation global}
 \end{figure}
 
 \section{Pilotage du projet avec Scrum}
 \label{sec:gestion_scrum}
 
-Le projet adopte la méthodologie Scrum, comme justifié dans le chapitre \ref{chap:methodologie}, pour garantir un développement itératif et une collaboration avec
-les parties prenantes. Cette section détaille les rôles Scrum, l'organisation du backlog et la planification des sprints pour le Sprint 0.
+Le projet adopte la méthodologie Scrum pour assurer un développement itératif et une collaboration étroite avec les parties prenantes, comme justifié dans le chapitre consacré à la méthodologie. Cette section détaille les rôles Scrum, l’organisation du backlog et la planification des sprints pour le Sprint 0.
 
 \subsection{Acteurs Scrum et Missions}
 \label{subsec:roles_scrum}
 
-Les rôles Scrum et leurs responsabilités sont définis dans le tableau \ref{tab:roles_scrum}, assurant l'alignement avec l'approche collaborative décrite dans la section \ref{sec:roles_scrum}.
+Les rôles Scrum et leurs responsabilités sont définis dans un tableau spécifique, garantissant une approche collaborative alignée sur les principes décrits précédemment. Le Product Owner est chargé de définir et de prioriser les fonctionnalités du produit, tout en validant les livrables pour s’assurer qu’ils répondent aux besoins du projet. L’équipe de développement conçoit, développe et teste les fonctionnalités, en veillant à la qualité du code produit. Le Scrum Master facilite les événements Scrum, élimine les obstacles et veille à ce que l’équipe adhère aux pratiques de la méthodologie.
 
 \begin{table}[h]
 \centering
@@ -100,7 +85,7 @@ Scrum Master & Faciliter les événements Scrum, supprimer les obstacles, assure
 \subsection{Organisation du Backlog}
 \label{subsec:backlog}
 
-Le Product Backlog, géré via ClickUp \cite{clickup_docs_2025}, est organisé en utilisant la méthode de priorisation MoSCoW pour s'aligner sur les objectifs du projet. Chaque fonctionnalité est formulée comme une User Story pour garantir un développement centré sur l'utilisateur. Le tableau \ref{tab:backlog} liste les tâches priorisées, avec des références à l'architecture technique du chapitre \ref{chap:architecture}.
+Le Product Backlog est géré à l’aide d’un outil de gestion de projet, organisé selon la méthode de priorisation MoSCoW pour refléter les objectifs stratégiques du projet. Chaque fonctionnalité est formulée sous forme de User Story pour garantir un développement centré sur l’utilisateur. Les tâches prioritaires incluent la détection et la reconnaissance des valeurs vitales à l’aide de technologies de détection et d’OCR, la génération et la gestion des alertes basées sur des seuils prédéfinis, ainsi que l’envoi de notifications via des canaux multiples, tels que les notifications push et les e-mails. Les interfaces web et mobiles permettent la visualisation des données et la gestion des alertes, tandis que l’authentification et la gestion des utilisateurs assurent un accès sécurisé basé sur les rôles. Le stockage des données et des historiques dans une base de données relationnelle est également prioritaire, tout comme la conformité aux réglementations médicales en matière de sécurité des données. D’autres tâches, jugées importantes mais non critiques pour la première version, incluent la configuration personnalisée des seuils d’alerte par patient, la gestion des horaires pour le filtrage des alertes, et l’optimisation des notifications pour une faible latence. Des fonctionnalités optionnelles, comme le support multilingue ou la gestion des alertes par niveau de priorité, pourraient être ajoutées si les ressources le permettent. Enfin, certaines tâches, telles que l’analyse avancée des données avec intelligence artificielle, sont hors du périmètre actuel.
 
 \begin{table}[h]
 \centering
@@ -114,13 +99,13 @@ M-01 & Détection et reconnaissance des valeurs vitales via YOLO et OCR pour les
 \hline
 M-02 & Génération et gestion des alertes en fonction des seuils prédéfinis. & M \\
 \hline
-M-03 & Envoi d'alertes via notifications push (FCM) et e-mail. & M \\
+M-03 & Envoi d'alertes via notifications push et e-mail. & M \\
 \hline
-M-04 & Interface web (React) et mobile (Flutter) pour visualiser les données et gérer les alertes. & M \\
+M-04 & Interface web et mobile pour visualiser les données et gérer les alertes. & M \\
 \hline
 M-05 & Authentification et gestion des utilisateurs (médecins, infirmiers, administrateurs). & M \\
 \hline
-M-06 & Stockage et historique des données dans MySQL. & M \\
+M-06 & Stockage et historique des données dans une base de données. & M \\
 \hline
 M-07 & Conformité aux réglementations médicales (sécurité des données). & M \\
 \hline
@@ -143,113 +128,17 @@ W-03 & Analyse avancée des données avec intelligence artificielle pour le diag
 \end{tabular}
 \end{table}
 
-\textbf{Clé des Priorités MoSCoW :}
-\begin{itemize}
-    \item \textbf{M (Must) :} Tâches critiques nécessaires au fonctionnement du système.
-    \item \textbf{S (Should) :} Tâches importantes apportant une valeur significative mais non essentielles pour la première version.
-    \item \textbf{C (Could) :} Fonctionnalités optionnelles pouvant être ajoutées si le temps et les ressources le permettent.
-    \item \textbf{W (Won't Have) :} Tâches hors du périmètre de la phase actuelle du projet.
-\end{itemize}
-
 \subsection{Planification des sprints}
 \label{subsec:planification_sprints}
 
-Le projet est divisé en trois sprints, chacun d'une durée de trois semaines, comme illustré dans la figure \ref{fig:processus_scrum} (voir section \ref{sec:presentation_scrum}). La réunion de planification du Sprint 0 a identifié les tâches et les livrables, en alignement avec les besoins des parties prenantes et les composants architecturaux (par exemple, YOLO, OCR, FCM) décrits dans le chapitre \ref{chap:architecture}.
+Le projet est structuré en trois sprints, chacun d’une durée de trois semaines, comme illustré dans le chapitre consacré à la méthodologie Scrum. La réunion de planification du Sprint 0 a permis d’identifier les tâches et les livrables, en s’alignant sur les besoins des parties prenantes et les composants architecturaux décrits précédemment.
 
-\textbf{Sprint 1 : Création du dataset et mise en place du pipeline OCR}
-\begin{itemize}
-    \item \textbf{Objectif :} Développer un pipeline OCR basé sur YOLO en utilisant des images pré-capturées des moniteurs Mindray et Edan.
-    \item \textbf{Livrables :}
-        \begin{itemize}
-            \item Dataset annoté (images des moniteurs Mindray et Edan avec signes vitaux).
-            \item Modèle YOLOv8 entraîné pour détecter les zones des signes vitaux (par exemple, fréquence cardiaque, SpO2, pression artérielle).
-            \item Pipeline OCR (YOLOv8 + Tesseract) pour extraire les valeurs des zones détectées.
-        \end{itemize}
-    \item \textbf{Durée :} 3 semaines.
-    \item \textbf{Tâches principales :}
-        \begin{itemize}
-            \item Capturer et annoter les images des moniteurs (boîtes englobantes des signes vitaux) avec LabelImg \cite{labelimg_2023}.
-            \item Entraîner le modèle YOLOv8 sur le dataset annoté.
-            \item Intégrer OpenCV et Tesseract OCR pour extraire le texte des régions détectées \cite{opencv_2023, tesseract_ocr_2023}.
-            \item Configurer les caméras IP (1080p, montage fixe) pour la capture des images.
-        \end{itemize}
-    \item \textbf{Critères d'acceptation :}
-        \begin{itemize}
-            \item YOLOv8 atteint un mAP $\geq 90\%$ sur le jeu de test (validé sur 100 images).
-            \item L'OCR extrait les valeurs avec une précision $\geq 95\%$ (comparée à 20 vérifications manuelles).
-            \item Latence du pipeline OCR $< 1$ seconde par image dans 100\% des tests.
-            \item Compatibilité avec les moniteurs Mindray et Edan, testée dans 5 scénarios.
-        \end{itemize}
-    \item \textbf{Risques :}
-        \begin{itemize}
-            \item Mauvais éclairage ou angles des images affectant la précision. \textbf{Solution :} Optimiser le prétraitement avec des filtres OpenCV (par exemple, ajustement de contraste).
-            \item Taille insuffisante du dataset. \textbf{Solution :} Augmenter les données via des techniques d'augmentation (rotation, recadrage).
-        \end{itemize}
-\end{itemize}
+Le premier sprint se concentre sur la création d’un dataset et la mise en place d’un pipeline OCR. L’objectif est de développer un système capable d’extraire les données des moniteurs médicaux à l’aide de technologies de détection et d’OCR. Les livrables incluent un dataset annoté d’images provenant de différents moniteurs, un modèle entraîné pour détecter les zones affichant les signes vitaux, et un pipeline intégrant la détection et l’extraction de texte. Les tâches principales consistent à capturer et annoter les images des moniteurs, entraîner le modèle de détection, intégrer des outils de traitement d’image et d’OCR, et configurer les caméras pour la capture des données. Les critères d’acceptation garantissent une détection précise des zones d’intérêt, une extraction fiable des valeurs, une faible latence du pipeline, et une compatibilité avec différents modèles de moniteurs. Les risques incluent des problèmes liés à l’éclairage ou à la qualité des images, qui peuvent être mitigés par un prétraitement optimisé, ainsi qu’une taille insuffisante du dataset, compensée par des techniques d’augmentation des données.
 
-\textbf{Sprint 2 : Système d'alerte et gestion du personnel}
-\begin{itemize}
-    \item \textbf{Objectif :} Mettre en place un système d'alertes en temps réel et de notifications basées sur les rôles des utilisateurs.
-    \item \textbf{Livrables :}
-        \begin{itemize}
-            \item Moteur d'alerte basé sur des règles (seuils pour fréquence cardiaque, SpO2, pression artérielle).
-            \item Système de notification basé sur les rôles (médecins, infirmiers).
-            \item Intégration de Firebase Cloud Messaging (FCM) pour les alertes mobiles \cite{firebase_fcm_2023}.
-        \end{itemize}
-    \item \textbf{Durée :} 3 semaines.
-    \item \textbf{Tâches principales :}
-        \begin{itemize}
-            \item Configurer les seuils d'alerte (par exemple, fréquence cardiaque $< 60$ ou $> 100$ bpm $\rightarrow$ ``Critique'' ; SpO2 $< 90\%$ $\rightarrow$ ``Critique'' ; pression artérielle systolique $> 180$ mmHg ou $< 90$ mmHg $\rightarrow$ ``Critique'').
-            \item Associer les alertes aux rôles (par exemple, critiques $\rightarrow$ médecin ; avertissements $\rightarrow$ infirmier).
-            \item Intégrer FCM pour l'envoi des notifications push sur Android et iOS.
-            \item Développer un module de validation des données OCR pour garantir la fiabilité des alertes.
-        \end{itemize}
-    \item \textbf{Critères d'acceptation :}
-        \begin{itemize}
-            \item Alertes déclenchées en $< 2$ secondes après dépassement des seuils (testé sur 50 scénarios).
-            \item Notifications envoyées aux bons rôles dans 100\% des cas (testé sur 20 utilisateurs).
-            \item Précision des données validées $\geq 98\%$ (comparée à 20 vérifications manuelles).
-            \item Notifications push reçues avec un taux de succès de 99\% sur Android et iOS.
-        \end{itemize}
-    \item \textbf{Dépendances :} Pipeline OCR fonctionnel du Sprint 1.
-    \item \textbf{Risques :}
-        \begin{itemize}
-            \item Retards dans les notifications FCM. \textbf{Solution :} Tester avec des données simulées et optimiser la configuration FCM.
-            \item Erreurs OCR affectant les alertes. \textbf{Solution :} Implémenter des tests unitaires supplémentaires pour l'OCR.
-        \end{itemize}
-\end{itemize}
+Le deuxième sprint se focalise sur la mise en place d’un système d’alertes en temps réel et de notifications adaptées aux rôles des utilisateurs. Les livrables comprennent un moteur d’alertes basé sur des règles définissant les seuils pour les signes vitaux, un système de notification différencié selon les rôles, et l’intégration de notifications push pour les appareils mobiles. Les tâches incluent la configuration des seuils d’alerte, l’association des notifications aux rôles appropriés, l’intégration d’un service de messagerie pour les notifications, et la validation des données extraites pour garantir leur fiabilité. Les critères d’acceptation vérifient que les alertes sont déclenchées rapidement, envoyées aux bons destinataires, et que les données sont validées avec une grande précision. Les risques incluent des retards dans la transmission des notifications, qui peuvent être atténués par des tests avec des données simulées, et des erreurs dans l’extraction des données, compensées par des tests unitaires rigoureux.
 
-\textbf{Sprint 3 : Interfaces utilisateur et tableau de bord des alertes}
-\begin{itemize}
-    \item \textbf{Objectif :} Développer des interfaces pour le suivi des alertes et les actions du personnel, avec stockage des données.
-    \item \textbf{Livrables :}
-        \begin{itemize}
-            \item Tableau de bord web (React) pour les alertes en temps réel et les signes vitaux des patients.
-            \item Application mobile (Flutter) pour la réception des alertes et l'accusé de réception par le personnel.
-            \item Base de données MySQL pour enregistrer les alertes et les réponses du personnel \cite{mysql_docs_2023}.
-        \end{itemize}
-    \item \textbf{Durée :} 3 semaines.
-    \item \textbf{Tâches principales :}
-        \begin{itemize}
-            \item Développer le tableau de bord React avec priorisation des alertes (critique, avertissement) \cite{react_docs_2023}.
-            \item Créer l'application Flutter avec intégration FCM pour les accusés de réception \cite{flutter_docs_2023}.
-            \item Configurer MySQL pour stocker les alertes, réponses, et historiques des signes vitaux.
-            \item Implémenter des WebSockets pour les mises à jour en temps réel des interfaces.
-        \end{itemize}
-    \item \textbf{Critères d'acceptation :}
-        \begin{itemize}
-            \item Tableau de bord met à jour les signes vitaux et alertes toutes les 5 secondes (testé avec 10 utilisateurs simultanés).
-            \item Application mobile reçoit et accuse réception des alertes avec un taux de succès de 99\% (testé sur 20 utilisateurs).
-            \item Données stockées dans MySQL avec 100\% d'intégrité (validé sur 50 enregistrements).
-            \item Ergonomie validée par 5 utilisateurs médicaux (aucun problème d'utilisabilité signalé).
-        \end{itemize}
-    \item \textbf{Dépendances :} Système d'alerte du Sprint 2.
-    \item \textbf{Risques :}
-        \begin{itemize}
-            \item Latence de l'interface utilisateur. \textbf{Solution :} Optimiser les appels API avec WebSockets et effectuer des tests de charge.
-            \item Complexité d'intégration des interfaces. \textbf{Solution :} Réaliser des prototypes préliminaires et des tests d'utilisabilité itératifs.
-        \end{itemize}
-\end{itemize}
+Le troisième sprint vise à développer les interfaces utilisateur et un tableau de bord pour la gestion des alertes. Les livrables incluent un tableau de bord web pour afficher les alertes et les signes vitaux en temps réel, une application mobile permettant la réception et l’accusé de réception des alertes, et une base de données pour stocker les alertes et les réponses du personnel. Les tâches consistent à développer le tableau de bord avec une priorisation claire des alertes, concevoir l’application mobile avec intégration des notifications, configurer la base de données pour un stockage fiable, et implémenter des technologies de mise à jour en temps réel. Les critères d’acceptation garantissent des mises à jour rapides des interfaces, une réception fiable des notifications, une intégrité totale des données stockées, et une ergonomie validée par les utilisateurs. Les risques incluent une latence potentielle des interfaces, mitigée par une optimisation des appels réseau, et une complexité d’intégration, résolue par des prototypes préliminaires et des tests itératifs.
+
 
 \section{Environnement de travail}
 \label{sec:environnement}
@@ -257,65 +146,122 @@ Le projet est divisé en trois sprints, chacun d'une durée de trois semaines, c
 \subsection{Environnement matériel}
 \label{subsec:materiel}
 
-L'environnement matériel est aligné sur les exigences architecturales de la section \ref{sec:architecture_physique} :
-
-\begin{itemize}
-    \item \textbf{Caméras pour les moniteurs :} Caméras IP (1080p, montage fixe) pour capturer les écrans des moniteurs Mindray et Edan pour le traitement par YOLO et OCR.
-    \item \textbf{Serveurs :} Serveurs locaux dédiés (Intel i5, 16 Go RAM, 500 Go SSD) pour le stockage, le traitement des données et la génération des alertes.
-    \item \textbf{Réseau de communication :} LAN sécurisé avec accès Internet pour la transmission des données entre caméras, serveurs et applications.
-    \item \textbf{Appareils mobiles :} Smartphones/tablettes (Android 8.0+ ou iOS 12+) pour les notifications et l'accès aux données en temps réel.
-\end{itemize}
+L’environnement matériel est conçu pour répondre aux exigences architecturales décrites précédemment. Des caméras IP capturent les écrans des moniteurs médicaux pour permettre le traitement des données par détection et OCR. Des serveurs locaux dédiés assurent le stockage, le traitement des données et la génération des alertes. Un réseau local sécurisé avec accès Internet facilite la transmission des données entre les caméras, les serveurs et les applications. Enfin, des smartphones et tablettes compatibles permettent aux utilisateurs d’accéder aux notifications et aux données en temps réel.
 
 \subsection{Environnement de développement}
 \label{subsec:dev_environnement}
 
-L'environnement de développement utilise des outils cohérents avec les choix technologiques du chapitre \ref{chap:architecture} :
+L’environnement de développement s’appuie sur un ensemble cohérent de langages de programmation, frameworks et bibliothèques, choisis en fonction des exigences techniques du projet VitalSync. Chaque composant du système est développé avec des outils adaptés à sa fonction :
 
 \begin{itemize}
-    \item \textbf{Langages et Frameworks :}
-        \begin{itemize}
-            \item \textbf{Python 3.11.0 :} Pour le traitement des images (OpenCV, YOLOv8, Tesseract) et les services backend basés sur Flask \cite{opencv_2023, tesseract_ocr_2023}.
-            \item \textbf{Laravel 11.44.2 :} Pour le développement backend, la gestion des utilisateurs et les services de notification \cite{laravel_docs_2023}.
-            \item \textbf{React 18.3.1 :} Pour le tableau de bord web interactif \cite{react_docs_2023}.
-            \item \textbf{Flutter 3.27.0 :} Pour l'application mobile multiplateforme \cite{flutter_docs_2023}.
-        \end{itemize}
-    \item \textbf{Bibliothèques et Outils :}
-        \begin{itemize}
-            \item \textbf{OpenCV :} Prétraitement des images et détection des régions d'intérêt \cite{opencv_2023}.
-            \item \textbf{YOLOv8 :} Détection des régions pour les signes vitaux \cite{redmon_yolo_2023}.
-            \item \textbf{Tesseract OCR :} Extraction de texte des images des moniteurs \cite{tesseract_ocr_2023}.
-            \item \textbf{Firebase Cloud Messaging :} Notifications push en temps réel \cite{firebase_fcm_2023}.
-            \item \textbf{LabelImg :} Annotation des images pour l'entraînement de YOLO \cite{labelimg_2023}.
-            \item \textbf{Docker :} Conteneurisation des applications.
-            \item \textbf{Git :} Contrôle de version via GitHub/GitLab \cite{pro_git_2014}.
-        \end{itemize}
+    \item \textbf{PHP avec Laravel} : utilisé pour développer l’API backend principale. Laravel offre une architecture MVC robuste, une gestion avancée de l’authentification (Sanctum), ainsi qu’un système de routage et de notifications efficace.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.15\textwidth]{chapter4/images/laravel_logo.png}
+            \hspace{1cm}
+            \includegraphics[width=0.15\textwidth]{chapter4/images/php-logo.png}
+            \caption{Logos des technologies backend : Laravel et PHP}
+            \label{fig:laravel_php_logos}
+        \end{figure}
+
+    \item \textbf{Python avec Flask} : utilisé pour les microservices de traitement d’image. Flask, léger et modulaire, est associé à des bibliothèques comme OpenCV (prétraitement d’image), YOLO (détection des zones d’intérêt) et Tesseract OCR (extraction de texte).
+    
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.15\textwidth]{chapter4/images/python_logo.png}
+            \hspace{1cm}
+            \includegraphics[width=0.15\textwidth]{chapter4/images/flask_logo.png}
+            \caption{Logos des technologies utilisées pour le traitement et l’API Python : Python et Flask}
+            \label{fig:python_flask_logos}
+        \end{figure}
+
+    \item \textbf{Dart avec Flutter} : utilisé pour l’application mobile multiplateforme. Flutter permet de développer des interfaces fluides et réactives, compatibles Android/iOS, et intègre Firebase Cloud Messaging (FCM) pour les notifications.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.3\textwidth]{chapter4/images/flutter_logo.png}
+            \hspace{1cm}
+            \includegraphics[width=0.2\textwidth]{chapter4/images/dart_logo.jpg}
+            \caption{Logos des technologies utilisées pour le développement mobile : Flutter et Dart}
+            \label{fig:flutter_dart_logos}
+        \end{figure}
+
+     \item \textbf{JavaScript avec React} : utilisé pour l’interface web destinée au personnel médical. React assure une expérience utilisateur moderne avec une gestion efficace de l’état des composants et des interactions dynamiques.
+    
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.15\textwidth]{chapter4/images/react_logo.jpg}
+            \hspace{1cm}
+            \includegraphics[width=0.15\textwidth]{chapter4/images/javascript_logo.png}
+            \caption{Logos des technologies utilisées pour le développement web : React et JavaScript}
+            \label{fig:react_js_logos}
+        \end{figure}
+
+    \item \textbf{MySQL avec phpMyAdmin} : MySQL est la base de données relationnelle choisie pour le stockage des patients, mesures vitales, et alertes. phpMyAdmin facilite la visualisation et la gestion de la base.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.15\textwidth]{chapter4/images/mysql_logo.png}
+            \hspace{1cm}
+            \includegraphics[width=0.15\textwidth]{chapter4/images/phpmyadmin_logo.png}
+            \caption{Logos des outils de gestion de base de données : MySQL et phpMyAdmin}
+            \label{fig:mysql_phpmyadmin_logos}
+        \end{figure}
+
 \end{itemize}
+
+Ces technologies sont intégrées dans un environnement modulaire et conteneurisé à l’aide de Docker, garantissant une portabilité entre les environnements de développement, de test et de production. Le développement collaboratif est facilité par GitHub, tandis que l’édition de code est principalement réalisée avec Visual Studio Code et Android Studio.
+
 
 \subsection{Environnement logiciel}
 \label{subsec:logiciel}
 
+L’environnement logiciel repose sur des systèmes d’exploitation adaptés pour le développement et les appareils mobiles. Une base de données relationnelle garantit un stockage fiable et conforme aux standards. Les communications s’appuient sur des protocoles sécurisés, tels que des API REST avec authentification par tokens et des WebSockets pour les mises à jour en temps réel. Les outils de développement suivants sont employés :
+
 \begin{itemize}
-    \item \textbf{Systèmes d'exploitation :}
-        \begin{itemize}
-            \item \textbf{Développement :} Windows 11 (16 Go RAM, Intel i5).
-            \item \textbf{Mobile :} Android 14 ou iOS 12+.
-        \end{itemize}
-    \item \textbf{Base de données :} MySQL 9.1.0 pour le stockage relationnel avec conformité ACID \cite{mysql_docs_2023}.
-    \item \textbf{Protocoles :}
-        \begin{itemize}
-            \item \textbf{API REST :} Communication sécurisée avec des tokens Bearer, documentée via Swagger.
-            \item \textbf{WebSockets :} Notifications en temps réel.
-        \end{itemize}
-    \item \textbf{Outils :}
-        \begin{itemize}
-            \item \textbf{IDE :} Visual Studio Code, Android Studio.
-            \item \textbf{Gestion des dépendances :} Composer (PHP), npm (JavaScript), pip (Python).
-            \item \textbf{Tests :} Postman, Swagger pour tester les API.
-        \end{itemize}
+    \item \textbf{Visual Studio Code} : Utilisé comme environnement de développement intégré, Visual Studio Code permet de coder, tester et déboguer efficacement grâce à son interface intuitive et ses extensions pour divers langages et frameworks.
 \end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.15\textwidth]{chapter4/images/vscode_logo.jpg}
+    \caption{Logo de Visual Studio Code}
+\end{figure}
+
+\begin{itemize}
+    \item \textbf{Android Studio} : Android Studio est utilisé pour le développement et le test des applications mobiles, offrant des outils spécialisés pour la création d’interfaces utilisateur et la gestion des performances sur les appareils Android.
+\end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.15\textwidth]{chapter4/images/androidstudio_logo.png}
+    \caption{Logo d’Android Studio}
+\end{figure}
+
+\begin{itemize}
+    \item \textbf{LaTeX} : LaTeX est utilisé pour la rédaction du rapport final, offrant une mise en forme professionnelle et structurée. Il permet de générer des documents de haute qualité avec une gestion précise des sections, des références et des figures.
+\end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.15\textwidth]{chapter4/images/latex_logo.png}
+    \caption{Logo de LaTeX}
+\end{figure}
+
+\begin{itemize}
+    \item \textbf{GitHub} : GitHub facilite la gestion des versions et la collaboration sur le code, assurant un suivi rigoureux des modifications et une intégration fluide avec d’autres outils de développement.
+\end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.15\textwidth]{chapter4/images/github_logo.jpg}
+    \caption{Logo de GitHub}
+\end{figure}
+
+\begin{itemize}
+    \item \textbf{Docker Desktop} : Docker Desktop permet de conteneuriser les applications, assurant une portabilité et une cohérence des environnements logiciels à travers les différentes phases du projet.
+\end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.15\textwidth]{chapter4/images/dockerdesktop_logo.png}
+    \caption{Logo de Docker Desktop}
+\end{figure}
 
 \section{Conclusion}
 \label{sec:conclusion_sprint0}
 
-Le Sprint 0 établit une base solide pour le projet en définissant les acteurs, les besoins et le cadre Scrum. Le Product Backlog priorisé, la planification détaillée des sprints et l'environnement de développement spécifié garantissent l'alignement avec les objectifs du projet de collecte de données en temps réel et de gestion des alertes. L'intégration de YOLO pour la détection des régions et d'OCR pour l'extraction des données, comme décrit dans le chapitre \ref{chap:architecture}, positionne le système pour un développement efficace dans les sprints suivants.
-
+Le Sprint 0 pose une base solide pour le projet en définissant les acteurs, les besoins et le cadre Scrum. Le Product Backlog priorisé, la planification détaillée des sprints et l’environnement de développement spécifié garantissent un alignement avec les objectifs de collecte de données en temps réel et de gestion des alertes. L’intégration de technologies de détection et d’OCR positionne le système pour un développement efficace dans les sprints suivants, tout en restant fidèle à l’architecture décrite dans les chapitres précédents.
