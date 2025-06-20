@@ -42,87 +42,108 @@
 \usetikzlibrary{shapes.geometric, arrows.meta, fit, positioning}
 \setlist[itemize]{topsep=2pt, partopsep=0pt, parsep=0pt, itemsep=1pt, left=1.5em}
 
-% Define missing symbols if not provided by packages
-% \newcommand{\texttimes}{\ding{55}} % cross mark
+% Define missing symbols
 \newcommand{\textwarning}{\textcolor{orange}{\ding{46}}} % warning sign
+\newcommand{\smalldash}{\raisebox{0.2ex}{\textcolor{black}{\textendash}}} % small dash
+\setlist[itemize,1]{label=\smalldash}
+
 % ================ PAGE SETTINGS ================
 \geometry{top=2.5cm, bottom=2.5cm, left=3cm, right=2.5cm}
 \onehalfspacing
 
-% ================ HEADER / FOOTER ================
+% ================ HEADER / FOOTER STYLES ================
+% Main style: header + footer + lines
 \pagestyle{fancy}
 \fancyhf{}
-\fancyfoot[R]{\thepage/\pageref{LastPage}}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
+\fancyhead[L]{\leftmark} % Consistent header size
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
 
-% ================ TITLES FORMAT ================
+% Chapter first page: no header, footer + line
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0.4pt}
+}
+
+% No header / footer / line (cover + first TOC/LOF/LOT page)
+\fancypagestyle{noheaderfooter}{
+  \fancyhf{}
+  \fancyhead{} % Explicitly clear header
+  \fancyfoot{} % Explicitly clear footer
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+% TOC/LOF/LOT continuation: header only, no footer, no footer line
+\fancypagestyle{tocpages}{
+  \fancyhf{}
+  \fancyhead[L]{\leftmark} % Consistent header size
+  \renewcommand{\headrulewidth}{0.4pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+% Ensure no footer line on first page of TOC/LOF/LOT
+\makeatletter
+\patchcmd{\@starttoc}{\begingroup}{\begingroup\thispagestyle{noheaderfooter}}{}{}
+\makeatother
+
+% ================ TITLES ================
 \titleformat{\chapter}[display]
   {\centering\normalfont\bfseries\LARGE}{\chaptername~\thechapter}{20pt}{\LARGE}
 \titlespacing*{\chapter}{0pt}{-1cm}{1cm}
 
-\titleformat{\section}
-  {\normalfont\bfseries\Large}{\thesection}{0.2cm}{}
-\titlespacing*{\section}{0pt}{1cm}{0.5cm}
-
-\titleformat{\subsection}
-  {\normalfont\bfseries\large}{\thesubsection}{0.2cm}{}
-\titlespacing*{\subsection}{0pt}{0.8cm}{0.4cm}
-
-% ================ PARAGRAPH STYLE ================
-\setlength{\parindent}{0cm}
-\setlength{\parskip}{0.5em}
-
-% ================ FIGURE/TABLE STYLE ================
-\captionsetup{
-  labelfont=bf,
-  font=small,
-  labelsep=colon,
-  justification=justified
-}
-\renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
-\renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}
-
-% ================ MISC ================
-\hypersetup{
-    colorlinks=true,
-    linkcolor=black,
-    urlcolor=blue,
-    citecolor=blue
-}
-\renewcommand{\bibname}{Bibliographie/Netographie}
-\widowpenalty=10000
-\clubpenalty=10000
-\hyphenpenalty=10000
-
-\newcommand{\smallurl}[1]{{\footnotesize\url{#1}}}
-\renewcommand{\quote}[1]{«~#1~»}
-\newcommand{\example}[1]{\textit{#1}}
-\newcommand{\definition}[1]{\textbf{#1}}
-
-% ================== DOCUMENT ==================
+% ================ DOCUMENT ================
 \begin{document}
 
-% ---------- Cover Page ----------
-% inport pdf cover page
+% ---------- Cover ----------
+\begingroup
+\pagestyle{noheaderfooter}
+\thispagestyle{noheaderfooter}
+\pagenumbering{gobble}
 \includepdf[pages=-]{gard.pdf}
+\endgroup
 
 % ---------- TOC ----------
+\begingroup
+\pagestyle{tocpages} % Apply tocpages to all pages in this group
 \tableofcontents
+\markboth{TABLE DES MATIÈRES}{}
+\clearpage
+\endgroup
+
+% ---------- LOF ----------
+\begingroup
+\pagestyle{tocpages} % Apply tocpages to all pages in this group
 \listoffigures
+\markboth{TABLE DES FIGURES}{}
+\clearpage
+\endgroup
+
+% ---------- LOT ----------
+\begingroup
+\pagestyle{tocpages} % Apply tocpages to all pages in this group
 \listoftables
-\newpage
+\markboth{TABLE DES TABLEAUX}{}
+\clearpage
+\endgroup
 
 % ---------- Chapters ----------
-\include{chapter0/introduction} 
-\include{chapter1/chapter1} 
-\include{chapter2/chapter2} 
-\include{chapter3/chapter3} 
-\include{chapter4/chapter4} 
-\include{chapter5/chapter5} 
-\include{chapter6/chapter6} 
-\include{chapter7/chapter7} 
-\include{chapter8/chapter8} 
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\include{chapter0/introduction}
+\include{chapter1/chapter1}
+\include{chapter2/chapter2}
+\include{chapter3/chapter3}
+\include{chapter4/chapter4}
+\include{chapter5/chapter5}
+\include{chapter6/chapter6}
+\include{chapter7/chapter7}
+\include{chapter8/chapter8}
 
 % ---------- Bibliography ----------
 \newpage

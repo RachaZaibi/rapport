@@ -16,7 +16,7 @@ Le projet adopte la méthodologie Scrum pour assurer un développement itératif
 
 Les rôles Scrum et leurs responsabilités sont définis dans un tableau spécifique, garantissant une approche collaborative alignée sur les principes décrits précédemment. Le Product Owner est chargé de définir et de prioriser les fonctionnalités du produit, tout en validant les livrables pour s’assurer qu’ils répondent aux besoins du projet. L’équipe de développement conçoit, développe et teste les fonctionnalités, en veillant à la qualité du code produit. Le Scrum Master facilite les événements Scrum, élimine les obstacles et veille à ce que l’équipe adhère aux pratiques de la méthodologie.
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \caption{Acteurs du projet Scrum}
 \label{tab:roles_scrum}
@@ -93,19 +93,19 @@ Le projet est structuré en trois sprints de trois semaines chacun. Le tableau c
 \hline
 \textbf{Sprint} & \textbf{Objectifs et livrables} & \textbf{Tâches principales} & \textbf{Critères d’acceptation} & \textbf{Risques et solutions} \\
 \hline
-\textbf{Sprint 1 \newline Pipeline OCR} &
+\textbf{Sprint 1 \newline Création du dataset et mise en place du pipeline OCR} &
 Identification des acteurs ; recueil des besoins ; définition de la méthodologie Scrum. &
 Dataset annoté ; modèle YOLO entraîné ; pipeline OCR fonctionnel. &
 Capture et annotation ; entraînement modèle ; intégration Tesseract ; configuration caméras. &
 Détection précise ; extraction fiable ; faible latence ; compatibilité multi-marques. Mauvais éclairage $\rightarrow$ prétraitement ; dataset limité $\rightarrow$ augmentation. \\
 \hline
-\textbf{Sprint 2 \newline Alertes temps réel} &
+\textbf{Sprint 2 \newline Système d'alertes et de notifications} &
 Moteur d’alerte ; notifications selon rôles ; intégration FCM. &
 Configuration des seuils ; mapping rôles ; messagerie ; validation données. &
 Alertes rapides ; notifications correctes ; données validées avec précision. &
 Retards $\rightarrow$ tests simulés ; erreurs $\rightarrow$ tests unitaires. \\
 \hline
-\textbf{Sprint 3 \newline Interfaces et dashboard} &
+\textbf{Sprint 3 \newline Finalisation du système VitalSync} &
 Dashboard web ; app mobile ; base de données des alertes. &
 Développement dashboard ; design app ; notifications ; mises à jour en temps réel. &
 Interfaces réactives ; réception fiable ; intégrité des données ; bonne ergonomie. &
@@ -233,7 +233,7 @@ L’environnement logiciel repose sur des systèmes d’exploitation adaptés po
 \end{itemize}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.15\textwidth]{chapter4/images/dockerdesktop_logo.png}
+    \includegraphics[width=0.3\textwidth]{chapter4/images/dockerdesktop_logo.png}
     \caption{Logo de Docker Desktop}
 \end{figure}
 

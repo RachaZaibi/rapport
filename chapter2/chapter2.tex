@@ -15,7 +15,7 @@ L’analyse des besoins est une étape cruciale pour définir les fonctionnalit�
 
 Le système interagit avec plusieurs acteurs essentiels, chacun jouant un rôle distinct dans son fonctionnement. Ces acteurs, résumés dans un tableau dédié, sont en phase avec le contexte médical et les composants architecturaux décrits dans les chapitres précédents. 
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \caption{Acteurs du système et leurs rôles}
 \label{tab:acteurs}
@@ -122,7 +122,7 @@ Enfin, la méthodologie Scrum favorise une collaboration étroite entre les dév
 \section{Présentation de Scrum}
 \label{sec:presentation_scrum}
 Scrum est un framework agile qui repose sur des cycles de développement appelés sprints, comme présenté dans la figure~\ref{fig:processus_scrum}. Chaque sprint a une durée définie (généralement entre 2 et 4 semaines) et aboutit à un produit fonctionnel et potentiellement livrable. Le processus Scrum comprend plusieurs éléments clés tels que le \textit{Product Backlog}, le \textit{Sprint Backlog}, l'\textit{Incrément}, ainsi que des événements tels que la planification de sprint, les réunions quotidiennes (\textit{Daily Scrum}), la revue de sprint et la rétrospective de sprint~\cite{atlassian2023scrum}.
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{chapter2/images/scrum.png}
     \caption{Processus Scrum.}
@@ -136,7 +136,7 @@ Scrum repose sur trois artefacts principaux qui structurent le développement du
 \begin{itemize}
     \item \textbf{Product Backlog~:} Le \textit{Product Backlog} regroupe l’ensemble des fonctionnalités à développer, telles que définies dans le tableau~\ref{tab:backlog} (voir section~\ref{subsec:backlog}). Il est géré par le Product Owner, qui priorise les tâches en utilisant la méthode MoSCoW pour classer les fonctionnalités en \textit{Must}, \textit{Should}, \textit{Could} et \textit{Won’t}. Ce backlog est régulièrement affiné pour intégrer les retours des parties prenantes, notamment le personnel médical, afin de garantir que les fonctionnalités prioritaires répondent aux besoins critiques du système.
 
-    \item \textbf{Sprint Backlog~:} À chaque sprint, un sous-ensemble de tâches est sélectionné à partir du \textit{Product Backlog} pour constituer le \textit{Sprint Backlog}. Par exemple, pour le Sprint 1, les tâches se concentrent sur l’intégration de la collecte de données basée sur caméra et l’extraction OCR (voir section~\ref{sec:intro_sprint2}). Ces tâches sont définies lors de la réunion de planification du sprint, en collaboration avec l’équipe de développement.
+    \item \textbf{Sprint Backlog~:} À chaque sprint, un sous-ensemble de tâches est sélectionné à partir du \textit{Product Backlog} pour constituer le \textit{Sprint Backlog}. Par exemple, pour le Sprint 1, les tâches se concentrent sur l’intégration de la collecte de données basée sur caméra et l’extraction OCR (voir section~\ref{sec:intro_sprint1}). Ces tâches sont définies lors de la réunion de planification du sprint, en collaboration avec l’équipe de développement.
 
     \item \textbf{Incrément~:} Chaque sprint produit un incrément fonctionnel et potentiellement livrable. Par exemple, à l’issue du Sprint 1, un pipeline OCR fonctionnel est livré, permettant la capture et l’extraction des données vitales à partir des moniteurs. Cet incrément peut être testé par le personnel médical pour valider sa précision et sa fiabilité avant d’intégrer de nouvelles fonctionnalités dans les sprints suivants.
 \end{itemize}
@@ -145,7 +145,7 @@ Scrum repose sur trois artefacts principaux qui structurent le développement du
 \label{subsec:evenements_scrum}
 Scrum repose sur des événements clés qui structurent le processus de développement. Ces événements sont implémentés comme suit dans le cadre du projet~\cite{schwaber2004}:
 \begin{itemize}
-    \item \textbf{Planification de sprint~:} Lors de la réunion de planification, l’équipe sélectionne les tâches du \textit{Product Backlog} à inclure dans le \textit{Sprint Backlog}, en estimant l’effort requis (voir tableau~\ref{tab:sprint_backlog_sprint2} pour le Sprint 2). Par exemple, pour le Sprint 1, l’intégration de l’OCR a été estimée à 5 jours, en tenant compte de la configuration des caméras et du pipeline de traitement d’images.
+    \item \textbf{Planification de sprint~:} Lors de la réunion de planification, l’équipe sélectionne les tâches du \textit{Product Backlog} à inclure dans le \textit{Sprint Backlog}, en estimant l’effort requis (voir tableau~\ref{tab:sprint_backlog_sprint1} pour le Sprint 1). Par exemple, pour le Sprint 1, l’intégration de l’OCR a été estimée à 5 jours, en tenant compte de la configuration des caméras et du pipeline de traitement d’images.
 
     \item \textbf{Daily Scrum~:} Des réunions quotidiennes de 15 minutes sont organisées pour suivre l’avancement des tâches et identifier les obstacles. Par exemple, si des problèmes de qualité d’image affectent l’OCR, ils sont discutés et résolus rapidement, souvent en ajustant les paramètres de prétraitement d’OpenCV.
 
@@ -199,16 +199,16 @@ Pour faciliter la mise en œuvre de Scrum, plusieurs outils numériques sont uti
 \begin{itemize}
     \item \textbf{ClickUp~:} Utilisé pour gérer le \textit{Product Backlog} et le \textit{Sprint Backlog}, ClickUp permet de suivre les tâches, d’assigner des responsabilités et de visualiser l’avancement des sprints à l’aide de tableaux Kanban ou Scrum~\cite{clickupdocs}. Par exemple, les tâches du Sprint 1, comme l’intégration de l’OCR (M-02), sont suivies via des tickets ClickUp avec des estimations de temps et des statuts mis à jour quotidiennement.
     % add ClickUp logo figure
-    \begin{figure}[h]
+    \begin{figure}[H]
         \centering
         \includegraphics[width=0.3\linewidth]{chapter2/images/Clickup.png}
         \caption{Logo de ClickUp.}
         \label{fig:clickup_logo}
     \end{figure}
 
-    \item \textbf{Slack~:} Cette plateforme de communication permet des échanges en temps réel entre l’équipe de développement, le Product Owner et le Scrum Master~\cite{slackdocs}. Les \textit{Daily Scrum} peuvent être partiellement gérés via des canaux dédiés, où les membres signalent leurs progrès et obstacles.
+    \item \textbf{Slack~:} Cette plateforme de communication permet des échanges en temps réel entre l’équipe de développement, le Product Owner et le Scrum Master~\cite{slackdocs}. \newline Les \textit{Daily Scrum} peuvent être partiellement gérés via des canaux dédiés, où les membres signalent leurs progrès et obstacles.
     
-    \begin{figure}[h]
+    \begin{figure}[H]
         \centering
         \includegraphics[width=0.3\linewidth]{chapter2/images/slack-logo-slide.png}
         \caption{Logo de Slack.}
@@ -217,7 +217,7 @@ Pour faciliter la mise en œuvre de Scrum, plusieurs outils numériques sont uti
     
     \item \textbf{Git~:} Utilisé pour le contrôle de version, Git permet de gérer le code source du projet et de faciliter la collaboration entre les développeurs~\cite{chacon2014progit}. Les commits sont alignés avec les tâches du \textit{Sprint Backlog}, garantissant une traçabilité des contributions.
 
-    \begin{figure}[h]
+    \begin{figure}[H]
         \centering
         \includegraphics[width=0.3\linewidth]{chapter2/images/Git-Logo-2Color.png}
         \caption{Logo de Git.}
@@ -236,7 +236,7 @@ Ce chapitre a présenté la méthodologie Scrum adoptée pour le projet \textbf{
 % \label{subsec:visuel_scrum}
 % La figure~\ref{fig:scrum_workflow} illustre le processus Scrum adapté au projet, montrant la séquence des événements et les boucles de rétroaction. Chaque sprint commence par une planification, suivie de réunions quotidiennes (\textit{Daily Scrum}), d’une revue de sprint pour présenter l’incrément, et d’une rétrospective pour améliorer le processus. Ce cycle itératif garantit que les fonctionnalités, comme la collecte de données via OCR ou la gestion des alertes, sont développées et validées progressivement.
 
-% \begin{figure}[h]
+% \begin{figure}[H]
 %     \centering
 %     \begin{tikzpicture}
 %         \node[draw, rectangle, minimum width=2cm, minimum height=1cm] (plan) at (0,0) {Planification};

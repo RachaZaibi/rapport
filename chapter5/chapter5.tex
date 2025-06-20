@@ -6,7 +6,7 @@
 \section{Introduction}
 \label{sec:intro_sprint1}
 
-Ce chapitre décrit le Sprint 1, première itération du développement d’un système de collecte de données en temps réel et de gestion des alertes pour les appareils médicaux en salle de réveil, comme présenté dans les chapitres d’introduction générale et d’étude architecturale. Selon la planification établie dans le chapitre précédent, cette phase se concentre sur la création d’un dataset annoté à partir de moniteurs médicaux et sur le développement d’un pipeline OCR basé sur des technologies de détection et de reconnaissance de texte pour extraire les signes vitaux, tels que la fréquence cardiaque, la pression artérielle et la saturation en oxygène. Cette itération pose les bases techniques pour la collecte automatisée des données, un objectif central du projet, en suivant la méthodologie Scrum décrite dans le chapitre consacré à la méthode.
+Ce chapitre décrit le Sprint 1, première itération du développement d’un système de collecte de données en temps réel et de gestion des alertes pour les appareils médicaux en salle de réveil, comme présenté dans l’introduction générale et d’étude architecturale. Selon la planification établie dans le chapitre précédent, cette phase se concentre sur la création d’un dataset annoté à partir de moniteurs médicaux et sur le développement d’un pipeline OCR basé sur des technologies de détection et de reconnaissance de texte pour extraire les signes vitaux, tels que la fréquence cardiaque, la pression artérielle et la saturation en oxygène. Cette itération pose les bases techniques pour la collecte automatisée des données, un objectif central du projet, en suivant la méthodologie Scrum décrite dans le chapitre consacré à la méthode.
 
 \begin{figure}[H]
     \centering
@@ -115,6 +115,7 @@ Température (TEMP) & 90,0 \\
 \end{tabular}
 \end{table}
 
+Le processus d’entraînement est illustré dans la Figure \ref{fig:courbe_yolo}, montrant la courbe d’apprentissage du modèle avec une diminution progressive de la perte et une amélioration de la précision au fil des époques. Le modèle a été exporté et déployé sur Roboflow pour une utilisation ultérieure dans le pipeline OCR.
 \begin{figure}[H]
 \centering
 \caption{Courbe d’apprentissage du modèle de détection}
@@ -126,7 +127,7 @@ Température (TEMP) & 90,0 \\
 \subsection{Développement du pipeline OCR}
 \label{subsec:pipeline_ocr}
 
-Le pipeline OCR a été développé sous forme d’une application Flask, permettant le traitement en temps réel des flux vidéo en provenance de caméras IP. Chaque flux est géré par un thread dédié, assurant ainsi la prise en charge simultanée de plusieurs caméras avec une synchronisation via un verrou pour éviter les conflits d’accès. Les images extraites sont prétraitées à l’aide d’OpenCV pour être converties en niveaux de gris, avec un renforcement du contraste et une réduction du bruit, améliorant la lisibilité pour l’OCR. Les régions d’intérêt (ROIs), identifiées à l’aide d’un modèle YOLO hébergé sur Roboflow, sont ensuite recadrées. Ces ROIs sont traitées par Tesseract OCR afin d’en extraire les valeurs numériques pertinentes. Des expressions régulières sont utilisées pour valider les formats des données extraites, permettant de rejeter les résultats non conformes. Une fois validées, les données sont envoyées vers un serveur Laravel via des requêtes HTTP POST. L’API REST développée expose plusieurs endpoints pour le contrôle des caméras (démarrage, arrêt, liste, statut), protégés par une authentification via clé API. Une documentation interactive est générée automatiquement à l’aide de Swagger UI, comme illustré dans la Figure \ref{fig:swagger_ui}. La Figure \ref{fig:sequence_workflow} présente le diagramme de séquence illustrant le workflow du pipeline OCR.
+Le pipeline OCR a été développé sous forme d’une application Flask, permettant le traitement en temps réel des flux vidéo en provenance de caméras IP. Chaque flux est géré par un thread dédié, assurant ainsi la prise en charge simultanée de plusieurs caméras avec une synchronisation via un verrou pour éviter les conflits d’accès. Les images extraites sont prétraitées à l’aide d’OpenCV pour être converties en niveaux de gris, avec un renforcement du contraste et une réduction du bruit, améliorant la lisibilité pour l’OCR. Les régions d’intérêt (ROIs), identifiées à l’aide d’un modèle YOLO hébergé sur Roboflow, sont ensuite recadrées. Ces ROIs sont traitées par Tesseract OCR afin d’en extraire les valeurs numériques pertinentes. Des expressions régulières sont utilisées pour valider les formats des données extraites, permettant de rejeter les résultats non conformes. Une fois validées, les données sont envoyées vers un serveur Laravel via des requêtes HTTP POST. L’API REST développée expose plusieurs endpoints pour le contrôle des caméras (démarrage, arrêt, liste, statut), protégés par une authentification via clé API. Une documentation interactive est générée automatiquement à l’aide de Swagger UI, comme illustré dans la Figure \ref{fig:swagger_ui}. 
 
 \begin{figure}[H]
     \centering
@@ -134,7 +135,8 @@ Le pipeline OCR a été développé sous forme d’une application Flask, permet
     \caption{Capture d’écran de l’interface Swagger UI pour la documentation de l’API REST}
     \label{fig:swagger_ui}
 \end{figure}
-
+% La Figure \ref{fig:sequence_workflow} présente le diagramme de séquence illustrant le workflow du pipeline OCR.
+La Figure \ref{fig:sequence_workflow} présente le diagramme de séquence illustrant le workflow du pipeline OCR, montrant les interactions entre les caméras IP, le serveur Flask, le modèle YOLO, Tesseract OCR et le backend Laravel pour la collecte et le traitement des données.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{chapter5/sections/diagrams/pipeline_workflow.png}
@@ -158,7 +160,6 @@ Les livrables incluent :
     \item Un modèle YOLO entraîné, déployé sur le serveur Roboflow avec une mAP@50 de 83,2 \%.
     \item Un pipeline OCR basé sur Flask, intégrant YOLO, Tesseract, et une API REST avec documentation Swagger.
     \item Une configuration des caméras IP pour un flux vidéo stable, testée avec trois moniteurs.
-    \item Une documentation complète, incluant le guide d’installation du pipeline, la documentation de l’API, et un rapport d’entraînement du modèle.
 \end{itemize}
 
 % Testing and validating Sprint 1
@@ -185,7 +186,7 @@ Stabilité du flux vidéo & < 1\% perte & Validé \\
 \end{table}
 
 % Discussing challenges and solutions
-\section{Défis et solutions}
+\section{Défis}
 \label{subsec:defis_sprint1}
 
 Les défis incluent :
@@ -193,7 +194,6 @@ Les défis incluent :
     \item \textbf{Réflets sur les écrans} : Résolus par un réglage de l’exposition des caméras et des filtres OpenCV.
     \item \textbf{Taille initiale limitée du dataset} : Compensée par une augmentation des données via Roboflow.
     \item \textbf{Polices floues pour OCR} : Optimisées par un ajustement du contraste et des paramètres de Tesseract.
-    \item \textbf{Contrôles d’accès aux ressources matérielles} : Résolus par un calendrier partagé.
 \end{enumerate}
 
 % Conducting retrospective for Sprint 1

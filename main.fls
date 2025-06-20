@@ -410,7 +410,6 @@ INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstop
 INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
-INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\tex\latex\graphics\color.sty
 INPUT .\main.out
 INPUT .\main.out
 INPUT main.out
@@ -501,6 +500,7 @@ OUTPUT chapter1\chapter1.aux
 INPUT .\chapter1\chapter1.tex
 INPUT .\chapter1\chapter1.tex
 INPUT chapter1\chapter1.tex
+INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
 INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8t.tfm
 INPUT .\chapter1\images\logo1-fmm.png
 INPUT .\chapter1\images\logo1-fmm.png
@@ -510,9 +510,6 @@ INPUT .\chapter1\images\logo1-fmm.png
 INPUT .\chapter1\images\logo1-fmm.png
 INPUT .\chapter1\images\logo1-fmm.png
 INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmrc8t.tfm
-INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
-INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8t.tfm
-INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmbc8t.tfm
 INPUT .\chapter1\images\logo2-smartlab.png
 INPUT .\chapter1\images\logo2-smartlab.png
 INPUT .\chapter1\images\logo2-smartlab.png
@@ -522,12 +519,9 @@ INPUT .\chapter1\images\logo2-smartlab.png
 INPUT .\chapter1\images\logo2-smartlab.png
 INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmb8t.vf
 INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
-INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmbc8t.vf
-INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
-INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
-INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmb8t.vf
-INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmr8t.vf
+INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmrc8t.vf
 INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
+INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
 INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8t.tfm
 INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmb8t.vf
 INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
@@ -617,6 +611,9 @@ INPUT .\chapter3\chapter3.tex
 INPUT .\chapter3\chapter3.tex
 INPUT chapter3\chapter3.tex
 INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
+INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
+INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmr8t.vf
+INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
 INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmr8t.vf
 INPUT C:\Users\racha\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
 INPUT .\chapter4\sections\diagrams\use_case.png
