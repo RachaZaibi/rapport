@@ -1,37 +1,61 @@
 \babel@toc {french}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Logo de la FMM}}{11}{figure.caption.5}%
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Logo du SmartLab}}{11}{figure.caption.5}%
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Flux simplifié de VitalSync.}}{17}{figure.caption.9}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Logo de la FMM}}{12}{figure.caption.5}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Logo du SmartLab}}{12}{figure.caption.5}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Logo de Mindray}}{14}{figure.caption.7}%
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Logo de IQ Messenger}}{14}{figure.caption.8}%
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Logo de ChartX}}{15}{figure.caption.9}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Processus Scrum.}}{21}{figure.caption.11}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Rôles Scrum.}}{23}{figure.caption.12}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Logo de ClickUp.}}{24}{figure.caption.13}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Logo de Slack.}}{25}{figure.caption.14}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Logo de Git.}}{25}{figure.caption.15}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Processus Scrum adapté au projet.}}{26}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Processus Scrum.}}{21}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Rôles Scrum.}}{24}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Logo de ClickUp.}}{24}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Logo de Slack.}}{25}{figure.caption.19}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Logo de Git.}}{25}{figure.caption.20}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Architecture globale}}{28}{figure.caption.17}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagramme de classes}}{30}{figure.caption.18}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagramme de séquence global}}{31}{figure.caption.19}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Diagramme de déploiement}}{33}{figure.caption.25}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Diagramme de composants du système}}{34}{figure.caption.26}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Diagramme d'activité du flux de données}}{35}{figure.caption.27}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Schéma général du flux de communication}}{37}{figure.caption.28}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Architecture générale du système VitalSync}}{27}{figure.caption.21}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Modèle MVC de VitalSync}}{28}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagramme des cas d'utilisation global}}{29}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Diagramme de classes}}{30}{figure.caption.24}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Diagramme de séquence global}}{31}{figure.caption.25}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Diagramme d'activité du flux de données}}{32}{figure.caption.26}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Diagramme de composants du système}}{33}{figure.caption.27}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Diagramme de déploiement}}{33}{figure.caption.28}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagramme des cas d'utilisation global}}{41}{figure.caption.30}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Logos des technologies backend : Laravel et PHP}}{45}{figure.caption.33}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Logos des technologies utilisées pour le traitement et l’API Python : Python et Flask}}{45}{figure.caption.34}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Logos des technologies utilisées pour le développement mobile : Flutter et Dart}}{46}{figure.caption.35}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Logos des technologies utilisées pour le développement web : React et JavaScript}}{46}{figure.caption.36}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Logos des outils de gestion de base de données : MySQL et phpMyAdmin}}{46}{figure.caption.37}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Logo de Visual Studio Code}}{47}{figure.caption.38}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Logo d’Android Studio}}{47}{figure.caption.39}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Logo de LaTeX}}{47}{figure.caption.40}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Logo de GitHub}}{47}{figure.caption.41}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Logo de Docker Desktop}}{48}{figure.caption.42}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Logos des technologies backend : Laravel et PHP}}{39}{figure.caption.32}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Logos des technologies utilisées pour le traitement et l’API Python : Python et Flask}}{39}{figure.caption.33}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Logos des technologies utilisées pour le développement mobile : Flutter et Dart}}{39}{figure.caption.34}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Logos des technologies utilisées pour le développement web : React et JavaScript}}{40}{figure.caption.35}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Logos des outils de gestion de base de données : MySQL et phpMyAdmin}}{40}{figure.caption.36}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Logo de Visual Studio Code}}{40}{figure.caption.37}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Logo d’Android Studio}}{41}{figure.caption.38}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Logo de LaTeX}}{41}{figure.caption.39}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Logo de GitHub}}{41}{figure.caption.40}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Logo de Docker Desktop}}{41}{figure.caption.41}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Courbe d’apprentissage du modèle de détection}}{52}{figure.caption.45}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Courbe d’apprentissage du modèle de détection}}{52}{figure.caption.45}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Architecture du système pour le Sprint 1}}{43}{figure.caption.42}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Courbe d’apprentissage du modèle de détection}}{47}{figure.caption.45}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Capture d’écran de l’interface Swagger UI pour la documentation de l’API REST}}{47}{figure.caption.46}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Diagramme de séquence du workflow du pipeline OCR}}{48}{figure.caption.47}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Diagramme de séquence de la génération d’alertes et de la notification}}{58}{figure.caption.47}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Diagramme de séquence pour la génération d'alertes et la distribution des notifications}}{53}{figure.caption.49}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Diagramme d'activité pour le processus de gestion des alertes}}{54}{figure.caption.50}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Diagramme des cas d'utilisation pour le sprint 2}}{55}{figure.caption.51}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Tableau de bord principal affichant les paramètres vitaux et les alertes.}}{59}{figure.caption.52}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Liste des patients avec options de filtrage.}}{59}{figure.caption.53}%
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Liste du personnel médical.}}{60}{figure.caption.54}%
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Ajouter un commentaire}}{61}{figure.caption.55}%
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Autoriser les notifications}}{61}{figure.caption.55}%
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Liste détaillée des patients}}{61}{figure.caption.55}%
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Accueil}}{61}{figure.caption.56}%
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Page d'accueil}}{61}{figure.caption.56}%
+\contentsline {figure}{\numberline {7.9}{\ignorespaces Connexion}}{61}{figure.caption.56}%
+\contentsline {figure}{\numberline {7.10}{\ignorespaces Liste des machines}}{62}{figure.caption.57}%
+\contentsline {figure}{\numberline {7.11}{\ignorespaces Détails machine}}{62}{figure.caption.57}%
+\contentsline {figure}{\numberline {7.12}{\ignorespaces Notifications}}{62}{figure.caption.57}%
+\contentsline {figure}{\numberline {7.13}{\ignorespaces Patients par lit}}{62}{figure.caption.58}%
+\contentsline {figure}{\numberline {7.14}{\ignorespaces Détails patient}}{62}{figure.caption.58}%
+\contentsline {figure}{\numberline {7.15}{\ignorespaces Données machine du patient}}{62}{figure.caption.58}%
+\contentsline {figure}{\numberline {7.16}{\ignorespaces Profil utilisateur}}{63}{figure.caption.59}%
+\contentsline {figure}{\numberline {7.17}{\ignorespaces Notifications vues}}{63}{figure.caption.59}%
+\contentsline {figure}{\numberline {7.18}{\ignorespaces Calendrier des shifts}}{63}{figure.caption.59}%

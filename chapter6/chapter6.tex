@@ -1,70 +1,72 @@
 % Creating the chapter for Sprint 2
-\chapter{Sprint 2}
+\chapter{Sprint 2 : Système d'alertes et de notifications}
 \label{chap:sprint2}
 
 % Introducing the chapter
 \section{Introduction}
-Le Sprint 2 s’appuie sur le pipeline de traitement des données établi lors du Sprint 1, en mettant l’accent sur le développement des fonctionnalités de génération d’alertes, de livraison de notifications et d’interaction avec le personnel médical. Ces éléments sont cruciaux pour réaliser l’objectif du système VitalSync, qui vise à surveiller les signes vitaux en temps réel et à faciliter une réponse médicale rapide, conformément au flux de travail décrit dans le chapitre sur l’architecture. Ce chapitre présente les objectifs, les activités réalisées, les résultats obtenus, les tests effectués, les défis rencontrés, les réflexions issues de la rétrospective, ainsi que la planification pour le Sprint 3.
+Le troisième sprint du projet VitalSync s’appuie sur le pipeline de traitement des données établi lors du sprint précédent, en se concentrant sur le développement des fonctionnalités essentielles pour la génération d’alertes, la distribution des notifications et l’interaction avec le personnel médical. Ces fonctionnalités sont cruciales pour atteindre l’objectif du système, qui est de surveiller les signes vitaux en temps réel et de permettre une réponse rapide dans un contexte médical. Ce chapitre détaille les objectifs du sprint, les activités réalisées, les livrables produits, les tests effectués, les défis rencontrés, la rétrospective de l’équipe et la planification pour le sprint suivant. Des diagrammes UML sont intégrés pour illustrer la conception et le flux de travail du système, renforçant la compréhension des interactions entre les composants.
 
 % Describing the objectives
 \section{Objectifs}
-Le Sprint 2 visait à développer plusieurs fonctionnalités clés pour renforcer le système VitalSync. L’équipe s’est concentrée sur la mise en place d’un mécanisme d’évaluation des règles d’alerte permettant de détecter les anomalies dans les signes vitaux en fonction de seuils personnalisés pour chaque patient. En cas de dépassement de ces seuils, le système devait générer et enregistrer des alertes dans la base de données. Par ailleurs, des notifications étaient envoyées au personnel médical pour les alertes critiques via Firebase Cloud Messaging (FCM). Un tableau de bord initial, basé sur Laravel et React, a été conçu pour permettre au personnel médical de visualiser les alertes, consulter les données des patients et confirmer la réception des notifications. Enfin, l’API Flask a été enrichie pour intégrer la logique des alertes et des notifications, posant les bases d’une interface utilisateur améliorée.
+L’objectif principal du sprint 2 était d’enrichir le système VitalSync avec des fonctionnalités clés pour la surveillance en temps réel et la réactivité face aux anomalies. L’équipe a cherché à implémenter un mécanisme d’évaluation des règles d’alerte permettant de détecter les anomalies dans les signes vitaux, en s’appuyant sur des seuils spécifiques à chaque patient stockés dans une base de données. Lorsqu’une anomalie est détectée, le système génère et enregistre une alerte associée aux données du patient. Les alertes critiques déclenchent des notifications envoyées au personnel médical via Firebase Cloud Messaging (FCM). Une interface préliminaire, développée avec Laravel pour le backend et React pour le frontend, a été conçue pour permettre au personnel médical de visualiser les alertes, d’accéder aux données des patients et de confirmer la réception des notifications. L’API Flask a été étendue pour intégrer la logique des alertes et des notifications, posant ainsi les bases pour des améliorations futures de l’interface utilisateur.
 
 % Detailing the tasks
 \section{Activités}
-Le Sprint 2, d’une durée de trois semaines, a été structuré autour de plusieurs activités clés, chacune contribuant à l’avancement du système.
+Le sprint 2, d’une durée de trois semaines, s’est articulé autour d’activités clés visant à faire progresser les fonctionnalités du système. Une première activité a consisté à développer un système d’évaluation des règles d’alerte. Ce système analyse les données des signes vitaux, telles que la fréquence cardiaque ou la pression artérielle, en les comparant aux seuils spécifiques stockés dans la base de données MySQL. L’API Flask a été adaptée pour interroger ces seuils et effectuer les comparaisons nécessaires, assurant une détection précise des anomalies. Une fois une anomalie détectée, le système génère une alerte liée au dossier du patient, enregistrée dans la base de données avec des attributs tels que la priorité et l’état (par exemple, active ou confirmée). Cette approche garantit une traçabilité fiable des alertes et prévient toute perte de données.
 
-% Explaining alert rule evaluation
-\subsection{Évaluation des règles d’alerte}
-Un système d’évaluation des alertes a été développé pour analyser les données des signes vitaux, telles que la fréquence cardiaque ou la pression artérielle, en les comparant aux seuils spécifiques définis pour chaque patient dans la base de données. L’API Flask a été étendue pour interroger ces règles et comparer les valeurs entrantes aux seuils minimum et maximum. Ce mécanisme a démontré une grande précision dans la détection des anomalies lors des tests initiaux.
+Pour la distribution des notifications, un système basé sur Firebase Cloud Messaging a été implémenté afin d’envoyer les alertes critiques aux appareils mobiles du personnel médical, identifiés via leurs rôles dans la base de données. Cette intégration permet une communication rapide et ciblée, essentielle pour répondre aux situations urgentes. Une interface préliminaire, développée avec Laravel et React, a été mise en place pour permettre au personnel médical de visualiser les alertes, d’accéder aux données des signes vitaux et de confirmer la réception des notifications. Ces confirmations mettent à jour l’état des alertes dans la base de données, assurant une traçabilité complète. Les préférences des utilisateurs, telles que les paramètres de notification, ont également été enregistrées pour personnaliser l’expérience.
 
-% Describing alert generation and storage
-\subsection{Génération et stockage des alertes}
-Lorsqu’une anomalie était détectée, une alerte était générée et enregistrée dans la base de données, en lien avec les informations du patient et des données concernées. Le système prenait en charge différents niveaux de priorité et statuts pour les alertes, garantissant un suivi fiable sans perte de données dans les scénarios de test.
+L’API Flask a été optimisée pour gérer la logique des alertes et des notifications, en s’intégrant harmonieusement avec le backend Laravel. Cette intégration permet une communication fluide entre les composants du système, tandis que l’interface préliminaire offre des fonctionnalités de filtrage de base pour les données des patients et les alertes. Ces développements préparent le terrain pour des améliorations futures, notamment en termes de visualisation et d’ergonomie, prévues pour le sprint suivant.
 
-% Outlining FCM notification delivery
-\subsection{Livraison des notifications}
-Un système de notification basé sur Firebase Cloud Messaging a été mis en œuvre pour transmettre les alertes critiques au personnel médical. Les notifications étaient envoyées aux appareils des soignants identifiés dans la base de données, avec une latence moyenne conforme aux exigences de temps réel du système.
+% Illustrating the workflow with UML diagrams
+\subsection*{Diagrammes d'illustreration du flux de travail}
+Pour illustrer le flux de travail des alertes et des notifications, plusieurs diagrammes UML sont proposés en complément du diagramme de classes déjà présent. Le diagramme de séquence, présenté dans la figure~\ref{fig:sprint3_sequence_diagram}, décrit les interactions entre les composants du système, depuis le traitement des données des signes vitaux jusqu’à la livraison des notifications et leur confirmation par le personnel médical. Ce diagramme met en évidence la séquence des appels entre l’API Flask, le backend Laravel, Firebase Cloud Messaging et l’application mobile Flutter, offrant une vue claire du flux de données.
 
-% Explaining alert confirmation
-\subsection{Confirmation des alertes}
-Un tableau de bord préliminaire, développé avec Laravel et React, permettait au personnel médical de visualiser les alertes et de confirmer leur réception. La confirmation mettait à jour le statut des alertes dans la base de données, assurant une traçabilité complète. Les préférences des utilisateurs étaient également enregistrées pour personnaliser l’expérience.
-
-% Describing API and dashboard integration
-\subsection{Intégration de l’API et du tableau de bord}
-L’API Flask a été optimisée pour gérer la logique des alertes et des notifications, tout en s’intégrant au backend Laravel. Le tableau de bord affichait les données des patients, les signes vitaux et les alertes, avec des fonctionnalités de filtrage de base, préparant le terrain pour des améliorations prévues au Sprint 3.
-
-% Illustrating the workflow with a sequence diagram
-\subsection{Mise en œuvre des alertes et notifications}
-Le flux de travail du Sprint 2, allant du traitement des données à la confirmation des alertes, est illustré dans un diagramme de séquence. Ce diagramme s’appuie sur le pipeline du Sprint 1 et intègre les étapes d’alerte et de notification décrites dans le flux global du système.
-
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{chapter6/sprint2_sequence_diagram.png}
-    \caption{Diagramme de séquence de la génération d’alertes et de la notification}
-    \label{fig:sprint2_sequence_diagram}
+    \includegraphics[width=0.9\textwidth]{chapter6/diagrams/sprint_sequence_diagram.png}
+    \caption{Diagramme de séquence pour la génération d'alertes et la distribution des notifications}
+    \label{fig:sprint3_sequence_diagram}
+\end{figure}
+
+Un diagramme d’activité est également recommandé pour compléter l’analyse. Ce diagramme illustrerait le processus global de gestion des alertes, depuis la réception des données des signes vitaux jusqu’à la confirmation des notifications par le personnel médical. Il mettrait en lumière les décisions prises, comme la comparaison des données avec les seuils, et les flux parallèles, tels que l’envoi simultané de notifications push via FCM et d’e-mails via le backend Laravel. Ce diagramme d’activité offrirait une perspective complémentaire en détaillant les étapes du processus et les points de décision, renforçant la compréhension des interactions dynamiques (voir Figure~\ref{fig:sprint3_activity_diagram}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{chapter6/diagrams/sprint_activity_diagram.png}
+    \caption{Diagramme d'activité pour le processus de gestion des alertes}
+    \label{fig:sprint3_activity_diagram}
+\end{figure}
+
+Enfin, un diagramme de cas d’utilisation spécifique à ce sprint est proposé pour représenter les interactions des acteurs, tels que les médecins et les infirmiers, avec le système, notamment pour la visualisation des alertes, la réception des notifications et la confirmation des actions. Ce diagramme complète le diagramme global des cas d’utilisation en se concentrant sur les fonctionnalités spécifiques du sprint 2, telles que la gestion des alertes et la personnalisation des notifications (voir Figure~\ref{fig:sprint3_use_case_diagram}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{chapter6/diagrams/sprint_use_case_diagram.png}
+    \caption{Diagramme des cas d'utilisation pour le sprint 2}
+    \label{fig:sprint3_use_case_diagram}
 \end{figure}
 
 % Listing the deliverables
 \section{Résultats}
-Le Sprint 2 a permis de livrer plusieurs composants essentiels. Un système d’alerte intégré à l’API Flask a été mis en place, capable de détecter les anomalies en fonction des seuils définis. Un système de notification utilisant FCM a assuré la transmission rapide des alertes au personnel médical. Un tableau de bord préliminaire Laravel/React a été développé pour la visualisation et la gestion des alertes. Les interactions avec la base de données ont été mises à jour pour inclure les tables nécessaires au suivi des alertes et des notifications. Enfin, une documentation détaillant les points d’API et l’utilisation du tableau de bord a été produite.
+Le sprint 2 a permis de livrer plusieurs composants essentiels pour le système VitalSync. Un système d’alertes intégré à l’API Flask a été développé, capable de détecter les anomalies en fonction des seuils définis. Un système de notifications basé sur Firebase Cloud Messaging a été mis en place pour assurer une livraison rapide des alertes critiques au personnel médical. Une interface préliminaire, construite avec Laravel et React, permet la visualisation et la gestion des alertes, ainsi que l’accès aux données des patients. Le schéma de la base de données a été mis à jour pour inclure des tables dédiées aux alertes, aux notifications et aux préférences des utilisateurs, garantissant une gestion efficace des données. Une documentation complète, couvrant les points d’API, l’utilisation de l’interface et la configuration du système, a également été produite pour faciliter les développements futurs.
 
 % Describing the testing process
 \section{Tests}
-Plusieurs tests ont été réalisés pour valider les résultats du Sprint 2. La précision du système d’alerte a été évaluée à l’aide d’enregistrements simulés de signes vitaux, démontrant une détection fiable des anomalies. La latence des notifications a été mesurée sur un grand nombre d’alertes, confirmant que le système répondait aux exigences de temps réel avec un taux de succès élevé. Les fonctionnalités de confirmation des alertes ont été testées pour vérifier que les statuts étaient correctement mis à jour. Enfin, des tests d’intégration de bout en bout ont assuré que le flux de données, de la capture à la notification, fonctionnait sans erreur. Les résultats ont été consignés et examinés lors de la rétrospective.
+Les tests ont validé les livrables du sprint 2 en évaluant plusieurs aspects du système. La précision du système d’alertes a été testée à l’aide de données simulées, démontrant une capacité fiable à détecter les anomalies des signes vitaux. La latence des notifications a été mesurée pour s’assurer qu’elle répondait aux exigences de temps réel, avec des résultats satisfaisants dans des environnements de test. La fonctionnalité de confirmation des alertes a été validée, confirmant que les mises à jour de l’état des alertes dans la base de données étaient fiables. Des tests d’intégration de bout en bout ont vérifié le flux de données, depuis la capture des signes vitaux jusqu’à la livraison des notifications, sans détecter d’erreurs critiques. Les résultats des tests ont été consignés pour servir de base à la rétrospective.
 
 % Discussing challenges
 \section{Défis}
-Plusieurs obstacles ont été rencontrés lors du Sprint 2. La configuration initiale de FCM a posé des problèmes, entraînant des échecs occasionnels de livraison des notifications, qui ont été résolus en optimisant le middleware Laravel. La performance en temps réel a également été un défi, certaines alertes critiques présentant une latence légèrement supérieure aux attentes, ce qui a nécessité une optimisation des requêtes de la base de données. Enfin, les retours des utilisateurs ont souligné le besoin d’améliorer les fonctionnalités de filtrage du tableau de bord, une priorité reportée au Sprint 3.
+Plusieurs défis ont émergé au cours du sprint 2. La configuration initiale de Firebase Cloud Messaging a rencontré des problèmes, entraînant des échecs intermittents dans la livraison des notifications. Ces problèmes ont été résolus en optimisant le middleware Laravel et en mettant à jour les identifiants FCM. Certaines alertes critiques présentaient une latence supérieure aux attentes, ce qui a nécessité une indexation des requêtes de la base de données et une mise en cache des seuils pour améliorer les performances. Enfin, le personnel médical a exprimé le besoin de fonctionnalités de filtrage avancées dans l’interface, une demande qui a été reportée au sprint suivant en raison des contraintes de temps.
 
 % Summarizing the retrospective
-\section{Rétrospective}
-La rétrospective du Sprint 2 a permis d’identifier les points forts et les axes d’amélioration. L’équipe a réussi à livrer un système fonctionnel d’alertes et de notifications, atteignant une haute précision et une latence conforme aux attentes. Cependant, une meilleure estimation du temps nécessaire pour certaines tâches, comme l’intégration de FCM, aurait permis une planification plus précise. Les réunions quotidiennes ont été ajustées pour mieux se concentrer sur la résolution des obstacles. La collaboration entre les équipes backend et frontend s’est renforcée, mais les interactions avec le personnel médical pourraient être davantage optimisées pour accélérer les retours.
+% \section{Rétrospective}
+% La rétrospective du sprint 2 a mis en évidence les succès et les points à améliorer. L’équipe a livré avec succès un système fonctionnel d’alertes et de notifications, répondant aux objectifs de surveillance en temps réel. Cependant, la sous-estimation du temps nécessaire à l’intégration de FCM a conduit à des ajustements dans la planification. Les réunions quotidiennes ont été affinées pour prioriser la résolution rapide des obstacles, ce qui a amélioré l’efficacité de l’équipe. La collaboration entre les équipes backend et frontend s’est renforcée, mais une fréquence accrue des sessions de retour avec le personnel médical a été recommandée pour mieux aligner le système sur les besoins des utilisateurs.
 
-% Outlining Sprint 3 planning
-\section{Planification du Sprint 3}
-Le Sprint 3 se concentrera sur l’amélioration des performances du système, notamment en réduisant davantage la latence des notifications. Le tableau de bord sera enrichi avec des fonctionnalités avancées de filtrage et des visualisations des données, telles que les tendances des signes vitaux. Des tests d’acceptation seront menés avec le personnel médical pour valider les fonctionnalités. Enfin, la documentation sera finalisée, et les préparatifs pour le déploiement seront amorcés, tout en respectant une durée de trois semaines et en priorisant les retours des utilisateurs et les métriques de performance.
+% Outlining sprint 3 planning
+\section{Planification pour le sprint 3}
+Le sprint 3, prévu pour une durée de trois semaines, se concentrera sur l’optimisation du système et l’amélioration de l’expérience utilisateur. Les objectifs principaux incluent la réduction de la latence des notifications à un niveau encore plus bas, l’enrichissement de l’interface avec des fonctionnalités avancées de filtrage et des visualisations des tendances des signes vitaux, ainsi que la réalisation de tests d’acceptation avec le personnel médical pour valider l’utilisabilité. La documentation sera finalisée, et les préparatifs pour le déploiement commenceront, en mettant l’accent sur les retours des utilisateurs et les métriques de performance.
 
 % Concluding the chapter
 \section{Conclusion}
-Le Sprint 2 a marqué une avancée significative pour le système VitalSync en intégrant des fonctionnalités essentielles de gestion des alertes et des notifications. Les résultats obtenus, caractérisés par une haute précision et une faible latence, constituent une étape importante dans la réalisation du flux de travail global. Les défis liés à la configuration de FCM et à l’ergonomie du tableau de bord ont été surmontés, orientant les objectifs du Sprint 3 vers l’optimisation et la finalisation du système en vue de son déploiement.
+Le sprint 2 a marqué une avancée significative pour le système VitalSync en mettant en place des fonctionnalités robustes d’alertes et de notifications. Les livrables, incluant un système d’alertes précis, une distribution rapide des notifications et une interface préliminaire, s’alignent sur l’objectif du projet de surveillance en temps réel. Les défis, tels que la configuration de FCM et l’ergonomie de l’interface, ont été surmontés, orientant le sprint 3 vers une optimisation des performances et une préparation au déploiement.

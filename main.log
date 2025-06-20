@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.9)  17 JUN 2025 15:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.9)  20 JUN 2025 10:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -895,43 +895,43 @@ File: tikzlibraryfit.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (C:\Users\racha\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 90.
+Package hyperref Info: Option `colorlinks' set `true' on input line 92.
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'french'.
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 102.
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 104.
  (C:\Program Files\MiKTeX\tex/latex/psnfss\t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
-) (main.aux (chapter0/introduction.aux) (chapter1/chapter1.aux) (chapter2/chapter2.aux) (chapter3/chapter3.aux) (chapter4/chapter4.aux) (chapter5/chapter5.aux) (chapter6/chapter6.aux) (annexes/annexeA.aux) (annexes/annexeB.aux))
+) (main.aux (chapter0/introduction.aux) (chapter1/chapter1.aux) (chapter2/chapter2.aux) (chapter3/chapter3.aux) (chapter4/chapter4.aux) (chapter5/chapter5.aux) (chapter6/chapter6.aux) (chapter7/chapter7.aux) (chapter8/chapter8.aux) (annexes/annexeA.aux) (annexes/annexeB.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 102.
-LaTeX Font Info:    ... okay on input line 102.
-LaTeX Info: Redefining \degres on input line 102.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Info: Redefining \degres on input line 104.
 Package french.ldf Info: Setting StandardItemizeEnv=true for
 (french.ldf)             compatibility with enumitem package,
-(french.ldf)             reported on input line 102.
+(french.ldf)             reported on input line 104.
 Package french.ldf Info: Setting StandardEnumerateEnv=true for
 (french.ldf)             compatibility with enumitem package,
-(french.ldf)             reported on input line 102.
-LaTeX Info: Redefining \up on input line 102.
+(french.ldf)             reported on input line 104.
+LaTeX Info: Redefining \up on input line 104.
  (C:\Users\racha\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count390
@@ -991,7 +991,7 @@ Package caption Info: changepage package is loaded.
 \caption@adjustwidth@linewidth=\dimen355
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring ON on input line 102.
+Package hyperref Info: Link coloring ON on input line 104.
 (main.out) (main.out)
 \@outlinefile=\write6
 \openout6 = `main.out'.
@@ -1001,10 +1001,10 @@ Package newfloat Info: `float' package detected.
 
 No file pythontex-files-main/main.pytxmcr.
 Run PythonTeX to create it.
-Package newfloat Info: New float `listing' with options `fileext=lopytx' on input line 102.
+Package newfloat Info: New float `listing' with options `fileext=lopytx' on input line 104.
 \c@listing=\count396
-Package newfloat Info: float type `listing'=4 on input line 102.
-Package caption Info: New subtype `sublisting' on input line 102.
+Package newfloat Info: float type `listing'=4 on input line 104.
+Package caption Info: New subtype `sublisting' on input line 104.
 \c@sublisting=\count397
 (C:\Program Files\MiKTeX\tex/latex/pdflscape\pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
@@ -1017,10 +1017,10 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
 
 pdfTeX warning: pdflatex (file ./gard.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<gard.pdf, id=357, 597.79335pt x 845.19763pt>
+<gard.pdf, id=337, 597.79335pt x 845.19763pt>
 File: gard.pdf Graphic file (type pdf)
 <use gard.pdf>
-Package pdftex.def Info: gard.pdf  used on input line 106.
+Package pdftex.def Info: gard.pdf  used on input line 108.
 (pdftex.def)             Requested size: 597.79189pt x 845.19557pt.
 
 
@@ -1028,26 +1028,26 @@ pdfTeX warning: pdflatex (file ./gard.pdf): PDF inclusion: found PDF version <1.
 
 
 pdfTeX warning: pdflatex (file ./gard.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<gard.pdf, id=359, page=1, 597.79335pt x 845.19763pt>
+<gard.pdf, id=339, page=1, 597.79335pt x 845.19763pt>
 File: gard.pdf Graphic file (type pdf)
 <use gard.pdf, page 1>
-Package pdftex.def Info: gard.pdf , page1 used on input line 106.
+Package pdftex.def Info: gard.pdf , page1 used on input line 108.
 (pdftex.def)             Requested size: 597.79189pt x 845.19557pt.
 File: gard.pdf Graphic file (type pdf)
 <use gard.pdf, page 1>
-Package pdftex.def Info: gard.pdf , page1 used on input line 106.
+Package pdftex.def Info: gard.pdf , page1 used on input line 108.
 (pdftex.def)             Requested size: 597.81924pt x 845.23425pt.
 File: gard.pdf Graphic file (type pdf)
 <use gard.pdf, page 1>
-Package pdftex.def Info: gard.pdf , page1 used on input line 106.
+Package pdftex.def Info: gard.pdf , page1 used on input line 108.
 (pdftex.def)             Requested size: 597.81924pt x 845.23425pt.
 File: gard.pdf Graphic file (type pdf)
 <use gard.pdf, page 1>
-Package pdftex.def Info: gard.pdf , page1 used on input line 106.
+Package pdftex.def Info: gard.pdf , page1 used on input line 108.
 (pdftex.def)             Requested size: 597.81924pt x 845.23425pt.
 File: gard.pdf Graphic file (type pdf)
 <use gard.pdf, page 1>
-Package pdftex.def Info: gard.pdf , page1 used on input line 106.
+Package pdftex.def Info: gard.pdf , page1 used on input line 108.
 (pdftex.def)             Requested size: 597.81924pt x 845.23425pt.
 [1
 
@@ -1055,18 +1055,18 @@ Package pdftex.def Info: gard.pdf , page1 used on input line 106.
  <./gard.pdf>]
 
 pdfTeX warning: pdflatex (file ./gard.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<gard.pdf, id=429, page=2, 597.79335pt x 845.19763pt>
+<gard.pdf, id=409, page=2, 597.79335pt x 845.19763pt>
 File: gard.pdf Graphic file (type pdf)
 <use gard.pdf, page 2>
-Package pdftex.def Info: gard.pdf , page2 used on input line 106.
+Package pdftex.def Info: gard.pdf , page2 used on input line 108.
 (pdftex.def)             Requested size: 597.81924pt x 845.23425pt.
 File: gard.pdf Graphic file (type pdf)
 <use gard.pdf, page 2>
-Package pdftex.def Info: gard.pdf , page2 used on input line 106.
+Package pdftex.def Info: gard.pdf , page2 used on input line 108.
 (pdftex.def)             Requested size: 597.81924pt x 845.23425pt.
 File: gard.pdf Graphic file (type pdf)
 <use gard.pdf, page 2>
-Package pdftex.def Info: gard.pdf , page2 used on input line 106.
+Package pdftex.def Info: gard.pdf , page2 used on input line 108.
 (pdftex.def)             Requested size: 597.81924pt x 845.23425pt.
 [2
 
@@ -1085,21 +1085,21 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout7 = `main.toc'.
 
  [6] (main.lof
-Overfull \hbox (6.8184pt too wide) in paragraph at lines 26--26
+Overfull \hbox (6.8184pt too wide) in paragraph at lines 27--27
  [][] [][][]\T1/ptm/m/n/12 Logos des tech-no-lo-gies uti-li-sées pour le dé-ve-lop-pe-ment web : React et Ja-vaS-cript[][] [][]  
  []
 
 [7
 
-])
+] [8])
 \tf@lof=\write8
 \openout8 = `main.lof'.
 
- [8] (main.lot)
+ [9] (main.lot)
 \tf@lot=\write9
 \openout9 = `main.lot'.
 
- [9
+ [10
 
 ]
 \openout2 = `chapter0/introduction.aux'.
@@ -1115,21 +1115,21 @@ Overfull \hbox (1.08139pt too wide) in paragraph at lines 5--6
  []
 
 
-Overfull \hbox (11.28024pt too wide) in paragraph at lines 13--14
+Overfull \hbox (17.78049pt too wide) in paragraph at lines 13--14
 \T1/ptm/m/n/12 pres-sion ar-té-rielle, sa-tu-ra-tion en oxy-gène) per-met une in-ter-ven-tion im-mé-diate, amé-lio-rant
  []
 
 
-Overfull \hbox (3.3244pt too wide) in paragraph at lines 14--15
-[]\T1/ptm/b/n/12 Pour le per-son-nel mé-di-cal : \T1/ptm/m/n/12 Les no-ti-fi-ca-tions en temps réel via mo-bile et web ré-duisent
+Overfull \hbox (7.24403pt too wide) in paragraph at lines 14--15
+\T1/ptm/m/n/12 ré-duisent la né-ces-sité de dé-pla-ce-ments constants, per-met-tant aux in-fir-miers et mé-de-cins
  []
 
 
-Overfull \hbox (19.25996pt too wide) in paragraph at lines 15--16
+Overfull \hbox (25.76021pt too wide) in paragraph at lines 15--16
 []\T1/ptm/b/n/12 Pour les hô-pi-taux : \T1/ptm/m/n/12 L'au-to-ma-ti-sa-tion de la sur-veillance amé-liore l'ef-fi-ca-cité opé-ra-tion-nelle
  []
 
-) [10
+) [11
 
 
 ]
@@ -1137,976 +1137,1323 @@ Overfull \hbox (19.25996pt too wide) in paragraph at lines 15--16
 
  (chapter1/chapter1.tex
 Chapitre 1.
-Package newfloat Info: Setting Plan B file extension to `lof'... on input line 2.
+Package newfloat Info: Setting Plan B file extension to `lof'... on input line 1.
 
-Overfull \hbox (2.6903pt too wide) in paragraph at lines 5--6
+Overfull \hbox (2.6903pt too wide) in paragraph at lines 11--12
 []\T1/ptm/m/n/12 Le pro-jet a été réa-lisé au sein du \T1/ptm/b/n/12 Smart-Lab\T1/ptm/m/n/12 , une \T1/ptm/b/n/12 Unité de Ser-vice Com-mun et de Re-cherche
  []
 
 
-Overfull \hbox (6.7212pt too wide) in paragraph at lines 5--6
-\T1/ptm/m/n/12 re-cherche [[]]. La FMM forme des pro-fes-sion-nels de santé qua-li-fiés et contri-bue à l'avan-ce-ment
+Overfull \hbox (7.71811pt too wide) in paragraph at lines 11--12
+\T1/ptm/m/n/12 [[]]. La FMM, ins-ti-tu-tion tu-ni-sienne de ré-fé-rence, est re-con-nue pour son ex-cel-lence aca-dé-mique
  []
 
-<chapter1/images/logo1-fmm.png, id=682, 255.95625pt x 93.34875pt>
+
+Overfull \hbox (21.79291pt too wide) in paragraph at lines 11--12
+\T1/ptm/m/n/12 et son en-ga-ge-ment dans la re-cherche mé-di-cale. Cer-ti-fiée \T1/ptm/b/n/12 ISO 21001\T1/ptm/m/n/12 , elle forme des pro-fes-sion-nels
+ []
+
+
+Overfull \hbox (7.39313pt too wide) in paragraph at lines 13--14
+\T1/ptm/m/n/12 cli-ni-ciens et start-ups [[]]. Doté d'équi-pe-ments de pointe (la-bo-ra-toires IoT, ou-tils de si-mu-la-tion)
+ []
+
+<chapter1/images/logo1-fmm.png, id=707, 255.95625pt x 93.34875pt>
 File: chapter1/images/logo1-fmm.png Graphic file (type png)
 <use chapter1/images/logo1-fmm.png>
-Package pdftex.def Info: chapter1/images/logo1-fmm.png  used on input line 13.
+Package pdftex.def Info: chapter1/images/logo1-fmm.png  used on input line 19.
 (pdftex.def)             Requested size: 198.45662pt x 72.37871pt.
-<chapter1/images/logo2-smartlab.png, id=684, 299.61937pt x 109.6095pt>
+<chapter1/images/logo2-smartlab.png, id=709, 299.61937pt x 109.6095pt>
 File: chapter1/images/logo2-smartlab.png Graphic file (type png)
 <use chapter1/images/logo2-smartlab.png>
-Package pdftex.def Info: chapter1/images/logo2-smartlab.png  used on input line 20.
+Package pdftex.def Info: chapter1/images/logo2-smartlab.png  used on input line 26.
 (pdftex.def)             Requested size: 198.45662pt x 72.60338pt.
-
-Overfull \hbox (0.80637pt too wide) in paragraph at lines 27--28
-[]\T1/ptm/m/n/12 En Tu-ni-sie, les hô-pi-taux pu-blics et pri-vés opèrent dans un contexte mar-qué par des contraintes
- []
-
-
-Overfull \hbox (10.72887pt too wide) in paragraph at lines 27--28
-\T1/ptm/m/n/12 re-pose sur des mé-thodes tra-di-tion-nelles : un écran cen-tra-lisé, si-tué dans une salle ad-mi-nis-tra-tive,
- []
-
-[11
+[12
 
 
 
 
  <./chapter1/images/logo1-fmm.png> <./chapter1/images/logo2-smartlab.png>]
-Overfull \hbox (12.60158pt too wide) in paragraph at lines 29--30
-\T1/ptm/m/n/12 d'er-reurs hu-maines, no-tam-ment en pé-riode d'af-fluence. Les so-lu-tions exis-tantes, prin-ci-pa-le-ment
- []
-
-
-Overfull \hbox (7.68153pt too wide) in paragraph at lines 29--30
-\T1/ptm/m/n/12 équi-pe-ments hé-té-ro-gènes des hô-pi-taux tu-ni-siens, qui uti-lisent un mé-lange de mo-ni-teurs an-ciens
- []
-
-
-Overfull \hbox (3.78107pt too wide) in paragraph at lines 35--36
-[]\T1/ptm/m/n/12 VitalSync vise à au-to-ma-ti-ser la col-lecte des pa-ra-mètres vi-taux, tels que la fré-quence car-diaque,
- []
-
-[12]
-Overfull \hbox (5.97766pt too wide) in paragraph at lines 38--39
-\T1/ptm/m/n/12 avec une va-li-da-tion au-to-ma-tique pour ga-ran-tir la fia-bi-lité [[]]. Le trai-te-ment in-clut le net-toyage
- []
-
-
-Overfull \hbox (2.70157pt too wide) in paragraph at lines 38--39
-\T1/ptm/m/n/12 in-tui-tive, of-frant des ta-bleaux de bord en temps réel et des his-to-riques des don-nées, ac-ces-sibles
- []
-
-
-Overfull \hbox (9.49341pt too wide) in paragraph at lines 55--56
-\T1/ptm/m/n/12 contraintes bud-gé-taires et l'évo-lu-tion tech-no-lo-gique in-égale du sec-teur [[]]. Les éta-blis-se-ments
- []
-
-
-Overfull \hbox (2.0535pt too wide) in paragraph at lines 57--58
-\T1/ptm/m/n/12 des com-pli-ca-tions. La pres-sion ar-té-rielle va-rie chez les pa-tients hy-per-ten-dus (>140/90 mmHg)
- []
-
-[13]
-Overfull \hbox (26.89066pt too wide) in paragraph at lines 63--70
+Overfull \hbox (26.89066pt too wide) in paragraph at lines 48--55
  [][] 
  []
 
 
-Overfull \hbox (0.68565pt too wide) in paragraph at lines 73--74
-\T1/ptm/m/n/12 ca-mé-ras connec-tées à un ser-veur lo-cal, rend Vi-tal-Sync par-ti-cu-liè-re-ment adapté aux res-sources
- []
-
-[14]
-Overfull \hbox (11.73753pt too wide) in paragraph at lines 80--81
-\T1/ptm/m/n/12 pro-ve-nant de di-vers équi-pe-ments mé-di-caux via du ma-té-riel in-ter-mé-diaire, tel que des pas-se-relles
+Overfull \hbox (5.33662pt too wide) in paragraph at lines 62--63
+[]\T1/ptm/b/n/12 Absence d'au-to-ma-ti-sa-tion \T1/ptm/m/n/12 : Les vé-ri-fi-ca-tions ma-nuelles sont chro-no-phages et su-jettes
  []
 
 
-Overfull \hbox (27.77063pt too wide) in paragraph at lines 80--81
-\T1/ptm/m/n/12 IoT. Elle pro-pose des ta-bleaux de bord ainsi que des alertes web. Tou-te-fois, son bon fonc-tion-ne-ment
+Overfull \hbox (9.82442pt too wide) in paragraph at lines 63--64
+[]\T1/ptm/b/n/12 Hétérogénéité des équi-pe-ments \T1/ptm/m/n/12 : Les mo-ni-teurs va-rient (ana-lo-giques sans connec-ti-vité
  []
 
 
-Overfull \hbox (4.40677pt too wide) in paragraph at lines 80--81
-\T1/ptm/m/n/12 no-tam-ment des ser-veurs dé-diés et une confi-gu-ra-tion com-plexe, ce qui com-plique son adop-tion. 
+Overfull \hbox (24.14531pt too wide) in paragraph at lines 77--78
+[]\T1/ptm/m/n/12 Ces contraintes sou-lignent le be-soin d'un sys-tème éco-no-mique, fa-ci-le-ment dé-ployable, com-pa-tible
+ []
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 85--88
+
+ []
+
+<chapter1/images/mindray_logo.png, id=736, 462.72874pt x 109.40875pt>
+File: chapter1/images/mindray_logo.png Graphic file (type png)
+<use chapter1/images/mindray_logo.png>
+Package pdftex.def Info: chapter1/images/mindray_logo.png  used on input line 92.
+(pdftex.def)             Requested size: 176.40439pt x 41.7093pt.
+<chapter1/images/IQ_Messenger_Smart_logo.png, id=737, 294.09875pt x 172.645pt>
+File: chapter1/images/IQ_Messenger_Smart_logo.png Graphic file (type png)
+<use chapter1/images/IQ_Messenger_Smart_logo.png>
+Package pdftex.def Info: chapter1/images/IQ_Messenger_Smart_logo.png  used on input line 101.
+(pdftex.def)             Requested size: 176.40439pt x 103.55617pt.
+
+Overfull \hbox (10.47165pt too wide) in paragraph at lines 97--104
+[]\T1/ptm/b/n/12 IQ Mes-sen-ger Smar-tApp \T1/ptm/m/n/12 se dis-tingue par sa ca-pa-cité à gé-né-rer des alertes ins-tan-ta-nées
+ []
+
+<chapter1/images/XChartLogo.jpg, id=738, 160.6pt x 160.6pt>
+File: chapter1/images/XChartLogo.jpg Graphic file (type jpg)
+<use chapter1/images/XChartLogo.jpg>
+Package pdftex.def Info: chapter1/images/XChartLogo.jpg  used on input line 109.
+(pdftex.def)             Requested size: 88.2022pt x 88.20528pt.
+
+Overfull \hbox (0.17705pt too wide) in paragraph at lines 105--112
+\T1/ptm/m/n/12 mé-di-caux, tout en of-frant des ta-bleaux de bord in-ter-ac-tifs et une vi-sua-li-sa-tion conti-nue
+ []
+
+[14 <./chapter1/images/mindray_logo.png> <./chapter1/images/IQ_Messenger_Smart_logo.png>]
+Overfull \hbox (7.16028pt too wide) in paragraph at lines 148--149
+\T1/ptm/m/n/12 d'au-to-ma-ti-sa-tion des ré-ponses. De plus, il est étroi-te-ment lié à ses propres équi-pe-ments,
  []
 
 
-Overfull \hbox (17.54459pt too wide) in paragraph at lines 87--88
-[]\T1/ptm/m/n/12 Les so-lu-tions exis-tantes pour la sur-veillance en salle de ré-veil pré-sentent des li-mites si-gni-fi-ca-tives
+Overfull \hbox (34.38832pt too wide) in paragraph at lines 150--151
+\T1/ptm/m/n/12 pour fonc-tion-ner de ma-nière op-ti-male. Or, la connec-ti-vité ré-seau dans cer-tains éta-blis-se-ments
+ []
+
+[15 <./chapter1/images/XChartLogo.jpg>]
+Overfull \hbox (7.60912pt too wide) in paragraph at lines 155--156
+\T1/ptm/m/n/12 com-pa-ti-bi-lité avec les équi-pe-ments hé-té-ro-gènes li-mitent for-te-ment leur adop-tion. Cela ren-force
  []
 
 
-Overfull \hbox (2.84628pt too wide) in paragraph at lines 87--88
-\T1/ptm/m/n/12 dans le contexte tu-ni-sien. Min-dray, bien qu'ef-fi-cace pour une sur-veillance cen-tra-li-sée, manque
- []
-
-[15]
-Overfull \hbox (18.55347pt too wide) in paragraph at lines 127--128
-[]\T1/ptm/m/n/12 VitalSync per-met une ges-tion dy-na-mique des alertes en fonc-tion de seuils cri-tiques confi-gu-rables,
+Overfull \hbox (10.96898pt too wide) in paragraph at lines 163--164
+[]\T1/ptm/m/n/12 Le pro-jet \T1/ptm/b/n/12 Vi-tal-Sync \T1/ptm/m/n/12 vise à mo-der-ni-ser la sur-veillance post-opératoire au sein des éta-blis-se-ments
  []
 
 
-Overfull \hbox (9.22916pt too wide) in paragraph at lines 127--128
-\T1/ptm/m/n/12 et en-voie des no-ti-fi-ca-tions ins-tan-ta-nées via Fi-re-base Cloud Mes-sa-ging [[]]. Grâce à l'uti-li-sa-tion
+Overfull \hbox (3.21736pt too wide) in paragraph at lines 163--164
+\T1/ptm/m/n/12 de santé tu-ni-siens en pro-po-sant une so-lu-tion in-tel-li-gente, éco-no-mique et fa-ci-le-ment in-té-grable.
  []
 
-[16] [17]
-Overfull \hbox (29.02925pt too wide) in paragraph at lines 167--168
-\T1/ptm/m/n/12 dans un dé-lai rai-son-nable, ga-ran-tis-sant une conti-nuité de sur-veillance même en cas d'in-dis-po-ni-bi-lité
+
+Overfull \hbox (24.52982pt too wide) in paragraph at lines 167--168
+[]\T1/ptm/m/n/12 Conçu pour s'adap-ter aux contraintes des hô-pi-taux tu-ni-siens, Vi-tal-Sync re-pose sur une ar-chi-tec-ture
  []
 
-) [18]
+[16])
+Overfull \hbox (9.41008pt too wide) in paragraph at lines 195--118
+\T1/ptm/m/n/12 exis-tantes. Face à ces dé-fis, Vi-tal-Sync pro-pose une ré-ponse tech-no-lo-gique in-no-vante, ac-ces-sible
+ []
+
+[17]
 \openout2 = `chapter2/chapter2.aux'.
 
  (chapter2/chapter2.tex
 Chapitre 2.
 
-Overfull \hbox (4.40591pt too wide) in paragraph at lines 44--45
-[]\T1/ptm/m/n/12 Le choix de la mé-tho-do-lo-gie Scrum pour ce pro-jet est mo-tivé par plu-sieurs fac-teurs spé-ci-fiques
+Underfull \hbox (badness 10000) in paragraph at lines 30--30
+[]|\T1/ptm/m/n/12 Administrateur
  []
 
 
-Overfull \hbox (1.9214pt too wide) in paragraph at lines 44--45
-\T1/ptm/m/n/12 Scrum per-met de re-cueillir des re-tours conti-nus des par-ties pre-nantes, no-tam-ment le per-son-nel
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+[]|\T1/ptm/m/n/12 Moniteur de
  []
 
-
-Overfull \hbox (0.96228pt too wide) in paragraph at lines 46--47
-\T1/ptm/m/n/12 que l'ex-trac-tion de don-nées à par-tir de mo-ni-teurs via OCR. Ces sources de don-nées pré-sentent
- []
-
-[19
+[18
 
 
 
 
 ]
-Overfull \hbox (18.48128pt too wide) in paragraph at lines 48--49
+Overfull \hbox (1.52048pt too wide) in paragraph at lines 54--55
+[]\T1/ptm/b/n/12 Gestion des uti-li-sa-teurs \T1/ptm/m/n/12 : Un mo-dule d'au-then-ti-fi-ca-tion et de ges-tion des rôles per-met
+ []
+
+
+Overfull \hbox (2.29982pt too wide) in paragraph at lines 54--55
+\T1/ptm/m/n/12 de res-treindre l'ac-cès se-lon le pro-fil uti-li-sa-teur (mé-de-cins, in-fir-miers, ad-mi-nis-tra-teurs). 
+ []
+
+
+Overfull \hbox (10.99379pt too wide) in paragraph at lines 76--78
+\T1/ptm/m/n/12 dé-ve-lop-pe-ment lo-gi-ciel, cha-cune ayant ses avan-tages et in-con-vé-nients. Parmi les mé-tho-do-lo-gies
+ []
+
+[19]
+Overfull \hbox (0.96228pt too wide) in paragraph at lines 118--119
+\T1/ptm/m/n/12 que l'ex-trac-tion de don-nées à par-tir de mo-ni-teurs via OCR. Ces sources de don-nées pré-sentent
+ []
+
+[20]
+Overfull \hbox (18.48128pt too wide) in paragraph at lines 120--121
 \T1/ptm/m/n/12 pre-nantes mé-di-cales. Cette col-la-bo-ra-tion est es-sen-tielle pour ré-pondre aux exi-gences chan-geantes
  []
 
-<chapter2/images/scrum.png, id=794, 811.833pt x 389.0535pt>
+<chapter2/images/scrum.png, id=798, 811.833pt x 389.0535pt>
 File: chapter2/images/scrum.png Graphic file (type png)
 <use chapter2/images/scrum.png>
-Package pdftex.def Info: chapter2/images/scrum.png  used on input line 64.
+Package pdftex.def Info: chapter2/images/scrum.png  used on input line 127.
 (pdftex.def)             Requested size: 441.01773pt x 211.35022pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Overfull \hbox (20.55724pt too wide) in paragraph at lines 124--131
+\T1/ptm/m/n/12 l'\T1/ptm/m/it/12 Incrément\T1/ptm/m/n/12 , ainsi que des évé-ne-ments tels que la pla-ni-fi-ca-tion de sprint, les réunions quo-ti-diennes
+ []
+
+[21 <./chapter2/images/scrum.png>]
+Overfull \hbox (0.21288pt too wide) in paragraph at lines 137--138
+\T1/ptm/m/n/12 af-finé pour in-té-grer les re-tours des par-ties pre-nantes, no-tam-ment le per-son-nel mé-di-cal,
+ []
 
 
-LaTeX Warning: Reference `tab:backlog_moscow' on page 20 undefined on input line 74.
+LaTeX Warning: Reference `sec:intro_sprint2' on page 22 undefined on input line 139.
 
 
-LaTeX Warning: Reference `sec:backlog_projet' on page 20 undefined on input line 74.
-
-[20]
-
-LaTeX Warning: Reference `sec:' on page 21 undefined on input line 76.
-
-
-Overfull \hbox (4.4645pt too wide) in paragraph at lines 78--79
+Overfull \hbox (10.96474pt too wide) in paragraph at lines 141--142
 []\T1/ptm/b/n/12 Incrément : \T1/ptm/m/n/12 Chaque sprint pro-duit un in-cré-ment fonc-tion-nel et po-ten-tiel-le-ment li-vrable.
  []
 
 
-LaTeX Warning: Reference `tab:backlog_sprint1' on page 21 undefined on input line 85.
+LaTeX Warning: Reference `tab:sprint_backlog_sprint2' on page 22 undefined on input line 148.
 
-[21 <./chapter2/images/scrum.png>]
-Overfull \hbox (4.09169pt too wide) in paragraph at lines 89--90
+
+Overfull \hbox (10.59193pt too wide) in paragraph at lines 152--153
 \T1/ptm/m/n/12 in-fir-miers testent l'in-cré-ment pour va-li-der sa pré-ci-sion et son uti-lité cli-nique, four-nis-sant
  []
 
-
-Overfull \hbox (23.09982pt too wide) in paragraph at lines 99--100
+[22]
+Overfull \hbox (29.60007pt too wide) in paragraph at lines 162--163
 []\T1/ptm/b/n/12 Product Ow-ner : \T1/ptm/m/n/12 Re-pré-sen-tant des par-ties pre-nantes, il dé-fi-nit et prio-rise les fonc-tion-na-li-tés
  []
 
 
-Overfull \hbox (10.14043pt too wide) in paragraph at lines 101--102
+Overfull \hbox (16.64067pt too wide) in paragraph at lines 164--165
 []\T1/ptm/b/n/12 Équipe de dé-ve-lop-pe-ment : \T1/ptm/m/n/12 Com-po-sée de dé-ve-lop-peurs, de-si-gners et autres spé-cia-listes,
  []
 
-<chapter2/images/scrum-roles.png, id=814, 258.36525pt x 151.16475pt>
+<chapter2/images/scrum-roles.png, id=819, 258.36525pt x 151.16475pt>
 File: chapter2/images/scrum-roles.png Graphic file (type png)
 <use chapter2/images/scrum-roles.png>
-Package pdftex.def Info: chapter2/images/scrum-roles.png  used on input line 106.
+Package pdftex.def Info: chapter2/images/scrum-roles.png  used on input line 169.
 (pdftex.def)             Requested size: 441.01773pt x 258.05151pt.
-[22]
-Overfull \hbox (3.60242pt too wide) in paragraph at lines 113--115
-\T1/ptm/m/n/12 Scrum offre un cadre ef-fi-cace pour iden-ti-fier, gé-rer et at-té-nuer ces risques grâce à son ap-proche
- []
-
-
-Overfull \hbox (14.02805pt too wide) in paragraph at lines 117--118
-\T1/ptm/m/n/12 com-pro-mettre la ré-ac-ti-vité du per-son-nel mé-di-cal. Scrum per-met de tes-ter les per-for-mances
- []
-
-
-Overfull \hbox (14.02838pt too wide) in paragraph at lines 119--120
-[]\T1/ptm/b/n/12 Revue et amé-lio-ra-tion : \T1/ptm/m/n/12 Les ré-tros-pec-tives de sprint per-mettent d'iden-ti-fier les pro-blèmes
- []
-
-
-Overfull \hbox (6.25322pt too wide) in paragraph at lines 119--120
-\T1/ptm/m/n/12 l'équipe de dé-ve-lop-pe-ment et le per-son-nel mé-di-cal. Par exemple, si des re-tours in-diquent
- []
-
-
-Overfull \hbox (27.49275pt too wide) in paragraph at lines 124--125
-[]\T1/ptm/m/n/12 L'implication des par-ties pre-nantes est un pi-lier cen-tral de la mé-tho-do-lo-gie Scrum, par-ti-cu-liè-re-ment
- []
-
-
-Overfull \hbox (26.29272pt too wide) in paragraph at lines 124--125
-\T1/ptm/m/n/12 dans un pro-jet mé-di-cal où les be-soins des uti-li-sa-teurs fi-naux (mé-de-cins, in-fir-miers, ad-mi-nis-tra-teurs)
- []
-
-[23 <./chapter2/images/scrum-roles.png>]
-Overfull \hbox (12.99733pt too wide) in paragraph at lines 128--129
-[]\T1/ptm/b/n/12 Affinement du Pro-duct Ba-ck-log : \T1/ptm/m/n/12 Le Pro-duct Ow-ner col-la-bore avec les par-ties pre-nantes
- []
-
-
-Overfull \hbox (16.62086pt too wide) in paragraph at lines 128--129
-\T1/ptm/m/n/12 tâches (voir ta-bleau [][]4.3[][]) [[]]. Par exemple, les mé-de-cins peuvent in-sis-ter sur la prio-ri-sa-tion
- []
-
-
-Overfull \hbox (1.66864pt too wide) in paragraph at lines 129--130
-[]\T1/ptm/b/n/12 Conformité ré-gle-men-taire : \T1/ptm/m/n/12 Les par-ties pre-nantes, en par-ti-cu-lier les ex-perts mé-di-caux,
- []
-
-<chapter2/images/Clickup.png, id=834, 677.53125pt x 260.975pt>
+[23]
+<chapter2/images/Clickup.png, id=827, 677.53125pt x 260.975pt>
 File: chapter2/images/Clickup.png Graphic file (type png)
 <use chapter2/images/Clickup.png>
-Package pdftex.def Info: chapter2/images/Clickup.png  used on input line 141.
+Package pdftex.def Info: chapter2/images/Clickup.png  used on input line 204.
 (pdftex.def)             Requested size: 132.30666pt x 50.96358pt.
 
-Overfull \hbox (1.77669pt too wide) in paragraph at lines 146--147
+Overfull \hbox (8.27693pt too wide) in paragraph at lines 209--210
 \T1/ptm/m/it/12 Scrum \T1/ptm/m/n/12 peuvent être par-tiel-le-ment gé-rés via des ca-naux dé-diés, où les membres si-gnalent
  []
 
-[24 <./chapter2/images/Clickup.png>]
-<chapter2/images/slack-logo-slide.png, id=843, 1927.2pt x 1084.05pt>
+<chapter2/images/slack-logo-slide.png, id=829, 1927.2pt x 1084.05pt>
 File: chapter2/images/slack-logo-slide.png Graphic file (type png)
 <use chapter2/images/slack-logo-slide.png>
-Package pdftex.def Info: chapter2/images/slack-logo-slide.png  used on input line 150.
+Package pdftex.def Info: chapter2/images/slack-logo-slide.png  used on input line 213.
 (pdftex.def)             Requested size: 132.30666pt x 74.41908pt.
-<chapter2/images/Git-Logo-2Color.png, id=845, 913.4125pt x 381.425pt>
-File: chapter2/images/Git-Logo-2Color.png Graphic file (type png)
-<use chapter2/images/Git-Logo-2Color.png>
-Package pdftex.def Info: chapter2/images/Git-Logo-2Color.png  used on input line 159.
-(pdftex.def)             Requested size: 132.30666pt x 55.2441pt.
-
-Overfull \hbox (8.80984pt too wide) in paragraph at lines 166--167
-[]\T1/ptm/m/n/12 La fi-gure [][]2.6[][] illustre le pro-ces-sus Scrum adapté au pro-jet, mon-trant la sé-quence des évé-ne-ments
- []
-
-
-Overfull \hbox (6.24193pt too wide) in paragraph at lines 166--167
-\T1/ptm/m/n/12 et les boucles de ré-tro-ac-tion. Chaque sprint com-mence par une pla-ni-fi-ca-tion, sui-vie de réunions
- []
-
-
-Overfull \hbox (30.11002pt too wide) in paragraph at lines 166--167
-\T1/ptm/m/n/12 quo-ti-diennes (\T1/ptm/m/it/12 Daily Scrum\T1/ptm/m/n/12 ), d'une re-vue de sprint pour pré-sen-ter l'in-cré-ment, et d'une ré-tros-pec-tive
- []
-
-
-Overfull \hbox (32.52078pt too wide) in paragraph at lines 166--167
-\T1/ptm/m/n/12 col-lecte de don-nées via OCR ou la ges-tion des alertes, sont dé-ve-lop-pées et va-li-dées pro-gres-si-ve-ment. 
- []
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [25 <./chapter2/images/slack-logo-slide.png> <./chapter2/images/Git-Logo-2Color.png>] [26]
+<chapter2/images/Git-Logo-2Color.png, id=831, 913.4125pt x 381.425pt>
+File: chapter2/images/Git-Logo-2Color.png Graphic file (type png)
+<use chapter2/images/Git-Logo-2Color.png>
+Package pdftex.def Info: chapter2/images/Git-Logo-2Color.png  used on input line 222.
+(pdftex.def)             Requested size: 132.30666pt x 55.2441pt.
+[24 <./chapter2/images/scrum-roles.png> <./chapter2/images/Clickup.png>]) [25 <./chapter2/images/slack-logo-slide.png> <./chapter2/images/Git-Logo-2Color.png>]
 \openout2 = `chapter3/chapter3.aux'.
 
  (chapter3/chapter3.tex
 Chapitre 3.
 
-Overfull \hbox (8.97792pt too wide) in paragraph at lines 15--16
-[]\T1/ptm/m/n/12 Le sys-tème Vi-tal-Sync re-pose sur une ar-chi-tec-ture mo-du-laire et évo-lu-tive, conçue pour col-lec-ter,
+Overfull \hbox (10.94543pt too wide) in paragraph at lines 8--11
+\T1/ptm/m/n/12 tech-no-lo-giques, les par-ties du sys-tème et leurs in-ter-ac-tions pour ré-pondre aux be-soins iden-ti-fiés.
  []
 
 
-Overfull \hbox (2.58171pt too wide) in paragraph at lines 15--16
-\T1/ptm/m/n/12 est or-ga-ni-sée en trois couches prin-ci-pales, cha-cune jouant un rôle spé-ci-fique dans le trai-te-ment
+Overfull \hbox (0.48071pt too wide) in paragraph at lines 15--16
+[]\T1/ptm/m/n/12 VitalSync uti-lise une ar-chi-tec-ture en trois par-ties : col-lecte de don-nées, trai-te-ment et sto-ckage,
  []
 
 
-Overfull \hbox (3.02475pt too wide) in paragraph at lines 18--19
-\T1/ptm/m/n/12 don-nées brutes à par-tir des équi-pe-ments mé-di-caux. Elle in-tègre des mo-ni-teurs mé-di-caux
+Overfull \hbox (12.54886pt too wide) in paragraph at lines 19--20
+\T1/ptm/m/n/12 don-nées. Les images sont amé-lio-rées avec OpenCV, les zones im-por-tantes sont dé-tec-tées
  []
 
 
-Overfull \hbox (2.95178pt too wide) in paragraph at lines 20--21
-\T1/ptm/m/n/12 va-leurs des signes vi-taux) à l'aide de l'al-go-rithme YOLO. Tes-se-ract OCR ex-trait en-suite
+Overfull \hbox (14.42046pt too wide) in paragraph at lines 20--21
+[]\T1/ptm/b/n/12 Affichage et alertes \T1/ptm/m/n/12 : Cette par-tie montre les don-nées aux uti-li-sa-teurs via une ap-pli-ca-tion
  []
 
-
-Overfull \hbox (12.07204pt too wide) in paragraph at lines 22--23
-[]\T1/ptm/b/n/12 Couche de vi-sua-li-sa-tion et no-ti-fi-ca-tion \T1/ptm/m/n/12 : Cette couche per-met aux uti-li-sa-teurs d'in-ter-agir
- []
-
-
-Overfull \hbox (4.94466pt too wide) in paragraph at lines 22--23
-\T1/ptm/m/n/12 avec le sys-tème via des in-ter-faces uti-li-sa-teur mo-dernes. Une ap-pli-ca-tion web dé-ve-lop-pée
- []
-
-[27
+[26
 
 
 
 
 ]
-Overfull \hbox (4.36784pt too wide) in paragraph at lines 28--69
- [][] 
+Overfull \hbox (25.62126pt too wide) in paragraph at lines 85--86
+[]\T1/ptm/m/n/12 Pour or-ga-ni-ser le sys-tème Vi-tal-Sync, nous avons choisi le mo-dèle MVC (Modèle-Vue-Contrôleur).
  []
 
+[27]
+Overfull \hbox (2.12639pt too wide) in paragraph at lines 117--119
+\T1/ptm/m/n/12 mo-du-laire et fa-cile à étendre. Par exemple, si nous vou-lons ajou-ter une nou-velle fonc-tion-na-lité
+ []
+
+
+Overfull \hbox (5.6043pt too wide) in paragraph at lines 123--124
+\T1/ptm/m/n/12 in-fir-miers, ad-mi-nis-tra-teurs) et les ap-pa-reils (mo-ni-teurs, ca-mé-ras) in-ter-agissent avec le sys-tème.
+ []
+
+<chapter4/sections/diagrams/use_case.png, id=861, 3513.125pt x 3834.325pt>
+File: chapter4/sections/diagrams/use_case.png Graphic file (type png)
+<use chapter4/sections/diagrams/use_case.png>
+Package pdftex.def Info: chapter4/sections/diagrams/use_case.png  used on input line 127.
+(pdftex.def)             Requested size: 352.81552pt x 385.03465pt.
 [28]
-<chapter3/diagrams/class.png, id=875, 3273.22874pt x 1098.1025pt>
+<chapter3/diagrams/class.png, id=869, 336.0555pt x 470.9595pt>
 File: chapter3/diagrams/class.png Graphic file (type png)
 <use chapter3/diagrams/class.png>
-Package pdftex.def Info: chapter3/diagrams/class.png  used on input line 81.
-(pdftex.def)             Requested size: 661.5266pt x 221.92888pt.
- [29] [30 <./chapter3/diagrams/class.png (PNG copy)>]
-<chapter3/diagrams/sequence.png, id=888, 1498.59875pt x 651.43375pt>
+Package pdftex.def Info: chapter3/diagrams/class.png  used on input line 137.
+(pdftex.def)             Requested size: 441.01773pt x 618.0969pt.
+ [29 <./chapter4/sections/diagrams/use_case.png>]
+<chapter3/diagrams/sequence.png, id=877, 1498.59875pt x 651.43375pt>
 File: chapter3/diagrams/sequence.png Graphic file (type png)
 <use chapter3/diagrams/sequence.png>
-Package pdftex.def Info: chapter3/diagrams/sequence.png  used on input line 91.
+Package pdftex.def Info: chapter3/diagrams/sequence.png  used on input line 147.
 (pdftex.def)             Requested size: 396.91325pt x 172.52971pt.
-
-Overfull \hbox (35.06523pt too wide) in paragraph at lines 101--102
-\T1/ptm/m/n/12 ainsi que l'in-fra-struc-ture ré-seau et les pro-to-coles de com-mu-ni-ca-tion qui as-surent leur in-ter-con-nexion. 
- []
-
-
-Overfull \hbox (7.60873pt too wide) in paragraph at lines 104--105
-[] []\T1/ptm/b/n/12 Couche de col-lecte des don-nées[] \T1/ptm/m/n/12 La couche de col-lecte des don-nées est dé-diée à l'ac-qui-si-tion
- []
-
-
-Overfull \hbox (29.83261pt too wide) in paragraph at lines 107--108
-\T1/ptm/m/n/12 Flask dé-dié au trai-te-ment des images. Le trai-te-ment des images s'ap-puie sur plu-sieurs tech-no-lo-gies :
- []
-
-[31 <./chapter3/diagrams/sequence.png (PNG copy)>]
-Overfull \hbox (3.80449pt too wide) in paragraph at lines 113--114
-[] []\T1/ptm/b/n/12 In-fra-struc-ture et sup-port[] \T1/ptm/m/n/12 L'in-fra-struc-ture ré-seau joue un rôle es-sen-tiel dans la connec-ti-vité
- []
-
-
-Overfull \hbox (10.41653pt too wide) in paragraph at lines 113--114
-\T1/ptm/m/n/12 et la sé-cu-rité du sys-tème. Un ré-seau sé-cu-risé, basé sur des pro-to-coles HTTPS et des mé-ca-nismes
- []
-
-
-Overfull \hbox (13.24861pt too wide) in paragraph at lines 116--117
-[] []\T1/ptm/b/n/12 Connexions et pro-to-coles[] \T1/ptm/m/n/12 Les in-ter-ac-tions entre les com-po-sants s'ap-puient sur des pro-to-coles
- []
-
-
-Overfull \hbox (1.78943pt too wide) in paragraph at lines 116--117
-\T1/ptm/m/n/12 stan-dar-di-sés pour as-su-rer une com-mu-ni-ca-tion fluide et sé-cu-ri-sée. Les in-ter-faces web et mo-bile
- []
-
-
-Overfull \hbox (7.87354pt too wide) in paragraph at lines 116--117
-\T1/ptm/m/n/12 com-mu-niquent avec le ser-veur ba-ckend via une API REST ba-sée sur HTTP/HTTPS, com-plé-tée
- []
-
-<chapter3/diagrams/deployment_diagram.png, id=897, 1711.39375pt x 793.96625pt>
-File: chapter3/diagrams/deployment_diagram.png Graphic file (type png)
-<use chapter3/diagrams/deployment_diagram.png>
-Package pdftex.def Info: chapter3/diagrams/deployment_diagram.png  used on input line 120.
-(pdftex.def)             Requested size: 352.81552pt x 163.67274pt.
-[32]
-Overfull \hbox (17.55699pt too wide) in paragraph at lines 133--134
-\T1/ptm/m/n/12 and in-ter-ac-tive in-sights into the pro-ces-sed in-for-ma-tion. Com-ple-men-ting this, a Flut-ter ap-pli-ca-tion
- []
-
-<chapter3/diagrams/component_diagram.png, id=908, 1678.27pt x 830.10126pt>
-File: chapter3/diagrams/component_diagram.png Graphic file (type png)
-<use chapter3/diagrams/component_diagram.png>
-Package pdftex.def Info: chapter3/diagrams/component_diagram.png  used on input line 137.
-(pdftex.def)             Requested size: 352.81552pt x 174.50374pt.
-[33 <./chapter3/diagrams/deployment_diagram.png (PNG copy)>]
-Overfull \hbox (5.5928pt too wide) in paragraph at lines 146--147
-[]\T1/ptm/m/n/12 Le dia-gramme d'ac-ti-vité pré-senté dans la Fi-gure [][]3.6[][] illustre les dif-fé-rentes étapes du trai-te-ment
- []
-
-
-Overfull \hbox (9.12163pt too wide) in paragraph at lines 146--147
-\T1/ptm/m/n/12 des don-nées au sein du sys-tème Vi-tal-Sync, de-puis la col-lecte des don-nées jus-qu'à la no-ti-fi-ca-tion
- []
-
-<chapter3/diagrams/activity_dataflow.png, id=915, 563.10374pt x 790.955pt>
+ [30 <./chapter3/diagrams/class.png>]
+<chapter3/diagrams/activity_dataflow.png, id=885, 563.10374pt x 790.955pt>
 File: chapter3/diagrams/activity_dataflow.png Graphic file (type png)
 <use chapter3/diagrams/activity_dataflow.png>
-Package pdftex.def Info: chapter3/diagrams/activity_dataflow.png  used on input line 150.
+Package pdftex.def Info: chapter3/diagrams/activity_dataflow.png  used on input line 157.
 (pdftex.def)             Requested size: 330.76329pt x 464.60768pt.
-[34 <./chapter3/diagrams/component_diagram.png (PNG copy)>]
-Overfull \hbox (22.3085pt too wide) in paragraph at lines 163--164
-\T1/ptm/m/n/12 la trans-mis-sion fiable des don-nées entre les mo-ni-teurs, les ca-mé-ras, les ser-veurs et les ap-pli-ca-tions.
+ [31 <./chapter3/diagrams/sequence.png (PNG copy)>]
+<chapter3/diagrams/component_diagram.png, id=893, 1678.27pt x 830.10126pt>
+File: chapter3/diagrams/component_diagram.png Graphic file (type png)
+<use chapter3/diagrams/component_diagram.png>
+Package pdftex.def Info: chapter3/diagrams/component_diagram.png  used on input line 167.
+(pdftex.def)             Requested size: 352.81552pt x 174.50374pt.
+ [32 <./chapter3/diagrams/activity_dataflow.png (PNG copy)>]
+<chapter3/diagrams/deployment_diagram.png, id=900, 1711.39375pt x 793.96625pt>
+File: chapter3/diagrams/deployment_diagram.png Graphic file (type png)
+<use chapter3/diagrams/deployment_diagram.png>
+Package pdftex.def Info: chapter3/diagrams/deployment_diagram.png  used on input line 177.
+(pdftex.def)             Requested size: 352.81552pt x 163.67274pt.
+ [33 <./chapter3/diagrams/component_diagram.png (PNG copy)> <./chapter3/diagrams/deployment_diagram.png (PNG copy)>]
+Overfull \hbox (30.42786pt too wide) in paragraph at lines 224--225
+[]\T1/ptm/b/n/12 Sécurité \T1/ptm/m/n/12 : Les don-nées sont pro-té-gées par HTTPS et Sanc-tum, ga-ran-tis-sant la confi-den-tia-lité
  []
 
-[35 <./chapter3/diagrams/activity_dataflow.png (PNG copy)>]
-Overfull \hbox (35.46082pt too wide) in paragraph at lines 175--176
-[]\T1/ptm/m/n/12 L'architecture lo-gi-cielle est com-po-sée de plu-sieurs élé-ments in-té-grés pour ga-ran-tir une fonc-tion-na-lité
- []
-
-
-Overfull \hbox (12.54143pt too wide) in paragraph at lines 175--176
-\T1/ptm/m/n/12 ro-buste. Le ba-ckend uti-lise La-ra-vel pour gé-rer l'au-then-ti-fi-ca-tion des uti-li-sa-teurs, la ma-ni-pu-la-tion
- []
-
-
-Overfull \hbox (16.38173pt too wide) in paragraph at lines 177--178
-[]\T1/ptm/m/n/12 L'interface fron-tend com-prend une in-ter-face web ba-sée sur React pour la vi-sua-li-sa-tion in-ter-ac-tive
- []
-
-
-Overfull \hbox (9.9963pt too wide) in paragraph at lines 184--185
-\T1/ptm/m/n/12 mé-di-caux, où YOLO dé-tecte les zones de don-nées et l'OCR ex-trait les in-for-ma-tions per-ti-nentes.
- []
-
-[36]
-<chapter3/diagrams/communication_flow_chart.png, id=931, 534.99875pt x 456.70625pt>
-File: chapter3/diagrams/communication_flow_chart.png Graphic file (type png)
-<use chapter3/diagrams/communication_flow_chart.png>
-Package pdftex.def Info: chapter3/diagrams/communication_flow_chart.png  used on input line 190.
-(pdftex.def)             Requested size: 396.91325pt x 338.84236pt.
-
-Overfull \hbox (8.56897pt too wide) in paragraph at lines 198--199
-[]\T1/ptm/m/n/12 L'architecture pro-po-sée ga-ran-tit plu-sieurs qua-li-tés es-sen-tielles. Sa concep-tion mo-du-laire sé-pare
- []
-
-
-Overfull \hbox (4.64507pt too wide) in paragraph at lines 198--199
-\T1/ptm/m/n/12 le sys-tème en couches dis-tinctes ^^V col-lecte avec YOLO, trai-te-ment et no-ti-fi-ca-tion ^^V fa-ci-li-tant
- []
-
-[37 <./chapter3/diagrams/communication_flow_chart.png (PNG copy)>])
-Overfull \hbox (8.1377pt too wide) in paragraph at lines 205--118
-\T1/ptm/m/n/12 Sa concep-tion mo-du-laire per-met des amé-lio-ra-tions fu-tures, telles que l'in-té-gra-tion de nou-veaux
- []
-
-[38]
+) [34]
 \openout2 = `chapter4/chapter4.aux'.
 
  (chapter4/chapter4.tex
 Chapitre 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--28
-[]|\T1/ptm/m/n/12 Administrateur
+Overfull \hbox (29.68994pt too wide) in paragraph at lines 12--13
+[]\T1/ptm/m/n/12 Le pro-jet adopte la mé-tho-do-lo-gie Scrum pour as-su-rer un dé-ve-lop-pe-ment ité-ra-tif et une col-la-bo-ra-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--30
-[]|\T1/ptm/m/n/12 Moniteur de
+Overfull \hbox (2.46207pt too wide) in paragraph at lines 17--18
+\T1/ptm/m/n/12 une ap-proche col-la-bo-ra-tive ali-gnée sur les prin-cipes dé-crits pré-cé-dem-ment. Le Pro-duct Ow-ner
+ []
+
+
+Underfull \hbox (badness 1515) in paragraph at lines 27--27
+\T1/ptm/m/n/12 pro-duit (Pro-duct Ba-ck-log), va-li-der les
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+[]|\T1/ptm/m/n/12 Pr Am-meri
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--29
+[]|\T1/ptm/m/n/12 Équipe de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--29
+[]|\T1/ptm/m/n/12 Concevoir, dé-ve-lop-per et tes-ter les
+ []
+
+
+Underfull \hbox (badness 4454) in paragraph at lines 29--29
+\T1/ptm/m/n/12 fonc-tion-na-li-tés, as-su-rer la qua-lité du
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+[]|\T1/ptm/m/n/12 Faciliter les évé-ne-ments Scrum,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+\T1/ptm/m/n/12 sup-pri-mer les obs-tacles, as-su-rer
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (3.97319pt too wide) in paragraph at lines 40--41
-[]\T1/ptm/m/n/12 Les be-soins fonc-tion-nels et non fonc-tion-nels tra-duisent les ob-jec-tifs du sys-tème, qui consistent
+Overfull \hbox (11.42555pt too wide) in paragraph at lines 39--40
+\T1/ptm/m/n/12 tâches, ju-gées im-por-tantes mais non cri-tiques pour la pre-mière ver-sion, in-cluent la confi-gu-ra-tion
  []
 
 
-Overfull \hbox (18.26561pt too wide) in paragraph at lines 40--41
-\T1/ptm/m/n/12 ainsi que la confor-mité aux normes mé-di-cales, comme men-tionné dans le cha-pitre d'in-tro-duc-tion. 
+Overfull \hbox (24.88853pt too wide) in paragraph at lines 39--40
+\T1/ptm/m/n/12 alertes, et l'op-ti-mi-sa-tion des no-ti-fi-ca-tions pour une faible la-tence. Des fonc-tion-na-li-tés op-tion-nelles,
  []
 
-[39
+[35
 
 
 
 
 ]
-Overfull \hbox (9.82874pt too wide) in paragraph at lines 42--43
-[]\T1/ptm/m/n/12 En termes de fonc-tion-na-li-tés, le sys-tème col-lecte en temps réel les don-nées is-sues des mo-ni-teurs
- []
-
-
-Overfull \hbox (27.45657pt too wide) in paragraph at lines 42--43
-\T1/ptm/m/n/12 sé-cu-risé basé sur les rôles, ga-ran-tis-sant un ac-cès adapté aux mé-de-cins, in-fir-miers et ad-mi-nis-tra-teurs.
- []
-
-
-Overfull \hbox (28.63313pt too wide) in paragraph at lines 44--45
-\T1/ptm/m/n/12 La sé-cu-rité des don-nées est as-su-rée par un chif-fre-ment ro-buste et des mé-ca-nismes d'au-then-ti-fi-ca-tion
- []
-
-
-Overfull \hbox (5.58153pt too wide) in paragraph at lines 44--45
-\T1/ptm/m/n/12 être com-pa-tible avec une va-riété de mo-ni-teurs mé-di-caux, as-su-rant une in-ter-opé-ra-bi-lité ef-fi-cace.
- []
-
-
-Overfull \hbox (3.06187pt too wide) in paragraph at lines 44--45
-\T1/ptm/m/n/12 Il est éga-le-ment ca-pable de s'adap-ter à une aug-men-ta-tion du nombre de pa-tients et d'ap-pa-reils,
- []
-
-
-Overfull \hbox (21.68535pt too wide) in paragraph at lines 44--45
-\T1/ptm/m/n/12 ré-pondre aux si-tua-tions ur-gentes, et le sys-tème res-pecte les ré-gle-men-ta-tions en vi-gueur concer-nant
- []
-
-
-Overfull \hbox (18.40868pt too wide) in paragraph at lines 49--50
-\T1/ptm/m/n/12 sys-tème, in-cluant la consul-ta-tion des don-nées, la ré-cep-tion des alertes et la ges-tion ad-mi-nis-tra-tive.
- []
-
-[40]
-<chapter4/sections/diagrams/use_case.png, id=952, 3513.125pt x 3834.325pt>
-File: chapter4/sections/diagrams/use_case.png Graphic file (type png)
-<use chapter4/sections/diagrams/use_case.png>
-Package pdftex.def Info: chapter4/sections/diagrams/use_case.png  used on input line 54.
-(pdftex.def)             Requested size: 352.81552pt x 385.03465pt.
-
-Overfull \hbox (29.68994pt too wide) in paragraph at lines 61--62
-[]\T1/ptm/m/n/12 Le pro-jet adopte la mé-tho-do-lo-gie Scrum pour as-su-rer un dé-ve-lop-pe-ment ité-ra-tif et une col-la-bo-ra-tion
- []
-
-
-Overfull \hbox (2.46207pt too wide) in paragraph at lines 66--67
-\T1/ptm/m/n/12 une ap-proche col-la-bo-ra-tive ali-gnée sur les prin-cipes dé-crits pré-cé-dem-ment. Le Pro-duct Ow-ner
- []
-
-[41 <./chapter4/sections/diagrams/use_case.png>]
-Underfull \hbox (badness 1515) in paragraph at lines 76--76
-\T1/ptm/m/n/12 pro-duit (Pro-duct Ba-ck-log), va-li-der les
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 76--77
-[]|\T1/ptm/m/n/12 Pr Am-meri
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 78--78
-[]|\T1/ptm/m/n/12 Équipe de
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 78--78
-[]|\T1/ptm/m/n/12 Concevoir, dé-ve-lop-per et tes-ter les
- []
-
-
-Underfull \hbox (badness 4454) in paragraph at lines 78--78
-\T1/ptm/m/n/12 fonc-tion-na-li-tés, as-su-rer la qua-lité du
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 80--80
-[]|\T1/ptm/m/n/12 Faciliter les évé-ne-ments Scrum,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 80--80
-\T1/ptm/m/n/12 sup-pri-mer les obs-tacles, as-su-rer
- []
-
-
-Overfull \hbox (11.42555pt too wide) in paragraph at lines 88--89
-\T1/ptm/m/n/12 tâches, ju-gées im-por-tantes mais non cri-tiques pour la pre-mière ver-sion, in-cluent la confi-gu-ra-tion
- []
-
-
-Overfull \hbox (24.88853pt too wide) in paragraph at lines 88--89
-\T1/ptm/m/n/12 alertes, et l'op-ti-mi-sa-tion des no-ti-fi-ca-tions pour une faible la-tence. Des fonc-tion-na-li-tés op-tion-nelles,
- []
-
-
-Underfull \hbox (badness 1067) in paragraph at lines 104--104
+Underfull \hbox (badness 1067) in paragraph at lines 55--55
 []|\T1/ptm/m/n/12 Interface web et mo-bile pour vi-sua-li-ser les
  []
 
 
-Underfull \hbox (badness 4505) in paragraph at lines 106--106
+Underfull \hbox (badness 4505) in paragraph at lines 57--57
 []|\T1/ptm/m/n/12 Authentification et ges-tion des uti-li-sa-teurs
  []
 
 
-Underfull \hbox (badness 6141) in paragraph at lines 110--110
+Underfull \hbox (badness 6141) in paragraph at lines 61--61
 []|\T1/ptm/m/n/12 Conformité aux ré-gle-men-ta-tions mé-di-cales
  []
 
 
-Underfull \hbox (badness 5231) in paragraph at lines 122--122
+Underfull \hbox (badness 5231) in paragraph at lines 73--73
 []|\T1/ptm/m/n/12 Gestion des alertes par prio-rité (cri-tique,
  []
 
-[42]
-Overfull \hbox (23.02914pt too wide) in paragraph at lines 136--137
-\T1/ptm/m/n/12 op-ti-misé, ainsi qu'une taille in-suf-fi-sante du da-ta-set, com-pen-sée par des tech-niques d'aug-men-ta-tion
- []
-
-[43]
-Overfull \hbox (2.67676pt too wide) in paragraph at lines 138--139
-\T1/ptm/m/n/12 mo-biles. Les tâches in-cluent la confi-gu-ra-tion des seuils d'alerte, l'as-so-cia-tion des no-ti-fi-ca-tions
+[36]
+Overfull \hbox (2.47311pt too wide) in paragraph at lines 85--86
+[]\T1/ptm/m/n/12 Le pro-jet est struc-turé en trois sprints de trois se-maines cha-cun. Le ta-bleau ci-dessous pré-sente
  []
 
 
-Overfull \hbox (2.42525pt too wide) in paragraph at lines 138--139
-\T1/ptm/m/n/12 va-li-da-tion des don-nées ex-traites pour ga-ran-tir leur fia-bi-lité. Les cri-tères d'ac-cep-ta-tion vé-ri-fient
+Underfull \hbox (badness 10000) in paragraph at lines 94--94
+[]|\T1/ptm/b/n/12 Objectifs et
  []
 
-[44]
-Overfull \hbox (45.79463pt too wide) in paragraph at lines 154--155
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--94
+[]|\T1/ptm/b/n/12 Tâches
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--94
+[]|\T1/ptm/b/n/12 Critères
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
+[]|\T1/ptm/b/n/12 Risques et
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
+\T1/ptm/b/n/12 Pipeline
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
+\T1/ptm/m/n/12 ac-teurs ; re-cueil
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
+\T1/ptm/m/n/12 des be-soins ;
+ []
+
+
+Underfull \hbox (badness 5105) in paragraph at lines 97--97
+\T1/ptm/m/n/12 dé-fi-ni-tion de la
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
+\T1/ptm/m/n/12 mé-tho-do-lo-gie
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--98
+[]|\T1/ptm/m/n/12 Dataset an-noté ;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--98
+\T1/ptm/m/n/12 mo-dèle YOLO
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--99
+[]|\T1/ptm/m/n/12 Capture et
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--99
+\T1/ptm/m/n/12 an-no-ta-tion ;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--99
+\T1/ptm/m/n/12 en-traî-ne-ment
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--99
+\T1/ptm/m/n/12 mo-dèle ;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--99
+\T1/ptm/m/n/12 in-té-gra-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--99
+\T1/ptm/m/n/12 Tes-se-ract ;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--99
+\T1/ptm/m/n/12 confi-gu-ra-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
+[]|\T1/ptm/m/n/12 Détection
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
+\T1/ptm/m/n/12 pré-cise ;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
+\T1/ptm/m/n/12 faible la-tence ;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
+\T1/ptm/m/n/12 com-pa-ti-bi-lité
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
+\T1/ptm/m/n/12 multi-marques.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
+\T1/ptm/m/n/12 Mau-vais
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
+\T1/ptm/m/n/12 éclai-rage $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
+\T1/ptm/m/n/12 pré-trai-te-ment ;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--102
+\T1/ptm/b/n/12 Alertes
+ []
+
+
+Underfull \hbox (badness 2922) in paragraph at lines 103--103
+[]|\T1/ptm/m/n/12 Moteur d'alerte ;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--103
+\T1/ptm/m/n/12 no-ti-fi-ca-tions
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--103
+\T1/ptm/m/n/12 se-lon rôles ;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
+[]|\T1/ptm/m/n/12 Configuration
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
+\T1/ptm/m/n/12 des seuils ;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
+\T1/ptm/m/n/12 map-ping rôles ;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
+\T1/ptm/m/n/12 mes-sa-ge-rie ;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
+\T1/ptm/m/n/12 va-li-da-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--105
+[]|\T1/ptm/m/n/12 Alertes ra-pides ;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--105
+\T1/ptm/m/n/12 no-ti-fi-ca-tions
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--105
+\T1/ptm/m/n/12 cor-rectes ;
+ []
+
+
+Underfull \hbox (badness 1102) in paragraph at lines 105--105
+\T1/ptm/m/n/12 don-nées va-li-dées
+ []
+
+
+Underfull \hbox (badness 1755) in paragraph at lines 106--107
+[]|\T1/ptm/m/n/12 Retards $\OMS/cmsy/m/n/12 !$ \T1/ptm/m/n/12 tests
+ []
+
+
+Underfull \hbox (badness 7344) in paragraph at lines 106--107
+\T1/ptm/m/n/12 si-mu-lés ; er-reurs
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--108
+\T1/ptm/b/n/12 Interfaces
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--108
+\T1/ptm/b/n/12 et
+ []
+
+
+Underfull \hbox (badness 2922) in paragraph at lines 109--109
+[]|\T1/ptm/m/n/12 Dashboard web ;
+ []
+
+
+Underfull \hbox (badness 4391) in paragraph at lines 109--109
+\T1/ptm/m/n/12 de don-nées des
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--110
+[]|\T1/ptm/m/n/12 Développement
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--110
+\T1/ptm/m/n/12 da-sh-board ;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--110
+\T1/ptm/m/n/12 de-sign app ;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--110
+\T1/ptm/m/n/12 no-ti-fi-ca-tions ;
+ []
+
+
+Underfull \hbox (badness 1400) in paragraph at lines 110--110
+\T1/ptm/m/n/12 mises à jour en
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 111--111
+[]|\T1/ptm/m/n/12 Interfaces
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 111--111
+\T1/ptm/m/n/12 ré-ac-tives ;
+ []
+
+
+Underfull \hbox (badness 4096) in paragraph at lines 111--111
+\T1/ptm/m/n/12 ré-cep-tion fiable ;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 111--111
+\T1/ptm/m/n/12 in-té-grité des
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 111--111
+\T1/ptm/m/n/12 don-nées ; bonne
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
+[]|\T1/ptm/m/n/12 Latence $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
+\T1/ptm/m/n/12 op-ti-mi-sa-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
+\T1/ptm/m/n/12 ré-seau ;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
+\T1/ptm/m/n/12 in-té-gra-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
+\T1/ptm/m/n/12 com-plexe $\OMS/cmsy/m/n/12 !$
+ []
+
+
+Overfull \hbox (19.72078pt too wide) in paragraph at lines 92--115
+ [][] 
+ []
+
+[37] [38]
+Overfull \hbox (45.79463pt too wide) in paragraph at lines 130--131
 []\T1/ptm/m/n/12 L'environnement de dé-ve-lop-pe-ment s'ap-puie sur un en-semble co-hé-rent de lan-gages de pro-gram-ma-tion,
  []
 
 
-Overfull \hbox (6.67387pt too wide) in paragraph at lines 154--155
+Overfull \hbox (6.67387pt too wide) in paragraph at lines 130--131
 \T1/ptm/m/n/12 fra-me-works et bi-blio-thèques, choi-sis en fonc-tion des exi-gences tech-niques du pro-jet Vi-tal-Sync.
  []
 
-<chapter4/images/laravel_logo.png, id=975, 299.1175pt x 169.63374pt>
+<chapter4/images/laravel_logo.png, id=931, 299.1175pt x 169.63374pt>
 File: chapter4/images/laravel_logo.png Graphic file (type png)
 <use chapter4/images/laravel_logo.png>
-Package pdftex.def Info: chapter4/images/laravel_logo.png  used on input line 160.
+Package pdftex.def Info: chapter4/images/laravel_logo.png  used on input line 136.
 (pdftex.def)             Requested size: 66.14996pt x 37.51366pt.
-<chapter4/images/php-logo.png, id=976, 200.75pt x 106.3975pt>
+<chapter4/images/php-logo.png, id=932, 200.75pt x 106.3975pt>
 File: chapter4/images/php-logo.png Graphic file (type png)
 <use chapter4/images/php-logo.png>
-Package pdftex.def Info: chapter4/images/php-logo.png  used on input line 162.
+Package pdftex.def Info: chapter4/images/php-logo.png  used on input line 138.
 (pdftex.def)             Requested size: 66.14996pt x 35.05933pt.
-<chapter4/images/python_logo.png, id=977, 1284.8pt x 380.42125pt>
+<chapter4/images/python_logo.png, id=933, 1284.8pt x 380.42125pt>
 File: chapter4/images/python_logo.png Graphic file (type png)
 <use chapter4/images/python_logo.png>
-Package pdftex.def Info: chapter4/images/python_logo.png  used on input line 171.
+Package pdftex.def Info: chapter4/images/python_logo.png  used on input line 147.
 (pdftex.def)             Requested size: 66.14996pt x 19.58524pt.
-<chapter4/images/flask_logo.png, id=978, 360.34625pt x 140.525pt>
+<chapter4/images/flask_logo.png, id=934, 360.34625pt x 140.525pt>
 File: chapter4/images/flask_logo.png Graphic file (type png)
 <use chapter4/images/flask_logo.png>
-Package pdftex.def Info: chapter4/images/flask_logo.png  used on input line 173.
+Package pdftex.def Info: chapter4/images/flask_logo.png  used on input line 149.
 (pdftex.def)             Requested size: 66.14996pt x 25.79515pt.
-<chapter4/images/flutter_logo.png, id=979, 418.56375pt x 121.45375pt>
+<chapter4/images/flutter_logo.png, id=935, 418.56375pt x 121.45375pt>
 File: chapter4/images/flutter_logo.png Graphic file (type png)
 <use chapter4/images/flutter_logo.png>
-Package pdftex.def Info: chapter4/images/flutter_logo.png  used on input line 181.
+Package pdftex.def Info: chapter4/images/flutter_logo.png  used on input line 157.
 (pdftex.def)             Requested size: 132.30666pt x 38.3897pt.
-<chapter4/images/dart_logo.jpg, id=980, 869.2475pt x 652.4375pt>
+<chapter4/images/dart_logo.jpg, id=936, 869.2475pt x 652.4375pt>
 File: chapter4/images/dart_logo.jpg Graphic file (type jpg)
 <use chapter4/images/dart_logo.jpg>
-Package pdftex.def Info: chapter4/images/dart_logo.jpg  used on input line 183.
+Package pdftex.def Info: chapter4/images/dart_logo.jpg  used on input line 159.
 (pdftex.def)             Requested size: 88.2022pt x 66.19333pt.
-[45 <./chapter4/images/laravel_logo.png> <./chapter4/images/php-logo.png> <./chapter4/images/python_logo.png> <./chapter4/images/flask_logo.png>]
-<chapter4/images/react_logo.jpg, id=990, 329.23pt x 153.57375pt>
+<chapter4/images/react_logo.jpg, id=937, 329.23pt x 153.57375pt>
 File: chapter4/images/react_logo.jpg Graphic file (type jpg)
 <use chapter4/images/react_logo.jpg>
-Package pdftex.def Info: chapter4/images/react_logo.jpg  used on input line 192.
+Package pdftex.def Info: chapter4/images/react_logo.jpg  used on input line 168.
 (pdftex.def)             Requested size: 66.14996pt x 30.8548pt.
-<chapter4/images/javascript_logo.png, id=991, 225.84375pt x 225.84375pt>
+<chapter4/images/javascript_logo.png, id=938, 225.84375pt x 225.84375pt>
 File: chapter4/images/javascript_logo.png Graphic file (type png)
 <use chapter4/images/javascript_logo.png>
-Package pdftex.def Info: chapter4/images/javascript_logo.png  used on input line 194.
+Package pdftex.def Info: chapter4/images/javascript_logo.png  used on input line 170.
 (pdftex.def)             Requested size: 66.14996pt x 66.1512pt.
-<chapter4/images/mysql_logo.png, id=992, 314.17375pt x 161.60374pt>
+[39 <./chapter4/images/laravel_logo.png> <./chapter4/images/php-logo.png> <./chapter4/images/python_logo.png> <./chapter4/images/flask_logo.png> <./chapter4/images/flutter_logo.png> <./chapter4/images/dart_logo.jpg>]
+<chapter4/images/mysql_logo.png, id=949, 314.17375pt x 161.60374pt>
 File: chapter4/images/mysql_logo.png Graphic file (type png)
 <use chapter4/images/mysql_logo.png>
-Package pdftex.def Info: chapter4/images/mysql_logo.png  used on input line 202.
+Package pdftex.def Info: chapter4/images/mysql_logo.png  used on input line 178.
 (pdftex.def)             Requested size: 66.14996pt x 34.02408pt.
-<chapter4/images/phpmyadmin_logo.png, id=993, 302.12875pt x 167.62625pt>
+<chapter4/images/phpmyadmin_logo.png, id=950, 302.12875pt x 167.62625pt>
 File: chapter4/images/phpmyadmin_logo.png Graphic file (type png)
 <use chapter4/images/phpmyadmin_logo.png>
-Package pdftex.def Info: chapter4/images/phpmyadmin_logo.png  used on input line 204.
+Package pdftex.def Info: chapter4/images/phpmyadmin_logo.png  used on input line 180.
 (pdftex.def)             Requested size: 66.14996pt x 36.70139pt.
 
-Overfull \hbox (11.76204pt too wide) in paragraph at lines 217--218
+Overfull \hbox (11.76204pt too wide) in paragraph at lines 193--194
 []\T1/ptm/m/n/12 L'environnement lo-gi-ciel re-pose sur des sys-tèmes d'ex-ploi-ta-tion adap-tés pour le dé-ve-lop-pe-ment
  []
 
-[46 <./chapter4/images/flutter_logo.png> <./chapter4/images/dart_logo.jpg> <./chapter4/images/react_logo.jpg> <./chapter4/images/javascript_logo.png> <./chapter4/images/mysql_logo.png> <./chapter4/images/phpmyadmin_logo.png>]
-<chapter4/images/vscode_logo.jpg, id=1003, 204.765pt x 192.72pt>
+
+Overfull \hbox (3.4771pt too wide) in paragraph at lines 196--197
+[]\T1/ptm/b/n/12 Visual Stu-dio Code \T1/ptm/m/n/12 : Uti-lisé comme en-vi-ron-ne-ment de dé-ve-lop-pe-ment in-té-gré, Vi-sual
+ []
+
+<chapter4/images/vscode_logo.jpg, id=951, 204.765pt x 192.72pt>
 File: chapter4/images/vscode_logo.jpg Graphic file (type jpg)
 <use chapter4/images/vscode_logo.jpg>
-Package pdftex.def Info: chapter4/images/vscode_logo.jpg  used on input line 224.
+Package pdftex.def Info: chapter4/images/vscode_logo.jpg  used on input line 200.
 (pdftex.def)             Requested size: 66.14996pt x 62.25978pt.
 
-Overfull \hbox (10.33133pt too wide) in paragraph at lines 229--230
+Overfull \hbox (16.83157pt too wide) in paragraph at lines 205--206
 \T1/ptm/m/n/12 ap-pli-ca-tions mo-biles, of-frant des ou-tils spé-cia-li-sés pour la créa-tion d'in-ter-faces uti-li-sa-teur
  []
 
-<chapter4/images/androidstudio_logo.png, id=1004, 204.765pt x 192.72pt>
+<chapter4/images/androidstudio_logo.png, id=952, 204.765pt x 192.72pt>
 File: chapter4/images/androidstudio_logo.png Graphic file (type png)
 <use chapter4/images/androidstudio_logo.png>
-Package pdftex.def Info: chapter4/images/androidstudio_logo.png  used on input line 233.
+Package pdftex.def Info: chapter4/images/androidstudio_logo.png  used on input line 209.
 (pdftex.def)             Requested size: 66.14996pt x 62.25978pt.
-<chapter4/images/latex_logo.png, id=1005, 349.305pt x 145.54375pt>
+[40 <./chapter4/images/react_logo.jpg> <./chapter4/images/javascript_logo.png> <./chapter4/images/mysql_logo.png> <./chapter4/images/phpmyadmin_logo.png> <./chapter4/images/vscode_logo.jpg>]
+<chapter4/images/latex_logo.png, id=961, 349.305pt x 145.54375pt>
 File: chapter4/images/latex_logo.png Graphic file (type png)
 <use chapter4/images/latex_logo.png>
-Package pdftex.def Info: chapter4/images/latex_logo.png  used on input line 242.
+Package pdftex.def Info: chapter4/images/latex_logo.png  used on input line 218.
 (pdftex.def)             Requested size: 66.14996pt x 27.56253pt.
-
-Overfull \hbox (0.26418pt too wide) in paragraph at lines 247--248
-[]\T1/ptm/b/n/12 GitHub \T1/ptm/m/n/12 : Gi-tHub fa-ci-lite la ges-tion des ver-sions et la col-la-bo-ra-tion sur le code, as-su-rant
- []
-
-<chapter4/images/github_logo.jpg, id=1006, 180.675pt x 168.63pt>
+<chapter4/images/github_logo.jpg, id=962, 180.675pt x 168.63pt>
 File: chapter4/images/github_logo.jpg Graphic file (type jpg)
 <use chapter4/images/github_logo.jpg>
-Package pdftex.def Info: chapter4/images/github_logo.jpg  used on input line 251.
+Package pdftex.def Info: chapter4/images/github_logo.jpg  used on input line 227.
 (pdftex.def)             Requested size: 66.14996pt x 61.73856pt.
-<chapter4/images/dockerdesktop_logo.png, id=1007, 276.03125pt x 183.68625pt>
+<chapter4/images/dockerdesktop_logo.png, id=963, 276.03125pt x 183.68625pt>
 File: chapter4/images/dockerdesktop_logo.png Graphic file (type png)
 <use chapter4/images/dockerdesktop_logo.png>
-Package pdftex.def Info: chapter4/images/dockerdesktop_logo.png  used on input line 260.
+Package pdftex.def Info: chapter4/images/dockerdesktop_logo.png  used on input line 236.
 (pdftex.def)             Requested size: 66.14996pt x 44.01833pt.
-[47 <./chapter4/images/vscode_logo.jpg> <./chapter4/images/androidstudio_logo.png> <./chapter4/images/latex_logo.png> <./chapter4/images/github_logo.jpg>])
-Overfull \hbox (21.12134pt too wide) in paragraph at lines 267--119
+)
+Overfull \hbox (21.12134pt too wide) in paragraph at lines 243--121
 \T1/ptm/m/n/12 cadre Scrum. Le Pro-duct Ba-ck-log prio-risé, la pla-ni-fi-ca-tion dé-taillée des sprints et l'en-vi-ron-ne-ment
  []
 
 
-Overfull \hbox (5.5818pt too wide) in paragraph at lines 267--119
+Overfull \hbox (5.5818pt too wide) in paragraph at lines 243--121
 \T1/ptm/m/n/12 de dé-ve-lop-pe-ment spé-ci-fié ga-ran-tissent un ali-gne-ment avec les ob-jec-tifs de col-lecte de don-nées
  []
 
-[48 <./chapter4/images/dockerdesktop_logo.png>]
+[41 <./chapter4/images/androidstudio_logo.png> <./chapter4/images/latex_logo.png> <./chapter4/images/github_logo.jpg> <./chapter4/images/dockerdesktop_logo.png>] [42]
 \openout2 = `chapter5/chapter5.aux'.
 
  (chapter5/chapter5.tex
 Chapitre 5.
 
-Overfull \hbox (5.19748pt too wide) in paragraph at lines 7--8
+Overfull \hbox (5.19748pt too wide) in paragraph at lines 9--10
 \T1/ptm/m/n/12 en oxy-gène. Cette ité-ra-tion pose les bases tech-niques pour la col-lecte au-to-ma-ti-sée des don-nées,
  []
 
 
-Overfull \hbox (3.9014pt too wide) in paragraph at lines 12--13
-\T1/ptm/m/n/12 ré-gions d'in-té-rêt conte-nant ces don-nées. Des ou-tils de trai-te-ment d'image et de re-con-nais-sance
- []
-
-
-Overfull \hbox (0.30086pt too wide) in paragraph at lines 12--13
-\T1/ptm/m/n/12 sui-vantes. Ces ob-jec-tifs s'alignent sur les tâches prio-ri-taires du Pro-duct Ba-ck-log et les be-soins
- []
-
-
-Overfull \hbox (4.90912pt too wide) in paragraph at lines 17--18
-\T1/ptm/m/n/12 qua-lité des li-vrables. Les tâches in-cluent la confi-gu-ra-tion du ma-té-riel, la cap-ture et l'an-no-ta-tion
- []
-
-[49
-
-
-
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
-[]|\T1/ptm/b/n/12 Critères
- []
-
-
-Underfull \hbox (badness 3557) in paragraph at lines 27--27
-[]|\T1/ptm/m/n/12 Détection et re-con-nais-sance des
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--28
-[]|\T1/ptm/m/n/12 Précision de
- []
-
-
-Underfull \hbox (badness 2753) in paragraph at lines 27--28
-\T1/ptm/m/n/12 OCR ex-trait les
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--28
-\T1/ptm/m/n/12 va-leurs avec <
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--28
-\T1/ptm/m/n/12 5% d'er-reurs,
- []
-
-
-Underfull \hbox (badness 7133) in paragraph at lines 27--28
-\T1/ptm/m/n/12 com-pa-tible avec
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--28
-\T1/ptm/m/n/12 3 mo-ni-teurs
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--30
-\T1/ptm/m/n/12 re-la-tion-nelle
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--30
-\T1/ptm/m/n/12 confi-gu-rée,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--30
-\T1/ptm/m/n/12 sto-ckage des
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 31--31
-[]|\T1/ptm/m/n/12 Interface d'ad-mi-nis-tra-tion pour
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 31--32
-\T1/ptm/m/n/12 fonc-tion-nelle
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 31--32
-\T1/ptm/m/n/12 pour confi-gu-rer
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 31--32
-\T1/ptm/m/n/12 les pa-ra-mètres
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 31--32
-\T1/ptm/m/n/12 de cap-ture et
- []
-
-
-Overfull \hbox (19.72076pt too wide) in paragraph at lines 23--34
+Overfull \hbox (19.31596pt too wide) in paragraph at lines 35--36
  [][] 
  []
 
 
-Overfull \hbox (15.73318pt too wide) in paragraph at lines 44--45
-\T1/ptm/m/n/12 sys-tème d'ex-ploi-ta-tion adapté, avec une ac-cé-lé-ra-tion ma-té-rielle pour op-ti-mi-ser les per-for-mances.
+Overfull \hbox (0.44536pt too wide) in paragraph at lines 44--45
+\T1/ptm/m/n/12 op-ti-male des images. Une API REST, im-plé-men-tée avec Flask, est dé-ve-lop-pée pour per-mettre
  []
 
-[50]
-Overfull \hbox (3.15721pt too wide) in paragraph at lines 49--50
-\T1/ptm/m/n/12 ar-té-rielle et la sa-tu-ra-tion en oxy-gène. Le da-ta-set a été di-visé en en-sembles pour l'en-traî-ne-ment,
- []
-
-
-Overfull \hbox (37.56024pt too wide) in paragraph at lines 49--50
-\T1/ptm/m/n/12 l'ajus-te-ment de la lu-mi-no-sité, ont été ap-pli-quées, aug-men-tant ainsi la taille du da-ta-set d'en-traî-ne-ment. 
- []
-
-
-Overfull \hbox (7.4407pt too wide) in paragraph at lines 54--55
-\T1/ptm/m/n/12 les per-for-mances, et le mo-dèle a at-teint une pré-ci-sion sa-tis-fai-sante sur l'en-semble de va-li-da-tion,
- []
-
-<chapter5/sections/diagrams/yolo_learning_curve.png, id=1032, 875.97263pt x 328.52737pt>
-File: chapter5/sections/diagrams/yolo_learning_curve.png Graphic file (type png)
-<use chapter5/sections/diagrams/yolo_learning_curve.png>
-Package pdftex.def Info: chapter5/sections/diagrams/yolo_learning_curve.png  used on input line 78.
-(pdftex.def)             Requested size: 352.81552pt x 132.32097pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (7.04465pt too wide) in paragraph at lines 85--86
-[]\T1/ptm/m/n/12 Le pi-pe-line OCR a été conçu pour trai-ter les images cap-tu-rées et ex-traire les don-nées tex-tuelles.
- []
-
-[51]
-Overfull \hbox (1.88565pt too wide) in paragraph at lines 95--96
-[]\T1/ptm/m/n/12 Les li-vrables pro-duits sont ali-gnés sur les ob-jec-tifs du Sprint 1. Un da-ta-set an-noté, com-pre-nant
- []
-
-[52 <./chapter5/sections/diagrams/yolo_learning_curve.png>]
-Overfull \hbox (11.48521pt too wide) in paragraph at lines 100--101
-[]\T1/ptm/m/n/12 Les tests ont été conçus pour va-li-der les cri-tères d'ac-cep-ta-tion dé-fi-nis dans le cha-pitre pré-cé-dent.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 111--112
-[]|\T1/ptm/m/n/12 Valé avec
- []
-
-
-Overfull \hbox (0.67332pt too wide) in paragraph at lines 122--123
-\T1/ptm/m/n/12 été ré-so-lus par un ré-glage de l'ex-po-si-tion des ca-mé-ras, l'ap-pli-ca-tion de filtres de pré-trai-te-ment
- []
-
-[53]
-Overfull \hbox (1.28596pt too wide) in paragraph at lines 127--128
-\T1/ptm/m/n/12 une pla-te-forme dé-diée a per-mis de ré-soudre ra-pi-de-ment les pro-blèmes tech-niques. Ce-pen-dant,
- []
-
-
-Overfull \hbox (10.74228pt too wide) in paragraph at lines 127--128
-\T1/ptm/m/n/12 confi-gu-ra-tion des ca-mé-ras ont éga-le-ment été no-tées, avec des me-sures pré-vues pour do-cu-men-ter
- []
-
-
-Overfull \hbox (8.6646pt too wide) in paragraph at lines 132--133
-\T1/ptm/m/n/12 ex-traites et la mise en place du sys-tème d'alertes. Les tâches pré-pa-ra-toires in-cluent l'in-té-gra-tion
- []
-
-
-Overfull \hbox (21.40991pt too wide) in paragraph at lines 132--133
-\T1/ptm/m/n/12 du pi-pe-line OCR avec un mo-dule de va-li-da-tion pour ga-ran-tir une pré-ci-sion éle-vée, la confi-gu-ra-tion
- []
-
-)
-Overfull \hbox (3.24089pt too wide) in paragraph at lines 137--120
-\T1/ptm/m/n/12 mé-di-caux. Les li-vrables res-pectent les cri-tères d'ac-cep-ta-tion en termes de pré-ci-sion, de la-tence
- []
-
-[54] [55]
-\openout2 = `chapter6/chapter6.aux'.
-
- (chapter6/chapter6.tex
-Chapitre 6.
-
-Overfull \hbox (1.1533pt too wide) in paragraph at lines 7--8
-\T1/ptm/m/n/12 met-tant l'ac-cent sur le dé-ve-lop-pe-ment des fonc-tion-na-li-tés de gé-né-ra-tion d'alertes, de li-vrai-son
- []
-
-
-Overfull \hbox (12.24052pt too wide) in paragraph at lines 7--8
-\T1/ptm/m/n/12 ré-sul-tats ob-te-nus, les tests ef-fec-tués, les dé-fis ren-con-trés, les ré-flexions is-sues de la ré-tros-pec-tive,
- []
-
-
-Overfull \hbox (2.74945pt too wide) in paragraph at lines 11--12
-\T1/ptm/m/n/12 étaient en-voyées au per-son-nel mé-di-cal pour les alertes cri-tiques via Fi-re-base Cloud Mes-sa-ging
- []
-
-[56
+[43
 
 
 
 
 ]
-<chapter6/sprint2_sequence_diagram.png, id=1064, 1373.13pt x 473.77pt>
-File: chapter6/sprint2_sequence_diagram.png Graphic file (type png)
-<use chapter6/sprint2_sequence_diagram.png>
-Package pdftex.def Info: chapter6/sprint2_sequence_diagram.png  used on input line 43.
+Overfull \hbox (4.90912pt too wide) in paragraph at lines 50--51
+\T1/ptm/m/n/12 qua-lité des li-vrables. Les tâches in-cluent la confi-gu-ra-tion du ma-té-riel, la cap-ture et l'an-no-ta-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
+[]|\T1/ptm/b/n/12 Critères
+ []
+
+
+Underfull \hbox (badness 3557) in paragraph at lines 60--60
+[]|\T1/ptm/m/n/12 Détection et re-con-nais-sance des
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
+[]|\T1/ptm/m/n/12 Précision de
+ []
+
+
+Underfull \hbox (badness 2753) in paragraph at lines 60--61
+\T1/ptm/m/n/12 OCR ex-trait les
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
+\T1/ptm/m/n/12 va-leurs avec <
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
+\T1/ptm/m/n/12 5% d'er-reurs,
+ []
+
+
+Underfull \hbox (badness 7133) in paragraph at lines 60--61
+\T1/ptm/m/n/12 com-pa-tible avec
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
+\T1/ptm/m/n/12 3 mo-ni-teurs
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
+\T1/ptm/m/n/12 re-la-tion-nelle
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
+\T1/ptm/m/n/12 confi-gu-rée,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
+\T1/ptm/m/n/12 sto-ckage des
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--64
+[]|\T1/ptm/m/n/12 Interface Swag-ger pour l'API
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
+[]|\T1/ptm/m/n/12 Documentation
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
+\T1/ptm/m/n/12 ac-ces-sible via
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
+\T1/ptm/m/n/12 Swag-ger UI,
+ []
+
+
+Underfull \hbox (badness 1107) in paragraph at lines 64--65
+\T1/ptm/m/n/12 toutes les routes
+ []
+
+
+Overfull \hbox (19.72076pt too wide) in paragraph at lines 56--67
+ [][] 
+ []
+
+[44]
+Overfull \hbox (1.74207pt too wide) in paragraph at lines 79--80
+\T1/ptm/m/n/12 pour ajus-ter la ré-so-lu-tion et l'ex-po-si-tion. Un ser-veur lo-cal, équipé d'un sys-tème d'ex-ploi-ta-tion
+ []
+
+
+Overfull \hbox (0.22989pt too wide) in paragraph at lines 79--80
+\T1/ptm/m/n/12 Tes-se-ract, et les dé-pen-dances Py-thon, ont été ins-tal-lées via pip dans un en-vi-ron-ne-ment vir-tuel. 
+ []
+
+[45]
+<chapter5/sections/diagrams/yolo_learning_curve.png, id=994, 875.97263pt x 328.52737pt>
+File: chapter5/sections/diagrams/yolo_learning_curve.png Graphic file (type png)
+<use chapter5/sections/diagrams/yolo_learning_curve.png>
+Package pdftex.def Info: chapter5/sections/diagrams/yolo_learning_curve.png  used on input line 122.
+(pdftex.def)             Requested size: 352.81552pt x 132.32097pt.
+ [46]
+Overfull \hbox (1.36893pt too wide) in paragraph at lines 129--130
+[]\T1/ptm/m/n/12 Le pi-pe-line OCR a été dé-ve-loppé sous forme d'une ap-pli-ca-tion Flask, per-met-tant le trai-te-ment
+ []
+
+
+Overfull \hbox (1.06958pt too wide) in paragraph at lines 129--130
+\T1/ptm/m/n/12 sont en-voyées vers un ser-veur La-ra-vel via des re-quêtes HTTP POST. L'API REST dé-ve-lop-pée
+ []
+
+<chapter5/sections/images/swagger.png, id=1002, 1112.05463pt x 536.60475pt>
+File: chapter5/sections/images/swagger.png Graphic file (type png)
+<use chapter5/sections/images/swagger.png>
+Package pdftex.def Info: chapter5/sections/images/swagger.png  used on input line 133.
+(pdftex.def)             Requested size: 352.81552pt x 170.2432pt.
+<chapter5/sections/diagrams/pipeline_workflow.png, id=1003, 539.01375pt x 405.515pt>
+File: chapter5/sections/diagrams/pipeline_workflow.png Graphic file (type png)
+<use chapter5/sections/diagrams/pipeline_workflow.png>
+Package pdftex.def Info: chapter5/sections/diagrams/pipeline_workflow.png  used on input line 140.
+(pdftex.def)             Requested size: 352.81552pt x 265.43791pt.
+[47 <./chapter5/sections/diagrams/yolo_learning_curve.png> <./chapter5/sections/images/swagger.png>] [48 <./chapter5/sections/diagrams/pipeline_workflow.png (PNG copy)>]
+Overfull \hbox (6.00883pt too wide) in paragraph at lines 160--161
+[]\T1/ptm/m/n/12 Une confi-gu-ra-tion des ca-mé-ras IP pour un flux vi-déo stable, tes-tée avec trois mo-ni-teurs. 
+ []
+
+
+Overfull \hbox (26.94868pt too wide) in paragraph at lines 161--162
+[]\T1/ptm/m/n/12 Une do-cu-men-ta-tion com-plète, in-cluant le guide d'ins-tal-la-tion du pi-pe-line, la do-cu-men-ta-tion
+ []
+
+
+Overfull \hbox (3.03557pt too wide) in paragraph at lines 195--196
+[]\T1/ptm/b/n/12 Polices floues pour OCR \T1/ptm/m/n/12 : Op-ti-mi-sées par un ajus-te-ment du contraste et des pa-ra-mètres
+ []
+
+
+Overfull \hbox (5.02943pt too wide) in paragraph at lines 209--210
+\T1/ptm/m/n/12 sys-tème d'alertes. Les tâches in-cluent l'in-té-gra-tion d'un mo-dule de va-li-da-tion, la confi-gu-ra-tion
+ []
+
+[49]) [50]
+\openout2 = `chapter6/chapter6.aux'.
+
+ (chapter6/chapter6.tex
+Chapitre 6.
+[51
+
+
+
+
+]
+Overfull \hbox (2.22148pt too wide) in paragraph at lines 17--18
+\T1/ptm/m/n/12 iden-ti-fiés via leurs rôles dans la base de don-nées. Cette in-té-gra-tion per-met une com-mu-ni-ca-tion
+ []
+
+
+Overfull \hbox (3.00069pt too wide) in paragraph at lines 19--20
+[]\T1/ptm/m/n/12 L'API Flask a été op-ti-mi-sée pour gé-rer la lo-gique des alertes et des no-ti-fi-ca-tions, en s'in-té-grant
+ []
+
+
+Overfull \hbox (25.5008pt too wide) in paragraph at lines 19--20
+\T1/ptm/m/n/12 fluide entre les com-po-sants du sys-tème, tan-dis que l'in-ter-face pré-li-mi-naire offre des fonc-tion-na-li-tés
+ []
+
+
+Overfull \hbox (8.05333pt too wide) in paragraph at lines 19--20
+\T1/ptm/m/n/12 le ter-rain pour des amé-lio-ra-tions fu-tures, no-tam-ment en termes de vi-sua-li-sa-tion et d'er-go-no-mie,
+ []
+
+<chapter6/diagrams/sprint_sequence_diagram.png, id=1037, 1373.13pt x 473.77pt>
+File: chapter6/diagrams/sprint_sequence_diagram.png Graphic file (type png)
+<use chapter6/diagrams/sprint_sequence_diagram.png>
+Package pdftex.def Info: chapter6/diagrams/sprint_sequence_diagram.png  used on input line 27.
 (pdftex.def)             Requested size: 396.91325pt x 136.94157pt.
- [57] [58 <./chapter6/sprint2_sequence_diagram.png (PNG copy)>]
-Overfull \hbox (3.26569pt too wide) in paragraph at lines 62--63
-\T1/ptm/m/n/12 pla-ni-fi-ca-tion plus pré-cise. Les réunions quo-ti-diennes ont été ajus-tées pour mieux se concen-trer
+[52]
+Overfull \hbox (3.64952pt too wide) in paragraph at lines 32--33
+[]\T1/ptm/m/n/12 Un dia-gramme d'ac-ti-vité est éga-le-ment re-com-mandé pour com-plé-ter l'ana-lyse. Ce dia-gramme
+ []
+
+<chapter6/diagrams/sprint_activity_diagram.png, id=1044, 371.3875pt x 649.42625pt>
+File: chapter6/diagrams/sprint_activity_diagram.png Graphic file (type png)
+<use chapter6/diagrams/sprint_activity_diagram.png>
+Package pdftex.def Info: chapter6/diagrams/sprint_activity_diagram.png  used on input line 36.
+(pdftex.def)             Requested size: 396.91325pt x 694.07657pt.
+[53 <./chapter6/diagrams/sprint_sequence_diagram.png (PNG copy)>]
+Overfull \vbox (14.89348pt too high) has occurred while \output is active []
+
+ [54 <./chapter6/diagrams/sprint_activity_diagram.png (PNG copy)>]
+Overfull \hbox (3.40857pt too wide) in paragraph at lines 41--42
+\T1/ptm/m/n/12 les in-ter-ac-tions des ac-teurs, tels que les mé-de-cins et les in-fir-miers, avec le sys-tème, no-tam-ment
+ []
+
+<chapter6/diagrams/sprint_use_case_diagram.png, id=1056, 1866.975pt x 2268.475pt>
+File: chapter6/diagrams/sprint_use_case_diagram.png Graphic file (type png)
+<use chapter6/diagrams/sprint_use_case_diagram.png>
+Package pdftex.def Info: chapter6/diagrams/sprint_use_case_diagram.png  used on input line 45.
+(pdftex.def)             Requested size: 352.81552pt x 428.66098pt.
+
+Overfull \hbox (4.64558pt too wide) in paragraph at lines 52--53
+\T1/ptm/m/n/12 pré-fé-rences des uti-li-sa-teurs, ga-ran-tis-sant une ges-tion ef-fi-cace des don-nées. Une do-cu-men-ta-tion
  []
 
 
-Overfull \hbox (5.9772pt too wide) in paragraph at lines 62--63
-\T1/ptm/m/n/12 ren-for-cée, mais les in-ter-ac-tions avec le per-son-nel mé-di-cal pour-raient être da-van-tage op-ti-mi-sées
+Overfull \hbox (1.16531pt too wide) in paragraph at lines 52--53
+\T1/ptm/m/n/12 com-plète, cou-vrant les points d'API, l'uti-li-sa-tion de l'in-ter-face et la confi-gu-ra-tion du sys-tème,
  []
 
-) [59] [60] (main.bbl
+[55 <./chapter6/diagrams/sprint_use_case_diagram.png>]
+Overfull \hbox (15.30074pt too wide) in paragraph at lines 68--69
+\T1/ptm/m/n/12 pour va-li-der l'uti-li-sa-bi-lité. La do-cu-men-ta-tion sera fi-na-li-sée, et les pré-pa-ra-tifs pour le dé-ploie-ment
+ []
+
+
+Overfull \hbox (22.51268pt too wide) in paragraph at lines 68--69
+\T1/ptm/m/n/12 com-men-ce-ront, en met-tant l'ac-cent sur les re-tours des uti-li-sa-teurs et les mé-triques de per-for-mance. 
+ []
+
+[56])
+Overfull \hbox (11.61684pt too wide) in paragraph at lines 72--123
+\T1/ptm/m/n/12 d'alertes pré-cis, une dis-tri-bu-tion ra-pide des no-ti-fi-ca-tions et une in-ter-face pré-li-mi-naire, s'alignent
+ []
+
+[57]
+\openout2 = `chapter7/chapter7.aux'.
+
+ (chapter7/chapter7.tex
+Chapitre 7.
+
+Overfull \hbox (16.09344pt too wide) in paragraph at lines 7--8
+[]\T1/ptm/m/n/12 Les ob-jec-tifs du Sprint 3 se concentrent sur quatre axes prin-ci-paux. Pre-miè-re-ment, l'op-ti-mi-sa-tion
+ []
+
+
+Overfull \hbox (13.46512pt too wide) in paragraph at lines 7--8
+\T1/ptm/m/n/12 uti-li-sa-teur in-tui-tive et adap-tée aux be-soins du per-son-nel mé-di-cal, en in-té-grant des fonc-tion-na-li-tés
+ []
+
+
+Overfull \hbox (3.8051pt too wide) in paragraph at lines 10--11
+\T1/ptm/m/n/12 don-nées et l'in-té-gra-tion de gra-phiques in-ter-ac-tifs, ont été ajou-tées pour fa-ci-li-ter la consul-ta-tion
+ []
+
+
+Overfull \hbox (16.54839pt too wide) in paragraph at lines 10--11
+\T1/ptm/m/n/12 ra-pi-de-ment les pa-ra-mètres vi-taux, les alertes et les his-to-riques des pa-tients, tout en per-son-na-li-sant
+ []
+
+[58
+
+
+
+
+]
+<chapter7/chapter7/screens/dash.png, id=1081, 1156.32pt x 628.749pt>
+File: chapter7/chapter7/screens/dash.png Graphic file (type png)
+<use chapter7/chapter7/screens/dash.png>
+Package pdftex.def Info: chapter7/chapter7/screens/dash.png  used on input line 14.
+(pdftex.def)             Requested size: 352.81552pt x 191.84012pt.
+<chapter7/chapter7/screens/patientslist.png, id=1082, 1156.32pt x 629.9535pt>
+File: chapter7/chapter7/screens/patientslist.png Graphic file (type png)
+<use chapter7/chapter7/screens/patientslist.png>
+Package pdftex.def Info: chapter7/chapter7/screens/patientslist.png  used on input line 21.
+(pdftex.def)             Requested size: 352.81552pt x 192.20763pt.
+<chapter7/chapter7/screens/staff list.png, id=1083, 1156.32pt x 634.7715pt>
+File: chapter7/chapter7/screens/staff list.png Graphic file (type png)
+<use chapter7/chapter7/screens/staff list.png>
+Package pdftex.def Info: chapter7/chapter7/screens/staff list.png  used on input line 28.
+(pdftex.def)             Requested size: 352.81552pt x 193.67766pt.
+ [59 <./chapter7/chapter7/screens/dash.png> <./chapter7/chapter7/screens/patientslist.png>]
+Overfull \hbox (30.92494pt too wide) in paragraph at lines 34--35
+[]\T1/ptm/m/n/12 Les in-ter-faces mo-biles ont été fi-na-li-sées pour of-frir une ex-pé-rience uti-li-sa-teur fluide et fonc-tion-nelle,
+ []
+
+
+Overfull \hbox (15.19318pt too wide) in paragraph at lines 34--35
+\T1/ptm/m/n/12 de-puis leurs smart-phones ou ta-blettes. Pour une pré-sen-ta-tion claire, les in-ter-faces sont or-ga-ni-sées
+ []
+
+
+Overfull \hbox (16.14082pt too wide) in paragraph at lines 34--35
+\T1/ptm/m/n/12 com-men-taire sur l'état d'un pa-tient ; la Fi-gure [][]7.5[][] illustre l'op-tion d'au-to-ri-sa-tion des no-ti-fi-ca-tions
+ []
+
+<chapter7/chapter7/screens/add_comment_patient.png, id=1100, 1084.05pt x 2409.0pt>
+File: chapter7/chapter7/screens/add_comment_patient.png Graphic file (type png)
+<use chapter7/chapter7/screens/add_comment_patient.png>
+Package pdftex.def Info: chapter7/chapter7/screens/add_comment_patient.png  used on input line 40.
+(pdftex.def)             Requested size: 132.30666pt x 293.99315pt.
+
+Underfull \hbox (badness 2538) in paragraph at lines 41--41
+[]\T1/ptm/b/sc/10.95 Figure 7.4 \T1/ptm/b/n/10.95 : |\T1/ptm/m/n/10.95 Ajou-ter un
+ []
+
+<chapter7/chapter7/screens/allow_notification.png, id=1101, 1084.05pt x 2409.0pt>
+File: chapter7/chapter7/screens/allow_notification.png Graphic file (type png)
+<use chapter7/chapter7/screens/allow_notification.png>
+Package pdftex.def Info: chapter7/chapter7/screens/allow_notification.png  used on input line 47.
+(pdftex.def)             Requested size: 132.30666pt x 293.99315pt.
+<chapter7/chapter7/screens/detailed_patient_list.png, id=1102, 1084.05pt x 2409.0pt>
+File: chapter7/chapter7/screens/detailed_patient_list.png Graphic file (type png)
+<use chapter7/chapter7/screens/detailed_patient_list.png>
+Package pdftex.def Info: chapter7/chapter7/screens/detailed_patient_list.png  used on input line 54.
+(pdftex.def)             Requested size: 132.30666pt x 293.99315pt.
+[60 <./chapter7/chapter7/screens/staff list.png>]
+<chapter7/chapter7/screens/home.png, id=1109, 1084.05pt x 2409.0pt>
+File: chapter7/chapter7/screens/home.png Graphic file (type png)
+<use chapter7/chapter7/screens/home.png>
+Package pdftex.def Info: chapter7/chapter7/screens/home.png  used on input line 64.
+(pdftex.def)             Requested size: 132.30666pt x 293.99315pt.
+<chapter7/chapter7/screens/landing_page.png, id=1110, 1084.05pt x 2409.0pt>
+File: chapter7/chapter7/screens/landing_page.png Graphic file (type png)
+<use chapter7/chapter7/screens/landing_page.png>
+Package pdftex.def Info: chapter7/chapter7/screens/landing_page.png  used on input line 71.
+(pdftex.def)             Requested size: 132.30666pt x 293.99315pt.
+<chapter7/chapter7/screens/login.png, id=1111, 1084.05pt x 2409.0pt>
+File: chapter7/chapter7/screens/login.png Graphic file (type png)
+<use chapter7/chapter7/screens/login.png>
+Package pdftex.def Info: chapter7/chapter7/screens/login.png  used on input line 78.
+(pdftex.def)             Requested size: 132.30666pt x 293.99315pt.
+<chapter7/chapter7/screens/machines_list.png, id=1112, 1084.05pt x 2409.0pt>
+File: chapter7/chapter7/screens/machines_list.png Graphic file (type png)
+<use chapter7/chapter7/screens/machines_list.png>
+Package pdftex.def Info: chapter7/chapter7/screens/machines_list.png  used on input line 88.
+(pdftex.def)             Requested size: 132.30666pt x 293.99315pt.
+
+Underfull \hbox (badness 3354) in paragraph at lines 89--89
+[]\T1/ptm/b/sc/10.95 Figure 7.10 \T1/ptm/b/n/10.95 : |\T1/ptm/m/n/10.95 Liste des
+ []
+
+<chapter7/chapter7/screens/machine_detailes.png, id=1113, 1084.05pt x 2409.0pt>
+File: chapter7/chapter7/screens/machine_detailes.png Graphic file (type png)
+<use chapter7/chapter7/screens/machine_detailes.png>
+Package pdftex.def Info: chapter7/chapter7/screens/machine_detailes.png  used on input line 95.
+(pdftex.def)             Requested size: 132.30666pt x 293.99315pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
+[]\T1/ptm/b/sc/10.95 Figure 7.11 \T1/ptm/b/n/10.95 : |\T1/ptm/m/n/10.95 Dé-tails
+ []
+
+<chapter7/chapter7/screens/notifications.png, id=1114, 1084.05pt x 2409.0pt>
+File: chapter7/chapter7/screens/notifications.png Graphic file (type png)
+<use chapter7/chapter7/screens/notifications.png>
+Package pdftex.def Info: chapter7/chapter7/screens/notifications.png  used on input line 102.
+(pdftex.def)             Requested size: 132.30666pt x 293.99315pt.
+[61 <./chapter7/chapter7/screens/add_comment_patient.png> <./chapter7/chapter7/screens/allow_notification.png> <./chapter7/chapter7/screens/detailed_patient_list.png> <./chapter7/chapter7/screens/home.png> <./chapter7/chapter7/screens/landing_page.png> <./chapter7/chapter7/screens/login.png>]
+<chapter7/chapter7/screens/patients_lits.png, id=1127, 1084.05pt x 2409.0pt>
+File: chapter7/chapter7/screens/patients_lits.png Graphic file (type png)
+<use chapter7/chapter7/screens/patients_lits.png>
+Package pdftex.def Info: chapter7/chapter7/screens/patients_lits.png  used on input line 112.
+(pdftex.def)             Requested size: 132.30666pt x 293.99315pt.
+<chapter7/chapter7/screens/patient_detailes.png, id=1128, 1084.05pt x 2409.0pt>
+File: chapter7/chapter7/screens/patient_detailes.png Graphic file (type png)
+<use chapter7/chapter7/screens/patient_detailes.png>
+Package pdftex.def Info: chapter7/chapter7/screens/patient_detailes.png  used on input line 119.
+(pdftex.def)             Requested size: 132.30666pt x 293.99315pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--120
+[]\T1/ptm/b/sc/10.95 Figure 7.14 \T1/ptm/b/n/10.95 : |\T1/ptm/m/n/10.95 Dé-tails
+ []
+
+<chapter7/chapter7/screens/patient_machine_data.png, id=1129, 1084.05pt x 2409.0pt>
+File: chapter7/chapter7/screens/patient_machine_data.png Graphic file (type png)
+<use chapter7/chapter7/screens/patient_machine_data.png>
+Package pdftex.def Info: chapter7/chapter7/screens/patient_machine_data.png  used on input line 126.
+(pdftex.def)             Requested size: 132.30666pt x 293.99315pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 127--127
+[]\T1/ptm/b/sc/10.95 Figure 7.15 \T1/ptm/b/n/10.95 : |\T1/ptm/m/n/10.95 Don-nées
+ []
+
+<chapter7/chapter7/screens/profile.png, id=1130, 1084.05pt x 2409.0pt>
+File: chapter7/chapter7/screens/profile.png Graphic file (type png)
+<use chapter7/chapter7/screens/profile.png>
+Package pdftex.def Info: chapter7/chapter7/screens/profile.png  used on input line 136.
+(pdftex.def)             Requested size: 132.30666pt x 293.99315pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--137
+[]\T1/ptm/b/sc/10.95 Figure 7.16 \T1/ptm/b/n/10.95 : |\T1/ptm/m/n/10.95 Pro-fil
+ []
+
+<chapter7/chapter7/screens/seen_notifications.png, id=1131, 1084.05pt x 2409.0pt>
+File: chapter7/chapter7/screens/seen_notifications.png Graphic file (type png)
+<use chapter7/chapter7/screens/seen_notifications.png>
+Package pdftex.def Info: chapter7/chapter7/screens/seen_notifications.png  used on input line 143.
+(pdftex.def)             Requested size: 132.30666pt x 293.99315pt.
+<chapter7/chapter7/screens/shift_calendar.png, id=1132, 1084.05pt x 2409.0pt>
+File: chapter7/chapter7/screens/shift_calendar.png Graphic file (type png)
+<use chapter7/chapter7/screens/shift_calendar.png>
+Package pdftex.def Info: chapter7/chapter7/screens/shift_calendar.png  used on input line 150.
+(pdftex.def)             Requested size: 132.30666pt x 293.99315pt.
+
+Underfull \hbox (badness 2393) in paragraph at lines 151--151
+[]\T1/ptm/b/sc/10.95 Figure 7.18 \T1/ptm/b/n/10.95 : |\T1/ptm/m/n/10.95 Ca-len-drier
+ []
+
+[62 <./chapter7/chapter7/screens/machines_list.png> <./chapter7/chapter7/screens/machine_detailes.png> <./chapter7/chapter7/screens/notifications.png> <./chapter7/chapter7/screens/patients_lits.png> <./chapter7/chapter7/screens/patient_detailes.png> <./chapter7/chapter7/screens/patient_machine_data.png>])
+Overfull \hbox (4.8012pt too wide) in paragraph at lines 157--124
+\T1/ptm/m/n/12 per-son-nel mé-di-cal ga-ran-tissent que le sys-tème ré-pond aux exi-gences ini-tiales d'au-to-ma-ti-sa-tion
+ []
+
+
+Overfull \hbox (12.45688pt too wide) in paragraph at lines 157--124
+\T1/ptm/m/n/12 de la sur-veillance et de ré-ac-ti-vité en salle de ré-veil. La do-cu-men-ta-tion fi-na-li-sée et l'in-fra-struc-ture
+ []
+
+[63 <./chapter7/chapter7/screens/profile.png> <./chapter7/chapter7/screens/seen_notifications.png> <./chapter7/chapter7/screens/shift_calendar.png>]
+\openout2 = `chapter8/chapter8.aux'.
+
+ (chapter8/chapter8.tex
+Overfull \hbox (1.47826pt too wide) in paragraph at lines 5--6
+\T1/ptm/m/n/12 ré-pon-dant aux be-soins spé-ci-fiques des hô-pi-taux tu-ni-siens, sou-vent confron-tés à des res-sources
+ []
+
+
+Overfull \hbox (3.75743pt too wide) in paragraph at lines 7--8
+[]\T1/ptm/m/n/12 Le Sprint 0 a per-mis de po-ser les fon-da-tions du pro-jet, en iden-ti-fiant les be-soins des uti-li-sa-teurs
+ []
+
+
+Overfull \hbox (8.67702pt too wide) in paragraph at lines 9--10
+\T1/ptm/m/n/12 pro-blé-ma-tique de com-pa-ti-bi-lité multi-marques ren-con-trée dans les en-vi-ron-ne-ments hos-pi-ta-liers
+ []
+
+
+Overfull \hbox (2.3413pt too wide) in paragraph at lines 15--16
+[]\T1/ptm/m/it/12 VitalSync \T1/ptm/m/n/12 se dis-tingue par son ar-chi-tec-ture mo-du-laire, sa com-pa-ti-bi-lité avec plu-sieurs marques
+ []
+
+
+Overfull \hbox (5.74924pt too wide) in paragraph at lines 17--18
+\T1/ptm/m/n/12 échelle. Parmi les pers-pec-tives en-vi-sa-gées fi-gurent : la conduite de tests cli-niques en condi-tions
+ []
+
+
+Overfull \hbox (8.86887pt too wide) in paragraph at lines 17--18
+\T1/ptm/m/n/12 réelles, l'adap-ta-tion du sys-tème à des si-tua-tions de ter-rain plus va-riées (pannes ré-seau, éclai-rage
+ []
+
+[64
+
+
+
+
+])
+Overfull \hbox (2.67761pt too wide) in paragraph at lines 19--125
+\T1/ptm/m/n/12 ef-fort co-or-donné entre ac-teurs aca-dé-miques, pro-fes-sion-nels de santé et par-te-naires tech-niques,
+ []
+
+
+Overfull \hbox (19.62073pt too wide) in paragraph at lines 19--125
+\T1/ptm/m/n/12 dans l'ob-jec-tif com-mun d'amé-lio-rer du-ra-ble-ment la qua-lité des soins dans les mi-lieux hos-pi-ta-liers
+ []
+
+[65] (main.bbl
 Underfull \hbox (badness 1132) in paragraph at lines 4--7
 []\T1/ptm/m/n/12 Faculté de Mé-de-cine de Mo-nas-tir.  Rap-port an-nuel 2020, 2020.  Avai-lable :
  []
@@ -2117,38 +2464,33 @@ Underfull \hbox (badness 1237) in paragraph at lines 9--12
  []
 
 
-Underfull \hbox (badness 1275) in paragraph at lines 40--44
-[]\T1/ptm/m/n/12 United Na-tions.  Tech-no-logy and in-no-va-tion re-port 2021, 2021.  Avai-lable :
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 57--60
+Underfull \hbox (badness 10000) in paragraph at lines 56--59
 []\T1/ptm/m/n/12 Google.  Fi-re-base cloud mes-sa-ging, 2023.  Avai-lable :
  []
 
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 100.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 74.
 (C:\Program Files\MiKTeX\tex/latex/psnfss\t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-) [61
-
-
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 118--123
+)
+Underfull \hbox (badness 10000) in paragraph at lines 87--92
 []\T1/ptm/m/n/12 ClickUp.  Cli-ckup docs : Pro-duct ma-na-ge-ment and agile
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--123
+Underfull \hbox (badness 10000) in paragraph at lines 87--92
 \T1/ptm/m/n/12 tools.  [][]$\T1/pcr/m/n/12 https : / / docs . clickup . com / en / articles /
  []
 
 
-Underfull \hbox (badness 1910) in paragraph at lines 125--128
+Underfull \hbox (badness 1910) in paragraph at lines 94--97
 []\T1/ptm/m/n/12 Slack Tech-no-lo-gies.  Slack do-cu-men-ta-tion.  [][]$\T1/pcr/m/n/12 https : / / slack . com / help /
  []
 
-) [62]
+[66
+
+
+
+]) [67]
 \openout2 = `annexes/annexeA.aux'.
 
 
@@ -2158,7 +2500,7 @@ No file annexes/annexeA.tex.
 No file annexes/annexeB.tex.
 
 AED: lastpage setting LastPage
-(main.aux (chapter0/introduction.aux) (chapter1/chapter1.aux) (chapter2/chapter2.aux) (chapter3/chapter3.aux) (chapter4/chapter4.aux) (chapter5/chapter5.aux) (chapter6/chapter6.aux) (annexes/annexeA.aux) (annexes/annexeB.aux))
+(main.aux (chapter0/introduction.aux) (chapter1/chapter1.aux) (chapter2/chapter2.aux) (chapter3/chapter3.aux) (chapter4/chapter4.aux) (chapter5/chapter5.aux) (chapter6/chapter6.aux) (chapter7/chapter7.aux) (chapter8/chapter8.aux) (annexes/annexeA.aux) (annexes/annexeB.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -2168,20 +2510,20 @@ L3 programming layer <2024-01-04>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3F9C4337A69CC881A3C0968E1E8E41D6;16240.
+(rerunfilecheck)             Checksum: F2A303EC1701CADBB2A6E0E1F9D43AA7;15557.
  ) 
 Here is how much of TeX's memory you used:
- 36171 strings out of 474486
- 701081 string characters out of 5743756
- 1943542 words of memory out of 5000000
- 57539 multiletter control sequences out of 15000+600000
+ 36346 strings out of 474486
+ 710114 string characters out of 5743756
+ 1946542 words of memory out of 5000000
+ 57686 multiletter control sequences out of 15000+600000
  606468 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 103i,17n,107p,1731b,805s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 103i,17n,107p,1731b,830s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (62 pages, 3753549 bytes).
+Output written on main.pdf (67 pages, 7678524 bytes).
 PDF statistics:
- 1191 PDF objects out of 1200 (max. 8388607)
- 222 named destinations out of 1000 (max. 500000)
- 892 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1269 PDF objects out of 1440 (max. 8388607)
+ 232 named destinations out of 1000 (max. 500000)
+ 972 words of extra memory for PDF output out of 10000 (max. 10000000)
 

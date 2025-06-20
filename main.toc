@@ -1,94 +1,86 @@
 \babel@toc {french}{}\relax 
-\contentsline {chapter}{Introduction Générale}{10}{chapter*.4}%
-\contentsline {chapter}{\numberline {1}Cadre Général du Projet}{11}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Présentation de l’organisme d’accueil}{11}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Contexte et problématique}{11}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Présentation du projet}{12}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Objectifs}{12}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}Variété des moniteurs et des signes vitaux}{13}{subsection.1.3.2}%
-\contentsline {subsection}{\numberline {1.3.3}Impact attendu}{14}{subsection.1.3.3}%
-\contentsline {section}{\numberline {1.4}Etude de l'existants}{14}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Solutions disponibles}{14}{subsection.1.4.1}%
+\contentsline {chapter}{Introduction Générale}{11}{chapter*.4}%
+\contentsline {chapter}{\numberline {1}Cadre Général du Projet}{12}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Introduction}{12}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Présentation de l’organisme d’accueil}{12}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Contexte et problématique}{13}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Variabilité des signes vitaux}{13}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Défis structurels et opérationnels}{13}{subsection.1.3.2}%
+\contentsline {section}{\numberline {1.4}Analyse des solutions existantes}{14}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Présentation des solutions existantes}{14}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Comparaison et limites}{15}{subsection.1.4.2}%
 \contentsline {section}{\numberline {1.5}Solution proposée : VitalSync}{16}{section.1.5}%
-\contentsline {subsection}{\numberline {1.5.1}Collecte de données}{17}{subsection.1.5.1}%
-\contentsline {subsection}{\numberline {1.5.2}Gestion des alertes}{18}{subsection.1.5.2}%
-\contentsline {chapter}{\numberline {2}Méthodologie adoptée}{19}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Choix de la méthodologie}{19}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Comparaison des méthodologies courantes}{19}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Rationale détaillé pour le choix de Scrum}{19}{subsection.2.1.2}%
-\contentsline {section}{\numberline {2.2}Présentation de Scrum}{20}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Artefacts Scrum et leur application}{20}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Événements Scrum et leur implémentation}{21}{subsection.2.2.2}%
-\contentsline {section}{\numberline {2.3}Les rôles Scrum}{22}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Gestion des risques avec Scrum}{23}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Engagement des parties prenantes dans Scrum}{24}{section.2.5}%
+\contentsline {subsection}{\numberline {1.5.1}Fonctionnement de VitalSync}{16}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}Les Avantages de VitalSync}{17}{subsection.1.5.2}%
+\contentsline {section}{\numberline {1.6}Conclusion}{17}{section.1.6}%
+\contentsline {chapter}{\numberline {2}Méthodologie et spécifications des besoins}{18}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Introduction}{18}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Analyse et spécification des besoins}{18}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Identification des acteurs}{18}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Specification des besoins}{19}{subsection.2.2.2}%
+\contentsline {subsubsection}{Besoins fonctionnels :}{19}{subsubsection*.13}%
+\contentsline {subsubsection}{Besoins non fonctionnels :}{19}{subsubsection*.14}%
+\contentsline {section}{\numberline {2.3}Choix de la méthodologie}{20}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Etude comparative des méthodologies}{20}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Méthodologie retenue : Scrum}{20}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}Présentation de Scrum}{21}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Artefacts Scrum et leur application}{22}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Événements Scrum et leur implémentation}{22}{subsection.2.4.2}%
+\contentsline {section}{\numberline {2.5}Les rôles Scrum}{23}{section.2.5}%
 \contentsline {section}{\numberline {2.6}Outils de support à Scrum}{24}{section.2.6}%
-\contentsline {section}{\numberline {2.7}Représentation visuelle du processus Scrum}{25}{section.2.7}%
-\contentsline {chapter}{\numberline {3}Étude architecturale du projet}{27}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Introduction}{27}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Architecture globale}{27}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Diagramme de classes}{29}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Diagramme de séquence}{31}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Diagramme de déploiement}{31}{subsection.3.2.3}%
-\contentsline {paragraph}{Couche de collecte des données}{31}{paragraph*.20}%
-\contentsline {paragraph}{Couche de traitement et stockage}{32}{paragraph*.21}%
-\contentsline {paragraph}{Couche de visualisation et notification}{32}{paragraph*.22}%
-\contentsline {paragraph}{Infrastructure et support}{32}{paragraph*.23}%
-\contentsline {paragraph}{Connexions et protocoles}{32}{paragraph*.24}%
-\contentsline {subsection}{\numberline {3.2.4}Diagramme de composants}{33}{subsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.2.5}Diagramme d'activité}{34}{subsection.3.2.5}%
-\contentsline {section}{\numberline {3.3}Architecture physique et fonctionnement}{35}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Composants matériels}{35}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Fonctionnement}{36}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Spécifications logicielles}{36}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}Flux de communication}{37}{subsection.3.3.4}%
-\contentsline {section}{\numberline {3.4}Justification de l'architecture}{37}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Conclusion}{38}{section.3.5}%
-\contentsline {chapter}{\numberline {4}Sprint 0}{39}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Introduction}{39}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Capture des besoins}{39}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Identification des acteurs}{39}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Besoins fonctionnels et non fonctionnels}{40}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Diagramme des cas d'utilisation global}{41}{subsection.4.2.3}%
-\contentsline {section}{\numberline {4.3}Pilotage du projet avec Scrum}{41}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Acteurs Scrum et Missions}{42}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Organisation du Backlog}{42}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Planification des sprints}{43}{subsection.4.3.3}%
-\contentsline {section}{\numberline {4.4}Environnement de travail}{45}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Environnement matériel}{45}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Environnement de développement}{45}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Environnement logiciel}{46}{subsection.4.4.3}%
-\contentsline {section}{\numberline {4.5}Conclusion}{48}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Sprint 1 : Création du dataset et mise en place du pipeline OCR}{49}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Introduction}{49}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Objectifs du Sprint 1}{49}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Sprint Backlog}{50}{subsection.5.2.1}%
-\contentsline {section}{\numberline {5.3}Tâches réalisées}{50}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Configuration du matériel}{51}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Capture et annotation des images}{51}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Entraînement du modèle de détection}{51}{subsection.5.3.3}%
-\contentsline {subsection}{\numberline {5.3.4}Développement du pipeline OCR}{52}{subsection.5.3.4}%
-\contentsline {subsection}{\numberline {5.3.5}Tests d’intégration et déploiement initial}{52}{subsection.5.3.5}%
-\contentsline {section}{\numberline {5.4}Livrables du Sprint 1}{53}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Tests et validation}{53}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Défis et solutions}{53}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Rétrospective du Sprint 1}{54}{section.5.7}%
-\contentsline {section}{\numberline {5.8}Planification pour le Sprint 2}{54}{section.5.8}%
-\contentsline {section}{\numberline {5.9}Conclusion}{54}{section.5.9}%
-\contentsline {chapter}{\numberline {6}Sprint 2}{56}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Introduction}{56}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Objectifs}{56}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Activités}{56}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Évaluation des règles d’alerte}{57}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}Génération et stockage des alertes}{57}{subsection.6.3.2}%
-\contentsline {subsection}{\numberline {6.3.3}Livraison des notifications}{57}{subsection.6.3.3}%
-\contentsline {subsection}{\numberline {6.3.4}Confirmation des alertes}{57}{subsection.6.3.4}%
-\contentsline {subsection}{\numberline {6.3.5}Intégration de l’API et du tableau de bord}{57}{subsection.6.3.5}%
-\contentsline {subsection}{\numberline {6.3.6}Mise en œuvre des alertes et notifications}{58}{subsection.6.3.6}%
-\contentsline {section}{\numberline {6.4}Résultats}{58}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Tests}{58}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Défis}{59}{section.6.6}%
-\contentsline {section}{\numberline {6.7}Rétrospective}{59}{section.6.7}%
-\contentsline {section}{\numberline {6.8}Planification du Sprint 3}{59}{section.6.8}%
-\contentsline {section}{\numberline {6.9}Conclusion}{60}{section.6.9}%
-\contentsline {chapter}{Bibliographie}{61}{section.6.9}%
+\contentsline {section}{\numberline {2.7}Conclusion}{25}{section.2.7}%
+\contentsline {chapter}{\numberline {3}Étude architecturale du projet}{26}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introduction}{26}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Présentation de l'architecture VitalSync}{26}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Modèle de conception logicielle adoptée}{27}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Interactions et fonctionnement du système}{28}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Diagramme des cas d'utilisation}{28}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Diagramme de classes}{29}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Diagramme de séquence}{31}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Diagramme d'activités}{31}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.4.5}Diagramme de composants}{32}{subsection.3.4.5}%
+\contentsline {subsection}{\numberline {3.4.6}Diagramme de déploiement}{33}{subsection.3.4.6}%
+\contentsline {section}{\numberline {3.5}Pourquoi ce choix d'architecture}{33}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Conclusion}{34}{section.3.6}%
+\contentsline {chapter}{\numberline {4}Sprint 0 : Planification et préparation du projet}{35}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Introduction}{35}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Pilotage du projet avec Scrum}{35}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Acteurs Scrum et Missions}{35}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Organisation du Backlog}{36}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Planification des sprints}{37}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}Environnement de travail}{38}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Environnement matériel}{38}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Environnement de développement}{39}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Environnement logiciel}{40}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}Conclusion}{41}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Sprint 1 : Création du dataset et mise en place du pipeline OCR}{43}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Introduction}{43}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Objectifs du Sprint 1}{43}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Tâches réalisées}{45}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Configuration du matériel}{45}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Capture et annotation des images}{46}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Entraînement du modèle de détection}{46}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}Développement du pipeline OCR}{47}{subsection.5.3.4}%
+\contentsline {subsection}{\numberline {5.3.5}Tests d’intégration et déploiement initial}{48}{subsection.5.3.5}%
+\contentsline {section}{\numberline {5.4}Livrables du Sprint 1}{48}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Tests et validation}{49}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Défis et solutions}{49}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Planification pour le sprint 2}{50}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Conclusion}{50}{section.5.8}%
+\contentsline {chapter}{\numberline {6}Sprint 2 : Système d'alertes et de notifications}{51}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Introduction}{51}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Objectifs}{51}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Activités}{52}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Résultats}{55}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Tests}{56}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Défis}{56}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Planification pour le sprint 3}{57}{section.6.7}%
+\contentsline {section}{\numberline {6.8}Conclusion}{57}{section.6.8}%
+\contentsline {chapter}{\numberline {7}Sprint 3: Finalisation du système VitalSync}{58}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Introduction}{58}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Objectifs}{58}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Amélioration du tableau de bord}{58}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Interfaces mobiles}{60}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Conclusion}{63}{section.7.5}%
+\contentsline {chapter}{Conclusion générale et perspectives}{64}{chapter*.60}%
+\contentsline {chapter}{Bibliographie}{66}{chapter*.60}%

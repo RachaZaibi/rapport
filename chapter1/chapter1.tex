@@ -1,12 +1,18 @@
-
 \chapter{Cadre Général du Projet}
 
+\section{Introduction}
+% Brève introduction pour poser le cadre du projet, son importance, et présenter l’organisme d’accueil ainsi que les objectifs du chapitre.
+
+Le présent chapitre vise à décrire le contexte général du projet \textbf{VitalSync}, réalisé au sein du \textbf{SmartLab} de la \textbf{Faculté de Médecine de Monastir (FMM)}. Il présente l’organisme d’accueil, le contexte hospitalier tunisien, les défis liés à la surveillance post-opératoire, ainsi que la solution proposée. Ce chapitre s’articule autour de quatre axes principaux : la présentation de l’organisme, l’analyse du contexte et des problématiques, l’étude des solutions existantes, et la description de la solution \textbf{VitalSync}.
+
 \section{Présentation de l’organisme d’accueil}
-Le projet a été réalisé au sein du \textbf{SmartLab}, une \textbf{Unité de Service Commun et de Recherche (USCR)} rattachée à la \textbf{Faculté de Médecine de Monastir (FMM)}, fondée le 15 août 1980 \cite{FMM2020}. La FMM est une institution tunisienne de référence, reconnue pour son excellence académique et son engagement dans la recherche médicale. Elle a obtenu une accréditation internationale et la certification \textbf{ISO 21001}, attestant de ses standards élevés en éducation et recherche \cite{ISO21001}. La FMM forme des professionnels de santé qualifiés et contribue à l’avancement des sciences médicales à travers des projets innovants et des partenariats interdisciplinaires.
+% Contenu inchangé, mais légèrement condensé pour plus de concision.
 
-Le SmartLab, créé pour catalyser l’innovation dans les sciences de la santé, joue un rôle clé dans la transformation des soins médicaux en Tunisie \cite{WHO2021}. En favorisant la collaboration entre chercheurs, cliniciens et start-ups, il développe des solutions technologiques adaptées aux défis locaux, tels que les contraintes budgétaires et les besoins en automatisation. Le SmartLab dispose d’équipements de pointe, comme des laboratoires IoT et des outils de simulation, et d’une équipe pluridisciplinaire, ce qui en fait une plateforme idéale pour des projets comme VitalSync, qui vise à moderniser la surveillance post-opératoire. Cette unité s’inscrit dans une vision stratégique visant à combler le fossé entre la recherche académique et les applications cliniques, contribuant à l’amélioration des soins de santé en Tunisie et au-delà.
+Le projet a été réalisé au sein du \textbf{SmartLab}, une \textbf{Unité de Service Commun et de Recherche (USCR)} rattachée à la \textbf{Faculté de Médecine de Monastir (FMM)}, fondée le 15 août 1980 \cite{FMM2020}. La FMM, institution tunisienne de référence, est reconnue pour son excellence académique et son engagement dans la recherche médicale. Certifiée \textbf{ISO 21001}, elle forme des professionnels de santé et contribue à l’avancement des sciences médicales via des projets innovants \cite{ISO21001}.
 
-\begin{figure}[ht]
+Le \textbf{SmartLab} catalyse l’innovation en santé en favorisant la collaboration entre chercheurs, cliniciens et start-ups \cite{WHO2021}. Doté d’équipements de pointe (laboratoires IoT, outils de simulation) et d’une équipe pluridisciplinaire, il développe des solutions technologiques adaptées aux défis locaux, comme les contraintes budgétaires et les besoins en automatisation. Cette unité constitue une plateforme idéale pour moderniser la surveillance post-opératoire, en comblant le fossé entre recherche académique et applications cliniques.
+
+\begin{figure}[H]
     \centering
     \begin{minipage}{0.45\textwidth}
         \centering
@@ -24,39 +30,18 @@ Le SmartLab, créé pour catalyser l’innovation dans les sciences de la santé
 \end{figure}
 
 \section{Contexte et problématique}
-En Tunisie, les hôpitaux publics et privés opèrent dans un contexte marqué par des contraintes financières et logistiques significatives \cite{TunisieMedicale2019}. La surveillance des patients en salle de réveil repose sur des méthodes traditionnelles : un écran centralisé, situé dans une salle administrative, affiche les signes vitaux, tandis que le personnel médical effectue des vérifications manuelles régulières. Ce système entraîne des inefficacités majeures. Par exemple, dans un hôpital moyen tunisien, un infirmier peut être responsable de 10 à 15 patients en post-opératoire, nécessitant des déplacements fréquents pour vérifier les moniteurs, ce qui peut retarder la détection d’anomalies critiques, comme une chute de SpO$_2$, de plusieurs minutes \cite{CriticalCare2020}. Ces délais augmentent les risques pour les patients, particulièrement dans des situations nécessitant une intervention immédiate.
+% Regroupement des sous-sections pour une présentation plus cohérente et fluide.
 
-Le manque de personnel qualifié aggrave ces défis, avec un ratio infirmier-patient souvent inférieur aux normes internationales (e.g., 1:12 contre 1:6 recommandé par l’OMS dans les unités post-opératoires) \cite{WHO2009}. Cette pénurie exacerbe la charge de travail et les risques d’erreurs humaines, notamment en période d’affluence. Les solutions existantes, principalement étrangères, telles que Mindray, ChartX ou IQ Messenger SmartApp, sont peu adaptées. Leur coût d’acquisition, souvent supérieur à 50 000–100 000 dinars tunisiens pour un hôpital moyen, and leurs besoins en infrastructure réseau sophistiquée ou en matériel spécifique les rendent inaccessibles \cite{Mindray2023, UN2021}. De plus, ces solutions sont rarement compatibles avec les équipements hétérogènes des hôpitaux tunisiens, qui utilisent un mélange de moniteurs anciens et modernes de marques variées \cite{WHO2009}. Cette problématique souligne la nécessité d’une solution locale, économique et flexible, capable d’automatiser la surveillance tout en s’intégrant aux infrastructures existantes.
+% \subsection{Organisation actuelle de la surveillance post-opératoire}
+Dans les hôpitaux tunisiens, la surveillance en salle de réveil repose sur des dispositifs classiques : un écran centralisé affiche les signes vitaux, tandis que le personnel effectue des rondes régulières pour consulter les moniteurs au chevet des patients \cite{TunisieMedicale2019}. Ce modèle, dépendant fortement de l’intervention humaine pour surveiller les constantes vitales.
 
-\section{Présentation du projet}
-Le projet \textbf{VitalSync} ambitionne de révolutionner la surveillance post-opératoire dans les salles de réveil tunisiennes en développant un système de collecte de données en temps réel et de gestion des alertes. En exploitant des technologies modernes comme l’\textbf{Internet des Objets (IoT)} \cite{AlTurjman2020}, la \textbf{reconnaissance optique de caractères (OCR)} \cite{Smith2007} et les \textbf{notifications en temps réel} \cite{Firebase2023}, VitalSync répond aux défis d’automatisation et de réactivité dans des environnements à ressources limitées. Conçu pour être économique, il utilise des caméras IP et un serveur local, assurant une compatibilité avec une large gamme de moniteurs médicaux, qu’ils soient anciens ou modernes, contrairement aux solutions étrangères coûteuses.
+\subsection{Variabilité des signes vitaux}
+% define vitalsings 
+Les constantes vitales, telles que la fréquence cardiaque, la pression artérielle et la saturation en oxygène (SpO$_2$), sont essentielles pour évaluer l’état de santé des patients. Elles varient en fonction de l’âge, de l’état clinique et du contexte post-opératoire \cite{WHO2021}. Par exemple, la fréquence cardiaque normale pour un adulte au repos est de 60 à 100 battements par minute (bpm), tandis que pour un enfant de 3 à 12 ans, elle se situe entre 70 et 120 bpm \cite{WHO2009}.
 
-\subsection{Objectifs}
-VitalSync vise à automatiser la collecte des paramètres vitaux, tels que la fréquence cardiaque, la pression artérielle et la SpO$_2$, en utilisant l’OCR pour les moniteurs (e.g., Mindray) \cite{Smith2007}. Le système permet une gestion dynamique des alertes basées sur des seuils critiques personnalisables, adaptés aux profils des patients (e.g., adultes, enfants, patients chroniques). Les notifications sont envoyées via Firebase Cloud Messaging (FCM) \cite{Firebase2023}, garantissant une réactivité optimale. VitalSync ambitionne également de réduire les vérifications manuelles, de minimiser les délais d’alerte et les erreurs humaines, améliorant la sécurité des patients et l’efficacité du personnel médical.
 
-% \subsection{Périmètre du projet}
-Le projet couvre l’ensemble de la chaîne de traitement des données, comme illustré dans le Tableau~\ref{tab:domaines_projet}. L’acquisition repose sur l’extraction des données via OCR pour les moniteurs, avec une validation automatique pour garantir la fiabilité \cite{Smith2007}. Le traitement inclut le nettoyage des données, leur agrégation et l’analyse des tendances des signes vitaux, permettant de détecter des anomalies subtiles. La visualisation est assurée par une interface utilisateur intuitive, offrant des tableaux de bord en temps réel et des historiques des données, accessibles sur des appareils fixes ou mobiles.
 
-\begin{table}[ht]
-  \centering
-  \caption{Domaines couverts par le projet}
-  \label{tab:domaines_projet}
-  \begin{tabular}{|l|p{8cm}|}
-  \hline
-  \textbf{Phase} & \textbf{Description} \\ \hline
-  Acquisition & Extraction des données via OCR\\ \hline
-  Traitement & Nettoyage, agrégation et analyse des tendances des signes vitaux \\ \hline
-  Visualisation & Interface avec tableaux de bord et historiques des données \\ \hline
-  \end{tabular}
-\end{table}
-
-\subsection{Variété des moniteurs et des signes vitaux}
-\label{sec:moniteurs_signes_vitaux}
-Les hôpitaux tunisiens utilisent une grande variété de moniteurs médicaux, reflétant les contraintes budgétaires et l’évolution technologique inégale du secteur \cite{WHO2010}. Les établissements combinent des moniteurs anciens, comme les modèles analogiques de Philips ou B. Braun, avec des équipements modernes, tels que les moniteurs Mindray, Edan ou HealForce équipés d’interfaces numériques. Ces moniteurs varient par leur format d’affichage (e.g., LED vs. CRT), leurs protocoles de communication (e.g., absence de connectivité vs. API privée) et leur ancienneté. Par exemple, un moniteur ancien peut afficher la fréquence cardiaque en texte brut sans sortie numérique, nécessitant l’OCR \cite{Smith2007}, tandis qu’un moniteur Mindray moderne transmet les données via un protocole HL7 \cite{Mindray2023}. Cette hétérogénéité exige une solution flexible, comme VitalSync, capable de s’adapter à divers équipements.
-
-Les signes vitaux surveillés, notamment la fréquence cardiaque, la pression artérielle et la SpO$_2$, présentent une variabilité significative selon l’âge, l’état de santé et le contexte de soins \cite{AHA2020}. Le Tableau~\ref{tab:signes_vitaux} illustre les plages normales pour différents groupes. Par exemple, la fréquence cardiaque d’un adulte au repos (60–100 bpm) est plus faible que celle d’un enfant (70–120 bpm), tandis qu’un patient post-opératoire peut présenter des fluctuations indiquant des complications. La pression artérielle varie chez les patients hypertendus (>140/90 mmHg) ou hypotendus, et la SpO$_2$ peut chuter chez ceux atteints de pathologies respiratoires (<90\% en cas de pneumonie). En salle de réveil, une SpO$_2$ inférieure à 90\% ou une fréquence cardiaque supérieure à 120 bpm peut signaler une urgence, mais ces seuils doivent être ajustés selon le patient. VitalSync intègre des seuils d’alerte dynamiques, configurables par le personnel médical, et assure une compatibilité multi-marques pour gérer cette diversité.
-
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \caption{Plages normales des signes vitaux selon l’âge et le contexte}
 \label{tab:signes_vitaux}
@@ -69,102 +54,142 @@ SpO$_2$ (\%) & 95–100 & 95–100 & 92–100 \\ \hline
 \end{tabular}
 \end{table}
 
-\subsection{Impact attendu}
-L’implémentation de VitalSync devrait transformer les soins post-opératoires en Tunisie. Sur le plan clinique, la détection précoce des anomalies grâce à des alertes en temps réel permettrait de réduire significativement les complications post-opératoires observées dans les salles de réveil tunisiennes \cite{CriticalCare2020}. Une intervention rapide à la suite d’une chute de la saturation en oxygène peut prévenir des hypoxémies graves. Sur le plan opérationnel, la diminution notable des vérifications manuelles libérerait les infirmiers de certaines tâches répétitives, leur permettant de se concentrer davantage sur les soins directs aux patients, ce qui améliorerait l’efficacité dans un contexte de pénurie de personnel soignant \cite{WHO2009}. D’un point de vue économique, l’utilisation d’une infrastructure simple et accessible, comme des caméras connectées à un serveur local, rend VitalSync particulièrement adapté aux ressources disponibles localement \cite{WHO2021}. Enfin, ce projet pourrait ouvrir la voie à d’autres innovations en santé connectée, stimulant l’écosystème technologique national.
 
-\section{Etude de l'existants}
-
-\subsection{Solutions disponibles}
-Trois solutions étrangères dominent actuellement le marché : le système de surveillance centralisé de Mindray, la plateforme web ChartX et l’application IQ Messenger SmartApp. Mindray, très répandu, repose sur un écran centralisé pour afficher les signes vitaux de plusieurs patients. Bien qu’il soit reconnu pour sa robustesse, il is limité à ses propres équipements, excluant ainsi des marques pourtant courantes en Tunisie, comme Edan ou HealForce \cite{Mindray2023}. De plus, l’absence de notifications mobiles impose au personnel de rester à proximité de l’écran, ce qui peut nuire à la réactivité en cas d’urgence. Enfin, son coût élevé, tant à l’acquisition qu’à l’entretien, en fait une solution difficilement accessible pour de nombreux établissements de santé locaux \cite{UN2021}.
-
-ChartX, une plateforme web, permet une automatisation partielle en collectant des données provenant de divers équipements médicaux via du matériel intermédiaire, tel que des passerelles IoT. Elle propose des tableaux de bord ainsi que des alertes web. Toutefois, son bon fonctionnement dépend d’une connectivité réseau fiable, souvent défaillante dans les hôpitaux situés en zones rurales en Tunisie \cite{UN2021}. Sa mise en place nécessite des ressources techniques importantes, notamment des serveurs dédiés et une configuration complexe, ce qui complique son adoption.
-
-IQ Messenger SmartApp, conçue pour être indépendante des fabricants, se distingue par sa capacité à générer des alertes en temps réel sur smartphones via des réseaux sans fil, sans recourir à des services cloud \cite{IQMessenger2023}. Elle offre une intégration avec les dossiers médicaux informatisés et inclut un mode « occupé » pour limiter la surcharge d’alertes. Toutefois, sa compatibilité reste restreinte à certains fabricants spécifiques, excluant une partie importante des équipements utilisés dans les établissements tunisiens. De plus, son coût demeure un frein pour les structures disposant de budgets limités \cite{UN2021}.
+\subsection{Défis structurels et opérationnels}
+La methode traditionnelle de surveillance post-opératoire adoptée par les hôpitaux tunisien présente plusieurs limitations qui compromettent la sécurité des patients et l’efficacité des soins. Parmi les principaux défis, on note :
+\begin{itemize}
+    \item \textbf{Sous-effectif} : Le ratio infirmier-patient (1:12 contre 1:6 recommandé par l’OMS) augmente la charge de travail et retarde la détection des anomalies \cite{WHO2009}.
+    \item \textbf{Absence d’automatisation} : Les vérifications manuelles sont chronophages et sujettes à des erreurs, surtout lors des pics d’activité \cite{CriticalCare2020}.
+    \item \textbf{Hétérogénéité des équipements} : Les moniteurs varient (analogiques sans connectivité comme Philips, ou numériques avec API comme Mindray), compliquant l’intégration des données \cite{WHO2010}.
+\end{itemize}
 
 
-% Introducing critique of existing solutions
-\section*{Critiques des solutions existantes}
-Les solutions existantes pour la surveillance en salle de réveil présentent des limites significatives dans le contexte tunisien. Mindray, bien qu’efficace pour une surveillance centralisée, manque d’automatisation avancée et de réactivité. L’absence d’alertes mobiles oblige le personnel à surveiller constamment un écran centralisé, ce qui entraîne des délais, notamment en période de forte affluence (e.g., 15 patients par infirmier). Comme mentionné dans \cite{Mindray2023}, Mindray est également limité à ses propres appareils, réduisant sa flexibilité dans des environnements hétérogènes. 
 
-ChartX, bien que compatible avec plusieurs marques, nécessite une infrastructure réseau sophistiquée, un obstacle majeur dans les hôpitaux tunisiens où la connectivité est souvent instable. Une panne réseau peut désactiver les alertes, compromettant la sécurité des patients, comme noté dans \cite{Sun2020}. IQ Messenger SmartApp offre des alertes rapides et une intégration avec les dossiers hospitaliers électroniques (DHE), mais sa compatibilité est restreinte à certains fabricants (e.g., Philips, B. Braun), ce qui pose problème dans des environnements multi-marques. De plus, le coût élevé de ces solutions et leur dépendance à des infrastructures complexes limitent leur adoption dans les hôpitaux tunisiens aux budgets contraints \cite{UN2021}.
+% \subsection{Limites des solutions existantes}
+% Les systèmes internationaux comme \textbf{Mindray}, \textbf{ChartX} ou \textbf{IQ Messenger SmartApp} automatisent partiellement la surveillance, mais leur adoption en Tunisie est freinée par :
+% \begin{itemize}
+%     \item leur coût élevé,
+%     \item la complexité de leur déploiement (infrastructure réseau, serveurs dédiés),
+%     \item leur faible compatibilité avec les moniteurs hétérogènes \cite{Mindray2023, UN2021}.
+% \end{itemize}
 
-% Presenting comparison of solutions
-% \section*{Comparaison des solutions}
-Le Tableau~\ref{tab:comparaison_smith} présente une comparaison des solutions de surveillance en salle de réveil, mettant en évidence leurs forces et faiblesses. Les critères incluent l’automatisation avancée, la compatibilité des appareils, les alertes en temps réel, la simplicité matérielle et l’efficacité opérationnelle. VitalSync se distingue par sa capacité à automatiser la collecte des données et à s’adapter à une large gamme de moniteurs, tout en offrant des alertes instantanées sur les appareils mobiles du personnel soignant.
+% \subsection{Problématique}
+Ces contraintes soulignent le besoin d’un système économique, facilement déployable, compatible avec divers équipements, et capable d’automatiser la surveillance avec des alertes en temps réel.
+
+\section{Analyse des solutions existantes}
+\label{sec:etude_existants}
+
+Cette section est restructurée pour présenter clairement les solutions existantes, leurs limites, et la nécessité d'une solution adaptée au contexte tunisien.
+\subsection{Présentation des solutions existantes}
+
+Plusieurs solutions technologiques sont actuellement déployées à l’échelle internationale pour assurer la surveillance des paramètres vitaux en milieu hospitalier. Parmi les plus connues figurent les systèmes \textbf{Mindray}, \textbf{ChartX} et \textbf{IQ Messenger SmartApp}, chacun offrant des fonctionnalités adaptées à différents contextes cliniques.
+\newline
+\begin{itemize}
+    \item \textbf{Mindray} propose une solution de surveillance centralisée qui permet d'afficher en temps réel les constantes vitales de plusieurs patients sur un écran dédié, facilitant ainsi le suivi global en salle de réveil.
+    % caption{Logo de Mindray}
+      \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.4\textwidth]{chapter1/images/mindray_logo.png}
+        \caption{Logo de Mindray}
+        \label{fig:mindray_logo}
+    \end{figure}
+    
+    \item \textbf{IQ Messenger SmartApp} se distingue par sa capacité à générer des alertes instantanées et par son intégration avec les systèmes d'information hospitaliers, notamment les dossiers hospitaliers électroniques (DHE), permettant une coordination optimale des soins.
+    % caption{Logo de IQ Messenger}
+      \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.4\textwidth]{chapter1/images/IQ_Messenger_Smart_logo.png}
+        \caption{Logo de IQ Messenger}
+        \label{fig:iq_messenger_logo}
+    \end{figure}
+    \item \textbf{ChartX} est un système interopérable conçu pour s’intégrer à divers équipements médicaux, tout en offrant des tableaux de bord interactifs et une visualisation continue des données patient.
+    % caption{Logo de ChartX}
+      \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.2\textwidth]{chapter1/images/XChartLogo.jpg}
+        \caption{Logo de ChartX}
+        \label{fig:chartx_logo}
+    \end{figure}
+\end{itemize}
+
+
+
+\subsection{Comparaison et limites}
+Le Tableau~\ref{tab:comparaison_smith} compare ces solutions selon cinq critères : automatisation, compatibilité, alertes, simplicité matérielle, et efficacité opérationnelle.
 
 \begin{table}[H]
 \centering
 \caption{Comparaison des solutions de surveillance}
 \label{tab:comparaison_smith}
 \resizebox{\textwidth}{!}{%
-\begin{tabular}{|l|c|c|c|c|}
+\begin{tabular}{|l|c|c|c|}
 \hline
 \textbf{Critère} & \textbf{Mindray} & \textbf{ChartX} & \textbf{IQ Messenger} \\ \hline
-Automatisation avancée   &$\varnothing$ & $\pm$ & $\surd$ \\ \hline
+Automatisation avancée & $\varnothing$ & $\pm$ & $\surd$ \\ \hline
 Compatibilité appareils & $\varnothing$ & $\surd$ & $\pm$ \\ \hline
-Alertes en temps réel  & $\varnothing$ & $\pm$ & $\surd$ \\ \hline
+Alertes en temps réel & $\varnothing$ & $\pm$ & $\surd$ \\ \hline
 Simplicité matérielle & $\pm$ & $\varnothing$ & $\surd$ \\ \hline
 Efficacité opérationnelle & $\pm$ & $\pm$ & $\surd$ \\ \hline
 \end{tabular}
 }
 \end{table}
 
-% Explaining the legend for the table
 \noindent
 {\footnotesize
-\textbf{Légende} : 
-\begin{itemize}
-    \item $\surd$ : Solution optimale
-    \item $\pm$ : Solution moyenne
-    \item $\varnothing$ : Solution non adaptée
-\end{itemize}
+\textbf{Légende} : $\surd$ : Optimal, $\pm$ : Moyen, $\varnothing$ : Non adapté
 }
 
+\textbf{Analyse critique} :
+% \subsection*{Analyse critique des solutions existantes}
+
+Plusieurs systèmes internationaux ont été développés pour améliorer la surveillance post-opératoire, parmi lesquels \textbf{Mindray}, \textbf{ChartX} et \textbf{IQ Messenger SmartApp}. Bien que ces solutions présentent des fonctionnalités avancées, leur déploiement dans le contexte tunisien reste limité pour plusieurs raisons.
+
+\begin{itemize}
+    \item \textbf{Mindray} : Bien qu’il soit largement utilisé, ce système reste centré sur l’affichage des paramètres sur un écran centralisé, sans génération d’alertes mobiles ni mécanismes d’automatisation des réponses. De plus, il est étroitement lié à ses propres équipements, rendant son intégration avec des moniteurs d’autres marques difficile  \cite{Mindray2023}.
+    
+    \item \textbf{ChartX} : Cette plateforme repose sur une infrastructure réseau stable et performante pour fonctionner de manière optimale. Or, la connectivité réseau dans certains établissements tunisiens est insuffisante, ce qui peut compromettre son efficacité.
+    
+    \item \textbf{IQ Messenger SmartApp} : Elle offre une bonne réactivité grâce à la gestion des alertes et à l’envoi de notifications en temps réel. Cependant, sa compatibilité avec les dispositifs médicaux est restreinte, et son coût élevé constitue un obstacle majeur pour les hôpitaux à budget limité.
+\end{itemize}
+
+En résumé, ces solutions ne répondent que partiellement aux besoins des établissements tunisiens. Leur coût, leur dépendance à des infrastructures techniques avancées, et leur faible compatibilité avec les équipements hétérogènes limitent fortement leur adoption. Cela renforce la nécessité de développer une solution locale, flexible et abordable, adaptée aux réalités techniques et humaines du secteur hospitalier tunisien.
+
+
+
+Ces limitations justifient le développement d’une solution adaptée au contexte tunisien.
 
 \section{Solution proposée : VitalSync}
-VitalSync constitue une solution innovante spécifiquement conçue pour répondre aux besoins des hôpitaux tunisiens, comme illustré dans la Figure~\ref{fig:vitalsync_simple}. En s’appuyant sur les technologies IoT \cite{Zhang2019}, l’OCR (à l’aide d’OpenCV et Tesseract) \cite{Smith2007} et les API, le système collecte automatiquement les paramètres vitaux à partir de moniteurs, assurant une compatibilité étendue avec diverses marques présentes sur le marché local.
 
-VitalSync permet une gestion dynamique des alertes en fonction de seuils critiques configurables, et envoie des notifications instantanées via Firebase Cloud Messaging \cite{Firebase2023}. Grâce à l’utilisation de caméras IP et d’un serveur local, la solution évite les besoins en infrastructure complexe ou coûteuse. Elle vise à alléger la charge de travail des soignants en automatisant une grande partie des vérifications, tout en assurant une meilleure réactivité dans la prise en charge des anomalies.
+Le projet \textbf{VitalSync} vise à moderniser la surveillance post-opératoire au sein des établissements de santé tunisiens en proposant une solution intelligente, économique et facilement intégrable. En combinant des technologies éprouvées telles que l’\textbf{Internet des Objets (IoT)} \cite{AlTurjman2020}, la \textbf{reconnaissance optique de caractères (OCR)} \cite{Smith2007} et les \textbf{notifications instantanées} via \textit{Firebase Cloud Messaging} \cite{Firebase2023}, VitalSync automatise la collecte des paramètres vitaux et assure une réactivité optimale grâce à un système d’alerte en temps réel.
 
-\begin{figure}[H]
-    \centering
-    \begin{tikzpicture}[
-        node distance=3cm,
-        process/.style={rectangle, draw=black, fill=blue!10, text width=4cm, minimum height=1cm, align=center},
-        decision/.style={diamond, draw=black, fill=green!10, text width=2cm, align=center},
-        startstop/.style={ellipse, draw=black, fill=red!10, text width=2cm, align=center},
-        arrow/.style={thick, -Stealth}
-    ]
-        % Nodes
-        \node[startstop] (start) {Début};
-        \node[process, below of=start] (monitors) {Moniteurs};
-        \node[process, below of=monitors] (collect) {Collecte \\ (OCR/YOLOv8)};
-        \node[process, below of=collect] (process) {Traitement \\ (Nettoyage)};
-        \node[decision, below of=process] (threshold) {Seuil \\ dépassé ?};
-        \node[process, below left=1cm of threshold] (alert) {Alertes \\ (FCM)};
-        \node[process, below right=1cm of threshold] (visualize) {Visualisation \\ (Tableaux)};
-        \node[startstop, below of=alert] (end1) {Fin};
-        \node[startstop, below of=visualize] (end2) {Fin};
+\subsection{Fonctionnement de VitalSync}
 
-        % Edges
-        \draw[arrow] (start) -- (monitors);
-        \draw[arrow] (monitors) -- (collect);
-        \draw[arrow] (collect) -- (process);
-        \draw[arrow] (process) -- (threshold);
-        \draw[arrow] (threshold) -| node[above left] {Oui} (alert);
-        \draw[arrow] (threshold) -| node[above right] {Non} (visualize);
-        \draw[arrow] (alert) -- (end1);
-        \draw[arrow] (visualize) -- (end2);
-    \end{tikzpicture}
-    \caption{Flux simplifié de VitalSync.}
-    \label{fig:vitalsync_simple}
-\end{figure}
+Conçu pour s’adapter aux contraintes des hôpitaux tunisiens, VitalSync repose sur une architecture légère et peu coûteuse. Le système utilise des caméras IP, connectées à un serveur local, pour capturer en temps réel les informations affichées sur les écrans des moniteurs médicaux. Ces données , telles que la fréquence cardiaque, la pression artérielle ou la saturation en oxygène (SpO$_2$) , sont ensuite extraites automatiquement grâce à une combinaison des bibliothèques \textit{OpenCV} et \textit{Tesseract}, via un processus de reconnaissance optique de caractères (OCR).
 
-\subsection{Collecte de données}
-VitalSync exploite des caméras IP couplées à \textbf{OpenCV} et \textbf{Tesseract OCR} pour extraire les données de moniteurs analogiques encore largement utilisés dans le contexte tunisien \cite{Smith2007}. Pour les équipements plus récents, l’intégration via des API standards permet une collecte fiable et en temps réel des paramètres vitaux \cite{Zhang2019}. Le système applique automatiquement des règles de validation pour éliminer les erreurs dues à des conditions d’éclairage médiocres ou à des perturbations visuelles, garantissant la fiabilité des informations traitées. À titre d’illustration, l’OCR permet d’interpréter des lectures affichées sur des écrans CRT, tandis que les API assurent une extraction directe et structurée des données issues de moniteurs numériques.
+Les données ainsi acquises sont ensuite nettoyées, structurées et analysées par un moteur de traitement intelligent qui les compare à des seuils critiques personnalisables selon le profil du patient (âge, antécédents médicaux, type d’intervention). En cas de détection d’une valeur anormale, une alerte est générée et transmise instantanément au personnel médical sous forme de notification, via le service \textit{Firebase Cloud Messaging}. Ce mécanisme garantit une prise de décision rapide et ciblée en cas d’urgence.
 
-\subsection{Gestion des alertes}
-Le système repose sur une logique de seuils configurables en fonction du profil et de l’état clinique des patients. Les notifications sont transmises via \textbf{Firebase Cloud Messaging} sur les appareils mobiles des soignants ainsi que par courriel, afin de favoriser une intervention rapide \cite{Firebase2023}. Le dispositif permet également une gestion intelligente des priorités : les alertes critiques sont mises en avant et redistribuées automatiquement si elles ne sont pas traitées dans un délai raisonnable, garantissant une continuité de surveillance même en cas d’indisponibilité momentanée du personnel.
+Le fonctionnement de VitalSync s’articule autour de trois grandes phases fonctionnelles, résumées dans le Tableau~\ref{tab:domaines_projet}.
 
-% \subsection{Conformité et sécurité}
-% VitalSync intègre des mécanismes de sécurité conformes aux bonnes pratiques internationales en matière de protection des données \cite{ISO27001}. Bien que la réglementation locale soit encore en cours d’évolution, le système applique des mesures comme l’anonymisation des données, le chiffrement des communications (notamment via HTTPS) et la restriction des accès par authentification renforcée. Une redondance locale permet également de maintenir les services d’alerte en fonctionnement même en cas de coupure du réseau, grâce à un système de cache et de synchronisation différée, assurant ainsi la continuité du service \cite{WHO2021}.
+\begin{table}[H]
+\centering
+\caption{Domaines couverts par VitalSync}
+\label{tab:domaines_projet}
+\begin{tabular}{|l|p{9cm}|}
+\hline
+\textbf{Phase} & \textbf{Description} \\ \hline
+\textbf{Acquisition} & Capture des données vitales à partir des écrans des moniteurs via OCR (OpenCV + Tesseract). \\ \hline
+\textbf{Traitement} & Nettoyage, structuration, et analyse des données en temps réel pour détecter les écarts critiques selon des seuils paramétrables. \\ \hline
+\textbf{Visualisation} & Affichage des données sur une interface intuitive avec tableaux de bord dynamiques et accès à l’historique pour le suivi des patients. \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{Les Avantages de VitalSync}
+
+La solution VitalSync présente de nombreux avantages par rapport aux systèmes existants. Elle est conçue pour être facilement déployable dans les hôpitaux tunisiens, sans nécessiter d’infrastructure complexe ou coûteuse. En utilisant des caméras IP standard et un serveur local, elle s’intègre aisément aux équipements déjà en place, qu’ils soient anciens ou récents. 
+De plus, son architecture modulaire permet une évolutivité et une adaptabilité aux besoins spécifiques de chaque établissement.
+
+VitalSync permet également de réduire considérablement la charge de travail du personnel soignant en automatisant les tâches de surveillance, tout en augmentant la réactivité face aux situations critiques. \newline Elle contribue ainsi à l’amélioration de la sécurité des patients et à l’optimisation de la qualité des soins. Enfin, cette approche ouvre la voie à des applications futures dans le domaine de la santé connectée en Tunisie, en posant les bases d’un écosystème technologique local durable \cite{WHO2021}.
+
+\section{Conclusion}
+
+Ce chapitre a permis de présenter le projet \textbf{VitalSync} en exposant le contexte dans lequel il s’inscrit, les contraintes du système de santé tunisien, ainsi que les limites des solutions existantes. Face à ces défis, VitalSync propose une réponse technologique innovante, accessible et parfaitement adaptée aux réalités locales. Les chapitres suivants détailleront la conception, le développement technique et l’évaluation de cette solution.

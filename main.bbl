@@ -20,27 +20,26 @@ A.~Ben Abdelaziz et~al.
 \newblock Challenges in tunisian public hospitals: A qualitative study.
 \newblock {\em La Tunisie Médicale}, 97(1):45--52, 2019.
 
-\bibitem{CriticalCare2020}
-J.~Smith et~al.
-\newblock Impact of monitoring delays on post-operative outcomes.
-\newblock {\em Critical Care Medicine}, 48(3):321--328, 2020.
-
 \bibitem{WHO2009}
 {World Health Organization}.
 \newblock {\em Global Standards for the Initial Education of Professional
   Nurses and Midwives}.
 \newblock WHO Press, 2009.
 
+\bibitem{CriticalCare2020}
+J.~Smith et~al.
+\newblock Impact of monitoring delays on post-operative outcomes.
+\newblock {\em Critical Care Medicine}, 48(3):321--328, 2020.
+
+\bibitem{WHO2010}
+{World Health Organization}.
+\newblock Medical devices: Managing the mismatch, 2010.
+\newblock Available: https://www.who.int/publications.
+
 \bibitem{Mindray2023}
 {Mindray}.
 \newblock Patient monitoring systems, 2023.
 \newblock Available: https://www.mindray.com/.
-
-\bibitem{UN2021}
-{United Nations}.
-\newblock Technology and innovation report 2021, 2021.
-\newblock Available:
-  https://unctad.org/publication/technology-and-innovation-report-2021.
 
 \bibitem{AlTurjman2020}
 F.~Al-Turjman.
@@ -57,31 +56,6 @@ R.~Smith.
 {Google}.
 \newblock Firebase cloud messaging, 2023.
 \newblock Available: https://firebase.google.com/docs/cloud-messaging.
-
-\bibitem{WHO2010}
-{World Health Organization}.
-\newblock Medical devices: Managing the mismatch, 2010.
-\newblock Available: https://www.who.int/publications.
-
-\bibitem{AHA2020}
-{American Heart Association}.
-\newblock {\em Advanced Cardiovascular Life Support Provider Manual}.
-\newblock AHA, 2020.
-
-\bibitem{IQMessenger2023}
-{IQ Messenger}.
-\newblock Smartapp features, 2023.
-\newblock Available: https://www.iqmessenger.com/.
-
-\bibitem{Sun2020}
-L.~Sun.
-\newblock Network reliability in healthcare systems.
-\newblock {\em Healthcare IT Review}, 12(4):45--50, 2020.
-
-\bibitem{Zhang2019}
-Y.~Zhang et~al.
-\newblock Real-time iot healthcare monitoring.
-\newblock {\em Journal of Medical Systems}, 43(8):1--10, 2019.
 
 \bibitem{schwaber2004}
 Ken Schwaber and Jeff Sutherland.
@@ -108,11 +82,6 @@ Atlassian.
 Atlassian.
 \newblock Scrum roles.
 \newblock \url{https://www.atlassian.com/agile/scrum/roles}, 2023.
-
-\bibitem{cohn2009}
-Mike Cohn.
-\newblock {\em Succeeding with Agile: Software development using Scrum}.
-\newblock Addison-Wesley, 2009.
 
 \bibitem{clickupdocs}
 ClickUp.

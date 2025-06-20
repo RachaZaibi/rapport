@@ -1,4 +1,4 @@
-\chapter{Sprint 0}
+\chapter{Sprint 0 :  Planification et préparation du projet}
 \label{chap:sprint0}
 
 \section{Introduction}
@@ -6,59 +6,10 @@
 
 Le Sprint 0 constitue la phase initiale du projet, qui vise à développer un système de collecte de données en temps réel et de gestion des alertes pour les appareils médicaux en salle de réveil. Cette étape fondamentale permet d’identifier les acteurs clés, de recueillir les besoins fonctionnels et non fonctionnels, et de définir la méthodologie Scrum qui guidera les phases ultérieures du développement. L’objectif est d’assurer un alignement avec les ambitions du projet, à savoir améliorer la surveillance post-opératoire grâce à une collecte automatisée des données et à des alertes en temps réel, comme décrit dans les chapitres d’introduction générale et d’étude architecturale.
 
-\section{Capture des besoins}
-
-\subsection{Identification des acteurs}
-\label{subsec:acteurs}
-
-Le système interagit avec plusieurs acteurs essentiels, chacun jouant un rôle distinct dans son fonctionnement. Ces acteurs, résumés dans un tableau dédié, sont en phase avec le contexte médical et les composants architecturaux décrits dans les chapitres précédents. Le médecin consulte les données des patients, reçoit les alertes critiques et valide les actions nécessaires. L’infirmier ou l’infirmière surveille les patients, reçoit des notifications adaptées à ses horaires et agit immédiatement en cas de besoin. L’administrateur du système gère les utilisateurs, configure les seuils d’alerte et veille au bon fonctionnement de l’ensemble. Les moniteurs de signes vitaux fournissent les données vitales, transmises via une interface API ou par extraction optique à l’aide de caméras. Enfin, les caméras capturent les écrans des moniteurs pour permettre l’extraction des données grâce à des technologies de détection et de reconnaissance de texte.
-
-\begin{table}[h]
-\centering
-\caption{Acteurs du système et leurs rôles}
-\label{tab:acteurs}
-\begin{tabular}{|p{3cm}|p{9cm}|}
-\hline
-\textbf{Acteur} & \textbf{Description} \\
-\hline
-Médecin & Consulte les données des patients, reçoit les alertes critiques et valide les actions nécessaires. \\
-\hline
-Infirmier(ère) & Surveille les patients, reçoit les alertes en fonction de ses horaires et prend des mesures immédiates. \\
-\hline
-Administrateur du Système & Gère les utilisateurs, configure les seuils d'alerte et assure le bon fonctionnement du système. \\
-\hline
-Moniteur de Signes Vitaux & Source de données des signes vitaux, transmises via API ou OCR basé sur caméra. \\
-\hline
-Caméra & Capture les écrans des moniteurs pour l'extraction des données via YOLO et OCR. \\
-\hline
-\end{tabular}
-\end{table}
-
-\subsection{Besoins fonctionnels et non fonctionnels}
-\label{subsec:besoins}
-
-Les besoins fonctionnels et non fonctionnels traduisent les objectifs du système, qui consistent à automatiser la collecte des données, optimiser la gestion des alertes, et garantir l’évolutivité ainsi que la conformité aux normes médicales, comme mentionné dans le chapitre d’introduction.
-
-En termes de fonctionnalités, le système collecte en temps réel les données issues des moniteurs de signes vitaux, tels que ceux des fabricants courants, en utilisant des caméras associées à une technologie de reconnaissance optique de caractères (OCR). Il extrait les signes vitaux, comme la fréquence cardiaque, la pression artérielle ou la saturation en oxygène, grâce à des outils de détection avancés et d’OCR, permettant une reconnaissance précise des valeurs affichées. Le système génère et gère des alertes en fonction de seuils prédéfinis, ajustables dynamiquement selon les besoins. Les données et les alertes sont accessibles via des interfaces web et mobiles, conçues pour offrir une visualisation en temps réel et une gestion intuitive. L’authentification et la gestion des utilisateurs s’appuient sur un système sécurisé basé sur les rôles, garantissant un accès adapté aux médecins, infirmiers et administrateurs. Les notifications sont envoyées en temps réel par des canaux variés, tels que des notifications push. Enfin, les données et l’historique des alertes sont stockés dans une base de données relationnelle pour permettre un suivi et une analyse ultérieure.
-
-En ce qui concerne les besoins non fonctionnels, le système doit être disponible en continu avec un temps d’arrêt minimal, garantissant une accessibilité constante pour les utilisateurs. La sécurité des données est assurée par un chiffrement robuste et des mécanismes d’authentification fiables, protégeant ainsi les informations sensibles des patients. Le système est conçu pour être compatible avec une variété de moniteurs médicaux, assurant une interopérabilité efficace. Il est également capable de s’adapter à une augmentation du nombre de patients et d’appareils, garantissant une évolutivité optimale. Les alertes critiques sont traitées instantanément pour répondre aux situations urgentes, et le système respecte les réglementations en vigueur concernant la protection des données médicales.
-
-\subsection{Diagramme des cas d'utilisation global}
-\label{subsec:cas_utilisation}
-
-Le diagramme global des cas d’utilisation illustre les interactions entre les acteurs et le système, incluant la consultation des données, la réception des alertes et la gestion administrative. Des prototypes d’interfaces web et mobiles ont été conçus pour visualiser les données et gérer les alertes, en tenant compte des besoins des utilisateurs identifiés précédemment.
-
-\begin{figure}[h]
-\centering
-\label{fig:cas_utilisation}
-\includegraphics[width=0.8\textwidth]{chapter4/sections/diagrams/use_case.png}
-\caption{Diagramme des cas d'utilisation global}
-\end{figure}
-
 \section{Pilotage du projet avec Scrum}
 \label{sec:gestion_scrum}
 
-Le projet adopte la méthodologie Scrum pour assurer un développement itératif et une collaboration étroite avec les parties prenantes, comme justifié dans le chapitre consacré à la méthodologie. Cette section détaille les rôles Scrum, l’organisation du backlog et la planification des sprints pour le Sprint 0.
+Le projet adopte la méthodologie Scrum pour assurer un développement itératif et une collaboration étroite avec les parties prenantes, comme justifié dans le chapitre consacré à la méthodologie. Cette section détaille les rôles Scrum, l’organisation du backlog et la planification des sprints.
 
 \subsection{Acteurs Scrum et Missions}
 \label{subsec:roles_scrum}
@@ -87,7 +38,7 @@ Scrum Master & Faciliter les événements Scrum, supprimer les obstacles, assure
 
 Le Product Backlog est géré à l’aide d’un outil de gestion de projet, organisé selon la méthode de priorisation MoSCoW pour refléter les objectifs stratégiques du projet. Chaque fonctionnalité est formulée sous forme de User Story pour garantir un développement centré sur l’utilisateur. Les tâches prioritaires incluent la détection et la reconnaissance des valeurs vitales à l’aide de technologies de détection et d’OCR, la génération et la gestion des alertes basées sur des seuils prédéfinis, ainsi que l’envoi de notifications via des canaux multiples, tels que les notifications push et les e-mails. Les interfaces web et mobiles permettent la visualisation des données et la gestion des alertes, tandis que l’authentification et la gestion des utilisateurs assurent un accès sécurisé basé sur les rôles. Le stockage des données et des historiques dans une base de données relationnelle est également prioritaire, tout comme la conformité aux réglementations médicales en matière de sécurité des données. D’autres tâches, jugées importantes mais non critiques pour la première version, incluent la configuration personnalisée des seuils d’alerte par patient, la gestion des horaires pour le filtrage des alertes, et l’optimisation des notifications pour une faible latence. Des fonctionnalités optionnelles, comme le support multilingue ou la gestion des alertes par niveau de priorité, pourraient être ajoutées si les ressources le permettent. Enfin, certaines tâches, telles que l’analyse avancée des données avec intelligence artificielle, sont hors du périmètre actuel.
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \caption{Backlog du Projet avec Priorités MoSCoW}
 \label{tab:backlog}
@@ -131,17 +82,42 @@ W-03 & Analyse avancée des données avec intelligence artificielle pour le diag
 \subsection{Planification des sprints}
 \label{subsec:planification_sprints}
 
-Le projet est structuré en trois sprints, chacun d’une durée de trois semaines, comme illustré dans le chapitre consacré à la méthodologie Scrum. La réunion de planification du Sprint 0 a permis d’identifier les tâches et les livrables, en s’alignant sur les besoins des parties prenantes et les composants architecturaux décrits précédemment.
+Le projet est structuré en trois sprints de trois semaines chacun. Le tableau ci-dessous présente une synthèse des objectifs, livrables, tâches, critères d’acceptation et risques associés à chaque sprint.
 
-Le premier sprint se concentre sur la création d’un dataset et la mise en place d’un pipeline OCR. L’objectif est de développer un système capable d’extraire les données des moniteurs médicaux à l’aide de technologies de détection et d’OCR. Les livrables incluent un dataset annoté d’images provenant de différents moniteurs, un modèle entraîné pour détecter les zones affichant les signes vitaux, et un pipeline intégrant la détection et l’extraction de texte. Les tâches principales consistent à capturer et annoter les images des moniteurs, entraîner le modèle de détection, intégrer des outils de traitement d’image et d’OCR, et configurer les caméras pour la capture des données. Les critères d’acceptation garantissent une détection précise des zones d’intérêt, une extraction fiable des valeurs, une faible latence du pipeline, et une compatibilité avec différents modèles de moniteurs. Les risques incluent des problèmes liés à l’éclairage ou à la qualité des images, qui peuvent être mitigés par un prétraitement optimisé, ainsi qu’une taille insuffisante du dataset, compensée par des techniques d’augmentation des données.
-
-Le deuxième sprint se focalise sur la mise en place d’un système d’alertes en temps réel et de notifications adaptées aux rôles des utilisateurs. Les livrables comprennent un moteur d’alertes basé sur des règles définissant les seuils pour les signes vitaux, un système de notification différencié selon les rôles, et l’intégration de notifications push pour les appareils mobiles. Les tâches incluent la configuration des seuils d’alerte, l’association des notifications aux rôles appropriés, l’intégration d’un service de messagerie pour les notifications, et la validation des données extraites pour garantir leur fiabilité. Les critères d’acceptation vérifient que les alertes sont déclenchées rapidement, envoyées aux bons destinataires, et que les données sont validées avec une grande précision. Les risques incluent des retards dans la transmission des notifications, qui peuvent être atténués par des tests avec des données simulées, et des erreurs dans l’extraction des données, compensées par des tests unitaires rigoureux.
-
-Le troisième sprint vise à développer les interfaces utilisateur et un tableau de bord pour la gestion des alertes. Les livrables incluent un tableau de bord web pour afficher les alertes et les signes vitaux en temps réel, une application mobile permettant la réception et l’accusé de réception des alertes, et une base de données pour stocker les alertes et les réponses du personnel. Les tâches consistent à développer le tableau de bord avec une priorisation claire des alertes, concevoir l’application mobile avec intégration des notifications, configurer la base de données pour un stockage fiable, et implémenter des technologies de mise à jour en temps réel. Les critères d’acceptation garantissent des mises à jour rapides des interfaces, une réception fiable des notifications, une intégrité totale des données stockées, et une ergonomie validée par les utilisateurs. Les risques incluent une latence potentielle des interfaces, mitigée par une optimisation des appels réseau, et une complexité d’intégration, résolue par des prototypes préliminaires et des tests itératifs.
+\begin{table}[H]
+\centering
+\caption{Planification des Sprints du Projet VitalSync}
+\label{tab:sprints}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{|p{2cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
+\hline
+\textbf{Sprint} & \textbf{Objectifs et livrables} & \textbf{Tâches principales} & \textbf{Critères d’acceptation} & \textbf{Risques et solutions} \\
+\hline
+\textbf{Sprint 1 \newline Pipeline OCR} &
+Identification des acteurs ; recueil des besoins ; définition de la méthodologie Scrum. &
+Dataset annoté ; modèle YOLO entraîné ; pipeline OCR fonctionnel. &
+Capture et annotation ; entraînement modèle ; intégration Tesseract ; configuration caméras. &
+Détection précise ; extraction fiable ; faible latence ; compatibilité multi-marques. Mauvais éclairage $\rightarrow$ prétraitement ; dataset limité $\rightarrow$ augmentation. \\
+\hline
+\textbf{Sprint 2 \newline Alertes temps réel} &
+Moteur d’alerte ; notifications selon rôles ; intégration FCM. &
+Configuration des seuils ; mapping rôles ; messagerie ; validation données. &
+Alertes rapides ; notifications correctes ; données validées avec précision. &
+Retards $\rightarrow$ tests simulés ; erreurs $\rightarrow$ tests unitaires. \\
+\hline
+\textbf{Sprint 3 \newline Interfaces et dashboard} &
+Dashboard web ; app mobile ; base de données des alertes. &
+Développement dashboard ; design app ; notifications ; mises à jour en temps réel. &
+Interfaces réactives ; réception fiable ; intégrité des données ; bonne ergonomie. &
+Latence $\rightarrow$ optimisation réseau ; intégration complexe $\rightarrow$ prototypes/tests. \\
+\hline
+\end{tabular}
+\end{table}
 
 
 \section{Environnement de travail}
 \label{sec:environnement}
+L’environnement de travail pour le projet VitalSync est structuré pour répondre aux exigences techniques et fonctionnelles définies dans les chapitres précédents. Il comprend des aspects matériels, logiciels et de développement, garantissant une intégration fluide des différentes composantes du système.
 
 \subsection{Environnement matériel}
 \label{subsec:materiel}
