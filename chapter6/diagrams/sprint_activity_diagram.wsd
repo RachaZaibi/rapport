@@ -6,9 +6,7 @@ start
 if (Anomaly detected?) then (yes)
   :Create alert in DB;
   :Set alert priority and status;
-  fork
-    :Send push notification (FCM);
-  end fork
+  :Send push notification (FCM);
 else (no)
   :No alert generated;
 endif

@@ -10,7 +10,7 @@ Le présent chapitre vise à décrire le contexte général du projet \textbf{Vi
 
 Le projet a été réalisé au sein du \textbf{SmartLab}, une \textbf{Unité de Service Commun et de Recherche (USCR)} rattachée à la \textbf{Faculté de Médecine de Monastir (FMM)}, fondée le 15 août 1980 \cite{FMM2020}. La FMM, institution tunisienne de référence, est reconnue pour son excellence académique et son engagement dans la recherche médicale. Certifiée \textbf{ISO 21001}, elle forme des professionnels de santé et contribue à l’avancement des sciences médicales via des projets innovants \cite{ISO21001}.
 
-Le \textbf{SmartLab} catalyse l’innovation en santé en favorisant la collaboration entre chercheurs, cliniciens et start-ups \cite{WHO2021}. Doté d’équipements de pointe (laboratoires IoT, outils de simulation) et d’une équipe pluridisciplinaire, il développe des solutions technologiques adaptées aux défis locaux, comme les contraintes budgétaires et les besoins en automatisation. Cette unité constitue une plateforme idéale pour moderniser la surveillance post-opératoire, en comblant le fossé entre recherche académique et applications cliniques.
+Le \textbf{SmartLab} catalyse l’innovation en santé en favorisant la collaboration entre chercheurs, cliniciens et start-ups. Doté d’équipements de pointe (laboratoires IoT, outils de simulation) et d’une équipe pluridisciplinaire, il développe des solutions technologiques adaptées aux défis locaux, comme les contraintes budgétaires et les besoins en automatisation. Cette unité constitue une plateforme idéale pour moderniser la surveillance post-opératoire, en comblant le fossé entre recherche académique et applications cliniques.
 
 \begin{figure}[H]
     \centering
@@ -85,7 +85,7 @@ Cette section est restructurée pour présenter clairement les solutions existan
 Plusieurs solutions technologiques sont actuellement déployées à l’échelle internationale pour assurer la surveillance des paramètres vitaux en milieu hospitalier. Parmi les plus connues figurent les systèmes \textbf{Mindray}, \textbf{ChartX} et \textbf{IQ Messenger SmartApp}, chacun offrant des fonctionnalités adaptées à différents contextes cliniques.
 \newline
 \begin{itemize}
-    \item \textbf{Mindray} propose une solution de surveillance centralisée qui permet d'afficher en temps réel les constantes vitales de plusieurs patients sur un écran dédié, facilitant ainsi le suivi global en salle de réveil.
+    \item \textbf{Mindray} propose une solution de surveillance centralisée qui permet d'afficher en temps réel les constantes vitales de plusieurs patients sur un écran dédié, facilitant ainsi le suivi global en salle de réveil.\cite{Mindray2023}
     % caption{Logo de Mindray}
       \begin{figure}[H]
         \centering
@@ -94,7 +94,7 @@ Plusieurs solutions technologiques sont actuellement déployées à l’échelle
         \label{fig:mindray_logo}
     \end{figure}
     
-    \item \textbf{IQ Messenger SmartApp} se distingue par sa capacité à générer des alertes instantanées et par son intégration avec les systèmes d'information hospitaliers, notamment les dossiers hospitaliers électroniques (DHE), permettant une coordination optimale des soins.
+    \item \textbf{IQ Messenger SmartApp} se distingue par sa capacité à générer des alertes instantanées et par son intégration avec les systèmes d'information hospitaliers, notamment les dossiers hospitaliers électroniques (DHE), permettant une coordination optimale des soins.\cite{IQMessenger2023}
     % caption{Logo de IQ Messenger}
       \begin{figure}[H]
         \centering
@@ -102,7 +102,7 @@ Plusieurs solutions technologiques sont actuellement déployées à l’échelle
         \caption{Logo de IQ Messenger}
         \label{fig:iq_messenger_logo}
     \end{figure}
-    \item \textbf{ChartX} est un système interopérable conçu pour s’intégrer à divers équipements médicaux, tout en offrant des tableaux de bord interactifs et une visualisation continue des données patient.
+    \item \textbf{ChartX} est un système interopérable conçu pour s’intégrer à divers équipements médicaux, tout en offrant des tableaux de bord interactifs et une visualisation continue des données patient.\cite{ChartX2023}
     % caption{Logo de ChartX}
       \begin{figure}[H]
         \centering
@@ -147,9 +147,9 @@ Plusieurs systèmes internationaux ont été développés pour améliorer la sur
 \begin{itemize}
     \item \textbf{Mindray} : Bien qu’il soit largement utilisé, ce système reste centré sur l’affichage des paramètres sur un écran centralisé, sans génération d’alertes mobiles ni mécanismes d’automatisation des réponses. De plus, il est étroitement lié à ses propres équipements, rendant son intégration avec des moniteurs d’autres marques difficile  \cite{Mindray2023}.
     
-    \item \textbf{ChartX} : Cette plateforme repose sur une infrastructure réseau stable et performante pour fonctionner de manière optimale. Or, la connectivité réseau dans certains établissements tunisiens est insuffisante, ce qui peut compromettre son efficacité.
+    \item \textbf{ChartX} : Cette plateforme repose sur une infrastructure réseau stable et performante pour fonctionner de manière optimale. Or, la connectivité réseau dans certains établissements tunisiens est insuffisante, ce qui peut compromettre son efficacité.\cite{XChart2023}
     
-    \item \textbf{IQ Messenger SmartApp} : Elle offre une bonne réactivité grâce à la gestion des alertes et à l’envoi de notifications en temps réel. Cependant, sa compatibilité avec les dispositifs médicaux est restreinte, et son coût élevé constitue un obstacle majeur pour les hôpitaux à budget limité.
+    \item \textbf{IQ Messenger SmartApp} : Elle offre une bonne réactivité grâce à la gestion des alertes et à l’envoi de notifications en temps réel. Cependant, sa compatibilité avec les dispositifs médicaux est restreinte, et son coût élevé constitue un obstacle majeur pour les hôpitaux à budget limité.\cite{IQMessenger2023}
 \end{itemize}
 
 En résumé, ces solutions ne répondent que partiellement aux besoins des établissements tunisiens. Leur coût, leur dépendance à des infrastructures techniques avancées, et leur faible compatibilité avec les équipements hétérogènes limitent fortement leur adoption. Cela renforce la nécessité de développer une solution locale, flexible et abordable, adaptée aux réalités techniques et humaines du secteur hospitalier tunisien.

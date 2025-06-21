@@ -10,15 +10,15 @@
 \newblock Iso 21001:2018 - educational organizations, 2018.
 \newblock Available: https://www.iso.org/standard/69596.html.
 
-\bibitem{WHO2021}
-{World Health Organization}.
-\newblock Digital health in low-resource settings, 2021.
-\newblock Available: https://www.who.int/publications.
-
 \bibitem{TunisieMedicale2019}
 A.~Ben Abdelaziz et~al.
 \newblock Challenges in tunisian public hospitals: A qualitative study.
 \newblock {\em La Tunisie Médicale}, 97(1):45--52, 2019.
+
+\bibitem{WHO2021}
+{World Health Organization}.
+\newblock Digital health in low-resource settings, 2021.
+\newblock Available: https://www.who.int/publications.
 
 \bibitem{WHO2009}
 {World Health Organization}.
@@ -40,6 +40,16 @@ J.~Smith et~al.
 {Mindray}.
 \newblock Patient monitoring systems, 2023.
 \newblock Available: https://www.mindray.com/.
+
+\bibitem{IQMessenger2023}
+{IQ Messenger}.
+\newblock Smartapp features, 2023.
+\newblock Available: https://www.iqmessenger.com/.
+
+\bibitem{XChart2023}
+{XChart Medical}.
+\newblock Xchart: Interoperable medical dashboard system, 2023.
+\newblock Available: https://www.xchart.com/.
 
 \bibitem{AlTurjman2020}
 F.~Al-Turjman.
@@ -99,5 +109,96 @@ Slack Technologies.
 Scott Chacon and Ben Straub.
 \newblock {\em Pro Git}.
 \newblock Apress, 2nd edition, 2014.
+
+\bibitem{mysql}
+{Oracle Corporation}.
+\newblock Mysql 8.0 reference manual, 2025.
+\newblock Available: https://dev.mysql.com/doc/refman/8.0/en/.
+
+\bibitem{phpdoc}
+{The PHP Group}.
+\newblock Php manual, 2025.
+\newblock Available: https://www.php.net/manual/en/.
+
+\bibitem{laravel}
+{Laravel LLC}.
+\newblock Laravel documentation, 2025.
+\newblock Available: https://laravel.com/docs.
+
+\bibitem{python}
+{Python Software Foundation}.
+\newblock Python 3.12 documentation, 2025.
+\newblock Available: https://docs.python.org/3/.
+
+\bibitem{flask}
+{Pallets Projects}.
+\newblock Flask documentation, 2025.
+\newblock Available: https://flask.palletsprojects.com/.
+
+\bibitem{opencv}
+{OpenCV Team}.
+\newblock Opencv documentation, 2025.
+\newblock Available: https://docs.opencv.org/.
+
+\bibitem{yolo}
+Joseph Redmon et~al.
+\newblock Yolo: Real-time object detection, 2025.
+\newblock Available: https://pjreddie.com/darknet/yolo/.
+
+\bibitem{tesseract}
+{Google}.
+\newblock Tesseract ocr documentation, 2025.
+\newblock Available: https://tesseract-ocr.github.io/.
+
+\bibitem{dart}
+{Google}.
+\newblock Dart language tour, 2025.
+\newblock Available: https://dart.dev/guides/language/language-tour.
+
+\bibitem{flutter}
+{Google}.
+\newblock Flutter documentation, 2025.
+\newblock Available: https://docs.flutter.dev/.
+
+\bibitem{javascriptmdn}
+{Mozilla Developer Network}.
+\newblock Javascript guide, 2025.
+\newblock Available:
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide.
+
+\bibitem{react}
+{Meta Platforms, Inc.}
+\newblock React documentation, 2025.
+\newblock Available: https://react.dev/.
+
+\bibitem{phpmyadmin}
+{phpMyAdmin contributors}.
+\newblock phpmyadmin documentation, 2025.
+\newblock Available: https://docs.phpmyadmin.net/.
+
+\bibitem{vscode}
+{Microsoft}.
+\newblock Visual studio code documentation, 2025.
+\newblock Available: https://code.visualstudio.com/docs.
+
+\bibitem{androidstudio}
+{Google}.
+\newblock Android studio user guide, 2025.
+\newblock Available: https://developer.android.com/studio.
+
+\bibitem{latex}
+{LaTeX Project}.
+\newblock Latex project documentation, 2025.
+\newblock Available: https://www.latex-project.org/help/documentation/.
+
+\bibitem{github}
+{GitHub, Inc.}
+\newblock Github documentation, 2025.
+\newblock Available: https://docs.github.com/.
+
+\bibitem{docker}
+{Docker, Inc.}
+\newblock Docker documentation, 2025.
+\newblock Available: https://docs.docker.com/.
 
 \end{thebibliography}

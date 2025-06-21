@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.9)  20 JUN 2025 15:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.9)  21 JUN 2025 06:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1075,22 +1075,27 @@ Package pdftex.def Info: gard.pdf , page2 used on input line 106.
 (pdftex.def)             Requested size: 597.81924pt x 845.23425pt.
  [2
 
- <./gard.pdf>] (main.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
+ <./gard.pdf>]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 150.
  (C:\Users\racha\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 150.
  (C:\Users\racha\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
+l.163 \tableofcontents
+                       [3{C:/Users/racha/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}] (main.toc
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
 l.38 ...iagramme de classes}{18}{subsection.3.4.2}
-                                                  % [3
+                                                  % [4
 
-{C:/Users/racha/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
+]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.13202pt, for example:
@@ -1102,8 +1107,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.75 ...gramme de sÃ©quence}{40}{subsection.6.4.1}
-                                                  % [4])
+l.75 ...e cas d'utilisation}{42}{subsection.6.4.1}
+                                                  % [5])
 \tf@toc=\write7
 \openout7 = `main.toc'.
 
@@ -1119,13 +1124,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.114 \clearpage
-                 [5] (main.lof
+l.165 \clearpage
+                 [6] (main.lof
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.38 ...w du pipeline OCR}}{36}{figure.caption.47}
-                                                  % [6
+l.38 ...w du pipeline OCR}}{37}{figure.caption.46}
+                                                  % [7
 
 
 ])
@@ -1144,8 +1149,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.122 \clearpage
-                 [7] (main.lot)
+l.173 \clearpage
+                 [8] (main.lot)
 \tf@lot=\write9
 \openout9 = `main.lot'.
 
@@ -1153,8 +1158,8 @@ l.122 \clearpage
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.130 \clearpage
-                 [8
+l.181 \clearpage
+                 [9
 
 
 ]
@@ -1170,12 +1175,12 @@ l.130 \clearpage
  (chapter1/chapter1.tex
 Chapitre 1.
 Package newfloat Info: Setting Plan B file extension to `lof'... on input line 1.
-<chapter1/images/logo1-fmm.png, id=702, 255.95625pt x 93.34875pt>
+<chapter1/images/logo1-fmm.png, id=710, 255.95625pt x 93.34875pt>
 File: chapter1/images/logo1-fmm.png Graphic file (type png)
 <use chapter1/images/logo1-fmm.png>
 Package pdftex.def Info: chapter1/images/logo1-fmm.png  used on input line 19.
 (pdftex.def)             Requested size: 198.45662pt x 72.37871pt.
-<chapter1/images/logo2-smartlab.png, id=704, 299.61937pt x 109.6095pt>
+<chapter1/images/logo2-smartlab.png, id=712, 299.61937pt x 109.6095pt>
 File: chapter1/images/logo2-smartlab.png Graphic file (type png)
 <use chapter1/images/logo2-smartlab.png>
 Package pdftex.def Info: chapter1/images/logo2-smartlab.png  used on input line 26.
@@ -1202,17 +1207,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 85--88
 
  []
 
-<chapter1/images/mindray_logo.png, id=729, 462.72874pt x 109.40875pt>
+<chapter1/images/mindray_logo.png, id=738, 462.72874pt x 109.40875pt>
 File: chapter1/images/mindray_logo.png Graphic file (type png)
 <use chapter1/images/mindray_logo.png>
 Package pdftex.def Info: chapter1/images/mindray_logo.png  used on input line 92.
 (pdftex.def)             Requested size: 176.40439pt x 41.7093pt.
-<chapter1/images/IQ_Messenger_Smart_logo.png, id=730, 294.09875pt x 172.645pt>
+<chapter1/images/IQ_Messenger_Smart_logo.png, id=740, 294.09875pt x 172.645pt>
 File: chapter1/images/IQ_Messenger_Smart_logo.png Graphic file (type png)
 <use chapter1/images/IQ_Messenger_Smart_logo.png>
 Package pdftex.def Info: chapter1/images/IQ_Messenger_Smart_logo.png  used on input line 101.
 (pdftex.def)             Requested size: 176.40439pt x 103.55617pt.
-<chapter1/images/XChartLogo.jpg, id=731, 160.6pt x 160.6pt>
+
+LaTeX Warning: Citation `ChartX2023' on page 4 undefined on input line 105.
+
+<chapter1/images/XChartLogo.jpg, id=741, 160.6pt x 160.6pt>
 File: chapter1/images/XChartLogo.jpg Graphic file (type jpg)
 <use chapter1/images/XChartLogo.jpg>
 Package pdftex.def Info: chapter1/images/XChartLogo.jpg  used on input line 109.
@@ -1287,7 +1295,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
 
 [9]
-<chapter2/images/scrum.png, id=780, 811.833pt x 389.0535pt>
+<chapter2/images/scrum.png, id=793, 811.833pt x 389.0535pt>
 File: chapter2/images/scrum.png Graphic file (type png)
 <use chapter2/images/scrum.png>
 Package pdftex.def Info: chapter2/images/scrum.png  used on input line 127.
@@ -1321,12 +1329,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
 
 [12]
-<chapter2/images/scrum-roles.png, id=808, 258.36525pt x 151.16475pt>
+<chapter2/images/scrum-roles.png, id=821, 258.36525pt x 151.16475pt>
 File: chapter2/images/scrum-roles.png Graphic file (type png)
 <use chapter2/images/scrum-roles.png>
 Package pdftex.def Info: chapter2/images/scrum-roles.png  used on input line 169.
 (pdftex.def)             Requested size: 441.01773pt x 258.05151pt.
-<chapter2/images/Clickup.png, id=810, 677.53125pt x 260.975pt>
+<chapter2/images/Clickup.png, id=823, 677.53125pt x 260.975pt>
 File: chapter2/images/Clickup.png Graphic file (type png)
 <use chapter2/images/Clickup.png>
 Package pdftex.def Info: chapter2/images/Clickup.png  used on input line 204.
@@ -1336,7 +1344,7 @@ Overfull \hbox (5.21703pt too wide) in paragraph at lines 209--210
 \T1/ptm/m/n/12 Les \T1/ptm/m/it/12 Daily Scrum \T1/ptm/m/n/12 peuvent être par-tiel-le-ment gé-rés via des ca-naux dé-diés, où les membres
  []
 
-<chapter2/images/slack-logo-slide.png, id=812, 1927.2pt x 1084.05pt>
+<chapter2/images/slack-logo-slide.png, id=825, 1927.2pt x 1084.05pt>
 File: chapter2/images/slack-logo-slide.png Graphic file (type png)
 <use chapter2/images/slack-logo-slide.png>
 Package pdftex.def Info: chapter2/images/slack-logo-slide.png  used on input line 213.
@@ -1349,7 +1357,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
 
 [13 <./chapter2/images/scrum-roles.png> <./chapter2/images/Clickup.png>]
-<chapter2/images/Git-Logo-2Color.png, id=822, 913.4125pt x 381.425pt>
+<chapter2/images/Git-Logo-2Color.png, id=835, 913.4125pt x 381.425pt>
 File: chapter2/images/Git-Logo-2Color.png Graphic file (type png)
 <use chapter2/images/Git-Logo-2Color.png>
 Package pdftex.def Info: chapter2/images/Git-Logo-2Color.png  used on input line 222.
@@ -1381,7 +1389,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
 
 [16]
-<chapter4/sections/diagrams/use_case.png, id=840, 3513.125pt x 3834.325pt>
+<chapter4/sections/diagrams/use_case.png, id=854, 3513.125pt x 3834.325pt>
 File: chapter4/sections/diagrams/use_case.png Graphic file (type png)
 <use chapter4/sections/diagrams/use_case.png>
 Package pdftex.def Info: chapter4/sections/diagrams/use_case.png  used on input line 127.
@@ -1395,7 +1403,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
 
 [17 <./chapter4/sections/diagrams/use_case.png>]
-<chapter3/diagrams/class.png, id=849, 336.0555pt x 470.9595pt>
+<chapter3/diagrams/class.png, id=862, 336.0555pt x 470.9595pt>
 File: chapter3/diagrams/class.png Graphic file (type png)
 <use chapter3/diagrams/class.png>
 Package pdftex.def Info: chapter3/diagrams/class.png  used on input line 137.
@@ -1417,12 +1425,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
 
 [19 <./chapter3/diagrams/class.png>]
-<chapter3/diagrams/sequence.png, id=860, 1498.59875pt x 651.43375pt>
+<chapter3/diagrams/sequence.png, id=873, 1498.59875pt x 651.43375pt>
 File: chapter3/diagrams/sequence.png Graphic file (type png)
 <use chapter3/diagrams/sequence.png>
 Package pdftex.def Info: chapter3/diagrams/sequence.png  used on input line 147.
 (pdftex.def)             Requested size: 441.01773pt x 191.7041pt.
-<chapter3/diagrams/activity_dataflow.png, id=862, 563.10374pt x 790.955pt>
+<chapter3/diagrams/activity_dataflow.png, id=875, 563.10374pt x 790.955pt>
 File: chapter3/diagrams/activity_dataflow.png Graphic file (type png)
 <use chapter3/diagrams/activity_dataflow.png>
 Package pdftex.def Info: chapter3/diagrams/activity_dataflow.png  used on input line 157.
@@ -1436,7 +1444,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
 
 [20 <./chapter3/diagrams/sequence.png (PNG copy)>]
-<chapter3/diagrams/component_diagram.png, id=868, 1678.27pt x 830.10126pt>
+<chapter3/diagrams/component_diagram.png, id=881, 1678.27pt x 830.10126pt>
 File: chapter3/diagrams/component_diagram.png Graphic file (type png)
 <use chapter3/diagrams/component_diagram.png>
 Package pdftex.def Info: chapter3/diagrams/component_diagram.png  used on input line 167.
@@ -1450,7 +1458,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
 
 [21 <./chapter3/diagrams/activity_dataflow.png (PNG copy)>]
-<chapter3/diagrams/deployment_diagram.png, id=874, 1711.39375pt x 793.96625pt>
+<chapter3/diagrams/deployment_diagram.png, id=887, 1711.39375pt x 793.96625pt>
 File: chapter3/diagrams/deployment_diagram.png Graphic file (type png)
 <use chapter3/diagrams/deployment_diagram.png>
 Package pdftex.def Info: chapter3/diagrams/deployment_diagram.png  used on input line 177.
@@ -1494,273 +1502,188 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
 
 [25]
-Underfull \hbox (badness 4391) in paragraph at lines 94--94
-[]|\T1/ptm/b/n/12 Objectifs et li-
+Overfull \hbox (35.77356pt too wide) in alignment at lines 88--93
+ [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--94
-[]|\T1/ptm/b/n/12 Tâches prin-ci-
+Overfull \hbox (35.77356pt too wide) in alignment at lines 93--97
+ [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--94
-[]|\T1/ptm/b/n/12 Critères d'ac-
+Underfull \hbox (badness 2035) in paragraph at lines 101--102
+[]\T1/ptm/m/n/12 Dataset an-noté pour
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--96
-\T1/ptm/b/n/12 Création
+Underfull \hbox (badness 2460) in paragraph at lines 101--102
+\T1/ptm/m/n/12 les mo-ni-teurs mé-di-
  []
 
 
-Underfull \hbox (badness 1014) in paragraph at lines 96--96
-\T1/ptm/b/n/12 du da-ta-set
+Underfull \hbox (badness 7030) in paragraph at lines 102--103
+[]\T1/ptm/m/n/12 Modèle YOLO en-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--96
-\T1/ptm/b/n/12 place du
+Underfull \hbox (badness 2469) in paragraph at lines 103--104
+[]\T1/ptm/m/n/12 Pipeline OCR fonc-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--96
-\T1/ptm/b/n/12 pi-pe-line
+Underfull \hbox (badness 6428) in paragraph at lines 103--104
+\T1/ptm/m/n/12 tion-nel avec Tes-se-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--97
-\T1/ptm/m/n/12 ac-teurs ; re-cueil
+Underfull \hbox (badness 5893) in paragraph at lines 114--115
+[]\T1/ptm/m/n/12 Faible la-tence dans
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--97
-\T1/ptm/m/n/12 des be-soins ;
+Underfull \hbox (badness 10000) in paragraph at lines 114--115
+\T1/ptm/m/n/12 le trai-te-ment des
  []
 
 
-Underfull \hbox (badness 5105) in paragraph at lines 97--97
-\T1/ptm/m/n/12 dé-fi-ni-tion de la
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
+[]\T1/ptm/m/n/12 Compatibilité avec
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--97
-\T1/ptm/m/n/12 mé-tho-do-lo-gie
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
+\T1/ptm/m/n/12 les marques de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--98
-[]|\T1/ptm/m/n/12 Dataset an-noté ;
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 98--98
-\T1/ptm/m/n/12 mo-dèle YOLO
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 99--99
-[]|\T1/ptm/m/n/12 Capture et
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 99--99
-\T1/ptm/m/n/12 an-no-ta-tion ;
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 99--99
-\T1/ptm/m/n/12 en-traî-ne-ment
- []
-
-
-Underfull \hbox (badness 1983) in paragraph at lines 99--99
-\T1/ptm/m/n/12 mo-dèle ; in-té-gra-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 99--99
-\T1/ptm/m/n/12 tion Tes-se-ract ;
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 99--99
-\T1/ptm/m/n/12 confi-gu-ra-tion
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 100--101
-[]|\T1/ptm/m/n/12 Détection pré-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 100--101
-\T1/ptm/m/n/12 cise ; ex-trac-tion
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 100--101
-\T1/ptm/m/n/12 fiable ; faible
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 100--101
-\T1/ptm/m/n/12 la-tence ; com-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 100--101
-\T1/ptm/m/n/12 pa-ti-bi-lité multi-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 100--101
-\T1/ptm/m/n/12 marques. Mau-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 100--101
-\T1/ptm/m/n/12 pré-trai-te-ment ;
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 102--102
+Underfull \hbox (badness 10000) in paragraph at lines 119--119
 \T1/ptm/b/n/12 Système
  []
 
 
-Underfull \hbox (badness 2922) in paragraph at lines 103--103
-[]|\T1/ptm/m/n/12 Moteur d'alerte ;
+Underfull \hbox (badness 10000) in paragraph at lines 119--119
+\T1/ptm/b/n/12 d'alertes et
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--103
-\T1/ptm/m/n/12 no-ti-fi-ca-tions
+Underfull \hbox (badness 10000) in paragraph at lines 123--124
+[]\T1/ptm/m/n/12 Configuration des
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--104
-\T1/ptm/m/n/12 seuils ; map-ping
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
+[]\T1/ptm/m/n/12 Développement du
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--104
-\T1/ptm/m/n/12 rôles ; mes-sa-ge-
+Underfull \hbox (badness 4181) in paragraph at lines 127--128
+[]\T1/ptm/m/n/12 Intégration de Fi-re-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--104
-\T1/ptm/m/n/12 rie ; va-li-da-tion
+Underfull \hbox (badness 6510) in paragraph at lines 127--128
+\T1/ptm/m/n/12 base Cloud Mes-sa-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--105
-[]|\T1/ptm/m/n/12 Alertes ra-pides ;
+Underfull \hbox (badness 10000) in paragraph at lines 128--129
+[]\T1/ptm/m/n/12 Configuration des
  []
 
 
-Underfull \hbox (badness 1043) in paragraph at lines 105--105
-\T1/ptm/m/n/12 no-ti-fi-ca-tions cor-
+Underfull \hbox (badness 10000) in paragraph at lines 128--129
+\T1/ptm/m/n/12 seuils d'alerte par
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--105
-\T1/ptm/m/n/12 rectes ; don-nées
+Underfull \hbox (badness 3557) in paragraph at lines 132--133
+[]\T1/ptm/m/n/12 Alertes gé-né-rées en
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--105
-\T1/ptm/m/n/12 va-li-dées avec
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
+[]\T1/ptm/m/n/12 Notifications en-
  []
 
 
-Underfull \hbox (badness 1755) in paragraph at lines 106--107
-[]|\T1/ptm/m/n/12 Retards $\OMS/cmsy/m/n/12 !$ \T1/ptm/m/n/12 tests
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
+\T1/ptm/m/n/12 voyées aux rôles
  []
 
 
-Underfull \hbox (badness 7344) in paragraph at lines 106--107
-\T1/ptm/m/n/12 si-mu-lés ; er-reurs
+Underfull \hbox (badness 10000) in paragraph at lines 135--136
+[]\T1/ptm/m/n/12 Configuration des
  []
 
 
-Overfull \hbox (3.77766pt too wide) in paragraph at lines 108--108
+Underfull \hbox (badness 10000) in paragraph at lines 135--136
+\T1/ptm/m/n/12 seuils d'alerte par
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--139
 \T1/ptm/b/n/12 Finalisation
  []
 
 
-Underfull \hbox (badness 2922) in paragraph at lines 109--109
-[]|\T1/ptm/m/n/12 Dashboard web ;
+Underfull \hbox (badness 10000) in paragraph at lines 139--139
+\T1/ptm/b/n/12 du sys-tème
  []
 
 
-Underfull \hbox (badness 4391) in paragraph at lines 109--109
-\T1/ptm/m/n/12 de don-nées des
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
+[]\T1/ptm/m/n/12 Application mo-bile
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--110
-[]|\T1/ptm/m/n/12 Développement
+Underfull \hbox (badness 10000) in paragraph at lines 146--147
+[]\T1/ptm/m/n/12 Développement du
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--110
-\T1/ptm/m/n/12 da-sh-board ;
+Underfull \hbox (badness 1527) in paragraph at lines 146--147
+\T1/ptm/m/n/12 da-sh-board web avec
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--110
-\T1/ptm/m/n/12 fi-ca-tions ; mises
+Underfull \hbox (badness 10000) in paragraph at lines 149--150
+[]\T1/ptm/m/n/12 Configuration de
  []
 
 
-Underfull \hbox (badness 1014) in paragraph at lines 110--110
-\T1/ptm/m/n/12 à jour en temps
+Underfull \hbox (badness 2680) in paragraph at lines 149--150
+\T1/ptm/m/n/12 la base de don-nées
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--111
-[]|\T1/ptm/m/n/12 Interfaces ré-ac-
+Underfull \hbox (badness 7595) in paragraph at lines 152--153
+[]\T1/ptm/m/n/12 Interfaces uti-li-sa-teur
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--111
-\T1/ptm/m/n/12 tives ; ré-cep-tion
+Underfull \hbox (badness 1308) in paragraph at lines 153--154
+[]\T1/ptm/m/n/12 Réception fiable des
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--111
-\T1/ptm/m/n/12 fiable ; in-té-grité
+Underfull \hbox (badness 10000) in paragraph at lines 155--156
+[]\T1/ptm/m/n/12 Bonne er-go-no-mie
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--111
-\T1/ptm/m/n/12 des don-nées ;
+Underfull \hbox (badness 10000) in paragraph at lines 155--156
+\T1/ptm/m/n/12 pour le per-son-nel
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--111
-\T1/ptm/m/n/12 bonne er-go-no-
+Underfull \hbox (badness 10000) in paragraph at lines 156--157
+\T1/ptm/m/n/12 avec fil-trage par
  []
 
 
-Underfull \hbox (badness 2903) in paragraph at lines 112--113
-\T1/ptm/m/n/12 mi-sa-tion ré-seau ;
- []
-
-
-Underfull \hbox (badness 3179) in paragraph at lines 112--113
-\T1/ptm/m/n/12 in-té-gra-tion com-
- []
-
-
-Underfull \hbox (badness 4072) in paragraph at lines 112--113
-\T1/ptm/m/n/12 plexe $\OMS/cmsy/m/n/12 !$ \T1/ptm/m/n/12 pro-to-
- []
-
-
-Overfull \hbox (19.72078pt too wide) in paragraph at lines 92--115
- [][] 
+Overfull \hbox (35.77356pt too wide) in alignment at lines 97--159
+ [] [] [] [] 
  []
 
 
@@ -1779,45 +1702,53 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
 
 [27]
-<chapter4/images/laravel_logo.png, id=900, 299.1175pt x 169.63374pt>
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.13202pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.13202pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
+
+[28]
+<chapter4/images/laravel_logo.png, id=922, 299.1175pt x 169.63374pt>
 File: chapter4/images/laravel_logo.png Graphic file (type png)
 <use chapter4/images/laravel_logo.png>
-Package pdftex.def Info: chapter4/images/laravel_logo.png  used on input line 136.
-(pdftex.def)             Requested size: 66.14996pt x 37.51366pt.
-<chapter4/images/php-logo.png, id=901, 200.75pt x 106.3975pt>
+Package pdftex.def Info: chapter4/images/laravel_logo.png  used on input line 181.
+(pdftex.def)             Requested size: 88.2022pt x 50.0208pt.
+<chapter4/images/php-logo.png, id=923, 200.75pt x 106.3975pt>
 File: chapter4/images/php-logo.png Graphic file (type png)
 <use chapter4/images/php-logo.png>
-Package pdftex.def Info: chapter4/images/php-logo.png  used on input line 138.
-(pdftex.def)             Requested size: 66.14996pt x 35.05933pt.
-<chapter4/images/python_logo.png, id=902, 1284.8pt x 380.42125pt>
+Package pdftex.def Info: chapter4/images/php-logo.png  used on input line 183.
+(pdftex.def)             Requested size: 88.2022pt x 46.74847pt.
+<chapter4/images/python_logo.png, id=929, 1284.8pt x 380.42125pt>
 File: chapter4/images/python_logo.png Graphic file (type png)
 <use chapter4/images/python_logo.png>
-Package pdftex.def Info: chapter4/images/python_logo.png  used on input line 147.
-(pdftex.def)             Requested size: 66.14996pt x 19.58524pt.
-<chapter4/images/flask_logo.png, id=903, 360.34625pt x 140.525pt>
+Package pdftex.def Info: chapter4/images/python_logo.png  used on input line 192.
+(pdftex.def)             Requested size: 88.2022pt x 26.11557pt.
+<chapter4/images/flask_logo.png, id=930, 360.34625pt x 140.525pt>
 File: chapter4/images/flask_logo.png Graphic file (type png)
 <use chapter4/images/flask_logo.png>
-Package pdftex.def Info: chapter4/images/flask_logo.png  used on input line 149.
-(pdftex.def)             Requested size: 66.14996pt x 25.79515pt.
-<chapter4/images/flutter_logo.png, id=904, 418.56375pt x 121.45375pt>
+Package pdftex.def Info: chapter4/images/flask_logo.png  used on input line 194.
+(pdftex.def)             Requested size: 88.2022pt x 34.39568pt.
+<chapter4/images/flutter_logo.png, id=933, 418.56375pt x 121.45375pt>
 File: chapter4/images/flutter_logo.png Graphic file (type png)
 <use chapter4/images/flutter_logo.png>
-Package pdftex.def Info: chapter4/images/flutter_logo.png  used on input line 157.
+Package pdftex.def Info: chapter4/images/flutter_logo.png  used on input line 202.
 (pdftex.def)             Requested size: 132.30666pt x 38.3897pt.
-<chapter4/images/dart_logo.jpg, id=905, 869.2475pt x 652.4375pt>
+<chapter4/images/dart_logo.jpg, id=934, 260.77425pt x 83.41162pt>
 File: chapter4/images/dart_logo.jpg Graphic file (type jpg)
 <use chapter4/images/dart_logo.jpg>
-Package pdftex.def Info: chapter4/images/dart_logo.jpg  used on input line 159.
-(pdftex.def)             Requested size: 88.2022pt x 66.19333pt.
-<chapter4/images/react_logo.jpg, id=906, 329.23pt x 153.57375pt>
+Package pdftex.def Info: chapter4/images/dart_logo.jpg  used on input line 204.
+(pdftex.def)             Requested size: 132.30666pt x 42.32043pt.
+<chapter4/images/react_logo.jpg, id=937, 329.23pt x 153.57375pt>
 File: chapter4/images/react_logo.jpg Graphic file (type jpg)
 <use chapter4/images/react_logo.jpg>
-Package pdftex.def Info: chapter4/images/react_logo.jpg  used on input line 168.
-(pdftex.def)             Requested size: 66.14996pt x 30.8548pt.
-<chapter4/images/javascript_logo.png, id=907, 225.84375pt x 225.84375pt>
+Package pdftex.def Info: chapter4/images/react_logo.jpg  used on input line 213.
+(pdftex.def)             Requested size: 132.30666pt x 61.71663pt.
+<chapter4/images/javascript_logo.png, id=938, 225.84375pt x 225.84375pt>
 File: chapter4/images/javascript_logo.png Graphic file (type png)
 <use chapter4/images/javascript_logo.png>
-Package pdftex.def Info: chapter4/images/javascript_logo.png  used on input line 170.
+Package pdftex.def Info: chapter4/images/javascript_logo.png  used on input line 215.
 (pdftex.def)             Requested size: 66.14996pt x 66.1512pt.
 
 
@@ -1827,26 +1758,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
 
-[28 <./chapter4/images/laravel_logo.png> <./chapter4/images/php-logo.png> <./chapter4/images/python_logo.png> <./chapter4/images/flask_logo.png> <./chapter4/images/flutter_logo.png> <./chapter4/images/dart_logo.jpg>]
-<chapter4/images/mysql_logo.png, id=917, 314.17375pt x 161.60374pt>
+[29 <./chapter4/images/laravel_logo.png> <./chapter4/images/php-logo.png> <./chapter4/images/python_logo.png> <./chapter4/images/flask_logo.png> <./chapter4/images/flutter_logo.png> <./chapter4/images/dart_logo.jpg>]
+<chapter4/images/mysql_logo.png, id=961, 314.17375pt x 161.60374pt>
 File: chapter4/images/mysql_logo.png Graphic file (type png)
 <use chapter4/images/mysql_logo.png>
-Package pdftex.def Info: chapter4/images/mysql_logo.png  used on input line 178.
-(pdftex.def)             Requested size: 66.14996pt x 34.02408pt.
-<chapter4/images/phpmyadmin_logo.png, id=918, 302.12875pt x 167.62625pt>
+Package pdftex.def Info: chapter4/images/mysql_logo.png  used on input line 223.
+(pdftex.def)             Requested size: 110.25443pt x 56.7101pt.
+<chapter4/images/phpmyadmin_logo.png, id=962, 302.12875pt x 167.62625pt>
 File: chapter4/images/phpmyadmin_logo.png Graphic file (type png)
 <use chapter4/images/phpmyadmin_logo.png>
-Package pdftex.def Info: chapter4/images/phpmyadmin_logo.png  used on input line 180.
-(pdftex.def)             Requested size: 66.14996pt x 36.70139pt.
-<chapter4/images/vscode_logo.jpg, id=919, 204.765pt x 192.72pt>
+Package pdftex.def Info: chapter4/images/phpmyadmin_logo.png  used on input line 225.
+(pdftex.def)             Requested size: 110.25443pt x 61.17155pt.
+<chapter4/images/vscode_logo.jpg, id=964, 204.765pt x 192.72pt>
 File: chapter4/images/vscode_logo.jpg Graphic file (type jpg)
 <use chapter4/images/vscode_logo.jpg>
-Package pdftex.def Info: chapter4/images/vscode_logo.jpg  used on input line 200.
-(pdftex.def)             Requested size: 66.14996pt x 62.25978pt.
-<chapter4/images/androidstudio_logo.png, id=920, 204.765pt x 192.72pt>
-File: chapter4/images/androidstudio_logo.png Graphic file (type png)
-<use chapter4/images/androidstudio_logo.png>
-Package pdftex.def Info: chapter4/images/androidstudio_logo.png  used on input line 209.
+Package pdftex.def Info: chapter4/images/vscode_logo.jpg  used on input line 244.
 (pdftex.def)             Requested size: 66.14996pt x 62.25978pt.
 
 
@@ -1856,21 +1782,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
 
-[29 <./chapter4/images/react_logo.jpg> <./chapter4/images/javascript_logo.png> <./chapter4/images/mysql_logo.png> <./chapter4/images/phpmyadmin_logo.png> <./chapter4/images/vscode_logo.jpg>]
-<chapter4/images/latex_logo.png, id=929, 349.305pt x 145.54375pt>
+[30 <./chapter4/images/react_logo.jpg> <./chapter4/images/javascript_logo.png> <./chapter4/images/mysql_logo.png> <./chapter4/images/phpmyadmin_logo.png> <./chapter4/images/vscode_logo.jpg>]
+<chapter4/images/androidstudio_logo.png, id=975, 204.765pt x 192.72pt>
+File: chapter4/images/androidstudio_logo.png Graphic file (type png)
+<use chapter4/images/androidstudio_logo.png>
+Package pdftex.def Info: chapter4/images/androidstudio_logo.png  used on input line 253.
+(pdftex.def)             Requested size: 88.2022pt x 83.015pt.
+<chapter4/images/latex_logo.png, id=977, 349.305pt x 145.54375pt>
 File: chapter4/images/latex_logo.png Graphic file (type png)
 <use chapter4/images/latex_logo.png>
-Package pdftex.def Info: chapter4/images/latex_logo.png  used on input line 218.
-(pdftex.def)             Requested size: 66.14996pt x 27.56253pt.
-<chapter4/images/github_logo.jpg, id=930, 180.675pt x 168.63pt>
+Package pdftex.def Info: chapter4/images/latex_logo.png  used on input line 262.
+(pdftex.def)             Requested size: 88.2022pt x 36.75005pt.
+<chapter4/images/github_logo.jpg, id=979, 180.675pt x 168.63pt>
 File: chapter4/images/github_logo.jpg Graphic file (type jpg)
 <use chapter4/images/github_logo.jpg>
-Package pdftex.def Info: chapter4/images/github_logo.jpg  used on input line 227.
-(pdftex.def)             Requested size: 66.14996pt x 61.73856pt.
-<chapter4/images/dockerdesktop_logo.png, id=931, 276.03125pt x 183.68625pt>
+Package pdftex.def Info: chapter4/images/github_logo.jpg  used on input line 271.
+(pdftex.def)             Requested size: 88.2022pt x 82.32321pt.
+<chapter4/images/dockerdesktop_logo.png, id=981, 276.03125pt x 183.68625pt>
 File: chapter4/images/dockerdesktop_logo.png Graphic file (type png)
 <use chapter4/images/dockerdesktop_logo.png>
-Package pdftex.def Info: chapter4/images/dockerdesktop_logo.png  used on input line 236.
+Package pdftex.def Info: chapter4/images/dockerdesktop_logo.png  used on input line 280.
 (pdftex.def)             Requested size: 132.30666pt x 88.04785pt.
 )
 
@@ -1880,7 +1811,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
 
-[30 <./chapter4/images/androidstudio_logo.png> <./chapter4/images/latex_logo.png> <./chapter4/images/github_logo.jpg> <./chapter4/images/dockerdesktop_logo.png>]
+[31 <./chapter4/images/androidstudio_logo.png> <./chapter4/images/latex_logo.png> <./chapter4/images/github_logo.jpg> <./chapter4/images/dockerdesktop_logo.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.13202pt, for example:
@@ -1888,7 +1819,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
 
-[31]
+[32]
 \openout2 = `chapter5/chapter5.aux'.
 
  (chapter5/chapter5.tex
@@ -1898,7 +1829,7 @@ Overfull \hbox (19.31596pt too wide) in paragraph at lines 35--36
  [][] 
  []
 
-[32
+[33
 
 
 
@@ -1995,7 +1926,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-17.63202pt}.
 
-[33]
+[34]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 29.63202pt, for example:
@@ -2003,8 +1934,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-17.63202pt}.
 
-[34]
-<chapter5/sections/diagrams/yolo_learning_curve.png, id=958, 875.97263pt x 328.52737pt>
+[35]
+<chapter5/sections/diagrams/yolo_learning_curve.png, id=1013, 875.97263pt x 328.52737pt>
 File: chapter5/sections/diagrams/yolo_learning_curve.png Graphic file (type png)
 <use chapter5/sections/diagrams/yolo_learning_curve.png>
 Package pdftex.def Info: chapter5/sections/diagrams/yolo_learning_curve.png  used on input line 123.
@@ -2017,13 +1948,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-17.63202pt}.
 
-[35 <./chapter5/sections/diagrams/yolo_learning_curve.png>]
-<chapter5/sections/images/swagger.png, id=966, 1112.05463pt x 536.60475pt>
+[36 <./chapter5/sections/diagrams/yolo_learning_curve.png>]
+<chapter5/sections/images/swagger.png, id=1020, 1112.05463pt x 536.60475pt>
 File: chapter5/sections/images/swagger.png Graphic file (type png)
 <use chapter5/sections/images/swagger.png>
 Package pdftex.def Info: chapter5/sections/images/swagger.png  used on input line 134.
 (pdftex.def)             Requested size: 352.81552pt x 170.2432pt.
-<chapter5/sections/diagrams/pipeline_workflow.png, id=968, 539.01375pt x 405.515pt>
+<chapter5/sections/diagrams/pipeline_workflow.png, id=1022, 539.01375pt x 405.515pt>
 File: chapter5/sections/diagrams/pipeline_workflow.png Graphic file (type png)
 <use chapter5/sections/diagrams/pipeline_workflow.png>
 Package pdftex.def Info: chapter5/sections/diagrams/pipeline_workflow.png  used on input line 142.
@@ -2036,7 +1967,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-17.63202pt}.
 
-[36 <./chapter5/sections/images/swagger.png> <./chapter5/sections/diagrams/pipeline_workflow.png (PNG copy)>]
+[37 <./chapter5/sections/images/swagger.png> <./chapter5/sections/diagrams/pipeline_workflow.png (PNG copy)>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 29.63202pt, for example:
@@ -2044,7 +1975,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-17.63202pt}.
 
-[37])
+[38])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 29.63202pt, for example:
@@ -2052,23 +1983,62 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-17.63202pt}.
 
-[38]
+[39]
 \openout2 = `chapter6/chapter6.aux'.
 
  (chapter6/chapter6.tex
 Chapitre 6.
-[39
+
+Underfull \hbox (badness 2012) in paragraph at lines 24--24
+[]|\T1/ptm/m/n/12 Développement du sys-tème
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+\T1/ptm/m/n/12 d'éva-lua-tion des règles
+ []
+
+
+Underfull \hbox (badness 6125) in paragraph at lines 24--24
+[]|\T1/ptm/m/n/12 Alertes gé-né-rées pour les
+ []
+
+
+Underfull \hbox (badness 4832) in paragraph at lines 25--25
+[]|\T1/ptm/m/n/12 Notifications en-voyées aux
+ []
+
+
+Underfull \hbox (badness 1281) in paragraph at lines 26--26
+[]|\T1/ptm/m/n/12 Interface fonc-tion-nelle pour
+ []
+
+
+Underfull \hbox (badness 4168) in paragraph at lines 27--27
+[]|\T1/ptm/m/n/12 API ca-pable de gé-rer les
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
+[]|\T1/ptm/m/n/12 Enregistrement des pré-fé-
+ []
+
+
+Underfull \hbox (badness 1127) in paragraph at lines 28--28
+[]|\T1/ptm/m/n/12 Préférences sau-ve-gar-dées et
+ []
+
+
+Overfull \hbox (12.38074pt too wide) in paragraph at lines 21--31
+ [][] 
+ []
+
+[40
 
 
 
 
 ]
-<chapter6/diagrams/sprint_sequence_diagram.png, id=991, 1373.13pt x 473.77pt>
-File: chapter6/diagrams/sprint_sequence_diagram.png Graphic file (type png)
-<use chapter6/diagrams/sprint_sequence_diagram.png>
-Package pdftex.def Info: chapter6/diagrams/sprint_sequence_diagram.png  used on input line 31.
-(pdftex.def)             Requested size: 441.01773pt x 152.1589pt.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.13202pt, for example:
@@ -2076,33 +2046,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
 
-[40]
-<chapter6/diagrams/sprint_activity_diagram.png, id=997, 371.3875pt x 649.42625pt>
-File: chapter6/diagrams/sprint_activity_diagram.png Graphic file (type png)
-<use chapter6/diagrams/sprint_activity_diagram.png>
-Package pdftex.def Info: chapter6/diagrams/sprint_activity_diagram.png  used on input line 41.
-(pdftex.def)             Requested size: 396.91325pt x 694.07657pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.13202pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.13202pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
-
-[41 <./chapter6/diagrams/sprint_sequence_diagram.png (PNG copy)>]
-Overfull \vbox (15.79347pt too high) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.13202pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.13202pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
-
-[42 <./chapter6/diagrams/sprint_activity_diagram.png (PNG copy)>]
-<chapter6/diagrams/sprint_use_case_diagram.png, id=1008, 1866.975pt x 2268.475pt>
+[41]
+<chapter6/diagrams/sprint_use_case_diagram.png, id=1052, 1866.975pt x 2268.475pt>
 File: chapter6/diagrams/sprint_use_case_diagram.png Graphic file (type png)
 <use chapter6/diagrams/sprint_use_case_diagram.png>
 Package pdftex.def Info: chapter6/diagrams/sprint_use_case_diagram.png  used on input line 51.
@@ -2115,7 +2060,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
 
-[43 <./chapter6/diagrams/sprint_use_case_diagram.png>])
+[42]
+<chapter6/diagrams/sprint_sequence_diagram.png, id=1058, 1373.13pt x 473.77pt>
+File: chapter6/diagrams/sprint_sequence_diagram.png Graphic file (type png)
+<use chapter6/diagrams/sprint_sequence_diagram.png>
+Package pdftex.def Info: chapter6/diagrams/sprint_sequence_diagram.png  used on input line 61.
+(pdftex.def)             Requested size: 441.01773pt x 152.1589pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.13202pt, for example:
@@ -2123,31 +2074,118 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
 
-[44]
+[43 <./chapter6/diagrams/sprint_use_case_diagram.png>]
+<chapter6/diagrams/sprint_activity_diagram.png, id=1065, 364.36125pt x 597.23125pt>
+File: chapter6/diagrams/sprint_activity_diagram.png Graphic file (type png)
+<use chapter6/diagrams/sprint_activity_diagram.png>
+Package pdftex.def Info: chapter6/diagrams/sprint_activity_diagram.png  used on input line 71.
+(pdftex.def)             Requested size: 396.91325pt x 650.61375pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.13202pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.13202pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
+
+[44 <./chapter6/diagrams/sprint_sequence_diagram.png (PNG copy)>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.13202pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.13202pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
+
+[45 <./chapter6/diagrams/sprint_activity_diagram.png (PNG copy)>])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.13202pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.13202pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
+
+[46]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.13202pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.13202pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
+
+[47]
 \openout2 = `chapter7/chapter7.aux'.
 
  (chapter7/chapter7.tex
 Chapitre 7.
-[45
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+[]|\T1/ptm/m/n/12 Optimisation des per-for-
+ []
+
+
+Underfull \hbox (badness 2707) in paragraph at lines 19--19
+[]|\T1/ptm/m/n/12 Réduction de la la-tence à
+ []
+
+
+Underfull \hbox (badness 1635) in paragraph at lines 19--19
+\T1/ptm/m/n/12 moins de 2 se-condes pour
+ []
+
+
+Underfull \hbox (badness 1048) in paragraph at lines 20--20
+[]|\T1/ptm/m/n/12 Interfaces in-tui-tives, fil-trage
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--21
+[]|\T1/ptm/m/n/12 Documentation com-plète,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--21
+\T1/ptm/m/n/12 guides d'uti-li-sa-tion clairs,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--21
+\T1/ptm/m/n/12 in-fra-struc-ture tech-nique
+ []
+
+
+Overfull \hbox (12.38074pt too wide) in paragraph at lines 16--26
+ [][] 
+ []
+
+[48
 
 
 
 
 ]
-<chapter7/chapter7/screens/dash.png, id=1025, 1156.32pt x 628.749pt>
+<chapter7/chapter7/screens/dash.png, id=1090, 1156.32pt x 628.749pt>
 File: chapter7/chapter7/screens/dash.png Graphic file (type png)
 <use chapter7/chapter7/screens/dash.png>
-Package pdftex.def Info: chapter7/chapter7/screens/dash.png  used on input line 14.
+Package pdftex.def Info: chapter7/chapter7/screens/dash.png  used on input line 33.
 (pdftex.def)             Requested size: 352.81552pt x 191.84012pt.
-<chapter7/chapter7/screens/patientslist.png, id=1026, 1156.32pt x 629.9535pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.13202pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.13202pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
+
+[49]
+<chapter7/chapter7/screens/patientslist.png, id=1095, 1156.32pt x 629.9535pt>
 File: chapter7/chapter7/screens/patientslist.png Graphic file (type png)
 <use chapter7/chapter7/screens/patientslist.png>
-Package pdftex.def Info: chapter7/chapter7/screens/patientslist.png  used on input line 21.
+Package pdftex.def Info: chapter7/chapter7/screens/patientslist.png  used on input line 40.
 (pdftex.def)             Requested size: 352.81552pt x 192.20763pt.
-<chapter7/chapter7/screens/staff list.png, id=1027, 1156.32pt x 634.7715pt>
+<chapter7/chapter7/screens/staff list.png, id=1096, 1156.32pt x 634.7715pt>
 File: chapter7/chapter7/screens/staff list.png Graphic file (type png)
 <use chapter7/chapter7/screens/staff list.png>
-Package pdftex.def Info: chapter7/chapter7/screens/staff list.png  used on input line 28.
+Package pdftex.def Info: chapter7/chapter7/screens/staff list.png  used on input line 47.
 (pdftex.def)             Requested size: 352.81552pt x 193.67766pt.
 
 
@@ -2157,70 +2195,42 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
 
-[46 <./chapter7/chapter7/screens/dash.png> <./chapter7/chapter7/screens/patientslist.png>]
-<chapter7/chapter7/screens/add_comment_patient.png, id=1043, 1084.05pt x 2409.0pt>
-File: chapter7/chapter7/screens/add_comment_patient.png Graphic file (type png)
-<use chapter7/chapter7/screens/add_comment_patient.png>
-Package pdftex.def Info: chapter7/chapter7/screens/add_comment_patient.png  used on input line 40.
-(pdftex.def)             Requested size: 132.30666pt x 293.99315pt.
-<chapter7/chapter7/screens/allow_notification.png, id=1044, 1084.05pt x 2409.0pt>
-File: chapter7/chapter7/screens/allow_notification.png Graphic file (type png)
-<use chapter7/chapter7/screens/allow_notification.png>
-Package pdftex.def Info: chapter7/chapter7/screens/allow_notification.png  used on input line 47.
-(pdftex.def)             Requested size: 132.30666pt x 293.99315pt.
-<chapter7/chapter7/screens/detailed_patient_list.png, id=1045, 1084.05pt x 2409.0pt>
-File: chapter7/chapter7/screens/detailed_patient_list.png Graphic file (type png)
-<use chapter7/chapter7/screens/detailed_patient_list.png>
-Package pdftex.def Info: chapter7/chapter7/screens/detailed_patient_list.png  used on input line 54.
-(pdftex.def)             Requested size: 132.30666pt x 293.99315pt.
-
-Underfull \hbox (badness 1728) in paragraph at lines 55--55
-[]\T1/ptm/m/sc/12 Figure 7.6 \T1/ptm/m/n/12 ^^U |Liste dé-
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.13202pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.13202pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
-
-[47 <./chapter7/chapter7/screens/staff list.png>]
-<chapter7/chapter7/screens/home.png, id=1052, 1084.05pt x 2409.0pt>
-File: chapter7/chapter7/screens/home.png Graphic file (type png)
-<use chapter7/chapter7/screens/home.png>
-Package pdftex.def Info: chapter7/chapter7/screens/home.png  used on input line 64.
-(pdftex.def)             Requested size: 132.30666pt x 293.99315pt.
-<chapter7/chapter7/screens/landing_page.png, id=1053, 1084.05pt x 2409.0pt>
+[50 <./chapter7/chapter7/screens/dash.png> <./chapter7/chapter7/screens/patientslist.png> <./chapter7/chapter7/screens/staff list.png>]
+<chapter7/chapter7/screens/landing_page.png, id=1113, 1084.05pt x 2409.0pt>
 File: chapter7/chapter7/screens/landing_page.png Graphic file (type png)
 <use chapter7/chapter7/screens/landing_page.png>
-Package pdftex.def Info: chapter7/chapter7/screens/landing_page.png  used on input line 71.
+Package pdftex.def Info: chapter7/chapter7/screens/landing_page.png  used on input line 62.
 (pdftex.def)             Requested size: 132.30666pt x 293.99315pt.
-<chapter7/chapter7/screens/login.png, id=1054, 1084.05pt x 2409.0pt>
+<chapter7/chapter7/screens/login.png, id=1114, 1084.05pt x 2409.0pt>
 File: chapter7/chapter7/screens/login.png Graphic file (type png)
 <use chapter7/chapter7/screens/login.png>
-Package pdftex.def Info: chapter7/chapter7/screens/login.png  used on input line 78.
+Package pdftex.def Info: chapter7/chapter7/screens/login.png  used on input line 70.
 (pdftex.def)             Requested size: 132.30666pt x 293.99315pt.
-<chapter7/chapter7/screens/machines_list.png, id=1055, 1084.05pt x 2409.0pt>
+<chapter7/chapter7/screens/home.png, id=1115, 1084.05pt x 2409.0pt>
+File: chapter7/chapter7/screens/home.png Graphic file (type png)
+<use chapter7/chapter7/screens/home.png>
+Package pdftex.def Info: chapter7/chapter7/screens/home.png  used on input line 78.
+(pdftex.def)             Requested size: 132.30666pt x 293.99315pt.
+<chapter7/chapter7/screens/machines_list.png, id=1116, 1084.05pt x 2409.0pt>
 File: chapter7/chapter7/screens/machines_list.png Graphic file (type png)
 <use chapter7/chapter7/screens/machines_list.png>
-Package pdftex.def Info: chapter7/chapter7/screens/machines_list.png  used on input line 88.
+Package pdftex.def Info: chapter7/chapter7/screens/machines_list.png  used on input line 89.
 (pdftex.def)             Requested size: 132.30666pt x 293.99315pt.
-<chapter7/chapter7/screens/machine_detailes.png, id=1056, 1084.05pt x 2409.0pt>
+
+Underfull \hbox (badness 1546) in paragraph at lines 90--90
+[]\T1/ptm/m/sc/12 Figure 7.7 \T1/ptm/m/n/12 ^^U |Liste des
+ []
+
+<chapter7/chapter7/screens/machine_detailes.png, id=1117, 1084.05pt x 2409.0pt>
 File: chapter7/chapter7/screens/machine_detailes.png Graphic file (type png)
 <use chapter7/chapter7/screens/machine_detailes.png>
-Package pdftex.def Info: chapter7/chapter7/screens/machine_detailes.png  used on input line 95.
+Package pdftex.def Info: chapter7/chapter7/screens/machine_detailes.png  used on input line 97.
 (pdftex.def)             Requested size: 132.30666pt x 293.99315pt.
-<chapter7/chapter7/screens/notifications.png, id=1057, 1084.05pt x 2409.0pt>
+<chapter7/chapter7/screens/notifications.png, id=1118, 1084.05pt x 2409.0pt>
 File: chapter7/chapter7/screens/notifications.png Graphic file (type png)
 <use chapter7/chapter7/screens/notifications.png>
-Package pdftex.def Info: chapter7/chapter7/screens/notifications.png  used on input line 102.
+Package pdftex.def Info: chapter7/chapter7/screens/notifications.png  used on input line 105.
 (pdftex.def)             Requested size: 132.30666pt x 293.99315pt.
-
-Underfull \hbox (badness 1009) in paragraph at lines 103--103
-[]\T1/ptm/m/sc/12 Figure 7.12 \T1/ptm/m/n/12 ^^U |No-ti-fi-ca-
- []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.13202pt, for example:
@@ -2228,46 +2238,60 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
 
-[48 <./chapter7/chapter7/screens/add_comment_patient.png> <./chapter7/chapter7/screens/allow_notification.png> <./chapter7/chapter7/screens/detailed_patient_list.png> <./chapter7/chapter7/screens/home.png> <./chapter7/chapter7/screens/landing_page.png> <./chapter7/chapter7/screens/login.png>]
-<chapter7/chapter7/screens/patients_lits.png, id=1068, 1084.05pt x 2409.0pt>
-File: chapter7/chapter7/screens/patients_lits.png Graphic file (type png)
-<use chapter7/chapter7/screens/patients_lits.png>
-Package pdftex.def Info: chapter7/chapter7/screens/patients_lits.png  used on input line 112.
-(pdftex.def)             Requested size: 132.30666pt x 293.99315pt.
-<chapter7/chapter7/screens/patient_detailes.png, id=1069, 1084.05pt x 2409.0pt>
+[51 <./chapter7/chapter7/screens/landing_page.png> <./chapter7/chapter7/screens/login.png> <./chapter7/chapter7/screens/home.png>]
+<chapter7/chapter7/screens/patient_detailes.png, id=1126, 1084.05pt x 2409.0pt>
 File: chapter7/chapter7/screens/patient_detailes.png Graphic file (type png)
 <use chapter7/chapter7/screens/patient_detailes.png>
-Package pdftex.def Info: chapter7/chapter7/screens/patient_detailes.png  used on input line 119.
+Package pdftex.def Info: chapter7/chapter7/screens/patient_detailes.png  used on input line 116.
 (pdftex.def)             Requested size: 132.30666pt x 293.99315pt.
-<chapter7/chapter7/screens/patient_machine_data.png, id=1070, 1084.05pt x 2409.0pt>
+File: chapter7/chapter7/screens/patient_detailes.png Graphic file (type png)
+<use chapter7/chapter7/screens/patient_detailes.png>
+Package pdftex.def Info: chapter7/chapter7/screens/patient_detailes.png  used on input line 124.
+(pdftex.def)             Requested size: 132.30666pt x 293.99315pt.
+<chapter7/chapter7/screens/patient_machine_data.png, id=1127, 1084.05pt x 2409.0pt>
 File: chapter7/chapter7/screens/patient_machine_data.png Graphic file (type png)
 <use chapter7/chapter7/screens/patient_machine_data.png>
-Package pdftex.def Info: chapter7/chapter7/screens/patient_machine_data.png  used on input line 126.
+Package pdftex.def Info: chapter7/chapter7/screens/patient_machine_data.png  used on input line 132.
 (pdftex.def)             Requested size: 132.30666pt x 293.99315pt.
 
-Underfull \hbox (badness 1194) in paragraph at lines 127--127
-[]\T1/ptm/m/sc/12 Figure 7.15 \T1/ptm/m/n/12 ^^U |Don-nées
+Underfull \hbox (badness 1194) in paragraph at lines 133--133
+[]\T1/ptm/m/sc/12 Figure 7.12 \T1/ptm/m/n/12 ^^U |Don-nées
  []
 
-<chapter7/chapter7/screens/profile.png, id=1071, 1084.05pt x 2409.0pt>
+<chapter7/chapter7/screens/profile.png, id=1128, 1084.05pt x 2409.0pt>
 File: chapter7/chapter7/screens/profile.png Graphic file (type png)
 <use chapter7/chapter7/screens/profile.png>
-Package pdftex.def Info: chapter7/chapter7/screens/profile.png  used on input line 136.
+Package pdftex.def Info: chapter7/chapter7/screens/profile.png  used on input line 143.
 (pdftex.def)             Requested size: 132.30666pt x 293.99315pt.
-<chapter7/chapter7/screens/seen_notifications.png, id=1072, 1084.05pt x 2409.0pt>
+<chapter7/chapter7/screens/seen_notifications.png, id=1129, 1084.05pt x 2409.0pt>
 File: chapter7/chapter7/screens/seen_notifications.png Graphic file (type png)
 <use chapter7/chapter7/screens/seen_notifications.png>
-Package pdftex.def Info: chapter7/chapter7/screens/seen_notifications.png  used on input line 143.
+Package pdftex.def Info: chapter7/chapter7/screens/seen_notifications.png  used on input line 151.
 (pdftex.def)             Requested size: 132.30666pt x 293.99315pt.
 
-Underfull \hbox (badness 1009) in paragraph at lines 144--144
-[]\T1/ptm/m/sc/12 Figure 7.17 \T1/ptm/m/n/12 ^^U |No-ti-fi-ca-
+Underfull \hbox (badness 1009) in paragraph at lines 152--152
+[]\T1/ptm/m/sc/12 Figure 7.14 \T1/ptm/m/n/12 ^^U |No-ti-fi-ca-
  []
 
-<chapter7/chapter7/screens/shift_calendar.png, id=1073, 1084.05pt x 2409.0pt>
+<chapter7/chapter7/screens/shift_calendar.png, id=1130, 1084.05pt x 2409.0pt>
 File: chapter7/chapter7/screens/shift_calendar.png Graphic file (type png)
 <use chapter7/chapter7/screens/shift_calendar.png>
-Package pdftex.def Info: chapter7/chapter7/screens/shift_calendar.png  used on input line 150.
+Package pdftex.def Info: chapter7/chapter7/screens/shift_calendar.png  used on input line 159.
+(pdftex.def)             Requested size: 132.30666pt x 293.99315pt.
+<chapter7/chapter7/screens/add_comment_patient.png, id=1131, 1084.05pt x 2409.0pt>
+File: chapter7/chapter7/screens/add_comment_patient.png Graphic file (type png)
+<use chapter7/chapter7/screens/add_comment_patient.png>
+Package pdftex.def Info: chapter7/chapter7/screens/add_comment_patient.png  used on input line 169.
+(pdftex.def)             Requested size: 132.30666pt x 293.99315pt.
+<chapter7/chapter7/screens/allow_notification.png, id=1132, 1084.05pt x 2409.0pt>
+File: chapter7/chapter7/screens/allow_notification.png Graphic file (type png)
+<use chapter7/chapter7/screens/allow_notification.png>
+Package pdftex.def Info: chapter7/chapter7/screens/allow_notification.png  used on input line 177.
+(pdftex.def)             Requested size: 132.30666pt x 293.99315pt.
+<chapter7/chapter7/screens/detailed_patient_list.png, id=1133, 1084.05pt x 2409.0pt>
+File: chapter7/chapter7/screens/detailed_patient_list.png Graphic file (type png)
+<use chapter7/chapter7/screens/detailed_patient_list.png>
+Package pdftex.def Info: chapter7/chapter7/screens/detailed_patient_list.png  used on input line 185.
 (pdftex.def)             Requested size: 132.30666pt x 293.99315pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2276,7 +2300,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
 
-[49 <./chapter7/chapter7/screens/machines_list.png> <./chapter7/chapter7/screens/machine_detailes.png> <./chapter7/chapter7/screens/notifications.png> <./chapter7/chapter7/screens/patients_lits.png> <./chapter7/chapter7/screens/patient_detailes.png> <./chapter7/chapter7/screens/patient_machine_data.png>])
+[52 <./chapter7/chapter7/screens/machines_list.png> <./chapter7/chapter7/screens/machine_detailes.png> <./chapter7/chapter7/screens/notifications.png> <./chapter7/chapter7/screens/patient_detailes.png> <./chapter7/chapter7/screens/patient_machine_data.png>])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.13202pt, for example:
@@ -2284,55 +2308,115 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
 
-[50 <./chapter7/chapter7/screens/profile.png> <./chapter7/chapter7/screens/seen_notifications.png> <./chapter7/chapter7/screens/shift_calendar.png>]
+[53 <./chapter7/chapter7/screens/profile.png> <./chapter7/chapter7/screens/seen_notifications.png> <./chapter7/chapter7/screens/shift_calendar.png> <./chapter7/chapter7/screens/add_comment_patient.png> <./chapter7/chapter7/screens/allow_notification.png> <./chapter7/chapter7/screens/detailed_patient_list.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.13202pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.13202pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
+
+[54]
 \openout2 = `chapter8/chapter8.aux'.
 
- (chapter8/chapter8.tex [51
+ (chapter8/chapter8.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--7
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--17
+
+ []
+
+) [55
 
 
 
 
-])
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.13202pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.13202pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-3.13202pt}.
-
-[52] (main.bbl
+] (main.bbl
 Underfull \hbox (badness 1132) in paragraph at lines 4--7
 []\T1/ptm/m/n/12 Faculté de Mé-de-cine de Mo-nas-tir.  Rap-port an-nuel 2020, 2020.  Avai-lable :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--59
+Underfull \hbox (badness 10000) in paragraph at lines 66--69
 []\T1/ptm/m/n/12 Google.  Fi-re-base cloud mes-sa-ging, 2023.  Avai-lable :
  []
 
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 74.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 84.
 (C:\Program Files\MiKTeX\tex/latex/psnfss\t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 87--92
+Underfull \hbox (badness 10000) in paragraph at lines 97--102
 []\T1/ptm/m/n/12 ClickUp.  Cli-ckup docs : Pro-duct ma-na-ge-ment and agile
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--92
+Underfull \hbox (badness 10000) in paragraph at lines 97--102
 \T1/ptm/m/n/12 tools.  []$\T1/pcr/m/n/12 https : / / docs . clickup . com / en / articles /
  []
 
+[56
 
-Underfull \hbox (badness 1910) in paragraph at lines 94--97
+
+
+]
+Underfull \hbox (badness 1910) in paragraph at lines 104--107
 []\T1/ptm/m/n/12 Slack Tech-no-lo-gies.  Slack do-cu-men-ta-tion.  []$\T1/pcr/m/n/12 https : / / slack . com / help /
  []
 
-[53
+
+Underfull \hbox (badness 6792) in paragraph at lines 114--117
+[]\T1/ptm/m/n/12 Oracle Cor-po-ra-tion.  Mysql 8.0 re-fe-rence ma-nual, 2025.  Avai-lable :
+ []
 
 
+Underfull \hbox (badness 1033) in paragraph at lines 129--132
+[]\T1/ptm/m/n/12 Python Soft-ware Foun-da-tion.  Py-thon 3.12 do-cu-men-ta-tion, 2025.  Avai-lable :
+ []
 
-])
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--137
+[]\T1/ptm/m/n/12 Pallets Pro-jects.  Flask do-cu-men-ta-tion, 2025.  Avai-lable :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--157
+[]\T1/ptm/m/n/12 Google.  Dart lan-guage tour, 2025.  Avai-lable :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 164--168
+[]\T1/ptm/m/n/12 Mozilla De-ve-lo-per Net-work.  Ja-vas-cript guide, 2025.  Avai-lable :
+ []
+
+
+Underfull \hbox (badness 2173) in paragraph at lines 175--178
+[]\T1/ptm/m/n/12 phpMyAdmin contri-bu-tors.  php-myad-min do-cu-men-ta-tion, 2025.  Avai-lable :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 180--183
+[]\T1/ptm/m/n/12 Microsoft.  Vi-sual stu-dio code do-cu-men-ta-tion, 2025.  Avai-lable :
+ []
+
+
+Underfull \hbox (badness 4144) in paragraph at lines 185--188
+[]\T1/ptm/m/n/12 Google.  An-droid stu-dio user guide, 2025.  Avai-lable : https ://de-ve-lo-
+ []
+
+)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2340,7 +2424,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[54]
+[57]
 \openout2 = `annexes/annexeA.aux'.
 
 
@@ -2355,21 +2439,25 @@ AED: lastpage setting LastPage
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 4A10B12663AFF637A4D831B28C4F461F;16409.
+(rerunfilecheck)             Checksum: 3B3BB34412353901FABA92A48EE31533;16355.
  ) 
 Here is how much of TeX's memory you used:
- 36336 strings out of 474486
- 710176 string characters out of 5743756
- 1947542 words of memory out of 5000000
- 57688 multiletter control sequences out of 15000+600000
- 602743 words of font info for 91 fonts, out of 8000000 for 9000
+ 36393 strings out of 474486
+ 710698 string characters out of 5743756
+ 1956542 words of memory out of 5000000
+ 57717 multiletter control sequences out of 15000+600000
+ 609958 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 103i,17n,107p,1731b,889s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (62 pages, 7673274 bytes).
+ 103i,17n,107p,1731b,885s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/racha/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (66 pages, 7654593 bytes).
 PDF statistics:
- 1205 PDF objects out of 1440 (max. 8388607)
- 222 named destinations out of 1000 (max. 500000)
- 996 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1276 PDF objects out of 1440 (max. 8388607)
+ 247 named destinations out of 1000 (max. 500000)
+ 991 words of extra memory for PDF output out of 10000 (max. 10000000)
 

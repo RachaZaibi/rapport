@@ -84,35 +84,80 @@ W-03 & Analyse avancée des données avec intelligence artificielle pour le diag
 
 Le projet est structuré en trois sprints de trois semaines chacun. Le tableau ci-dessous présente une synthèse des objectifs, livrables, tâches, critères d’acceptation et risques associés à chaque sprint.
 
-\begin{table}[H]
-\centering
-\caption{Planification des Sprints du Projet VitalSync}
-\label{tab:sprints}
-\renewcommand{\arraystretch}{1.2}
-\begin{tabular}{|p{2cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
+% --- Sprint Planning Table (longtable version) ---
+\begin{longtable}{|p{3cm}|p{4cm}|p{4cm}|p{4cm}|}
+\caption{Planification des Sprints du Projet VitalSync}\label{tab:sprints} \\
 \hline
-\textbf{Sprint} & \textbf{Objectifs et livrables} & \textbf{Tâches principales} & \textbf{Critères d’acceptation} & \textbf{Risques et solutions} \\
+\textbf{Sprint} & \textbf{Objectifs et livrables} & \textbf{Tâches principales} & \textbf{Critères d’acceptation}  \\
 \hline
+\endfirsthead
+\hline
+\textbf{Sprint} & \textbf{Objectifs et livrables} & \textbf{Tâches principales} & \textbf{Critères d’acceptation}  \\
+\hline
+\endhead
+% Sprint 1
 \textbf{Sprint 1 \newline Création du dataset et mise en place du pipeline OCR} &
-Identification des acteurs ; recueil des besoins ; définition de la méthodologie Scrum. &
-Dataset annoté ; modèle YOLO entraîné ; pipeline OCR fonctionnel. &
-Capture et annotation ; entraînement modèle ; intégration Tesseract ; configuration caméras. &
-Détection précise ; extraction fiable ; faible latence ; compatibilité multi-marques. Mauvais éclairage $\rightarrow$ prétraitement ; dataset limité $\rightarrow$ augmentation. \\
+\begin{itemize}[leftmargin=8pt]
+    \item Dataset annoté pour les moniteurs médicaux.
+    \item Modèle YOLO entraîné pour la détection des zones d’intérêt.
+    \item Pipeline OCR fonctionnel avec Tesseract.
+\end{itemize} &
+\begin{itemize}[leftmargin=8pt]
+    \item Collecte et annotation des images.
+    \item Entraînement du modèle YOLO.
+    \item Intégration de Tesseract pour l’OCR.
+    \item Configuration des caméras pour la capture des données.
+\end{itemize} &
+\begin{itemize}[leftmargin=8pt]
+    \item Détection précise des zones d’intérêt.
+    \item Extraction fiable des valeurs vitales.
+    \item Faible latence dans le traitement des images.
+    \item Compatibilité avec les marques de moniteurs.
+\end{itemize}  \\
 \hline
+% Sprint 2
 \textbf{Sprint 2 \newline Système d'alertes et de notifications} &
-Moteur d’alerte ; notifications selon rôles ; intégration FCM. &
-Configuration des seuils ; mapping rôles ; messagerie ; validation données. &
-Alertes rapides ; notifications correctes ; données validées avec précision. &
-Retards $\rightarrow$ tests simulés ; erreurs $\rightarrow$ tests unitaires. \\
+\begin{itemize}[leftmargin=8pt]
+    \item Moteur d’alerte fonctionnel.
+    \item Notifications push et e-mail implémentées.
+    \item Configuration des seuils d’alerte.
+\end{itemize} &
+\begin{itemize}[leftmargin=8pt]
+    \item Développement du moteur d’alerte.
+    \item Intégration de Firebase Cloud Messaging (FCM).
+    \item Configuration des seuils d’alerte par patient.
+    \item Tests de notifications push et e-mail.
+\end{itemize} &
+\begin{itemize}[leftmargin=8pt]
+    \item Alertes générées en temps réel.
+    \item Notifications envoyées aux rôles appropriés.
+    \item Données validées par le personnel médical.
+    \item Configuration des seuils d’alerte par patient.
+\end{itemize} \\
 \hline
+% Sprint 3
 \textbf{Sprint 3 \newline Finalisation du système VitalSync} &
-Dashboard web ; app mobile ; base de données des alertes. &
-Développement dashboard ; design app ; notifications ; mises à jour en temps réel. &
-Interfaces réactives ; réception fiable ; intégrité des données ; bonne ergonomie. &
-Latence $\rightarrow$ optimisation réseau ; intégration complexe $\rightarrow$ prototypes/tests. \\
+\begin{itemize}[leftmargin=8pt]
+    \item Dashboard web pour le personnel médical.
+    \item Application mobile pour les notifications.
+    \item Base de données relationnelle configurée.
+\end{itemize} &
+\begin{itemize}[leftmargin=8pt]
+    \item Développement du dashboard web avec React.
+    \item Création de l’application mobile avec Flutter.
+    \item Intégration des notifications en temps réel.
+    \item Configuration de la base de données MySQL.\cite{mysql}
+\end{itemize} &
+\begin{itemize}[leftmargin=8pt]
+    \item Interfaces utilisateur réactives et intuitives.
+    \item Réception fiable des notifications sur mobile.
+    \item Intégrité des données dans la base de données.
+    \item Bonne ergonomie pour le personnel médical.
+    \item Historique des alertes avec filtrage par date, patient, ou type d'alerte.
+\end{itemize} \\
 \hline
-\end{tabular}
-\end{table}
+\end{longtable}
+% --- End Sprint Planning Table ---
 
 
 \section{Environnement de travail}
@@ -130,54 +175,54 @@ L’environnement matériel est conçu pour répondre aux exigences architectura
 L’environnement de développement s’appuie sur un ensemble cohérent de langages de programmation, frameworks et bibliothèques, choisis en fonction des exigences techniques du projet VitalSync. Chaque composant du système est développé avec des outils adaptés à sa fonction :
 
 \begin{itemize}
-    \item \textbf{PHP avec Laravel} : utilisé pour développer l’API backend principale. Laravel offre une architecture MVC robuste, une gestion avancée de l’authentification (Sanctum), ainsi qu’un système de routage et de notifications efficace.
+    \item \textbf{PHP avec Laravel} : utilisé pour développer l’API backend principale. Laravel offre une architecture MVC robuste, une gestion avancée de l’authentification (Sanctum), ainsi qu’un système de routage et de notifications efficace.\cite{phpdoc,laravel}
         \begin{figure}[H]
             \centering
-            \includegraphics[width=0.15\textwidth]{chapter4/images/laravel_logo.png}
+            \includegraphics[width=0.2\textwidth]{chapter4/images/laravel_logo.png}
             \hspace{1cm}
-            \includegraphics[width=0.15\textwidth]{chapter4/images/php-logo.png}
+            \includegraphics[width=0.2\textwidth]{chapter4/images/php-logo.png}
             \caption{Logos des technologies backend : Laravel et PHP}
             \label{fig:laravel_php_logos}
         \end{figure}
 
-    \item \textbf{Python avec Flask} : utilisé pour les microservices de traitement d’image. Flask, léger et modulaire, est associé à des bibliothèques comme OpenCV (prétraitement d’image), YOLO (détection des zones d’intérêt) et Tesseract OCR (extraction de texte).
+    \item \textbf{Python avec Flask} : utilisé pour les microservices de traitement d’image. Flask, léger et modulaire, est associé à des bibliothèques comme OpenCV (prétraitement d’image), YOLO (détection des zones d’intérêt) et Tesseract OCR (extraction de texte).\cite{python,flask,opencv,yolo,tesseract}
     
         \begin{figure}[H]
             \centering
-            \includegraphics[width=0.15\textwidth]{chapter4/images/python_logo.png}
+            \includegraphics[width=0.2\textwidth]{chapter4/images/python_logo.png}
             \hspace{1cm}
-            \includegraphics[width=0.15\textwidth]{chapter4/images/flask_logo.png}
+            \includegraphics[width=0.2\textwidth]{chapter4/images/flask_logo.png}
             \caption{Logos des technologies utilisées pour le traitement et l’API Python : Python et Flask}
             \label{fig:python_flask_logos}
         \end{figure}
 
-    \item \textbf{Dart avec Flutter} : utilisé pour l’application mobile multiplateforme. Flutter permet de développer des interfaces fluides et réactives, compatibles Android/iOS, et intègre Firebase Cloud Messaging (FCM) pour les notifications.
+    \item \textbf{Dart avec Flutter} : utilisé pour l’application mobile multiplateforme. Flutter permet de développer des interfaces fluides et réactives, compatibles Android/iOS, et intègre Firebase Cloud Messaging (FCM) pour les notifications.\cite{dart,flutter}
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.3\textwidth]{chapter4/images/flutter_logo.png}
             \hspace{1cm}
-            \includegraphics[width=0.2\textwidth]{chapter4/images/dart_logo.jpg}
+            \includegraphics[width=0.3\textwidth]{chapter4/images/dart_logo.jpg}
             \caption{Logos des technologies utilisées pour le développement mobile : Flutter et Dart}
             \label{fig:flutter_dart_logos}
         \end{figure}
 
-     \item \textbf{JavaScript avec React} : utilisé pour l’interface web destinée au personnel médical. React assure une expérience utilisateur moderne avec une gestion efficace de l’état des composants et des interactions dynamiques.
+     \item \textbf{JavaScript avec React} : utilisé pour l’interface web destinée au personnel médical. React assure une expérience utilisateur moderne avec une gestion efficace de l’état des composants et des interactions dynamiques.\cite{javascriptmdn,react}
     
         \begin{figure}[H]
             \centering
-            \includegraphics[width=0.15\textwidth]{chapter4/images/react_logo.jpg}
+            \includegraphics[width=0.3\textwidth]{chapter4/images/react_logo.jpg}
             \hspace{1cm}
             \includegraphics[width=0.15\textwidth]{chapter4/images/javascript_logo.png}
             \caption{Logos des technologies utilisées pour le développement web : React et JavaScript}
             \label{fig:react_js_logos}
         \end{figure}
 
-    \item \textbf{MySQL avec phpMyAdmin} : MySQL est la base de données relationnelle choisie pour le stockage des patients, mesures vitales, et alertes. phpMyAdmin facilite la visualisation et la gestion de la base.
+    \item \textbf{MySQL avec phpMyAdmin} : MySQL est la base de données relationnelle choisie pour le stockage des patients, mesures vitales, et alertes. phpMyAdmin facilite la visualisation et la gestion de la base.\cite{mysql,phpmyadmin}
         \begin{figure}[H]
             \centering
-            \includegraphics[width=0.15\textwidth]{chapter4/images/mysql_logo.png}
+            \includegraphics[width=0.25\textwidth]{chapter4/images/mysql_logo.png}
             \hspace{1cm}
-            \includegraphics[width=0.15\textwidth]{chapter4/images/phpmyadmin_logo.png}
+            \includegraphics[width=0.25\textwidth]{chapter4/images/phpmyadmin_logo.png}
             \caption{Logos des outils de gestion de base de données : MySQL et phpMyAdmin}
             \label{fig:mysql_phpmyadmin_logos}
         \end{figure}
@@ -186,14 +231,13 @@ L’environnement de développement s’appuie sur un ensemble cohérent de lang
 
 Ces technologies sont intégrées dans un environnement modulaire et conteneurisé à l’aide de Docker, garantissant une portabilité entre les environnements de développement, de test et de production. Le développement collaboratif est facilité par GitHub, tandis que l’édition de code est principalement réalisée avec Visual Studio Code et Android Studio.
 
-
 \subsection{Environnement logiciel}
 \label{subsec:logiciel}
 
 L’environnement logiciel repose sur des systèmes d’exploitation adaptés pour le développement et les appareils mobiles. Une base de données relationnelle garantit un stockage fiable et conforme aux standards. Les communications s’appuient sur des protocoles sécurisés, tels que des API REST avec authentification par tokens et des WebSockets pour les mises à jour en temps réel. Les outils de développement suivants sont employés :
 
 \begin{itemize}
-    \item \textbf{Visual Studio Code} : Utilisé comme environnement de développement intégré, Visual Studio Code permet de coder, tester et déboguer efficacement grâce à son interface intuitive et ses extensions pour divers langages et frameworks.
+    \item \textbf{Visual Studio Code} : Utilisé comme environnement de développement intégré, Visual Studio Code permet de coder, tester et déboguer efficacement grâce à son interface intuitive et ses extensions pour divers langages et frameworks.\cite{vscode}
 \end{itemize}
 \begin{figure}[H]
     \centering
@@ -202,34 +246,34 @@ L’environnement logiciel repose sur des systèmes d’exploitation adaptés po
 \end{figure}
 
 \begin{itemize}
-    \item \textbf{Android Studio} : Android Studio est utilisé pour le développement et le test des applications mobiles, offrant des outils spécialisés pour la création d’interfaces utilisateur et la gestion des performances sur les appareils Android.
+    \item \textbf{Android Studio} : Android Studio est utilisé pour le développement et le test des applications mobiles, offrant des outils spécialisés pour la création d’interfaces utilisateur et la gestion des performances sur les appareils Android.\cite{androidstudio}
 \end{itemize}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.15\textwidth]{chapter4/images/androidstudio_logo.png}
+    \includegraphics[width=0.2\textwidth]{chapter4/images/androidstudio_logo.png}
     \caption{Logo d’Android Studio}
 \end{figure}
 
 \begin{itemize}
-    \item \textbf{LaTeX} : LaTeX est utilisé pour la rédaction du rapport final, offrant une mise en forme professionnelle et structurée. Il permet de générer des documents de haute qualité avec une gestion précise des sections, des références et des figures.
+    \item \textbf{LaTeX} : LaTeX est utilisé pour la rédaction du rapport final, offrant une mise en forme professionnelle et structurée. Il permet de générer des documents de haute qualité avec une gestion précise des sections, des références et des figures.\cite{latex}
 \end{itemize}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.15\textwidth]{chapter4/images/latex_logo.png}
+    \includegraphics[width=0.2\textwidth]{chapter4/images/latex_logo.png}
     \caption{Logo de LaTeX}
 \end{figure}
 
 \begin{itemize}
-    \item \textbf{GitHub} : GitHub facilite la gestion des versions et la collaboration sur le code, assurant un suivi rigoureux des modifications et une intégration fluide avec d’autres outils de développement.
+    \item \textbf{GitHub} : GitHub facilite la gestion des versions et la collaboration sur le code, assurant un suivi rigoureux des modifications et une intégration fluide avec d’autres outils de développement.\cite{github}
 \end{itemize}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.15\textwidth]{chapter4/images/github_logo.jpg}
+    \includegraphics[width=0.2\textwidth]{chapter4/images/github_logo.jpg}
     \caption{Logo de GitHub}
 \end{figure}
 
 \begin{itemize}
-    \item \textbf{Docker Desktop} : Docker Desktop permet de conteneuriser les applications, assurant une portabilité et une cohérence des environnements logiciels à travers les différentes phases du projet.
+    \item \textbf{Docker Desktop} : Docker Desktop permet de conteneuriser les applications, assurant une portabilité et une cohérence des environnements logiciels à travers les différentes phases du projet.\cite{docker}
 \end{itemize}
 \begin{figure}[H]
     \centering

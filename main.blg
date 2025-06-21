@@ -27,44 +27,46 @@ A level-1 auxiliary file: annexes/annexeA.aux
 Reallocating 'name_of_file' (item size: 1) to 20 items.
 A level-1 auxiliary file: annexes/annexeB.aux
 Database file #1: references.bib
-You've used 19 entries,
+Warning--I didn't find a database entry for "ChartX2023"
+You've used 39 entries,
             1791 wiz_defined-function locations,
-            558 strings with 5839 characters,
-and the built_in function-call counts, 3101 in all, are:
-= -- 277
-> -- 92
+            638 strings with 7646 characters,
+and the built_in function-call counts, 5658 in all, are:
+= -- 478
+> -- 176
 < -- 1
-+ -- 42
-- -- 23
-* -- 99
-:= -- 476
-add.period$ -- 57
-call.type$ -- 19
-change.case$ -- 16
++ -- 83
+- -- 44
+* -- 120
+:= -- 859
+add.period$ -- 117
+call.type$ -- 39
+change.case$ -- 36
 chr.to.int$ -- 0
-cite$ -- 19
-duplicate$ -- 140
-empty$ -- 379
-format.name$ -- 23
-if$ -- 722
+cite$ -- 39
+duplicate$ -- 240
+empty$ -- 739
+format.name$ -- 44
+if$ -- 1326
 int.to.chr$ -- 0
-int.to.str$ -- 19
+int.to.str$ -- 39
 missing$ -- 12
-newline$ -- 98
-num.names$ -- 19
-pop$ -- 105
+newline$ -- 198
+num.names$ -- 39
+pop$ -- 245
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 68
+skip$ -- 129
 stack$ -- 0
 substring$ -- 119
-swap$ -- 28
+swap$ -- 48
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 28
-width$ -- 21
-write$ -- 197
+while$ -- 48
+width$ -- 41
+write$ -- 397
+(There was 1 warning)
