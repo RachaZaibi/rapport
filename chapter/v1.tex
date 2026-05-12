@@ -1,0 +1,154 @@
+
+
+\chapter{Introduction Générale}
+
+\section{Présentation de l’organisme d’accueil}
+\subsection{Faculté de Médecine de Monastir (FMM)}
+Fondée en 1980, la Faculté de Médecine de Monastir (FMM) est un établissement public d’enseignement supérieur et de recherche médicale en Tunisie. Elle a pour mission de former des professionnels de santé compétents et de promouvoir la recherche médicale appliquée.
+
+\textbf{Certifications et collaborations} :
+\begin{itemize}
+  \item ISO 21001:2018 pour la gestion de la qualité de l’éducation.
+  \item Partenariats internationaux avec des hôpitaux universitaires européens.
+\end{itemize}
+
+\subsection{SmartLab}
+Le SmartLab est un laboratoire d’innovation spécialisé dans le développement de solutions médicales low-cost. Il met à disposition :
+\begin{itemize}
+  \item Des dispositifs embarqués (Raspberry Pi, capteurs biométriques).
+  \item Des serveurs de traitement des données sécurisés.
+\end{itemize}
+
+\section{Contexte et justification du projet}
+\subsection{Problématique}
+Dans les salles de réveil tunisiennes, la surveillance des patients est majoritairement manuelle. Les infirmiers doivent vérifier régulièrement les constantes vitales sur des machines anciennes non connectées. Cela entraîne :
+\begin{itemize}
+  \item Des retards d’intervention supérieurs à 5 minutes.
+  \item Un taux d’erreurs humaines de plus de 15\%.
+\end{itemize}
+
+\subsection{Opportunité}
+Face au coût élevé des solutions commerciales connectées, une approche par vision artificielle est envisagée. Celle-ci permet de :
+\begin{itemize}
+  \item Réutiliser les machines existantes.
+  \item Numériser les informations via OCR.
+\end{itemize}
+
+\section{Objectifs}
+\subsection{Objectif principal}
+Développer une solution low-cost de surveillance automatisée en salle de réveil, basée sur la capture d’image et la reconnaissance optique de caractères (OCR).
+
+\subsection{Objectifs spécifiques}
+\begin{itemize}
+  \item Extraire les constantes vitales (SpO2, FC) à l’aide d’OpenCV et Tesseract.
+  \item Générer des alertes via Firebase Cloud Messaging et SMS.
+  \item Réduire la latence d’alerte à moins de 3 secondes.
+  \item Maintenir un budget inférieur à 10 000€.
+\end{itemize}
+
+\chapter{Cadre de Projet}
+
+\section{Portée et livrables}
+\subsection{Périmètre}
+\begin{itemize}
+  \item \textbf{Inclus} : Surveillance de 10 lits avec caméras IR.
+  \item \textbf{Exclus} : Intégration à des moniteurs connectés.
+\end{itemize}
+
+\subsection{Livrables}
+\begin{itemize}
+  \item Caméras Raspberry Pi 5 avec module infrarouge.
+  \item Backend Python (Flask) + base SQLite.
+  \item Interface web (React.js).
+\end{itemize}
+
+\section{Analyse de l’existant}
+\subsection{Solutions alternatives}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Méthode} & \textbf{Avantages} & \textbf{Inconvénients} \\
+\hline
+Caméra + OCR & Économique, sans contact & Sensible à l’éclairage \\
+\hline
+Capteurs DIY & Haute précision & Coût, complexité technique \\
+\hline
+\end{tabular}
+
+\subsection{Benchmark OCR}
+\begin{itemize}
+  \item Tesseract 5.0 avec prétraitement (binarisation, filtrage).
+  \item Taux de reconnaissance : 93\% sur écrans LCD.
+\end{itemize}
+
+\section{Risques et atténuation}
+\begin{itemize}
+  \item \textbf{Qualité d’image} : Solution -- caméra IR et filtrage logiciel (OpenCV).
+  \item \textbf{Confidentialité} : Chiffrement AES-256 et stockage local.
+\end{itemize}
+
+\chapter{Méthodologie de Travail}
+
+\section{Méthodologie Agile adaptée}
+\subsection{Cycle de développement}
+\begin{itemize}
+  \item Sprint 0 : Cadrage du besoin (2 semaines).
+  \item Sprint 1 : Extraction OCR (SpO2, FC).
+  \item Sprint 2 : Mécanisme d’alerte (FCM + Twilio).
+\end{itemize}
+
+\subsection{Rôles}
+\begin{itemize}
+  \item \textbf{Product Owner} : Médecin coordinateur.
+  \item \textbf{Développeurs} :
+  \begin{itemize}
+    \item 1 ingénieur Python.
+    \item 1 développeur React.
+  \end{itemize}
+\end{itemize}
+
+\section{Outils utilisés}
+\begin{itemize}
+  \item Trello pour la gestion de projet (Kanban).
+  \item GitLab pour le versionnage et la CI/CD.
+\end{itemize}
+
+\chapter{Étude Architecturale}
+
+\section{Architecture logicielle}
+\subsection{Flux de traitement}
+\begin{enumerate}
+  \item Capture image via caméra.
+  \item Détection du cadre de l’écran (OpenCV).
+  \item Extraction texte (Tesseract).
+  \item Déclenchement d’alerte si dépassement de seuils.
+\end{enumerate}
+
+\subsection{Technologies utilisées}
+\begin{itemize}
+  \item \textbf{Backend} : Flask, PyTesseract, Firebase SDK.
+  \item \textbf{Frontend} : React.js, Material-UI.
+\end{itemize}
+
+\section{Sécurité des données}
+\begin{itemize}
+  \item Chiffrement AES-256 pour les données.
+  \item Authentification via JWT.
+\end{itemize}
+
+\section{Prototype matériel}
+\begin{itemize}
+  \item Caméras 1080p avec support ajustable.
+  \item Installation discrète au-dessus des écrans.
+\end{itemize}
+
+\appendix
+
+\chapter*{Annexes}
+\addcontentsline{toc}{chapter}{Annexes}
+\begin{itemize}
+  \item \textbf{Annexe A} : Extrait OCR (SpO2 = 98, FC = 72).
+  \item \textbf{Annexe B} : Schéma de la base de données SQLite.
+  \item \textbf{Annexe C} : Guide d’installation des caméras.
+\end{itemize}
+
+% \end{document}

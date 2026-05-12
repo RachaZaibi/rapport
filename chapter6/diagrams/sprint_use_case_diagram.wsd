@@ -1,0 +1,26 @@
+@startuml
+left to right direction
+
+actor "Personnel Médical" as Staff
+actor "Médecin" as Med
+actor "Infirmier(ère)" as Inf
+actor "Administrateur" as Admin
+
+Staff <|-- Med
+Staff <|-- Inf
+
+rectangle "Système VitalSync" {
+  usecase "Visualiser les alertes" as UC1
+  usecase "Recevoir les notifications" as UC2
+  usecase "Confirmer les actions" as UC3
+  usecase "Personnaliser les notifications" as UC4
+  usecase "Configurer les seuils d'alerte" as UC5
+}
+
+Staff --> UC1
+Staff --> UC2
+Staff --> UC3
+
+Admin --> UC4
+Admin --> UC5
+@enduml

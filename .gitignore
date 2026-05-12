@@ -1,0 +1,34 @@
+# gitignore for latex projects
+
+# Main auxiliary files
+*.aux
+*.log
+*.toc
+*.lof
+*.lot
+*.out
+*.bbl
+*.blg
+*.pdfsync
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+
+# Bibliography and Indexing
+*.bib.bak
+*.bcf
+*.run.xml
+*.idx
+*.ind
+*.ilg
+
+# Package-specific
+_minted*
+*.pyg
+*.ist
+*.glo
+*.gls
+*.glg
+*.nav
+*.snm
+*.vrb

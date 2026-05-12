@@ -1,0 +1,287 @@
+\chapter{Sprint 0 :  Planification et préparation du projet}
+\label{chap:sprint0}
+
+\section{Introduction}
+\label{sec:intro_sprint0}
+
+Le Sprint 0 constitue la phase initiale du projet, qui vise à développer un système de collecte de données en temps réel et de gestion des alertes pour les appareils médicaux en salle de réveil. Cette étape fondamentale permet d’identifier les acteurs clés, de recueillir les besoins fonctionnels et non fonctionnels, et de définir la méthodologie Scrum qui guidera les phases ultérieures du développement. L’objectif est d’assurer un alignement avec les ambitions du projet, à savoir améliorer la surveillance post-opératoire grâce à une collecte automatisée des données et à des alertes en temps réel, comme décrit dans les chapitres d’introduction générale et d’étude architecturale.
+
+\section{Pilotage du projet avec Scrum}
+\label{sec:gestion_scrum}
+
+Le projet adopte la méthodologie Scrum pour assurer un développement itératif et une collaboration étroite avec les parties prenantes, comme justifié dans le chapitre consacré à la méthodologie. Cette section détaille les rôles Scrum, l’organisation du backlog et la planification des sprints.
+
+\subsection{Acteurs Scrum et Missions}
+\label{subsec:roles_scrum}
+
+Les rôles Scrum et leurs responsabilités sont définis dans un tableau spécifique, garantissant une approche collaborative alignée sur les principes décrits précédemment. Le Product Owner est chargé de définir et de prioriser les fonctionnalités du produit, tout en validant les livrables pour s’assurer qu’ils répondent aux besoins du projet. L’équipe de développement conçoit, développe et teste les fonctionnalités, en veillant à la qualité du code produit. Le Scrum Master facilite les événements Scrum, élimine les obstacles et veille à ce que l’équipe adhère aux pratiques de la méthodologie.
+
+\begin{table}[H]
+\centering
+\caption{Acteurs du projet Scrum}
+\label{tab:roles_scrum}
+\begin{tabular}{|p{3cm}|p{7cm}|p{3cm}|}
+\hline
+\textbf{Rôle} & \textbf{Mission} & \textbf{Acteur} \\
+\hline
+Product Owner & Définir et prioriser les fonctionnalités du produit (Product Backlog), valider les livrables. & Pr Ammeri Charfeddine \\
+\hline
+Équipe de Développement & Concevoir, développer et tester les fonctionnalités, assurer la qualité du code. & Zaibi Racha \\
+\hline
+Scrum Master & Faciliter les événements Scrum, supprimer les obstacles, assurer l'adhésion à Scrum. & Ouni Ghada \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Organisation du Backlog}
+\label{subsec:backlog}
+
+Le Product Backlog est géré à l’aide d’un outil de gestion de projet, organisé selon la méthode de priorisation MoSCoW pour refléter les objectifs stratégiques du projet. Chaque fonctionnalité est formulée sous forme de User Story pour garantir un développement centré sur l’utilisateur. Les tâches prioritaires incluent la détection et la reconnaissance des valeurs vitales à l’aide de technologies de détection et d’OCR, la génération et la gestion des alertes basées sur des seuils prédéfinis, ainsi que l’envoi de notifications via des canaux multiples, tels que les notifications push et les e-mails. Les interfaces web et mobiles permettent la visualisation des données et la gestion des alertes, tandis que l’authentification et la gestion des utilisateurs assurent un accès sécurisé basé sur les rôles. Le stockage des données et des historiques dans une base de données relationnelle est également prioritaire, tout comme la conformité aux réglementations médicales en matière de sécurité des données. D’autres tâches, jugées importantes mais non critiques pour la première version, incluent la configuration personnalisée des seuils d’alerte par patient, la gestion des horaires pour le filtrage des alertes, et l’optimisation des notifications pour une faible latence. Des fonctionnalités optionnelles, comme le support multilingue ou la gestion des alertes par niveau de priorité, pourraient être ajoutées si les ressources le permettent. Enfin, certaines tâches, telles que l’analyse avancée des données avec intelligence artificielle, sont hors du périmètre actuel.
+
+\begin{table}[H]
+\centering
+\caption{Backlog du Projet avec Priorités MoSCoW}
+\label{tab:backlog}
+\begin{tabular}{|p{1.5cm}|p{8cm}|p{1.5cm}|}
+\hline
+\textbf{ID} & \textbf{Tâche} & \textbf{Priorité} \\
+\hline
+M-01 & Détection et reconnaissance des valeurs vitales via YOLO et OCR pour les moniteurs. & M \\
+\hline
+M-02 & Génération et gestion des alertes en fonction des seuils prédéfinis. & M \\
+\hline
+M-03 & Envoi d'alertes via notifications push et e-mail. & M \\
+\hline
+M-04 & Interface web et mobile pour visualiser les données et gérer les alertes. & M \\
+\hline
+M-05 & Authentification et gestion des utilisateurs (médecins, infirmiers, administrateurs). & M \\
+\hline
+M-06 & Stockage et historique des données dans une base de données. & M \\
+\hline
+M-07 & Conformité aux réglementations médicales (sécurité des données). & M \\
+\hline
+S-02 & Configuration des seuils d'alerte personnalisés par patient. & S \\
+\hline
+S-03 & Gestion des horaires de filtrage des alertes pour le personnel médical. & S \\
+\hline
+S-04 & Interface d'administration pour configurer les seuils et gérer les utilisateurs. & S \\
+\hline
+S-05 & Optimisation des notifications push pour faible latence. & S \\
+\hline
+C-04 & Support multilingue pour l'interface utilisateur. & C \\
+\hline
+C-05 & Gestion des alertes par priorité (critique, moyen, faible). & C \\
+\hline
+C-06 & Historique des alertes avec filtrage par date, patient, ou type d'alerte. & C \\
+\hline
+W-03 & Analyse avancée des données avec intelligence artificielle pour le diagnostic. & W \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Planification des sprints}
+\label{subsec:planification_sprints}
+
+Le projet est structuré en trois sprints de trois semaines chacun. Le tableau ci-dessous présente une synthèse des objectifs, livrables, tâches, critères d’acceptation et risques associés à chaque sprint.
+
+% --- Sprint Planning Table (longtable version) ---
+\begin{longtable}{|p{3cm}|p{4cm}|p{4cm}|p{4cm}|}
+\caption{Planification des Sprints du Projet VitalSync}\label{tab:sprints} \\
+\hline
+\textbf{Sprint} & \textbf{Objectifs et livrables} & \textbf{Tâches principales} & \textbf{Critères d’acceptation}  \\
+\hline
+\endfirsthead
+\hline
+\textbf{Sprint} & \textbf{Objectifs et livrables} & \textbf{Tâches principales} & \textbf{Critères d’acceptation}  \\
+\hline
+\endhead
+% Sprint 1
+\textbf{Sprint 1 \newline Création du dataset et mise en place du pipeline OCR} &
+\begin{itemize}[leftmargin=8pt]
+    \item Dataset annoté pour les moniteurs médicaux.
+    \item Modèle YOLO entraîné pour la détection des zones d’intérêt.
+    \item Pipeline OCR fonctionnel avec Tesseract.
+\end{itemize} &
+\begin{itemize}[leftmargin=8pt]
+    \item Collecte et annotation des images.
+    \item Entraînement du modèle YOLO.
+    \item Intégration de Tesseract pour l’OCR.
+    \item Configuration des caméras pour la capture des données.
+\end{itemize} &
+\begin{itemize}[leftmargin=8pt]
+    \item Détection précise des zones d’intérêt.
+    \item Extraction fiable des valeurs vitales.
+    \item Faible latence dans le traitement des images.
+    \item Compatibilité avec les marques de moniteurs.
+\end{itemize}  \\
+\hline
+% Sprint 2
+\textbf{Sprint 2 \newline Système d'alertes et de notifications} &
+\begin{itemize}[leftmargin=8pt]
+    \item Moteur d’alerte fonctionnel.
+    \item Notifications push et e-mail implémentées.
+    \item Configuration des seuils d’alerte.
+\end{itemize} &
+\begin{itemize}[leftmargin=8pt]
+    \item Développement du moteur d’alerte.
+    \item Intégration de Firebase Cloud Messaging (FCM).
+    \item Configuration des seuils d’alerte par patient.
+    \item Tests de notifications push et e-mail.
+\end{itemize} &
+\begin{itemize}[leftmargin=8pt]
+    \item Alertes générées en temps réel.
+    \item Notifications envoyées aux rôles appropriés.
+    \item Données validées par le personnel médical.
+    \item Configuration des seuils d’alerte par patient.
+\end{itemize} \\
+\hline
+% Sprint 3
+\textbf{Sprint 3 \newline Finalisation du système VitalSync} &
+\begin{itemize}[leftmargin=8pt]
+    \item Dashboard web pour le personnel médical.
+    \item Application mobile pour les notifications.
+    \item Base de données relationnelle configurée.
+\end{itemize} &
+\begin{itemize}[leftmargin=8pt]
+    \item Développement du dashboard web avec React.
+    \item Création de l’application mobile avec Flutter.
+    \item Intégration des notifications en temps réel.
+    \item Configuration de la base de données MySQL.\cite{mysql}
+\end{itemize} &
+\begin{itemize}[leftmargin=8pt]
+    \item Interfaces utilisateur réactives et intuitives.
+    \item Réception fiable des notifications sur mobile.
+    \item Intégrité des données dans la base de données.
+    \item Bonne ergonomie pour le personnel médical.
+    \item Historique des alertes avec filtrage par date, patient, ou type d'alerte.
+\end{itemize} \\
+\hline
+\end{longtable}
+% --- End Sprint Planning Table ---
+
+
+\section{Environnement de travail}
+\label{sec:environnement}
+L’environnement de travail pour le projet VitalSync est structuré pour répondre aux exigences techniques et fonctionnelles définies dans les chapitres précédents. Il comprend des aspects matériels, logiciels et de développement, garantissant une intégration fluide des différentes composantes du système.
+
+\subsection{Environnement matériel}
+\label{subsec:materiel}
+
+L’environnement matériel est conçu pour répondre aux exigences architecturales décrites précédemment. Des caméras IP capturent les écrans des moniteurs médicaux pour permettre le traitement des données par détection et OCR. Des serveurs locaux dédiés assurent le stockage, le traitement des données et la génération des alertes. Un réseau local sécurisé avec accès Internet facilite la transmission des données entre les caméras, les serveurs et les applications. Enfin, des smartphones et tablettes compatibles permettent aux utilisateurs d’accéder aux notifications et aux données en temps réel.
+
+\subsection{Environnement de développement}
+\label{subsec:dev_environnement}
+
+L’environnement de développement s’appuie sur un ensemble cohérent de langages de programmation, frameworks et bibliothèques, choisis en fonction des exigences techniques du projet VitalSync. Chaque composant du système est développé avec des outils adaptés à sa fonction :
+
+\begin{itemize}
+    \item \textbf{PHP avec Laravel} : utilisé pour développer l’API backend principale. Laravel offre une architecture MVC robuste, une gestion avancée de l’authentification (Sanctum), ainsi qu’un système de routage et de notifications efficace.\cite{phpdoc,laravel}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.2\textwidth]{chapter4/images/laravel_logo.png}
+            \hspace{1cm}
+            \includegraphics[width=0.2\textwidth]{chapter4/images/php-logo.png}
+            \caption{Logos des technologies backend : Laravel et PHP}
+            \label{fig:laravel_php_logos}
+        \end{figure}
+
+    \item \textbf{Python avec Flask} : utilisé pour les microservices de traitement d’image. Flask, léger et modulaire, est associé à des bibliothèques comme OpenCV (prétraitement d’image), YOLO (détection des zones d’intérêt) et Tesseract OCR (extraction de texte).\cite{python,flask,opencv,yolo,tesseract}
+    
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.2\textwidth]{chapter4/images/python_logo.png}
+            \hspace{1cm}
+            \includegraphics[width=0.2\textwidth]{chapter4/images/flask_logo.png}
+            \caption{Logos des technologies utilisées pour le traitement et l’API Python : Python et Flask}
+            \label{fig:python_flask_logos}
+        \end{figure}
+
+    \item \textbf{Dart avec Flutter} : utilisé pour l’application mobile multiplateforme. Flutter permet de développer des interfaces fluides et réactives, compatibles Android/iOS, et intègre Firebase Cloud Messaging (FCM) pour les notifications.\cite{dart,flutter}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.3\textwidth]{chapter4/images/flutter_logo.png}
+            \hspace{1cm}
+            \includegraphics[width=0.3\textwidth]{chapter4/images/dart_logo.jpg}
+            \caption{Logos des technologies utilisées pour le développement mobile : Flutter et Dart}
+            \label{fig:flutter_dart_logos}
+        \end{figure}
+
+     \item \textbf{JavaScript avec React} : utilisé pour l’interface web destinée au personnel médical. React assure une expérience utilisateur moderne avec une gestion efficace de l’état des composants et des interactions dynamiques.\cite{javascriptmdn,react}
+    
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.3\textwidth]{chapter4/images/react_logo.jpg}
+            \hspace{1cm}
+            \includegraphics[width=0.15\textwidth]{chapter4/images/javascript_logo.png}
+            \caption{Logos des technologies utilisées pour le développement web : React et JavaScript}
+            \label{fig:react_js_logos}
+        \end{figure}
+
+    \item \textbf{MySQL avec phpMyAdmin} : MySQL est la base de données relationnelle choisie pour le stockage des patients, mesures vitales, et alertes. phpMyAdmin facilite la visualisation et la gestion de la base.\cite{mysql,phpmyadmin}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.25\textwidth]{chapter4/images/mysql_logo.png}
+            \hspace{1cm}
+            \includegraphics[width=0.25\textwidth]{chapter4/images/phpmyadmin_logo.png}
+            \caption{Logos des outils de gestion de base de données : MySQL et phpMyAdmin}
+            \label{fig:mysql_phpmyadmin_logos}
+        \end{figure}
+
+\end{itemize}
+
+Ces technologies sont intégrées dans un environnement modulaire et conteneurisé à l’aide de Docker, garantissant une portabilité entre les environnements de développement, de test et de production. Le développement collaboratif est facilité par GitHub, tandis que l’édition de code est principalement réalisée avec Visual Studio Code et Android Studio.
+
+\subsection{Environnement logiciel}
+\label{subsec:logiciel}
+
+L’environnement logiciel repose sur des systèmes d’exploitation adaptés pour le développement et les appareils mobiles. Une base de données relationnelle garantit un stockage fiable et conforme aux standards. Les communications s’appuient sur des protocoles sécurisés, tels que des API REST avec authentification par tokens et des WebSockets pour les mises à jour en temps réel. Les outils de développement suivants sont employés :
+
+\begin{itemize}
+    \item \textbf{Visual Studio Code} : Utilisé comme environnement de développement intégré, Visual Studio Code permet de coder, tester et déboguer efficacement grâce à son interface intuitive et ses extensions pour divers langages et frameworks.\cite{vscode}
+\end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.15\textwidth]{chapter4/images/vscode_logo.jpg}
+    \caption{Logo de Visual Studio Code}
+\end{figure}
+
+\begin{itemize}
+    \item \textbf{Android Studio} : Android Studio est utilisé pour le développement et le test des applications mobiles, offrant des outils spécialisés pour la création d’interfaces utilisateur et la gestion des performances sur les appareils Android.\cite{androidstudio}
+\end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.2\textwidth]{chapter4/images/androidstudio_logo.png}
+    \caption{Logo d’Android Studio}
+\end{figure}
+
+\begin{itemize}
+    \item \textbf{LaTeX} : LaTeX est utilisé pour la rédaction du rapport final, offrant une mise en forme professionnelle et structurée. Il permet de générer des documents de haute qualité avec une gestion précise des sections, des références et des figures.\cite{latex}
+\end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.2\textwidth]{chapter4/images/latex_logo.png}
+    \caption{Logo de LaTeX}
+\end{figure}
+
+\begin{itemize}
+    \item \textbf{GitHub} : GitHub facilite la gestion des versions et la collaboration sur le code, assurant un suivi rigoureux des modifications et une intégration fluide avec d’autres outils de développement.\cite{github}
+\end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.2\textwidth]{chapter4/images/github_logo.jpg}
+    \caption{Logo de GitHub}
+\end{figure}
+
+\begin{itemize}
+    \item \textbf{Docker Desktop} : Docker Desktop permet de conteneuriser les applications, assurant une portabilité et une cohérence des environnements logiciels à travers les différentes phases du projet.\cite{docker}
+\end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\textwidth]{chapter4/images/dockerdesktop_logo.png}
+    \caption{Logo de Docker Desktop}
+\end{figure}
+
+\section{Conclusion}
+\label{sec:conclusion_sprint0}
+
+Le Sprint 0 pose une base solide pour le projet en définissant les acteurs, les besoins et le cadre Scrum. Le Product Backlog priorisé, la planification détaillée des sprints et l’environnement de développement spécifié garantissent un alignement avec les objectifs de collecte de données en temps réel et de gestion des alertes. L’intégration de technologies de détection et d’OCR positionne le système pour un développement efficace dans les sprints suivants, tout en restant fidèle à l’architecture décrite dans les chapitres précédents.

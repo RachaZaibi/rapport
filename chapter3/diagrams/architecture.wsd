@@ -1,0 +1,30 @@
+@startuml
+title Diagramme de l’architecture du système
+
+package "Système Central" {
+    [Backend] --> [Base de Données] : Stockage des patients et alertes
+    [Backend] --> [Service de Notifications] : Envoi des alertes
+    [Backend] --> [Service de Traitement des Données] : Analyse et filtrage
+}
+
+package "Appareils Médicaux" {
+    [Moniteur Mindray] --> [Backend] : API/HL7
+    [Caméra OCR] --> [Backend] : Extraction des données
+}
+
+package "Personnel Médical" {
+    [Application Web] --> [Backend] : REST API
+    [Application Mobile] --> [Backend] : REST API
+    [Service de Notifications] --> [Application Mobile] : Push notifications
+    [Service de Notifications] --> [Application Web] : Alertes en temps réel
+}
+
+note right of [Moniteur Mindray] : Collecte des données en temps réel
+note right of [Caméra OCR] : Capture et reconnaissance des valeurs
+note right of [Backend] : Traitement et génération des alertes
+note right of [Base de Données] : Stockage des patients et historiques
+note right of [Service de Notifications] : Envoi d'alertes par e-mail, SMS, push
+note right of [Application Web] : Visualisation des données médicales
+note right of [Application Mobile] : Réception des notifications médicales
+
+@enduml
