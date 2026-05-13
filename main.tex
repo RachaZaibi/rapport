@@ -1,3 +1,4 @@
+\pdfoptionpdfminorversion=7
 \documentclass[12pt,a4paper]{report}
 
 % ================== PACKAGES ==================
@@ -19,6 +20,7 @@
 \usepackage{times}
 \usepackage{geometry}
 \usepackage{fancyhdr}
+\setlength{\headheight}{15pt} % Rounding up from 14.5pt for safety
 \usepackage{lastpage}
 \usepackage{titlesec}
 \usepackage{subcaption}
@@ -28,16 +30,18 @@
 \usepackage{multicol}
 \usepackage{ragged2e}
 \usepackage{csquotes}
-\usepackage{hyperref}
 \usepackage{plantuml} % Optional: for UML diagrams
 \usepackage{pdfpages}
 \usepackage{amssymb} % For \checkmark
 \usepackage{textcomp} % For \texttimes
 \usepackage{fontawesome5} % For \textwarning (if not available, use \faExclamationTriangle)
-\usepackage{amssymb} % for \checkmark
 \usepackage{pifont}  % for \ding
 \usepackage{xcolor}  % for colored symbols
 \usepackage{tikz}
+\usepackage[hypertexnames=false]{hyperref}
+\usepackage{xurl} % Pour casser les URLs proprement dans la bibliographie
+\usepackage{fvextra}
+\usepackage{csquotes} % DOIT être chargé APRÈS fvextra pour éviter les conflits
 
 \usetikzlibrary{shapes.geometric, arrows.meta, fit, positioning}
 \setlist[itemize]{topsep=2pt, partopsep=0pt, parsep=0pt, itemsep=1pt, left=1.5em}
@@ -197,14 +201,14 @@ Enfin, je dédie une pensée sincère à ma famille, et surtout à ma mère, pou
 \include{chapter8/chapter8}
 
 % ---------- Bibliography ----------
-\newpage
-\addcontentsline{toc}{chapter}{Bibliographie}
-\bibliographystyle{unsrt}
-\bibliography{references}
+% \newpage
+% \addcontentsline{toc}{chapter}{Bibliographie}
+% \bibliographystyle{unsrt}
+% \bibliography{references}
 
 % ---------- Annexes ----------
 \appendix
-\include{annexes/annexeA}
-\include{annexes/annexeB}
-
+% \include{annexes/annexeA}
+% \include{annexes/annexeB}
+% 
 \end{document}
