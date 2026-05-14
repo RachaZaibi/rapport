@@ -10,7 +10,7 @@ Ce chapitre décrit l'architecture du projet \textbf{Parc Informatique FMM}. L'o
 % Présentation de l'architecture générale
 \section{Présentation de l'architecture générale}
 \label{sec:architecture_globale}
-Le Parc Informatique FMM utilise une architecture en trois couches : gestion des ressources, traitement des services et interfaces utilisateur. Chaque couche a un rôle clair, comme montré dans la Figure~\ref{fig:architecture_globale}. Cette organisation permet de structurer la gestion des actifs informatiques, des tickets et des rapports de manière évolutive.
+Le Parc Informatique FMM utilise une architecture en trois couches : gestion des ressources, traitement des services et interfaces utilisateur. Chaque couche a un rôle clair, comme montré dans la Figure~\ref{fig:architecture_parc_informatique}. Cette organisation permet de structurer la gestion des actifs informatiques, des tickets et des rapports de manière évolutive.
 
 \begin{itemize}
     \item \textbf{Gestion des ressources} : Cette couche gère les équipements informatiques, les licences, les utilisateurs et les emplacements via une base de données centralisée. Elle permet de consigner l'état des actifs et de suivre leur historique.
@@ -20,41 +20,73 @@ Le Parc Informatique FMM utilise une architecture en trois couches : gestion des
 
 \begin{figure}[H]
 \centering
-\usetikzlibrary{positioning, fit, shapes.geometric, arrows.meta}
-\begin{tikzpicture}[
-font=\small,
-box/.style={rectangle, draw, rounded corners, minimum width=3cm, minimum height=1cm, align=center},
-package/.style={rectangle, draw, dashed, inner sep=8pt},
-node distance=1.2cm and 2.8cm
-]
+\usetikzlibrary{positioning, shapes.geometric, arrows.meta}
+    \begin{tikzpicture}[
+    font=\small,
+    box/.style={
+        rectangle, draw, rounded corners,
+        minimum width=1.5cm, minimum height=0.9cm, align=center
+    },
+    extbox/.style={
+        rectangle, draw, rounded corners, fill=gray!10,
+        minimum width=1.5cm, minimum height=0.9cm, align=center
+    },
+    pkg/.style={rectangle, draw, dashed, inner sep=6pt},
+    node distance=1.5cm and 1.5cm,
+    >={Stealth}
+    ]
 
-% --- Bloc central : Backend et services ---
-\node[box] (backend) {Backend\\API REST};
-\node[box, below=of backend] (database) {Base de données\\MySQL};
-\node[box, below=of database] (notifications) {Service de notifications};
-\node[package, fit=(backend) (database) (notifications), label=above:Système central] {};
+        % ── Bloc central : Système central ────────────────────────────────
+        \node[box] (backend) {Backend\\API REST (Express.js)};
+        \node[box, below=of backend] (auth) {Middleware\\Auth JWT};
+        \node[box, below=of auth]    (db)   {Base de donn\'ees\\MySQL};
+        \node[pkg, fit=(backend)(auth)(db),
+            label={[font=\small]above:Syst\`eme central}] {};
 
-% --- Bloc gauche : Services métiers ---
-\node[box, left=of backend] (assets) {Gestion des actifs};
-\node[box, below=of assets] (ticketing) {Ticketing\\et maintenances};
-\node[package, fit=(assets) (ticketing), label=above:Services métiers] {};
+        % ── Bloc gauche : Services m\'etiers ──────────────────────────────
+        \node[box, left=of backend]  (assets)  {Gestion des actifs};
+        \node[box, below=of assets]  (ticket)  {Ticketing \& Maintenances};
+        \node[box, below=of ticket]  (users)   {Utilisateurs \& Permissions};
+        \node[box, below=of users]   (rapports){Rapports \& Param\'etrages};
+        \node[pkg, fit=(assets)(ticket)(users)(rapports),
+            label={[font=\small]above:Services m\'etiers}] {};
 
-% --- Bloc droit : Interfaces ---
-\node[box, right=of backend] (webapp) {Application Web};
-\node[box, below=of webapp] (mobileapp) {Application Mobile};
-\node[package, fit=(webapp) (mobileapp), label=above:Interfaces] {};
+        % ── Bloc droit : Interfaces ───────────────────────────────────────
+        \node[box, right=of backend] (webapp) {Application Web\\(React / Vite)};
+        \node[pkg, fit=(webapp),
+            label={[font=\small]above:Interfaces}] {};
 
-% --- Flèches de liaison ---
-\draw[->, thick] (assets) -- (backend) node[midway, above, font=\scriptsize] {Appels API};
-\draw[->, thick] (ticketing) -- (backend) node[midway, above, font=\scriptsize] {Appels API};
-\draw[->, thick] (webapp) -- (backend) node[midway, above, font=\scriptsize] {REST API};
-\draw[->, thick] (mobileapp) -- (backend) node[midway, above, font=\scriptsize] {REST API};
-\draw[->, thick] (backend) -- (database) node[midway, left, font=\scriptsize] {Lecture / écriture};
-\draw[->, thick] (backend) -- (notifications) node[midway, left, font=\scriptsize] {Envoi d'alertes};
+        % ── Service externe : Firebase FCM ────────────────────────────────
+        \node[extbox, right=of db]   (fcm)   {Firebase FCM\\(Notifications Push)};
+        \node[pkg, fit=(fcm),
+            label={[font=\small]below:Service externe}] {};
 
-\end{tikzpicture}
-\caption{Architecture générale du Parc Informatique FMM}
-\label{fig:architecture_globale}
+        % ── Fl\`eches ─────────────────────────────────────────────────────
+        \draw[->,thick] (assets)   -- (backend)
+            node[midway, above, font=\scriptsize] {Appels API};
+        \draw[->,thick] (ticket)   -- (backend)
+            node[midway, above, font=\scriptsize, sloped] {Appels API};
+        \draw[->,thick] (users)    -- (backend)
+            node[midway, above, font=\scriptsize, sloped] {Appels API};
+        \draw[->,thick] (rapports) -- (backend)
+            node[midway, below, font=\scriptsize, sloped] {Appels API};
+
+        \draw[->,thick] (webapp)   -- (backend)
+            node[midway, above, font=\scriptsize] {REST API};
+
+        \draw[->,thick] (backend)  -- (auth)
+            node[midway, right, font=\scriptsize] {Validation};
+        \draw[->,thick] (auth)     -- (db)
+            node[midway, right, font=\scriptsize] {Lecture / \'ecriture};
+
+        \draw[->,thick] (backend)  -- (fcm)
+            node[midway, above, font=\scriptsize, sloped] {Envoi d'alertes};
+        \draw[->,thick,dashed] (fcm) -- (webapp)
+            node[midway, right, font=\scriptsize] {Push};
+
+    \end{tikzpicture}
+\caption{Architecture globale du Parc Informatique FMM}
+\label{fig:architecture_parc_informatique}
 \end{figure}
 
 \section{Modèle de conception logicielle adoptée}
@@ -70,24 +102,24 @@ Pour organiser le système Parc Informatique FMM, nous avons choisi le modèle M
 \begin{figure}[H]
 \centering
 \usetikzlibrary{positioning, shapes.geometric, arrows.meta}
-\begin{tikzpicture}[
-font=\small,
-box/.style={rectangle, draw, rounded corners, minimum width=3cm, minimum height=1cm, align=center},
-node distance=1.2cm and 2.8cm]   
-% --- Modèle pink ---
-\node[box, fill=pink!20] (model) {Modèle\\(MySQL)};
-% --- Vue ---
-\node[box, right=of model, fill=blue!20] (view) {Vue\\(Web, Mobile)};
-% --- Contrôleur ---
-\node[box, below=of model, fill=green!20] (controller) {Contrôleur\\(Backend)};
-% --- Flèches de liaison ---
-\draw[->, thick] (model) -- (controller) node[midway, left, font=\scriptsize] {Données};
-\draw[->, thick] (controller) -- (model) node[midway, right, font=\scriptsize] {Requêtes};
-\draw[->, thick] (controller) -- (view) node[midway, right, font=\scriptsize] {Affichage};
-\draw[->, thick] (view) -- (controller) node[midway, above=0.5cm, font=\scriptsize] {Interactions};
-% --- Titre ---         
-% \node[above=1cm of model, font=\bfseries\large] {Modèle MVC du Parc Informatique FMM};
-\end{tikzpicture}
+    \begin{tikzpicture}[
+    font=\small,
+    box/.style={rectangle, draw, rounded corners, minimum width=3cm, minimum height=1cm, align=center},
+    node distance=1.2cm and 2.8cm]   
+    % --- Modèle pink ---
+    \node[box, fill=pink!20] (model) {Modèle\\(MySQL)};
+    % --- Vue ---
+    \node[box, right=of model, fill=blue!20] (view) {Vue\\(Web)};
+    % --- Contrôleur ---
+    \node[box, below=of model, fill=green!20] (controller) {Contrôleur\\(Backend)};
+    % --- Flèches de liaison ---
+    \draw[->, thick] (model) -- (controller) node[midway, left, font=\scriptsize] {Données};
+    \draw[->, thick] (controller) -- (model) node[midway, right, font=\scriptsize] {Requêtes};
+    \draw[->, thick] (controller) -- (view) node[midway, right, font=\scriptsize] {Affichage};
+    \draw[->, thick] (view) -- (controller) node[midway, above=0.5cm, font=\scriptsize] {Interactions};
+    % --- Titre ---         
+    % \node[above=1cm of model, font=\bfseries\large] {Modèle MVC du Parc Informatique FMM};
+    \end{tikzpicture}
 \caption{Modèle MVC du Parc Informatique FMM}
 \label{fig:mvc_parc_informatique}
 \end{figure}
@@ -101,7 +133,7 @@ Le diagramme des cas d'utilisation (Figure~\ref{fig:cas_utilisation}) montre com
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{chapter4/sections/diagrams/use_case.png}
+\includegraphics[width=1\textwidth]{chapter3/diagrams/use_case.png}
 \caption{Diagramme des cas d'utilisation global}
 \label{fig:cas_utilisation}
 \end{figure}
@@ -111,7 +143,7 @@ Le diagramme de classes (Figure~\ref{fig:class_diagram}) montre la structure des
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=1\textwidth]{chapter3/diagrams/class.png}
+\includegraphics[width=1\textwidth]{chapter3/diagrams/parc_informatique_class_diagram.jpg}
 \caption{Diagramme de classes du Parc Informatique FMM}
 \label{fig:class_diagram}
 \end{figure}
@@ -119,42 +151,54 @@ Le diagramme de classes (Figure~\ref{fig:class_diagram}) montre la structure des
 \subsection{Diagramme de séquence}
 Le diagramme de séquence (Figure~\ref{fig:global_sequence_diagram}) décrit le processus de gestion des incidents, depuis la création du ticket jusqu'à sa résolution et son archivage. Il met en évidence les interactions entre l'utilisateur, le backend, le technicien et la base de données.
 
+Le diagramme est structuré en quatre phases principales, illustrant le flux complet de gestion d'un incident :
+
+\begin{enumerate}
+    \item \textbf{Création du ticket} : L'utilisateur envoie une requête POST à l'API backend avec les détails du ticket (titre, priorité, équipement). Le backend insère le ticket dans la base de données avec le statut "ouvert" et envoie une notification push au technicien.
+    
+    \item \textbf{Assignation} : Le technicien met à jour le ticket via une requête PUT au backend, assignant le technicien et changeant le statut à "assigné".
+    
+    \item \textbf{Intervention} : Le technicien crée une intervention via POST, puis la termine via PUT, saisissant le diagnostic et la solution. Le backend met à jour l'intervention et le ticket à "résolu", et génère automatiquement une maintenance corrective.
+    
+    \item \textbf{Clôture} : L'utilisateur clôture le ticket via une requête PUT au backend, changeant le statut à "fermé" et enregistrant la date de clôture.
+\end{enumerate}
+
 \begin{figure}[H]
 \centering
-\includegraphics[width=1\textwidth]{chapter3/diagrams/sequence.png}
+\includegraphics[width=0.9\textwidth]{chapter3/diagrams/sequence_gestion_incidents.png}
 \caption{Diagramme de séquence global}
 \label{fig:global_sequence_diagram}
 \end{figure}
 
 \subsection{Diagramme d'activités}
-Le diagramme d'activités (Figure~\ref{fig:activity_flux_donnees}) montre les étapes du cycle de vie d'un ticket : signalement, analyse, assignation, intervention, validation et clôture.
+Le diagramme d'activités (Figure~\ref{fig:activity_flux_donnees}) illustre le processus complet de gestion des incidents dans le système Parc Informatique FMM. Il débute par la soumission d'un ticket par l'utilisateur, incluant titre, priorité, équipement et photo. Une validation des données est effectuée ; si elles sont valides, le ticket est enregistré avec le statut "ouvert" et une notification push est envoyée au technicien via Firebase Cloud Messaging (FCM). Le technicien consulte les tickets, prend en charge celui-ci, changeant le statut à "assigné". Il crée ensuite une intervention, mettant le ticket à "en cours", puis effectue la réparation sur le terrain. Si l'intervention réussit, il saisit la solution, les pièces changées et le rapport, terminant l'intervention. Le système génère automatiquement une maintenance corrective liée à l'intervention, marque le ticket comme "résolu". L'utilisateur confirme alors la résolution, clôturant le ticket avec la date de clôture et l'archivant. En cas d'échec de l'intervention, le statut est mis à "échec", et le ticket est réouvert ou escaladé. Si les données initiales ne sont pas valides, la demande est rejetée avec un message d'erreur.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textwidth]{chapter3/diagrams/activity_dataflow.png}
+\includegraphics[width=0.75\textwidth]{chapter3/diagrams/activity_gestion_incidents.png}
 \caption{Diagramme d'activité du flux des processus}
 \label{fig:activity_flux_donnees}
 \end{figure}
 
-\subsection{Diagramme de composants}
-Le diagramme de composants (Figure~\ref{fig:composants}) présente les modules logiciels du projet, tels que le backend, la base de données, les services de notification et les interfaces utilisateur.
+% \subsection{Diagramme de composants}
+% Le diagramme de composants (Figure~\ref{fig:composants}) présente les modules logiciels du projet, tels que le backend, la base de données, les services de notification et les interfaces utilisateur.
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth]{chapter3/diagrams/component_diagram.png}
-\caption{Diagramme de composants du système}
-\label{fig:composants}
-\end{figure}
+% \begin{figure}[H]
+% \centering
+% \includegraphics[width=0.8\textwidth]{chapter3/diagrams/component_diagram.png}
+% \caption{Diagramme de composants du système}
+% \label{fig:composants}
+% \end{figure}
 
-\subsection{Diagramme de déploiement}
-Le diagramme de déploiement (Figure~\ref{fig:diagramme_deploiement}) montre l'architecture physique du système, avec les serveurs, les postes de travail et les terminaux mobiles utilisés pour accéder au Parc Informatique FMM.
+% \subsection{Diagramme de déploiement}
+% Le diagramme de déploiement (Figure~\ref{fig:diagramme_deploiement}) montre l'architecture physique du système, avec les serveurs, les postes de travail et les terminaux mobiles utilisés pour accéder au Parc Informatique FMM.
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth]{chapter3/diagrams/deployment_diagram.png}
-\caption{Diagramme de déploiement}
-\label{fig:diagramme_deploiement}
-\end{figure}
+% \begin{figure}[H]
+% \centering
+% \includegraphics[width=0.8\textwidth]{chapter3/diagrams/deployment_diagram.png}
+% \caption{Diagramme de déploiement}
+% \label{fig:diagramme_deploiement}
+% \end{figure}
 
 % Pourquoi ce choix d'architecture
 \section{Pourquoi ce choix d'architecture}

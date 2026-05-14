@@ -1,201 +1,185 @@
 @startuml
-skinparam monochrome true
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+skinparam packageStyle rectangle
 
-class patients {
-  +id: BIGINT [PK]
-  +identifier: VARCHAR(191) [NOT NULL, UNIQUE]
-  +first_name: VARCHAR(191) [NOT NULL]
-  +last_name: VARCHAR(191) [NOT NULL]
-  +birth_date: DATE [NOT NULL]
-  +medical_record: VARCHAR(191) [NOT NULL]
+' ===================== USERS =====================
+class Utilisateur {
+  +id : int
+  +nom : string
+  +prenom : string
+  +email : string
+  +motDePasse : string
+  +role : string
+  +personType : string
+  +matricule : string
+  +actif : boolean
+  +fcmToken : string
+  +login()
+  +logout()
 }
 
-class users {
-  +id: BIGINT [PK]
-  +name: VARCHAR(191) [NOT NULL]
-  +email: VARCHAR(191) [NOT NULL, UNIQUE]
-  +password: VARCHAR(191) [NOT NULL]
-  +fcm_token: VARCHAR(191)
+class Ticket {
+  +id : int
+  +titre : string
+  +description : string
+  +priorite : string
+  +statut : string
+  +dateCreation : date
+  +dateResolution : date
+  +assignerTechnicien()
+  +cloturer()
 }
 
-class medical_staff {
-  +id: BIGINT [PK]
-  +specialty: ENUM('cardiology', 'neurology', 'pediatrics', 'orthopedics', 'general_medicine') [NOT NULL]
-  +license_number: VARCHAR(191) [NOT NULL]
+class Intervention {
+  +id : int
+  +dateIntervention : date
+  +typeIntervention : string
+  +diagnostic : string
+  +solution : string
+  +dureeMinutes : int
+  +piecesChangees : string
 }
 
-class machines {
-  +id: BIGINT [PK]
-  +machine_id: VARCHAR(191) [NOT NULL, UNIQUE]
-  +type: VARCHAR(191) [NOT NULL]
-  +brand: VARCHAR(191) [NOT NULL]
-  +model: VARCHAR(191) [NOT NULL]
+class Rapport {
+  +id : int
+  +titre : string
+  +type : string
+  +dateGeneration : date
+  +format : string
+  +payload : json
 }
 
-class data {
-  +id: BIGINT [PK]
-  +value: JSON [NOT NULL]
-  +type: VARCHAR(191) [NOT NULL]
-  +timestamp: TIMESTAMP [NOT NULL]
-  +machine_id: BIGINT [FK]
+' ===================== EQUIPMENT =====================
+class Equipement {
+  +id : int
+  +numeroSerie : string
+  +inventoryNumber : string
+  +codeQR : string
+  +materialSource : string
+  +currentStatus : string
+  +assignedAt : date
+  +marque : string
+  +modele : string
+  +dateAchat : date
+  +etat : string
+  +categorie : string
+  +getHistorique()
+  +genererQR()
 }
 
-class alerts {
-  +id: BIGINT [PK]
-  +type: VARCHAR(191) [NOT NULL]
-  +threshold: DOUBLE [NOT NULL]
-  +priority: INT [NOT NULL]
-  +status: ENUM('active', 'inactive', 'resolved') [NOT NULL]
-  +alert_rule_id: BIGINT [FK]
-  +patient_id: BIGINT [FK]
-  +data_id: BIGINT [FK]
+class Maintenance {
+  +id : int
+  +maintenanceType : string
+  +strategy : string
+  +operationDate : date
+  +details : string
+  +cost : decimal
 }
 
-class alert_rules {
-  +id: BIGINT [PK]
-  +patient_id: BIGINT [FK]
-  +type: VARCHAR(191) [NOT NULL]
-  +min_threshold: DOUBLE [NOT NULL]
-  +max_threshold: DOUBLE [NOT NULL]
-  +priority: INT [NOT NULL]
+class Assignment {
+  +id : int
+  +assignmentType : string
+  +assignedAt : date
+  +signature : string
+  +notes : string
+  +active : boolean
 }
 
-class notifications {
-  +id: BIGINT [PK]
-  +message: TEXT [NOT NULL]
+class Transfer {
+  +id : int
+  +sourceType : string
+  +destinationType : string
+  +transferredAt : date
+  +notes : string
 }
 
-class shifts {
-  +id: BIGINT [PK]
-  +medical_staff_id: BIGINT [FK]
-  +start: TIMESTAMP [NOT NULL]
-  +end: TIMESTAMP [NOT NULL]
-  +status: ENUM('pending', 'approved', 'rejected') [NOT NULL]
+' ===================== STRUCTURE =====================
+class Bloc {
+  +id : int
+  +nom : string
+  +code : string
+  +description : string
 }
 
-class patient_comments {
-  +id: BIGINT [PK]
-  +patient_id: BIGINT [FK]
-  +staff_id: BIGINT [FK]
-  +comment: TEXT [NOT NULL]
-  +is_edited: TINYINT [NOT NULL]
+class Departement {
+  +id : int
+  +nom : string
+  +code : string
+  +description : string
 }
 
-class patient_comment_histories {
-  +id: BIGINT [PK]
-  +patient_comment_id: BIGINT [FK]
-  +old_comment: TEXT [NOT NULL]
-  +edited_by: BIGINT [FK]
-  +edited_at: TIMESTAMP [NOT NULL]
+class Salle {
+  +id : int
+  +nom : string
+  +type : string
+  +etage : string
+  +capacite : int
 }
 
-class patient_data {
-  +id: BIGINT [PK]
-  +patient_id: BIGINT [FK]
-  +data_id: BIGINT [FK]
+' ===================== SOFTWARE =====================
+class Logiciel {
+  +id : int
+  +nom : string
+  +version : string
+  +editeur : string
+  +typeLicence : string
+  +nombrePostesAutorises : int
 }
 
-class machine_patient {
-  +id: BIGINT [PK]
-  +machine_id: BIGINT [FK]
-  +patient_id: BIGINT [FK]
-  +start_date: DATE
+class Licence {
+  +id : int
+  +cleActivation : string
+  +dateAchat : date
+  +dateExpiration : date
+  +nombrePostes : int
+  +estExpiree()
 }
 
-class medical_staff_patient {
-  +id: BIGINT [PK]
-  +medical_staff_id: BIGINT [FK]
-  +patient_id: BIGINT [FK]
-  +start_date: DATE
+class Installation {
+  +id : int
+  +dateInstallation : date
+  +versionInstallee : string
+  +statut : string
 }
 
-class alert_medical_staff {
-  +id: BIGINT [PK]
-  +medical_staff_id: BIGINT [FK]
-  +notifiable_id: BIGINT
-  +notifiable_type: VARCHAR(191)
-  +status: ENUM('active', 'inactive', 'resolved') [NOT NULL]
-}
+' ===================== RELATIONS =====================
 
-class alert_notification {
-  +id: BIGINT [PK]
-  +alert_id: BIGINT [FK]
-  +notification_id: BIGINT [FK]
-}
+' Users
+Utilisateur "1" --> "*" Ticket : crée
+Utilisateur "1" --> "*" Intervention : réalise
+Utilisateur "1" --> "*" Rapport : génère
+Utilisateur "1" --> "*" Equipement : est assigné à
 
-class media {
-  +id: BIGINT [PK]
-  +model_type: VARCHAR(191) [NOT NULL]
-  +model_id: BIGINT [NOT NULL]
-  +uuid: CHAR(36)
-  +collection_name: VARCHAR(191) [NOT NULL]
-}
+' Ticket system
+Ticket "1" --> "*" Intervention : génère
+Equipement "1" --> "*" Ticket : concerne
 
-class roles {
-  +id: BIGINT [PK]
-  +name: VARCHAR(225) [NOT NULL]
-  +guard_name: VARCHAR(25) [NOT NULL]
-}
+' Equipment lifecycle
+Equipement "1" --> "*" Maintenance
+Equipement "1" --> "*" Assignment
+Equipement "1" --> "*" Transfer
+Equipement "1" --> "*" Installation
 
-class permissions {
-  +id: BIGINT [PK]
-  +name: VARCHAR(225) [NOT NULL]
-  +guard_name: VARCHAR(25) [NOT NULL]
-}
+' Organization structure
+Bloc "1" --> "*" Departement
+Bloc "1" --> "*" Salle
+Departement "1" --> "*" Salle
+Departement "1" --> "*" Equipement
+Salle "1" --> "*" Equipement
 
-class model_has_roles {
-  +role_id: BIGINT [PK, FK]
-  +model_id: BIGINT [PK]
-  +model_type: VARCHAR(191) [PK]
-}
+' Software
+Logiciel "1" --> "*" Licence
+Licence "1" --> "*" Installation
 
-class model_has_permissions {
-  +permission_id: BIGINT [PK, FK]
-  +model_id: BIGINT [PK]
-  +model_type: VARCHAR(191) [PK]
-}
+' Assignment relations
+Assignment "*" --> "0..1" Utilisateur
+Assignment "*" --> "0..1" Salle
+Assignment "*" --> "0..1" Departement
 
-class role_has_permissions {
-  +permission_id: BIGINT [PK, FK]
-  +role_id: BIGINT [PK, FK]
-}
-
-patients ||--o{ alerts : has
-patients ||--o{ alert_rules : has
-patients ||--o{ patient_comments : has
-patients ||--o{ patient_data : has
-patients ||--o{ machine_patient : assigned
-patients ||--o{ medical_staff_patient : assigned
-medical_staff ||--o{ shifts : has
-medical_staff ||--o{ patient_comments : writes
-medical_staff ||--o{ patient_comment_histories : edits
-medical_staff ||--o{ medical_staff_patient : assigned
-medical_staff ||--o{ alert_medical_staff : receives
-machines ||--o{ data : produces
-machines ||--o{ machine_patient : assigned
-data ||--o{ alerts : triggers
-data ||--o{ patient_data : links
-alert_rules ||--o{ alerts : defines
-notifications ||--o{ alert_notification : linked
-patient_comments ||--o{ patient_comment_histories : has
-alerts ||--o{ alert_notification : sends
-alerts ||--o{ alert_medical_staff : notifies
-roles ||--o{ model_has_roles : assigned
-permissions ||--o{ model_has_permissions : assigned
-roles ||--o{ role_has_permissions : has
-permissions ||--o{ role_has_permissions : granted
-
-note right of alert_medical_staff
-  Polymorphic relation via notifiable_id/type.
-end note
-
-note right of media
-  Polymorphic relation via model_type/id.
-end note
-' add inheritance between user and medicalstaff ( medical_staff inherits from users     )
-users <|-- medical_staff : inherits
-' relation between users and roles
-users ||--o{ model_has_roles : has
-
+' Transfer relations
+Transfer "*" --> "0..1" Utilisateur
+Transfer "*" --> "0..1" Salle
+Transfer "*" --> "0..1" Departement
 
 @enduml

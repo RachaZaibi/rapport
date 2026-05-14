@@ -1,25 +1,60 @@
-@startuml
-title Diagramme d'activité
+@startuml activity_gestion_incidents
+title Diagramme d'activité – Gestion des incidents (Parc Informatique FMM)
+
+skinparam backgroundColor #FAFAFA
+skinparam activity {
+  BackgroundColor #EEEDFE
+  BorderColor #534AB7
+  FontColor #1a1a2e
+  DiamondBackgroundColor #FFF9E6
+  DiamondBorderColor #E6A817
+  StartColor #534AB7
+  EndColor #534AB7
+}
+skinparam ArrowColor #534AB7
+skinparam note {
+  BackgroundColor #E1F5EE
+  BorderColor #2E7D5E
+}
 
 start
 
-:Capture d'image par la caméra IP;
-:Détection des zones d'intérêt (YOLO);
-:Prétraitement d'image (OpenCV);
-:Reconnaissance de texte (OCR Tesseract);
-:Extraction des données vitales;
+:Utilisateur soumet un ticket\n(titre, priorité, équipement, photo);
 
 if (Données valides ?) then (oui)
-  :Analyse des données;
-  if (Anomalie détectée ?) then (oui)
-    :Génération d'une alerte;
-    :Envoi de l'alerte via FCM;
-    :Affichage sur interfaces Web et Mobile;
+  :Enregistrement du ticket\n(statut : "ouvert");
+  :Notification push envoyée\nau(x) technicien(s) via FCM;
+
+  :Technicien consulte et prend en charge le ticket;
+  :Statut ticket → "assigné";
+
+  :Technicien crée une intervention\n(diagnostic, type, date);
+  :Statut ticket → "en cours";
+
+  :Technicien effectue la réparation sur terrain;
+
+  if (Intervention réussie ?) then (oui)
+    :Saisie de la solution,\ndes pièces changées et du rapport;
+    :Statut intervention → "terminé";
+
+    note right
+      Génération automatique
+      d'une maintenance corrective
+      liée à l'intervention
+    end note
+
+    :Enregistrement de la maintenance\ncorrective en base de données;
+    :Statut ticket → "résolu";
+
+    :Utilisateur confirme la résolution;
+    :Statut ticket → "fermé"\n(dateCloture = maintenant);
+    :Ticket archivé en base de données;
   else (non)
-    :Stockage des données dans la base MySQL;
+    :Statut intervention → "échec";
+    :Réouverture ou escalade\ndu ticket;
   endif
 else (non)
-'   :Ignorer;
+  :Rejet de la demande\n(message d'erreur à l'utilisateur);
 endif
 
 stop

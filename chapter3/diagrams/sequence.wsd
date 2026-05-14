@@ -1,27 +1,81 @@
-@startuml
-skinparam monochrome true
-actor "Camera" as Camera
-participant "Machine (Mindray)" as Machine
-participant "DataProcessingSystem" as DPS
-participant "AlertSystem" as AS
-participant "Patient" as Patient
-participant "MedicalStaff" as MS
-participant "NotificationSystem" as NS
+@startuml sequence_gestion_incidents
+title Gestion des incidents – Parc Informatique FMM
 
-Camera -> Machine: Capture video frame
-Camera -> DPS: Send frame (cam_id, timestamp)
-DPS -> DPS: Process frame with YOLOv8
-DPS -> DPS: Extract vitals with OCR (e.g., HR=120)
-DPS -> Patient: Store data (data.value, data.type=HR)
-DPS -> Machine: Link data to machine (data.machine_id)
-DPS -> AS: Send processed data (data.id)
-AS -> Patient: Retrieve alert rules (alert_rules.patient_id)
-AS -> AS: Check thresholds (e.g., HR > 100)
-alt Threshold violated
-    AS -> Patient: Create alert (alerts.patient_id, alerts.data_id)
-    AS -> NS: Trigger notification (alerts.id)
-    NS -> MS: Send FCM notification (alert_medical_staff.medical_staff_id)
-    MS -> NS: Acknowledge alert (update alert_medical_staff.status=resolved)
-end alt
+skinparam sequenceMessageAlign center
+skinparam backgroundColor #FAFAFA
+skinparam participant {
+  BackgroundColor #EEEDFE
+  BorderColor #534AB7
+  FontColor #1a1a2e
+}
+skinparam sequence {
+  ArrowColor #534AB7
+  LifeLineBorderColor #534AB7
+  LifeLineBackgroundColor #F3F3FF
+  DividerBackgroundColor #E8E8F0
+  GroupBackgroundColor #FFF9E6
+  GroupBorderColor #E6A817
+}
+skinparam note {
+  BackgroundColor #E1F5EE
+  BorderColor #2E7D5E
+}
+
+actor      "Utilisateur" as U
+participant "Backend API" as B
+database   "Base de données" as DB
+participant "Technicien" as T
+
+== 1. Création du ticket ==
+
+U -> B : POST /api/tickets\n{ titre, priorité, équipement }
+activate B
+B -> DB : INSERT ticket (statut="ouvert")
+DB --> B : ticket_id
+B --> U : 201 { ticket }
+B --> T : Notification push\n"Nouveau ticket #id"
+deactivate B
+
+== 2. Assignation ==
+
+T -> B : PUT /api/tickets/:id\n{ statut:"assigne", TechnicienId }
+activate B
+B -> DB : UPDATE ticket + dateAssignation
+DB --> B : OK
+B --> T : 200 { ticket assigné }
+deactivate B
+
+== 3. Intervention ==
+
+T -> B : POST /api/interventions\n{ TicketId, diagnostic, solution }
+activate B
+B -> DB : INSERT intervention (statut="planifie")
+DB --> B : intervention_id
+B --> T : 201 { intervention }
+deactivate B
+
+T -> B : PUT /api/interventions/:id\n{ statut:"termine", rapport }
+activate B
+B -> DB : UPDATE intervention → "termine"
+B -> DB : UPDATE ticket → "resolu"
+
+note right of B
+  Génération automatique
+  d'une maintenance corrective
+end note
+
+B -> DB : INSERT maintenance\n(type="corrective", InterventionId)
+DB --> B : OK
+B --> T : 200 { intervention + maintenance }
+deactivate B
+
+== 4. Clôture ==
+
+U -> B : PUT /api/tickets/:id { statut:"ferme" }
+activate B
+B -> DB : UPDATE ticket → "ferme", dateCloture=NOW()
+DB --> B : OK
+B --> U : 200 { ticket clôturé }
+deactivate B
 
 @enduml

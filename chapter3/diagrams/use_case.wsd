@@ -1,0 +1,71 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+' ===================== ACTEURS =====================
+actor Utilisateur
+actor Technicien
+actor Administrateur
+
+' héritage (generalization)
+Utilisateur <|-- Technicien
+' Technicien --|> Utilisateur
+' Administrateur --|> Utilisateur
+Utilisateur <|-- Administrateur
+
+' système externe
+rectangle "Système de Notification" as NotificationSystem
+
+' ===================== USE CASES =====================
+package "Système Parc Informatique" {
+
+  usecase "S'authentifier" as UCAuth
+
+  usecase "Consulter tableau de bord" as UCDashboard
+  usecase "Créer / suivre ticket" as UCTicket
+  usecase "Gérer interventions" as UCInterv
+
+  usecase "Planifier maintenances" as UCMaint
+  usecase "Gérer équipements" as UCEq
+  usecase "Gérer licences & logiciels" as UCLic
+  usecase "Générer rapports" as UCRapport
+  usecase "Gérer utilisateurs & rôles" as UCUsers
+  usecase "Configurer système" as UCParams
+  usecase "Gérer stock" as UCStock
+
+  usecase "Envoyer notifications" as UCNotif
+}
+
+' ===================== INCLUDE (auth obligatoire) =====================
+UCDashboard ..> UCAuth : <<include>>
+UCTicket ..> UCAuth : <<include>>
+UCInterv ..> UCAuth : <<include>>
+UCMaint ..> UCAuth : <<include>>
+UCEq ..> UCAuth : <<include>>
+UCLic ..> UCAuth : <<include>>
+UCRapport ..> UCAuth : <<include>>
+UCUsers ..> UCAuth : <<include>>
+UCParams ..> UCAuth : <<include>>
+UCStock ..> UCAuth : <<include>>
+
+' ===================== ASSOCIATIONS =====================
+
+Utilisateur --> UCDashboard
+Utilisateur --> UCTicket
+
+Technicien --> UCInterv
+Technicien --> UCMaint
+
+Administrateur --> UCEq
+Administrateur --> UCLic
+Administrateur --> UCRapport
+Administrateur --> UCUsers
+Administrateur --> UCParams
+Administrateur --> UCStock
+
+' notifications
+UCTicket ..>  UCNotif : <<include>>
+UCInterv ..>  UCNotif : <<include>>
+UCNotif <-- NotificationSystem
+
+@enduml

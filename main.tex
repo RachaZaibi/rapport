@@ -20,7 +20,7 @@
 \usepackage{times}
 \usepackage{geometry}
 \usepackage{fancyhdr}
-\setlength{\headheight}{15pt} % Rounding up from 14.5pt for safety
+\setlength{\headheight}{16pt} % Rounding up from 14.5pt for safety
 \usepackage{lastpage}
 \usepackage{titlesec}
 \usepackage{subcaption}
@@ -98,6 +98,49 @@
 \titleformat{\chapter}[display]
   {\centering\normalfont\bfseries\LARGE}{\chaptername~\thechapter}{20pt}{\LARGE}
 \titlespacing*{\chapter}{0pt}{-1cm}{1cm}
+
+% ------------------------------------------------
+% Style UML
+% ------------------------------------------------
+\tikzset{
+    usecase/.style={
+        ellipse,
+        draw,
+        minimum width=4.5cm,
+        minimum height=1cm,
+        align=center,
+        font=\small
+    },
+    actor/.style={
+        font=\small
+    },
+    include/.style={
+        dashed,
+        -Latex
+    }
+}
+
+% ------------------------------------------------
+% Macro acteur UML
+% ------------------------------------------------
+\newcommand{\acteur}[3]{
+\begin{scope}[shift={#2}]
+    \draw (0,0.6) circle (0.22);
+    \draw (0,0.38)--(0,-0.2);
+    \draw (-0.3,0.1)--(0.3,0.1);
+    \draw (0,-0.2)--(-0.25,-0.65);
+    \draw (0,-0.2)--(0.25,-0.65);
+
+    \node[
+        below,
+        font=\small,
+        align=center,
+        text width=2.5cm
+    ] at (0,-0.7) {#3};
+\end{scope}
+
+\node (#1) at #2 {};
+}
 
 % ================ DOCUMENT ================
 \begin{document}
