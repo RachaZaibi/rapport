@@ -5,19 +5,17 @@
 % Introduction
 \section{Introduction}
 \label{sec:introduction}
-Ce chapitre décrit l'architecture du système VitalSync.
- L'objectif est d'expliquer les choix technologiques, les parties du système et leurs interactions pour répondre aux besoins identifiés. 
-L'architecture est simple, adaptable et facile à maintenir.
+Ce chapitre décrit l'architecture du projet \textbf{Parc Informatique FMM}. L'objectif est d'expliquer les choix technologiques, les composants du système et leurs interactions afin de répondre aux besoins de gestion des équipements, des incidents et des maintenances au sein du SmartLab de la Faculté de Médecine de Monastir.
 
-% Présentation de l'architecture VitalSync
-\section{Présentation de l'architecture VitalSync}
+% Présentation de l'architecture générale
+\section{Présentation de l'architecture générale}
 \label{sec:architecture_globale}
-VitalSync utilise une architecture en trois parties : collecte de données, traitement et stockage, et affichage et alertes. Chaque partie a un rôle clair, comme montré dans la Figure~\ref{fig:architecture_globale}. Cette organisation permet de gérer les données médicales efficacement et d'envoyer des alertes rapidement.
+Le Parc Informatique FMM utilise une architecture en trois couches : gestion des ressources, traitement des services et interfaces utilisateur. Chaque couche a un rôle clair, comme montré dans la Figure~\ref{fig:architecture_globale}. Cette organisation permet de structurer la gestion des actifs informatiques, des tickets et des rapports de manière évolutive.
 
 \begin{itemize}
-    \item \textbf{Collecte de données} : Cette partie récupère les informations des moniteurs médicaux à l'aide de caméras IP. Les caméras capturent les écrans des moniteurs qui affichent des données comme le rythme cardiaque ou l'oxygène dans le sang (SpO2).
-    \item \textbf{Traitement et stockage} : Cette partie traite les images capturées et sauvegarde les données. Les images sont améliorées avec OpenCV, les zones importantes sont détectées avec YOLO, et les valeurs sont extraites avec Tesseract OCR. Un service Flask gère les images, et Laravel organise les utilisateurs, les données et les alertes. Une base MySQL stocke tout.
-    \item \textbf{Affichage et alertes} : Cette partie montre les données aux utilisateurs via une application web React et une application mobile Flutter. Les alertes sont envoyées en temps réel avec Firebase Cloud Messaging (FCM) ou par e-mail pour les cas urgents.
+    \item \textbf{Gestion des ressources} : Cette couche gère les équipements informatiques, les licences, les utilisateurs et les emplacements via une base de données centralisée. Elle permet de consigner l'état des actifs et de suivre leur historique.
+    \item \textbf{Traitement des services} : Cette couche prend en charge la logique métier du ticketing, de la gestion des maintenances et des notifications. Le backend traite les demandes, assigne les incidents et génère les alertes selon les règles définies.
+    \item \textbf{Interfaces utilisateur} : Cette couche propose des interfaces web et mobile pour que les administrateurs, techniciens et utilisateurs puissent consulter les actifs, créer des tickets et suivre les interventions.
 \end{itemize}
 
 \begin{figure}[H]
@@ -26,68 +24,47 @@ VitalSync utilise une architecture en trois parties : collecte de données, trai
 \begin{tikzpicture}[
 font=\small,
 box/.style={rectangle, draw, rounded corners, minimum width=3cm, minimum height=1cm, align=center},
-note/.style={rectangle, draw, text width=3cm, align=left, font=\scriptsize},
-arrow/.style={->, thick},
 package/.style={rectangle, draw, dashed, inner sep=8pt},
 node distance=1.2cm and 2.8cm
 ]
 
 % --- Bloc central : Backend et services ---
-\node[box] (backend) {Backend};
-\node[box, below=of backend] (database) {Base de Données};
-\node[box, below=of database] (notifications) {Service de Notifications};
-\node[box, below=of notifications] (processing) {Traitement Données};
-\node[package, fit=(backend) (database) (notifications) (processing), label=above:Système Central] {};
+\node[box] (backend) {Backend\\API REST};
+\node[box, below=of backend] (database) {Base de données\\MySQL};
+\node[box, below=of database] (notifications) {Service de notifications};
+\node[package, fit=(backend) (database) (notifications), label=above:Système central] {};
 
-% --- Bloc gauche : Appareils Médicaux ---
-\node[box, left=of backend] (monitor) {Moniteur Médical};
-\node[box, below=of monitor] (camera) {Caméra IP};
-\node[package, fit=(monitor) (camera), label=above:Appareils Médicaux] {};
+% --- Bloc gauche : Services métiers ---
+\node[box, left=of backend] (assets) {Gestion des actifs};
+\node[box, below=of assets] (ticketing) {Ticketing\\et maintenances};
+\node[package, fit=(assets) (ticketing), label=above:Services métiers] {};
 
 % --- Bloc droit : Interfaces ---
 \node[box, right=of backend] (webapp) {Application Web};
 \node[box, below=of webapp] (mobileapp) {Application Mobile};
-\node[package, fit=(webapp) (mobileapp), label=above:IHM] {};
+\node[package, fit=(webapp) (mobileapp), label=above:Interfaces] {};
 
 % --- Flèches de liaison ---
-\draw[arrow] (camera) -- (backend) node[midway, above, font=\scriptsize] {OCR};
-\draw[arrow] (webapp) -- (backend) node[midway, above, font=\scriptsize] {REST API};
-\draw[arrow] (mobileapp) -- (backend) node[midway, above, font=\scriptsize] {REST API};
-\draw[arrow] (backend) -- (database) node[midway, left, font=\scriptsize] {Stockage};
-\draw[arrow] (database) -- (notifications) node[midway, left, font=\scriptsize] {Alertes};
-\draw[arrow] (notifications) -- (processing) node[midway, left, font=\scriptsize] {Analyse};
-\draw[arrow] (notifications) -- (mobileapp) node[midway, right, font=\scriptsize] {Push Mobile};
-
-% --- Titre ---
-\node[above=1cm of backend, font=\bfseries\large] {Architecture du système VitalSync};
+\draw[->, thick] (assets) -- (backend) node[midway, above, font=\scriptsize] {Appels API};
+\draw[->, thick] (ticketing) -- (backend) node[midway, above, font=\scriptsize] {Appels API};
+\draw[->, thick] (webapp) -- (backend) node[midway, above, font=\scriptsize] {REST API};
+\draw[->, thick] (mobileapp) -- (backend) node[midway, above, font=\scriptsize] {REST API};
+\draw[->, thick] (backend) -- (database) node[midway, left, font=\scriptsize] {Lecture / écriture};
+\draw[->, thick] (backend) -- (notifications) node[midway, left, font=\scriptsize] {Envoi d'alertes};
 
 \end{tikzpicture}
-\caption{Architecture générale du système VitalSync}
+\caption{Architecture générale du Parc Informatique FMM}
 \label{fig:architecture_globale}
 \end{figure}
 
-% % Parties du système et leurs rôles
-% \section{Parties du système et leurs rôles}
-% Cette section détaille chaque partie de l'architecture et son fonctionnement.
-
-% \subsection{Collecte de données}
-% Les moniteurs médicaux affichent des données vitales (par exemple, rythme cardiaque, SpO2). Des caméras IP capturent ces écrans sous forme d'images. Le système utilise YOLO pour repérer les zones avec des données et Tesseract OCR pour extraire les valeurs. Cette partie est conçue pour fonctionner avec différents moniteurs utilisés dans les hôpitaux tunisiens.
-
-% \subsection{Traitement et stockage}
-% Cette partie traite les images et stocke les données. Flask utilise OpenCV pour améliorer les images, YOLO pour détecter les zones, et Tesseract pour extraire les chiffres ou textes. Laravel gère les utilisateurs, les alertes et les données des patients. La base MySQL sauvegarde les informations pour un accès rapide et sécurisé. Plus de détails sur l'implémentation sont dans le Chapitre~\ref{chap:sprint1}.
-
-% \subsection{Affichage et alertes}
-% Les utilisateurs (médecins, infirmiers) voient les données via une application web React ou une application mobile Flutter. Ces interfaces montrent des tableaux clairs et permettent de gérer les alertes. Les notifications urgentes sont envoyées par FCM aux mobiles ou par e-mail, pour une réaction rapide.
-
-% Adaptation du modèle MVC
 \section{Modèle de conception logicielle adoptée}
 \label{sec:modele_conception}
-Pour organiser le système VitalSync, nous avons choisi le modèle MVC (Modèle-Vue-Contrôleur). Ce modèle est adapté pour séparer les données, l'affichage et la logique de traitement, ce qui facilite la maintenance et les tests. Voici comment nous l'avons appliqué :
+Pour organiser le système Parc Informatique FMM, nous avons choisi le modèle MVC (Modèle-Vue-Contrôleur). Ce modèle est adapté pour séparer les données, l'affichage et la logique métier, ce qui facilite la maintenance, les tests et l'évolution du système.
 
 \begin{itemize}
-    \item \textbf{Modèle} : Cette partie gère les données. La base MySQL stocke les informations des patients, des mesures et des alertes.Laravel traite les requêtes et les interactions avec la base de données.
-    \item \textbf{Vue} : Cette partie montre les données aux utilisateurs. Les applications React (web) et Flutter (mobile) affichent des tableaux et des alertes de manière simple.
-    \item \textbf{Contrôleur} : Cette partie gère les actions. Laravel et Flask contrôlent le traitement des images, l'envoi des alertes et les interactions des utilisateurs.
+    \item \textbf{Modèle} : Cette couche gère les données. La base MySQL centralise les informations relatives aux équipements, aux licences, aux utilisateurs, aux tickets et aux maintenances.
+    \item \textbf{Vue} : Cette couche propose des interfaces visuelles. Les applications web et mobile affichent les tableaux de bord, les états des équipements et les tickets.
+    \item \textbf{Contrôleur} : Cette couche gère la logique métier. Le backend traite les requêtes, exécute les règles de gestion, assigne les tickets et déclenche les notifications.
 \end{itemize}
 % tikzpicture figure
 \begin{figure}[H]
@@ -98,29 +75,29 @@ font=\small,
 box/.style={rectangle, draw, rounded corners, minimum width=3cm, minimum height=1cm, align=center},
 node distance=1.2cm and 2.8cm]   
 % --- Modèle pink ---
-\node[box, fill=pink!20] (model) {Modèle\\(MySQL, Laravel)};
+\node[box, fill=pink!20] (model) {Modèle\\(MySQL)};
 % --- Vue ---
-\node[box, right=of model, fill=blue!20] (view) {Vue\\(React, Flutter)};
+\node[box, right=of model, fill=blue!20] (view) {Vue\\(Web, Mobile)};
 % --- Contrôleur ---
-\node[box, below=of model, fill=green!20] (controller) {Contrôleur\\(Flask, Laravel)};
+\node[box, below=of model, fill=green!20] (controller) {Contrôleur\\(Backend)};
 % --- Flèches de liaison ---
-\draw[->, thick] (model) -- (controller) node[midway, left, font=\scriptsize] {Gère les données};
-\draw[->, thick] (controller) -- (model) node[midway, right, font=\scriptsize] {Requêtes et réponses};
-\draw[->, thick] (controller) -- (view) node[midway, right, font=\scriptsize] {Affiche les données};
-\draw[->, thick] (view) -- (controller) node[midway, above=0.5cm, font=\scriptsize] {Interactions utilisateur};
+\draw[->, thick] (model) -- (controller) node[midway, left, font=\scriptsize] {Données};
+\draw[->, thick] (controller) -- (model) node[midway, right, font=\scriptsize] {Requêtes};
+\draw[->, thick] (controller) -- (view) node[midway, right, font=\scriptsize] {Affichage};
+\draw[->, thick] (view) -- (controller) node[midway, above=0.5cm, font=\scriptsize] {Interactions};
 % --- Titre ---         
-% \node[above=1cm of model, font=\bfseries\large] {Modèle MVC de VitalSync};
+% \node[above=1cm of model, font=\bfseries\large] {Modèle MVC du Parc Informatique FMM};
 \end{tikzpicture}
-\caption{Modèle MVC de VitalSync}
-\label{fig:mvc_vitalsync}
+\caption{Modèle MVC du Parc Informatique FMM}
+\label{fig:mvc_parc_informatique}
 \end{figure}
-Cette structure permet de séparer clairement les responsabilités, rendant le système plus modulaire et facile à étendre. Par exemple, si nous voulons ajouter une nouvelle fonctionnalité d'alerte, nous pouvons le faire dans le contrôleur sans toucher à la vue ou au modèle.
+Cette structure permet de séparer clairement les responsabilités, rendant le système plus modulaire et adaptable.
 % Interactions et fonctionnement du système
 \section{Interactions et fonctionnement du système}
 Cette section présente les diagrammes UML qui montrent comment les parties du système travaillent ensemble.
 
 \subsection{Diagramme des cas d'utilisation}
-Le diagramme des cas d'utilisation (Figure~\ref{fig:cas_utilisation}) montre comment les utilisateurs (médecins, infirmiers, administrateurs) et les appareils (moniteurs, caméras) interagissent avec le système. Il illustre les actions comme consulter les données ou recevoir des alertes.
+Le diagramme des cas d'utilisation (Figure~\ref{fig:cas_utilisation}) montre comment les acteurs (administrateur, technicien, utilisateur) interagissent avec le système. Il illustre les actions comme la consultation des actifs, la création de tickets, la validation des interventions et la génération de rapports.
 
 \begin{figure}[H]
 \centering
@@ -130,17 +107,17 @@ Le diagramme des cas d'utilisation (Figure~\ref{fig:cas_utilisation}) montre com
 \end{figure}
 
 \subsection{Diagramme de classes}
-Le diagramme de classes (Figure~\ref{fig:class_diagram}) montre la structure de la base de données, avec des entités comme Patient, Mesure et Alerte. Il explique comment les données sont organisées. Voir le Chapitre~\ref{chap:sprint1} pour plus de détails.
+Le diagramme de classes (Figure~\ref{fig:class_diagram}) montre la structure des entités du système, avec des éléments comme \textit{Equipement}, \textit{Ticket}, \textit{Utilisateur}, \textit{Maintenance} et \textit{Licence}. Il explique comment les données sont organisées et reliées.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\textwidth]{chapter3/diagrams/class.png}
-\caption{Diagramme de classes}
+\caption{Diagramme de classes du Parc Informatique FMM}
 \label{fig:class_diagram}
 \end{figure}
 
 \subsection{Diagramme de séquence}
-Le diagramme de séquence (Figure~\ref{fig:global_sequence_diagram}) décrit le processus depuis la capture des images par les caméras jusqu'à l'envoi des alertes via FCM. Il montre les étapes du traitement des données.
+Le diagramme de séquence (Figure~\ref{fig:global_sequence_diagram}) décrit le processus de gestion des incidents, depuis la création du ticket jusqu'à sa résolution et son archivage. Il met en évidence les interactions entre l'utilisateur, le backend, le technicien et la base de données.
 
 \begin{figure}[H]
 \centering
@@ -150,17 +127,17 @@ Le diagramme de séquence (Figure~\ref{fig:global_sequence_diagram}) décrit le 
 \end{figure}
 
 \subsection{Diagramme d'activités}
-Le diagramme d'activités (Figure~\ref{fig:activity_flux_donnees}) montre les étapes du traitement des données, de la collecte à l'envoi des alertes. Il explique comment les anomalies sont détectées et signalées.
+Le diagramme d'activités (Figure~\ref{fig:activity_flux_donnees}) montre les étapes du cycle de vie d'un ticket : signalement, analyse, assignation, intervention, validation et clôture.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.75\textwidth]{chapter3/diagrams/activity_dataflow.png}
-\caption{Diagramme d'activité du flux de données}
+\caption{Diagramme d'activité du flux des processus}
 \label{fig:activity_flux_donnees}
 \end{figure}
 
 \subsection{Diagramme de composants}
-Le diagramme de composants (Figure~\ref{fig:composants}) montre les modules logiciels (Flask, Laravel, React, Flutter) et comment ils sont connectés.
+Le diagramme de composants (Figure~\ref{fig:composants}) présente les modules logiciels du projet, tels que le backend, la base de données, les services de notification et les interfaces utilisateur.
 
 \begin{figure}[H]
 \centering
@@ -170,7 +147,7 @@ Le diagramme de composants (Figure~\ref{fig:composants}) montre les modules logi
 \end{figure}
 
 \subsection{Diagramme de déploiement}
-Le diagramme de déploiement (Figure~\ref{fig:diagramme_deploiement}) montre l'organisation physique du système, avec les serveurs, caméras et appareils mobiles.
+Le diagramme de déploiement (Figure~\ref{fig:diagramme_deploiement}) montre l'architecture physique du système, avec les serveurs, les postes de travail et les terminaux mobiles utilisés pour accéder au Parc Informatique FMM.
 
 \begin{figure}[H]
 \centering
@@ -179,52 +156,18 @@ Le diagramme de déploiement (Figure~\ref{fig:diagramme_deploiement}) montre l'o
 \label{fig:diagramme_deploiement}
 \end{figure}
 
-% % Architecture physique et communication
-% \section{Architecture physique et communication}
-% \label{sec:architecture_physique}
-
-% \subsection{Matériel et fonctionnement du système}
-
-% Le système repose sur une architecture distribuée intégrant différents composants matériels et logiciels. Il utilise des moniteurs médicaux pour afficher les paramètres vitaux, des caméras IP pour capturer en temps réel les écrans de ces moniteurs, des serveurs locaux pour le traitement et le stockage des données, ainsi que des appareils mobiles pour l’affichage des interfaces utilisateur. L’ensemble des composants est interconnecté via un réseau local sécurisé.
-
-% Le fonctionnement du système s’articule autour de trois étapes principales :
-% \begin{enumerate}
-%     \item \textbf{Collecte} : Les caméras IP capturent les écrans des moniteurs médicaux. Un modèle de détection d’objets (YOLO) identifie les zones contenant les données vitales, puis Tesseract OCR en extrait les valeurs numériques.
-%     \item \textbf{Traitement} : Les données extraites sont transmises à un serveur local où elles sont analysées afin de détecter d’éventuelles anomalies, puis stockées dans une base de données MySQL.
-%     \item \textbf{Alertes} : En cas d’anomalie détectée (valeurs anormales, absence de signal, etc.), une alerte est générée et envoyée automatiquement via Firebase Cloud Messaging (FCM) aux appareils concernés.
-% \end{enumerate}
-
-% Cette approche garantit une surveillance en temps réel des patients et permet une réactivité optimale en cas de situation critique.
-
-% \subsection{Flux de communication}
-% Les données passent des caméras au serveur via un réseau sécurisé (HTTPS, WebSockets). Le serveur traite les données, les stocke, et envoie des alertes via FCM. Les utilisateurs accèdent aux données via les applications web et mobile. La Figure~\ref{fig:flux_communication} montre ce flux.
-
-% \begin{figure}[H]
-% \centering
-% \includegraphics[width=0.9\textwidth]{chapter3/diagrams/communication_flow_chart.png}
-% \caption{Schéma général du flux de communication}
-% \label{fig:flux_communication}
-% \end{figure}
-
 % Pourquoi ce choix d'architecture
 \section{Pourquoi ce choix d'architecture}
 \label{sec:justification_architecture}
-% Cette architecture est choisie pour plusieurs raisons :
-% - **Simplicité** : Les trois parties (collecte, traitement, affichage) sont séparées, ce qui facilite les modifications.
-% - **Rapidité** : Les alertes sont envoyées en temps réel grâce à YOLO et FCM.
-% - **Adaptabilité** : Le système fonctionne avec différents moniteurs et peut être utilisé sur des serveurs locaux ou dans le cloud.
-% - **Sécurité** : Les données sont protégées par HTTPS et Sanctum.
-% Ces choix répondent aux besoins des hôpitaux tunisiens et aux principes du master Génie Logiciel.
-
 Cette architecture est choisie pour plusieurs raisons :
 \begin{itemize}
-    \item \textbf{Simplicité} : Les trois parties (collecte, traitement, affichage) sont séparées, ce qui facilite les modifications et la maintenance.
-    \item \textbf{Rapidité} : Les alertes sont envoyées en temps réel grâce à YOLO pour la détection et FCM pour les notifications.
-    \item \textbf{Adaptabilité} : Le système fonctionne avec différents moniteurs médicaux et peut être déployé sur des serveurs locaux ou dans le cloud.
-    \item \textbf{Sécurité} : Les données sont protégées par HTTPS et Sanctum, garantissant la confidentialité des informations médicales.
+    \item \textbf{Simplicité} : Les trois couches (gestion des actifs, traitement des services, interfaces utilisateur) sont séparées, ce qui facilite les modifications et la maintenance.
+    \item \textbf{Réactivité} : Les tickets et notifications sont traités rapidement, améliorant la prise en charge des incidents.
+    \item \textbf{Adaptabilité} : Le système supporte différents types d'équipements informatiques et peut être déployé sur des infrastructures locales ou cloud.
+    \item \textbf{Sécurité} : Les données sont protégées par des mécanismes d'authentification, d'autorisation et de chiffrement.
 \end{itemize}
-Ces choix répondent aux besoins des hôpitaux tunisiens et respectent les principes du master Génie Logiciel, en assurant une architecture claire, adaptable et sécurisée.
-% Conclusion
+Ces choix répondent aux besoins des structures comme le SmartLab, en assurant une architecture modulaire, robuste et évolutive.
+
 \section{Conclusion}
 \label{sec:conclusion}
-Ce chapitre a décrit l'architecture de VitalSync, qui permet de collecter, traiter et afficher des données médicales en temps réel. L'organisation en trois parties et l'utilisation du modèle MVC rendent le système clair, adaptable et sécurisé. Cette architecture répond aux besoins des hôpitaux et prépare le système pour les prochaines étapes, comme expliqué dans les chapitres suivants.
+Ce chapitre a décrit l'architecture du projet Parc Informatique FMM, mettant en évidence la séparation des couches, le modèle MVC et les diagrammes UML. L'approche retenue assure un système clair, flexible et capable de répondre aux besoins de gestion d'un parc informatique moderne.
