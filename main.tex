@@ -42,6 +42,17 @@
 \usepackage{xurl} % Pour casser les URLs proprement dans la bibliographie
 \usepackage{fvextra}
 \usepackage{csquotes} % DOIT être chargé APRÈS fvextra pour éviter les conflits
+\usepackage{listings}
+\usepackage{xcolor}
+
+\lstdefinelanguage{JavaScript}{
+  keywords={break, case, catch, continue, debugger, default, delete, do, else, false, finally, for, function, if, in, instanceof, new, null, return, switch, this, throw, true, try, typeof, var, let, const, while, with, class, export, import, from},
+  sensitive=true,
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]',
+  morestring=[b]"
+}
 
 \usetikzlibrary{shapes.geometric, arrows.meta, fit, positioning}
 \setlist[itemize]{topsep=2pt, partopsep=0pt, parsep=0pt, itemsep=1pt, left=1.5em}
