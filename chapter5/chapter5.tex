@@ -17,14 +17,14 @@ La figure \ref{fig:architecture_sprint1} ci-dessous synthétise l’architecture
 \section{Objectifs et livrables}
 \label{sec:objectifs_sprint1}
 
-L'objectif principal du Sprint 1 est d'établir une infrastructure backend solide et fonctionnelle permettant la gestion complète des équipements informatiques et des processus d'exploitation associés. Cette phase vise à mettre en place un serveur d'application performant basé sur Express.js et Sequelize, et à configurer une base de données relationnelle capable de persister les données avec fiabilité et cohérence. Les cinq livrables clés de ce sprint sont :
+L'objectif principal du Sprint 1 est d'établir une infrastructure backend solide et fonctionnelle permettant la gestion complète des équipements informatiques et des processus d'exploitation associés. Cette phase vise à mettre en place un serveur d'application performant basé sur Express.js\cite{expressjs2024} et Sequelize\cite{sequelize2024}, et à configurer une base de données relationnelle capable de persister les données avec fiabilité et cohérence. Les cinq livrables clés de ce sprint sont :
 
 \begin{itemize}
-    \item \textbf{Backend API REST avec Express.js et Sequelize ORM} : Une API REST complète et documentée, implémentée avec Express.js, exposant 16 suites d'endpoints sécurisés couvrant les équipements, les tickets, les interventions, les maintenances, les installations, les licences et plus. L'API intègre une authentification JWT Bearer, une validation des entrées via Sequelize, une gestion d'erreurs robuste, et des logs structurés via Morgan.
-    \item \textbf{Base de données relationnelle MySQL avec 18 modèles} : Une base de données MySQL avec un schéma complexe modélisant 18 entités métier incluant Équipement, Ticket, Intervention, Maintenance, Installation, Licence, Logiciel, Assignment, Transfer, Rapport, Bloc, Salle, et Département. Chaque modèle implémente des relations définies via Sequelize avec indices d'optimisation et contraintes d'intégrité.
+    \item \textbf{Backend API REST avec Express.js\cite{expressjs2024} et Sequelize ORM\cite{sequelize2024}} : Une API REST complète et documentée, implémentée avec Express.js, exposant 16 suites d'endpoints sécurisés couvrant les équipements, les tickets, les interventions, les maintenances, les installations, les licences et plus. L'API intègre une authentification JWT Bearer, une validation des entrées via Sequelize, une gestion d'erreurs robuste, et des logs structurés via Morgan.
+    \item \textbf{Base de données relationnelle MySQL\cite{mysql2024} avec 18 modèles} : Une base de données MySQL avec un schéma complexe modélisant 18 entités métier incluant Équipement, Ticket, Intervention, Maintenance, Installation, Licence, Logiciel, Assignment, Transfer, Rapport, Bloc, Salle, et Département. Chaque modèle implémente des relations définies via Sequelize avec indices d'optimisation et contraintes d'intégrité.
     \item \textbf{Module de gestion des équipements avec CRUD avancé} : Un module complet implémentant 9 opérations pour les équipements (création, lecture, modification, suppression, historique, assignation, transfert, disposition). Chaque opération inclut la validation métier, le contrôle d'accès basé sur les rôles (RBAC), et la génération d'événements auditables.
     \item \textbf{Système de gestion des incidents et maintenances} : Un module pour la création et la gestion de tickets informatiques, des interventions associées, et des plans de maintenance préventive et corrective, avec assignation automatique des techniciens et suivi du statut.
-    \item \textbf{Interface web intuitive et gestion des licences logicielles} : Une interface frontend React avec authentification, gestion des utilisateurs, des licences logicielles, des installations et des transferts d'équipements, générant des rapports PDF/Excel et des statistiques.
+    \item \textbf{Interface web intuitive et gestion des licences logicielles} : Une interface frontend React\cite{react2024} avec Material-UI\cite{materialui2024}, construite avec Vite\cite{vite2024}, offrant une authentification, gestion des utilisateurs, des licences logicielles, des installations et des transferts d'équipements, générant des rapports PDF/Excel et des statistiques.
 \end{itemize}
 
 Ces objectifs s'alignent avec les priorités M (Must have) du Product Backlog (voir Tableau \ref{tab:backlog}), en particulier les tâches M-01 « Gestion des équipements », M-02 « Gestion des incidents », M-03 « Gestion des maintenances », et M-06 « Stockage et historique des données », comme détaillé dans le chapitre précédent. Le périmètre du Sprint 1 couvre également les fonctionnalités S (Should have) pour assurer une base production-ready complète.
@@ -43,9 +43,9 @@ La configuration du serveur backend a consisté en la mise en place de l’envir
 
 Les dépendances principales incluent :
 \begin{itemize}
-    \item \textit{express} (4.18.3)
-    \item \textit{sequelize} (6.37.3)
-    \item \textit{mysql2} (3.9.7)
+    \item \textit{express}\cite{expressjs2024} (4.18.3)
+    \item \textit{sequelize}\cite{sequelize2024} (6.37.3)
+    \item \textit{mysql2}\cite{mysql2024} (3.9.7)
     \item \textit{jsonwebtoken} (9.0.2)
     \item \textit{bcryptjs} (2.4.3)
     \item \textit{dotenv} (16.4.5)
@@ -53,7 +53,7 @@ Les dépendances principales incluent :
     \item \textit{cors} (2.8.5)
     \item \textit{multer} (2.1.1)
     \item \textit{swagger-jsdoc} + \textit{swagger-ui-express}
-    \item \textit{firebase-admin} (13.7.0)
+    \item \textit{firebase-admin}\cite{firebase2024} (13.7.0)
     \item \textit{pdfkit} (0.18.0)
     \item \textit{exceljs} (4.4.0)
     \item \textit{nodemailer} (8.0.4)
@@ -444,6 +444,6 @@ Les améliorations au Sprint 1 incluront la couverture de tests à 80\%, optimis
 \section{Conclusion}
 \label{sec:conclusion_sprint1}
 
-Le Sprint 1 a établi une infrastructure production-ready complète avec Express.js + Sequelize (18 modèles), authentification JWT, RBAC, et interface React sophistiquée. Tous les critères incluant équipements, incidents, maintenances, et licences ont été validés. L'API gère 2000 req/sec avec latence de 50ms. La solution est prête pour déploiement production.
+Le Sprint 1 a établi une infrastructure production-ready complète avec Express.js\cite{expressjs2024} + Sequelize\cite{sequelize2024} (18 modèles), authentification JWT, RBAC, et interface React\cite{react2024} + Material-UI\cite{materialui2024} sophistiquée, construite avec Vite\cite{vite2024}. Tous les critères incluant équipements, incidents, maintenances, et licences ont été validés. L'API gère 2000 req/sec avec latence de 50ms. La solution est prête pour déploiement production.
 
 Le Sprint 1 fournit une base production-ready. Le Sprint 2 se concentrera sur tests, notifications, automatisations, et optimisations supplémentaires. La solution est en alignement complet avec les objectifs du SmartLab.

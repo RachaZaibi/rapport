@@ -123,7 +123,7 @@ Efficacité opérationnelle & $\pm$ & $\surd$ & $\surd$ \\ \hline
 \textbf{Analyse critique} :
 
 \begin{itemize}
-    \item \textbf{GLPI} : Bien que open-source et largement utilisé, ce système reste limité en termes de notifications automatiques et d'intégration avec des services cloud comme Firebase.
+    \item \textbf{GLPI} : Bien que open-source et largement utilisé, ce système reste limité en termes de notifications automatiques et d'intégration avec des services cloud comme Firebase\cite{firebase2024}.
     
     \item \textbf{iTop} : Offre une bonne modélisation des services, mais sa complexité de configuration peut être un frein pour les petites structures.
     
@@ -134,13 +134,13 @@ En résumé, ces solutions ne répondent que partiellement aux besoins des étab
 
 \section{Solution proposée : Parc Informatique FMM}
 
-Le projet Parc Informatique FMM vise à moderniser la gestion des parcs informatiques en Tunisie en proposant une solution complète, économique et facilement intégrable. En combinant des technologies open-source telles que \textbf{Node.js}, \textbf{React} et \textbf{MySQL}, le système automatise le suivi des équipements, la gestion des incidents et les maintenances.
+Le projet Parc Informatique FMM vise à moderniser la gestion des parcs informatiques en Tunisie en proposant une solution complète, économique et facilement intégrable. En combinant des technologies open-source telles que \textbf{Node.js} (via Express.js\cite{expressjs2024}), \textbf{React}\cite{react2024} et \textbf{MySQL}\cite{mysql2024}, le système automatise le suivi des équipements, la gestion des incidents et les maintenances.
 
 \subsection{Fonctionnement du Parc Informatique FMM}
 
-Conçu pour s'adapter aux contraintes des établissements tunisiens, le système repose sur une architecture full-stack. Le backend API REST gère l'authentification, les opérations CRUD sur les entités (utilisateurs, équipements, tickets), et l'intégration avec Firebase pour les notifications. Le frontend web interactif permet aux utilisateurs d'interagir via des formulaires, tableaux et visualisations.
+Conçu pour s'adapter aux contraintes des établissements tunisiens, le système repose sur une architecture full-stack. Le backend API REST gère l'authentification, les opérations CRUD sur les entités (utilisateurs, équipements, tickets), et l'intégration avec Firebase\cite{firebase2024} pour les notifications. Le frontend web interactif, construit avec React\cite{react2024} et Material-UI\cite{materialui2024}, permet aux utilisateurs d'interagir via des formulaires, tableaux et visualisations.
 
-Les fonctionnalités clés incluent la gestion des équipements (avec codes QR), le suivi des tickets d'incident, les maintenances préventives, et la génération de rapports. Le système utilise Sequelize pour l'ORM, JWT pour la sécurité, et Material-UI pour l'interface.
+Les fonctionnalités clés incluent la gestion des équipements (avec codes QR), le suivi des tickets d'incident, les maintenances préventives, et la génération de rapports. Le système utilise Sequelize\cite{sequelize2024} pour l'ORM, JWT pour la sécurité, et Material-UI\cite{materialui2024} pour l'interface.
 
 Le fonctionnement s'articule autour de trois grandes phases :
 
