@@ -79,8 +79,11 @@
 \setlist[itemize,1]{label=\smalldash}
 
 % ================ PAGE SETTINGS ================
-\geometry{top=2.5cm, bottom=2.5cm, left=3cm, right=2.5cm}
+\geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2cm}
 \onehalfspacing
+\setlength{\parskip}{6pt}  % Spacing between paragraphs for better readability
+\setlength{\parindent}{0pt}  % No indent at paragraph start
+\justifying  % Ensure text is justified (left and right)
 
 % ================ HEADER / FOOTER STYLES ================
 % Main style: header + footer + lines
@@ -122,9 +125,25 @@
 \makeatother
 
 % ================ TITLES ================
-\titleformat{\chapter}[display]
-  {\centering\normalfont\bfseries\LARGE}{\chaptername~\thechapter}{20pt}{\LARGE}
-\titlespacing*{\chapter}{0pt}{-1cm}{1cm}
+% Chapter titles: Times 16pt, bold, left-aligned, spacing 12pt before and after
+\titleformat{\chapter}[hang]
+  {\normalfont\bfseries}{\thechapter.}{0.5em}{\fontsize{16}{16}\selectfont}
+\titlespacing*{\chapter}{0pt}{12pt}{12pt}
+
+% Section titles: Times 14pt, bold, left-aligned, spacing 6pt before and after
+\titleformat{\section}[hang]
+  {\normalfont\bfseries}{\thesection.}{0.5em}{\fontsize{14}{14}\selectfont}
+\titlespacing*{\section}{0pt}{6pt}{6pt}
+
+% Subsection titles: Times 12pt, bold, left-aligned, spacing 3pt before and after
+\titleformat{\subsection}[hang]
+  {\normalfont\bfseries}{\thesubsection.}{0.5em}{\fontsize{12}{12}\selectfont}
+\titlespacing*{\subsection}{0pt}{3pt}{3pt}
+
+% Subsubsection titles: Times 12pt, bold italic
+\titleformat{\subsubsection}[hang]
+  {\normalfont\bfseries\itshape}{\thesubsubsection.}{0.5em}{\fontsize{12}{12}\selectfont}
+\titlespacing*{\subsubsection}{0pt}{3pt}{3pt}
 
 % ------------------------------------------------
 % Style UML
@@ -182,9 +201,6 @@
 
 % ---------- Remerciements avec encadrement ----------
 \newpage
-
-\itshape
-
 \thispagestyle{empty}
 \decoratedblock{Remerciements}
 
