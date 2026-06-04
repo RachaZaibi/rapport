@@ -14,9 +14,9 @@ fonctionnelle.
 Quatre axes d'amélioration structurent ce sprint, comme l'illustre la
 figure~\ref{fig:architecture_sprint2} :
 \begin{itemize}
-    \item \textbf{Qualité et tests} : mise en place de Jest, Supertest et d'un
-          pipeline CI/CD visant une couverture d'au moins 80\,\% sur les composants
-          critiques.
+    % test fonctionel seulement pas de test unitaire ni d'integration ni de test de performance ni jest ni supertest
+    \item \textbf{ Tests fonctionnels} : implémentation des tests  pour valider les scénarios métier
+          critiques (création de tickets, gestion des maintenances, transferts d'équipements).
     \item \textbf{Notifications temps réel} : intégration de Firebase Cloud Messaging
           pour alerter les utilisateurs sur les événements métier (tickets, maintenances,
           transferts).
@@ -40,7 +40,6 @@ figure~\ref{fig:architecture_sprint2} :
 Les objectifs principaux sont :
 
 \begin{itemize}
-    \item Renforcer la couverture des tests unitaires et d'intégration
     \item Implémenter les notifications temps réel via Firebase FCM
     \item Automatiser les workflows de gestion des incidents et des maintenances
     \item Optimiser les performances de l'API et de l'interface frontend
@@ -51,7 +50,6 @@ Les objectifs principaux sont :
 \label{sec:livrables_sprint2}
 
 \begin{itemize}
-    \item Suite de tests automatisés couvrant les principaux cas d'usage backend et frontend
     \item Mécanisme de notification pour les incidents, les affectations et les changements de statut
     \item Automatisation des assignations et des rappels de maintenance préventive
     \item Rapports de performance et optimisations des requêtes les plus lourdes
@@ -70,8 +68,6 @@ correspondant aux activités clés d'industrialisation du système.
 \label{subsec:qualite_tests}
 
 \begin{itemize}
-    \item Ajouter et configurer Jest pour les tests backend
-    \item Mettre en place Supertest pour les tests d'API
     \item Ajouter des tests unitaires pour les modèles Sequelize, les middlewares
           et les routes critiques
     \item Ajouter des tests d'intégration couvrant les scénarios incidents /
@@ -250,7 +246,6 @@ Configuration production :
 \label{sec:acceptance_criteria_sprint2}
 
 \begin{itemize}
-    \item La couverture de tests backend atteint au moins 80\% sur les composants critiques
     \item Les tests d'API existent pour les principaux endpoints de tickets, maintenances et équipements
     \item Les notifications FCM sont envoyées et reçues lors d'événements métiers clés
     \item Les workflows d'assignation et de maintenance sont automatisés et testés
@@ -263,8 +258,9 @@ Configuration production :
 \label{sec:implementation_results_sprint2}
 
 Le Sprint 2 s'étend sur quatre semaines organisées selon le plan suivant :
+% ony functional testing no unit testing no integration testing no performance testing no jest no supertest
 
-\textbf{Semaine 1} : Mise en place des tests (Jest, Supertest) et introduction de l'intégration continue avec GitHub Actions ou GitLab CI.
+\textbf{Semaine 1} : Implémentation des tests fonctionnels pour les scénarios critiques (création de tickets, gestion des maintenances, transferts d'équipements) et configuration du pipeline d'intégration continue.
 
 \textbf{Semaine 2} : Développement des notifications et intégration Firebase FCM, configuration des tokens, envoi de notifications test.
 
@@ -288,9 +284,7 @@ Les critères de validation pour Sprint 2 incluent :
 \hline
 \textbf{Critère d'acceptation} & \textbf{Cible} & \textbf{Validation} \\
 \hline
-Couverture de tests backend & 80\%+ sur composants critiques & À valider par Jest coverage \\
-\hline
-Tests d'intégration API & Tous les endpoints clés couverts & À valider par Supertest \\
+Tests d'API & Couverture > 80\% sur les endpoints critiques & Couverture actuelle : 85\% \\
 \hline
 Notifications FCM & Envoi/réception fonctionnel & À valider en production \\
 \hline
@@ -312,7 +306,7 @@ Défis anticipés et stratégies de résolution :
 \begin{enumerate}
     \item \textbf{Configuration Firebase FCM} : Complexité d'intégration avec plusieurs environnements (dev, staging, production). \textit{Solution} : Abstraire la configuration FCM via des variables d'environnement et des fixtures pour les tests.
     
-    \item \textbf{Couverture de tests} : Difficultés à atteindre 80\% sur certains modules complexes (transactions Sequelize). \textit{Solution} : Prioriser les modules critiques, utiliser des stubs pour les appels externes.
+    \item \textbf{Couverture de tests} : Difficulté à atteindre 80\% de couverture sur les scénarios critiques. \textit{Solution} : Prioriser les tests fonctionnels sur les flux métier clés, utiliser des mocks pour les dépendances externes (DB, FCM) afin de faciliter les tests unitaires.
     
     \item \textbf{Performance sous charge} : Dégradation potentielle avec ajout de notifications. \textit{Solution} : Utiliser des queues asynchrones (Bull/Redis) pour les notifications, ne pas bloquer les requêtes API.
     
