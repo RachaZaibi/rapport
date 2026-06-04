@@ -37,13 +37,13 @@
 \usepackage{fontawesome5} % For \textwarning (if not available, use \faExclamationTriangle)
 \usepackage{pifont}  % for \ding
 \usepackage{xcolor}  % for colored symbols
+\usepackage{calligra}
 \usepackage{tikz}
 \usepackage[hypertexnames=false]{hyperref}
 \usepackage{xurl} % Pour casser les URLs proprement dans la bibliographie
 \usepackage{fvextra}
 \usepackage{csquotes} % DOIT être chargé APRÈS fvextra pour éviter les conflits
 \usepackage{listings}
-\usepackage{xcolor}
 
 \lstdefinelanguage{JavaScript}{
   keywords={break, case, catch, continue, debugger, default, delete, do, else, false, finally, for, function, if, in, instanceof, new, null, return, switch, this, throw, true, try, typeof, var, let, const, while, with, class, export, import, from},
@@ -55,6 +55,22 @@
 }
 
 \usetikzlibrary{shapes.geometric, arrows.meta, fit, positioning}
+\newcommand{\decoratedblock}[1]{%
+  \begin{center}
+    \begin{tikzpicture}
+      \node[draw=blue!55!black, fill=blue!5, rounded corners=10pt, inner sep=14pt, text width=0.82\textwidth, align=center] {
+        {\calligra\Large\color{blue!55!black}\textbf{#1}}
+      };
+    \end{tikzpicture}
+  \end{center}
+  \vspace{0.5cm}
+}
+\newcommand{\gabriolatext}[1]{%
+  {\calligra\large\color{blue!45!black} #1}
+}
+\newcommand{\gabriolatextblack}[1]{%
+  {\calligra\large\color{black} #1}
+}
 \setlist[itemize]{topsep=2pt, partopsep=0pt, parsep=0pt, itemsep=1pt, left=1.5em}
 
 % Define missing symbols
@@ -165,56 +181,51 @@
 % \endgroup
 
 % ---------- Remerciements avec encadrement ----------
-% \newpage
-% \thispagestyle{empty}
+\newpage
 
-% \begin{center}
-%     \vspace*{1.5cm}
-%     {\Huge \bfseries Remerciements} \\[0.5cm]
-%     \textit{« La gratitude est la mémoire du cœur. » – Lao Tseu}
-% \end{center}
+\itshape
 
-% \vspace{1cm}
+\thispagestyle{empty}
+\decoratedblock{Remerciements}
 
-% \begin{center}
-% \noindent
-% \begin{minipage}{0.9\textwidth}
-% \begin{center}
-% \rule{\linewidth}{0.5pt}
-% \end{center}
-% \vspace{0.5cm}
-% \itshape
+\begin{center}
+    \gabriolatextblack{« La reconnaissance est non seulement la plus grande des vertus, mais aussi la mère de toutes les autres. » — Cicéron}
+\end{center}
 
-% Je tiens à exprimer ma profonde gratitude à toutes les personnes qui m'ont soutenue tout au long de la réalisation de ce projet de fin d’études.
+\begin{adjustwidth}{1.5cm}{1.5cm}
+\gabriolatext{C’est avec un grand honneur et un grand plaisir que je dédie ces quelques lignes afin de remercier toute personne ayant contribué de près ou de loin à l’accomplissement de ce projet.}
 
-% Je remercie particulièrement \textbf{Monsieur Ridha Azizi}, Professeur à l’ISET de Sousse, pour son encadrement académique, ses conseils avisés, sa disponibilité et son accompagnement.
+\gabriolatext{À Monsieur \textbf{Ridha AZIZI} pour son encadrement, pour son aide, sa patience, ses consignes et ses recommandations qui ont été d’un grand intérêt et qui m’ont permis de mener à terme ce projet.}
 
-% Je suis également reconnaissante à \textbf{Monsieur Charfeddine Ameri}, encadrant professionnel, pour m’avoir accueillie au sein du SmartLab de la Faculté de Médecine de Monastir.
+\gabriolatext{À Monsieur \textbf{Charfeddine AMRI}, le Doyen de la Faculté de Médecine, pour l’aide, le support, les précieux conseils, et de m’avoir accueilli chaleureusement.}
 
-% Je remercie mes collègues :
+\gabriolatext{À mon encadrante professionnel \textbf{Racha ZIBI}, pour son assistance, son soutien, ses conseils pertinents et son encadrement direct et amical durant ce stage.}
 
-% \begin{itemize}
-%   \item \textbf{Ghada Ouni} pour son paticipation active dans la planification et le brainstorming des idées du projet,
-%   \item \textbf{Wahbi Said} pour sa contribution en tant que volontaire pour la création du dataset, facilitant ainsi l'entraînement des modèles,
-%   \item \textbf{Wafa Massoud} pour son soutien moral constant, qui a été d’un grand réconfort dans les moments les plus difficiles.
-% \end{itemize}
+\gabriolatext{Je suis très reconnaissante à toutes les personnes qui ont contribué à l’élaboration de ce travail à savoir \textbf{Monsieur Ridha AZIZI}, \textbf{monsieur Adnéne ROUATBI}, \textbf{monsieur Hatem SANDID}, \textbf{Monsieur Wissem LTAIEF}, \textbf{monsieur Hichem MSEK}, pour leur soutien moral, leur encouragement et leur conseil et pour tout le temps qu’ils ont sacrifié.}
+\end{adjustwidth}
 
-% Enfin, je dédie une pensée sincère à ma famille, et surtout à ma mère, pour leur amour et leur appui indéfectible.
+\vspace{1cm}
+\newpage
+\pagestyle{empty}
+\thispagestyle{empty}
+\decoratedblock{Dédicaces}
+\begin{adjustwidth}{1.5cm}{1.5cm}
+\gabriolatext{Je dédie ce travail :}
 
-% \vspace{0.5cm}
-% \begin{center}
-% \rule{\linewidth}{0.5pt}
-% \end{center}
-% \end{minipage}
-% \end{center}
+\gabriolatext{À maman, pour son amour, son sacrifice, son soutien et son dévouement. Il n’y a pas de mots qui puissent exprimer toute ma joie, ma gratitude et ma reconnaissance pour tout ce qu’elle fait pour moi. Que Dieu lui accorde santé, bonheur et longue vie.}
 
-% \vspace{1cm}
-% \begin{flushright}
-% \textbf{Zaibi Racha} \\
-% \textit{Année universitaire 2024--2025}
-% \end{flushright}
+\gabriolatext{À tous les membres de ma famille, mon Mari et Mes enfants, pour toute leur tendresse, leur considération et leur soutien permanent. Je leur dois énormément de choses merveilleuses.}
 
+\gabriolatext{À mes chères amies, pour tous les merveilleux moments et les souvenirs partagés.}
 
+\gabriolatext{À toute l’équipe de la Faculté de Médecine de Monastir, qui m’a encouragée et soutenue durant la période de ce stage. Je suis reconnaissante envers tous ceux que j’aime et à tous ceux qui m’aiment.}
+\end{adjustwidth}
+
+\vspace{1cm}
+\begin{flushright}
+\gabriolatextblack{Hela Boussaid} \\
+\gabriolatextblack{Année universitaire 2025--2026}
+\end{flushright}
 % ---------- TOC ----------
 \begingroup
 \pagestyle{tocpages} % Apply tocpages to all pages in this group
