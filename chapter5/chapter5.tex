@@ -1,9 +1,8 @@
-\chapter{Mise en place de l'architecture et gestion des équipements}
+\chapter{Sprint 1 : Mise en place de l'architecture et gestion des équipements}
 \label{chap:sprint1}
 
 % Introducing Sprint 1
 \section*{Introduction}
-\addcontentsline{toc}{section}{Introduction}
 \label{sec:intro_sprint1}
 
 Ce chapitre décrit le Sprint 1, première itération du développement du système de gestion des équipements informatiques du SmartLab de la Faculté de Médecine de Monastir, comme présenté dans l'introduction générale et l'étude architecturale. Selon la planification établie dans le chapitre précédent (voir Tableau \ref{tab:sprints}), cette phase se concentre sur la mise en place de l'infrastructure backend, la configuration de la base de données, et le développement du module de gestion des équipements. Cette itération pose les fondations techniques du système en implémentant une API REST performante, une persistance de données robuste, et un module CRUD complet pour les équipements, en suivant la méthodologie Scrum décrite dans le chapitre consacré à la méthode.
@@ -443,7 +442,6 @@ Les améliorations au Sprint 1 incluront la couverture de tests à 80\%, optimis
 
 % Conclusion
 \section*{Conclusion}
-\addcontentsline{toc}{section}{Conclusion}
 \label{sec:conclusion_sprint1}
 
 Le Sprint 1 a établi une infrastructure production-ready complète avec Express.js\cite{expressjs2024} + Sequelize\cite{sequelize2024} (18 modèles), authentification JWT, RBAC, et interface React\cite{react2024} + Material-UI\cite{materialui2024} sophistiquée, construite avec Vite\cite{vite2024}. Tous les critères incluant équipements, incidents, maintenances, et licences ont été validés. L'API gère 2000 req/sec avec latence de 50ms. La solution est prête pour déploiement production.
