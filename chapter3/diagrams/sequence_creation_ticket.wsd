@@ -1,0 +1,27 @@
+@startuml
+
+actor Utilisateur
+boundary Frontend
+control Backend
+database MySQL as DB
+control FCM as Firebase
+
+Utilisateur -> Frontend : Créer ticket (titre, priorité, équipement)
+Frontend -> Backend : POST /api/tickets
+
+Backend -> DB : Insérer ticket (statut = ouvert)
+DB --> Backend : Ticket créé
+
+Backend -> DB : Chercher technicien disponible
+DB --> Backend : Liste techniciens
+
+Backend -> DB : Assigner ticket
+DB --> Backend : Mise à jour assignation
+
+Backend -> FCM : Envoyer notification
+FCM --> Technicien : Push notification ticket
+
+Backend --> Frontend : Ticket créé
+Frontend --> Utilisateur : Confirmation création
+
+@enduml

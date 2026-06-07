@@ -1,5 +1,4 @@
-
-\chapter{Étude architecturale du projet}
+\chapter{Étude architecturale du projet} 
 \label{chap:architecture}
 
 % Introduction
@@ -149,27 +148,85 @@ Le diagramme de classes (Figure~\ref{fig:class_diagram}) montre la structure des
 \label{fig:class_diagram}
 \end{figure}
 
-\subsection{Diagramme de séquence}
-Le diagramme de séquence (Figure~\ref{fig:global_sequence_diagram}) décrit le processus de gestion des incidents, depuis la création du ticket jusqu'à sa résolution et son archivage. Il met en évidence les interactions entre l'utilisateur, le backend, le technicien et la base de données.
+\subsection{Diagrammes de séquence}
 
-Le diagramme est structuré en quatre phases principales, illustrant le flux complet de gestion d'un incident :
+Les diagrammes de séquence constituent un élément essentiel de la modélisation dynamique du système \textit{Parc Informatique FMM}. Ils permettent de représenter de manière chronologique les échanges entre les différents composants du système, notamment l’utilisateur, le frontend, le backend, la base de données ainsi que les services externes tels que Firebase Cloud Messaging (FCM).
 
-\begin{enumerate}
-    \item \textbf{Création du ticket} : L'utilisateur envoie une requête POST à l'API backend avec les détails du ticket (titre, priorité, équipement). Le backend insère le ticket dans la base de données avec le statut "ouvert" et envoie une notification push au technicien.
-    
-    \item \textbf{Assignation} : Le technicien met à jour le ticket via une requête PUT au backend, assignant le technicien et changeant le statut à "assigné".
-    
-    \item \textbf{Intervention} : Le technicien crée une intervention via POST, puis la termine via PUT, saisissant le diagnostic et la solution. Le backend met à jour l'intervention et le ticket à "résolu", et génère automatiquement une maintenance corrective.
-    
-    \item \textbf{Clôture} : L'utilisateur clôture le ticket via une requête PUT au backend, changeant le statut à "fermé" et enregistrant la date de clôture.
-\end{enumerate}
+Dans ce projet, plusieurs scénarios fonctionnels représentatifs ont été modélisés afin d’illustrer les principaux flux métiers et de mettre en évidence les interactions entre les différentes couches de l’architecture.
+
+\subsubsection{Authentification de l’utilisateur}
+
+Le diagramme de séquence d’authentification \ref{fig:sequence_authentification} illustre le processus permettant à un utilisateur d’accéder au système de manière sécurisée.
+
+Dans ce scénario, l’utilisateur saisit ses identifiants via l’interface web. Ces informations sont ensuite transmises par le frontend au backend, qui procède à leur vérification auprès de la base de données. Si les identifiants sont valides, le système génère un token JWT qui est renvoyé au client. Le frontend stocke alors ce token afin d’autoriser l’accès aux ressources protégées, notamment le tableau de bord.
+
+Ce mécanisme garantit un accès sécurisé au système basé sur une authentification par token.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.9\textwidth]{chapter3/diagrams/sequence_gestion_incidents.png}
-\caption{Diagramme de séquence global}
-\label{fig:global_sequence_diagram}
+\includegraphics[width=0.75\textwidth]{chapter3/diagrams/sequence_authentification.png}
+\caption{Diagramme de séquence d'authentification}
+\label{fig:sequence_authentification}
 \end{figure}
+
+
+\subsubsection{Création et assignation d’un ticket d’incident}
+
+Ce diagramme \ref{fig:sequence_creation_ticket} décrit le flux principal de gestion des incidents, depuis la création d’un ticket jusqu’à son assignation automatique à un technicien disponible.
+
+Dans ce scénario, l’utilisateur crée un ticket en spécifiant les détails de l’incident tels que le titre, la priorité et l’équipement concerné. Le frontend envoie ensuite ces données au backend, qui enregistre le ticket dans la base de données avec un statut initial \textit{ouvert}.
+
+Par la suite, le système déclenche un processus d’affectation automatique afin de rechercher un technicien disponible. Une fois le technicien sélectionné, le ticket lui est assigné et une notification est envoyée via Firebase Cloud Messaging afin de l’informer en temps réel.
+
+Ce processus permet d’assurer une prise en charge rapide et automatisée des incidents.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textwidth]{chapter3/diagrams/sequence_creation_ticket.png}
+\caption{Diagramme de séquence de création et assignation d'un ticket}
+\label{fig:sequence_creation_ticket}
+\end{figure}
+
+
+\subsubsection{Traitement et mise à jour d’un ticket}
+
+Ce diagramme \ref{fig:sequence_traitement_ticket} illustre les interactions entre le technicien et le système lors du traitement d’un ticket.
+
+Le technicien commence par consulter la liste des tickets qui lui sont attribués. Le frontend interroge alors le backend afin de récupérer les données correspondantes depuis la base de données. Ensuite, le technicien met à jour le statut du ticket en fonction de l’avancement de son intervention (en cours, résolu, etc.).
+
+Ces modifications sont enregistrées par le backend et persistées dans la base de données, ce qui permet de maintenir un historique complet et cohérent des actions effectuées.
+
+Ce flux garantit ainsi la traçabilité des interventions techniques.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textwidth]{chapter3/diagrams/sequence_traitement_ticket.png}
+\caption{Diagramme de séquence de traitement et mise à jour d'un ticket}
+\label{fig:sequence_traitement_ticket}
+\end{figure}
+
+
+\subsubsection{Clôture et consultation de l’historique}
+
+Ce dernier diagramme \ref{fig:sequence_cloture_ticket} présente le processus de clôture d’un ticket ainsi que la consultation de son historique.
+
+Une fois l’incident résolu, le ticket est clôturé par l’utilisateur ou automatiquement par le système. Le backend met alors à jour son statut à \textit{fermé} et enregistre la date de clôture dans la base de données.
+
+L’utilisateur peut par la suite consulter l’historique complet du ticket afin de suivre l’ensemble des actions réalisées depuis sa création jusqu’à sa fermeture.
+
+Ce mécanisme renforce la traçabilité et améliore le suivi global des incidents.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textwidth]{chapter3/diagrams/sequence_cloture_ticket.png}
+\caption{Diagramme de séquence de clôture et consultation de l'historique d'un ticket}
+\label{fig:sequence_cloture_ticket}
+\end{figure}
+
+
+\paragraph{Synthèse}
+
+L’ensemble de ces diagrammes de séquence met en évidence la cohérence globale de l’architecture du système ainsi que la fluidité des interactions entre ses différents composants. Ils soulignent également le rôle central du backend dans la coordination des traitements métiers, ainsi que l’importance des services externes tels que Firebase Cloud Messaging pour assurer la communication en temps réel entre les acteurs du système.
 
 \subsection{Diagramme d'activités}
 Le diagramme d'activités (Figure~\ref{fig:activity_flux_donnees}) illustre le processus complet de gestion des incidents dans le système Parc Informatique FMM. Il débute par la soumission d'un ticket par l'utilisateur, incluant titre, priorité, équipement et photo. Une validation des données est effectuée ; si elles sont valides, le ticket est enregistré avec le statut "ouvert" et une notification push est envoyée au technicien via Firebase Cloud Messaging (FCM). Le technicien consulte les tickets, prend en charge celui-ci, changeant le statut à "assigné". Il crée ensuite une intervention, mettant le ticket à "en cours", puis effectue la réparation sur le terrain. Si l'intervention réussit, il saisit la solution, les pièces changées et le rapport, terminant l'intervention. Le système génère automatiquement une maintenance corrective liée à l'intervention, marque le ticket comme "résolu". L'utilisateur confirme alors la résolution, clôturant le ticket avec la date de clôture et l'archivant. En cas d'échec de l'intervention, le statut est mis à "échec", et le ticket est réouvert ou escaladé. Si les données initiales ne sont pas valides, la demande est rejetée avec un message d'erreur.

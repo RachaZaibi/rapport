@@ -1,0 +1,26 @@
+@startuml
+
+actor Technicien
+boundary Frontend
+control Backend
+database MySQL as DB
+
+Technicien -> Frontend : Consulter tickets assignés
+Frontend -> Backend : GET /api/tickets/assigned
+
+Backend -> DB : Récupérer tickets
+DB --> Backend : Liste tickets
+Backend --> Frontend : Données tickets
+
+Frontend --> Technicien : Affichage tickets
+
+Technicien -> Frontend : Mettre à jour statut (en cours / résolu)
+Frontend -> Backend : PATCH /api/tickets/{id}
+
+Backend -> DB : Mettre à jour ticket
+DB --> Backend : Confirmation
+
+Backend --> Frontend : Ticket mis à jour
+Frontend --> Technicien : Confirmation
+
+@enduml

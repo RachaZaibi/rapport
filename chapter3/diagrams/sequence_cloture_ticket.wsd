@@ -1,0 +1,29 @@
+@startuml
+
+actor Utilisateur
+boundary Frontend
+control Backend
+database MySQL as DB
+
+Utilisateur -> Frontend : Clôturer ticket
+Frontend -> Backend : PUT /api/tickets/close
+
+Backend -> DB : Mettre statut = fermé
+DB --> Backend : Confirmation
+
+Backend -> DB : Enregistrer date clôture
+DB --> Backend : OK
+
+Backend --> Frontend : Ticket clôturé
+Frontend --> Utilisateur : Confirmation
+
+Utilisateur -> Frontend : Consulter historique
+Frontend -> Backend : GET /api/tickets/{id}/history
+
+Backend -> DB : Charger historique
+DB --> Backend : Données historique
+
+Backend --> Frontend : Historique ticket
+Frontend --> Utilisateur : Affichage historique
+
+@enduml

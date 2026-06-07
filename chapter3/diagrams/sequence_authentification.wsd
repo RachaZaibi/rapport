@@ -1,0 +1,23 @@
+@startuml
+
+actor Utilisateur
+boundary Frontend
+control Backend
+database MySQL as DB
+
+Utilisateur -> Frontend : Saisir email + mot de passe
+Frontend -> Backend : POST /api/auth/login
+
+Backend -> DB : Vérifier utilisateur
+DB --> Backend : Utilisateur trouvé / non trouvé
+
+alt utilisateur valide
+    Backend -> Backend : Générer JWT
+    Backend --> Frontend : Token + profil utilisateur
+    Frontend --> Utilisateur : Accès au dashboard
+else utilisateur invalide
+    Backend --> Frontend : Erreur d’authentification
+    Frontend --> Utilisateur : Message d’erreur
+end
+
+@enduml
