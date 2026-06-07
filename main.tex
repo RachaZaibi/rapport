@@ -54,6 +54,9 @@
   morestring=[b]"
 }
 
+\renewcommand{\chaptermark}[1]{\markboth{Chapitre \thechapter.\ #1}{}}
+\fancyhead[L]{\nouppercase{\leftmark}}
+
 \usetikzlibrary{shapes.geometric, arrows.meta, fit, positioning}
 \newcommand{\decoratedblock}[1]{%
   \begin{center}

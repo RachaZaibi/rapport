@@ -1,7 +1,6 @@
 @startuml activity_gestion_incidents
-title Diagramme d'activité – Gestion des incidents (Parc Informatique FMM)
 
-skinparam backgroundColor #FAFAFA
+' skinparam backgroundColor #FAFAFA
 skinparam activity {
   BackgroundColor #EEEDFE
   BorderColor #534AB7

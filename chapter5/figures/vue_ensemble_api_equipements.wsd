@@ -1,0 +1,20 @@
+@startuml
+' --- CONFIGURATION DU DESIGN DU TABLEAU ---
+skinparam handwritten false
+skinparam shadowing false
+skinparam RoundCorner 10
+
+title Spécifications des Endpoints de l'API — Gestion des Équipements (Base : /api)
+
+salt
+{#
+    **Module / Ressource** | **Méthode \& Route** | **Description / Action**
+    -- | -- | --
+    . | . | .
+    **Équipements**\n(/equipements) | [GET] /equipements\n[GET] /:id\n[POST] /equipements\n[PUT] /:id\n[PATCH] /:id/statut\n[DELETE] /:id\n[GET] /search\n[GET] /stats | Liste l'ensemble des équipements (inventaire)\nRécupère les détails d'un équipement par son ID\nCrée et ajoute un nouvel équipement\nMet à jour l'intégralité des données d'un équipement\nModifie uniquement le statut d'un équipement\nSupprime un équipement du système\nRecherche des équipements via des filtres avancés\nRécupère les indicateurs et statistiques du parc
+    -- | -- | --
+    **Assignations**\n(/assignations) | [GET] /:id/assignations\n[POST] /assignations\n[PATCH] /:id/retour\n[DELETE] /:id\n[GET] /user/:userId | Liste l'historique des assignations d'un équipement\nAssigne un équipement à un utilisateur ou un labo\nEnregistre le retour d'un équipement assigné\nAnnule ou supprime une assignation\nListe les équipements assignés à un utilisateur spécifique
+    -- | -- | --
+    **Transferts**\n(/transferts) | [GET] /:id/transferts\n[POST] /transferts\n[GET] /:id\n[PATCH] /:id/confirm | Consulte l'historique des transferts d'un équipement\nInitie une demande de transfert d'un équipement\nRécupère les détails d'un transfert spécifique\nValide et confirme la réception d'un équipement
+}
+@enduml

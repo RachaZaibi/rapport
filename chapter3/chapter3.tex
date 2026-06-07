@@ -1,6 +1,11 @@
-\chapter{Étude architecturale du projet} 
+% \chapter{Étude architecturale du projet} 
+% \label{chap:architecture}
+\chapter*{Chapitre 3 : Étude architecturale du projet}
+\markboth{Chapitre 3 : Étude architecturale du projet}{}
 \label{chap:architecture}
-
+\addcontentsline{toc}{chapter}{Chapitre 3 : Étude architecturale du projet}
+\setcounter{chapter}{3}
+\setcounter{section}{0}
 % Introduction
 \section*{Introduction}
 \addcontentsline{toc}{section}{Introduction }
@@ -261,16 +266,29 @@ Le diagramme d'activités (Figure~\ref{fig:activity_flux_donnees}) illustre le p
 % Pourquoi ce choix d'architecture
 \section{Pourquoi ce choix d'architecture}
 \label{sec:justification_architecture}
-Cette architecture est choisie pour plusieurs raisons :
-\begin{itemize}
-    \item \textbf{Simplicité} : Les trois couches (gestion des actifs, traitement des services, interfaces utilisateur) sont séparées, ce qui facilite les modifications et la maintenance.
-    \item \textbf{Réactivité} : Les tickets et notifications sont traités rapidement, améliorant la prise en charge des incidents.
-    \item \textbf{Adaptabilité} : Le système supporte différents types d'équipements informatiques et peut être déployé sur des infrastructures locales ou cloud.
-    \item \textbf{Sécurité} : Les données sont protégées par des mécanismes d'authentification, d'autorisation et de chiffrement.
-\end{itemize}
-Ces choix répondent aux besoins des structures comme le SmartLab, en assurant une architecture modulaire, robuste et évolutive.
 
+Le choix de cette architecture repose sur plusieurs considérations techniques et fonctionnelles visant à garantir un système performant, évolutif et facile à maintenir.
+
+\begin{itemize}
+    \item \textbf{Simplicité et séparation des responsabilités} : L’architecture en couches permet de distinguer clairement les différentes parties du système, notamment la gestion des données, la logique métier et l’interface utilisateur. Cette séparation facilite la compréhension du système ainsi que son évolution.
+
+    \item \textbf{Maintenabilité} : Grâce à cette organisation modulaire, toute modification ou amélioration peut être effectuée sur une couche spécifique sans impacter l’ensemble du système, ce qui réduit les risques de régression.
+
+    \item \textbf{Réactivité du système} : Le traitement des tickets et des notifications est conçu de manière à assurer une prise en charge rapide des incidents, améliorant ainsi la réactivité globale du système.
+
+    \item \textbf{Adaptabilité et extensibilité} : L’architecture retenue permet de supporter différents types d’équipements et de s’adapter facilement à divers environnements d’exécution, qu’il s’agisse d’infrastructures locales ou de solutions cloud.
+
+    \item \textbf{Sécurité} : Le système intègre des mécanismes d’authentification, d’autorisation et de protection des données afin de garantir la confidentialité et l’intégrité des informations.
+\end{itemize}
+
+Ainsi, ces choix architecturaux répondent aux exigences des environnements professionnels tels que le SmartLab, en offrant une solution modulaire, robuste et évolutive, adaptée à la gestion d’un parc informatique moderne.
 \section*{Conclusion}
 \addcontentsline{toc}{section}{Conclusion}
 \label{sec:conclusion}
-Ce chapitre a décrit l'architecture du projet Parc Informatique FMM, mettant en évidence la séparation des couches, le modèle MVC et les diagrammes UML. L'approche retenue assure un système clair, flexible et capable de répondre aux besoins de gestion d'un parc informatique moderne.
+
+Ce chapitre a présenté l’architecture globale du projet \textit{Parc Informatique FMM}, en mettant en évidence l’organisation en couches, l’approche MVC ainsi que les principaux diagrammes UML utilisés pour la modélisation du système.
+
+L’architecture retenue garantit une meilleure structuration du système, tout en assurant sa flexibilité, sa maintenabilité et sa capacité d’évolution afin de répondre efficacement aux besoins de gestion d’un parc informatique moderne. Les diagrammes de séquence, d’activités et de classes ont permis d’illustrer les interactions entre les différents composants du système, ainsi que les flux de données et les processus métiers clés.
+
+% next chapter
+Dans le chapitre suivant, nous détaillerons les choix technologiques effectués pour la mise en œuvre du projet, en expliquant les raisons de ces choix et leur impact sur le développement et la performance du système.

@@ -1,0 +1,100 @@
+@startuml
+' --- MASQUER LE TEXTE DES STÉRÉOTYPES ---
+hide stereotypes
+
+skinparam handwritten false
+skinparam shadowing false
+skinparam componentStyle rectangle
+
+' --- CONFIGURATION DES BORDURES ET ARRONDIS ---
+skinparam RoundCorner 15
+skinparam DefaultTextAlignment center
+
+' Définition des styles des composants internes
+skinparam Rectangle {
+    BackgroundColor<<couche>> #F4F1EA
+    BorderColor<<couche>> #B5B2A9
+    BackgroundColor<<API>> #E8F1FC
+    BorderColor<<API>> #7FA9E3
+    BackgroundColor<<Auth>> #F2EFFF
+    BorderColor<<Auth>> #A396E0
+    BackgroundColor<<Equip>> #EFF9F5
+    BorderColor<<Equip>> #9FD3C1
+    BackgroundColor<<Licence>> #FAF3E6
+    BorderColor<<Licence>> #D3B997
+    
+    ' Styles pour les encadrements de niveaux (Tiers)
+    BackgroundColor<<tier1>> #FDFDFD
+    BorderColor<<tier1>> #E0E0E0
+    BorderStyle<<tier1>> dashed
+    
+    BackgroundColor<<tier2_3>> #F6F9FE
+    BorderColor<<tier2_3>> #CFDDF4
+    BorderStyle<<tier2_3>> dashed
+    
+    BackgroundColor<<tier4>> #FFF9F6
+    BorderColor<<tier4>> #FFE0D3
+    BorderStyle<<tier4>> dashed
+}
+
+skinparam Database {
+    BackgroundColor<<db>> #F9EFEA
+    BorderColor<<db>> #DCA893
+}
+
+' ==========================================
+' TIER 1 : PRÉSENTATION
+' ==========================================
+rectangle "TIER 1 : COUCHE PRÉSENTATION" <<tier1>> {
+    rectangle "Interface Utilisateur\nNavigateur web — React.js" as Client <<couche>>
+}
+
+' ==========================================
+' TIER 2 & 3 FUSIONNÉS : APPLICATION & LOGIQUE MÉTIER
+' ==========================================
+rectangle "TIER 2 : COUCHE APPLICATION & LOGIQUE MÉTIER" <<tier2_3>> {
+    
+    rectangle "API REST — Express.js\nRoutage, validation de données, Auth JWT" as Express <<API>>
+    
+    together {
+        rectangle "Auth & Utilisateurs\nJWT, rôles, sessions\nAdministrateur / Technicien" as Auth <<Auth>>
+        rectangle "Équipements (CRUD)\nInventaire, affectation\nImport CSV, filtres" as Equipements <<Equip>>
+        rectangle "Licences & Logiciels\nSuivi expiration\nAlertes automatiques" as Licences <<Licence>>
+    }
+    
+    rectangle "ORM — Sequelize\nModèles, migrations, transactions" as Sequelize <<couche>>
+}
+
+' ==========================================
+' TIER 4 : DONNÉES
+' ==========================================
+rectangle "TIER 3 : COUCHE DE DONNÉES" <<tier4>> {
+    database "Base de données — MySQL\nTables : users · equipements · licences · roles · audit_logs" as Mysql <<db>>
+}
+
+
+' --- ALIGNEMENT PARFAIT DES LARGEURS (LIENS CACHÉS) ---
+Client -[hidden]left-> Auth
+Client -[hidden]right-> Licences
+Express -[hidden]left-> Auth
+Express -[hidden]right-> Licences
+Sequelize -[hidden]left-> Auth
+Sequelize -[hidden]right-> Licences
+Mysql -[hidden]left-> Auth
+Mysql -[hidden]right-> Licences
+
+
+' --- RELATIONS / FLUX VERTICAUX ---
+Client -down-> Express : "  HTTP / HTTPS  "
+
+Express -down-> Auth
+Express -down-> Equipements
+Express -down-> Licences
+
+Auth -down-> Sequelize
+Equipements -down-> Sequelize
+Licences -down-> Sequelize
+
+Sequelize -down-> Mysql
+
+@enduml
