@@ -2,17 +2,45 @@
 \label{chap:introduction}
 \addcontentsline{toc}{chapter}{Introduction Générale}
 
-Dans un environnement informatique en constante évolution, l'optimisation du projet Parc Informatique FMM constitue un enjeu crucial pour assurer une exploitation efficace des parcs informatiques. En Tunisie, de nombreux établissements éducatifs et entreprises dépendent encore de méthodes manuelles ou de systèmes obsolètes, ce qui entraîne des inefficacités dans le suivi des équipements, la résolution des incidents et la planification des maintenances. Par exemple, les techniciens doivent souvent gérer manuellement les inventaires, les tickets d'incident et les licences logicielles, augmentant ainsi les risques d'erreurs et la charge de travail, particulièrement dans les institutions à ressources limitées où les outils automatisés sont rares.
+Dans un contexte marqué par la transformation numérique des systèmes d’information, la gestion des infrastructures informatiques constitue aujourd’hui un enjeu stratégique pour les organisations publiques et privées. Cette problématique est particulièrement observable en Tunisie, où plusieurs établissements continuent d’utiliser des approches traditionnelles de gestion, reposant sur des outils fragmentés et peu automatisés.
 
-Ce projet, réalisé dans le cadre du Projet de Fin d'Études (PFE) du Master Professionnel en Génie Logiciel et Développement des Applications Réparties (GLDRA) à l'Institut Supérieur des Études Technologiques de Sousse (ISET Sousse), s'inscrit dans une démarche d'innovation visant à moderniser la gestion des parcs informatiques. Il propose un système complet de suivi, maintenance et gestion des équipements informatiques, combinant une API REST backend robuste avec une interface web interactive frontend. L'objectif principal est d'améliorer la réactivité du personnel technique face aux incidents, tout en automatisant les processus de maintenance préventive et curative, réduisant ainsi les interventions manuelles et les erreurs.
+Ces pratiques, souvent basées sur des traitements manuels ou des outils non centralisés, engendrent des limites significatives en matière de traçabilité, de fiabilité des données et de réactivité opérationnelle. Elles augmentent également la charge de travail des équipes techniques, chargées simultanément de la gestion des équipements, du traitement des incidents et du suivi des opérations de maintenance.
 
-% \section*{Signification du projet}
+Dans ce cadre, le présent projet, réalisé dans le cadre du Projet de Fin d’Études du Master Professionnel en Génie Logiciel et Développement des Applications Réparties (GLDRA) à l’Institut Supérieur des Études Technologiques de Sousse (ISET Sousse), s’inscrit dans une démarche d’amélioration et de modernisation des systèmes de gestion des parcs informatiques.
+
+Le système développé, intitulé \textit{Parc Informatique FMM}, propose une solution centralisée permettant la gestion des équipements informatiques, le suivi des incidents ainsi que l’automatisation des processus de maintenance. L’architecture repose sur une séparation claire entre un backend exposant une API REST et une interface web interactive côté client.
+
+L’objectif principal de ce travail est d’améliorer l’efficacité opérationnelle des équipes techniques, en réduisant les interventions manuelles, en automatisant les processus critiques et en renforçant la réactivité grâce à l’intégration de notifications en temps réel.
+
+\section*{Apports du projet}
 \label{sec:signification_projet}
-Ce système répond à plusieurs besoins critiques dans la gestion des parcs informatiques :
+
+Le système proposé répond à plusieurs besoins fonctionnels structurants liés à la gestion des parcs informatiques :
+
 \begin{itemize}
-    \item \textbf{Pour les utilisateurs finaux :} Un suivi précis des équipements (ordinateurs, logiciels, licences) permet une allocation optimale des ressources et une réduction des temps d'arrêt.
-    \item \textbf{Pour le personnel technique :} Les notifications en temps réel via mobile et web réduisent la nécessité de vérifications constantes, permettant aux techniciens et administrateurs de se concentrer sur les tâches prioritaires.
-    \item \textbf{Pour les établissements :} L'automatisation de la gestion améliore l'efficacité opérationnelle, réduit les coûts liés aux pannes imprévues et assure une conformité réglementaire (par exemple, gestion des licences logicielles).
+    \item \textbf{Utilisateurs finaux :} amélioration de la visibilité sur les équipements informatiques et optimisation de leur cycle de vie.
+    \item \textbf{Personnel technique :} réduction des tâches manuelles grâce à la centralisation et à l’automatisation du suivi des incidents.
+    \item \textbf{Établissements :} optimisation des ressources, réduction des coûts opérationnels et amélioration de la traçabilité des actifs.
 \end{itemize}
 
-Pour atteindre ces objectifs, ce rapport est structuré en plusieurs chapitres. Le \textbf{Chapitre 1} présente l'état de l'art des systèmes de gestion de parc informatique et met en évidence les lacunes des solutions existantes. Le \textbf{Chapitre 2} décrit la méthodologie adoptée pour le développement du Parc Informatique FMM, incluant les choix technologiques et les étapes de conception. Le \textbf{Chapitre 3} détaille l'architecture du système. Le \textbf{Chapitre 4} se concentre sur la mise en œuvre des fonctionnalités clés. Les \textbf{Chapitres 5}, \textbf{6} et \textbf{7} présentent respectivement les résultats des sprints 1, 2 et 3, illustrant les avancées réalisées dans le développement du système. Enfin, le \textbf{Chapitre 8} conclut ce rapport en récapitulant les contributions du projet et en proposant des perspectives pour de futures améliorations.
+Ainsi, ce projet s’inscrit dans une logique d’optimisation des processus et d’amélioration continue des performances des systèmes d’information.
+
+\section*{Structure du rapport}
+\label{sec:structure_rapport}
+
+Ce rapport est structuré de manière progressive afin de présenter l’ensemble des étapes du projet.
+
+Le \textbf{Chapitre 1} introduit le cadre général du projet et présente une étude de l’existant ainsi que les limites des solutions actuelles.
+
+Le \textbf{Chapitre 2} décrit la méthodologie adoptée et les choix technologiques retenus pour la réalisation du système.
+
+Le \textbf{Chapitre 3} présente l’architecture globale de la solution et ses principaux composants.
+
+Le \textbf{Chapitre 4} détaille l’implémentation des fonctionnalités principales.
+
+Les \textbf{Chapitres 5, 6 et 7} présentent les résultats des différents sprints de développement.
+
+Enfin, le \textbf{Chapitre 8} conclut le travail et propose des perspectives d’évolution.
+
+\paragraph{}
+À la suite de cette introduction générale, le chapitre suivant est consacré à l’analyse du contexte et à l’étude des solutions existantes, afin d’identifier les limites des systèmes actuels et de justifier les choix de conception adoptés dans ce projet.

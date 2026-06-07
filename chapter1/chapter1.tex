@@ -1,15 +1,21 @@
-\chapter{Cadre Général du Projet}
+\chapter{Cadre général du projet}
 
 \section*{Introduction}
-\addcontentsline{toc}{section}{Introduction }
+\addcontentsline{toc}{section}{Introduction}
 
-Le présent chapitre vise à décrire le contexte général du projet Parc Informatique FMM, réalisé au sein du SmartLab de la Faculté de Médecine de Monastir (FMM)\cite{FMM2020}. Il présente l’organisme d’accueil, le contexte de gestion des parcs informatiques en Tunisie, les défis liés à la maintenance et au suivi des équipements informatiques, ainsi que la solution proposée. Ce chapitre s’articule autour de quatre axes principaux : la présentation de l’organisme, l’analyse du contexte et des problématiques, l’étude des solutions existantes, et la description de la solution Parc Informatique FMM.
+Le présent chapitre a pour objectif de présenter le cadre général du projet \textit{Parc Informatique FMM}, réalisé au sein du SmartLab de la Faculté de Médecine de Monastir (FMM)\cite{FMM2020}. Il introduit le contexte organisationnel du projet, met en évidence les problématiques liées à la gestion des parcs informatiques dans les établissements tunisiens, et analyse les solutions existantes sur le marché.
+
+L’ensemble de ce chapitre est structuré comme suit : une présentation de l’organisme d’accueil, une analyse du contexte et des problématiques, une étude des solutions existantes, ainsi qu’une description de la solution proposée.
 
 \section{Présentation de l’organisme d’accueil}
 
-Le projet a été réalisé au sein du SmartLab, une Unité de Service Commun et de Recherche (USCR) rattachée à la Faculté de Médecine de Monastir (FMM), fondée le 15 août 1980. La FMM, institution tunisienne de référence, est reconnue pour son excellence académique et son engagement dans la recherche médicale. Certifiée ISO 21001\cite{ISO21001}, elle forme des professionnels de santé et contribue à l’avancement des sciences médicales via des projets innovants.
+Le projet a été réalisé au sein du SmartLab, une Unité de Service Commun et de Recherche (USCR) rattachée à la Faculté de Médecine de Monastir (FMM), institution universitaire tunisienne fondée en 1980 et reconnue pour la qualité de sa formation et de ses activités de recherche.
 
-Le SmartLab catalyse l’innovation technologique en favorisant la collaboration entre chercheurs, cliniciens et développeurs\cite{SmartLabFMM2024}. Doté d’équipements modernes (laboratoires informatiques, serveurs, outils de développement) et d’une équipe pluridisciplinaire, il développe des solutions technologiques adaptées aux défis locaux, comme les besoins en gestion automatisée des ressources informatiques. Cette unité constitue une plateforme idéale pour moderniser la gestion des parcs informatiques, en comblant le fossé entre recherche académique et applications technologiques.
+La FMM constitue un établissement de référence dans le domaine des sciences médicales en Tunisie. Elle s’inscrit dans une démarche de qualité, attestée notamment par sa certification ISO 21001\cite{ISO21001}, et vise à assurer une formation académique conforme aux standards internationaux tout en favorisant l’innovation scientifique.
+
+Dans ce cadre, le SmartLab joue un rôle central en tant qu’environnement de recherche et de développement technologique. Il a pour mission de favoriser la collaboration entre chercheurs, enseignants et ingénieurs afin de concevoir des solutions innovantes adaptées aux problématiques réelles du secteur de la santé et des systèmes d’information.
+
+Le SmartLab dispose d’infrastructures techniques modernes, comprenant des équipements informatiques, des serveurs, ainsi que des outils de développement et de test. Il constitue ainsi un environnement propice à la conception et à la validation de solutions numériques dans un contexte académique et professionnel.
 
 \begin{figure}[H]
     \centering
@@ -30,74 +36,100 @@ Le SmartLab catalyse l’innovation technologique en favorisant la collaboration
 
 \section{Contexte et problématique}
 
-Dans les établissements éducatifs et entreprises tunisiens, la gestion des parcs informatiques repose souvent sur des méthodes manuelles ou des systèmes obsolètes : inventaires papier, suivi des incidents via des tickets informels, et maintenances réactives. Ce modèle dépend fortement de l'intervention humaine pour gérer les équipements informatiques.
+Dans de nombreux établissements publics et privés en Tunisie, la gestion des parcs informatiques repose encore sur des approches traditionnelles, souvent semi-manuelles. Ces approches incluent l’utilisation de fichiers Excel, de registres papier ou de systèmes non centralisés pour le suivi des équipements et la gestion des incidents.
+
+Ce mode de fonctionnement engendre plusieurs limitations, notamment en termes de traçabilité, de réactivité et de fiabilité de l’information. Il dépend fortement de l’intervention humaine, ce qui augmente le risque d’erreurs et ralentit les processus de maintenance et de suivi.
 
 \subsection{Variabilité des équipements informatiques}
 
-Les équipements informatiques, tels que les ordinateurs, logiciels et licences, sont essentiels pour le fonctionnement des organisations. Ils varient en fonction des besoins (ordinateurs portables, fixes, serveurs), des catégories (achetés, loués), et des états (fonctionnel, en panne, en réparation). Par exemple, un ordinateur portable standard peut avoir une durée de vie de 3 à 5 ans, tandis que les logiciels nécessitent des mises à jour régulières et une gestion des licences.
+Les parcs informatiques sont constitués d’un ensemble hétérogène d’équipements, incluant notamment les postes de travail, les serveurs, ainsi que les licences logicielles. Ces ressources diffèrent selon leur nature, leur durée de vie et leur mode d’acquisition.
+
+À titre d’exemple, un ordinateur portable présente généralement une durée de vie comprise entre trois et cinq ans, tandis que les licences logicielles sont soumises à des contraintes de renouvellement périodique. Cette diversité rend la gestion des actifs particulièrement complexe en l’absence d’un système centralisé.
 
 \begin{table}[H]
 \centering
-\caption{Exemples de catégories d'équipements informatiques}
+\caption{Exemples d’équipements informatiques}
 \label{tab:equipements}
 \begin{tabular}{|l|c|c|c|}
 \hline
-\textbf{Catégorie} & \textbf{Exemple} & \textbf{Durée de vie estimée} & \textbf{Source} \\ \hline
-Ordinateur portable & Dell Latitude 7420 & 3-5 ans & Acheté \\ \hline
-Logiciel & Microsoft Office & Variable (licence) & Commercial \\ \hline
-Serveur & Serveur dédié & 5-7 ans & Loué \\ \hline
+\textbf{Catégorie} & \textbf{Exemple} & \textbf{Durée de vie} & \textbf{Mode d’acquisition} \\ \hline
+Ordinateur portable & Dell Latitude 7420 & 3 à 5 ans & Achat \\ \hline
+Logiciel & Microsoft Office & Selon licence & Abonnement / licence \\ \hline
+Serveur & Serveur dédié & 5 à 7 ans & Achat / location \\ \hline
 \end{tabular}
 \end{table}
 
-\subsection{Défis structurels et opérationnels}
+\subsection{Contraintes organisationnelles et techniques}
 
-La méthode traditionnelle de gestion des parcs informatiques en Tunisie présente plusieurs limitations qui compromettent l'efficacité opérationnelle et la sécurité des données. Parmi les principaux défis, on note :
+L’analyse du contexte tunisien met en évidence plusieurs contraintes majeures impactant la gestion des parcs informatiques :
+
 \begin{itemize}
-    \item \textbf{Sous-effectif technique} : Le ratio technicien-équipement est souvent insuffisant, augmentant la charge de travail et retardant la résolution des incidents.
-    \item \textbf{Absence d'automatisation} : Les vérifications manuelles sont chronophages et sujettes à des erreurs, surtout lors des pics d'activité.
-    \item \textbf{Hétérogénéité des équipements} : Les équipements varient (marques différentes, systèmes d'exploitation), compliquant l'intégration et le suivi.
+    \item \textbf{Sous-effectif technique} : les équipes informatiques sont souvent réduites par rapport au volume d’équipements à gérer, ce qui limite la réactivité en cas d’incident.
+    
+    \item \textbf{Absence d’automatisation} : les opérations de suivi et de gestion sont majoritairement manuelles, ce qui augmente la charge de travail et le risque d’erreurs.
+    
+    \item \textbf{Hétérogénéité du parc informatique} : la diversité des équipements et des systèmes utilisés complique l’intégration et la standardisation des processus de gestion.
 \end{itemize}
 
-Ces contraintes soulignent le besoin d’un système économique, facilement déployable, compatible avec divers équipements, et capable d’automatiser la gestion avec des notifications en temps réel.
+Ces contraintes mettent en évidence la nécessité de mettre en place une solution centralisée, automatisée et adaptée aux ressources disponibles, capable d’améliorer la gestion opérationnelle des équipements informatiques.
 
 \section{Analyse des solutions existantes}
 \label{sec:etude_existants}
 
-Cette section présente les solutions existantes, leurs limites, et la nécessité d'une solution adaptée au contexte tunisien.
+Cette section présente une étude des principales solutions existantes dans le domaine de la gestion des parcs informatiques. Elle vise à analyser leurs fonctionnalités ainsi que leurs limites, afin de positionner la solution proposée par rapport à l’existant.
 
 \subsection{Présentation des solutions existantes}
 
-Plusieurs solutions technologiques sont actuellement déployées pour la gestion des parcs informatiques. Parmi les plus connues figurent les systèmes \textbf{GLPI}, \textbf{iTop} et \textbf{Asset Panda}, chacun offrant des fonctionnalités adaptées à différents contextes.
+Plusieurs solutions sont actuellement utilisées pour la gestion des actifs et des services informatiques dans les organisations. Ces solutions permettent principalement l’inventaire des équipements, la gestion des incidents, ainsi que le suivi des opérations de maintenance.
+
+Parmi les solutions les plus répandues, on retrouve \textbf{GLPI}, \textbf{iTop} et \textbf{Asset Panda}, qui se distinguent par leurs architectures et leurs niveaux de complexité.
 
 \begin{itemize}
-    \item \textbf{GLPI} propose une solution open-source de gestion des actifs informatiques qui permet de suivre les équipements, gérer les tickets d'incident et planifier les maintenances.\cite{GLPI2023}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.4\textwidth]{chapter1/images/glpi_logo.png}
-        \caption{Logo de GLPI}
-        \label{fig:glpi_logo}
-    \end{figure}
-    
-    \item \textbf{iTop} se distingue par sa capacité à modéliser les services informatiques et à générer des rapports détaillés, facilitant ainsi la gestion des configurations et des changements.\cite{iTop2023}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.4\textwidth]{chapter1/images/itop_logo.png}
-        \caption{Logo de iTop}
-        \label{fig:itop_logo}
-    \end{figure}
-    
-    \item \textbf{Asset Panda} est un système cloud-based conçu pour la gestion des actifs, offrant des fonctionnalités de suivi en temps réel et d'intégration avec des outils tiers.\cite{AssetPanda2023}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.4\textwidth]{chapter1/images/asset_panda_logo.png}
-        \caption{Logo de Asset Panda}
-        \label{fig:asset_panda_logo}
-    \end{figure}
+
+\item \textbf{GLPI} est une solution open-source de gestion des services informatiques (ITSM - IT Service Management) largement adoptée dans les environnements académiques, industriels et administratifs. Elle permet la centralisation et la structuration de la gestion du parc informatique à travers plusieurs modules fonctionnels.
+
+Parmi ses principales fonctionnalités, on distingue la gestion de l’inventaire matériel et logiciel, le suivi des tickets d’incidents, la gestion des demandes utilisateurs, ainsi que la planification des interventions de maintenance. GLPI permet également la gestion des affectations des équipements aux utilisateurs et la traçabilité des changements effectués sur le parc informatique.
+
+L’un de ses principaux atouts réside dans son caractère open-source, qui garantit une grande flexibilité d’adaptation, ainsi que l’existence d’une communauté active assurant des mises à jour régulières et de nombreux plugins d’extension. Cependant, certaines fonctionnalités avancées, notamment la notification en temps réel et l’automatisation poussée des workflows, nécessitent des configurations supplémentaires ou l’ajout de modules externes.\cite{GLPI2023}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{chapter1/images/glpi_logo.png}
+    \caption{Logo de GLPI}
+    \label{fig:glpi_logo}
+\end{figure}
+
+\item \textbf{iTop} est une solution ITSM open-source orientée vers la gestion des services informatiques et la modélisation des infrastructures via une CMDB (Configuration Management Database). Elle se distingue par une approche structurée permettant de représenter les relations entre les différents éléments du système d’information, tels que les équipements, les applications et les services.
+
+iTop intègre des fonctionnalités avancées de gestion des incidents, des problèmes et des changements, conformément aux bonnes pratiques ITIL. Elle permet également la génération de rapports détaillés et la mise en place de processus de validation adaptés aux environnements organisationnels complexes.
+
+Toutefois, la richesse fonctionnelle d’iTop s’accompagne d’une complexité de configuration relativement élevée, nécessitant un temps d’adaptation important ainsi que des compétences techniques avancées pour son déploiement et sa personnalisation.\cite{iTop2023}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{chapter1/images/itop_logo.png}
+    \caption{Logo de iTop}
+    \label{fig:itop_logo}
+\end{figure}
+
+\item \textbf{Asset Panda} est une solution SaaS (Software as a Service) dédiée à la gestion des actifs informatiques et physiques. Elle repose sur une architecture entièrement cloud, permettant un accès centralisé et sécurisé aux données relatives aux équipements.
+
+Cette solution offre des fonctionnalités de suivi en temps réel des actifs, de gestion du cycle de vie des équipements, ainsi que des outils mobiles facilitant les opérations de scan, d’inventaire et de mise à jour sur le terrain. Elle permet également l’intégration avec d’autres systèmes d’information via des API, ce qui renforce son interopérabilité.
+
+Asset Panda est particulièrement adaptée aux organisations recherchant une solution clé en main, sans infrastructure locale complexe. Néanmoins, sa dépendance à une connexion Internet stable ainsi que son modèle basé sur l’abonnement peuvent constituer des limites dans certains contextes, notamment dans les établissements disposant de budgets restreints ou d’infrastructures réseau limitées.\cite{AssetPanda2023}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{chapter1/images/asset_panda_logo.png}
+    \caption{Logo de Asset Panda}
+    \label{fig:asset_panda_logo}
+\end{figure}
+
 \end{itemize}
 
 \subsection{Comparaison et limites}
 
-Le Tableau~\ref{tab:comparaison_parc_informatique} compare ces solutions selon cinq critères : automatisation, compatibilité, notifications, simplicité de déploiement, et efficacité opérationnelle.
+Afin d’évaluer de manière objective les solutions étudiées, une comparaison multicritère est réalisée dans le Tableau~\ref{tab:comparaison_parc_informatique}. Cette comparaison repose sur des critères techniques et organisationnels directement liés aux besoins de gestion d’un parc informatique, notamment l’automatisation des processus, la compatibilité avec différents environnements, la gestion des notifications en temps réel, la facilité de déploiement ainsi que l’efficacité globale du système.
 
 \begin{table}[H]
 \centering
@@ -107,62 +139,77 @@ Le Tableau~\ref{tab:comparaison_parc_informatique} compare ces solutions selon c
 \begin{tabular}{|l|c|c|c|}
 \hline
 \textbf{Critère} & \textbf{GLPI} & \textbf{iTop} & \textbf{Asset Panda} \\ \hline
-Automatisation avancée & $\pm$ & $\surd$ & $\surd$ \\ \hline
-Compatibilité équipements & $\surd$ & $\pm$ & $\pm$ \\ \hline
-Notifications en temps réel & $\varnothing$ & $\pm$ & $\surd$ \\ \hline
-Simplicité de déploiement & $\surd$ & $\pm$ & $\varnothing$ \\ \hline
-Efficacité opérationnelle & $\pm$ & $\surd$ & $\surd$ \\ \hline
+Automatisation & $\pm$ & $\surd$ & $\surd$ \\ \hline
+Compatibilité & $\surd$ & $\pm$ & $\pm$ \\ \hline
+Notifications temps réel & $\varnothing$ & $\pm$ & $\surd$ \\ \hline
+Déploiement & $\surd$ & $\pm$ & $\varnothing$ \\ \hline
+Efficacité globale & $\pm$ & $\surd$ & $\surd$ \\ \hline
 \end{tabular}
 }
 \end{table}
 
 \noindent
 {\footnotesize
-\textbf{Légende} : $\surd$ : Optimal, $\pm$ : Moyen, $\varnothing$ : Non adapté
+\textbf{Légende :} $\surd$ : optimal, $\pm$ : moyen, $\varnothing$ : non adapté
 }
 
-\textbf{Analyse critique} :
+\paragraph{Interprétation du tableau}
 
-\begin{itemize}
-    \item \textbf{GLPI} : Bien que open-source et largement utilisé, ce système reste limité en termes de notifications automatiques et d'intégration avec des services cloud comme Firebase\cite{firebase2024}.
-    
-    \item \textbf{iTop} : Offre une bonne modélisation des services, mais sa complexité de configuration peut être un frein pour les petites structures.
-    
-    \item \textbf{Asset Panda} : Solution cloud performante, mais son coût et sa dépendance à une connexion internet stable limitent son adoption en Tunisie.
-\end{itemize}
+L’analyse du Tableau~\ref{tab:comparaison_parc_informatique} permet de mettre en évidence des différences significatives entre les trois solutions étudiées selon les critères retenus.
 
-En résumé, ces solutions ne répondent que partiellement aux besoins des établissements tunisiens. Leur coût, leur dépendance à des infrastructures avancées, et leur faible adaptabilité aux contextes locaux limitent leur adoption. Cela justifie le développement d’une solution locale, flexible et abordable.
+En termes d’\textbf{automatisation}, les solutions iTop et Asset Panda présentent un niveau avancé grâce à l’intégration de workflows structurés et d’outils de gestion automatisée des processus. À l’inverse, GLPI offre des fonctionnalités d’automatisation plus limitées, nécessitant souvent l’ajout de plugins ou de configurations supplémentaires pour atteindre un niveau équivalent.
 
+Concernant la \textbf{compatibilité avec les équipements et environnements hétérogènes}, GLPI se distingue par une meilleure adaptabilité, notamment grâce à sa large communauté et à ses nombreux modules d’extension. iTop et Asset Panda présentent un niveau intermédiaire, bien qu’ils restent compatibles avec la majorité des infrastructures standards.
+
+Pour ce qui est des \textbf{notifications en temps réel}, Asset Panda se démarque clairement grâce à son architecture cloud native, permettant une synchronisation et des alertes instantanées. iTop propose un support partiel de ce type de fonctionnalités, tandis que GLPI reste limité dans ce domaine sans intégration externe.
+
+En ce qui concerne la \textbf{facilité de déploiement}, GLPI apparaît comme la solution la plus accessible, notamment en raison de sa nature open-source et de sa large documentation. iTop nécessite une phase de configuration plus complexe, tandis qu’Asset Panda, bien que simple à utiliser, impose une dépendance à une infrastructure cloud et à un modèle d’abonnement.
+
+Enfin, l’\textbf{efficacité globale} met en évidence un équilibre entre richesse fonctionnelle et complexité d’utilisation. iTop et Asset Panda offrent des performances globalement élevées, mais avec des contraintes différentes, tandis que GLPI présente une solution plus simple mais moins avancée sur certains aspects critiques.
+
+\paragraph{Synthèse critique}
+
+L’analyse globale des résultats montre que, malgré la maturité technologique de ces solutions, chacune présente des limites structurelles qui restreignent leur adéquation avec certains contextes organisationnels.
+
+GLPI, bien qu’efficace et largement adopté, montre des limites en matière d’automatisation avancée et de gestion des notifications modernes. iTop, quant à lui, offre une grande richesse fonctionnelle mais au prix d’une complexité de mise en œuvre importante. Asset Panda propose une solution moderne et performante, mais son modèle SaaS ainsi que sa dépendance à une connexion Internet stable peuvent constituer des contraintes dans des environnements à ressources limitées.
+
+\paragraph{Conclusion}
+
+Ainsi, aucune des solutions étudiées ne répond de manière complète et optimale à l’ensemble des besoins identifiés, notamment dans le contexte des établissements tunisiens. Les contraintes liées au coût, à la complexité de déploiement, ainsi qu’à la nécessité d’une meilleure adaptabilité locale justifient le développement d’une solution plus flexible, légère et adaptée aux réalités du terrain.
 \section{Solution proposée : Parc Informatique FMM}
 
-Le projet Parc Informatique FMM vise à moderniser la gestion des parcs informatiques en Tunisie en proposant une solution complète, économique et facilement intégrable. En combinant des technologies open-source telles que \textbf{Node.js} (via Express.js\cite{expressjs2024}), \textbf{React}\cite{react2024} et \textbf{MySQL}\cite{mysql2024}, le système automatise le suivi des équipements, la gestion des incidents et les maintenances.
+Le projet \textit{Parc Informatique FMM} vise à proposer une solution centralisée de gestion des équipements informatiques, adaptée aux contraintes des établissements tunisiens. Cette solution repose sur une architecture web moderne et modulaire, permettant l’automatisation des processus de gestion des actifs et des incidents.
 
-\subsection{Fonctionnement du Parc Informatique FMM}
+Le système s’appuie sur des technologies open-source telles que \textbf{Node.js (Express)}\cite{expressjs2024}, \textbf{React}\cite{react2024} et \textbf{MySQL}\cite{mysql2024}, garantissant ainsi flexibilité, évolutivité et maîtrise des coûts.
 
-Conçu pour s'adapter aux contraintes des établissements tunisiens, le système repose sur une architecture full-stack. Le backend API REST gère l'authentification, les opérations CRUD sur les entités (utilisateurs, équipements, tickets), et l'intégration avec Firebase\cite{firebase2024} pour les notifications. Le frontend web interactif, construit avec React\cite{react2024} et Material-UI\cite{materialui2024}, permet aux utilisateurs d'interagir via des formulaires, tableaux et visualisations.
+\subsection{Architecture et fonctionnement}
 
-Les fonctionnalités clés incluent la gestion des équipements (avec codes QR), le suivi des tickets d'incident, les maintenances préventives, et la génération de rapports. Le système utilise Sequelize\cite{sequelize2024} pour l'ORM, JWT pour la sécurité, et Material-UI\cite{materialui2024} pour l'interface.
+L’application est structurée selon une architecture client-serveur. Le backend expose une API REST assurant la gestion des utilisateurs, des équipements et des tickets, ainsi que l’intégration avec un système de notifications en temps réel via Firebase\cite{firebase2024}.
 
-Le fonctionnement s'articule autour de trois grandes phases :
+Le frontend, développé avec React et Material UI\cite{materialui2024}, permet une interaction fluide avec le système à travers des interfaces dédiées à la gestion des équipements, des incidents et des statistiques.
 
 \begin{table}[H]
 \centering
-\caption{Domaines couverts par le Parc Informatique FMM}
+\caption{Fonctionnalités principales du système}
 \label{tab:domaines_parc_informatique}
-\begin{tabular}{|l|p{9cm}|}
+\begin{tabular}{|l|p{10cm}|}
 \hline
-\textbf{Phase} & \textbf{Description} \\ \hline
-\textbf{Gestion des actifs} & Suivi des équipements, affectation aux utilisateurs, génération de QR codes. \\ \hline
-\textbf{Traitement des incidents} & Création de tickets, assignation à techniciens, enregistrement des interventions. \\ \hline
-\textbf{Visualisation et rapports} & Tableaux de bord, statistiques, export PDF/Excel. \\ \hline
+\textbf{Module} & \textbf{Description} \\ \hline
+Gestion des actifs & Inventaire, affectation, suivi et génération de QR codes. \\ \hline
+Gestion des incidents & Création, affectation et suivi des tickets. \\ \hline
+Reporting & Génération de statistiques et export des données. \\ \hline
 \end{tabular}
 \end{table}
 
-\subsection{Les Avantages du Parc Informatique FMM}
+\subsection{Apports de la solution}
 
-La solution présente de nombreux avantages : architecture modulaire, sécurité robuste, support multilingue, et facilité de déploiement. Elle réduit la charge de travail des techniciens, améliore la traçabilité des actifs, et optimise les coûts opérationnels.
+La solution proposée permet d’améliorer significativement la traçabilité des équipements, de réduire les délais de traitement des incidents et d’optimiser la gestion des ressources informatiques. Elle se distingue par sa simplicité de déploiement, son coût réduit et son adaptation au contexte local.
 
 \section*{Conclusion}
 \addcontentsline{toc}{section}{Conclusion}
 
-Ce chapitre a permis de présenter le projet Parc Informatique FMM en exposant le contexte, les contraintes, et les limites des solutions existantes. Face à ces défis, le Parc Informatique FMM propose une réponse technologique innovante, adaptée aux réalités locales. Les chapitres suivants détailleront la conception, le développement et l'évaluation de cette solution.
+Ce chapitre a permis de présenter le cadre général du projet, d’analyser les contraintes du domaine, ainsi que d’étudier les solutions existantes. Cette analyse met en évidence les limites des systèmes actuels et justifie le développement d’une solution adaptée, qui sera détaillée dans les chapitres suivants.
+
+% // resent next chapter
+Le chapitre suivant se concentrera sur la méthodologie adoptée pour la réalisation du projet, en détaillant les étapes de développement, les choix technologiques ainsi que les processus de gestion de projet mis en place pour assurer le succès de l’initiative. Nous aborderons également les défis rencontrés et les solutions mises en œuvre pour garantir une livraison efficace et conforme aux besoins identifiés.
+
