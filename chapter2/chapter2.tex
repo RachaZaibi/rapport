@@ -75,13 +75,15 @@ Les besoins non fonctionnels garantissent la qualité, la robustesse et la confo
 \label{sec:choix_methodologie}
 
 Pour le développement du projet Parc Informatique FMM, il existe plusieurs méthodologies de développement logiciel, chacune ayant ses avantages et inconvénients. Parmi les méthodologies les plus courantes, on trouve Scrum, Waterfall, Lean et Kanban.
-
 \subsection{Étude comparative des méthodologies}
-Le tableau suivant (Tableau~\ref{tab:comparaison_methodologies}) présente une comparaison des principales méthodologies de développement logiciel, en mettant en évidence les caractéristiques clés de chaque méthodologie, telles que l’adaptabilité aux changements, les livraisons fréquentes, la collaboration renforcée et la gestion des risques.
+
+Le choix d’une méthodologie de développement constitue une étape déterminante dans la réussite d’un projet logiciel. Il influence directement la qualité du produit final, la capacité d’adaptation aux changements, ainsi que la gestion des risques et des coûts tout au long du cycle de vie du système.
+
+Dans le cadre de ce projet, une comparaison des principales méthodologies de développement logiciel a été réalisée afin d’identifier l’approche la plus adaptée au contexte du projet \textit{Parc Informatique FMM}. Le Tableau~\ref{tab:comparaison_methodologies} synthétise cette analyse en se basant sur plusieurs critères essentiels, notamment l’adaptabilité aux changements, la fréquence des livraisons, le niveau de collaboration, la gestion des risques ainsi que la qualité et la maintenabilité du produit.
 
 \begin{table}[H]
     \centering
-        \caption{Tableau comparatif des méthodologies de développement logiciel.}
+    \caption{Tableau comparatif des méthodologies de développement logiciel.}
     \begin{tabular}{|p{6cm}|c|c|c|c|}
         \hline
         \textbf{Caractéristiques} & \textbf{Scrum} & \textbf{Waterfall} & \textbf{Lean} & \textbf{Kanban} \\
@@ -110,15 +112,32 @@ Le tableau suivant (Tableau~\ref{tab:comparaison_methodologies}) présente une c
     \label{tab:comparaison_methodologies}
 \end{table}
 
+L’analyse du Tableau~\ref{tab:comparaison_methodologies} met en évidence des différences importantes entre les méthodologies étudiées. Ces différences permettent de comprendre les avantages et limites de chaque approche en fonction du type de projet et du niveau de flexibilité requis.
+
+Les méthodes agiles, notamment \textbf{Scrum} et \textbf{Kanban}, se distinguent clairement par leur capacité d’adaptation aux changements. Elles permettent une grande flexibilité dans la gestion des besoins, ce qui est particulièrement important dans les projets où les exigences peuvent évoluer au cours du développement. Scrum, en particulier, se caractérise par des livraisons fréquentes et une forte implication du client, ce qui favorise un meilleur alignement entre le produit développé et les besoins réels.
+
+En revanche, la méthodologie \textbf{Waterfall} (ou cycle en V) repose sur une approche linéaire et séquentielle. Elle offre une meilleure structuration et une gestion des risques bien définie, mais elle reste peu adaptée aux changements une fois la phase de conception terminée. Cela la rend moins flexible dans des environnements dynamiques.
+
+Les approches \textbf{Lean} et \textbf{Kanban} se positionnent comme des méthodes intermédiaires, visant principalement à optimiser le flux de travail et à réduire les gaspillages. Elles assurent une amélioration continue du processus, mais leur niveau de structuration reste parfois moins rigide que celui des approches traditionnelles.
+
+En termes de qualité, toutes les méthodologies permettent une gestion des risques, mais avec des approches différentes : Scrum et Kanban favorisent une assurance qualité continue grâce à des cycles courts et des ajustements réguliers, tandis que Waterfall privilégie une validation finale après chaque phase.
+
+Enfin, du point de vue de la maintenance et de l’évolution du système, les approches agiles offrent une meilleure flexibilité et une facilité d’adaptation, contrairement à Waterfall qui rend les modifications plus coûteuses et complexes après le déploiement.
+
+Ainsi, cette analyse comparative met en évidence la supériorité des approches agiles, notamment Scrum, pour les projets nécessitant flexibilité, interaction continue avec le client et adaptation progressive des besoins, ce qui correspond au contexte du projet \textit{Parc Informatique FMM}.
 \subsection{Méthodologie retenue : Scrum}
-À l'issue de la comparaison des différentes approches, la méthodologie Scrum a été retenue. Cette décision est basée sur plusieurs critères clés qui correspondent aux besoins du développement du projet Parc Informatique FMM.
 
-Premièrement, l’approche itérative de Scrum permet de recueillir des retours continus des parties prenantes, notamment les techniciens et les responsables du SmartLab de la Faculté de Médecine de Monastir, pour affiner les exigences fonctionnelles et non fonctionnelles.
+À l’issue de l’étude comparative des différentes approches de développement, la méthodologie \textbf{Scrum} a été retenue pour la réalisation du projet \textit{Parc Informatique FMM}. Ce choix repose sur un ensemble de critères techniques et organisationnels directement alignés avec les besoins du projet et les contraintes du contexte de développement.
 
-Deuxièmement, Scrum offre une grande adaptabilité face aux incertitudes techniques liées à l’intégration des modules de gestion des équipements, des tickets et des licences. Cette méthode permet de livrer des fonctionnalités progressivement et de valider les choix techniques dès les premiers sprints.
+Tout d’abord, Scrum se distingue par son approche itérative et incrémentale, qui permet de livrer le système par petites versions successives. Cette caractéristique offre la possibilité d’intégrer progressivement les fonctionnalités du système, notamment la gestion des équipements, des incidents et des utilisateurs, tout en validant continuellement leur conformité aux besoins exprimés.
 
-Enfin, la méthodologie Scrum favorise une collaboration étroite entre les développeurs, le Product Owner et le Scrum Master, assurant une communication fluide avec les parties prenantes. Cette collaboration est essentielle pour répondre aux besoins changeants du parc informatique et pour intégrer rapidement les retours des utilisateurs.
+Par ailleurs, cette méthodologie favorise l’implication continue des parties prenantes, en particulier les utilisateurs finaux tels que les techniciens et les responsables du SmartLab de la Faculté de Médecine de Monastir. Les retours réguliers recueillis à la fin de chaque sprint permettent d’ajuster les exigences fonctionnelles et non fonctionnelles, réduisant ainsi le risque de divergence entre le besoin exprimé et la solution développée.
 
+En outre, Scrum offre une grande flexibilité face aux changements, ce qui constitue un avantage majeur dans le cadre de ce projet, où certaines contraintes techniques et fonctionnelles ne sont pas entièrement figées au début du développement. Cette adaptabilité permet d’optimiser les choix techniques au fur et à mesure de l’avancement du projet, notamment lors de l’intégration des différents modules du système.
+
+Enfin, la méthodologie Scrum encourage une collaboration étroite entre les différents acteurs du projet, à savoir le Product Owner, le Scrum Master et l’équipe de développement. Cette organisation favorise une communication fluide et une meilleure coordination des tâches, contribuant ainsi à une amélioration continue de la qualité du produit final.
+
+Ainsi, le choix de Scrum s’inscrit dans une démarche pragmatique et adaptée au contexte du projet, en garantissant à la fois flexibilité, qualité et amélioration progressive du système développé.
 \section{Présentation de Scrum}
 \label{sec:presentation_scrum}
 Scrum est un framework agile qui repose sur des cycles de développement appelés sprints, comme présenté dans la figure~\ref{fig:processus_scrum}. Chaque sprint a une durée définie (généralement entre 2 et 4 semaines) et aboutit à un produit fonctionnel et potentiellement livrable. Le processus Scrum comprend plusieurs éléments clés tels que le \textit{Product Backlog}, le \textit{Sprint Backlog}, l'\textit{Incrément}, ainsi que des événements tels que la planification de sprint, les réunions quotidiennes (\textit{Daily Scrum}), la revue de sprint et la rétrospective de sprint~\cite{atlassian2023scrum}.
