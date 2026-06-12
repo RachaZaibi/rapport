@@ -1,0 +1,12 @@
+@startuml
+actor Administrateur
+participant Frontend
+participant Backend
+database MySQL
+Administrateur -> Frontend : consulte le dashboard
+Frontend -> Backend : GET /api/dashboard + JWT
+Backend -> MySQL : SELECT indicateurs, tickets, maintenances
+MySQL --> Backend : résultats consolidés
+Backend --> Frontend : JSON dashboard
+Frontend --> Administrateur : affichage des indicateurs
+@enduml

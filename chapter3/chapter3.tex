@@ -1,12 +1,17 @@
-% \chapter{Étude architecturale du projet} 
+﻿% \chapter{Étude architecturale du projet} 
 % \label{chap:architecture}
-\chapter*{Chapitre 3 : Étude architecturale du projet}
+\glennchapter{CHAPITRE 3}{Étude architecturale du projet}
+\vspace{1cm}
 \markboth{Chapitre 3 : Étude architecturale du projet}{}
 \label{chap:architecture}
 \addcontentsline{toc}{chapter}{Chapitre 3 : Étude architecturale du projet}
 \setcounter{chapter}{3}
 \setcounter{section}{0}
 % Introduction
+
+\localtableofcontents
+\newpage
+\pagebreak
 \section*{Introduction}
 \addcontentsline{toc}{section}{Introduction }
 \label{sec:introduction}
@@ -20,7 +25,7 @@ Le Parc Informatique FMM utilise une architecture en trois couches : gestion des
 \begin{itemize}
     \item \textbf{Gestion des ressources} : Cette couche gère les équipements informatiques, les licences, les utilisateurs et les emplacements via une base de données centralisée. Elle permet de consigner l'état des actifs et de suivre leur historique.
     \item \textbf{Traitement des services} : Cette couche prend en charge la logique métier du ticketing, de la gestion des maintenances et des notifications. Le backend traite les demandes, assigne les incidents et génère les alertes selon les règles définies.
-    \item \textbf{Interfaces utilisateur} : Cette couche propose des interfaces web et mobile pour que les administrateurs, techniciens et utilisateurs puissent consulter les actifs, créer des tickets et suivre les interventions.
+    \item \textbf{Interfaces utilisateur} : Cette couche propose une interface web pour que les administrateurs, techniciens et utilisateurs puissent consulter les actifs, créer des tickets et suivre les interventions.
 \end{itemize}
 
 \begin{figure}[H]
@@ -100,9 +105,35 @@ Pour organiser le système Parc Informatique FMM, nous avons choisi le modèle M
 
 \begin{itemize}
     \item \textbf{Modèle} : Cette couche gère les données. La base MySQL centralise les informations relatives aux équipements, aux licences, aux utilisateurs, aux tickets et aux maintenances.
-    \item \textbf{Vue} : Cette couche propose des interfaces visuelles. Les applications web et mobile affichent les tableaux de bord, les états des équipements et les tickets.
+    \item \textbf{Vue} : Cette couche propose des interfaces visuelles. L'application web affiche les tableaux de bord, les états des équipements et les tickets.
     \item \textbf{Contrôleur} : Cette couche gère la logique métier. Le backend traite les requêtes, exécute les règles de gestion, assigne les tickets et déclenche les notifications.
 \end{itemize}
+
+\subsection{Hiérarchie organisationnelle et modèle de localisation}
+\label{subsec:hierarchie_org}
+
+Le système Parc Informatique FMM modélise l'organisation physique du SmartLab selon une hiérarchie 
+à trois niveaux de localisation. Contrairement à une approche monolithique, cette structure décentralisée 
+offre une flexibilité maximale pour représenter les emplacements complexes :
+
+\begin{itemize}
+    \item \textbf{Bloc} : Entité de plus haut niveau représentant un bâtiment, aile ou bloc de locaux
+    \item \textbf{Département} : Division administrativo-fonctionnelle au sein d'un Bloc, permettant 
+          de regrouper les ressources par domaine métier
+    \item \textbf{Salle} : Espace physique concret (laboratoire, salle de cours, bureau, serveur) 
+          hébergeant équipements et utilisateurs
+\end{itemize}
+
+Les relations sont structurées comme suit :
+\begin{itemize}
+    \item Bloc (1 : *) Département
+    \item Bloc (1 : *) Salle (emplacements directs)
+    \item Département (1 : *) Salle (emplacements subdivisés)
+\end{itemize}
+
+Cette hiérarchie n'est pas rigide : une Salle peut être liée directement à un Bloc (sans passer par 
+Département), ou via un Département intermédiaire. Les équipements et utilisateurs héritent leur 
+localisation via les clés étrangères \texttt{DepartementId}, \texttt{SalleId} et \texttt{BlocId}.
 % tikzpicture figure
 \begin{figure}[H]
 \centering
@@ -148,7 +179,7 @@ Le diagramme de classes (Figure~\ref{fig:class_diagram}) montre la structure des
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=1\textwidth]{chapter3/diagrams/parc_informatique_class_diagram.jpg}
+\includegraphics[width=1\textwidth]{chapter3/diagrams/class.png}
 \caption{Diagramme de classes du Parc Informatique FMM}
 \label{fig:class_diagram}
 \end{figure}
@@ -292,3 +323,6 @@ L’architecture retenue garantit une meilleure structuration du système, tout 
 
 % next chapter
 Dans le chapitre suivant, nous détaillerons les choix technologiques effectués pour la mise en œuvre du projet, en expliquant les raisons de ces choix et leur impact sur le développement et la performance du système.
+
+
+

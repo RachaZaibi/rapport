@@ -1,0 +1,13 @@
+@startuml
+actor Administrateur
+participant Frontend
+participant Backend
+database MySQL
+Administrateur -> Frontend : sélection de l'équipement et de l'utilisateur
+Frontend -> Backend : POST /api/assignments + JWT
+Backend -> Backend : verifier rôle et disponibilite
+Backend -> MySQL : INSERT Affectation
+MySQL --> Backend : affectation créée
+Backend --> Frontend : 201 Created
+Frontend --> Administrateur : notification visuelle
+@enduml

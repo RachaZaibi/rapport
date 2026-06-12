@@ -1,0 +1,12 @@
+@startuml
+actor Technicien
+participant Frontend
+participant Backend
+database MySQL
+Technicien -> Frontend : consulte mes tickets
+Frontend -> Backend : GET /api/tickets?assignedTo=me + JWT
+Backend -> MySQL : SELECT Ticket WHERE assignedTo
+MySQL --> Backend : liste tickets
+Backend --> Frontend : JSON tickets
+Frontend --> Technicien : affichage
+@enduml

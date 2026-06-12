@@ -1,0 +1,15 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Introduction }{\reset@font\mtcSfont 72}{section*.172}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.1}Objectifs du Sprint 3}{\reset@font\mtcSfont 72}{section.173}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.2}Architecture et modélisation UML du Sprint 3}{\reset@font\mtcSfont 72}{section.175}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Clarification : Modèles réels vs composants calculés}{\reset@font\mtcSSSfont 73}{subsubsection*.176}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.2.1}Diagramme de classes Sprint 3}{\reset@font\mtcSSfont 73}{subsection.177}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.2.2}Diagrammes de séquence Sprint 3}{\reset@font\mtcSSfont 74}{subsection.179}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Envoi d'une notification lors de la création d'un ticket}{\reset@font\mtcSSSfont 74}{subsubsection*.180}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Notification lors d'un changement de statut}{\reset@font\mtcSSSfont 75}{subsubsection*.182}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Consultation du tableau de bord}{\reset@font\mtcSSSfont 76}{subsubsection*.184}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Génération d'un rapport}{\reset@font\mtcSSSfont 77}{subsubsection*.186}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Export des statistiques}{\reset@font\mtcSSSfont 78}{subsubsection*.188}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Consultation des indicateurs du parc}{\reset@font\mtcSSSfont 78}{subsubsection*.190}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.3}Tableaux de bord et reporting Web}{\reset@font\mtcSfont 79}{section.192}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.4}Optimisation des performances}{\reset@font\mtcSfont 79}{section.193}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Conclusion}{\reset@font\mtcSfont 80}{figure.caption.198}}

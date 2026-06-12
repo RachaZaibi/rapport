@@ -1,0 +1,53 @@
+@startuml
+class Ticket {
+  +id : UUID
+  +titre : string
+  +description : text
+  +priorite : string
+  +statut : string
+  +equipementId : UUID
+  +createdById : UUID
+  +assignedToId : UUID
+  +createdAt : datetime
+  +updatedAt : datetime
+}
+class Intervention {
+  +id : UUID
+  +ticketId : UUID
+  +technicienId : UUID
+  +datePlanifiee : datetime
+  +dateDebut : datetime
+  +dateFin : datetime
+  +rapport : text
+  +statut : string
+}
+class Maintenance {
+  +id : UUID
+  +equipementId : UUID
+  +type : string
+  +frequence : string
+  +dateProchaine : datetime
+  +dateDerniere : datetime
+  +statut : string
+}
+class Utilisateur {
+  +id : UUID
+  +nom : string
+  +prenom : string
+  +email : string
+  +role : string
+}
+class Equipement {
+  +id : UUID
+  +reference : string
+  +designation : string
+  +etat : string
+}
+Ticket --> Utilisateur : créé par
+Ticket --> Utilisateur : assigné à
+Ticket --> Equipement : concerne
+Intervention --> Ticket : traite
+Intervention --> Utilisateur : réalisé par
+Maintenance --> Equipement : concerne
+Maintenance --> Ticket : optionnel
+@enduml

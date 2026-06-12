@@ -1,0 +1,63 @@
+@startuml
+class Utilisateur {
+  +id : UUID
+  +nom : string
+  +prenom : string
+  +email : string
+  +motDePasseHash : string
+  +telephone : string
+  +roleId : UUID
+  +estActif : bool
+}
+class Role {
+  +id : UUID
+  +nom : string
+  +permissions : string
+}
+class Equipement {
+  +id : UUID
+  +reference : string
+  +designation : string
+  +numeroSerie : string
+  +etat : string
+  +categorieId : UUID
+  +localisationId : UUID
+  +qrCodeId : UUID
+}
+class Categorie {
+  +id : UUID
+  +nom : string
+  +description : string
+}
+class Localisation {
+  +id : UUID
+  +batiment : string
+  +etage : string
+  +salle : string
+  +bloc : string
+}
+class Affectation {
+  +id : UUID
+  +equipementId : UUID
+  +utilisateurId : UUID
+  +dateAffectation : datetime
+  +dateRetour : datetime
+  +statut : string
+}
+class QRCode {
+  +id : UUID
+  +equipementId : UUID
+  +code : string
+  +url : string
+  +dateGeneration : datetime
+}
+Utilisateur --> Role : appartient_a
+
+Equipement --> Categorie : classe_dans
+Equipement --> Localisation : localise_dans
+
+Equipement o-- QRCode : possede
+
+Equipement o-- Affectation : associe_a
+Utilisateur o-- Affectation : recoit
+@enduml

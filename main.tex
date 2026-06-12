@@ -29,7 +29,6 @@
 \usepackage{changepage}
 \usepackage{multicol}
 \usepackage{ragged2e}
-\usepackage{csquotes}
 \usepackage{plantuml} % Optional: for UML diagrams
 \usepackage{pdfpages}
 \usepackage{amssymb} % For \checkmark
@@ -44,6 +43,16 @@
 \usepackage{fvextra}
 \usepackage{csquotes} % DOIT être chargé APRÈS fvextra pour éviter les conflits
 \usepackage{listings}
+\usepackage{etoc}  % Local table of contents for each chapter
+
+% % Configure etoc for section depth
+% \etocsettocdepth{subsection}
+
+% % Initialize minitoc
+% \dominitoc
+
+% % Rename "Contents" to "Sommaire"
+% \mtcsettitle{minitoc}{Sommaire}
 
 \lstdefinelanguage{JavaScript}{
   keywords={break, case, catch, continue, debugger, default, delete, do, else, false, finally, for, function, if, in, instanceof, new, null, return, switch, this, throw, true, try, typeof, var, let, const, while, with, class, export, import, from},
@@ -148,6 +157,56 @@
   {\normalfont\bfseries\itshape}{\thesubsubsection.}{0.5em}{\fontsize{12}{12}\selectfont}
 \titlespacing*{\subsubsection}{0pt}{3pt}{3pt}
 
+% ================================================
+% Glenn Style Chapter Titles (Modern Professional)
+% ================================================
+\newcommand{\glennchapter}[2]{%
+  \newpage
+  \thispagestyle{plain}
+  \vspace*{0.5cm}
+  
+  % Top decorative line
+  {\color{black!60}\hrule height 3pt}
+  
+  \vspace{1.5cm}
+  
+  % Chapter title box with Glenn style
+  \begin{center}
+    \begin{minipage}[t]{0.9\textwidth}
+      \vspace{0pt}
+      % Chapter number watermark (light gray background)
+      \hspace{-0.5cm}\makebox[0pt][l]{\fontsize{80}{80}\selectfont\color{black!12}\bfseries #1}%
+      
+      % Chapter title (overlaid)
+      \hfill{\fontsize{28}{32}\selectfont\bfseries\color{black} #2}\hfill
+      
+      \vspace{1cm}
+    \end{minipage}
+  \end{center}
+  
+  % Bottom decorative line
+  {\color{black!60}\hrule height 1pt}
+  
+  \vspace{1.5cm}
+}
+  
+
+% ================================================
+% Chapter Overview / Mini TOC Command
+% ================================================
+\newcommand{\chapteroverview}[1]{%
+  \newpage
+  \thispagestyle{plain}
+  \vspace*{1cm}
+  \begin{center}
+    {\Large\bfseries Sommaire du chapitre}
+  \end{center}
+  \vspace{1.5cm}
+  \noindent
+  #1
+  \vspace{2cm}
+}
+
 % ------------------------------------------------
 % Style UML
 % ------------------------------------------------
@@ -246,12 +305,44 @@
 \gabriolatextblack{Année universitaire 2025--2026}
 \end{flushright}
 % ---------- TOC ----------
+
+
+% % ---------- Mini Table of Contents (Chapters Only) ----------
+% % This page lists only chapter titles and does NOT appear in main TOC
+% \begingroup
+% \pagestyle{tocpages}
+% \vspace*{2cm}
+% \begin{center}
+% {\large\bfseries Vue d'ensemble des chapitres}
+% \end{center}
+% \vspace{1.5cm}
+
+% \noindent
+% \begin{tabbing}
+% \hspace{2cm}\= \\
+% \> Chapitre 0 : Introduction générale \\[6pt]
+% \> Chapitre 1 : Contexte et étude de l'existant \\[6pt]
+% \> Chapitre 2 : Méthodologie et mise en place du projet \\[6pt]
+% \> Chapitre 3 : Étude architecturale du projet \\[6pt]
+% \> Chapitre 4 : Planification et préparation du projet Parc Informatique FMM \\[6pt]
+% \> Chapitre 5 : Gestion des équipements et modélisation (Sprint 1) \\[6pt]
+% \> Chapitre 6 : Gestion des tickets et maintenance (Sprint 2) \\[6pt]
+% \> Chapitre 7 : Notifications, tableaux de bord et reporting (Sprint 3) \\[6pt]
+% \> Chapitre 8 : Conclusion et perspectives \\
+% \end{tabbing}
+
+% \vspace{2cm}
+% \endgroup
+% \clearpage
 \begingroup
-\pagestyle{tocpages} % Apply tocpages to all pages in this group
-\tableofcontents
-\markboth{TABLE DES MATIÈRES}{}
-\clearpage
+% \pagestyle{tocpages} % Apply tocpages to all pages in this group
+% \dominitoc % Initialize minitoc package for chapter-level mini TOCs
+% \tableofcontents
+% \markboth{TABLE DES MATIÈRES}{}
+% \clearpage
 \endgroup
+\tableofcontents
+\clearpage
 
 % ---------- LOF ----------
 \begingroup

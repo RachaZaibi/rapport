@@ -1,0 +1,16 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Introduction }{\reset@font\mtcSfont 20}{section*.47}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.1}Présentation de l'architecture générale}{\reset@font\mtcSfont 20}{section.48}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.2}Modèle de conception logicielle adoptée}{\reset@font\mtcSfont 21}{section.50}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.2.1}Hiérarchie organisationnelle et modèle de localisation}{\reset@font\mtcSSfont 21}{subsection.51}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.3}Interactions et fonctionnement du système}{\reset@font\mtcSfont 22}{section.53}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.1}Diagramme des cas d'utilisation}{\reset@font\mtcSSfont 22}{subsection.54}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.2}Diagramme de classes}{\reset@font\mtcSSfont 22}{subsection.56}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.3}Diagrammes de séquence}{\reset@font\mtcSSfont 23}{subsection.58}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Authentification de l’utilisateur}{\reset@font\mtcSSSfont 24}{subsubsection*.59}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Création et assignation d’un ticket d’incident}{\reset@font\mtcSSSfont 24}{subsubsection*.61}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Traitement et mise à jour d’un ticket}{\reset@font\mtcSSSfont 25}{subsubsection*.63}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Clôture et consultation de l’historique}{\reset@font\mtcSSSfont 26}{subsubsection*.65}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Synthèse}{\reset@font\mtcPfont 27}{paragraph*.67}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.4}Diagramme d'activités}{\reset@font\mtcSSfont 27}{subsection.68}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.4}Pourquoi ce choix d'architecture}{\reset@font\mtcSfont 28}{section.70}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Conclusion}{\reset@font\mtcSfont 29}{section.70}}

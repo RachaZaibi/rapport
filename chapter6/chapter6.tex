@@ -1,36 +1,29 @@
-% \chapter{Tests, Notifications et Optimisations}
-% \label{chap:sprint2}
-\chapter*{Chapitre 6 : Tests, Notifications et Optimisations}
-\markboth{Chapitre 6 : Tests, Notifications et Optimisations}{} 
+﻿% \chapter{Gestion des tickets et maintenance}
+\glennchapter{CHAPITRE 6}{Gestion des tickets et maintenance}
+\vspace{1cm}
+\markboth{Chapitre 6 : Gestion des tickets et maintenance}{} 
 \label{chap:sprint2}
-\addcontentsline{toc}{chapter}{Chapitre 6 : Tests, Notifications et Optimisations}  
+\addcontentsline{toc}{chapter}{Chapitre 6 : Gestion des tickets et maintenance}  
 \setcounter{chapter}{6}
 \setcounter{section}{0}
 
+
+\localtableofcontents
+\newpage
+\pagebreak
 \section*{Introduction}
 \addcontentsline{toc}{section}{Introduction }
 \label{sec:intro_sprint2}
 
-Le Sprint 2 vise à consolider et industrialiser la solution développée durant le
-Sprint~1. L'objectif est de renforcer la qualité du code, d'automatiser les flux
-critiques, et d'améliorer l'expérience des utilisateurs par l'ajout de notifications
-et d'optimisations de performance. Ce sprint s'appuie sur une base backend complète
-avec Express.js, Sequelize, JWT et RBAC, ainsi qu'une interface frontend React déjà
-fonctionnelle.
+Le Sprint 2 s'inscrit dans la continuité du Sprint 1 et cible la mise en œuvre complète de la gestion des incidents et de la maintenance dans le système Parc Informatique FMM. Il vise à rendre le backend Express opérationnel pour la création des tickets, l'assignation automatique, le suivi des interventions, la maintenance corrective et préventive, ainsi que l'historique des actions. Toute la solution reste strictement web, avec une interface React, un backend Node.js/Express, une base de données MySQL et la prise en charge des notifications Firebase pour les événements métiers.
 
-Quatre axes d'amélioration structurent ce sprint, comme l'illustre la
-figure~\ref{fig:architecture_sprint2} :
+Trois axes fonctionnels majeurs structurent ce sprint :
 \begin{itemize}
-    % test fonctionel seulement pas de test unitaire ni d'integration ni de test de performance ni jest ni supertest
-    \item \textbf{ Tests fonctionnels} : implémentation des tests  pour valider les scénarios métier
-          critiques (création de tickets, gestion des maintenances, transferts d'équipements).
-    \item \textbf{Notifications temps réel} : intégration de Firebase Cloud Messaging
-          pour alerter les utilisateurs sur les événements métier (tickets, maintenances,
-          transferts).
-    \item \textbf{Performance} : ajout d'un cache Redis et optimisation des requêtes
-          Sequelize par pagination et indexation.
-    \item \textbf{Sécurité} : renforcement par du rate limiting et un journal d'audit
-          des actions critiques.
+    \item \textbf{Gestion des incidents} : Création de tickets d'incident, assignation automatique des techniciens basée sur la disponibilité, historique complet des modifications, suivi de la clôture
+    
+    \item \textbf{Maintenance} : Plans de maintenance préventive avec exécution tracée, rapports de maintenance corrective générés automatiquement après interventions, liens d'audit entre tickets et maintenances
+    
+    \item \textbf{Notifications temps réel} : Intégration Firebase Cloud Messaging (FCM) pour alerter les administrateurs et techniciens lors d'événements critiques (création de ticket, changement de statut, assignation d'intervention)
 \end{itemize}
 
 \begin{figure}[H]
@@ -47,11 +40,104 @@ figure~\ref{fig:architecture_sprint2} :
 Les objectifs principaux sont :
 
 \begin{itemize}
-    \item Implémenter les notifications temps réel via Firebase FCM
-    \item Automatiser les workflows de gestion des incidents et des maintenances
-    \item Optimiser les performances de l'API et de l'interface frontend
-    \item Améliorer la robustesse et la résilience de la solution pour un déploiement production
+    \item Implémenter la création de tickets d'incident et l'assignation automatique des techniciens
+    \item Déployer la gestion des interventions et de la maintenance corrective et préventive
+    \item Construire l'historique des actions pour chaque ticket et chaque équipement
+    \item Consolider la fiabilité du backend Express et des requêtes MySQL associées
 \end{itemize}
+
+\section{Architecture et modélisation UML du Sprint 2}
+\label{sec:uml_sprint2}
+
+Le Sprint 2 introduit une modélisation métier dédiée à la gestion des incidents et des maintenances. Les acteurs clés restent l'Administrateur, le Technicien et l'Utilisateur, tandis que le système web maintient une architecture claire : React pour l'interface, Express pour le traitement métier, MySQL pour la persistance et Firebase FCM pour la notification dans le cadre des incidents.
+
+\subsection{Diagramme de classes Sprint 2}
+Le diagramme de classes du Sprint 2 formalise les entités principales de la gestion des tickets et de la maintenance. Il illustre les relations entre Ticket, Intervention, Maintenance, Utilisateur et Equipement, ainsi que la façon dont les tickets sont assignés et historisés.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{chapter6/diagrams/class_diagram_sprint2.png}
+    \caption{Diagramme de classes du Sprint 2}
+    \label{fig:class_diagram_sprint2}
+\end{figure}
+
+
+\subsection{Diagrammes de séquence Sprint 2}
+Cette section décrit les scénarios opérationnels essentiels de la gestion des tickets et de la maintenance, du ticket initial à sa clôture en passant par l'assignation et l'historique.
+
+\subsubsection{Création d'un ticket}
+Ce diagramme illustre la création d'un ticket par un utilisateur authentifié. Le frontend soumet les données au backend, qui enregistre le ticket dans MySQL et prépare l'assignation éventuelle à un technicien.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{chapter6/diagrams/sequence_creation_ticket.png}
+    \caption{Diagramme de séquence de création d'un ticket}
+    \label{fig:sequence_creation_ticket}
+\end{figure}
+
+
+
+\subsubsection{Affectation automatique d'un ticket}
+Le backend déclenche un moteur d'affectation après la création du ticket. Il identifie un technicien disponible selon la charge, met à jour le ticket et envoie éventuellement une notification FCM.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{chapter6/diagrams/sequence_affectation_automatique.png}
+    \caption{Diagramme de séquence d'affectation automatique d'un ticket}
+    \label{fig:sequence_affectation_automatique}
+\end{figure}
+
+
+\subsubsection{Consultation des tickets assignés}
+Ce scénario montre un technicien consultant ses tickets affectés via le tableau de bord web.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{chapter6/diagrams/sequence_consultation_tickets_assignes.png}
+    \caption{Diagramme de séquence de consultation des tickets assignés}
+    \label{fig:sequence_consultation_tickets_assignes}
+\end{figure}
+
+\subsubsection{Traitement d'un ticket}
+Ce diagramme montre le passage d'un ticket en traitement par un technicien, la création d'une intervention, et la mise à jour du statut du ticket.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{chapter6/diagrams/sequence_traitement_ticket2.png}
+    \caption{Diagramme de séquence de traitement d'un ticket}
+    \label{fig:sequence_traitement_ticket2}
+\end{figure}
+
+\subsubsection{Création d'une intervention}
+La création d'une intervention documentaire est formalisation du suivi de maintenance. Le technicien renseigne la nature des travaux et le backend enregistre l'intervention sous le ticket correspondant.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{chapter6/diagrams/sequence_creation_intervention.png}
+    \caption{Diagramme de séquence de création d'une intervention}
+    \label{fig:sequence_creation_intervention}
+\end{figure}
+
+\subsubsection{Clôture d'un ticket}
+Ce diagramme illustre les actions menant à la clôture d'un ticket, l'enregistrement des résultats et la mise à jour de l'historique.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{chapter6/diagrams/sequence_cloture_ticket.png}
+    \caption{Diagramme de séquence de clôture d'un ticket}
+    \label{fig:sequence_cloture_ticket}
+\end{figure}
+
+\subsubsection{Consultation de l'historique d'un ticket}
+Ce dernier diagramme montre comment le système restitue l'ensemble des événements associés à un ticket : création, assignations, interventions, modifications de statut et rapports de fin.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{chapter6/diagrams/sequence_historique_ticket.png}
+    \caption{Diagramme de séquence de consultation de l'historique d'un ticket}
+    \label{fig:sequence_historique_ticket}
+\end{figure}
+
 
 \section{Livrables attendus}
 \label{sec:livrables_sprint2}
@@ -156,43 +242,23 @@ L'intégration Firebase repose sur quatre mécanismes complémentaires :
           des tentatives.
 \end{itemize}
 
-\subsubsection{Gestion des jetons FCM en base de données}
+\subsubsection{Enregistrement et gestion des jetons FCM}
 \label{subsubsec:fcm_tokens}
 
-Les jetons FCM sont stockés en base de données afin que le backend sache sur
-quel(s) appareil(s) envoyer la notification à chaque utilisateur. Le modèle
-\texttt{FcmToken} expose les champs suivants :
+Le système Parc Informatique FMM utilise une approche simple et robuste pour les notifications Firebase FCM. 
+Chaque utilisateur dispose d'un seul jeton FCM actif, stocké en tant que champ \texttt{fcmToken} dans le modèle 
+\texttt{Utilisateur}. Cette conception simplifie la gestion des jetons tout en couvrant efficacement les besoins 
+des utilisateurs accédant au système via le web.
 
-\begin{itemize}
-    \item \texttt{id} : identifiant unique (UUID, clé primaire) ;
-    \item \texttt{userId} : clé étrangère vers le modèle \texttt{Utilisateur} ;
-    \item \texttt{token} : chaîne FCM fournie par le SDK Firebase, contrainte unique ;
-    \item \texttt{device} : type de terminal (\texttt{web}, \texttt{mobile} ou
-          \texttt{desktop}) ;
-    \item \texttt{lastUsedAt} : horodatage de la dernière notification envoyée
-          avec succès via ce jeton.
-\end{itemize}
+Lors du chargement initial de l'application web, le frontend enregistre le jeton FCM généré par Firebase via 
+l'endpoint \texttt{POST /api/utilisateurs/fcm-token}. Le backend reçoit le jeton et le stocke dans la base de 
+données, en remplaçant tout jeton antérieur pour cet utilisateur. Cette approche garantit un seul jeton actif 
+par utilisateur, éliminant la complexité de la gestion multi-appareils.
 
-Un utilisateur peut posséder plusieurs enregistrements \texttt{FcmToken} —
-un par appareil connecté. La figure~\ref{fig:fcm_token_lifecycle} présente le
-cycle de vie complet d'un jeton, depuis son enregistrement jusqu'à sa révocation
-automatique en cas d'échec d'envoi.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.85\textwidth]{chapter6/figures/fcm_token_lifecycle.png}
-    \caption{Cycle de vie d'un jeton FCM en base de données}
-    \label{fig:fcm_token_lifecycle}
-\end{figure}
-
-Le cycle se déroule en trois phases. Lors de la connexion, le frontend transmet
-le jeton généré par le SDK Firebase via \texttt{POST /api/fcm/register} ; le backend
-effectue un \textit{upsert} — insertion ou mise à jour de \texttt{lastUsedAt} si le
-jeton existe déjà. Lors de l'envoi d'une notification, le \texttt{NotificationService}
-récupère tous les jetons associés à l'utilisateur cible et envoie la notification en
-parallèle sur chaque appareil. Enfin, si FCM retourne une erreur
-\texttt{UNREGISTERED} ou \texttt{INVALID\_ARGUMENT}, le jeton est supprimé
-immédiatement de la table, assurant un nettoyage automatique des jetons expirés.
+Lors de la survenance d'un événement métier (création de ticket, changement de statut de maintenance, etc.), 
+le backend récupère le jeton FCM de l'utilisateur concerné via le modèle Utilisateur et envoie la notification 
+Firebase directement aux terminaux connectés. Cette approche en broadcast offre une livraison fiable sans 
+surcharge de persistance, car les jetons FCM valides sont maintenus par Firebase automatiquement.
 
 % Task 3: Workflow Automation
 
@@ -315,7 +381,7 @@ Défis anticipés et stratégies de résolution :
     
     \item \textbf{Couverture de tests} : Difficulté à atteindre 80\% de couverture sur les scénarios critiques. \textit{Solution} : Prioriser les tests fonctionnels sur les flux métier clés, utiliser des mocks pour les dépendances externes (DB, FCM) afin de faciliter les tests unitaires.
     
-    \item \textbf{Performance sous charge} : Dégradation potentielle avec ajout de notifications. \textit{Solution} : Utiliser des queues asynchrones (Bull/Redis) pour les notifications, ne pas bloquer les requêtes API.
+    \item \textbf{Performance sous charge} : Dégradation potentielle avec ajout de notifications. \textit{Solution} : Implémenter un envoi asynchrone des notifications Firebase FCM par répartition des tokens sur plusieurs appels parallèles, sans bloquer les requêtes métier API principales.
     
     \item \textbf{Automatisation des workflows} : Complexité des règles de logique métier. \textit{Solution} : Documenter chaque règle, utiliser des tests de scénario pour valider.
 \end{enumerate}
@@ -342,3 +408,6 @@ Le Sprint 3 se concentrera sur :
 Le Sprint 2 transforme la base robuste du Sprint 1 en une solution industrielle complète. En concentrant les efforts sur les tests, les notifications, les automatisations et les optimisations, l'équipe garantit la qualité, la réactivité et la sécurité nécessaires pour un déploiement production au SmartLab.
 
 Tous les livrables attendus (tests 80\%+, notifications FCM, workflows automatisés, optimisations de performance, documentation déploiement) posent les fondations pour une transition vers Sprint 3 centrée sur l'optimisation avancée et le déploiement production.
+
+
+

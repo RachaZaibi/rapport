@@ -1,0 +1,14 @@
+@startuml
+actor Technicien
+participant Frontend
+participant Backend
+database MySQL
+Technicien -> Frontend : clôture ticket
+Frontend -> Backend : PUT /api/tickets/{id}/close + JWT
+Backend -> MySQL : UPDATE Ticket statut
+MySQL --> Backend : ticket clos
+Backend -> MySQL : INSERT Rapport
+MySQL --> Backend : rapport créé
+Backend --> Frontend : 200 OK
+Frontend --> Technicien : confirmation
+@enduml

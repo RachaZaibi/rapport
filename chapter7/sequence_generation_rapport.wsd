@@ -1,0 +1,14 @@
+@startuml
+actor Administrateur
+participant Frontend
+participant Backend
+database MySQL
+Administrateur -> Frontend : demande génération de rapport
+Frontend -> Backend : POST /api/reports + JWT
+Backend -> MySQL : SELECT données report
+MySQL --> Backend : données reçues
+Backend -> Backend : générer fichier PDF/Excel
+Backend -> MySQL : INSERT Rapport
+MySQL --> Backend : rapport créé
+Backend --> Frontend : URL du rapport
+@enduml

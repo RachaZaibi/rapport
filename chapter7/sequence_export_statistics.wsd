@@ -1,0 +1,13 @@
+@startuml
+actor Utilisateur
+participant Frontend
+participant Backend
+database MySQL
+Utilisateur -> Frontend : demande export statistique
+Frontend -> Backend : GET /api/statistics/export + JWT
+Backend -> MySQL : SELECT statistiques
+MySQL --> Backend : résultats
+Backend -> Backend : generer CSV/Excel
+Backend --> Frontend : fichier export
+Frontend --> Utilisateur : téléchargement
+@enduml

@@ -1,0 +1,17 @@
+@startuml
+actor Utilisateur
+participant Frontend
+participant Backend
+database MySQL
+participant Firebase
+Utilisateur -> Frontend : crée le ticket
+Frontend -> Backend : POST /api/tickets + JWT
+Backend -> MySQL : INSERT Ticket
+MySQL --> Backend : ticket créé
+Backend -> Backend : créer Notification
+Backend -> MySQL : INSERT Notification
+MySQL --> Backend : notification persistée
+Backend -> Firebase : envoi FCM
+Firebase --> Backend : succès
+Backend --> Frontend : 201 Created
+@enduml

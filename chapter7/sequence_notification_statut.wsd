@@ -1,0 +1,16 @@
+@startuml
+actor Technicien
+participant Frontend
+participant Backend
+database MySQL
+participant Firebase
+Technicien -> Frontend : modifie statut ticket
+Frontend -> Backend : PUT /api/tickets/{id}/status + JWT
+Backend -> MySQL : UPDATE Ticket
+MySQL --> Backend : statut modifié
+Backend -> Backend : créer Notification
+Backend -> MySQL : INSERT Notification
+Backend -> Firebase : envoi FCM
+Firebase --> Backend : succès
+Backend --> Frontend : 200 OK
+@enduml

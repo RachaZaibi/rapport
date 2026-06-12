@@ -1,0 +1,65 @@
+@startuml
+class Utilisateur {
+  +id : UUID
+  +nom : string
+  +email : string
+  +role : string
+}
+class Equipement {
+  +id : UUID
+  +reference : string
+  +designation : string
+  +etat : string
+}
+class Ticket {
+  +id : UUID
+  +titre : string
+  +statut : string
+  +priorite : string
+  +equipementId : UUID
+  +assignedToId : UUID
+}
+class Notification {
+  +id : UUID
+  +type : string
+  +message : string
+  +destinataireId : UUID
+  +entiteId : UUID
+  +statut : string
+  +envoyeLe : datetime
+}
+class FCMToken {
+  +id : UUID
+  +userId : UUID
+  +token : string
+  +plateforme : string
+  +dernierUsage : datetime
+}
+class Rapport {
+  +id : UUID
+  +titre : string
+  +type : string
+  +fichier : string
+  +dateGeneration : datetime
+  +genereParId : UUID
+}
+class Statistique {
+  +id : UUID
+  +nom : string
+  +valeur : numeric
+  +periode : string
+}
+class Dashboard {
+  +id : UUID
+  +nom : string
+  +dernierCalcul : datetime
+}
+Notification --> Utilisateur : destinataire
+Notification --> Ticket : lié à
+Notification --> Equipement : lié à
+FCMToken --> Utilisateur : appartient à
+Rapport --> Utilisateur : généré par
+Statistique --> Dashboard : alimente
+Dashboard --> Ticket : agrège
+Dashboard --> Equipement : agrège
+@enduml
