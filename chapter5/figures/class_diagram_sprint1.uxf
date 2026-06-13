@@ -1,0 +1,64 @@
+<diagram program="umletino" version="15.1"><zoom_level>12</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>0</x><y>144</y><w>216</w><h>180</h></coordinates><panel_attributes>_Utilisateur_
+--
+id : int
+nom : string
+prenom : string
+email : string
+motDePasseHash : string
+telephone : string
+roleId : UUID
+estActif : bool</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>372</x><y>156</y><w>180</w><h>156</h></coordinates><panel_attributes>_Role_
+--
+id : int
+nom : string
+permissions : string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>384</x><y>408</y><w>252</w><h>216</h></coordinates><panel_attributes>_Equipement_
+--
+id : int
+reference : string
+designation : string
+numeroSerie : string
+etat : string
+categorieId : int
+localisationId : int
+qrCodeId : int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>672</x><y>180</y><w>180</w><h>96</h></coordinates><panel_attributes>_Categorie_
+--
+id : int
+nom : string
+description : string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>804</x><y>336</y><w>132</w><h>132</h></coordinates><panel_attributes>_Localisation_
+--
+id : int
+batiment : string
+etage : string
+salle : string
+bloc : string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>480</y><w>240</w><h>168</h></coordinates><panel_attributes>_Affectation_
+--
+id : int
+equipementId : int
+utilisateurId : int
+dateAffectation : datetime
+dateRetour : datetime
+statut : string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>744</x><y>492</y><w>204</w><h>168</h></coordinates><panel_attributes>_QRCode_
+--
+id : int
+equipementId : int
+code : string
+url : string
+dateGeneration : datetime</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>204</x><y>192</y><w>192</w><h>60</h></coordinates><panel_attributes>lt=-
+m1=0..*
+m2=1..1
+appartient à</panel_attributes><additional_attributes>10;25;140;25</additional_attributes></element><element><id>Relation</id><coordinates><x>588</x><y>240</y><w>120</w><h>192</h></coordinates><panel_attributes>lt=-
+m1=0..*
+m2=1..1
+est classé en</panel_attributes><additional_attributes>10;140;10;10;70;10</additional_attributes></element><element><id>Relation</id><coordinates><x>624</x><y>408</y><w>204</w><h>60</h></coordinates><panel_attributes>lt=-
+m1=0..*
+m2=1..1
+est localisé dans</panel_attributes><additional_attributes>10;20;150;20</additional_attributes></element><element><id>Relation</id><coordinates><x>120</x><y>300</y><w>72</w><h>204</h></coordinates><panel_attributes>lt=-
+m1=1..1
+m2=0..*
+reçoit</panel_attributes><additional_attributes>10;15;10;155</additional_attributes></element><element><id>Relation</id><coordinates><x>624</x><y>528</y><w>144</w><h>60</h></coordinates><panel_attributes>lt=-
+m1=0..*
+m2=1..1
+possède</panel_attributes><additional_attributes>10;20;100;20</additional_attributes></element><element><id>Relation</id><coordinates><x>228</x><y>528</y><w>180</w><h>60</h></coordinates><panel_attributes>lt=-
+m1=0..*
+m2=1..1
+associé à</panel_attributes><additional_attributes>10;25;130;25</additional_attributes></element></diagram>

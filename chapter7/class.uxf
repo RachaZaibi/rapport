@@ -1,0 +1,54 @@
+<diagram program="umletino" version="15.1"><zoom_level>15</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>420</x><y>315</y><w>270</w><h>150</h></coordinates><panel_attributes>_Utilisateur_
+--
+id : int
+nom : string
+email : string
+role : string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>585</x><y>555</y><w>270</w><h>150</h></coordinates><panel_attributes>_Equipement_
+--
+id : int
+reference : string
+designation : string
+etat : string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>300</y><w>270</w><h>195</h></coordinates><panel_attributes>_Notification_
+--
+id : int
+type : string
+message : string
+destinataireId : int
+entiteId : int
+statut : string
+envoyeLe : datetime</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>0</y><w>270</w><h>150</h></coordinates><panel_attributes>_FCMToken_
+--
+id : int
+userId : int
+token : string
+plateforme : string
+dernierUsage : datetime</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>735</x><y>30</y><w>270</w><h>150</h></coordinates><panel_attributes>_Rapport_
+--
+id : int
+titre : string
+type : string
+fichier : string
+dateGeneration : datetime
+genereParId : int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>255</x><y>360</y><w>195</w><h>75</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=0..*
+destinataire</panel_attributes><additional_attributes>110;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>450</y><w>135</w><h>195</h></coordinates><panel_attributes>lt=-
+m1=0..*
+m2=1
+     lié à</panel_attributes><additional_attributes>70;100;10;100;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>750</x><y>165</y><w>75</w><h>420</h></coordinates><panel_attributes>lt=-
+m1=0..*
+m2=1
+lié à</panel_attributes><additional_attributes>10;10;10;260</additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>135</y><w>150</w><h>195</h></coordinates><panel_attributes>lt=-
+m1=0..*
+m2=1
+appartient à</panel_attributes><additional_attributes>10;10;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>450</x><y>165</y><w>135</w><h>180</h></coordinates><panel_attributes>lt=-
+m1=0..*
+m2=1
+généré par</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>360</x><y>0</y><w>270</w><h>180</h></coordinates><panel_attributes>_Ticket_
+--
+id : int
+titre : string
+statut : string
+priorite : string
+equipementId : int
+assignedToId : int</panel_attributes><additional_attributes></additional_attributes></element></diagram>

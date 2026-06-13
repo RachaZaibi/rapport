@@ -3,455 +3,384 @@
 \vspace{1cm}
 \markboth{Chapitre 7 : Notifications, tableaux de bord et reporting}{}
 \label{chap:sprint3}
-\addcontentsline{toc}{chapter}{Chapitre 7 : Notifications, tableaux de bord et reporting}   
+\addcontentsline{toc}{chapter}{Chapitre 7 : Notifications, tableaux de bord et reporting}
 \setcounter{chapter}{7}
 \setcounter{section}{0}
-
 
 \localtableofcontents
 \newpage
 \pagebreak
-\section*{Introduction}
-\addcontentsline{toc}{section}{Introduction }
-Le Sprint 3 élève le système Parc Informatique FMM au niveau décisionnel et collaboratif en intégrant les services de notification, de reporting et de pilotage analytique. Cette étape est entièrement dédiée au web, avec une interface React, un backend Express, une base de données MySQL et Firebase FCM. Le focus porte sur la production de notifications temps réel, la mise à disposition d'un tableau de bord métier et l'export des données indispensables au suivi opérationnel.
 
+\section*{Introduction}
+\addcontentsline{toc}{section}{Introduction}
+
+La mise en production d'un système de gestion de parc informatique ne saurait se limiter à la seule capacité de stocker et de manipuler des données : elle exige également de fournir aux différents acteurs les instruments de pilotage leur permettant d'anticiper les défaillances, de mesurer les performances et de réagir en temps réel aux événements critiques. C'est précisément l'ambition du troisième sprint, qui élève la plateforme \textit{Parc Informatique FMM} à une dimension décisionnelle et collaborative.
+
+Ce sprint introduit trois axes fonctionnels complémentaires et indissociables. Le premier concerne la \textbf{notification en temps réel} : tout événement significatif — déclaration d'un incident, prise en charge par un technicien, résolution d'une panne — déclenche automatiquement une alerte push distribuée par Firebase Cloud Messaging (FCM) aux parties prenantes concernées. Le deuxième axe porte sur les \textbf{tableaux de bord analytiques} : des interfaces différenciées par profil (administrateur, technicien, utilisateur final) agrègent et restituent les indicateurs clés de performance (KPI) calculés dynamiquement à partir des données persistées en base MySQL. Le troisième axe couvre la \textbf{génération de rapports} : des bilans périodiques exportables aux formats PDF et Excel permettent d'alimenter les processus d'audit, de suivi budgétaire et de planification stratégique de l'établissement.
+
+L'architecture technique retenue pour ce sprint prolonge sans rupture les choix effectués lors des itérations précédentes : React assure l'interactivité côté client, Express pilote la logique applicative côté serveur, MySQL assure la persistance relationnelle, et Firebase FCM sert de passerelle de notification. Ensemble, ces composants forment un écosystème cohérent, scalable et maintenable, propre à répondre aux exigences opérationnelles du SmartLab de la Faculté de Médecine de Monastir.
+
+% =========================================================
 \section{Objectifs du Sprint 3}
-Les objectifs du Sprint 3 se concentrent sur :
+\label{sec:objectifs_sprint3}
+
+Les objectifs de ce sprint ont été définis en concertation avec les parties prenantes du projet — administrateurs du SmartLab, techniciens de maintenance et utilisateurs finaux — afin d'aligner les livrables sur les besoins réels de l'institution. Quatre grandes orientations structurent cette itération :
+
 \begin{itemize}
-    \item l'implémentation des notifications Firebase FCM pour les événements critiques du ticketing ;
-    \item la construction d'un tableau de bord Web consolidant les indicateurs du parc ;
-    \item la génération de rapports métier et l'export des statistiques ;
-    \item l'optimisation des performances API et frontend pour un accès rapide et participatif.
+    \item \textbf{Déploiement du canal de notification FCM :} intégrer Firebase Cloud Messaging dans le pipeline de traitement des événements métier afin de garantir une communication instantanée et fiable entre le système et ses utilisateurs, indépendamment du support (navigateur de bureau, terminal mobile) ;
+
+    \item \textbf{Conception et développement des tableaux de bord :} offrir à chaque profil d'utilisateur une interface de pilotage personnalisée, centralisant les indicateurs clés de performance et permettant une lecture rapide et efficace de l'état opérationnel du parc ;
+
+    \item \textbf{Module de reporting et d'export :} permettre la génération à la demande de rapports d'activité structurés au format PDF ou Excel, consolidant les données historiques nécessaires aux audits et à la planification de la maintenance préventive ;
+
+    \item \textbf{Optimisation des performances :} réduire les temps de réponse de l'API Express et améliorer la fluidité du rendu React, notamment pour les vues impliquant de grands volumes de données ou des calculs d'agrégation complexes.
 \end{itemize}
 
 \subsection*{Sprint Backlog}
 \label{sec:sprint_backlog3}
-Le Sprint Backlog pour le Sprint 3 est structuré autour des tâches prioritaires visant à atteindre les objectifs fixés. Il comprend les éléments suivants :
+
+Le tableau~\ref{tab:sprint_backlog3} consigne les tâches retenues pour ce sprint, leur niveau de priorité, l'estimation de la charge associée et les critères d'acceptation qui ont guidé la validation fonctionnelle.
+
 \begin{table}[H]
     \centering
-    \caption{Sprint Backlog pour le sprint 3}
-    \begin{tabular}{|p{5cm}|c|c|p{5cm}|}
+    \caption{Sprint Backlog — Sprint 3 : Notifications, tableaux de bord et reporting}
+    \begin{tabular}{|p{4.8cm}|c|c|p{5.2cm}|}
         \hline
-        \textbf{Tâche} & \textbf{Priorité} & \textbf{Estimation (h)} & \textbf{Critères d'acceptation} \\ \hline
-        Optimisation des performances du système & Haute & 8 & Réduction de la latence des requêtes et fluidité du dashboard \\ \hline
-        Construction du tableau de bord et des indicateurs & Haute & 12 & Dashboard accessible, indicateurs clés disponibles, filtres fonctionnels \\ \hline
-        Génération de rapports et export de données & Haute & 6 & Rapports générés en PDF/Excel, export de statistiques viable \\ \hline
-        Renforcement des notifications FCM et des événements métier & Haute & 4 & Notifications envoyées lors de la création et de l'évolution des tickets \\ \hline
-        Validation fonctionnelle et régression web & Moyenne & 5 & Scénarios critiques validés, performance maintenue \\ \hline
+        \textbf{Tâche} & \textbf{Priorité} & \textbf{Charge (h)} & \textbf{Critères d'acceptation} \\ \hline
+        Intégration Firebase FCM pour notifications push & Haute & 4 & Notification reçue dans les 2 s après l'événement déclencheur \\ \hline
+        Construction du tableau de bord multi-rôles & Haute & 12 & Dashboard accessible, KPI calculés dynamiquement, filtres fonctionnels \\ \hline
+        Module de génération de rapports PDF/Excel & Haute & 6 & Rapport généré correctement, URL de téléchargement renvoyée \\ \hline
+        Export CSV des statistiques & Haute & 3 & Fichier exporté sans perte de données, encodage UTF-8 respecté \\ \hline
+        Optimisation backend et frontend & Haute & 8 & Latence API~$<$~150~ms pour les endpoints critiques \\ \hline
+        Validation fonctionnelle et régression & Moyenne & 5 & Scénarios critiques validés, aucune régression introduite \\ \hline
     \end{tabular}
     \label{tab:sprint_backlog3}
 \end{table}
 
+% =========================================================
 \section{Architecture et modélisation UML du Sprint 3}
 \label{sec:uml_sprint3}
-Le Sprint 3 introduit un sous-système analytique et de notification dont l'objectif est de transformer les événements métiers en informations décisionnelles. Les acteurs restent l'Administrateur, le Technicien et l'Utilisateur. Le système conserve sa structure web : React pour l'expérience utilisateur, Express pour le traitement applicatif, MySQL pour la persistance et Firebase FCM pour la distribution des notifications.
 
-\subsubsection{Clarification : Modèles réels vs composants calculés}
+Le Sprint 3 n'introduit pas de rupture architecturale, mais enrichit le modèle de données et les flux comportementaux du système par l'ajout de nouveaux acteurs logiciels (Firebase FCM) et de nouvelles responsabilités applicatives (agrégation statistique, génération documentaire). La modélisation UML ci-après en rend compte de manière formelle et exhaustive.
 
-Avant de présenter la modélisation, une clarification importante s'impose. Le Sprint 3 combine deux approches complémentaires :
+\subsubsection*{Distinctions conceptuelles : entités persistées vs. composants calculés}
+
+Avant d'aborder les diagrammes, il est indispensable de clarifier une distinction architecturale fondamentale, qui conditionne la conception du modèle de données et les choix d'implémentation du backend.
+
 \begin{itemize}
-    \item \textbf{Modèles persistants} : Utilisateur, Équipement, Ticket, Intervention, Maintenance, Logiciel, Licence, Installation, Rapport, Transfer, Assignment (identiques aux sprints précédents).
-    
-    \item \textbf{Composants calculés en temps réel} : Le tableau de bord et les statistiques ne disposent pas de table dédiée. Au lieu de cela, le backend agrège les données pertinentes (tickets, maintenances, équipements) à la demande via les endpoints \texttt{GET /api/dashboard} et \texttt{GET /api/statistics}. Cette approche garantit des données toujours à jour sans surcharge de persistance.
-    
-    \item \textbf{Notifications} : Les notifications ne créent pas d'entité persistante. Firebase FCM envoie des notifications push directement aux dispositifs via les tokens stockés dans le champ \texttt{fcmToken} du modèle Utilisateur. Les événements métier (création de ticket, changement de statut) déclenchent l'envoi de notifications sans journalisation persistante des notifications elles-mêmes.
+    \item \textbf{Entités relationnelles persistées :} le schéma MySQL du système comprend les tables \texttt{Utilisateur}, \texttt{Equipement}, \texttt{Ticket}, \texttt{Intervention}, \texttt{Maintenance}, \texttt{Logiciel}, \texttt{Licence}, \texttt{Installation}, \texttt{Rapport}, \texttt{Transfert} et \texttt{Affectation}. Ces entités sont les seules à faire l'objet d'une persistance physique. Elles constituent le référentiel de données canonique du système.
+
+    \item \textbf{Indicateurs analytiques calculés à la volée :} par choix délibéré d'optimisation, ni la table \texttt{Statistique} ni la table \texttt{Dashboard} ne sont persistées. Les KPI du tableau de bord sont recalculés dynamiquement par le backend Express à chaque appel des endpoints \texttt{GET /api/dashboard} et \texttt{GET /api/statistics}, via des requêtes SQL d'agrégation. Cette approche garantit la fraîcheur absolue des données et évite toute désynchronisation entre la réalité de la base et les indicateurs affichés.
+
+    \item \textbf{Notifications push éphémères sans état :} le sous-système de notification repose sur une architecture événementielle sans stockage d'historique. Lorsqu'un événement métier se produit, le backend récupère le jeton FCM de l'utilisateur ciblé (champ \texttt{fcmToken} de la table \texttt{Utilisateur}) et sollicite directement la passerelle Firebase. Aucune table de notification n'est maintenue en base, ce qui allège considérablement la charge de la couche de persistance.
 \end{itemize}
 
-\subsection{Diagramme de classes Sprint 3}
-Le diagramme de classes du Sprint 3 formalise les entités de notification et de reporting. Il montre comment les événements métier déclenchent des notifications Firebase FCM, comment le backend calcule dynamiquement les indicateurs du dashboard et comment les rapports sont générés à la demande et stockés en base de données.
+\subsection{Diagramme de classes du Sprint 3}
+
+Le diagramme de classes présenté à la Figure~\ref{fig:class_diagram_sprint3} formalise le modèle objet complet du Sprint 3. On y distingue clairement les entités persistées — notamment \texttt{Rapport}, \texttt{FCMToken} et les classes héritées des sprints précédents — des composants logiques calculés à la volée tels que \texttt{Dashboard} et \texttt{Statistique}. Les associations modélisées reflètent les dépendances réelles entre ces classes : une \texttt{Notification} est systématiquement liée à un \texttt{Utilisateur} destinataire et à l'entité métier qui l'a déclenchée (un \texttt{Ticket} ou un \texttt{Equipement}), tandis qu'un \texttt{Rapport} est toujours rattaché à l'utilisateur qui en a initié la génération. Ce diagramme sert de base contractuelle entre les développeurs frontend et backend pour l'implémentation des interfaces de l'API REST.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{chapter7/class_diagram_sprint3.png}
-    \caption{Diagramme de classes du Sprint 3}
+    \caption{Diagramme de classes du Sprint 3 — entités de notification et de reporting}
     \label{fig:class_diagram_sprint3}
 \end{figure}
 
-% \begin{lstlisting}[basicstyle=\ttfamily\footnotesize]
-% @startuml
-% class Utilisateur {
-%   +id : UUID
-%   +nom : string
-%   +email : string
-%   +role : string
-% }
-% class Equipement {
-%   +id : UUID
-%   +reference : string
-%   +designation : string
-%   +etat : string
-% }
-% class Ticket {
-%   +id : UUID
-%   +titre : string
-%   +statut : string
-%   +priorite : string
-%   +equipementId : UUID
-%   +assignedToId : UUID
-% }
-% class Notification {
-%   +id : UUID
-%   +type : string
-%   +message : string
-%   +destinataireId : UUID
-%   +entiteId : UUID
-%   +statut : string
-%   +envoyeLe : datetime
-% }
-% class FCMToken {
-%   +id : UUID
-%   +userId : UUID
-%   +token : string
-%   +plateforme : string
-%   +dernierUsage : datetime
-% }
-% class Rapport {
-%   +id : UUID
-%   +titre : string
-%   +type : string
-%   +fichier : string
-%   +dateGeneration : datetime
-%   +genereParId : UUID
-% }
-% class Statistique {
-%   +id : UUID
-%   +nom : string
-%   +valeur : numeric
-%   +periode : string
-% }
-% class Dashboard {
-%   +id : UUID
-%   +nom : string
-%   +dernierCalcul : datetime
-% }
-% Notification --> Utilisateur : destinataire
-% Notification --> Ticket : lie_a
-% Notification --> Equipement : lie_a
+\subsection{Diagrammes de séquence du Sprint 3}
 
-% FCMToken --> Utilisateur : appartient_a
+Les diagrammes de séquence ci-après décrivent les interactions dynamiques entre les acteurs et les composants du système lors de l'exécution des scénarios fonctionnels clés du Sprint 3. Ils constituent un outil de documentation de référence et un support de validation lors des revues de sprint.
 
-% Rapport --> Utilisateur : genere_par
-
-% Statistique --> Dashboard : alimente
-
-% Dashboard --> Ticket : agrege
-% Dashboard --> Equipement : agrege
-% @enduml
-% \end{lstlisting}
-
-\subsection{Diagrammes de séquence Sprint 3}
-Cette section décrit les scénarios dynamiques de notification et de reporting, en détaillant les échanges entre le frontend React, le backend Express, MySQL et Firebase FCM.
-
+% ---------------------------------------------------------
 \subsubsection{Envoi d'une notification lors de la création d'un ticket}
-Ce diagramme illustre le processus d'envoi d'une notification push lorsqu'un ticket est créé. Le backend enregistre le ticket dans MySQL, puis récupère les utilisateurs concernés (administrateur et techniciens assignés). Pour chacun d'eux, le backend émet une requête vers Firebase FCM avec leur token enregistré. Firebase pousse la notification vers les appareils cibles connectés au moment de l'événement. Aucune table de notification n'est créée : le système fonctionne en broadcast vers les tokens FCM stockés.
+
+La Figure~\ref{fig:sequence_notification_creation_ticket} modélise le flux complet déclenché par la création d'un ticket d'incident. Ce scénario est l'un des plus critiques du système : il garantit qu'aucun incident n'est ignoré et que les techniciens compétents sont alertés sans délai.
+
+Le processus débute lorsque l'utilisateur soumet le formulaire de déclaration d'incident depuis l'interface React. La requête \texttt{POST /api/tickets}, accompagnée du jeton JWT attestant l'authentification, est transmise au serveur Express. Celui-ci valide les données reçues (vérification des champs obligatoires, contrôle de l'existence de l'équipement référencé), puis insère le ticket dans la base MySQL via Sequelize. Une fois la confirmation de persistance reçue, le backend identifie l'ensemble des destinataires éligibles à la notification — typiquement, les administrateurs du système et le technicien assigné — en interrogeant la table \texttt{Utilisateur}. Pour chaque destinataire, le jeton FCM enregistré est extrait et transmis à la passerelle Firebase Cloud Messaging. FCM prend en charge la livraison push vers les terminaux cibles. L'ensemble de ce traitement asynchrone est non bloquant pour la requête principale : la réponse \texttt{201 Created} est renvoyée au client React dès la confirmation de la persistance du ticket, indépendamment de la livraison effective des notifications.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{chapter7/sequence_notification_creation_ticket.png}
-    \caption{Diagramme de séquence d'envoi d'une notification lors de la création d'un ticket}
+    \caption{Diagramme de séquence — notification push lors de la création d'un ticket}
     \label{fig:sequence_notification_creation_ticket}
 \end{figure}
 
-% \begin{lstlisting}[basicstyle=\ttfamily\footnotesize]
-% @startuml
-% actor Utilisateur
-% participant Frontend
-% participant Backend
-% database MySQL
-% participant Firebase
-% Utilisateur -> Frontend : cree le ticket
-% Frontend -> Backend : POST /api/tickets + JWT
-% Backend -> MySQL : INSERT Ticket
-% MySQL --> Backend : ticket cree
-% Backend -> Backend : creer Notification
-% Backend -> MySQL : INSERT Notification
-% MySQL --> Backend : notification persistee
-% Backend -> Firebase : envoi FCM
-% Firebase --> Backend : succes
-% Backend --> Frontend : 201 Created
-% @enduml
-% \end{lstlisting}
-
+% ---------------------------------------------------------
 \subsubsection{Notification lors d'un changement de statut}
-Ce diagramme représente la mise à jour d'un ticket et l'émission d'une notification associée. Lorsqu'un technicien change le statut d'un ticket (par ex., passage en cours de traitement ou résolu), le backend persiste le nouvel état dans MySQL, récupère l'utilisateur ayant créé le ticket, et envoie une notification Firebase FCM au token de cet utilisateur. Comme pour la création de ticket, aucune entité Notification n'est persistée.
+
+La Figure~\ref{fig:sequence_notification_statut} illustre le mécanisme de notification déclenché lors de la mise à jour du statut d'un ticket par un technicien. Ce flux constitue un vecteur de communication essentiel entre les intervenants et les demandeurs, garantissant une transparence complète sur l'avancement des incidents.
+
+Lorsque le technicien modifie l'état d'un ticket — passage de \textit{ouvert} à \textit{en cours}, puis à \textit{résolu} — la requête \texttt{PUT /api/tickets/\{id\}/status} est envoyée au backend. Après authentification du porteur de la requête (vérification du jeton JWT et contrôle du rôle), Express applique la transition d'état en mettant à jour la colonne \texttt{statut} de la table \texttt{Ticket}. Le backend identifie ensuite le créateur du ticket — qui est l'utilisateur le plus directement concerné par cette évolution — et récupère son jeton FCM. La notification push est composée avec un message contextuel indiquant le nouveau statut et envoyée via Firebase FCM. Le créateur reçoit ainsi en temps réel une information précise sur l'avancement de sa demande, sans avoir à consulter manuellement l'interface. Ce mécanisme renforce la confiance des utilisateurs dans le système et réduit significativement le nombre de relances inutiles auprès du service technique.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{chapter7/sequence_notification_statut.png}
-    \caption{Diagramme de séquence de notification lors d'un changement de statut}
+    \caption{Diagramme de séquence — notification push lors d'un changement de statut de ticket}
     \label{fig:sequence_notification_statut}
 \end{figure}
 
-% \begin{lstlisting}[basicstyle=\ttfamily\footnotesize]
-% @startuml
-% actor Technicien
-% participant Frontend
-% participant Backend
-% database MySQL
-% participant Firebase
-% Technicien -> Frontend : modifie statut ticket
-% Frontend -> Backend : PUT /api/tickets/{id}/status + JWT
-% Backend -> MySQL : UPDATE Ticket
-% MySQL --> Backend : statut modifié
-% Backend -> Backend : créer Notification
-% Backend -> MySQL : INSERT Notification
-% Backend -> Firebase : envoi FCM
-% Firebase --> Backend : succès
-% Backend --> Frontend : 200 OK
-% @enduml
-% \end{lstlisting}
-
-
+% ---------------------------------------------------------
 \subsubsection{Consultation du tableau de bord}
-Ce diagramme présente la consultation du tableau de bord web par un administrateur. Le backend reçoit la requête GET /api/dashboard, puis agrège les données de MySQL en calculant dynamiquement les indicateurs clés : nombre de tickets ouverts/fermés/en cours, taux de résolution, équipements en panne, maintenances à venir, etc. Ces indicateurs sont construits chaque fois que le dashboard est consulté, sans table Dashboard persistante. Les données sont retournées en JSON et affichées par le frontend React.
+
+La Figure~\ref{fig:sequence_consultation_dashboard} détaille le flux de données qui sous-tend l'affichage du tableau de bord analytique. Ce scénario illustre le parti pris architectural central du Sprint 3 : le calcul dynamique des KPI, plutôt que leur stockage redondant.
+
+Lorsqu'un administrateur accède au tableau de bord, le frontend React émet une requête \texttt{GET /api/dashboard} authentifiée. Le backend Express intercepte cette requête, vérifie les droits d'accès, puis exécute une série de requêtes SQL d'agrégation sur la base MySQL : comptage des tickets par statut (\texttt{GROUP BY statut}), calcul du taux de disponibilité des équipements, identification des maintenances planifiées à venir. Ces calculs, bien qu'impliquant plusieurs jointures, sont optimisés par des index judicieusement positionnés sur les clés étrangères. Le serveur consolide les résultats en un objet JSON structuré et le retourne au frontend. React parse ce payload et injecte les données dans les composants graphiques (cartes KPI, histogrammes, jauges), offrant à l'administrateur une vision instantanée et fiable de l'état opérationnel complet du parc.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{chapter7/sequence_consultation_dashboard.png}
-    \caption{Diagramme de séquence de consultation du tableau de bord}
+    \caption{Diagramme de séquence — consultation du tableau de bord analytique}
     \label{fig:sequence_consultation_dashboard}
 \end{figure}
 
-% \begin{lstlisting}[basicstyle=\ttfamily\footnotesize]
-% @startuml
-% actor Administrateur
-% participant Frontend
-% participant Backend
-% database MySQL
-% Administrateur -> Frontend : consulte le dashboard
-% Frontend -> Backend : GET /api/dashboard + JWT
-% Backend -> MySQL : SELECT indicateurs, tickets, maintenances
-% MySQL --> Backend : resultats consolides
-% Backend --> Frontend : JSON dashboard
-% Frontend --> Administrateur : affichage des indicateurs
-% @enduml
-% \end{lstlisting}
-
+% ---------------------------------------------------------
 \subsubsection{Génération d'un rapport}
-Ce scénario décrit la génération d'un rapport métier. Le backend extrait les données, produit un fichier PDF ou Excel et retourne le lien de téléchargement.
+
+La Figure~\ref{fig:sequence_generation_rapport} modélise le processus de génération à la demande d'un rapport d'activité. Ce flux est décisif pour les fonctions de contrôle de gestion et d'audit interne de l'établissement.
+
+À l'initiative de l'administrateur, le frontend soumet une requête \texttt{POST /api/reports} en précisant les paramètres du rapport souhaité (type, période, entités concernées). Le backend Express interroge MySQL afin d'extraire l'ensemble des données historiques correspondant aux critères définis — historique des tickets, journal des interventions, état de l'inventaire sur la période. Ces données brutes sont ensuite injectées dans un moteur de génération documentaire : PDFKit pour les sorties au format PDF, ExcelJS pour les exports tabulaires. Le fichier produit est sauvegardé sur le serveur et un enregistrement est créé dans la table \texttt{Rapport}, permettant d'en assurer la traçabilité. L'URL de téléchargement sécurisée est enfin renvoyée au frontend, qui la met à disposition de l'utilisateur pour consultation ou diffusion.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{chapter7/sequence_generation_rapport.png}
-    \caption{Diagramme de séquence de génération d'un rapport}
+    \caption{Diagramme de séquence — génération d'un rapport d'activité PDF/Excel}
     \label{fig:sequence_generation_rapport}
 \end{figure}
 
-% \begin{lstlisting}[basicstyle=\ttfamily\footnotesize]
-% @startuml
-% actor Administrateur
-% participant Frontend
-% participant Backend
-% database MySQL
-
-% Administrateur -> Frontend : demande_generation_rapport
-% Frontend -> Backend : POST /api/reports + JWT
-% Backend -> MySQL : SELECT donnees_report
-% MySQL --> Backend : donnees_recues
-
-% Backend -> Backend : generate_PDF_or_Excel
-
-% Backend -> MySQL : INSERT Rapport
-% MySQL --> Backend : rapport_cree
-% Backend --> Frontend : URL du rapport
-% @enduml
-% \end{lstlisting}
-
+% ---------------------------------------------------------
 \subsubsection{Export des statistiques}
-Ce diagramme montre comment le système prépare un fichier d'export statistique. Lorsqu'un utilisateur demande l'export via GET /api/statistics/export, le backend requête MySQL pour récupérer les données brutes (équipements, tickets, maintenances), effectue les agrégations statistiques en mémoire (sans table Statistique), puis génère un fichier CSV ou Excel. Le fichier est stocké en base de données via le modèle Rapport et un lien de téléchargement est retourné au frontend.
+
+La Figure~\ref{fig:sequence_export_statistics} présente le mécanisme d'export des statistiques brutes du système. Ce flux se distingue de la génération de rapports par sa vocation plus analytique : il s'agit ici de fournir les données agrégées dans un format exploitable par des outils tiers (tableurs, outils de Business Intelligence).
+
+À la réception de la requête \texttt{GET /api/statistics/export}, le backend effectue les agrégations nécessaires directement en mémoire vive, sans créer de table \texttt{Statistique} intermédiaire en base. Les résultats — répartition des pannes par catégorie d'équipement, évolution mensuelle du nombre de tickets, taux de résolution par technicien — sont mis en forme au format CSV ou Excel. Un enregistrement de traçabilité est créé dans la table \texttt{Rapport} et le fichier est mis à disposition du client. Cette approche garantit des données toujours à jour, sans surcharge de la base de données par des tables de cache redondantes.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{chapter7/sequence_export_statistics.png}
-    \caption{Diagramme de séquence d'export des statistiques}
+    \caption{Diagramme de séquence — export des statistiques du parc informatique}
     \label{fig:sequence_export_statistics}
 \end{figure}
 
-% \begin{lstlisting}[basicstyle=\ttfamily\footnotesize]
-% @startuml
-% actor Utilisateur
-% participant Frontend
-% participant Backend
-% database MySQL
-% Utilisateur -> Frontend : demande export statistique
-% Frontend -> Backend : GET /api/statistics/export + JWT
-% Backend -> MySQL : SELECT statistiques
-% MySQL --> Backend : resultats
-% Backend -> Backend : generer CSV/Excel
-% Backend --> Frontend : fichier export
-% Frontend --> Utilisateur : telechargement
-% @enduml
-% \end{lstlisting}
+% =========================================================
+\section{Tableaux de bord et interfaces utilisateur}
+\label{sec:dashboards}
 
-\subsubsection{Consultation des indicateurs du parc}
-Ce diagramme formalise la restitution des indicateurs clés du parc informatique. Lorsqu'un administrateur consulte les métriques via GET /api/metrics, le backend agrège les données critiques : taux d'équipement disponible/en panne/en réparation, nombre de tickets ouverts, priorité moyenne des tickets, maintenances planifiées et performance des interventions (délai moyen de clôture). Ces calculs s'effectuent dynamiquement sans table Statistique persistante, garantissant que les indicateurs reflètent toujours l'état actuel du système.
+L'interface web développée au cours du Sprint 3 constitue la vitrine opérationnelle de l'ensemble du système. Elle traduit, sous une forme visuelle intuitive et interactive, la richesse du modèle de données construit lors des itérations précédentes. La conception de cette couche de présentation a été guidée par trois principes fondamentaux : la \textbf{personnalisation par rôle} (chaque profil accède à une vue adaptée à ses responsabilités), la \textbf{lisibilité immédiate} (les indicateurs critiques sont mis en avant visuellement, sans nécessiter d'interprétation préalable) et la \textbf{réactivité} (les données sont chargées de manière asynchrone pour ne pas pénaliser la navigation).
+
+% ---------------------------------------------------------
+\subsection{Tableau de bord administrateur}
+
+Le tableau de bord administrateur, illustré par la Figure~\ref{fig:admin_dash}, est l'interface de pilotage la plus complète du système. Conçu pour l'administrateur du SmartLab, il agrège l'ensemble des indicateurs stratégiques du parc informatique sur un écran unique, permettant une prise de décision rapide et éclairée.
+
+La partie supérieure de l'interface présente quatre cartes KPI synthétiques : le nombre total d'équipements recensés dans l'inventaire, le nombre de tickets d'incident actuellement ouverts, le nombre d'interventions planifiées pour la semaine en cours, et le taux global de disponibilité du parc. Ces métriques sont calculées à chaque chargement de la page par des requêtes SQL d'agrégation exécutées côté serveur, garantissant leur exactitude absolue à tout moment.
+
+La section centrale offre une représentation graphique de la distribution des équipements par statut opérationnel (fonctionnel, en panne, en maintenance, réformé) et par catégorie matérielle (ordinateurs portables, postes fixes, imprimantes, serveurs, équipements réseau). Ces visualisations, réalisées avec la bibliothèque Chart.js intégrée à React, permettent à l'administrateur d'identifier immédiatement les catégories les plus touchées par des pannes ou les périodes de forte demande d'intervention.
+
+La partie inférieure présente la liste des derniers tickets déclarés, avec leur statut, leur priorité et le technicien assigné, ainsi qu'un calendrier des maintenances préventives à venir. L'administrateur peut depuis cette interface naviguer vers le détail de n'importe quelle entité en un seul clic, rendant le tableau de bord à la fois un outil de supervision globale et un point d'entrée vers la gestion opérationnelle fine.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{chapter7/sequence_consultation_indicateurs.png}
-    \caption{Diagramme de séquence de consultation des indicateurs du parc}
-    \label{fig:sequence_consultation_indicateurs}
+    \includegraphics[width=1\textwidth]{chapter7/screens/AdminDash.png}
+    \caption{Dashboard administrateur — vue globale des KPI et de l'état opérationnel du parc}
+    \label{fig:admin_dash}
 \end{figure}
 
-% \begin{lstlisting}[basicstyle=\ttfamily\footnotesize]
-% @startuml
-% actor Administrateur
-% participant Frontend
-% participant Backend
-% database MySQL
-% Administrateur -> Frontend : consulte indicateurs parc
-% Frontend -> Backend : GET /api/metrics + JWT
-% Backend -> MySQL : SELECT metriques consolidees
-% MySQL --> Backend : donnees
-% Backend --> Frontend : JSON indicateurs
-% Frontend --> Administrateur : affichage indicateurs
-% @enduml
-% \end{lstlisting}
+% ---------------------------------------------------------
+\subsection{Tableau de bord utilisateur}
 
-\section{Tableaux de bord et reporting Web}
-L'interface web du Sprint 3 fournit un tableau de bord centralisé regroupant les principaux indicateurs de santé du parc, les tickets critiques, les maintenances planifiées, les équipements hors service et les taux de résolution. Le dashboard est conçu pour être consulté par l'administrateur et le responsable technique, avec des filtres sur les périodes, les catégories d'équipements et les priorités. Les indicateurs sont calculés en temps réel lors de chaque consultation, ce qui garantit des données toujours cohérentes avec l'état de la base de données.
+La Figure~\ref{fig:user_dash} présente l'interface destinée aux utilisateurs finaux du parc informatique — typiquement, les enseignants-chercheurs, personnels administratifs et étudiants en thèse utilisant les ressources informatiques du SmartLab. La conception de cette interface obéit à un principe d'épuration maximale : seules les informations directement utiles à cet acteur sont affichées, à l'exclusion de toute donnée d'administration ou de configuration qui relève de responsabilités distinctes.
 
+L'écran principal présente à l'utilisateur la liste des équipements qui lui sont personnellement affectés, avec leur état de fonctionnement courant. Un indicateur visuel coloré signale immédiatement si un équipement est opérationnel, en attente de maintenance ou temporairement indisponible. L'utilisateur peut, depuis cette vue, initier une déclaration d'incident en un minimum de clics, le formulaire étant pré-rempli avec les informations de l'équipement sélectionné afin de réduire la friction à la saisie.
+
+La section de droite liste les tickets ouverts par l'utilisateur, avec leur statut courant et la date de dernière mise à jour. Ce suivi transparent de l'avancement des demandes élimine le besoin de relances auprès du service technique et renforce la confiance de l'utilisateur dans la fiabilité du processus de maintenance. Un journal des notifications reçues (alertes de prise en charge, confirmation de résolution) complète cette vue.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{chapter7/screens/UserDash.png}
+    \caption{Dashboard utilisateur — suivi des équipements affectés et des demandes d'intervention}
+    \label{fig:user_dash}
+\end{figure}
+
+% ---------------------------------------------------------
+\subsection{Tableau de bord technicien}
+
+La Figure~\ref{fig:tech_dash} illustre l'interface de travail quotidien du technicien de maintenance. Contrairement aux tableaux de bord précédents qui s'inscrivent dans une logique de supervision et de suivi, celui-ci est résolument orienté vers l'action et l'efficacité opérationnelle sur le terrain.
+
+La vue principale liste l'ensemble des tickets assignés au technicien connecté, triés par ordre de priorité décroissante. Chaque ticket est présenté avec les informations essentielles à son traitement : désignation et localisation physique de l'équipement concerné (bloc, département, salle), description de la panne signalée par l'utilisateur, date de création et délai cible de résolution. Un code couleur intuitif — rouge pour les tickets critiques, orange pour les priorités hautes, vert pour les interventions planifiées — permet au technicien de hiérarchiser immédiatement son plan de travail de la journée.
+
+Le technicien peut directement modifier le statut d'un ticket depuis cette interface (passage à \textit{en cours} lors de la prise en charge, puis à \textit{résolu} à l'issue de l'intervention), ce qui déclenche automatiquement la notification push vers l'utilisateur demandeur. Une section dédiée recense les maintenances préventives planifiées pour la semaine, permettant une organisation proactive du travail et évitant les conflits d'agenda entre interventions correctives et préventives.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{chapter7/screens/TechDash.png}
+    \caption{Dashboard technicien — file d'attente des interventions classées par priorité}
+    \label{fig:tech_dash}
+\end{figure}
+
+% =========================================================
+\section{Modules de gestion du parc informatique}
+\label{sec:modules_gestion}
+
+Au-delà des tableaux de bord de supervision, le Sprint 3 consolide et enrichit les modules de gestion opérationnelle introduits lors des sprints précédents. Ces modules constituent le cœur fonctionnel du système, permettant la gestion complète du cycle de vie des actifs informatiques de la FMM.
+
+% ---------------------------------------------------------
+\subsection{Gestion de l'inventaire et des équipements}
+
+\subsubsection{Inventaire des équipements}
+
+La Figure~\ref{fig:admin_equipment} présente l'interface centrale de gestion de l'inventaire informatique. Cette vue est accessible exclusivement à l'administrateur du système et constitue le référentiel principal de l'ensemble du parc matériel de la FMM.
+
+L'interface adopte une présentation tabulaire enrichie qui liste l'intégralité des équipements enregistrés dans la base de données, avec leurs attributs essentiels : référence constructeur, désignation, catégorie matérielle, état opérationnel, localisation physique (bloc et salle), et utilisateur assigné. Un système de filtres multicritères dynamiques permet de restreindre l'affichage selon n'importe quelle combinaison de ces attributs — par exemple, afficher uniquement les ordinateurs portables du Département de Biologie Médicale dont le statut est \textit{en panne}. Cette capacité de filtrage précise est particulièrement précieuse lors des inventaires physiques périodiques ou lors de la préparation de rapports sectoriels.
+
+Depuis chaque ligne du tableau, l'administrateur dispose d'un menu d'actions contextuelles permettant de consulter la fiche détaillée de l'équipement, d'initier un transfert vers une autre localisation, de modifier ses attributs ou de le retirer de l'inventaire actif. La liste intègre également une pagination intelligente qui maintient la fluidité de l'interface même pour des inventaires de plusieurs centaines d'équipements.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{chapter7/screens/AdminEquipment.png}
+    \caption{Interface de gestion de l'inventaire — liste filtrée des équipements du parc}
+    \label{fig:admin_equipment}
+\end{figure}
+
+\subsubsection{Enregistrement d'un nouvel équipement}
+
+La Figure~\ref{fig:new_equipment} présente le formulaire d'enregistrement d'un nouvel actif informatique dans le système. Ce formulaire est le point d'entrée de tout équipement dans le cycle de vie géré par la plateforme, et sa conception reflète le souci de rigueur et de complétude qui caractérise l'ensemble du système.
+
+Le formulaire est structuré en sections thématiques pour faciliter la saisie et réduire les risques d'erreur : identification de l'équipement (référence, désignation, numéro de série, marque, modèle), caractéristiques techniques (catégorie, date d'acquisition, valeur d'achat, état initial), affectation organisationnelle (bloc, département, salle, utilisateur responsable) et configuration logicielle (systèmes d'exploitation et logiciels associés, gérés par liaison avec les entités \texttt{Logiciel} et \texttt{Licence}).
+
+Chaque champ est soumis à des validations côté client et côté serveur : l'unicité du numéro de série est vérifiée en base de données avant l'insertion, la cohérence de la localisation (la salle doit appartenir au département, lui-même rattaché au bloc sélectionné) est contrôlée par le backend. À la validation du formulaire, le backend Express persiste l'entité \texttt{Equipement} et déclenche immédiatement la génération du QR code associé, encodant l'identifiant UUID unique de l'équipement. Ce QR code est stocké en base et rendu disponible pour impression et apposition physique sur la machine.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{chapter7/screens/NewEquiment.png}
+    \caption{Formulaire d'enregistrement d'un nouvel équipement avec génération automatique du QR code}
+    \label{fig:new_equipment}
+\end{figure}
+
+% ---------------------------------------------------------
+\subsection{Contrôle d'accès par rôles (RBAC)}
+
+La Figure~\ref{fig:permission_management} illustre le module de gestion des permissions, qui implémente un modèle de contrôle d'accès basé sur les rôles (\textit{Role-Based Access Control}, RBAC). Cette dimension sécuritaire est fondamentale dans un environnement institutionnel comme la FMM, où des données sensibles liées aux actifs matériels et aux identités des personnels sont traitées quotidiennement.
+
+Le système définit trois rôles primaires — \textit{Administrateur}, \textit{Technicien} et \textit{Utilisateur} — auxquels sont associées des matrices de permissions granulaires définissant les opérations autorisées sur chaque ressource de l'API (\texttt{GET}, \texttt{POST}, \texttt{PUT}, \texttt{DELETE} sur les endpoints \texttt{/api/equipements}, \texttt{/api/tickets}, \texttt{/api/users}, etc.). L'interface présentée dans la Figure~\ref{fig:permission_management} permet à l'administrateur de visualiser et de modifier cette matrice de permissions, d'assigner des rôles aux utilisateurs et, si nécessaire, de créer des profils personnalisés combinant des sous-ensembles de permissions pour des cas d'usage spécifiques.
+
+Le contrôle des accès est appliqué systématiquement par un middleware Express placé en amont de chaque route protégée. Ce middleware décode le jeton JWT présenté dans l'en-tête de la requête, extrait le rôle de l'utilisateur authentifié et vérifie sa conformité avec les permissions requises. En cas de violation, une réponse \texttt{403 Forbidden} est renvoyée immédiatement, sans que la logique métier sous-jacente soit exécutée.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{chapter7/screens/Permission.png}
+    \caption{Interface de gestion des permissions et rôles — modèle RBAC du système}
+    \label{fig:permission_management}
+\end{figure}
+
+% ---------------------------------------------------------
+\subsection{Analyse et reporting}
+
+\subsubsection{Module analytique du parc}
+
+La Figure~\ref{fig:analytics} présente le module d'analyse décisionnelle du parc informatique. Cette interface se distingue du tableau de bord opérationnel par sa vocation prospective : là où le tableau de bord offre une photographie instantanée de l'état du système, le module analytique propose une lecture des tendances historiques et des patterns d'utilisation sur des périodes configurables.
+
+Les visualisations disponibles couvrent plusieurs dimensions analytiques complémentaires. L'évolution mensuelle du volume de tickets sur les douze derniers mois permet d'identifier les périodes de forte sinistralité et d'anticiper les besoins en ressources humaines techniques. La distribution des pannes par catégorie d'équipement révèle les typologies matérielles les plus fragiles ou les plus sollicitées, orientant ainsi les décisions d'investissement et de renouvellement du parc. Le taux de résolution par technicien, exprimé en délai moyen de clôture (MTTR — \textit{Mean Time To Repair}), fournit une mesure objective de la performance individuelle des équipes techniques.
+
+Ces analyses sont produites par des requêtes SQL d'agrégation exécutées dynamiquement par le backend, sans recours à une couche de cache ou à une table de faits dédiée. Ce choix garantit que les résultats présentés reflètent toujours l'état réel de la base de données, sans décalage temporel.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{chapter7/screens/Analytics.png}
+    \caption{Module analytique — tendances de pannes et indicateurs de performance du parc}
+    \label{fig:analytics}
+\end{figure}
+
+\subsubsection{Génération et consultation des rapports}
+
+La Figure~\ref{fig:reports} illustre le module de génération et de consultation des rapports périodiques. Ce module répond à une exigence institutionnelle forte : la direction du SmartLab et les responsables administratifs de la FMM nécessitent des bilans formalisés, exportables et archivables, pour alimenter leurs processus de contrôle interne, de planification budgétaire et de communication avec les instances de tutelle.
+
+L'interface permet de configurer un rapport en sélectionnant le type souhaité (bilan mensuel de maintenance, état de l'inventaire, rapport d'incidents par département, performance des techniciens), la période couverte et le format de sortie (PDF pour les rapports de présentation, Excel pour les analyses tabulaires). Une fois la génération lancée, le système exécute les requêtes nécessaires, construit le document via les bibliothèques PDFKit ou ExcelJS selon le format choisi, et enregistre le fichier produit sur le serveur. L'entrée correspondante dans la table \texttt{Rapport} assure la traçabilité de chaque document généré (auteur, date, paramètres). L'interface liste l'ensemble des rapports déjà produits, avec un lien de téléchargement direct pour chacun d'eux, facilitant ainsi l'archivage et la diffusion.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{chapter7/screens/Rapports.png}
+    \caption{Module de reporting — génération de rapports périodiques PDF/Excel et consultation des archives}
+    \label{fig:reports}
+\end{figure}
+
+% ---------------------------------------------------------
+\subsection{Architecture physique et traçabilité des actifs}
+
+\subsubsection{Visualisation de l'architecture physique}
+
+La Figure~\ref{fig:architecture} représente la vue d'architecture physique du parc informatique, qui matérialise dans l'interface la hiérarchie organisationnelle réelle de la FMM : \textbf{Bloc} $\rightarrow$ \textbf{Département} $\rightarrow$ \textbf{Salle} $\rightarrow$ \textbf{Équipement}. Cette représentation arborescente est l'une des fonctionnalités les plus distinctives du système, car elle permet de contextualiser chaque actif informatique dans son environnement physique réel, bien au-delà d'un simple inventaire tabulaire.
+
+L'administrateur peut naviguer dans cet arbre en développant successivement les nœuds de la hiérarchie, jusqu'à accéder à la liste des équipements présents dans une salle donnée. Depuis chaque nœud, des métriques agrégées sont affichées : nombre total d'équipements dans le bloc ou le département, nombre d'équipements opérationnels vs. en panne, nombre de tickets ouverts associés à cette zone. Cette visualisation facilite grandement les audits physiques en permettant de préparer une tournée d'inspection de manière structurée, salle par salle.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{chapter7/screens/Architecture.png}
+    \caption{Vue d'architecture physique — hiérarchie Bloc/Département/Salle/Équipement de la FMM}
+    \label{fig:architecture}
+\end{figure}
+
+\subsubsection{Génération et affichage du QR code d'un équipement}
+
+La Figure~\ref{fig:view_qr} présente l'interface d'affichage du QR code associé à un équipement spécifique. Chaque actif informatique enregistré dans le système se voit attribuer un identifiant UUID unique, encodé dans un QR code généré par le backend au moment de l'enregistrement de l'équipement. Ce code à deux dimensions est le pivot du mécanisme d'identification physique rapide, qui constitue l'une des fonctionnalités les plus innovantes de la plateforme dans le contexte institutionnel tunisien.
+
+L'interface présente le QR code dans une résolution optimale pour l'impression, accompagné des informations d'identification essentielles de l'équipement (référence, désignation, localisation). Un bouton d'impression directe permet de générer une étiquette formatée à apposer sur la machine physique. Une fois cette étiquette collée sur l'équipement, il devient possible d'interagir instantanément avec sa fiche système sans aucune saisie manuelle, simplement en le scannant avec un terminal mobile.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{chapter7/screens/ViewQR.png}
+    \caption{Interface d'affichage et d'impression du QR code d'un équipement}
+    \label{fig:view_qr}
+\end{figure}
+
+\subsubsection{Scan du QR code sur le terrain}
+
+La Figure~\ref{fig:scan_qr} illustre l'interface de scan du QR code, conçue pour un usage mobile sur le terrain. Lorsqu'un technicien est appelé à intervenir sur une machine ou qu'un administrateur réalise un audit physique, il lui suffit de pointer la caméra de son terminal mobile vers l'étiquette QR code apposée sur l'équipement. L'application web, optimisée pour les navigateurs mobiles, active la caméra et décode le QR en temps réel.
+
+Le décodage du QR code extrait l'UUID de l'équipement et déclenche une navigation automatique vers la fiche détaillée correspondante dans le système. En quelques secondes, le technicien dispose de l'ensemble des informations relatives à la machine : historique complet des interventions passées, état actuel (opérationnel, en panne, en maintenance), tickets en cours associés, spécifications techniques et localisation officielle. Cette capacité d'accès instantané à l'historique d'un équipement sur le terrain est un accélérateur majeur pour le processus de diagnostic et réduit significativement le temps de résolution des pannes en évitant les allers-retours vers un poste fixe.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{chapter7/screens/ScanEaquimpentQR.png}
+    \caption{Interface de scan mobile du QR code — accès instantané à la fiche d'un équipement sur le terrain}
+    \label{fig:scan_qr}
+\end{figure}
+
+% =========================================================
 \section{Optimisation des performances}
-Le Sprint 3 a porté une attention particulière à l'optimisation des performances du backend et du frontend. Les actions principales ont consisté à indexer les champs fréquemment interrogés de MySQL, à limiter la taille des réponses JSON via une pagination efficace, et à optimiser les calculs des statistiques et des indicateurs de dashboard pour réduire la latence des requêtes. Le frontend bénéficie également d'optimisations React natives (virtualisation des listes, memoization des composants, lazy-loading des pages) pour améliorer la réactivité de l'interface utilisateur.
+\label{sec:optimisation_performances}
 
-\begin{figure}[H]
-    \centering
-    % 1. Landing page (first screen)
-    \begin{minipage}{0.3\textwidth}
-        \centering
-        % \includegraphics[width=\textwidth]{chapter7/chapter7/screens/landing_page.png}
-        \caption{Page d'accueil}
-        \label{fig:landing_page}
-    \end{minipage}
-    \hfill
-    % 2. Login
-    \begin{minipage}{0.3\textwidth}
-        \centering
-        % \includegraphics[width=\textwidth]{chapter7/chapter7/screens/login.png}
-        \caption{Connexion}
-        \label{fig:login}
-    \end{minipage}
-    \hfill
-    % 3. Home (after login)
-    \begin{minipage}{0.3\textwidth}
-        \centering
-        % \includegraphics[width=\textwidth]{chapter7/chapter7/screens/home.png}
-        \caption{Accueil}
-        \label{fig:home}
-    \end{minipage}
-\end{figure}
+La robustesse fonctionnelle d'un système d'information ne saurait être dissociée de ses performances opérationnelles. Un tableau de bord dont le chargement dépasse plusieurs secondes, ou une API dont les temps de réponse se dégradent sous charge, nuisent à l'adoption de la solution et compromettent sa crédibilité auprès des utilisateurs. C'est pourquoi le Sprint 3 a accordé une attention particulière à l'optimisation des performances, tant côté backend que côté frontend.
 
-\begin{figure}[H]
-    \centering
-    % 4. Equipments list
-    \begin{minipage}{0.3\textwidth}
-        \centering
-        % \includegraphics[width=\textwidth]{chapter7/chapter7/screens/equipments_list.png}
-        \caption{Liste des équipements}
-        \label{fig:equipments_list}
-    \end{minipage}
-    \hfill
-    % 5. Equipment details
-    \begin{minipage}{0.3\textwidth}
-        \centering
-        % \includegraphics[width=\textwidth]{chapter7/chapter7/screens/equipement_details.png}
-        \caption{Détails de l'équipement}
-        \label{fig:equipement_details}
-    \end{minipage}
-    \hfill
-    % 6. Notifications
-    \begin{minipage}{0.3\textwidth}
-        \centering
-        % \includegraphics[width=\textwidth]{chapter7/chapter7/screens/notifications.png}
-        \caption{Notifications d'intervention}
-        \label{fig:notifications}
-    \end{minipage}
-\end{figure}
+\subsection*{Optimisations côté Backend (API Express)}
 
-\begin{figure}[H]
-    \centering
-    % 7. Intervention creation
-    \begin{minipage}{0.3\textwidth}
-        \centering
-        % \includegraphics[width=\textwidth]{chapter7/chapter7/screens/create_intervention.png}
-        \caption{Créer une intervention}
-        \label{fig:create_intervention}
-    \end{minipage}
-    \hfill
-    % 8. Ticket details
-    \begin{minipage}{0.3\textwidth}
-        \centering
-        % \includegraphics[width=\textwidth]{chapter7/chapter7/screens/ticket_details.png}
-        \caption{Détails du ticket}
-        \label{fig:ticket_details}
-    \end{minipage}
-    \hfill
-    % 9. Equipment maintenance history
-    \begin{minipage}{0.3\textwidth}
-        \centering
-        % \includegraphics[width=\textwidth]{chapter7/chapter7/screens/equipment_history.png}
-        \caption{Historique de maintenance}
-        \label{fig:equipment_history}
-    \end{minipage}
-\end{figure}
+\begin{itemize}
+    \item \textbf{Indexation des clés étrangères :} des index B-Tree ont été créés sur l'ensemble des colonnes impliquées dans des jointures fréquentes (\texttt{equipementId}, \texttt{assignedToId}, \texttt{userId}, \texttt{ticketId}). Cette mesure réduit la complexité algorithmique des requêtes de jointure de $O(n \cdot m)$ à $O(n \cdot \log m)$, avec un gain de performance particulièrement sensible sur les tables à fort volume comme \texttt{Ticket} et \texttt{Intervention} ;
 
-\begin{figure}[H]
-    \centering
-    % 10. Profile
-    \begin{minipage}{0.3\textwidth}
-        \centering
-        % \includegraphics[width=\textwidth]{chapter7/chapter7/screens/profile.png}
-        \caption{Profil utilisateur}
-        \label{fig:profile}
-    \end{minipage}
-    \hfill
-    % 11. Notifications history
-    \begin{minipage}{0.3\textwidth}
-        \centering
-        % \includegraphics[width=\textwidth]{chapter7/chapter7/screens/notifications_history.png}
-        \caption{Historique des notifications}
-        \label{fig:notifications_history}
-    \end{minipage}
-    \hfill
-    % 12. Maintenance schedule
-    \begin{minipage}{0.3\textwidth}
-        \centering
-        % \includegraphics[width=\textwidth]{chapter7/chapter7/screens/maintenance_schedule.png}
-        \caption{Calendrier de maintenance préventive}
-        \label{fig:maintenance_schedule}
-    \end{minipage}
-\end{figure}
+    \item \textbf{Projection et pagination des réponses API :} les endpoints de liste n'exposent que les attributs strictement nécessaires à l'affichage, via la clause \texttt{attributes} de Sequelize. La pagination côté serveur (paramètres \texttt{page} et \texttt{limit}) réduit le volume de données transférées sur le réseau et allège le traitement côté client ;
 
-\begin{figure}[H]
-    \centering
-    % 13. Add report on equipment
-    \begin{minipage}{0.3\textwidth}
-        \centering
-        % \includegraphics[width=\textwidth]{chapter7/chapter7/screens/add_report_equipment.png}
-        \caption{Ajouter un rapport de maintenance}
-        \label{fig:add_report_equipment}
-    \end{minipage}
-    \hfill
-    % 14. Enable notifications
-    \begin{minipage}{0.3\textwidth}
-        \centering
-        % \includegraphics[width=\textwidth]{chapter7/chapter7/screens/enable_notifications.png}
-        \caption{Activer les notifications}
-        \label{fig:enable_notifications}
-    \end{minipage}
-    \hfill
-    % 15. Detailed equipments list
-    \begin{minipage}{0.3\textwidth}
-        \centering
-        % \includegraphics[width=\textwidth]{chapter7/chapter7/screens/detailed_equipments_list.png}
-        \caption{Liste détaillée des équipements}
-        \label{fig:detailed_equipments_list}
-    \end{minipage}
-\end{figure}
+    \item \textbf{Agrégation SQL native :} les calculs de KPI sont réalisés directement au niveau de la base de données via des fonctions d'agrégation MySQL (\texttt{COUNT}, \texttt{AVG}, \texttt{SUM}, \texttt{GROUP BY}), évitant tout traitement itératif côté Node.js qui serait considérablement moins efficace ;
 
+    \item \textbf{Gestion asynchrone des notifications :} l'envoi des notifications FCM est découplé du flux de traitement principal de la requête API via des promesses non bloquantes. La réponse HTTP est renvoyée au client dès la confirmation de la persistance en base, sans attendre la confirmation de livraison de la notification.
+\end{itemize}
+
+\subsection*{Optimisations côté Frontend (React)}
+
+\begin{itemize}
+    \item \textbf{Chargement à la demande (\textit{lazy loading}) :} les modules du dashboard et les pages secondaires sont chargés de manière différée via \texttt{React.lazy} et \texttt{Suspense}. Le bundle JavaScript initial est ainsi réduit, améliorant significativement le temps de premier affichage (\textit{First Contentful Paint}) ;
+
+    \item \textbf{Mémorisation des composants :} \texttt{React.memo}, \texttt{useMemo} et \texttt{useCallback} sont systématiquement appliqués aux composants graphiques coûteux (graphiques Chart.js, tables de données volumineuses) pour éviter les re-rendus inutiles lors des mises à jour partielles de l'état applicatif ;
+
+    \item \textbf{Virtualisation des listes :} les tableaux affichant de grands volumes de données (inventaire complet, historique de tickets) s'appuient sur la virtualisation DOM, ne rendant que les lignes réellement visibles à l'écran, quelle que soit la taille totale du jeu de données ;
+
+    \item \textbf{Séparation des vues par rôle :} le routage de l'application charge uniquement les composants correspondant au rôle de l'utilisateur authentifié, réduisant à la fois la surface d'attaque côté sécurité et la charge mémoire du navigateur client.
+\end{itemize}
+
+% =========================================================
 \section*{Conclusion}
 \addcontentsline{toc}{section}{Conclusion}
-Le Sprint 3 conclut le développement du système GMAO, livrant une solution complète et fonctionnelle, prête pour un déploiement en conditions réelles. Les optimisations apportées aux performances, l'amélioration des interfaces utilisateur et la validation par le personnel de maintenance garantissent que le système répond aux exigences initiales d'automatisation de la gestion de maintenance et de réactivité opérationnelle. La documentation finalisée et l'infrastructure stabilisée facilitent une transition vers une phase de mise en œuvre effective, marquant une étape clé dans la modernisation de la gestion technique du parc informatique et des équipements.
 
+Le Sprint 3 achève la construction d'un système de gestion de parc informatique complet et cohérent, capable de couvrir l'intégralité du cycle de vie des actifs informatiques du SmartLab, de leur acquisition à leur déclassement, en passant par le suivi opérationnel quotidien des incidents et des maintenances.
 
+L'introduction de la dimension décisionnelle — tableaux de bord analytiques différenciés par profil, module de reporting exportable, indicateurs de performance calculés en temps réel — élève la plateforme au rang d'outil de pilotage stratégique, et non plus simplement d'outil de saisie et de consultation. Le système de notification push, alimenté par Firebase Cloud Messaging, garantit que chaque acteur de la chaîne de maintenance est informé en temps réel des événements qui le concernent, supprimant les délais de communication et les risques d'incidents non traités.
 
+Les optimisations de performance réalisées au cours de cette itération confirment la viabilité de l'architecture choisie dans des conditions d'utilisation réelles, avec des temps de réponse API conformes aux exigences les plus strictes. La plateforme est désormais prête pour un déploiement en production dans l'environnement de la Faculté de Médecine de Monastir, constituant ainsi une contribution concrète et pérenne à la modernisation de la gestion technique du patrimoine informatique de l'institution.
+Les performances obtenues ainsi que la stabilité de l’architecture confirment la pertinence des choix techniques adoptés et ouvrent la voie à une exploitation réelle du système dans un environnement universitaire.

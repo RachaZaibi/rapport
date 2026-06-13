@@ -1,0 +1,62 @@
+<diagram program="umletino" version="15.1"><zoom_level>14</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>364</x><y>252</y><w>252</w><h>182</h></coordinates><panel_attributes>_Ticket_
+--
+id : int
+titre : string
+description : text
+priorite : string
+statut : string
+equipementId : int
+createdById : int
+assignedToId : int
+createdAt : datetime
+updatedAt : datetime</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>98</x><y>14</y><w>252</w><h>182</h></coordinates><panel_attributes>_Intervention_
+--
+id : int
+ticketId : int
+technicienId : int
+datePlanifiee : datetime
+dateDebut : datetime
+dateFin : datetime
+rapport : text
+statut : string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>588</x><y>14</y><w>252</w><h>182</h></coordinates><panel_attributes>_Maintenance_
+--
+id : int
+equipementId : int
+type : string
+frequence : string
+dateProchaine : datetime
+dateDerniere : datetime
+statut : string
+ticketId : int (optionnel)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>98</x><y>504</y><w>252</w><h>140</h></coordinates><panel_attributes>_Utilisateur_
+--
+id : int
+nom : string
+prenom : string
+email : string
+role : string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>616</x><y>504</y><w>252</w><h>140</h></coordinates><panel_attributes>_Equipement_
+--
+id : int
+reference : string
+designation : string
+etat : string</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>224</x><y>378</y><w>168</w><h>154</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=0..*
+créé par</panel_attributes><additional_attributes>100;20;20;20;20;90</additional_attributes></element><element><id>Relation</id><coordinates><x>336</x><y>420</y><w>196</w><h>196</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=0..*
+assigné à</panel_attributes><additional_attributes>70;10;70;110;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>602</x><y>350</y><w>182</w><h>182</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=0..*
+concerne</panel_attributes><additional_attributes>10;10;60;10;60;110</additional_attributes></element><element><id>Relation</id><coordinates><x>336</x><y>84</y><w>126</w><h>196</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=0..*
+traite</panel_attributes><additional_attributes>10;10;40;10;40;120</additional_attributes></element><element><id>Relation</id><coordinates><x>140</x><y>182</y><w>126</w><h>350</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=0..*
+réalisé par</panel_attributes><additional_attributes>10;10;10;230</additional_attributes></element><element><id>Relation</id><coordinates><x>756</x><y>182</y><w>112</w><h>350</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=0..*
+concerne</panel_attributes><additional_attributes>10;10;10;230</additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>70</y><w>126</w><h>210</h></coordinates><panel_attributes>lt=-
+m1=0..1
+m2=0..*
+optionnel</panel_attributes><additional_attributes>10;130;10;10;70;10</additional_attributes></element></diagram>
