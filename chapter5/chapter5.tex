@@ -1,6 +1,7 @@
-% \chapter{Mise en place de l'architecture et gestion des équipements}
+﻿% \chapter{Mise en place de l'architecture et gestion des équipements}
 % \label{chap:sprint1}
-\chapter*{Chapitre 5 : Mise en place de l'architecture et gestion des équipements}  
+\glennchapter{CHAPITRE 5}{Mise en place de l'architecture et gestion des équipements}
+\vspace{1cm}  
 \markboth{Chapitre 5 : Mise en place de l'architecture et gestion des équipements}{}
 \label{chap:sprint1}
 \addcontentsline{toc}{chapter}{Chapitre 5 : Mise en place de l'architecture et gestion des équipements} 
@@ -8,6 +9,10 @@
 \setcounter{section}{0}
 
 % Introducing Sprint 1
+
+\localtableofcontents
+\newpage
+
 \section*{Introduction}
 \addcontentsline{toc}{section}{Introduction}
 \label{sec:intro_sprint1}
@@ -44,6 +49,157 @@ L'objectif principal du Sprint 1 est d'établir une infrastructure backend solid
 \end{itemize}
 
 Ces objectifs s'alignent avec les priorités M (Must have) du Product Backlog (voir Tableau \ref{tab:backlog}), en particulier les tâches M-01 « Gestion des équipements », M-02 « Gestion des incidents », M-03 « Gestion des maintenances », et M-06 « Stockage et historique des données », comme détaillé dans le chapitre précédent. Le périmètre du Sprint 1 couvre également les fonctionnalités S (Should have) pour assurer une base production-ready complète.
+
+\section{Architecture et modélisation UML du Sprint 1}
+\label{sec:uml_sprint1}
+
+Le Sprint 1 pose les fondations du projet Parc Informatique FMM en privilégiant une architecture web moderne basée sur React pour le frontend, Express.js pour le backend, MySQL pour la persistance des données et Firebase pour les notifications. Cette phase établit les modèles fondamentaux pour la gestion des équipements, utilisateurs et maintenances. Les acteurs impliqués sont l'Administrateur, le Technicien et l'Utilisateur.
+
+\subsubsection{Entités et modèles de données}
+
+L'ensemble du système repose sur 17 modèles persistants :
+
+\begin{table}[H]
+\centering
+\caption{Modèles de données du système Parc Informatique FMM}
+\label{tab:models_sprint1}
+\begin{tabular}{|l|p{7cm}|}
+\hline
+\textbf{Modèle} & \textbf{Responsabilité} \\
+\hline
+\textbf{Utilisateur} & Profils utilisateur avec rôles RBAC, tokens FCM \\
+\hline
+\textbf{Équipement} & Inventaire d'actifs informatiques avec métadonnées \\
+\hline
+\textbf{Bloc} & Bâtiments ou zones organisationnelles de haut niveau \\
+\hline
+\textbf{Département} & Divisions administratives au sein des Blocs \\
+\hline
+\textbf{Salle} & Espaces physiques concrets \\
+\hline
+\textbf{Assignment} & Historique des assignations d'équipements \\
+\hline
+\textbf{Transfer} & Traces d'audit des mouvements d'équipements \\
+\hline
+\textbf{Ticket} & Incidents et demandes de support \\
+\hline
+\textbf{Intervention} & Enregistrement des interventions de maintenance \\
+\hline
+\textbf{Maintenance} & Suivi des maintenances correctives \\
+\hline
+\textbf{MaintenancePreventive} & Planification des maintenances préventives récurrentes \\
+\hline
+\textbf{Logiciel} & Inventaire des applications avec versions \\
+\hline
+\textbf{Licence} & Licences logicielles avec dates d'expiration \\
+\hline
+\textbf{Installation} & Historique d'installation de logiciels sur équipements \\
+\hline
+\textbf{Rapport} & Documents générés (PDF/Excel/CSV) pour rapports de workflow \\
+\hline
+\textbf{Parametrage} & Configuration système et paramètres i18n (français/anglais) \\
+\hline
+\textbf{Permission} & Permissions granulaires par module et par rôle (RBAC) \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Champs étendus pour les équipements}
+
+Le modèle Équipement enrichit l'inventaire standard avec plusieurs attributs :
+
+\begin{itemize}
+    \item \textbf{numeroSerie} : Identifiant fabricant (unique, obligatoire)
+    \item \textbf{inventoryNumber} : Numéro d'inventaire interne (unique, obligatoire)
+    \item \textbf{codeQR} : Code QR pour suivi rapide via scanner (stocké en chaîne de caractères)
+    \item \textbf{marque} et \textbf{modele} : Identifiants commerciaux
+    \item \textbf{categorie} : Classification de l'équipement (ex: PC, Imprimante, Serveur - chaîne de caractères)
+    \item \textbf{etat} : État opérationnel (fonctionnel, en\_panne, en\_réparation, réformé)
+    \item \textbf{materialSource} : Provenance (PURCHASED, DONATED, INHERITED)
+    \item \textbf{currentStatus} et \textbf{currentHolderType} : Localisation courante
+    \item \textbf{dateAchat} : Date d'acquisition
+    \item \textbf{assignedAt} : Timestamp de la dernière assignation
+\end{itemize}
+
+\textbf{Note importante} : Les champs \textit{codeQR} et \textit{categorie} sont stockés comme chaînes 
+de caractères pour simplifier la gestion. Une future évolution pourrait les promouvoir en entités 
+séparées si un suivi granulaire devient nécessaire.
+
+\subsection{Clarification terminologique : Assignment et Affectation}
+
+La documentation du projet utilise le terme français \textbf{Affectation} pour décrire 
+l'assignation d'équipements aux utilisateurs, départements ou salles. Le code source 
+implémente cette notion via le modèle \texttt{Assignment.js}. Dans ce document, nous 
+utilisons indifféremment les deux termes comme synonymes, en privilégiant \textbf{Affectation} 
+dans les descriptions métier.
+
+\subsection{Diagramme de classes Sprint 1}
+Le diagramme de classes du Sprint 1 formalise les principales entités métiers du module de gestion des équipements. Il met en évidence les relations entre les entités, les contraintes de propriété et les objets supports nécessaires pour la traçabilité des affectations et des identifiants QR.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{chapter5/figures/class_diagram_sprint1.png}
+    \caption{Diagramme de classes du Sprint 1 — Gestion des équipements et des utilisateurs}
+    \label{fig:class_diagram_sprint1}
+\end{figure}
+
+
+\subsection{Diagrammes de séquence Sprint 1}
+Cette série de diagrammes de séquence décrit les principaux scénarios dynamiques du Sprint 1. Chacun met en lumière la collaboration entre l'acteur humain, le frontend React, le backend Express et la base de données MySQL, tout en intégrant les règles de sécurité liées à l'authentification JWT et au contrôle d'accès RBAC.
+
+\subsubsection{Authentification utilisateur}
+Le diagramme de séquence d'authentification modélise l'accès sécurisé au système. L'utilisateur soumet son identifiant et son mot de passe sur le frontend, lequel transmet la requête au backend. Express vérifie les informations dans MySQL et génère un jeton JWT en cas de succès, qui permet l'accès aux fonctionnalités en fonction du rôle.
+
+\begin{figure}[H]
+    \centering
+     \includegraphics[width=0.85\textwidth]{chapter5/figures/sequence_authentification_sprint1.png} 
+    \caption{Diagramme de séquence d'authentification utilisateur}
+    \label{fig:sequence_authentification_sprint1}
+\end{figure}
+
+\subsubsection{Création d'un équipement}
+Ce diagramme met en évidence le flux de création d'un équipement depuis l'interface Web. L'administrateur soumet un formulaire d'équipement, le backend vérifie les permissions, persiste l'objet dans MySQL, génère un QR Code associé et renvoie la confirmation au frontend.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{chapter5/figures/sequence_creation_equipement.png}
+    \caption{Diagramme de séquence de création d'un équipement}
+    \label{fig:sequence_creation_equipement}
+\end{figure}
+
+\subsubsection{Affectation d'un équipement}
+L'affectation d'un équipement à un utilisateur est un scénario clé du Sprint 1. Le diagramme montre l'ouverture d'une requête d'affectation par l'administrateur ou le technicien, la validation côté backend, l'enregistrement de l'affectation et l'association à l'utilisateur cible.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{chapter5/figures/sequence_affectation_equipement.png}
+    \caption{Diagramme de séquence d'affectation d'un équipement}
+    \label{fig:sequence_affectation_equipement}
+\end{figure}
+
+
+
+\subsubsection{Consultation de l'inventaire}
+Ce diagramme illustre la requête de consultation de l'inventaire des équipements. Un utilisateur authentifié envoie une requête au frontend, qui interroge le backend. Express exécute un filtrage en fonction des paramètres et renvoie la liste des équipements depuis MySQL.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{chapter5/figures/sequence_consultation_inventaire.png}
+    \caption{Diagramme de séquence de consultation de l'inventaire}
+    \label{fig:sequence_consultation_inventaire}
+\end{figure}
+
+
+\subsubsection{Consultation des détails d'un équipement}
+Le diagramme de séquence de consultation des détails d'un équipement montre la récupération des informations complètes d'un actif, incluant sa catégorie, sa localisation, son affectation en cours et son QR Code. Ce scénario est essentiel pour les techniciens et les administrateurs.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{chapter5/figures/sequence_details_equipement.png}
+    \caption{Diagramme de séquence de consultation des détails d'un équipement}
+    \label{fig:sequence_details_equipement}
+\end{figure}
+
 
 % Defining main tasks
 \section{Tâches principales}
@@ -87,12 +243,12 @@ Cette modélisation est illustrée dans le diagramme entité–relation présent
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{chapter5/figures/er_diagram_gmao_mysql.png}
+    \includegraphics[width=0.75\textwidth]{chapter5/figures/er_diagram_gmao.png}
     \caption{Diagramme entité–relation de la base MySQL}
     \label{fig:er_diagram_sprint1}
 \end{figure}
 
-Le schéma comprend 18 modèles principaux regroupés en plusieurs domaines fonctionnels :
+Le schéma comprend les entités suivantes, organisées par domaine fonctionnel :
 
 \textbf{Gestion des équipements :}
 \begin{itemize}
@@ -440,7 +596,7 @@ Plusieurs défis ont été rencontrés et résolus au cours du sprint :
     
     \item \textbf{Validation Sequelize} : Balancer entre rigueur et flexibilité dans la validation multi-niveaux. Solution : validateurs ORM + middleware d'entreprise.
     
-    \item \textbf{JWT Bearer + RBAC} : Vérifier l'identité et les permissions sur chaque endpoint. Solution : middleware centralisé d'authentification + checkPermission réutilisable.
+    \item \textbf{JWT Bearer + RBAC} : verifier l'identité et les permissions sur chaque endpoint. Solution : middleware centralisé d'authentification + checkPermission réutilisable.
     
     \item \textbf{Requêtes N+1} : Eager loading de relations imbriquées. Solution : include Sequelize avec spécification des associations.
 \end{enumerate}
@@ -467,3 +623,6 @@ Les améliorations au Sprint 1 incluront la couverture de test fonctionnels, l'o
 Le Sprint 1 a établi une infrastructure production-ready complète avec Express.js\cite{expressjs2024} + Sequelize\cite{sequelize2024} (18 modèles), authentification JWT, RBAC, et interface React\cite{react2024} + Material-UI\cite{materialui2024} sophistiquée, construite avec Vite\cite{vite2024}. Tous les critères incluant équipements, incidents, maintenances, et licences ont été validés. L'API gère 2000 req/sec avec latence de 50ms. La solution est prête pour déploiement production.
 
 Le Sprint 1 fournit une base production-ready. Le Sprint 2 se concentrera sur tests, notifications, automatisations, et optimisations supplémentaires. La solution est en alignement complet avec les objectifs du SmartLab.
+
+
+

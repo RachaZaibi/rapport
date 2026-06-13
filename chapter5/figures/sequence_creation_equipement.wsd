@@ -1,0 +1,16 @@
+@startuml
+actor Administrateur
+participant Frontend
+participant Backend
+database MySQL
+Administrateur -> Frontend : remplissage du formulaire
+Frontend -> Backend : POST /api/equipements + JWT
+Backend -> Backend : verifier permissions
+Backend -> MySQL : INSERT Equipement
+MySQL --> Backend : équipement créé
+Backend -> Backend : générer QRCode
+Backend -> MySQL : INSERT QRCode
+MySQL --> Backend : qr code enregistré
+Backend --> Frontend : 201 Created
+Frontend --> Administrateur : confirmation
+@enduml

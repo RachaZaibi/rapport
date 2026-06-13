@@ -1,0 +1,12 @@
+@startuml
+participant Backend
+database MySQL
+participant Firebase
+Backend -> MySQL : SELECT techniciens disponibles
+MySQL --> Backend : liste techniciens
+Backend -> Backend : choisir technicien
+Backend -> MySQL : UPDATE Ticket assignedTo
+MySQL --> Backend : ticket mis a jour
+Backend -> Firebase : envoyer notification
+Firebase --> Backend : succes
+@enduml

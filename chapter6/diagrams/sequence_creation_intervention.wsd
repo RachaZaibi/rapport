@@ -1,0 +1,14 @@
+@startuml
+actor Technicien
+participant Frontend
+participant Backend
+database MySQL
+Technicien -> Frontend : saisit intervention
+Frontend -> Backend : POST /api/interventions + JWT
+Backend -> MySQL : INSERT Intervention
+MySQL --> Backend : intervention créée
+Backend -> MySQL : UPDATE Ticket statut
+MySQL --> Backend : ticket mis à jour
+Backend --> Frontend : 201 Created
+Frontend --> Technicien : confirmation
+@enduml

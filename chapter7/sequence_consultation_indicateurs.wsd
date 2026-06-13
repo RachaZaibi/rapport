@@ -1,0 +1,12 @@
+@startuml
+actor Administrateur
+participant Frontend
+participant Backend
+database MySQL
+Administrateur -> Frontend : consulte indicateurs parc
+Frontend -> Backend : GET /api/metrics + JWT
+Backend -> MySQL : SELECT métriques consolidées
+MySQL --> Backend : données
+Backend --> Frontend : JSON indicateurs
+Frontend --> Administrateur : affichage indicateurs
+@enduml

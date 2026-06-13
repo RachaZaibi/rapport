@@ -1,0 +1,12 @@
+@startuml
+actor Utilisateur
+participant Frontend
+participant Backend
+database MySQL
+Utilisateur -> Frontend : demande details equipement
+Frontend -> Backend : GET /api/equipements/{id} + JWT
+Backend -> MySQL : SELECT Equipement, Categorie, Localisation, Affectation, QRCode
+MySQL --> Backend : details
+Backend --> Frontend : JSON detail
+Frontend --> Utilisateur : affichage detaille
+@enduml

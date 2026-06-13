@@ -1,0 +1,12 @@
+@startuml
+actor Utilisateur
+participant Frontend
+participant Backend
+database MySQL
+Utilisateur -> Frontend : consulte historique ticket
+Frontend -> Backend : GET /api/tickets/{id}/history + JWT
+Backend -> MySQL : SELECT Ticket, Intervention, Rapport
+MySQL --> Backend : historique
+Backend --> Frontend : JSON historique
+Frontend --> Utilisateur : affichage chronologique
+@enduml

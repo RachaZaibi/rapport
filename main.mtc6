@@ -1,0 +1,24 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Introduction}{\reset@font\mtcSfont 40}{section*.86}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.1}Objectifs et livrables}{\reset@font\mtcSfont 41}{section.88}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.2}Architecture et modélisation UML du Sprint 1}{\reset@font\mtcSfont 41}{section.89}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Entités et modèles de données}{\reset@font\mtcSSSfont 42}{subsubsection*.90}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Champs étendus pour les équipements}{\reset@font\mtcSSSfont 42}{subsubsection*.92}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.2.1}Clarification terminologique : Assignment et Affectation}{\reset@font\mtcSSfont 43}{subsection.93}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.2.2}Diagramme de classes Sprint 1}{\reset@font\mtcSSfont 43}{subsection.94}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.2.3}Diagrammes de séquence Sprint 1}{\reset@font\mtcSSfont 43}{subsection.96}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Authentification utilisateur}{\reset@font\mtcSSSfont 44}{subsubsection*.97}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Création d'un équipement}{\reset@font\mtcSSSfont 44}{subsubsection*.99}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Affectation d'un équipement}{\reset@font\mtcSSSfont 45}{subsubsection*.101}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Consultation de l'inventaire}{\reset@font\mtcSSSfont 46}{subsubsection*.103}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Consultation des détails d'un équipement}{\reset@font\mtcSSSfont 46}{subsubsection*.105}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.3}Tâches principales}{\reset@font\mtcSfont 47}{section.107}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.3.1}Configuration du serveur backend}{\reset@font\mtcSSfont 47}{subsection.108}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.3.2}Création des schémas de base de données}{\reset@font\mtcSSfont 48}{subsection.109}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.3.3}Développement de l’API REST et Architecture des Endpoints}{\reset@font\mtcSSfont 49}{subsection.111}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.3.4}Mécanismes Transverses : Sécurité, Validation et Cycle de Vie}{\reset@font\mtcSSfont 50}{subsection.113}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.4}Critères d'acceptation}{\reset@font\mtcSfont 51}{section.117}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.5}Implémentation et résultats}{\reset@font\mtcSfont 53}{section.118}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.6}Tests et validation}{\reset@font\mtcSfont 54}{section.120}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.7}Défis et solutions}{\reset@font\mtcSfont 54}{section.122}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.8}Planification pour le sprint suivant}{\reset@font\mtcSfont 55}{section.127}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Conclusion}{\reset@font\mtcSfont 55}{section.127}}

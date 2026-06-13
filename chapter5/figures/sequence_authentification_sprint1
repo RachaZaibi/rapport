@@ -1,0 +1,13 @@
+@startuml
+actor Utilisateur
+participant Frontend
+participant Backend
+database MySQL
+Utilisateur -> Frontend : envoie login/password
+Frontend -> Backend : POST /api/auth/login
+Backend -> MySQL : SELECT utilisateur WHERE email
+MySQL --> Backend : utilisateur
+Backend -> Backend : verifier mot de passe et rôle
+Backend --> Frontend : JWT + rôle
+Frontend --> Utilisateur : session ouverte
+@enduml

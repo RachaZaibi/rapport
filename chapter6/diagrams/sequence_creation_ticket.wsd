@@ -1,0 +1,12 @@
+@startuml
+actor Utilisateur
+participant Frontend
+participant Backend
+database MySQL
+Utilisateur -> Frontend : soumet ticket
+Frontend -> Backend : POST /api/tickets + JWT
+Backend -> MySQL : INSERT Ticket
+MySQL --> Backend : ticket créé
+Backend --> Frontend : 201 Created
+Frontend --> Utilisateur : confirmation
+@enduml

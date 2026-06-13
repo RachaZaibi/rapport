@@ -1,0 +1,111 @@
+@startuml
+
+entity USERS {
+  id : int
+  nom : string
+  prenom : string
+  email : string
+  mot_de_passe : string
+  role : enum
+  actif : boolean
+  created_at : timestamp
+}
+
+entity ROLES {
+  id : int
+  nom : string
+  description : string
+}
+
+entity EQUIPEMENTS {
+  id : int
+  nom : string
+  numero_serie : string
+  type : enum
+  statut : enum
+  date_acquisition : date
+  date_garantie : date
+  utilisateur_id : int
+  local_id : int
+}
+
+entity LOCAUX {
+  id : int
+  nom : string
+  batiment : string
+  etage : int
+}
+
+entity LICENCES {
+  id : int
+  nom_logiciel : string
+  cle_licence : string
+  nb_postes : int
+  date_expiration : date
+  equipement_id : int
+}
+
+entity TICKETS {
+  id : int
+  titre : string
+  description : text
+  priorite : enum
+  statut : enum
+  demandeur_id : int
+  technicien_id : int
+  equipement_id : int
+  created_at : timestamp
+  updated_at : timestamp
+}
+
+entity INTERVENTIONS {
+  id : int
+  description : text
+  date_intervention : date
+  statut : enum
+  ticket_id : int
+  technicien_id : int
+}
+
+entity MAINTENANCES {
+  id : int
+  titre : string
+  description : text
+  type : enum
+  date_prevue : date
+  date_realisation : date
+  equipement_id : int
+  technicien_id : int
+}
+
+entity AUDIT_LOGS {
+  id : int
+  action : string
+  table_cible : string
+  enregistrement_id : int
+  utilisateur_id : int
+  created_at : timestamp
+}
+
+' Relations (ER style)
+
+ROLES ||--o{ USERS : appartient
+
+USERS ||--o{ EQUIPEMENTS : affecte
+LOCAUX ||--o{ EQUIPEMENTS : contient
+
+EQUIPEMENTS ||--o{ LICENCES : installe
+
+USERS ||--o{ TICKETS : cree
+USERS ||--o{ TICKETS : assigne
+EQUIPEMENTS ||--o{ TICKETS : concerne
+
+TICKETS ||--|| INTERVENTIONS : genere
+USERS ||--o{ INTERVENTIONS : realise
+
+EQUIPEMENTS ||--o{ MAINTENANCES : planifie
+USERS ||--o{ MAINTENANCES : affecte
+
+USERS ||--o{ AUDIT_LOGS : trace
+
+@enduml
