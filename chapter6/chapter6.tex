@@ -1,4 +1,4 @@
-﻿% \chapter{Gestion des tickets et maintenance}
+% \chapter{Gestion des tickets et maintenance}
 \glennchapter{CHAPITRE 6}{Gestion des tickets et maintenance}
 \vspace{1cm}
 \markboth{Chapitre 6 : Gestion des tickets et maintenance}{} 
@@ -40,7 +40,7 @@ Trois axes fonctionnels majeurs structurent ce sprint :
 Les objectifs principaux sont :
 
 \begin{itemize}
-    \item Implémenter la création de tickets d'incident et l'assignation automatique des techniciens
+    \item Implémenter la création de tickets d'incident avec gestion de statut automatique à l'assignation
     \item Déployer la gestion des interventions et de la maintenance corrective et préventive
     \item Construire l'historique des actions pour chaque ticket et chaque équipement
     \item Consolider la fiabilité du backend Express et des requêtes MySQL associées
@@ -72,7 +72,7 @@ Ce diagramme illustre la création d'un ticket par un utilisateur authentifié. 
     \centering
     \includegraphics[width=0.85\textwidth]{chapter6/diagrams/sequence_creation_ticket.png}
     \caption{Diagramme de séquence de création d'un ticket}
-    \label{fig:sequence_creation_ticket}
+    \label{fig:sequence_creation_ticket_ch6}
 \end{figure}
 
 
@@ -125,7 +125,7 @@ Ce diagramme illustre les actions menant à la clôture d'un ticket, l'enregistr
     \centering
     \includegraphics[width=0.85\textwidth]{chapter6/diagrams/sequence_cloture_ticket.png}
     \caption{Diagramme de séquence de clôture d'un ticket}
-    \label{fig:sequence_cloture_ticket}
+    \label{fig:sequence_cloture_ticket_ch6}
 \end{figure}
 
 \subsubsection{Consultation de l'historique d'un ticket}
@@ -208,20 +208,22 @@ Le processus débute lorsqu’un utilisateur crée un ticket d’incident depuis
 Une requête HTTP \texttt{POST /api/tickets} est ensuite envoyée au backend Express,
 qui enregistre les informations dans la base de données Sequelize/MySQL.
 
-Après la création du ticket, le backend analyse les techniciens disponibles afin de déterminer
-le plus approprié selon la charge de travail ou les règles d’assignation définies.
-Le ticket est alors automatiquement affecté à un technicien.
+Si un technicien est spécifié dans la requête (champ \texttt{TechnicienId}), le backend
+applique automatiquement la transition de statut du ticket de \textit{ouvert} vers \textit{assigné}
+et enregistre la date d'assignation (\texttt{dateAssignation}). Cette transition est validée
+par le moteur d'états \texttt{utils/statusMachine.js}, qui garantit la cohérence des statuts
+selon le graphe de transitions défini. Dans le cas où aucun technicien n'est désigné à la création,
+le ticket reste à l'état \textit{ouvert} jusqu'à son affectation ultérieure par l'administrateur.
 
-Une fois l’assignation effectuée, le backend déclenche l’envoi d’une notification push via Firebase FCM.
-Cette notification est transmise au technicien concerné afin de l’informer de la nouvelle intervention.
+Dès la création du ticket, le backend déclenche un envoi de notification push via Firebase Cloud Messaging.
+Cette notification est diffusée à l'ensemble des utilisateurs disposant d'un jeton FCM enregistré.
 Enfin, une réponse HTTP \texttt{201 Created} est renvoyée au frontend,
-qui affiche la confirmation et le suivi du ticket à l’utilisateur.
+qui affiche la confirmation et le suivi du ticket à l'utilisateur.
 
-Ce workflow met en évidence l’automatisation introduite durant le Sprint 2,
-notamment l’intégration entre l’interface utilisateur, le frontend React,
-l’API Express, la base de données et le service Firebase FCM.
-Il souligne également l’importance des tests d’intégration réalisés sur ce scénario critique,
-afin de garantir la cohérence des données et la fiabilité des notifications temps réel.
+Ce workflow illustre la gestion de l'état des tickets et l'intégration entre le frontend React,
+l'API Express, la base de données MySQL et le service Firebase FCM.
+La cohérence de ce scénario a été validée fonctionnellement via des tests manuels
+sur l'interface web et la documentation Swagger UI.
 
 Les notifications push sont déclenchées pour les événements suivants :
 \begin{itemize}
@@ -230,16 +232,21 @@ Les notifications push sont déclenchées pour les événements suivants :
     \item transferts et assignations d'équipements.
 \end{itemize}
 
-L'intégration Firebase repose sur quatre mécanismes complémentaires :
+L'intégration Firebase repose sur les mécanismes suivants :
 \begin{itemize}
     \item \textbf{Envoi en temps réel} des alertes critiques dès la survenue
-          de l'événement métier.
-    \item \textbf{Gestion multi-appareils} : chaque utilisateur peut enregistrer
-          plusieurs jetons FCM associés à ses terminaux.
-    \item \textbf{Persistance des jetons} FCM en base de données pour garantir
-          la traçabilité et la révocation.
-    \item \textbf{Retry automatique} en cas d'échec d'envoi, avec journalisation
-          des tentatives.
+          de l'événement métier, via la fonction \texttt{notifyAll()} qui orchestre
+          les envois FCM et email de manière asynchrone et non bloquante.
+    \item \textbf{Un jeton FCM unique par utilisateur} : le champ \texttt{fcmToken}
+          du modèle \texttt{Utilisateur} stocke le jeton actif du terminal web connecté.
+          Tout nouveau jeton remplace l'ancien lors de l'enregistrement.
+    \item \textbf{Révocation automatique} des jetons invalides : lorsque Firebase retourne
+          une erreur de jeton périmé (\texttt{registration-token-not-registered}),
+          le backend efface automatiquement le champ \texttt{fcmToken} de l'utilisateur
+          concerné en base de données.
+    \item \textbf{Diffusion en broadcast} : les notifications sont envoyées à l'ensemble
+          des utilisateurs disposant d'un jeton FCM valide, via \texttt{Promise.allSettled()},
+          garantissant un traitement non bloquant même en cas d'échec partiel.
 \end{itemize}
 
 \subsubsection{Enregistrement et gestion des jetons FCM}
@@ -265,18 +272,22 @@ surcharge de persistance, car les jetons FCM valides sont maintenus par Firebase
 \subsection{Automatisation des workflows}
 \label{subsec:automatisation_workflows}
 
-\begin{itemize}
-    \item Automatiser l'assignation des techniciens selon leur charge et leurs compétences
-    \item Planifier les rappels de maintenance préventive en fonction des intervalles définis
-    \item Générer automatiquement des rapports d'activité et des alertes métiers
-\end{itemize}
+Le système implémente plusieurs mécanismes d'automatisation du cycle de vie des entités métier :
 
-\textbf{Cas d'usage principaux :}
-\begin{enumerate}
-    \item Lors de la création d'un ticket incident, assigner automatiquement au technicien disponible avec la compétence appropriée
-    \item Générer des tâches de maintenance selon les calendriers définis
-    \item Envoyer des alertes de license bientôt expirantes 30 jours avant l'expiration
-\end{enumerate}
+\begin{itemize}
+    \item \textbf{Transition de statut automatique à l'assignation} : à la création ou à la mise à jour
+          d'un ticket avec un \texttt{TechnicienId} fourni, le backend bascule automatiquement
+          le statut vers \textit{assigné} et horodate l'événement via \texttt{dateAssignation}.
+    \item \textbf{Machine à états des tickets} : le module \texttt{utils/statusMachine.js} définit
+          les transitions de statut autorisées pour les tickets, interventions et maintenances,
+          empêchant toute transition incohérente (ex: clôture sans résolution préalable).
+    \item \textbf{Alertes de maintenance préventive} : le service \texttt{maintenanceService.js}
+          expose la fonction \texttt{getAlertes()} qui calcule à la demande les plans de
+          maintenance préventive arrivant à échéance, affichés dans le tableau de bord.
+    \item \textbf{Notification push automatique} : chaque événement métier significatif
+          (création de ticket, opération sur un équipement, changement de statut) déclenche
+          un appel asynchrone à \texttt{notifyAll()}, sans impacter le temps de réponse de l'API.
+\end{itemize}
 
 % Task 4: Performance Optimization
 \subsection{Optimisations et performance}
@@ -300,18 +311,21 @@ surcharge de persistance, car les jetons FCM valides sont maintenus par Firebase
 \subsection{Déploiement et résilience}
 \label{subsec:deployment_resilience}
 
-\begin{itemize}
-    \item Ajouter des scripts de déploiement et de migration de base de données
-    \item Mettre en place des mécanismes de monitoring et gestion des erreurs
-    \item Préparer la configuration de production pour les variables d'environnement et la sécurité
-\end{itemize}
+Le système est configuré pour un déploiement maîtrisé grâce aux éléments suivants :
 
-Configuration production :
 \begin{itemize}
-    \item Variables d'environnement sécurisées (JWT SECRET, DB credentials, Firebase config)
-    \item Gestion centralisée des erreurs avec logging structuré
-    \item Health checks pour API et base de données
-    \item Rollback scripts en cas de déploiement échoué
+    \item \textbf{Variables d'environnement sécurisées} : les paramètres sensibles
+          (\texttt{JWT\_SECRET}, identifiants base de données, clé Firebase) sont
+          externalisés dans un fichier \texttt{.env} non versionné.
+    \item \textbf{Gestion centralisée des erreurs} : un middleware \texttt{errorHandler.js}
+          intercepte toutes les exceptions non gérées et retourne des réponses
+          HTTP cohérentes avec code et message d'erreur.
+    \item \textbf{Endpoint de santé} : la route \texttt{GET /health} renvoie le statut
+          du serveur et l'horodatage, permettant une vérification rapide de la disponibilité.
+    \item \textbf{Migrations incrémentales} : les fonctions \texttt{ensureEquipementSchema()},
+          \texttt{ensureTicketWorkflowSchema()} et leurs équivalents dans \texttt{server.js}
+          ajoutent à chaud les colonnes manquantes sans reconstruire le schéma complet,
+          garantissant la compatibilité avec des bases de données existantes.
 \end{itemize}
 
 % Acceptance Criteria
@@ -351,24 +365,28 @@ Les critères de validation pour Sprint 2 incluent :
 
 \begin{table}[H]
 \centering
-\caption{Résultats de validation des critères d'acceptation du Sprint 2}
+\caption{Validation fonctionnelle des critères d'acceptation du Sprint 2}
 \label{tab:resultats_validation_sprint2}
 \begin{tabular}{|p{5cm}|p{6cm}|l|}
 \hline
-\textbf{Critère d'acceptation} & \textbf{Cible} & \textbf{Validation} \\
+\textbf{Critère d'acceptation} & \textbf{Description} & \textbf{Validation} \\
 \hline
-Tests d'API & Couverture > 80\% sur les endpoints critiques & Couverture actuelle : 85\% \\
+Gestion des tickets & CRUD complet, transitions de statut validées par \texttt{statusMachine.js} & \checkmark\ Validé \\
 \hline
-Notifications FCM & Envoi/réception fonctionnel & À valider en production \\
+Notifications FCM & Envoi broadcast à la création de ticket et aux opérations équipements & \checkmark\ Validé \\
 \hline
-Workflows automatisés & Assignation et maintenance fonctionnelles & À valider par tests end-to-end \\
+Gestion d'état & Machine à états formelle pour tickets, interventions, maintenances & \checkmark\ Validé \\
 \hline
-Performance API & Latence < 100ms requêtes simples & À valider par load testing \\
+Interventions & Création, suivi et clôture d'interventions liées aux tickets & \checkmark\ Validé \\
 \hline
-Documentation déploiement & Complète et testée & À valider par équipe ops \\
+Maintenances préventives & Planification et alertes calculées à la demande & \checkmark\ Validé \\
 \hline
 \end{tabular}
 \end{table}
+
+\textbf{Note} : La validation du Sprint 2 a été réalisée sous forme de tests fonctionnels manuels
+via l'interface Swagger UI et l'interface web, couvrant les flux critiques de création, d'assignation,
+de traitement et de clôture de tickets.
 
 % Challenges and Solutions
 \section{Défis et solutions}
@@ -405,9 +423,9 @@ Le Sprint 3 se concentrera sur :
 \addcontentsline{toc}{section}{Conclusion}
 \label{sec:conclusion_sprint2}
 
-Le Sprint 2 transforme la base robuste du Sprint 1 en une solution industrielle complète. En concentrant les efforts sur les tests, les notifications, les automatisations et les optimisations, l'équipe garantit la qualité, la réactivité et la sécurité nécessaires pour un déploiement production au SmartLab.
+Le Sprint 2 fait évoluer la base solide du Sprint 1 vers un système opérationnel complet de gestion des incidents et de la maintenance. La machine à états formelle des tickets, l'intégration Firebase FCM pour les notifications push, et le module de maintenance préventive constituent les apports fonctionnels majeurs de cette itération.
 
-Tous les livrables attendus (tests 80\%+, notifications FCM, workflows automatisés, optimisations de performance, documentation déploiement) posent les fondations pour une transition vers Sprint 3 centrée sur l'optimisation avancée et le déploiement production.
+La validation fonctionnelle manuelle des flux critiques (tickets, interventions, maintenances, notifications) confirme la conformité des livrables aux objectifs du sprint. Ces fondations préparent le terrain pour le Sprint 3, consacré aux tableaux de bord analytiques, au reporting et aux fonctionnalités avancées de pilotage du parc informatique.
 
 
 

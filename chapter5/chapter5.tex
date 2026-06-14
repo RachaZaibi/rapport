@@ -1,4 +1,4 @@
-﻿% \chapter{Mise en place de l'architecture et gestion des équipements}
+% \chapter{Mise en place de l'architecture et gestion des équipements}
 % \label{chap:sprint1}
 \glennchapter{CHAPITRE 5}{Mise en place de l'architecture et gestion des équipements}
 \vspace{1cm}  
@@ -610,7 +610,7 @@ Le Sprint 1 inclut déjà incidents, maintenances, et licences. Le Sprint 2 se c
     \item Tests fonctionnels
     \item Notifications Firebase FCM intégrées aux tickets
     \item Alertes pour licences expirantes
-    \item Assignation automatique des techniciens par charge de travail
+    \item Machine à états des tickets (\texttt{statusMachine.js})
     \item Audit trail complet pour conformité
 \end{itemize}
 
@@ -620,9 +620,9 @@ Les améliorations au Sprint 1 incluront la couverture de test fonctionnels, l'o
 \addcontentsline{toc}{section}{Conclusion}
 \label{sec:conclusion_sprint1}
 
-Le Sprint 1 a établi une infrastructure production-ready complète avec Express.js\cite{expressjs2024} + Sequelize\cite{sequelize2024} (18 modèles), authentification JWT, RBAC, et interface React\cite{react2024} + Material-UI\cite{materialui2024} sophistiquée, construite avec Vite\cite{vite2024}. Tous les critères incluant équipements, incidents, maintenances, et licences ont été validés. L'API gère 2000 req/sec avec latence de 50ms. La solution est prête pour déploiement production.
+Le Sprint 1 a établi une infrastructure complète avec Express.js\cite{expressjs2024} + Sequelize\cite{sequelize2024} (17 modèles persistants), authentification JWT, RBAC, et interface React\cite{react2024} + Material-UI\cite{materialui2024} construite avec Vite\cite{vite2024}. Les critères fonctionnels couvrant les équipements, les incidents, les maintenances et les licences ont été validés par des tests fonctionnels manuels.
 
-Le Sprint 1 fournit une base production-ready. Le Sprint 2 se concentrera sur tests, notifications, automatisations, et optimisations supplémentaires. La solution est en alignement complet avec les objectifs du SmartLab.
+Le Sprint 1 fournit une base solide. Le Sprint 2 se concentrera sur les notifications Firebase FCM, la gestion avancée des tickets, et les fonctionnalités de maintenance. La solution est en alignement complet avec les objectifs du SmartLab.
 
 
 

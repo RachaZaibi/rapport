@@ -1,4 +1,4 @@
-﻿% \chapter{Étude architecturale du projet} 
+% \chapter{Étude architecturale du projet} 
 % \label{chap:architecture}
 \glennchapter{CHAPITRE 3}{Étude architecturale du projet}
 \vspace{1cm}
@@ -206,15 +206,15 @@ Ce mécanisme garantit un accès sécurisé au système basé sur une authentifi
 \end{figure}
 
 
-\subsubsection{Création et assignation d’un ticket d’incident}
+\subsubsection{Création et assignation d'un ticket d'incident}
 
-Ce diagramme \ref{fig:sequence_creation_ticket} décrit le flux principal de gestion des incidents, depuis la création d’un ticket jusqu’à son assignation automatique à un technicien disponible.
+Ce diagramme \ref{fig:sequence_creation_ticket} décrit le flux principal de gestion des incidents, depuis la création d'un ticket jusqu'à son assignation à un technicien.
 
-Dans ce scénario, l’utilisateur crée un ticket en spécifiant les détails de l’incident tels que le titre, la priorité et l’équipement concerné. Le frontend envoie ensuite ces données au backend, qui enregistre le ticket dans la base de données avec un statut initial \textit{ouvert}.
+Dans ce scénario, l'utilisateur crée un ticket en spécifiant les détails de l'incident tels que le titre, la priorité et l'équipement concerné. Le frontend envoie ensuite ces données au backend via un appel \texttt{POST /api/tickets}, qui enregistre le ticket dans la base de données avec un statut initial \textit{ouvert}.
 
-Par la suite, le système déclenche un processus d’affectation automatique afin de rechercher un technicien disponible. Une fois le technicien sélectionné, le ticket lui est assigné et une notification est envoyée via Firebase Cloud Messaging afin de l’informer en temps réel.
+Si un technicien est désigné au moment de la création (champ \texttt{TechnicienId} renseigné), le backend applique automatiquement la transition de statut vers \textit{assigné} et enregistre la date d'assignation. Dans le cas contraire, le ticket reste à l'état \textit{ouvert} jusqu'à son affectation ultérieure par l'administrateur. Dès la création, une notification push est diffusée à l'ensemble des utilisateurs connectés via Firebase Cloud Messaging.
 
-Ce processus permet d’assurer une prise en charge rapide et automatisée des incidents.
+Ce mécanisme de gestion d'état est implémenté dans la route \texttt{POST /api/tickets} et consolidé par le moteur de transitions \texttt{utils/statusMachine.js}, qui valide la cohérence de chaque changement de statut.
 
 \begin{figure}[H]
 \centering
