@@ -12,7 +12,7 @@
 \section*{Introduction}
 \addcontentsline{toc}{section}{Introduction}
 
-Le présent chapitre a pour objectif de présenter le cadre général du projet \textit{Parc Informatique FMM}, réalisé au sein du SmartLab de la Faculté de Médecine de Monastir (FMM)\cite{FMM2020}. Il introduit le contexte organisationnel du projet, met en évidence les problématiques liées à la gestion des parcs informatiques dans les établissements tunisiens, et analyse les solutions existantes sur le marché.
+Le présent chapitre a pour objectif de présenter le cadre général du projet \textit{Parc Informatique FMM}, réalisé au sein du SmartLab de la Faculté de Médecine de Monastir (FMM)\cite{FMM2020}. Il introduit le contexte organisationnel du projet, met en évidence les problématiques liées à la gestion des parcs informatiques dans les établissements tunisiens et analyse les solutions existantes sur le marché.
 
 L’ensemble de ce chapitre est structuré comme suit : une présentation de l’organisme d’accueil, une analyse du contexte et des problématiques, une étude des solutions existantes, ainsi qu’une description de la solution proposée.
 
@@ -99,7 +99,7 @@ Parmi les solutions les plus répandues, on retrouve \textbf{GLPI}, \textbf{iTop
 
 Parmi ses principales fonctionnalités, on distingue la gestion de l’inventaire matériel et logiciel, le suivi des tickets d’incidents, la gestion des demandes utilisateurs, ainsi que la planification des interventions de maintenance. GLPI permet également la gestion des affectations des équipements aux utilisateurs et la traçabilité des changements effectués sur le parc informatique.
 
-L’un de ses principaux atouts réside dans son caractère open-source, qui garantit une grande flexibilité d’adaptation, ainsi que l’existence d’une communauté active assurant des mises à jour régulières et de nombreux plugins d’extension. Cependant, certaines fonctionnalités avancées, notamment la notification en temps réel et l’automatisation poussée des workflows, nécessitent des configurations supplémentaires ou l’ajout de modules externes.\cite{GLPI2023}
+L’un de ses principaux atouts réside dans son caractère open-source, qui offre une grande flexibilité d’adaptation, ainsi que l’existence d’une communauté active assurant des mises à jour régulières et de nombreux plugins d’extension. Cependant, certaines fonctionnalités adaptées à des besoins spécifiques, notamment la notification en temps réel et l’automatisation poussée des workflows, nécessitent des configurations supplémentaires ou l’ajout de modules externes.\cite{GLPI2023}
 
 \begin{figure}[H]
     \centering
@@ -110,9 +110,9 @@ L’un de ses principaux atouts réside dans son caractère open-source, qui gar
 
 \item \textbf{iTop} est une solution ITSM open-source orientée vers la gestion des services informatiques et la modélisation des infrastructures via une CMDB (Configuration Management Database). Elle se distingue par une approche structurée permettant de représenter les relations entre les différents éléments du système d’information, tels que les équipements, les applications et les services.
 
-iTop intègre des fonctionnalités avancées de gestion des incidents, des problèmes et des changements, conformément aux bonnes pratiques ITIL. Elle permet également la génération de rapports détaillés et la mise en place de processus de validation adaptés aux environnements organisationnels complexes.
+iTop intègre des fonctionnalités adaptées de gestion des incidents, des problèmes et des changements, conformément aux bonnes pratiques ITIL. Elle permet également la génération de rapports détaillés et la mise en place de processus de validation adaptés aux environnements organisationnels complexes.
 
-Toutefois, la richesse fonctionnelle d’iTop s’accompagne d’une complexité de configuration relativement élevée, nécessitant un temps d’adaptation important ainsi que des compétences techniques avancées pour son déploiement et sa personnalisation.\cite{iTop2023}
+Toutefois, la richesse fonctionnelle d’iTop s’accompagne d’une complexité de configuration relativement élevée, nécessitant un temps d’adaptation important ainsi que des compétences techniques spécialisées pour son déploiement et sa personnalisation.\cite{iTop2023}
 
 \begin{figure}[H]
     \centering
@@ -121,7 +121,7 @@ Toutefois, la richesse fonctionnelle d’iTop s’accompagne d’une complexité
     \label{fig:itop_logo}
 \end{figure}
 
-\item \textbf{Asset Panda} est une solution SaaS (Software as a Service) dédiée à la gestion des actifs informatiques et physiques. Elle repose sur une architecture entièrement cloud, permettant un accès centralisé et sécurisé aux données relatives aux équipements.
+\item \textbf{Asset Panda} est une solution SaaS (Software as a Service) dédiée à la gestion des actifs informatiques et physiques. Elle repose sur une architecture entièrement cloud, permettant un accès centralisé et protégé aux données relatives aux équipements.
 
 Cette solution offre des fonctionnalités de suivi en temps réel des actifs, de gestion du cycle de vie des équipements, ainsi que des outils mobiles facilitant les opérations de scan, d’inventaire et de mise à jour sur le terrain. Elle permet également l’intégration avec d’autres systèmes d’information via des API, ce qui renforce son interopérabilité.
 
@@ -150,7 +150,7 @@ Afin d’évaluer de manière objective les solutions étudiées, une comparaiso
 \textbf{Critère} & \textbf{GLPI} & \textbf{iTop} & \textbf{Asset Panda} \\ \hline
 Automatisation & $\pm$ & $\surd$ & $\surd$ \\ \hline
 Compatibilité & $\surd$ & $\pm$ & $\pm$ \\ \hline
-Notifications temps réel & $\varnothing$ & $\pm$ & $\surd$ \\ \hline
+Notifications en temps réel & $\varnothing$ & $\pm$ & $\surd$ \\ \hline
 Déploiement & $\surd$ & $\pm$ & $\varnothing$ \\ \hline
 Efficacité globale & $\pm$ & $\surd$ & $\surd$ \\ \hline
 \end{tabular}
@@ -159,14 +159,14 @@ Efficacité globale & $\pm$ & $\surd$ & $\surd$ \\ \hline
 
 \noindent
 {\footnotesize
-\textbf{Légende :} $\surd$ : optimal, $\pm$ : moyen, $\varnothing$ : non adapté
+\textbf{Légende :} $\surd$ : optimal ; $\pm$ : moyen ; $\varnothing$ : non adapté.
 }
 
 \paragraph{Interprétation du tableau :}
 
 L’analyse du Tableau~\ref{tab:comparaison_parc_informatique} permet de mettre en évidence des différences significatives entre les trois solutions étudiées selon les critères retenus.
 
-En termes d’\textbf{automatisation}, les solutions iTop et Asset Panda présentent un niveau avancé grâce à l’intégration de workflows structurés et d’outils de gestion automatisée des processus. À l’inverse, GLPI offre des fonctionnalités d’automatisation plus limitées, nécessitant souvent l’ajout de plugins ou de configurations supplémentaires pour atteindre un niveau équivalent.
+En termes d’\textbf{automatisation}, les solutions iTop et Asset Panda présentent un niveau adapté grâce à l’intégration de workflows structurés et d’outils de gestion automatisée des processus. À l’inverse, GLPI offre des fonctionnalités d’automatisation plus limitées, nécessitant souvent l’ajout de plugins ou de configurations supplémentaires pour atteindre un niveau équivalent.
 
 Concernant la \textbf{compatibilité avec les équipements et environnements hétérogènes}, GLPI se distingue par une meilleure adaptabilité, notamment grâce à sa large communauté et à ses nombreux modules d’extension. iTop et Asset Panda présentent un niveau intermédiaire, bien qu’ils restent compatibles avec la majorité des infrastructures standards.
 
@@ -174,20 +174,20 @@ Pour ce qui est des \textbf{notifications en temps réel}, Asset Panda se démar
 
 En ce qui concerne la \textbf{facilité de déploiement}, GLPI apparaît comme la solution la plus accessible, notamment en raison de sa nature open-source et de sa large documentation. iTop nécessite une phase de configuration plus complexe, tandis qu’Asset Panda, bien que simple à utiliser, impose une dépendance à une infrastructure cloud et à un modèle d’abonnement.
 
-Enfin, l’\textbf{efficacité globale} met en évidence un équilibre entre richesse fonctionnelle et complexité d’utilisation. iTop et Asset Panda offrent des performances globalement élevées, mais avec des contraintes différentes, tandis que GLPI présente une solution plus simple mais moins avancée sur certains aspects critiques.
+Enfin, l’\textbf{efficacité globale} met en évidence un équilibre entre richesse fonctionnelle et complexité d’utilisation. iTop et Asset Panda offrent des performances globalement élevées, mais avec des contraintes différentes, tandis que GLPI présente une solution plus simple mais moins adaptée sur certains aspects critiques.
 
 \paragraph{Synthèse critique}
 
 L’analyse globale des résultats montre que, malgré la maturité technologique de ces solutions, chacune présente des limites structurelles qui restreignent leur adéquation avec certains contextes organisationnels.
 
-GLPI, bien qu’efficace et largement adopté, montre des limites en matière d’automatisation avancée et de gestion des notifications modernes. iTop, quant à lui, offre une grande richesse fonctionnelle mais au prix d’une complexité de mise en œuvre importante. Asset Panda propose une solution moderne et performante, mais son modèle SaaS ainsi que sa dépendance à une connexion Internet stable peuvent constituer des contraintes dans des environnements à ressources limitées.
+GLPI, bien qu’efficace et largement adopté, montre des limites en matière d’automatisation adaptée et de gestion des notifications modernes. iTop, quant à lui, offre une grande richesse fonctionnelle mais au prix d’une complexité de mise en œuvre importante. Asset Panda propose une solution moderne et efficace, mais son modèle SaaS ainsi que sa dépendance à une connexion Internet stable peuvent constituer des contraintes dans des environnements à ressources limitées.
 
 \paragraph{Conclusion}
 
-Ainsi, aucune des solutions étudiées ne répond de manière complète et optimale à l’ensemble des besoins identifiés, notamment dans le contexte des établissements tunisiens. Les contraintes liées au coût, à la complexité de déploiement, ainsi qu’à la nécessité d’une meilleure adaptabilité locale justifient le développement d’une solution plus flexible, légère et adaptée aux réalités du terrain.
+Ainsi, aucune des solutions étudiées ne répond de manière pleinement fonctionnelle et optimale à l’ensemble des besoins identifiés, notamment dans le contexte des établissements tunisiens. Les contraintes liées au coût, à la complexité de déploiement ainsi qu’à la nécessité d’une meilleure adaptabilité locale justifient le développement, dans le cadre de ce projet de fin d’études, d’une solution plus flexible, légère et adaptée aux réalités du terrain.
 \section{Solution proposée : Parc Informatique FMM}
 
-Le projet \textit{Parc Informatique FMM} vise à proposer une solution centralisée de gestion des équipements informatiques, adaptée aux contraintes des établissements tunisiens. Cette solution repose sur une architecture web moderne et modulaire, permettant l’automatisation des processus de gestion des actifs et des incidents.
+Le projet \textit{Parc Informatique FMM} vise à proposer une solution centralisée de gestion des équipements informatiques, adaptée aux contraintes des établissements tunisiens. Cette solution repose sur une architecture web moderne et modulaire, permettant l’automatisation de certains processus de gestion des actifs et des incidents à une échelle locale.
 
 Le système s’appuie sur des technologies open-source telles que \textbf{Node.js (Express)}\cite{expressjs2024}, \textbf{React}\cite{react2024} et \textbf{MySQL}\cite{mysql2024}, garantissant ainsi flexibilité, évolutivité et maîtrise des coûts.
 
@@ -219,8 +219,7 @@ La solution proposée permet d’améliorer significativement la traçabilité d
 
 Ce chapitre a permis de présenter le cadre général du projet, d’analyser les contraintes du domaine, ainsi que d’étudier les solutions existantes. Cette analyse met en évidence les limites des systèmes actuels et justifie le développement d’une solution adaptée, qui sera détaillée dans les chapitres suivants.
 
-% // resent next chapter
-Le chapitre suivant se concentrera sur la méthodologie adoptée pour la réalisation du projet, en détaillant les étapes de développement, les choix technologiques ainsi que les processus de gestion de projet mis en place pour assurer le succès de l’initiative. Nous aborderons également les défis rencontrés et les solutions mises en œuvre pour garantir une livraison efficace et conforme aux besoins identifiés.
+Le chapitre suivant se concentrera sur la méthodologie adoptée pour la réalisation du projet, en détaillant les étapes de développement, les choix technologiques ainsi que les processus de gestion de projet mis en place. Il présentera également les défis rencontrés et les solutions mises en œuvre pour garantir une livraison efficace et conforme aux besoins identifiés.
 
 
 

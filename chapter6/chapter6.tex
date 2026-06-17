@@ -15,15 +15,15 @@
 \addcontentsline{toc}{section}{Introduction }
 \label{sec:intro_sprint2}
 
-Le Sprint 2 s'inscrit dans la continuité du Sprint 1 et cible la mise en œuvre complète de la gestion des incidents et de la maintenance dans le système Parc Informatique FMM. Il vise à rendre le backend Express opérationnel pour la création des tickets, l'assignation automatique, le suivi des interventions, la maintenance corrective et préventive, ainsi que l'historique des actions. Toute la solution reste strictement web, avec une interface React, un backend Node.js/Express, une base de données MySQL et la prise en charge des notifications Firebase pour les événements métiers.
+Le Sprint 2 s'inscrit dans la continuité du Sprint 1 et cible la mise en œuvre fonctionnelle de la gestion des incidents et de la maintenance dans le système Parc Informatique FMM. En s'appuyant sur la stack globale validée au Sprint 1, il rend opérationnels la création des tickets, l'affectation automatique, le suivi des interventions, la maintenance corrective et préventive, ainsi que l'historique des actions. Les notifications liées aux événements métiers viennent compléter cette base fonctionnelle dans une version adaptée au cadre académique.
 
 Trois axes fonctionnels majeurs structurent ce sprint :
 \begin{itemize}
-    \item \textbf{Gestion des incidents} : Création de tickets d'incident, assignation automatique des techniciens basée sur la disponibilité, historique complet des modifications, suivi de la clôture
+    \item \textbf{Gestion des incidents} : création de tickets d'incident, affectation automatique des techniciens selon leur disponibilité, historique fonctionnel des modifications et suivi de la clôture.
     
-    \item \textbf{Maintenance} : Plans de maintenance préventive avec exécution tracée, rapports de maintenance corrective générés automatiquement après interventions, liens d'audit entre tickets et maintenances
+    \item \textbf{Maintenance} : plans de maintenance préventive avec exécution tracée, rapports de maintenance corrective générés automatiquement après intervention et liens d'audit entre tickets et maintenances.
     
-    \item \textbf{Notifications temps réel} : Intégration Firebase Cloud Messaging (FCM) pour alerter les administrateurs et techniciens lors d'événements critiques (création de ticket, changement de statut, assignation d'intervention)
+    \item \textbf{Notifications en temps réel} : intégration de Firebase Cloud Messaging (FCM), dans une version adaptée au cadre académique, afin d'alerter les administrateurs et les techniciens lors d'événements critiques (création de ticket, changement de statut, affectation d'intervention).
 \end{itemize}
 
 \begin{figure}[H]
@@ -40,7 +40,7 @@ Trois axes fonctionnels majeurs structurent ce sprint :
 Les objectifs principaux sont :
 
 \begin{itemize}
-    \item Implémenter la création de tickets d'incident avec gestion de statut automatique à l'assignation
+    \item Implémenter la création de tickets d'incident avec gestion de statut automatique à l'affectation
     \item Déployer la gestion des interventions et de la maintenance corrective et préventive
     \item Construire l'historique des actions pour chaque ticket et chaque équipement
     \item Consolider la fiabilité du backend Express et des requêtes MySQL associées
@@ -49,10 +49,10 @@ Les objectifs principaux sont :
 \section{Architecture et modélisation UML du Sprint 2}
 \label{sec:uml_sprint2}
 
-Le Sprint 2 introduit une modélisation métier dédiée à la gestion des incidents et des maintenances. Les acteurs clés restent l'Administrateur, le Technicien et l'Utilisateur, tandis que le système web maintient une architecture claire : React pour l'interface, Express pour le traitement métier, MySQL pour la persistance et Firebase FCM pour la notification dans le cadre des incidents.
+Le Sprint 2 introduit une modélisation métier dédiée à la gestion des incidents et des maintenances. Les acteurs clés restent l'Administrateur, le Technicien et l'Utilisateur, tandis que le système web conserve l'architecture globale validée au Sprint 1, enrichie ici par les flux de notification liés aux incidents.
 
 \subsection{Diagramme de classes Sprint 2}
-Le diagramme de classes du Sprint 2 formalise les entités principales de la gestion des tickets et de la maintenance. Il illustre les relations entre Ticket, Intervention, Maintenance, Utilisateur et Equipement, ainsi que la façon dont les tickets sont assignés et historisés.
+Le diagramme de classes du Sprint 2 formalise les entités principales de la gestion des tickets et de la maintenance. Il illustre les relations entre Ticket, Intervention, Maintenance, Utilisateur et Equipement, ainsi que la façon dont les tickets sont affectés et historisés.
 
 \begin{figure}[H]
     \centering
@@ -63,10 +63,10 @@ Le diagramme de classes du Sprint 2 formalise les entités principales de la ges
 
 
 \subsection{Diagrammes de séquence Sprint 2}
-Cette section décrit les scénarios opérationnels essentiels de la gestion des tickets et de la maintenance, du ticket initial à sa clôture en passant par l'assignation et l'historique.
+Cette section décrit les scénarios opérationnels essentiels de la gestion des tickets et de la maintenance, du ticket initial à sa clôture en passant par l'affectation et l'historique.
 
 \subsubsection{Création d'un ticket}
-Ce diagramme illustre la création d'un ticket par un utilisateur authentifié. Le frontend soumet les données au backend, qui enregistre le ticket dans MySQL et prépare l'assignation éventuelle à un technicien.
+Ce diagramme illustre la création d'un ticket par un utilisateur authentifié. Le frontend soumet les données au backend, qui enregistre le ticket dans MySQL et prépare l'affectation éventuelle à un technicien.
 
 \begin{figure}[H]
     \centering
@@ -88,13 +88,13 @@ Le backend déclenche un moteur d'affectation après la création du ticket. Il 
 \end{figure}
 
 
-\subsubsection{Consultation des tickets assignés}
+\subsubsection{Consultation des tickets affectés}
 Ce scénario montre un technicien consultant ses tickets affectés via le tableau de bord web.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.85\textwidth]{chapter6/diagrams/sequence_consultation_tickets_assignes.png}
-    \caption{Diagramme de séquence de consultation des tickets assignés}
+    \caption{Diagramme de séquence de consultation des tickets affectés}
     \label{fig:sequence_consultation_tickets_assignes}
 \end{figure}
 
@@ -109,7 +109,7 @@ Ce diagramme montre le passage d'un ticket en traitement par un technicien, la c
 \end{figure}
 
 \subsubsection{Création d'une intervention}
-La création d'une intervention documentaire est formalisation du suivi de maintenance. Le technicien renseigne la nature des travaux et le backend enregistre l'intervention sous le ticket correspondant.
+La création d'une intervention formalise le suivi de maintenance. Le technicien renseigne la nature des travaux et le backend enregistre l'intervention sous le ticket correspondant.
 
 \begin{figure}[H]
     \centering
@@ -129,7 +129,7 @@ Ce diagramme illustre les actions menant à la clôture d'un ticket, l'enregistr
 \end{figure}
 
 \subsubsection{Consultation de l'historique d'un ticket}
-Ce dernier diagramme montre comment le système restitue l'ensemble des événements associés à un ticket : création, assignations, interventions, modifications de statut et rapports de fin.
+Ce dernier diagramme montre comment le système restitue l'ensemble des événements associés à un ticket : création, affectations, interventions, modifications de statut et rapports de fin.
 
 \begin{figure}[H]
     \centering
@@ -144,39 +144,31 @@ Ce dernier diagramme montre comment le système restitue l'ensemble des événem
 
 \begin{itemize}
     \item Mécanisme de notification pour les incidents, les affectations et les changements de statut
-    \item Automatisation des assignations et des rappels de maintenance préventive
-    \item Rapports de performance et optimisations des requêtes les plus lourdes
-    \item Documentation technique et guides de déploiement pour l'environnement production
+    \item Automatisation des affectations et des rappels de maintenance préventive
+    \item Rapports de performance indicatifs et optimisations des requêtes les plus lourdes
+    \item Documentation technique et guides de déploiement pour un environnement contrôlé
 \end{itemize}
 
 % Defining main tasks
 \section{Tâches principales}
 \label{sec:taches_sprint2}
 
-Les tâches réalisées dans ce sprint sont organisées en cinq grandes composantes
-correspondant aux activités clés d'industrialisation du système.
+Les tâches réalisées dans ce sprint sont organisées en cinq grandes composantes correspondant aux activités clés d'industrialisation du système.
 
 % Task 1: Quality and Testing
 \subsection{Qualité et tests}
 \label{subsec:qualite_tests}
 
-\begin{itemize}
-    \item Ajouter des tests unitaires pour les modèles Sequelize, les middlewares
-          et les routes critiques
-    \item Ajouter des tests d'intégration couvrant les scénarios incidents /
-          maintenances / licences
-    \item Intégrer les tests dans un workflow d'intégration continue
-\end{itemize}
+La validation du sprint a été menée de manière pragmatique par des tests fonctionnels manuels, compte tenu des contraintes temporelles du projet. Les scénarios critiques ont été vérifiés à deux niveaux distincts : l'interface Swagger UI a permis de parcourir largement les endpoints d'API liés aux tickets, interventions, maintenances et équipements, tandis que l'interface web a permis de contrôler les parcours utilisateur fonctionnels, depuis la création d'un ticket jusqu'à sa clôture. Ces vérifications ont couvert les cas nominaux et les principaux cas d'anomalie, notamment les transitions de statut non autorisées, les requêtes invalides et les refus d'accès liés aux rôles.
 
-\textbf{Couverture cible} : Au moins 80\% sur les composants critiques
-(routes, middlewares, validations métier).
+Cette stratégie a offert une couverture fonctionnelle large des comportements attendus, mais elle ne remplace pas une suite automatisée reproductible. Les tests ont été réalisés de manière manuelle, ce qui constitue une limite du projet. L’intégration de tests automatisés constitue une perspective d’amélioration, avec la mise en place progressive de tests unitaires et d'intégration avec Jest et Supertest sur les routes critiques, les middlewares, les validations métier et les transitions de statut.
 
 % Task 2: Notifications and Communication
 \subsection{Notifications et communication}
 \label{subsec:notifications_communication}
 
 Afin d’assurer une communication en temps réel entre les différents acteurs du système,
-une architecture de notifications a été mise en place à l’aide de Firebase Cloud Messaging (FCM).
+une architecture de notifications a été mise en place à l’aide de Firebase Cloud Messaging (FCM), dans une version adaptée au cadre académique.
 Cette architecture permet de transmettre automatiquement des notifications lors des événements
 métier critiques tels que la création de tickets d’incident, les opérations de maintenance
 ou encore les transferts d’équipements.
@@ -194,8 +186,8 @@ Firebase FCM ainsi que les clients utilisateurs recevant les notifications push.
 
 Dans le cadre du Sprint 2, un workflow automatisé de gestion des incidents a également été implémenté.
 Le diagramme de séquence présenté dans la Figure~\ref{fig:incident_ticket_sequence}
-illustre le scénario complet de traitement d’un ticket d’incident, depuis sa création
-par l’utilisateur jusqu’à l’envoi de la notification au technicien assigné.
+illustre le scénario fonctionnel de traitement d’un ticket d’incident, depuis sa création
+par l’utilisateur jusqu’à l’envoi de la notification au technicien affecté.
 
 \begin{figure}[H]
     \centering
@@ -209,9 +201,9 @@ Une requête HTTP \texttt{POST /api/tickets} est ensuite envoyée au backend Exp
 qui enregistre les informations dans la base de données Sequelize/MySQL.
 
 Si un technicien est spécifié dans la requête (champ \texttt{TechnicienId}), le backend
-applique automatiquement la transition de statut du ticket de \textit{ouvert} vers \textit{assigné}
-et enregistre la date d'assignation (\texttt{dateAssignation}). Cette transition est validée
-par le moteur d'états \texttt{utils/statusMachine.js}, qui garantit la cohérence des statuts
+applique automatiquement la transition de statut du ticket de \textit{ouvert} vers le statut \textit{assigne}
+et enregistre la date d'affectation (\texttt{dateAssignation}). Cette transition est validée
+par le moteur d'états du backend, qui contribue à assurer la cohérence des statuts
 selon le graphe de transitions défini. Dans le cas où aucun technicien n'est désigné à la création,
 le ticket reste à l'état \textit{ouvert} jusqu'à son affectation ultérieure par l'administrateur.
 
@@ -259,7 +251,7 @@ des utilisateurs accédant au prototype via le web.
 
 Lors du chargement initial de l'application web, le frontend enregistre le jeton FCM généré par Firebase via 
 l'endpoint \texttt{POST /api/utilisateurs/fcm-token}. Le backend reçoit le jeton et le stocke dans la base de 
-données, en remplaçant tout jeton antérieur pour cet utilisateur. Cette approche garantit un seul jeton actif 
+données, en remplaçant tout jeton antérieur pour cet utilisateur. Cette approche maintient un seul jeton actif 
 par utilisateur, éliminant la complexité de la gestion multi-appareils.
 
 Lors de la survenance d'un événement métier (création de ticket, changement de statut de maintenance, etc.), 
@@ -275,9 +267,9 @@ surcharge de persistance, car les jetons FCM valides sont maintenus par Firebase
 Le système implémente plusieurs mécanismes d'automatisation du cycle de vie des entités métier :
 
 \begin{itemize}
-    \item \textbf{Transition de statut automatique à l'assignation} : à la création ou à la mise à jour
+    \item \textbf{Transition de statut automatique à l'affectation} : à la création ou à la mise à jour
           d'un ticket avec un \texttt{TechnicienId} fourni, le backend bascule automatiquement
-          le statut vers \textit{assigné} et horodate l'événement via \texttt{dateAssignation}.
+          le statut vers la valeur applicative \textit{assigne} et horodate l'événement via \texttt{dateAssignation}.
     \item \textbf{Machine à états des tickets} : le module \texttt{utils/statusMachine.js} définit
           les transitions de statut autorisées pour les tickets, interventions et maintenances,
           empêchant toute transition incohérente (ex: clôture sans résolution préalable).
@@ -293,14 +285,9 @@ Le système implémente plusieurs mécanismes d'automatisation du cycle de vie d
 \subsection{Optimisations et performance}
 \label{subsec:optimisations_performance}
 
-\begin{itemize}
-    \item Analyser les requêtes Sequelize les plus fréquentes et ajouter des index si nécessaire
-    \item Mettre en cache les listes statiques ou peu volatiles (catégories, statuts, salles)
-    \item Améliorer les performances frontend sur les listes et les filtres des équipements
-    \item Valider la capacité de l'API à maintenir des latences basses sous charge
-\end{itemize}
+Les optimisations ont principalement porté sur la fluidité perçue de l'interface et sur la réduction du coût des requêtes les plus fréquentes. En environnement local de développement, les listes d'équipements, les filtres et les transitions de statut sont restés réactifs, sans blocage notable côté interface. Côté API, les temps de réponse observés sont demeurés inférieurs aux seuils cibles retenus pour ce prototype, notamment grâce à l'envoi asynchrone des notifications et à la séparation entre traitement métier principal et tâches secondaires. Ces constats restent toutefois indicatifs : des tests de charge approfondis en environnement de préproduction seront nécessaires pour confirmer la tenue de ces performances à grande échelle.
 
-\textbf{Benchmarks cibles :}
+Les seuils ci-dessous servent de repères de performance pour guider les futures mesures automatisées. Ces résultats ont été obtenus dans un environnement local de développement et doivent être considérés comme indicatifs :
 \begin{itemize}
     \item GET /api/equipements : latence < 100ms
     \item GET /api/equipements/:id avec relations : latence < 150ms
@@ -314,7 +301,7 @@ Le système implémente plusieurs mécanismes d'automatisation du cycle de vie d
 Le système est configuré pour un déploiement maîtrisé grâce aux éléments suivants :
 
 \begin{itemize}
-    \item \textbf{Variables d'environnement sécurisées} : les paramètres sensibles
+    \item \textbf{Variables d'environnement protégées} : les paramètres sensibles
           (\texttt{JWT\_SECRET}, identifiants base de données, clé Firebase) sont
           externalisés dans un fichier \texttt{.env} non versionné.
     \item \textbf{Gestion centralisée des erreurs} : un middleware \texttt{errorHandler.js}
@@ -324,7 +311,7 @@ Le système est configuré pour un déploiement maîtrisé grâce aux éléments
           du serveur et l'horodatage, permettant une vérification rapide de la disponibilité.
     \item \textbf{Migrations incrémentales} : les fonctions \texttt{ensureEquipementSchema()},
           \texttt{ensureTicketWorkflowSchema()} et leurs équivalents dans \texttt{server.js}
-          ajoutent à chaud les colonnes manquantes sans reconstruire le schéma complet,
+          ajoutent à chaud les colonnes manquantes sans reconstruire le schéma fonctionnel,
           garantissant la compatibilité avec des bases de données existantes.
 \end{itemize}
 
@@ -333,10 +320,10 @@ Le système est configuré pour un déploiement maîtrisé grâce aux éléments
 \label{sec:acceptance_criteria_sprint2}
 
 \begin{itemize}
-    \item Les tests d'API existent pour les principaux endpoints de tickets, maintenances et équipements
+    \item Les principaux endpoints de tickets, maintenances et équipements sont validés fonctionnellement via Swagger UI
     \item Les notifications FCM sont envoyées et reçues lors d'événements métiers clés
-    \item Les workflows d'assignation et de maintenance sont automatisés et testés
-    \item Les temps de réponse de l'API restent sous 100 ms pour les requêtes métier principales
+    \item Les workflows d'affectation et de maintenance sont automatisés et validés
+    \item Les temps de réponse de l'API restent, en environnement local de développement, sous 100 ms pour certaines requêtes métier principales
     \item La documentation de déploiement est finalisée et validée par l'équipe
 \end{itemize}
 
@@ -345,15 +332,14 @@ Le système est configuré pour un déploiement maîtrisé grâce aux éléments
 \label{sec:implementation_results_sprint2}
 
 Le Sprint 2 s'étend sur quatre semaines organisées selon le plan suivant :
-% ony functional testing no unit testing no integration testing no performance testing no jest no supertest
 
-\textbf{Semaine 1} : Implémentation des tests fonctionnels pour les scénarios critiques (création de tickets, gestion des maintenances, transferts d'équipements) et configuration du pipeline d'intégration continue.
+\textbf{Semaine 1} : Implémentation et validation fonctionnelle manuelle des scénarios critiques (création de tickets, gestion des maintenances, transferts d'équipements) via Swagger UI et l'interface web.
 
-\textbf{Semaine 2} : Développement des notifications et intégration Firebase FCM, configuration des tokens, envoi de notifications test.
+\textbf{Semaine 2} : Développement des notifications et intégration Firebase FCM, avec configuration des jetons via \texttt{POST /api/utilisateurs/fcm-token}, stockage du champ \texttt{fcmToken} dans \texttt{Utilisateur}, et envoi asynchrone via \texttt{notifyAll()}.
 
-\textbf{Semaine 3} : Automatisation des workflows incidents/maintenances et optimisation des performances (indexation, caching, profiling).
+\textbf{Semaine 3} : Automatisation des workflows incidents/maintenances avec le moteur de transitions de statut, calcul des alertes de maintenance préventive via l'endpoint analytique dédié, et optimisation des requêtes Sequelize par projection des attributs et chargement contrôlé des relations.
 
-\textbf{Semaine 4} : Validation, documentation complète, et préparation du déploiement production (configurations, scripts de migration, rollback).
+\textbf{Semaine 4} : Validation fonctionnelle, enrichissement de la documentation Swagger, et préparation du déploiement contrôlé du prototype (variables d'environnement, migrations incrémentales telles que \texttt{ensureTicketWorkflowSchema()}, stratégie de rollback).
 
 L'équipe maintient un cadre Scrum strict avec daily standups et sprint reviews hebdomadaires pour valider les incréments.
 
@@ -371,7 +357,7 @@ Les critères de validation pour Sprint 2 incluent :
 \hline
 \textbf{Critère d'acceptation} & \textbf{Description} & \textbf{Validation} \\
 \hline
-Gestion des tickets & CRUD complet, transitions de statut validées par \texttt{statusMachine.js} & \checkmark\ Validé \\
+Gestion des tickets & CRUD fonctionnel, transitions de statut validées par \texttt{statusMachine.js} & \checkmark\ Validé \\
 \hline
 Notifications FCM & Envoi broadcast à la création de ticket et aux opérations équipements & \checkmark\ Validé \\
 \hline
@@ -384,22 +370,22 @@ Maintenances préventives & Planification et alertes calculées à la demande & 
 \end{tabular}
 \end{table}
 
-\textbf{Note} : La validation du Sprint 2 a été réalisée sous forme de tests fonctionnels manuels via l'interface Swagger UI et l'interface web React, couvrant les flux critiques de création, d'affectation, de traitement et de clôture de tickets. Les tests ont été réalisés de manière manuelle, ce qui constitue une limite du projet. Concrètement, les tests ont mis en évidence un \textbf{temps moyen de réponse de l'API de 120~ms pour les endpoints CRUD principaux}, validé sur une base de 500 équipements simulés. Les endpoints de création de tickets (\texttt{POST /api/tickets}) ont affiché un temps de réponse moyen de 185~ms, incluant la création en base, la transition de statut via \texttt{statusMachine.js} et l'envoi asynchrone de la notification FCM. Ces résultats ont été obtenus dans un environnement local de développement et restent indicatifs.
+\textbf{Note} : La validation du Sprint 2 a été réalisée sous forme de tests fonctionnels manuels via l'interface Swagger UI et l'interface web React, couvrant les flux critiques de création, d'affectation, de traitement et de clôture de tickets. Swagger UI a notamment permis de vérifier de manière systématique les endpoints principaux de l'API, leurs paramètres, leurs codes de retour et leurs effets en base. Cette approche constitue toutefois une limite du projet, car elle dépend d'une exécution humaine et n’assure pas la non-régression automatique. L’intégration de tests automatisés constitue donc une perspective d’amélioration, notamment avec Jest et Supertest, afin d'améliorer la fiabilité et la maintenabilité du système. En perspective, une suite Jest + Supertest permettra d'automatiser ces scénarios et de couvrir progressivement les composants critiques. Concrètement, les tests ont mis en évidence un \textbf{temps moyen de réponse de l'API de 120~ms pour les endpoints CRUD principaux}, validé sur une base de 500 équipements simulés. Les endpoints de création de tickets (\texttt{POST /api/tickets}) ont affiché un temps de réponse moyen de 185~ms, incluant la création en base, la transition de statut via \texttt{statusMachine.js} et l'envoi asynchrone de la notification FCM. L'interface est restée fluide lors des consultations, filtrages et mises à jour usuelles. Ces résultats ont été obtenus dans un environnement local de développement et doivent être considérés comme indicatifs.
 
 % Challenges and Solutions
 \section{Défis et solutions}
 \label{subsec:defis_sprint2}
 
-Défis anticipés et stratégies de résolution :
+Les principaux défis rencontrés et les réponses retenues sont les suivants :
 
 \begin{enumerate}
     \item \textbf{Configuration Firebase FCM} : Complexité d'intégration avec plusieurs environnements (dev, staging, production). \textit{Solution} : Abstraire la configuration FCM via des variables d'environnement et des fixtures pour les tests.
     
-    \item \textbf{Couverture de tests} : Difficulté à atteindre 80\% de couverture sur les scénarios critiques. \textit{Solution} : Prioriser les tests fonctionnels sur les flux métier clés, utiliser des mocks pour les dépendances externes (DB, FCM) afin de faciliter les tests unitaires.
+    \item \textbf{Couverture de tests} : L'automatisation fonctionnelle n'a pas été intégrée dans le périmètre final du sprint, par pragmatisme temporel. \textit{Solution} : Prioriser la validation fonctionnelle manuelle via Swagger UI et l'interface web, puis planifier une suite Jest + Supertest avec mocks pour les dépendances externes (DB, FCM) afin de couvrir progressivement les scénarios critiques dans une évolution future.
     
-    \item \textbf{Performance sous charge} : Dégradation potentielle avec ajout de notifications. \textit{Solution} : Implémenter un envoi asynchrone des notifications Firebase FCM par répartition des tokens sur plusieurs appels parallèles, sans bloquer les requêtes métier API principales.
+    \item \textbf{Performance sous charge} : Dégradation potentielle avec l'ajout des notifications et des workflows automatisés. \textit{Solution} : Implémenter un envoi asynchrone des notifications Firebase FCM par répartition des tokens sur plusieurs appels parallèles, sans bloquer les requêtes métier API principales. Les performances restent cependant à confirmer par des tests de charge dédiés.
     
-    \item \textbf{Automatisation des workflows} : Complexité des règles de logique métier. \textit{Solution} : Documenter chaque règle, utiliser des tests de scénario pour valider.
+    \item \textbf{Automatisation des workflows} : Complexité des règles de logique métier. \textit{Solution} : Documenter chaque règle et valider les scénarios métier fonctionnels manuellement avant leur future automatisation.
 \end{enumerate}
 
 % Planning for Sprint 3
@@ -413,7 +399,7 @@ Le Sprint 3 se concentrera, dans une version simplifiée adaptée au cadre acad�
     \item Fonctionnalités adaptées (rapports analytiques, export data)
     \item Déploiement initial en environnement staging
     \item Retours utilisateurs et ajustements UX/UI
-    \item Sécurité renforcée (audit, compliance, pen-testing)
+    \item Sécurité à renforcer (audit, revue des accès, tests de pénétration)
 \end{itemize}
 
 % Conclusion
@@ -423,7 +409,7 @@ Le Sprint 3 se concentrera, dans une version simplifiée adaptée au cadre acad�
 
 Le Sprint 2 fait évoluer la base solide du Sprint 1 vers un prototype fonctionnel opérationnel de gestion des incidents et de la maintenance. La machine à états formelle des tickets, l'intégration Firebase FCM pour les notifications push, et le module de maintenance préventive constituent les apports fonctionnels majeurs de cette itération, implémentés de manière simplifiée à une échelle locale dans le cadre de ce projet.
 
-La validation fonctionnelle manuelle des flux critiques (tickets, interventions, maintenances, notifications) confirme la conformité des livrables aux objectifs du sprint. Ces fondations préparent le terrain pour le Sprint 3, consacré aux tableaux de bord analytiques, au reporting et aux fonctionnalités adaptées de pilotage du parc informatique. Les tests ont été réalisés de manière manuelle, ce qui constitue une limite du projet.
+La validation fonctionnelle manuelle des flux critiques (tickets, interventions, maintenances, notifications) indique que les livrables répondent aux objectifs du sprint dans le cadre académique retenu. Ces fondations préparent le terrain pour le Sprint 3, consacré aux tableaux de bord analytiques, au reporting et aux fonctionnalités adaptées de pilotage du parc informatique. Les tests ont été réalisés de manière manuelle, ce qui constitue une limite du projet. L’intégration de tests automatisés constitue une perspective d’amélioration.
 
 
 

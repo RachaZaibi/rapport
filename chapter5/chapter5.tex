@@ -19,11 +19,11 @@
 
 Ce chapitre est entièrement dédié au \textbf{Sprint 1}, qui constitue la première itération majeure dans le cycle de développement du système de gestion des équipements informatiques destiné au \textit{SmartLab} de la Faculté de Médecine de Monastir. Faisant suite à l'étude architecturale globale et respectant la planification de notre feuille de route (détaillée précédemment dans le Tableau \ref{tab:sprints}), ce premier jalon s'inscrit pleinement dans la méthodologie Agile Scrum adoptée pour ce projet.
 
-L'objectif primordial de ce sprint est de jeter des fondations techniques à la fois fiables et évolutives. Des mécanismes de sécurité de base ont été implémentés dans le cadre de ce projet à une échelle locale. L'effort de développement s'articule ainsi autour de trois axes directeurs :
+L’objectif principal de ce sprint est de poser des fondations techniques fiables et évolutives. Des mécanismes de sécurité de base ont été implémentés dans le cadre de ce projet à une échelle locale. L’effort de développement s’articule ainsi autour de trois axes directeurs :
 \begin{itemize}
-    \item \textbf{La mise en place de l'infrastructure Backend :} Déploiement d'une architecture orientée services capable de centraliser la logique métier.
-    \item \textbf{La persistance et la modélisation des données :} Configuration et structuration fine de la base de données relationnelle pour garantir l'intégrité des informations.
-    \item \textbf{Le cœur fonctionnel initial :} Implémentation du module de gestion des équipements (opérations CRUD, filtres avancés et fonctionnalités d'importation).
+    \item \textbf{La mise en place de l’infrastructure backend :} déploiement d’une architecture orientée services capable de centraliser la logique métier.
+    \item \textbf{La persistance et la modélisation des données :} configuration et structuration de la base de données relationnelle afin de garantir l’intégrité des informations.
+    \item \textbf{Le cœur fonctionnel initial :} implémentation du module de gestion des équipements (opérations CRUD, filtres adaptés et fonctionnalités d’importation).
 \end{itemize}
 
 Afin de soutenir ces objectifs et d'assurer une séparation claire des responsabilités (SOC - \textit{Separation of Concerns}), nous avons opté pour une \textbf{architecture découplée en 3 couches (3-Tier)} : une couche de Présentation (React.js), une couche Application \& Logique Métier (Express.js \& Sequelize), et une couche de Données (MySQL). 
@@ -38,17 +38,17 @@ La Figure \ref{fig:architecture_sprint1} détaille la cartographie de cette arch
 \end{figure}\section{Objectifs et livrables}
 \label{sec:objectifs_sprint1}
 
-L'objectif principal du Sprint 1 est d'établir une infrastructure backend solide et fonctionnelle permettant la gestion complète des équipements informatiques et des processus d'exploitation associés. Cette phase vise à mettre en place un serveur d'application performant basé sur Express.js\cite{expressjs2024} et Sequelize\cite{sequelize2024}, et à configurer une base de données relationnelle capable de persister les données avec fiabilité et cohérence. Les cinq livrables clés de ce sprint sont :
+L’objectif principal du Sprint 1 est d’établir une infrastructure backend fiable permettant la gestion des équipements informatiques et des processus d’exploitation associés. Cette phase vise à mettre en place un serveur d’application efficace basé sur Express.js\cite{expressjs2024} et Sequelize\cite{sequelize2024}, ainsi qu’à configurer une base de données relationnelle capable de persister les données avec fiabilité et cohérence. Les cinq livrables clés de ce sprint sont :
 
 \begin{itemize}
-    \item \textbf{Backend API REST avec Express.js\cite{expressjs2024} et Sequelize ORM\cite{sequelize2024}} : Une API REST fonctionnelle et documentée, implémentée avec Express.js dans le cadre de ce projet, exposant 16 suites d'endpoints sécurisés couvrant les équipements, les tickets, les interventions, les maintenances, les installations, les licences et plus. L'API intègre une authentification JWT Bearer, une validation des entrées via Sequelize, une gestion d'erreurs fiable, et des logs structurés via Morgan. Des mécanismes de sécurité de base ont été implémentés.
-    \item \textbf{Base de données relationnelle MySQL\cite{mysql2024} avec 17 modèles} : Une base de données MySQL avec un schéma modélisant 17 entités métier incluant Équipement, Ticket, Intervention, Maintenance, Installation, Licence, Logiciel, Affectation, Transfer, Rapport, Bloc, Salle, et Département, implémenté de manière simplifiée à une échelle locale. Chaque modèle implémente des relations définies via Sequelize avec indices d'optimisation et contraintes d'intégrité.
+    \item \textbf{Backend API REST avec Express.js\cite{expressjs2024} et Sequelize ORM\cite{sequelize2024}} : Une API REST fonctionnelle et documentée, implémentée avec Express.js dans le cadre de ce projet, exposant 16 suites d'endpoints protégés couvrant les équipements, les tickets, les interventions, les maintenances, les installations, les licences et plus. Des mécanismes de sécurité de base ont été implémentés, notamment l’authentification JWT et le contrôle d’accès basé sur les rôles (RBAC). L'API intègre également une validation des entrées via Sequelize, une gestion d'erreurs fiable, et des logs structurés via Morgan.
+    \item \textbf{Base de données relationnelle MySQL\cite{mysql2024} avec 17 modèles} : Une base de données MySQL avec un schéma modélisant 17 entités métier incluant Équipement, Ticket, Intervention, Maintenance, Installation, Licence, Logiciel, Affectation, Transfert, Rapport, Bloc, Salle et Département, implémenté de manière simplifiée à une échelle locale. Chaque modèle définit des relations via Sequelize, avec des index d’optimisation et des contraintes d’intégrité.
     \item \textbf{Module de gestion des équipements avec CRUD adapté} : Un module fonctionnel implémentant 9 opérations pour les équipements (création, lecture, modification, suppression, historique, affectation, transfert, disposition). Chaque opération inclut la validation métier, le contrôle d'accès basé sur les rôles (RBAC), et la génération d'événements auditables.
-    \item \textbf{Système de gestion des incidents et maintenances} : Un module pour la création et la gestion de tickets informatiques, des interventions associées, et des plans de maintenance préventive et corrective, avec assignation automatique des techniciens et suivi du statut.
+    \item \textbf{Système de gestion des incidents et maintenances} : Un module pour la création et la gestion de tickets informatiques, des interventions associées, et des plans de maintenance préventive et corrective, avec affectation automatique des techniciens et suivi du statut.
     \item \textbf{Interface web intuitive et gestion des licences logicielles} : Une interface frontend React\cite{react2024} avec Material-UI\cite{materialui2024}, construite avec Vite\cite{vite2024}, offrant une authentification, gestion des utilisateurs, des licences logicielles, des installations et des transferts d'équipements, générant des rapports PDF/Excel et des statistiques.
 \end{itemize}
 
-Ces objectifs s'alignent avec les priorités M (Must have) du Product Backlog (voir Tableau \ref{tab:backlog}), en particulier les tâches M-01 « Gestion des équipements », M-02 « Gestion des incidents », M-03 « Gestion des maintenances », et M-06 « Stockage et historique des données », comme détaillé dans le chapitre précédent. Le périmètre du Sprint 1 couvre également les fonctionnalités S (Should have) pour assurer une base production-ready complète. Certaines entités ont été préparées dès le Sprint 1 afin de faciliter leur intégration progressive dans les sprints suivants.
+Ces objectifs s'alignent avec les priorités M (Must have) du Product Backlog (voir Tableau \ref{tab:backlog}), en particulier les tâches M-01 « Gestion des équipements », M-02 « Gestion des incidents », M-03 « Gestion des maintenances », et M-06 « Stockage et historique des données », comme détaillé dans le chapitre précédent. Le périmètre du Sprint 1 couvre également les fonctionnalités S (Should have) pour assurer une base fonctionnelle. Certaines entités ont été préparées dès les premiers sprints afin de faciliter leur intégration progressive dans les itérations suivantes.
 
 \section{Architecture et modélisation UML du Sprint 1}
 \label{sec:uml_sprint1}
@@ -79,7 +79,7 @@ L'ensemble du système repose sur 17 modèles persistants :
 \hline
 \textbf{Affectation} & Historique des affectations d'équipements \\
 \hline
-\textbf{Transfer} & Traces d'audit des mouvements d'équipements \\
+\textbf{Transfert} & Traces d'audit des mouvements d'équipements \\
 \hline
 \textbf{Ticket} & Incidents et demandes de support \\
 \hline
@@ -115,10 +115,10 @@ Le modèle Équipement enrichit l'inventaire standard avec plusieurs attributs :
     \item \textbf{marque} et \textbf{modele} : Identifiants commerciaux
     \item \textbf{categorie} : Classification de l'équipement (ex: PC, Imprimante, Serveur - chaîne de caractères)
     \item \textbf{etat} : État opérationnel (fonctionnel, en\_panne, en\_réparation, réformé)
-    \item \textbf{materialSource} : Provenance (PURCHASED, DONATED, INHERITED)
+    \item \textbf{materialSource} : Provenance, selon l'ENUM réel \texttt{title\_1}, \texttt{title\_2}, \texttt{donation}, \texttt{other}
     \item \textbf{currentStatus} et \textbf{currentHolderType} : Localisation courante
     \item \textbf{dateAchat} : Date d'acquisition
-    \item \textbf{assignedAt} : Timestamp de la dernière assignation
+    \item \textbf{assignedAt} : Timestamp de la dernière affectation
 \end{itemize}
 
 \textbf{Note importante} : Les champs \textit{codeQR} et \textit{categorie} sont stockés comme chaînes 
@@ -147,7 +147,7 @@ Le diagramme de classes du Sprint 1 formalise les principales entités métiers 
 Cette série de diagrammes de séquence décrit les principaux scénarios dynamiques du Sprint 1. Chacun met en lumière la collaboration entre l'acteur humain, le frontend React, le backend Express et la base de données MySQL, tout en intégrant les règles de sécurité liées à l'authentification JWT et au contrôle d'accès RBAC.
 
 \subsubsection{Authentification utilisateur}
-Le diagramme de séquence d'authentification modélise l'accès sécurisé au système. L'utilisateur soumet son identifiant et son mot de passe sur le frontend, lequel transmet la requête au backend. Express vérifie les informations dans MySQL et génère un jeton JWT en cas de succès, qui permet l'accès aux fonctionnalités en fonction du rôle.
+Le diagramme de séquence d'authentification modélise l'accès protégé au système. L'utilisateur soumet son identifiant et son mot de passe sur le frontend, lequel transmet la requête au backend. Express vérifie les informations dans MySQL et génère un jeton JWT en cas de succès, qui permet l'accès aux fonctionnalités en fonction du rôle.
 
 \begin{figure}[H]
     \centering
@@ -157,7 +157,7 @@ Le diagramme de séquence d'authentification modélise l'accès sécurisé au sy
 \end{figure}
 
 \subsubsection{Création d'un équipement}
-Ce diagramme met en évidence le flux de création d'un équipement depuis l'interface Web. L'administrateur soumet un formulaire d'équipement, le backend vérifie les permissions, persiste l'objet dans MySQL, génère un QR Code associé et renvoie la confirmation au frontend.
+Ce diagramme met en évidence le flux de création d'un équipement depuis l'interface web. L'administrateur soumet un formulaire d'équipement, le backend vérifie les permissions, persiste l'objet dans MySQL, génère un code QR associé et renvoie la confirmation au frontend.
 
 \begin{figure}[H]
     \centering
@@ -190,7 +190,7 @@ Ce diagramme illustre la requête de consultation de l'inventaire des équipemen
 
 
 \subsubsection{Consultation des détails d'un équipement}
-Le diagramme de séquence de consultation des détails d'un équipement montre la récupération des informations complètes d'un actif, incluant sa catégorie, sa localisation, son affectation en cours et son QR Code. Ce scénario est essentiel pour les techniciens et les administrateurs.
+Le diagramme de séquence de consultation des détails d'un équipement montre la récupération des informations fonctionnelles d'un actif, incluant sa catégorie, sa localisation, son affectation en cours et son code QR. Ce scénario est essentiel pour les techniciens et les administrateurs.
 
 \begin{figure}[H]
     \centering
@@ -236,7 +236,7 @@ Le serveur a été structuré selon une architecture en couches (routes, service
 \subsection{Création des schémas de base de données}
 \label{subsec:schema_bd}
 
-Afin de structurer les données du système, une modélisation complète de la base de données a été réalisée à l’aide de Sequelize.
+Afin de structurer les données du système, une modélisation fonctionnelle de la base de données a été réalisée à l’aide de Sequelize.
 
 Cette modélisation est illustrée dans le diagramme entité–relation présenté dans la Figure~\ref{fig:er_diagram_sprint1}, qui met en évidence l’ensemble des entités du système ainsi que leurs relations.
 
@@ -251,7 +251,7 @@ Le schéma comprend les entités suivantes, organisées par domaine fonctionnel 
 
 \textbf{Gestion des équipements :}
 \begin{itemize}
-    \item Equipement, Affectation, Transfer
+    \item Equipement, Affectation, Transfert
 \end{itemize}
 
 \textbf{Gestion des incidents :}
@@ -280,18 +280,18 @@ Chaque modèle inclut des attributs standards (\texttt{createdAt}, \texttt{updat
 \subsection{Développement de l’API REST et Architecture des Endpoints}
 \label{subsec:api_rest_sprint1}
 
-Sur la base des modèles de données et des relations conceptuelles établis en amont, dans le cadre de ce projet à une échelle locale, une API REST (Representational State Transfer) fiable et entièrement découplée a été développée. L’implémentation de cette interface de programmation s'appuie sur le framework Express.js, garantissant une gestion performante et asynchrone des requêtes HTTP.
+Sur la base des modèles de données et des relations conceptuelles établis en amont, dans le cadre de ce projet à une échelle locale, une API REST (Representational State Transfer) fiable et découplée a été développée. L’implémentation de cette interface de programmation s'appuie sur le framework Express.js, permettant une gestion efficace et asynchrone des requêtes HTTP.
 
 Afin de structurer les échanges entre la couche de présentation (React.js) et le serveur, chaque entité métier dispose d’un ensemble d'endpoints (points d'accès) standardisés. Ces derniers respectent rigoureusement les conventions REST et s'appuient sur les verbes HTTP sémantiques (\texttt{GET}, \texttt{POST}, \texttt{PUT}, \texttt{PATCH}, \texttt{DELETE}) pour expliciter la nature de l'action requise :
 \begin{itemize}
-    \item \textbf{\texttt{GET}} : Utilisé exclusivement pour la récupération sécurisée de ressources ou de collections, sans altération de l'état du système.
+    \item \textbf{\texttt{GET}} : Utilisé exclusivement pour la récupération protégée de ressources ou de collections, sans altération de l'état du système.
     \item \textbf{\texttt{POST}} : Dédié à la création de nouvelles instances au sein de la base de données.
     \item \textbf{\texttt{PUT}} : Exploité pour la mise à jour globale et idempotente d'une ressource existante.
     \item \textbf{\texttt{PATCH}} : Privilégié pour les modifications partielles ou chirurgicales, telles que le changement d'état d'un matériel informatique ou la validation d'un transfert.
     \item \textbf{\texttt{DELETE}} : Réservé à la suppression logique ou physique d'une entrée.
 \end{itemize}
 
-La Table~\ref{tab:routes_api_equipements} synthétise la cartographie complète des routes exposées par l'API pour le module des équipements. Cette matrice représente le cœur fonctionnel et applicatif développé au cours du présent sprint.
+La Table~\ref{tab:routes_api_equipements} synthétise la cartographie fonctionnelle des routes exposées par l'API pour le module des équipements. Cette matrice représente le cœur fonctionnel et applicatif développé au cours du présent sprint.
 
 \begin{table}[H]
 \centering
@@ -303,18 +303,18 @@ La Table~\ref{tab:routes_api_equipements} synthétise la cartographie complète 
 \multirow{8}{*}{\textbf{Équipements}} 
  & \textbf{\texttt{GET}} \texttt{/} & JWT & Liste l'ensemble du parc d'équipements informatiques. \\ \cline{2-4} 
  & \textbf{\texttt{GET}} \texttt{/:id} & JWT & Récupère les métadonnées détaillées d'un matériel via son ID. \\ \cline{2-4} 
- & \textbf{\texttt{GET}} \texttt{/search} & JWT & Recherche multicritère avancée (statut, labo, type). \\ \cline{2-4} 
+ & \textbf{\texttt{GET}} \texttt{/search} & JWT & Recherche multicritère adaptée (statut, labo, type). \\ \cline{2-4} 
  & \textbf{\texttt{GET}} \texttt{/stats} & JWT & Génère les indicateurs de performance du parc. \\ \cline{2-4} 
  & \textbf{\texttt{POST}} \texttt{/} & JWT + RBAC & Crée et enregistre un nouvel équipement dans l'inventaire. \\ \cline{2-4} 
  & \textbf{\texttt{PUT}} \texttt{/:id} & JWT + RBAC & Modifie l'intégralité des attributs d'un équipement. \\ \cline{2-4} 
  & \textbf{\texttt{PATCH}} \texttt{/:id/statut} & JWT + RBAC & Altère spécifiquement l'état opérationnel du matériel. \\ \cline{2-4} 
  & \textbf{\texttt{DELETE}} \texttt{/:id} & JWT + RBAC & Supprime une référence du système. \\ \hline
-\multirow{5}{*}{\textbf{Assignations}} 
+\multirow{5}{*}{\textbf{Affectations}} 
  & \textbf{\texttt{GET}} \texttt{/:id/assignations} & JWT & Historique des affectations subies par un équipement. \\ \cline{2-4} 
  & \textbf{\texttt{GET}} \texttt{/user/:userId} & JWT & Extrait la liste des matériels actuellement détenus par un utilisateur. \\ \cline{2-4} 
- & \textbf{\texttt{POST}} \texttt{/} & JWT + RBAC & Assigne formellement un équipement à un utilisateur ou à un laboratoire. \\ \cline{2-4} 
+ & \textbf{\texttt{POST}} \texttt{/} & JWT + RBAC & Affecte formellement un équipement à un utilisateur ou à un laboratoire. \\ \cline{2-4} 
  & \textbf{\texttt{PATCH}} \texttt{/:id/retour} & JWT + RBAC & Enregistre la restitution du matériel et clôture l'affectation. \\ \cline{2-4} 
- & \textbf{\texttt{DELETE}} \texttt{/:id} & JWT + RBAC & Révoque ou annule une assignation erronée. \\ \hline
+ & \textbf{\texttt{DELETE}} \texttt{/:id} & JWT + RBAC & Révoque ou annule une affectation erronée. \\ \hline
 \multirow{4}{*}{\textbf{Transferts}} 
  & \textbf{\texttt{GET}} \texttt{/:id/transferts} & JWT & Traçabilité des mouvements géographiques d'un équipement. \\ \cline{2-4} 
  & \textbf{\texttt{GET}} \texttt{/:id} & JWT & Récupère les détails logistiques d'un transfert donné. \\ \cline{2-4} 
@@ -326,18 +326,18 @@ La Table~\ref{tab:routes_api_equipements} synthétise la cartographie complète 
 \end{table}
 
 % -------------------------------------------------------
-\subsection{Mécanismes Transverses : Sécurité, Validation et Cycle de Vie}
+\subsection{Mécanismes transverses : sécurité, validation et cycle de vie}
 \label{subsec:endpoints_transverses}
 
 Au-delà de la simple exposition des données, l'accès à ces ressources est gouverné par une suite de middleware s'exécutant de manière séquentielle lors du cycle requête-réponse :
 
 \begin{enumerate}
-    \item \textbf{Couche d'Authentification (JWT) :} Validation de l'intégrité du jeton d'accès présent dans l'en-tête de la requête (\textit{Authorization Header}). Ce mécanisme garantit que l'appelant possède une session active et reconnue par le système.
+    \item \textbf{Couche d'Authentification (JWT) :} Validation de l'intégrité du jeton d'accès présent dans l'en-tête de la requête (\textit{Authorization Header}). Ce mécanisme permet de vérifier que l'appelant possède une session active et reconnue par le système.
     \item \textbf{Couche d'Autorisation (RBAC - Role-Based Access Control) :} Contrôle des privilèges de l'utilisateur. Alors que les opérations de lecture (\texttt{GET}) sont accessibles à l'ensemble du personnel technique authentifié, les routes d'écriture (\texttt{POST}, \texttt{PUT}, \texttt{DELETE}) exigent explicitement des permissions administratives strictes (ex: Administrateur du SmartLab).
-    \item \textbf{Couche de Validation Métier :} Avant toute persistance via l'ORM Sequelize, les données reçues au format JSON sont interceptées et validées (vérification des types, des champs obligatoires et des formats). En cas de non-conformité, l'API rejette immédiatement la requête en retournant un code d'état HTTP \texttt{400 Bad Request}, protégeant ainsi l'intégrité de la base de données MySQL.
+    \item \textbf{Couche de Validation Métier :} Avant toute persistance via l'ORM Sequelize, les données reçues au format JSON sont interceptées et validées (vérification des types, des champs obligatoires et des formats). En cas de non-conformité, l'API rejette immédiatement la requête en retournant un code d'état HTTP \texttt{400 Bad Request}, contribuant ainsi à préserver l'intégrité de la base de données MySQL.
 \end{enumerate}
 
-Chaque transaction se clôture par l'émission d'une réponse JSON standardisée, adossée aux codes de statut HTTP appropriés (\texttt{200 OK}, \texttt{201 Created}, \texttt{401 Unauthorized}, \texttt{403 Forbidden}), assurant de fait une résilience adaptée et une communication fluide avec l'application front-end React.js.
+Chaque transaction se clôture par l'émission d'une réponse JSON standardisée, adossée aux codes de statut HTTP appropriés (\texttt{200 OK}, \texttt{201 Created}, \texttt{401 Unauthorized}, \texttt{403 Forbidden}), assurant ainsi une résilience adaptée et une communication fluide avec l'application frontend React.js.
 % \section{Documentation API — Endpoints détaillés}
 % \label{sec:api_docs}
 
@@ -367,7 +367,7 @@ Chaque transaction se clôture par l'émission d'une réponse JSON standardisée
 % \subsubsection{GET /api/equipements - Lister tous les équipements}
 
 % \paragraph{Description}
-% Récupère la liste complète de tous les équipements avec leurs informations associées et relations.
+% Récupère la liste fonctionnelle des équipements avec leurs informations associées et relations.
 
 % \paragraph{Authentification et permissions}
 % \begin{itemize}
@@ -423,7 +423,7 @@ Chaque transaction se clôture par l'émission d'une réponse JSON standardisée
 % \subsubsection{GET /api/equipements/:id - Obtenir les détails d'un équipement}
 
 % \paragraph{Description}
-% Récupère les informations détaillées d'un équipement spécifique, incluant tous ses historiques d'interventions, maintenances, et assignations.
+% Récupère les informations détaillées d'un équipement spécifique, incluant tous ses historiques d'interventions, maintenances, et affectations.
 
 % \paragraph{Authentification et permissions}
 % \begin{itemize}
@@ -431,10 +431,10 @@ Chaque transaction se clôture par l'émission d'une réponse JSON standardisée
 %     \item \textbf{Permission requise} : \texttt{equipements:canView}
 % \end{itemize}
 
-% % (Le reste des sous-sections détaillées - history, POST, PUT, assign, transfer, dispose, DELETE - a été ajouté ici en version condensée pour le chapitre. Voir le fichier original pour les exemples complets.)
+% % (Le reste des sous-sections détaillées - history, POST, PUT, assign, transfer, dispose, DELETE - a été ajouté ici en version condensée pour le chapitre. Voir le fichier original pour les exemples fonctionnels.)
 
 % \vspace{2mm}
-% \noindent Pour gagner en lisibilité du chapitre, les exemples complets de requêtes et réponses (JSON) sont disponibles dans l'annexe technique ou peuvent être consultés via l'interface Swagger UI accessible à \texttt{/api-docs}.
+% \noindent Pour gagner en lisibilité du chapitre, les exemples fonctionnels de requêtes et réponses (JSON) sont disponibles dans l'annexe technique ou peuvent être consultés via l'interface Swagger UI accessible à \texttt{/api-docs}.
 
 % % Task 4: Unit tests
 
@@ -448,7 +448,7 @@ Chaque transaction se clôture par l'émission d'une réponse JSON standardisée
 %     \item \textbf{Validation au niveau des modèles Sequelize} : Chaque modèle définit des validateurs (typage strict, limites de longueur, formats de données) au niveau ORM
 %     \item \textbf{Validation au niveau des routes} : Vérification des paramètres obligatoires et des formats avant traitement métier
 %     \item \textbf{Validation métier} : Règles spécifiques au domaine (vérification d'unicité du numéro de série, validations de statut)
-%     \item \textbf{Tests manuels et d'intégration} : Validation des endpoints via Swagger UI, tests des flux complets
+%     \item \textbf{Tests manuels et d'intégration} : Validation des endpoints via Swagger UI, tests des flux fonctionnels
 % \end{itemize}
 
 % Le système de tests automatisés sera mis en place au Sprint 2 avec Jest et Supertest pour un taux de couverture cible de 80\%.
@@ -461,7 +461,7 @@ Les critères d'acceptation suivants ont été définis et validés pour garanti
 
 \subsection*{Contrôle d'accès basé sur les rôles (RBAC)}
 
-Un système RBAC complet a été implémenté via le middleware \textit{checkPermission} :
+Un système RBAC fonctionnel a été implémenté via le middleware \textit{checkPermission}, dans le cadre des mécanismes de sécurité de base du prototype :
 \begin{itemize}
     \item Les utilisateurs disposent de rôles (administrateur, technicien, utilisateur) attribués à la création du compte
     \item Chaque endpoint protégé vérifie les permissions requises (canView, canCreate, canEdit, canDelete, canAssign, etc.)
@@ -469,13 +469,13 @@ Un système RBAC complet a été implémenté via le middleware \textit{checkPer
     \item Les administrateurs ont accès à toutes les fonctionnalités; les autres rôles ont des restrictions métier
 \end{itemize}
 
-\subsection*{Critère 1 : Opérations CRUD complètes sur les équipements via API}
+\subsection*{Critère 1 : Opérations CRUD fonctionnelles sur les équipements via API}
 
 Les opérations CRUD doivent fonctionner correctement via l'API REST avec authentification JWT :
 \begin{itemize}
     \item Un équipement peut être créé en envoyant une requête POST à /api/equipements avec les paramètres obligatoires (numeroSerie, inventoryNumber, marque, modele, categorie, materialSource) et authentification JWT valide
     \item Un équipement existant peut être modifié en envoyant une requête PUT /api/equipements/:id avec les nouvelles valeurs
-    \item Un équipement peut être assigné à un utilisateur via POST /api/equipements/:id/assign
+    \item Un équipement peut être affecté à un utilisateur via POST /api/equipements/:id/assign
     \item Un équipement peut être transféré à une nouvelle localisation via POST /api/equipements/:id/transfer
     \item Un équipement peut être marqué comme retiré via POST /api/equipements/:id/dispose
     \item Un équipement peut être supprimé via DELETE /api/equipements/:id
@@ -495,19 +495,19 @@ Les données doivent être correctement stockées et récupérées de la base de
     \item Les métadonnées (created\_at, updated\_at) sont correctement enregistrées.
 \end{itemize}
 
-\subsection*{Critère 3 : Interface web fonctionnelle avec gestion complète}
+\subsection*{Critère 3 : Interface web fonctionnelle avec gestion adaptée}
 
-Une interface web sophistiquée a été développée pour visualiser et gérer les équipements :
+Une interface web adaptée a été développée pour visualiser et gérer les équipements :
 \begin{itemize}
-    \item Tableau de bord (Dashboard) avec statistiques clés (nombre d'équipements, tickets ouverts, maintenances prévues)
+    \item Tableau de bord avec statistiques clés (nombre d'équipements, tickets ouverts, maintenances prévues)
     \item Liste des équipements avec filtres adaptés, recherche, tri et pagination
-    \item Détails complets de chaque équipement incluant historique, tickets, maintenances, licences associées
+    \item Détails fonctionnels de chaque équipement incluant historique, tickets, maintenances, licences associées
     \item Formulaires d'ajout/modification avec validation côté client et serveur
     \item Gestion des incidents avec création de tickets et affectation aux techniciens
     \item Suivi des maintenances préventives et correctives avec calendrier
     \item Gestion des licences logicielles et des installations
     \item Génération de rapports PDF et exports Excel
-    \item Authentification sécurisée avec JWT et gestion des permissions par rôle
+    \item Authentification JWT et gestion des permissions par rôle, dans le cadre de mécanismes de sécurité de base
     \item Thème adaptable (mode clair/sombre) et interface responsive
 \end{itemize}
 
@@ -516,7 +516,7 @@ Une interface web sophistiquée a été développée pour visualiser et gérer l
 Un prototype fonctionnel de gestion des tickets d'incidents a été implémenté :
 \begin{itemize}
     \item Création de tickets par les utilisateurs avec titre, description et priorité
-    \item Assignation des tickets aux techniciens
+    \item Affectation des tickets aux techniciens
     \item Suivi du statut (nouveau, en cours, fermé, réouvert) avec historique
     \item Enregistrement des interventions associées avec détails techniques
     \item Génération de rapports d'activité par technicien
@@ -558,7 +558,7 @@ Afin de faciliter le test et la validation des API développées durant ce sprin
 \section{Tests et validation}
 \label{sec:tests_validation_sprint1}
 
-La validation du Sprint 1 a été réalisée par des tests fonctionnels manuels via l'interface Swagger UI et l'interface web React. Les tests ont été réalisés de manière manuelle, ce qui constitue une limite du projet. Concrètement, les tests ont mis en évidence un \textbf{temps moyen de réponse de l'API de 120~ms pour les endpoints CRUD principaux}, validé sur une base de 500 équipements simulés. Ces résultats ont été obtenus dans un environnement local de développement et restent indicatifs. L'interface utilisateur (React/Material-UI) a également démontré une fluidité avec des temps d'affichage des listes d'équipements inférieurs à 200~ms même pour des inventaires importants, mesurés dans le cadre de ce projet à une échelle locale.
+La validation du Sprint 1 a été réalisée par des tests fonctionnels manuels via l'interface Swagger UI et l'interface web React. Swagger UI a permis de parcourir largement les endpoints CRUD exposés, de vérifier les paramètres obligatoires, les codes HTTP retournés et les effets attendus en base, tandis que l'interface web a validé les parcours de consultation, création, modification, transfert et affectation d'équipements. Les tests ont été réalisés de manière manuelle, ce qui constitue une limite du projet, mais cette validation a fourni une couverture fonctionnelle cohérente avec le périmètre académique. L’intégration de tests automatisés constitue une perspective d’amélioration, notamment avec Jest et Supertest, afin d'améliorer la fiabilité et la maintenabilité du système. Concrètement, les tests ont mis en évidence un \textbf{temps moyen de réponse de l'API de 120~ms pour les endpoints CRUD principaux}, validé sur une base de 500 équipements simulés. Ces résultats ont été obtenus dans un environnement local de développement et doivent être considérés comme indicatifs. L'interface utilisateur (React/Material-UI) a également présenté une fluidité avec des temps d'affichage des listes d'équipements inférieurs à 200~ms même pour des inventaires importants, mesurés dans le cadre de ce projet à une échelle locale.
 
 Les résultats de validation sont résumés dans le tableau suivant :
 
@@ -576,7 +576,7 @@ CRUD équipements (9) & Tous les endpoints fonctionnels, codes HTTP corrects & V
 \hline
 Sequelize+MySQL & Transactions ACID, relations complexes validées & Validé \\
 \hline
-Interface web React & Dashboard, listes filtrées, formulaires complets & Validé \\
+Interface web React & Tableau de bord, listes filtrées, formulaires fonctionnels & Validé \\
 \hline
 Incidents/maintenances & Tickets et plans créables, traçables & Validé \\
 \hline
@@ -593,11 +593,11 @@ Documentation API & Endpoints documentés, structure de réponse standardisée &
 Plusieurs défis ont été rencontrés et résolus au cours du sprint :
 
 \begin{enumerate}
-    \item \textbf{Modélisation Sequelize complexe} : Les 18 entités avec relations polymorphes (one-to-many, many-to-many) ont présenté des défis de synchronisation. Solution : migrations progressives et fixtures de test.
+    \item \textbf{Modélisation Sequelize complexe} : Les 17 modèles avec relations variées (one-to-many, many-to-many) ont présenté des défis de synchronisation. Solution : migrations progressives et fixtures de test.
     
-    \item \textbf{Validation Sequelize} : Balancer entre rigueur et flexibilité dans la validation multi-niveaux. Solution : validateurs ORM + middleware d'entreprise.
+    \item \textbf{Validation Sequelize} : Trouver un équilibre entre rigueur et flexibilité dans la validation multiniveau. Solution : validateurs ORM et middleware métier.
     
-    \item \textbf{JWT Bearer + RBAC} : verifier l'identité et les permissions sur chaque endpoint. Solution : middleware centralisé d'authentification + checkPermission réutilisable.
+    \item \textbf{JWT Bearer + RBAC} : vérifier l'identité et les permissions sur chaque endpoint dans le cadre de mécanismes de sécurité de base. Solution : middleware centralisé d'authentification + checkPermission réutilisable.
     
     \item \textbf{Requêtes N+1} : Eager loading de relations imbriquées. Solution : include Sequelize avec spécification des associations.
 \end{enumerate}
@@ -606,24 +606,24 @@ Plusieurs défis ont été rencontrés et résolus au cours du sprint :
 \section{Planification pour le sprint suivant}
 \label{sec:plan_sprint2}
 
-Le Sprint 1 inclut déjà incidents, maintenances, et licences. Le Sprint 2 se concentrera sur l'amélioration et l'intégration. Les tâches incluront :
+Le Sprint 1 intègre déjà les incidents, les maintenances et les licences. Le Sprint 2 se concentrera sur l’amélioration et l’intégration. Les tâches prévues incluront :
 \begin{itemize}
     \item Tests fonctionnels
-    \item Notifications Firebase FCM intégrées aux tickets
+    \item Notifications Firebase FCM intégrées aux tickets dans une version adaptée au cadre académique
     \item Alertes pour licences expirantes
     \item Machine à états des tickets (\texttt{statusMachine.js})
-    \item Audit trail complet pour conformité
+    \item Audit trail fonctionnel pour traçabilité
 \end{itemize}
 
-Les améliorations au Sprint 1 incluront la couverture de test fonctionnels, l'optimisation des requêtes, et l'ajout de fonctionnalités adaptées (ex: export PDF/Excel, rapports d'activité).
+Les améliorations du Sprint 1 porteront sur la couverture des tests fonctionnels, l’optimisation des requêtes et l’ajout de fonctionnalités adaptées, telles que l’export PDF/Excel et les rapports d’activité.
 % Conclusion
 \section*{Conclusion}
 \addcontentsline{toc}{section}{Conclusion}
 \label{sec:conclusion_sprint1}
 
-Le Sprint 1 a établi une infrastructure fonctionnelle avec Express.js\cite{expressjs2024} + Sequelize\cite{sequelize2024} (17 modèles persistants), authentification JWT, RBAC, et interface React\cite{react2024} + Material-UI\cite{materialui2024} construite avec Vite\cite{vite2024}, implémentée dans le cadre de ce projet. Les critères fonctionnels couvrant les équipements, les incidents, les maintenances et les licences ont été validés par des tests fonctionnels manuels.
+Le Sprint 1 a établi une infrastructure fonctionnelle avec Express.js\cite{expressjs2024} + Sequelize\cite{sequelize2024} (17 modèles persistants), des mécanismes de sécurité de base incluant l’authentification JWT et le RBAC, et une interface React\cite{react2024} + Material-UI\cite{materialui2024} construite avec Vite\cite{vite2024}, implémentée dans le cadre de ce projet de fin d’études. Les critères fonctionnels couvrant les équipements, les incidents, les maintenances et les licences ont été validés par des tests fonctionnels manuels.
 
-Le Sprint 1 fournit une base solide. Le Sprint 2 se concentrera sur les notifications Firebase FCM, la gestion adaptée des tickets, et les fonctionnalités de maintenance. La solution est en alignement avec les objectifs du SmartLab.
+Le Sprint 1 fournit ainsi une base fiable. Le Sprint 2 se concentrera sur les notifications Firebase FCM dans une version adaptée au cadre académique, la gestion des tickets et les fonctionnalités de maintenance. La solution reste alignée avec les objectifs du SmartLab à une échelle locale.
 
 
 

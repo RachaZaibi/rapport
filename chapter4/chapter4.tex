@@ -23,7 +23,7 @@ Le Sprint 0 constitue la phase initiale du projet Parc Informatique FMM, qui vis
 
 Le projet adopte la méthodologie Scrum pour assurer un développement itératif et une collaboration étroite avec les parties prenantes, comme justifié dans le chapitre consacré à la méthodologie. Cette section détaille les rôles Scrum, l’organisation du backlog et la planification des sprints.
 
-\subsection{Acteurs Scrum et Missions}
+\subsection{Acteurs Scrum et missions}
 \label{subsec:roles_scrum}
 
 Les rôles Scrum et leurs responsabilités sont définis dans un tableau spécifique, garantissant une approche collaborative alignée sur les principes décrits précédemment. Le Product Owner est chargé de définir et de prioriser les fonctionnalités du produit, tout en validant les livrables pour s’assurer qu’ils répondent aux besoins du projet. L’équipe de développement conçoit, développe et teste les fonctionnalités, en veillant à la qualité du code produit. Le Scrum Master facilite les événements Scrum, élimine les obstacles et veille à ce que l’équipe adhère aux pratiques de la méthodologie.
@@ -48,7 +48,7 @@ Scrum Master & Faciliter les événements Scrum, supprimer les obstacles, assure
 \subsection{Organisation du Backlog}
 \label{subsec:backlog}
 
-Le Product Backlog est géré à l’aide d’un outil de gestion de projet, organisé selon la méthode de priorisation MoSCoW pour refléter les objectifs stratégiques du projet. Chaque fonctionnalité est formulée sous forme de User Story pour garantir un développement centré sur l’utilisateur. Les tâches prioritaires incluent la gestion des équipements informatiques avec ajout, modification et suppression, la gestion des incidents avec création de tickets et assignation aux techniciens, ainsi que la gestion des maintenances préventives et correctives. Les interfaces web permettent la visualisation des équipements et la gestion des tickets, tandis que l’authentification et la gestion des utilisateurs assurent un accès sécurisé basé sur les rôles (administrateur, technicien, utilisateur). Le stockage des données et des historiques dans une base de données relationnelle est également prioritaire, tout comme la génération de rapports sur les équipements et les incidents. D’autres tâches, jugées importantes mais non critiques pour la première version, incluent les notifications push pour les nouveaux tickets, la gestion des licences logicielles, et l’optimisation des performances pour un grand nombre d’équipements. Des fonctionnalités optionnelles, comme l’intégration avec des outils externes ou le support multilingue, pourraient être ajoutées si les ressources le permettent. Enfin, certaines tâches, telles que l’analyse prédictive des pannes avec intelligence artificielle, sont hors du périmètre actuel.
+Le Product Backlog est géré à l’aide d’un outil de gestion de projet et organisé selon la méthode de priorisation MoSCoW, afin de refléter les objectifs stratégiques du projet. Chaque fonctionnalité est formulée sous forme de User Story pour favoriser un développement centré sur l’utilisateur. Les tâches prioritaires couvrent la gestion des équipements informatiques (ajout, modification et suppression), la gestion des incidents (création de tickets et affectation aux techniciens), ainsi que la gestion des maintenances préventives et correctives. Les interfaces web permettent la visualisation des équipements et la gestion des tickets, tandis que l’authentification et la gestion des utilisateurs garantissent un accès protégé basé sur les rôles (administrateur, technicien, utilisateur). Le stockage des données et des historiques dans une base de données relationnelle constitue également une priorité, au même titre que la génération de rapports sur les équipements et les incidents. D’autres tâches, importantes mais non critiques pour la première version, incluent les notifications push pour les nouveaux tickets, la gestion des licences logicielles et l’optimisation des performances pour un grand nombre d’équipements. Des fonctionnalités optionnelles, comme l’intégration avec des outils externes ou le support multilingue, pourront être ajoutées si les ressources le permettent. Enfin, certaines tâches, telles que l’analyse prédictive des pannes par intelligence artificielle, demeurent hors du périmètre actuel.
 
 \begin{table}[H]
 \centering
@@ -141,9 +141,9 @@ Le projet est structuré en trois sprints de trois semaines chacun. Le tableau c
 % Sprint 3
 \textbf{Sprint 3 \newline Finalisation et rapports} &
 \begin{itemize}[leftmargin=8pt]
-    \item Interface web complète avec React.
+    \item Interface web fonctionnelle avec React.
     \item Système de rapports fonctionnel.
-    \item Authentification et autorisation sécurisées.
+    \item Authentification et autorisation protégées.
 \end{itemize} &
 \begin{itemize}[leftmargin=8pt]
     \item Développement de l'interface web.
@@ -154,7 +154,7 @@ Le projet est structuré en trois sprints de trois semaines chacun. Le tableau c
 \begin{itemize}[leftmargin=8pt]
     \item Interface utilisateur intuitive et responsive.
     \item Rapports générés sur demande.
-    \item Accès sécurisé selon les rôles.
+    \item Accès protégé selon les rôles.
 \end{itemize} \\
 \hline
 \end{longtable}
@@ -171,7 +171,7 @@ L'environnement matériel utilisé pour le développement du projet repose sur u
 
 Le poste de développement est un ordinateur portable équipé d’un processeur Intel Core i7 de 10\textsuperscript{e} génération, de 16 Go de mémoire RAM et d’un stockage SSD de 512 Go. Cette configuration assure une exécution fluide des environnements backend et frontend ainsi qu’une bonne réactivité lors de la compilation et des tests.
 
-Le système d’exploitation utilisé est Windows, choisi pour sa stabilité et sa compatibilité avec les technologies employées dans le projet. La base de données MySQL est installée en local afin d’assurer une gestion efficace, rapide et sécurisée des données du système. Enfin, l’architecture réseau repose sur un environnement local (\textit{localhost}), permettant de réaliser les tests et le développement sans dépendre d’une infrastructure externe.
+Le système d’exploitation utilisé est Windows, choisi pour sa stabilité et sa compatibilité avec les technologies employées dans le projet. La base de données MySQL est installée en local afin d’assurer une gestion efficace, rapide et protégée des données du système. Enfin, l’architecture réseau repose sur un environnement local (\textit{localhost}), permettant de réaliser les tests et le développement sans dépendre d’une infrastructure externe.
 
 \vspace{0.5cm}
 
@@ -209,9 +209,9 @@ L’environnement réseau repose sur une configuration locale (\textit{localhost
 \subsection{Environnement de développement}
 \label{subsec:dev_environnement}
 
-L’environnement de développement regroupe l’ensemble des outils utilisés pour la conception, l’implémentation et la documentation du projet. Il permet d’assurer un cycle de développement complet, allant de l’écriture du code jusqu’au test et à la génération de la documentation technique.
+L’environnement de développement regroupe l’ensemble des outils utilisés pour la conception, l’implémentation et la documentation du projet. Il permet d’assurer un cycle de développement fonctionnel, allant de l’écriture du code jusqu’au test et à la génération de la documentation technique.
 
-L’éditeur principal utilisé est Visual Studio Code, choisi pour sa légèreté, sa richesse en extensions et son support avancé des technologies web modernes.
+L’éditeur principal utilisé est Visual Studio Code, choisi pour sa légèreté, sa richesse en extensions et son support adapté des technologies web modernes.
 
 \begin{center}
 \includegraphics[height=2.5cm]{chapter4/images/vscode_logo.jpg}
@@ -223,7 +223,7 @@ Le backend repose sur Node.js accompagné de npm, qui constitue le gestionnaire 
 \includegraphics[height=2.5cm]{chapter4/images/javascript_logo.png}
 \end{center}
 
-Plusieurs outils complètent l’environnement de développement afin d’améliorer la productivité et la qualité du code :
+Plusieurs outils s’ajoutent à l’environnement de développement afin d’améliorer la productivité et la qualité du code :
 \begin{itemize}
     \item \textbf{Nodemon} : outil de rechargement automatique du serveur backend lors des modifications du code.
     \item \textbf{Vite} : outil moderne de développement frontend offrant un démarrage rapide et le Hot Module Replacement (HMR).
@@ -235,7 +235,7 @@ Plusieurs outils complètent l’environnement de développement afin d’améli
 \subsection{Environnement logiciel}
 \label{subsec:logiciel}
 
-L’environnement logiciel du projet repose sur une architecture JavaScript complète (Full Stack), séparée en backend, frontend et base de données. Cette organisation permet une meilleure modularité, une maintenance simplifiée et une évolutivité du système.
+L’environnement logiciel du projet repose sur une architecture JavaScript fonctionnelle (Full Stack), séparée en backend, frontend et base de données. Cette organisation permet une meilleure modularité, une maintenance simplifiée et une évolutivité du système.
 
 % =========================================================
 \subsubsection{Backend}
@@ -252,7 +252,7 @@ Les principales bibliothèques utilisées sont :
     \item \textbf{Sequelize} : ORM facilitant la communication avec MySQL et la gestion des relations.
     \item \textbf{MySQL2} : pilote de connexion à la base de données.
     \item \textbf{JWT (JSON Web Token)} : gestion de l’authentification et sécurisation des API.
-    \item \textbf{bcryptjs} : hachage sécurisé des mots de passe.
+    \item \textbf{bcryptjs} : hachage protégé des mots de passe.
     \item \textbf{Firebase Admin} : envoi de notifications push via FCM.
     \item \textbf{Multer} : gestion des uploads de fichiers (images de tickets).
     \item \textbf{PDFKit} : génération de rapports PDF.
@@ -277,7 +277,7 @@ Les principales technologies utilisées sont :
 \begin{itemize}
     \item \textbf{React Router DOM} : gestion de la navigation dans l’application SPA.
     \item \textbf{Material UI (MUI)} : bibliothèque de composants UI modernes.
-    \item \textbf{MUI DataGrid} : gestion des tableaux de données avancés.
+    \item \textbf{MUI DataGrid} : gestion des tableaux de données adaptés.
     \item \textbf{Axios} : communication avec l’API backend.
     \item \textbf{TanStack Query} : gestion du cache et des requêtes serveur.
     \item \textbf{Firebase} : notifications push côté client.
@@ -312,6 +312,6 @@ Elle est caractérisée par :
 \addcontentsline{toc}{section}{Conclusion}
 \label{sec:conclusion_sprint0}
 
-Le Sprint 0 a permis de poser les bases solides du projet Parc Informatique FMM en définissant les rôles Scrum, en priorisant le backlog selon MoSCoW et en planifiant les sprints. Avec l'équipe composée de Hela Boussaid en développement et Rasha Zaibi en tant que Scrum Master, le projet est prêt à entrer dans les phases de développement itératif. Les prochains chapitres détailleront l'implémentation des sprints et les résultats obtenus.
+Le Sprint 0 a permis de poser les bases du projet \textit{Parc Informatique FMM} en définissant les rôles Scrum, en priorisant le backlog selon la méthode MoSCoW et en planifiant les sprints. Avec Hela Boussaid en charge du développement et Racha Zaibi en tant que Scrum Master, le projet peut entrer dans les phases de développement itératif. Les chapitres suivants détailleront l’implémentation des sprints et les résultats obtenus.
 
 

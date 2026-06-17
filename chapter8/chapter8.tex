@@ -5,9 +5,9 @@
 \setcounter{chapter}{8}
 \setcounter{section}{0}
 
-Le projet \textit{Parc Informatique FMM} a permis de concevoir et de développer, dans le cadre de ce projet à une échelle locale, un prototype fonctionnel de plateforme web pour la gestion du parc informatique de la Faculté de Médecine de Monastir. Grâce à une approche agile (Scrum) et à l'intégration de technologies — codes QR, notifications Firebase FCM dans une version simplifiée adaptée au cadre académique, génération de rapports PDF/Excel et contrôle d'accès avec des mécanismes de sécurité de base — le prototype répond aux limites de la gestion traditionnelle par fichiers Excel et registres papier.
+Le projet \textit{Parc Informatique FMM} a permis de concevoir et de développer, dans le cadre de ce projet de fin d’études à une échelle locale, un prototype fonctionnel de plateforme web pour la gestion du parc informatique de la Faculté de Médecine de Monastir. Grâce à une approche agile (Scrum) et à l'intégration de technologies telles que les codes QR, les notifications Firebase FCM dans une version simplifiée adaptée au cadre académique, la génération de rapports PDF/Excel et le contrôle d'accès avec des mécanismes de sécurité de base, le prototype répond aux limites de la gestion traditionnelle fondée sur les fichiers Excel et les registres papier.
 
-Les résultats obtenus montrent que le prototype fonctionnel améliore la réactivité du personnel de maintenance, facilite le suivi des équipements et renforce la disponibilité opérationnelle des ressources informatiques. L'architecture modulaire en trois couches (React / Express.js / MySQL) et la séparation des responsabilités constituent des atouts majeurs pour la maintenabilité et l'évolutivité du système.
+Les résultats obtenus indiquent que le prototype fonctionnel peut améliorer la réactivité du personnel de maintenance, faciliter le suivi des équipements et renforcer la disponibilité opérationnelle des ressources informatiques. La stack globale validée au Sprint 1, associée à une séparation claire des responsabilités, constitue un atout important pour la maintenabilité et l'évolutivité du système.
 
 Pour aller plus loin, il sera nécessaire de réaliser des tests opérationnels en conditions réelles, d'intégrer le prototype avec des outils de gestion d'actifs (CMDB) et d'explorer l'utilisation de l'intelligence artificielle pour prédire les défaillances d'équipements et optimiser la planification de la maintenance préventive.
 
@@ -19,12 +19,14 @@ Pour aller plus loin, il sera nécessaire de réaliser des tests opérationnels 
 Tout projet de développement logiciel présente des limites inhérentes à son périmètre et aux contraintes de temps. Les limites identifiées pour la version actuelle du prototype sont les suivantes :
 
 \begin{itemize}
-    \item La validation du prototype a principalement été réalisée à travers des \textbf{tests fonctionnels manuels} via Swagger UI et l'interface web, ce qui constitue une limite du projet. Des tests unitaires automatisés restent une perspective d'évolution.
-    \item Le prototype n'a pas encore été évalué dans un \textbf{environnement de production réel} avec un grand nombre d'utilisateurs simultanés. Les performances ont été estimées dans un environnement local de développement et restent indicatifs, sans tests de charge à grande échelle.
+    \item La validation du prototype a principalement été réalisée à travers des \textbf{tests fonctionnels manuels} via Swagger UI et l'interface web. Cette approche constitue une limite du projet. L’intégration de tests automatisés représente donc une perspective d’amélioration.
+    \item Le prototype n'a pas encore été évalué dans un \textbf{environnement de production réel} avec un grand nombre d'utilisateurs simultanés. Les performances ont été estimées dans un environnement local de développement et doivent être considérées comme indicatives, sans tests de charge à grande échelle.
+    \item L'absence d'un \textbf{cache applicatif dédié} pour les statistiques les plus consultées, par exemple Redis, pourrait devenir une limite en cas de montée en charge importante du module analytique.
+    \item La génération des documents \textbf{PDF et Excel} est réalisée au niveau du serveur applicatif. Cette approche est suffisante pour le prototype, mais elle peut provoquer des pics de consommation CPU lors d'exports massifs.
     \item Les notifications reposent sur \textbf{Firebase FCM}, implémenté dans une version simplifiée adaptée au cadre académique, ce qui introduit une dépendance à un service externe pouvant affecter la disponibilité du module de notification.
     \item La gestion des jetons FCM est simplifiée avec un \textbf{seul jeton actif par utilisateur} (champ \texttt{fcmToken} dans le modèle \texttt{Utilisateur}), ce qui limite la prise en charge de sessions multi-appareils dans ce cadre académique.
     \item Le module d'\textbf{analyse prédictive des pannes par intelligence artificielle} est identifié comme perspective et n'est pas intégré dans ce prototype local.
-    \item Des mécanismes de sécurité de base ont été implémentés, notamment l’authentification JWT et le contrôle d’accès par rôles (RBAC). Des audits de sécurité approfondis resteraient nécessaires avant tout déploiement institutionnel à grande échelle.
+    \item Des mécanismes de sécurité de base ont été implémentés, notamment l’authentification JWT et le contrôle d’accès basé sur les rôles (RBAC). Des audits de sécurité approfondis resteraient nécessaires avant tout déploiement institutionnel à grande échelle.
 \end{itemize}
 
 % -------------------------------------------------------
@@ -48,7 +50,7 @@ Gestion des tickets d'incidents & \checkmark Atteint & Machine à états (Sprint
 \hline
 Maintenance préventive et corrective & \checkmark Atteint & Alertes automatiques par calendrier \\
 \hline
-Notifications temps réel (Firebase FCM) & \checkmark Atteint & Gestion multi-appareils à prévoir \\
+Notifications en temps réel (Firebase FCM) & \checkmark Atteint & Gestion multi-appareils à prévoir \\
 \hline
 Reporting PDF / Excel & \checkmark Atteint & Tableaux de bord analytiques enrichis \\
 \hline
@@ -67,6 +69,6 @@ Audit de sécurité & \ding{55} Perspective & À prévoir \\
 
 \medskip
 
-En résumé, le prototype \textit{Parc Informatique FMM} pose les bases d'une modernisation de la gestion technique du parc informatique du SmartLab de la Faculté de Médecine de Monastir. Son évolution dépendra d'un engagement continu des acteurs informatiques, gestionnaires et techniques pour garantir une amélioration durable de l'efficacité opérationnelle et de la rentabilité des investissements en infrastructure.
+En résumé, le prototype \textit{Parc Informatique FMM} pose les bases d'une modernisation de la gestion technique du parc informatique du SmartLab de la Faculté de Médecine de Monastir. Son évolution dépendra d'un engagement continu des acteurs informatiques, gestionnaires et techniques afin de garantir une amélioration durable de l'efficacité opérationnelle et de la rentabilité des investissements en infrastructure.
 
 Sur le plan académique et professionnel, ce projet a constitué une opportunité d'approfondir la maîtrise de technologies modernes du développement web, des concepts de gestion de projets agiles et des architectures de bases de données relationnelles. La collaboration étroite avec les parties prenantes de la Faculté de Médecine de Monastir a permis de confronter les contraintes théoriques de l'ingénierie logicielle aux réalités du terrain opérationnel. Cette démarche structurée contribue à la modernisation des outils de maintenance de l'institution, en jetant les bases d'une gestion plus rationnelle et réactive de son infrastructure informatique.

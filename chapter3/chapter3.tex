@@ -20,7 +20,7 @@ Ce chapitre décrit l'architecture du projet \textbf{Parc Informatique FMM}. L'o
 % Présentation de l'architecture générale
 \section{Présentation de l'architecture générale}
 \label{sec:architecture_globale}
-Le Parc Informatique FMM utilise une architecture en trois couches : gestion des ressources, traitement des services et interfaces utilisateur. Chaque couche a un rôle clair, comme montré dans la Figure~\ref{fig:architecture_parc_informatique}. Cette organisation permet de structurer la gestion des actifs informatiques, des tickets et des rapports de manière évolutive.
+Le système \textit{Parc Informatique FMM} repose sur une architecture en trois couches : gestion des ressources, traitement des services et interfaces utilisateur. Chaque couche joue un rôle clairement défini, comme le montre la Figure~\ref{fig:architecture_parc_informatique}. Cette organisation permet de structurer de manière évolutive la gestion des actifs informatiques, des tickets et des rapports.
 
 \begin{itemize}
     \item \textbf{Gestion des ressources} : Cette couche gère les équipements informatiques, les licences, les utilisateurs et les emplacements via une base de données centralisée. Elle permet de consigner l'état des actifs et de suivre leur historique.
@@ -99,9 +99,9 @@ Le Parc Informatique FMM utilise une architecture en trois couches : gestion des
 \label{fig:architecture_parc_informatique}
 \end{figure}
 
-\section{Modèle de conception logicielle adoptée}
+\section{Modèle de conception logicielle adopté}
 \label{sec:modele_conception}
-Pour organiser le système Parc Informatique FMM, nous avons choisi le modèle MVC (Modèle-Vue-Contrôleur). Ce modèle est adapté pour séparer les données, l'affichage et la logique métier, ce qui facilite la maintenance, les tests et l'évolution du système.
+Pour organiser le système \textit{Parc Informatique FMM}, nous avons choisi le modèle MVC (Modèle-Vue-Contrôleur). Ce modèle permet de séparer les données, l’affichage et la logique métier, ce qui facilite la maintenance, les tests et l’évolution du système.
 
 \begin{itemize}
     \item \textbf{Modèle} : Cette couche gère les données. La base MySQL centralise les informations relatives aux équipements, aux licences, aux utilisateurs, aux tickets et aux maintenances.
@@ -112,7 +112,7 @@ Pour organiser le système Parc Informatique FMM, nous avons choisi le modèle M
 \subsection{Hiérarchie organisationnelle et modèle de localisation}
 \label{subsec:hierarchie_org}
 
-Le système Parc Informatique FMM modélise l'organisation physique du SmartLab selon une hiérarchie 
+Le système \textit{Parc Informatique FMM} modélise l'organisation physique du SmartLab selon une hiérarchie 
 à trois niveaux de localisation. Contrairement à une approche monolithique, cette structure décentralisée 
 offre une flexibilité maximale pour représenter les emplacements complexes :
 
@@ -162,7 +162,7 @@ localisation via les clés étrangères \texttt{DepartementId}, \texttt{SalleId}
 Cette structure permet de séparer clairement les responsabilités, rendant le système plus modulaire et adaptable.
 % Interactions et fonctionnement du système
 \section{Interactions et fonctionnement du système}
-Cette section présente les diagrammes UML qui montrent comment les parties du système travaillent ensemble.
+Cette section présente les diagrammes UML qui illustrent la collaboration entre les différentes parties du système.
 
 \subsection{Diagramme des cas d'utilisation}
 Le diagramme des cas d'utilisation (Figure~\ref{fig:cas_utilisation}) montre comment les acteurs (administrateur, technicien, utilisateur) interagissent avec le système. Il illustre les actions comme la consultation des actifs, la création de tickets, la validation des interventions et la génération de rapports.
@@ -175,7 +175,7 @@ Le diagramme des cas d'utilisation (Figure~\ref{fig:cas_utilisation}) montre com
 \end{figure}
 
 \subsection{Diagramme de classes}
-Le diagramme de classes (Figure~\ref{fig:class_diagram}) montre la structure des entités du système, avec des éléments comme \textit{Equipement}, \textit{Ticket}, \textit{Utilisateur}, \textit{Maintenance} et \textit{Licence}. Il explique comment les données sont organisées et reliées.
+Le diagramme de classes (Figure~\ref{fig:class_diagram}) présente la structure des entités du système, notamment \textit{Equipement}, \textit{Ticket}, \textit{Utilisateur}, \textit{Maintenance} et \textit{Licence}. Il précise l’organisation des données ainsi que les relations entre les différentes entités.
 
 \begin{figure}[H]
 \centering
@@ -192,11 +192,11 @@ Dans ce projet, plusieurs scénarios fonctionnels représentatifs ont été mod�
 
 \subsubsection{Authentification de l’utilisateur}
 
-Le diagramme de séquence d’authentification \ref{fig:sequence_authentification} illustre le processus permettant à un utilisateur d’accéder au système de manière sécurisée.
+Le diagramme de séquence d’authentification \ref{fig:sequence_authentification} illustre le processus permettant à un utilisateur d’accéder au système de manière protégée.
 
 Dans ce scénario, l’utilisateur saisit ses identifiants via l’interface web. Ces informations sont ensuite transmises par le frontend au backend, qui procède à leur vérification auprès de la base de données. Si les identifiants sont valides, le système génère un token JWT qui est renvoyé au client. Le frontend stocke alors ce token afin d’autoriser l’accès aux ressources protégées, notamment le tableau de bord.
 
-Ce mécanisme garantit un accès sécurisé au système basé sur une authentification par token.
+Ce mécanisme permet un accès protégé au système basé sur une authentification par token.
 
 \begin{figure}[H]
 \centering
@@ -232,7 +232,7 @@ Le technicien commence par consulter la liste des tickets qui lui sont attribué
 
 Ces modifications sont enregistrées par le backend et persistées dans la base de données, ce qui permet de maintenir un historique fonctionnel et cohérent des actions effectuées.
 
-Ce flux garantit ainsi la traçabilité des interventions techniques.
+Ce flux contribue ainsi à la traçabilité des interventions techniques.
 
 \begin{figure}[H]
 \centering
@@ -265,7 +265,7 @@ Ce mécanisme renforce la traçabilité et améliore le suivi global des inciden
 L’ensemble de ces diagrammes de séquence met en évidence la cohérence globale de l’architecture du système ainsi que la fluidité des interactions entre ses différents composants. Ils soulignent également le rôle central du backend dans la coordination des traitements métiers, ainsi que l’importance des services externes tels que Firebase Cloud Messaging pour assurer la communication en temps réel entre les acteurs du système.
 
 \subsection{Diagramme d'activités}
-Le diagramme d'activités (Figure~\ref{fig:activity_flux_donnees}) illustre le processus fonctionnel de gestion des incidents dans le prototype de Parc Informatique FMM. Il débute par la soumission d'un ticket par l'utilisateur, incluant titre, priorité, équipement et photo. Une validation des données est effectuée ; si elles sont valides, le ticket est enregistré avec le statut "ouvert" et une notification push est envoyée au technicien via Firebase Cloud Messaging (FCM). Le technicien consulte les tickets, prend en charge celui-ci, changeant le statut à "assigné". Il crée ensuite une intervention, mettant le ticket à "en cours", puis effectue la réparation sur le terrain. Si l'intervention réussit, il saisit la solution, les pièces changées et le rapport, terminant l'intervention. Le système génère automatiquement une maintenance corrective liée à l'intervention, marque le ticket comme "résolu". L'utilisateur confirme alors la résolution, clôturant le ticket avec la date de clôture et l'archivant. En cas d'échec de l'intervention, le statut est mis à "échec", et le ticket est réouvert ou escaladé. Si les données initiales ne sont pas valides, la demande est rejetée avec un message d'erreur.
+Le diagramme d'activités (Figure~\ref{fig:activity_flux_donnees}) illustre le processus fonctionnel de gestion des incidents dans le prototype \textit{Parc Informatique FMM}. Il débute par la soumission d'un ticket par l'utilisateur, avec le titre, la priorité, l'équipement concerné et une photo. Les données sont ensuite validées ; si elles sont conformes, le ticket est enregistré avec le statut \textit{ouvert} et une notification push est envoyée au technicien via Firebase Cloud Messaging (FCM). Le technicien consulte les tickets, prend en charge le ticket concerné et modifie son statut en \textit{assigné}. Il crée ensuite une intervention, passe le ticket à l'état \textit{en cours}, puis effectue la réparation sur le terrain. Si l'intervention aboutit, il renseigne la solution, les pièces remplacées et le rapport de fin d'intervention. Le système génère automatiquement une maintenance corrective liée à l'intervention et marque le ticket comme \textit{résolu}. L'utilisateur confirme alors la résolution, ce qui clôture le ticket, enregistre la date de clôture et archive l'incident. En cas d'échec de l'intervention, le statut passe à \textit{échec}, puis le ticket est réouvert ou escaladé. Si les données initiales ne sont pas valides, la demande est rejetée avec un message d'erreur.
 
 \begin{figure}[H]
 \centering
@@ -298,7 +298,7 @@ Le diagramme d'activités (Figure~\ref{fig:activity_flux_donnees}) illustre le p
 \section{Pourquoi ce choix d'architecture}
 \label{sec:justification_architecture}
 
-Le choix de cette architecture repose sur plusieurs considérations techniques et fonctionnelles visant à garantir un système performant, évolutif et facile à maintenir.
+Le choix de cette architecture repose sur plusieurs considérations techniques et fonctionnelles visant à obtenir un système efficace, évolutif et facile à maintenir dans le cadre de ce projet de fin d’études.
 
 \begin{itemize}
     \item \textbf{Simplicité et séparation des responsabilités} : L’architecture en couches permet de distinguer clairement les différentes parties du système, notamment la gestion des données, la logique métier et l’interface utilisateur. Cette séparation facilite la compréhension du système ainsi que son évolution.
@@ -309,17 +309,17 @@ Le choix de cette architecture repose sur plusieurs considérations techniques e
 
     \item \textbf{Adaptabilité et extensibilité} : L’architecture retenue permet de supporter différents types d’équipements et de s’adapter facilement à divers environnements d’exécution, qu’il s’agisse d’infrastructures locales ou de solutions cloud.
 
-    \item \textbf{Sécurité} : Le système intègre des mécanismes d’authentification, d’autorisation et de protection des données afin de garantir la confidentialité et l’intégrité des informations.
+    \item \textbf{Sécurité} : Des mécanismes de sécurité de base ont été implémentés, notamment l’authentification JWT et le contrôle d’accès basé sur les rôles (RBAC), afin de contribuer à la confidentialité et à l’intégrité des informations.
 \end{itemize}
 
-Ainsi, ces choix architecturaux répondent aux exigences des environnements professionnels tels que le SmartLab, en offrant une solution modulaire, fiable et évolutive, adaptée à la gestion d’un parc informatique moderne.
+Ainsi, ces choix architecturaux répondent aux besoins observés au SmartLab, en offrant une solution modulaire, fiable et évolutive, adaptée à la gestion d’un parc informatique moderne à une échelle locale.
 \section*{Conclusion}
 \addcontentsline{toc}{section}{Conclusion}
 \label{sec:conclusion}
 
 Ce chapitre a présenté l’architecture globale du projet \textit{Parc Informatique FMM}, en mettant en évidence l’organisation en couches, l’approche MVC ainsi que les principaux diagrammes UML utilisés pour la modélisation du système.
 
-L’architecture retenue garantit une meilleure structuration du système, tout en assurant sa flexibilité, sa maintenabilité et sa capacité d’évolution afin de répondre efficacement aux besoins de gestion d’un parc informatique moderne. Les diagrammes de séquence, d’activités et de classes ont permis d’illustrer les interactions entre les différents composants du système, ainsi que les flux de données et les processus métiers clés.
+L’architecture retenue favorise une meilleure structuration du système, tout en soutenant sa flexibilité, sa maintenabilité et sa capacité d’évolution afin de répondre efficacement aux besoins de gestion d’un parc informatique moderne. Les diagrammes de séquence, d’activités et de classes ont permis d’illustrer les interactions entre les différents composants du système, ainsi que les flux de données et les processus métiers clés.
 
 % next chapter
 Dans le chapitre suivant, nous détaillerons les choix technologiques effectués pour la mise en œuvre du projet, en expliquant les raisons de ces choix et leur impact sur le développement et la performance du système.
