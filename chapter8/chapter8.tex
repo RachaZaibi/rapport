@@ -4,17 +4,69 @@
 \label{chap:conclusion}
 \setcounter{chapter}{8}
 \setcounter{section}{0}
-Le projet \textit{GMAO} a permis de concevoir et de développer un prototype innovant pour la gestion centralisée de la maintenance informatique et des équipements, répondant aux besoins spécifiques des organisations tunisiennes. Grâce à une approche agile (Scrum) et à l'intégration de technologies telles que l'automatisation des workflows, les codes QR pour le suivi des équipements et les notifications Firebase FCM, le système a démontré sa capacité à automatiser la gestion des demandes de maintenance, à générer des alertes prioritaires et à s'adapter à différents types d'équipements.
-\newline 
 
-Les résultats obtenus montrent que \textit{GMAO} améliore la réactivité du personnel de maintenance, facilite le suivi des équipements et renforce la disponibilité opérationnelle des ressources informatiques. L'architecture modulaire et la compatibilité multi-types d'équipements constituent des atouts majeurs pour une adoption dans des environnements organisationnels variés.
-\newline 
+Le projet \textit{Parc Informatique FMM} a permis de concevoir et de développer, dans le cadre de ce projet à une échelle locale, un prototype fonctionnel de plateforme web pour la gestion du parc informatique de la Faculté de Médecine de Monastir. Grâce à une approche agile (Scrum) et à l'intégration de technologies — codes QR, notifications Firebase FCM dans une version simplifiée adaptée au cadre académique, génération de rapports PDF/Excel et contrôle d'accès avec des mécanismes de sécurité de base — le prototype répond aux limites de la gestion traditionnelle par fichiers Excel et registres papier.
 
-Pour aller plus loin, il sera nécessaire de réaliser des tests opérationnels en conditions réelles, d'intégrer le système avec les outils de gestion d'actifs (CMDB) et d'explorer l'utilisation de l'intelligence artificielle pour prédire les défaillances d'équipements et optimiser les planifications de maintenance préventive.
-\newline 
+Les résultats obtenus montrent que le prototype fonctionnel améliore la réactivité du personnel de maintenance, facilite le suivi des équipements et renforce la disponibilité opérationnelle des ressources informatiques. L'architecture modulaire en trois couches (React / Express.js / MySQL) et la séparation des responsabilités constituent des atouts majeurs pour la maintenabilité et l'évolutivité du système.
 
-En résumé, \textit{GMAO} pose les bases d'une modernisation de la gestion technique du parc informatique et des équipements en Tunisie. Son évolution dépendra d'un engagement continu des acteurs informatiques, gestionnaires et techniques pour garantir une amélioration durable de l'efficacité opérationnelle et de la rentabilité des investissements en infrastructure.
-% i have to say that this project was a great experience for me, i learned a lot of things, i met a lot of people, and i had the chance to work with a great team. I hope that this project will be useful for the technical community in Tunisia and that it will help to improve the management of IT infrastructure and equipment.in french
-\newline 
+Pour aller plus loin, il sera nécessaire de réaliser des tests opérationnels en conditions réelles, d'intégrer le prototype avec des outils de gestion d'actifs (CMDB) et d'explorer l'utilisation de l'intelligence artificielle pour prédire les défaillances d'équipements et optimiser la planification de la maintenance préventive.
 
-Ce projet a été une expérience enrichissante, tant sur le plan technique que personnel. J'ai eu l'opportunité d'apprendre de nouvelles compétences, de collaborer avec des professionnels passionnés et de contribuer à une initiative qui vise à améliorer la gestion technique et la maintenance des équipements en Tunisie. J'espère sincèrement que \textit{GMAO} sera bénéfique pour la communauté informatique et technique, et qu'il participera à l'optimisation de la gestion du parc informatique et à la réduction des temps d'arrêt non planifiés.
+% -------------------------------------------------------
+\section*{Limites du projet}
+\addcontentsline{toc}{section}{Limites du projet}
+\label{sec:limites_projet}
+
+Tout projet de développement logiciel présente des limites inhérentes à son périmètre et aux contraintes de temps. Les limites identifiées pour la version actuelle du prototype sont les suivantes :
+
+\begin{itemize}
+    \item La validation du prototype a principalement été réalisée à travers des \textbf{tests fonctionnels manuels} via Swagger UI et l'interface web, ce qui constitue une limite du projet. Des tests unitaires automatisés restent une perspective d'évolution.
+    \item Le prototype n'a pas encore été évalué dans un \textbf{environnement de production réel} avec un grand nombre d'utilisateurs simultanés. Les performances ont été estimées dans un environnement local de développement et restent indicatifs, sans tests de charge à grande échelle.
+    \item Les notifications reposent sur \textbf{Firebase FCM}, implémenté dans une version simplifiée adaptée au cadre académique, ce qui introduit une dépendance à un service externe pouvant affecter la disponibilité du module de notification.
+    \item La gestion des jetons FCM est simplifiée avec un \textbf{seul jeton actif par utilisateur} (champ \texttt{fcmToken} dans le modèle \texttt{Utilisateur}), ce qui limite la prise en charge de sessions multi-appareils dans ce cadre académique.
+    \item Le module d'\textbf{analyse prédictive des pannes par intelligence artificielle} est identifié comme perspective et n'est pas intégré dans ce prototype local.
+    \item Des mécanismes de sécurité de base ont été implémentés, notamment l’authentification JWT et le contrôle d’accès par rôles (RBAC). Des audits de sécurité approfondis resteraient nécessaires avant tout déploiement institutionnel à grande échelle.
+\end{itemize}
+
+% -------------------------------------------------------
+\section*{Tableau de synthèse}
+\addcontentsline{toc}{section}{Tableau de synthèse}
+\label{sec:synthese_finale}
+
+Le tableau ci-dessous récapitule les objectifs initiaux du projet, leur état d'avancement et les perspectives d'évolution identifiées.
+
+\begin{table}[H]
+\centering
+\caption{Synthèse des objectifs atteints et perspectives d'évolution}
+\label{tab:synthese_finale}
+\begin{tabular}{|p{5cm}|c|p{5cm}|}
+\hline
+\textbf{Objectif} & \textbf{Statut} & \textbf{Perspective / Remarque} \\
+\hline
+Gestion des équipements (CRUD, QR code, transfert) & \checkmark Atteint & Évolution vers des catégories dynamiques \\
+\hline
+Gestion des tickets d'incidents & \checkmark Atteint & Machine à états (Sprint 2) \\
+\hline
+Maintenance préventive et corrective & \checkmark Atteint & Alertes automatiques par calendrier \\
+\hline
+Notifications temps réel (Firebase FCM) & \checkmark Atteint & Gestion multi-appareils à prévoir \\
+\hline
+Reporting PDF / Excel & \checkmark Atteint & Tableaux de bord analytiques enrichis \\
+\hline
+Contrôle d'accès RBAC / JWT & \checkmark Atteint & Intégration SSO / LDAP institutionnel \\
+\hline
+Tests automatisés & \ding{55} Perspective & À mettre en place \\
+\hline
+Tests de charge & \ding{55} Perspective & À prévoir \\
+\hline
+Analyse prédictive par IA & \ding{55} Perspective & Module IA de détection des pannes \\
+\hline
+Audit de sécurité & \ding{55} Perspective & À prévoir \\
+\hline
+\end{tabular}
+\end{table}
+
+\medskip
+
+En résumé, le prototype \textit{Parc Informatique FMM} pose les bases d'une modernisation de la gestion technique du parc informatique du SmartLab de la Faculté de Médecine de Monastir. Son évolution dépendra d'un engagement continu des acteurs informatiques, gestionnaires et techniques pour garantir une amélioration durable de l'efficacité opérationnelle et de la rentabilité des investissements en infrastructure.
+
+Sur le plan académique et professionnel, ce projet a constitué une opportunité d'approfondir la maîtrise de technologies modernes du développement web, des concepts de gestion de projets agiles et des architectures de bases de données relationnelles. La collaboration étroite avec les parties prenantes de la Faculté de Médecine de Monastir a permis de confronter les contraintes théoriques de l'ingénierie logicielle aux réalités du terrain opérationnel. Cette démarche structurée contribue à la modernisation des outils de maintenance de l'institution, en jetant les bases d'une gestion plus rationnelle et réactive de son infrastructure informatique.

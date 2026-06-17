@@ -229,10 +229,10 @@ Les notifications push sont déclenchées pour les événements suivants :
 \begin{itemize}
     \item création et affectation de tickets d'incident ;
     \item démarrage et fin de maintenances ;
-    \item transferts et assignations d'équipements.
+    \item transferts et affectations d'équipements.
 \end{itemize}
 
-L'intégration Firebase repose sur les mécanismes suivants :
+L'intégration Firebase, implémentée de manière simplifiée adaptée au cadre académique, repose sur les mécanismes suivants :
 \begin{itemize}
     \item \textbf{Envoi en temps réel} des alertes critiques dès la survenue
           de l'événement métier, via la fonction \texttt{notifyAll()} qui orchestre
@@ -252,10 +252,10 @@ L'intégration Firebase repose sur les mécanismes suivants :
 \subsubsection{Enregistrement et gestion des jetons FCM}
 \label{subsubsec:fcm_tokens}
 
-Le système Parc Informatique FMM utilise une approche simple et robuste pour les notifications Firebase FCM. 
+Le prototype Parc Informatique FMM utilise une approche simple et fiable pour les notifications Firebase FCM, implémentée dans une version simplifiée adaptée au cadre académique. 
 Chaque utilisateur dispose d'un seul jeton FCM actif, stocké en tant que champ \texttt{fcmToken} dans le modèle 
 \texttt{Utilisateur}. Cette conception simplifie la gestion des jetons tout en couvrant efficacement les besoins 
-des utilisateurs accédant au système via le web.
+des utilisateurs accédant au prototype via le web.
 
 Lors du chargement initial de l'application web, le frontend enregistre le jeton FCM généré par Firebase via 
 l'endpoint \texttt{POST /api/utilisateurs/fcm-token}. Le backend reçoit le jeton et le stocke dans la base de 
@@ -384,9 +384,7 @@ Maintenances préventives & Planification et alertes calculées à la demande & 
 \end{tabular}
 \end{table}
 
-\textbf{Note} : La validation du Sprint 2 a été réalisée sous forme de tests fonctionnels manuels
-via l'interface Swagger UI et l'interface web, couvrant les flux critiques de création, d'assignation,
-de traitement et de clôture de tickets.
+\textbf{Note} : La validation du Sprint 2 a été réalisée sous forme de tests fonctionnels manuels via l'interface Swagger UI et l'interface web React, couvrant les flux critiques de création, d'affectation, de traitement et de clôture de tickets. Les tests ont été réalisés de manière manuelle, ce qui constitue une limite du projet. Concrètement, les tests ont mis en évidence un \textbf{temps moyen de réponse de l'API de 120~ms pour les endpoints CRUD principaux}, validé sur une base de 500 équipements simulés. Les endpoints de création de tickets (\texttt{POST /api/tickets}) ont affiché un temps de réponse moyen de 185~ms, incluant la création en base, la transition de statut via \texttt{statusMachine.js} et l'envoi asynchrone de la notification FCM. Ces résultats ont été obtenus dans un environnement local de développement et restent indicatifs.
 
 % Challenges and Solutions
 \section{Défis et solutions}
@@ -408,11 +406,11 @@ Défis anticipés et stratégies de résolution :
 \section{Planification pour le sprint suivant}
 \label{sec:plan_sprint3}
 
-Le Sprint 3 se concentrera sur :
+Le Sprint 3 se concentrera, dans une version simplifiée adaptée au cadre académique, sur :
 
 \begin{itemize}
     \item Optimisations supplémentaires (caching distribué, CDN pour frontend)
-    \item Fonctionnalités avancées (rapports analytiques, export data)
+    \item Fonctionnalités adaptées (rapports analytiques, export data)
     \item Déploiement initial en environnement staging
     \item Retours utilisateurs et ajustements UX/UI
     \item Sécurité renforcée (audit, compliance, pen-testing)
@@ -423,9 +421,9 @@ Le Sprint 3 se concentrera sur :
 \addcontentsline{toc}{section}{Conclusion}
 \label{sec:conclusion_sprint2}
 
-Le Sprint 2 fait évoluer la base solide du Sprint 1 vers un système opérationnel complet de gestion des incidents et de la maintenance. La machine à états formelle des tickets, l'intégration Firebase FCM pour les notifications push, et le module de maintenance préventive constituent les apports fonctionnels majeurs de cette itération.
+Le Sprint 2 fait évoluer la base solide du Sprint 1 vers un prototype fonctionnel opérationnel de gestion des incidents et de la maintenance. La machine à états formelle des tickets, l'intégration Firebase FCM pour les notifications push, et le module de maintenance préventive constituent les apports fonctionnels majeurs de cette itération, implémentés de manière simplifiée à une échelle locale dans le cadre de ce projet.
 
-La validation fonctionnelle manuelle des flux critiques (tickets, interventions, maintenances, notifications) confirme la conformité des livrables aux objectifs du sprint. Ces fondations préparent le terrain pour le Sprint 3, consacré aux tableaux de bord analytiques, au reporting et aux fonctionnalités avancées de pilotage du parc informatique.
+La validation fonctionnelle manuelle des flux critiques (tickets, interventions, maintenances, notifications) confirme la conformité des livrables aux objectifs du sprint. Ces fondations préparent le terrain pour le Sprint 3, consacré aux tableaux de bord analytiques, au reporting et aux fonctionnalités adaptées de pilotage du parc informatique. Les tests ont été réalisés de manière manuelle, ce qui constitue une limite du projet.
 
 
 

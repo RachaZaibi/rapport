@@ -6,38 +6,35 @@
 \markboth{Introduction Generale}{}
 \addcontentsline{toc}{chapter}{Introduction Generale}
 
-% \localtableofcontents
+La transformation numérique constitue aujourd’hui l’un des piliers de la modernisation des institutions académiques et administratives. Dans un monde où l’information circule à une vitesse sans précédent, la numérisation des activités de gestion est devenue indispensable pour optimiser l’utilisation des ressources et améliorer la performance organisationnelle. Les outils informatiques ne se limitent plus à un rôle de support ; ils sont désormais au cœur des processus décisionnels, facilitant la collecte, le traitement et l’analyse des données. Cette évolution permet une planification plus précise, une allocation optimale des ressources et une meilleure durabilité des systèmes, tout en renforçant la transparence et la qualité des services rendus.
 
-\section*{Apports du projet}
+La Faculté de Médecine de Monastir (FMM), en tant qu’institution académique de référence, se trouve confrontée à ces enjeux majeurs. Elle doit assurer la continuité de ses missions pédagogiques et scientifiques tout en garantissant un environnement de travail moderne et sécurisé. Dans ce contexte, la gestion des interventions techniques et le suivi du parc informatique deviennent des éléments stratégiques. Les infrastructures informatiques, les équipements de laboratoire et les dispositifs pédagogiques constituent des ressources critiques dont la fiabilité conditionne directement la qualité de l’enseignement et de la recherche. Une gestion optimisée de ces ressources est donc primordiale pour maintenir la performance et l’excellence de l’institution.
+
+Le projet de fin d’études que nous présentons s’inscrit dans cette dynamique de modernisation. Réalisé dans le cadre de ce projet à une échelle locale, il consiste à concevoir et développer un prototype fonctionnel d’application dédiée à la gestion et au suivi du parc informatique de la Faculté de Médecine de Monastir. L’objectif principal est de mettre en place une solution centralisée et automatisée permettant de suivre l’état des équipements, de gérer les interventions techniques et de prolonger la durée de vie du matériel grâce à une maintenance proactive adaptée. Cette application vise également à améliorer la réactivité des équipes techniques, à prioriser efficacement les demandes et à offrir aux utilisateurs un moyen simple et transparent de signaler les problèmes rencontrés.
+
+\section*{Apports du projet et alignement normatif}
 \label{sec:signification_projet}
 
-Le système proposé répond à plusieurs besoins fonctionnels structurants liés à la gestion des parcs informatiques :
-
-\begin{itemize}
-    \item \textbf{Utilisateurs finaux :} amélioration de la visibilité sur les équipements informatiques et optimisation de leur cycle de vie.
-    \item \textbf{Personnel technique :} réduction des tâches manuelles grâce à la centralisation et à l'automatisation du suivi des incidents.
-    \item \textbf{Établissements :} optimisation des ressources, réduction des coûts opérationnels et amélioration de la traçabilité des actifs.
-\end{itemize}
-
-Ainsi, ce projet s'inscrit dans une logique d'optimisation des processus et d'amélioration continue des performances des systèmes d'information.
+Au-delà de l’aspect opérationnel, ce projet s’inscrit dans une perspective d'alignement avec les standards de qualité et de sécurité. À l'échelle de l'établissement, la faculté s'inscrit dans un processus de transition vers la certification ISO 21001 (encadrant le management des organismes d’éducation) et initie une démarche vers la norme ISO 27000, centrée sur la sécurité de l’information. Pour notre prototype fonctionnel, développé dans le cadre de ce projet à une échelle locale, cette orientation se traduit par l'intégration de mécanismes de sécurité fondamentaux, tels que l'authentification JWT et le contrôle d'accès basé sur les rôles (RBAC). Cette intégration illustre une volonté claire de poser les bases d'une gouvernance numérique structurée et de contribuer à la réflexion autour de la protection des données sensibles (académiques, administratives et de suivi). L'alignement sur les principes de la norme ISO 27000 constitue un cadre méthodologique précieux pour guider la conception de solutions de gestion de parc adaptées et sécurisées.
 
 \section*{Structure du rapport}
 \label{sec:structure_rapport}
 
-Ce rapport est structuré de manière progressive afin de présenter l'ensemble des étapes du projet.
+Ce rapport de PFE Master est structuré de manière à présenter les différentes étapes de ce projet : une analyse des besoins spécifiques de la faculté, une étude des systèmes existants, la conception et le développement de l’application, ainsi que la phase de test et de déploiement. Chaque section met en lumière les choix technologiques, les méthodologies employées et les ajustements réalisés en fonction des retours des utilisateurs.
 
-Le \textbf{Chapitre 1} introduit le cadre général du projet et présente une étude de l'existant ainsi que les limites des solutions actuelles.
+Plus précisément, l'organisation du rapport se décline comme suit :
+\begin{itemize}
+    \item Le \textbf{Chapitre 1} introduit le cadre général du projet et présente une étude de l'existant ainsi que les limites des solutions actuelles.
+    \item Le \textbf{Chapitre 2} décrit la méthodologie adoptée et les choix technologiques retenus pour la réalisation du système.
+    \item Le \textbf{Chapitre 3} présente l'architecture globale de la solution et ses principaux composants.
+    \item Le \textbf{Chapitre 4} détaille la planification et la préparation du projet (Sprint 0).
+    \item Les \textbf{Chapitres 5, 6 et 7} présentent la conception, l'implémentation et la validation des différents sprints de développement (Sprints 1, 2 et 3).
+    \item Enfin, le \textbf{Chapitre 8} conclut le travail et propose des perspectives d'évolution.
+\end{itemize}
 
-Le \textbf{Chapitre 2} décrit la méthodologie adoptée et les choix technologiques retenus pour la réalisation du système.
+Une évaluation des résultats obtenus par rapport aux objectifs initiaux permettra de mesurer l’impact de la solution et d’identifier les perspectives d’amélioration future.
 
-Le \textbf{Chapitre 3} présente l'architecture globale de la solution et ses principaux composants.
-
-Le \textbf{Chapitre 4} détaille la planification et la préparation du projet (Sprint 0).
-
-Les \textbf{Chapitres 5, 6 et 7} présentent la conception, l'implémentation et la validation des différents sprints de développement (Sprints 1, 2 et 3).
-
-Enfin, le \textbf{Chapitre 8} conclut le travail et propose des perspectives d'évolution.
+En conclusion, ce projet ne se limite pas à une simple mise en œuvre technique. Il s’inscrit dans une vision globale de transformation numérique, intégrant les dimensions organisationnelles, technologiques et normatives. Il témoigne de l’importance d’une gestion efficace du parc informatique et met en évidence les bénéfices d’une solution numérique bien conçue pour le bon fonctionnement de l’institution. Par cette initiative, la Faculté de Médecine de Monastir affirme son engagement envers l’excellence opérationnelle, la modernisation de ses pratiques et l’alignement avec les standards de qualité et de sécurité.
 
 \paragraph{}
 À la suite de cette introduction générale, le chapitre suivant est consacré à l'analyse du contexte et à l'étude des solutions existantes, afin d'identifier les limites des systèmes actuels et de justifier les choix de conception adoptés dans ce projet.
-

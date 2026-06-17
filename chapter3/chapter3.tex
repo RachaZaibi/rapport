@@ -230,7 +230,7 @@ Ce diagramme \ref{fig:sequence_traitement_ticket} illustre les interactions entr
 
 Le technicien commence par consulter la liste des tickets qui lui sont attribués. Le frontend interroge alors le backend afin de récupérer les données correspondantes depuis la base de données. Ensuite, le technicien met à jour le statut du ticket en fonction de l’avancement de son intervention (en cours, résolu, etc.).
 
-Ces modifications sont enregistrées par le backend et persistées dans la base de données, ce qui permet de maintenir un historique complet et cohérent des actions effectuées.
+Ces modifications sont enregistrées par le backend et persistées dans la base de données, ce qui permet de maintenir un historique fonctionnel et cohérent des actions effectuées.
 
 Ce flux garantit ainsi la traçabilité des interventions techniques.
 
@@ -248,7 +248,7 @@ Ce dernier diagramme \ref{fig:sequence_cloture_ticket} présente le processus de
 
 Une fois l’incident résolu, le ticket est clôturé par l’utilisateur ou automatiquement par le système. Le backend met alors à jour son statut à \textit{fermé} et enregistre la date de clôture dans la base de données.
 
-L’utilisateur peut par la suite consulter l’historique complet du ticket afin de suivre l’ensemble des actions réalisées depuis sa création jusqu’à sa fermeture.
+L’utilisateur peut par la suite consulter l’historique fonctionnel du ticket afin de suivre l’ensemble des actions réalisées depuis sa création jusqu’à sa fermeture.
 
 Ce mécanisme renforce la traçabilité et améliore le suivi global des incidents.
 
@@ -265,7 +265,7 @@ Ce mécanisme renforce la traçabilité et améliore le suivi global des inciden
 L’ensemble de ces diagrammes de séquence met en évidence la cohérence globale de l’architecture du système ainsi que la fluidité des interactions entre ses différents composants. Ils soulignent également le rôle central du backend dans la coordination des traitements métiers, ainsi que l’importance des services externes tels que Firebase Cloud Messaging pour assurer la communication en temps réel entre les acteurs du système.
 
 \subsection{Diagramme d'activités}
-Le diagramme d'activités (Figure~\ref{fig:activity_flux_donnees}) illustre le processus complet de gestion des incidents dans le système Parc Informatique FMM. Il débute par la soumission d'un ticket par l'utilisateur, incluant titre, priorité, équipement et photo. Une validation des données est effectuée ; si elles sont valides, le ticket est enregistré avec le statut "ouvert" et une notification push est envoyée au technicien via Firebase Cloud Messaging (FCM). Le technicien consulte les tickets, prend en charge celui-ci, changeant le statut à "assigné". Il crée ensuite une intervention, mettant le ticket à "en cours", puis effectue la réparation sur le terrain. Si l'intervention réussit, il saisit la solution, les pièces changées et le rapport, terminant l'intervention. Le système génère automatiquement une maintenance corrective liée à l'intervention, marque le ticket comme "résolu". L'utilisateur confirme alors la résolution, clôturant le ticket avec la date de clôture et l'archivant. En cas d'échec de l'intervention, le statut est mis à "échec", et le ticket est réouvert ou escaladé. Si les données initiales ne sont pas valides, la demande est rejetée avec un message d'erreur.
+Le diagramme d'activités (Figure~\ref{fig:activity_flux_donnees}) illustre le processus fonctionnel de gestion des incidents dans le prototype de Parc Informatique FMM. Il débute par la soumission d'un ticket par l'utilisateur, incluant titre, priorité, équipement et photo. Une validation des données est effectuée ; si elles sont valides, le ticket est enregistré avec le statut "ouvert" et une notification push est envoyée au technicien via Firebase Cloud Messaging (FCM). Le technicien consulte les tickets, prend en charge celui-ci, changeant le statut à "assigné". Il crée ensuite une intervention, mettant le ticket à "en cours", puis effectue la réparation sur le terrain. Si l'intervention réussit, il saisit la solution, les pièces changées et le rapport, terminant l'intervention. Le système génère automatiquement une maintenance corrective liée à l'intervention, marque le ticket comme "résolu". L'utilisateur confirme alors la résolution, clôturant le ticket avec la date de clôture et l'archivant. En cas d'échec de l'intervention, le statut est mis à "échec", et le ticket est réouvert ou escaladé. Si les données initiales ne sont pas valides, la demande est rejetée avec un message d'erreur.
 
 \begin{figure}[H]
 \centering
@@ -312,7 +312,7 @@ Le choix de cette architecture repose sur plusieurs considérations techniques e
     \item \textbf{Sécurité} : Le système intègre des mécanismes d’authentification, d’autorisation et de protection des données afin de garantir la confidentialité et l’intégrité des informations.
 \end{itemize}
 
-Ainsi, ces choix architecturaux répondent aux exigences des environnements professionnels tels que le SmartLab, en offrant une solution modulaire, robuste et évolutive, adaptée à la gestion d’un parc informatique moderne.
+Ainsi, ces choix architecturaux répondent aux exigences des environnements professionnels tels que le SmartLab, en offrant une solution modulaire, fiable et évolutive, adaptée à la gestion d’un parc informatique moderne.
 \section*{Conclusion}
 \addcontentsline{toc}{section}{Conclusion}
 \label{sec:conclusion}
