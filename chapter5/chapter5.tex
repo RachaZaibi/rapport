@@ -142,7 +142,7 @@ Le diagramme de classes du Sprint 1 formalise les principales entités métiers 
     \label{fig:class_diagram_sprint1}
 \end{figure}
 
-
+\newpage
 \subsection{Diagrammes de séquence Sprint 1}
 Cette série de diagrammes de séquence décrit les principaux scénarios dynamiques du Sprint 1. Chacun met en lumière la collaboration entre l'acteur humain, le frontend React, le backend Express et la base de données MySQL, tout en intégrant les règles de sécurité liées à l'authentification JWT et au contrôle d'accès RBAC.
 
@@ -155,23 +155,23 @@ Le diagramme de séquence d'authentification modélise l'accès protégé au sys
     \caption{Diagramme de séquence d'authentification utilisateur}
     \label{fig:sequence_authentification_sprint1}
 \end{figure}
-
+\newpage
 \subsubsection{Création d'un équipement}
 Ce diagramme met en évidence le flux de création d'un équipement depuis l'interface web. L'administrateur soumet un formulaire d'équipement, le backend vérifie les permissions, persiste l'objet dans MySQL, génère un code QR associé et renvoie la confirmation au frontend.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{chapter5/figures/sequence_creation_equipement.png}
+    \includegraphics[width=0.9\textwidth]{chapter5/figures/sequence_creation_equipement.png}
     \caption{Diagramme de séquence de création d'un équipement}
     \label{fig:sequence_creation_equipement}
 \end{figure}
-
+\newpage
 \subsubsection{Affectation d'un équipement}
 L'affectation d'un équipement à un utilisateur est un scénario clé du Sprint 1. Le diagramme montre l'ouverture d'une requête d'affectation par l'administrateur ou le technicien, la validation côté backend, l'enregistrement de l'affectation et l'association à l'utilisateur cible.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{chapter5/figures/sequence_affectation_equipement.png}
+    \includegraphics[width=0.9\textwidth]{chapter5/figures/sequence_affectation_equipement.png}
     \caption{Diagramme de séquence d'affectation d'un équipement}
     \label{fig:sequence_affectation_equipement}
 \end{figure}
@@ -183,7 +183,7 @@ Ce diagramme illustre la requête de consultation de l'inventaire des équipemen
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{chapter5/figures/sequence_consultation_inventaire.png}
+    \includegraphics[width=0.9\textwidth]{chapter5/figures/sequence_consultation_inventaire.png}
     \caption{Diagramme de séquence de consultation de l'inventaire}
     \label{fig:sequence_consultation_inventaire}
 \end{figure}
@@ -194,7 +194,7 @@ Le diagramme de séquence de consultation des détails d'un équipement montre l
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{chapter5/figures/sequence_details_equipement.png}
+    \includegraphics[width=0.95\textwidth]{chapter5/figures/sequence_details_equipement.png}
     \caption{Diagramme de séquence de consultation des détails d'un équipement}
     \label{fig:sequence_details_equipement}
 \end{figure}
@@ -242,7 +242,7 @@ Cette modélisation est illustrée dans le diagramme entité–relation présent
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\textwidth]{chapter5/figures/er_diagram_gmao.png}
+    \includegraphics[width=0.95\textwidth]{chapter5/figures/er_diagram_gmao.png}
     \caption{Diagramme entité–relation de la base MySQL}
     \label{fig:er_diagram_sprint1}
 \end{figure}

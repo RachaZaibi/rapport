@@ -1,4 +1,4 @@
-<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>477</x><y>288</y><w>135</w><h>171</h></coordinates><panel_attributes>_Equipement_
+<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>477</x><y>270</y><w>135</w><h>171</h></coordinates><panel_attributes>_Equipement_
 --
 int id
 string numeroSerie
@@ -12,7 +12,7 @@ string marque
 string modele
 date dateAchat
 string etat
-string categorie</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>234</x><y>324</y><w>108</w><h>162</h></coordinates><panel_attributes>_Utilisateur_
+string categorie</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>234</x><y>306</y><w>108</w><h>162</h></coordinates><panel_attributes>_Utilisateur_
 --
 int id
 string nom
@@ -23,7 +23,7 @@ string role
 string personType
 string matricule
 boolean actif
-string fcmToken</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>486</x><y>54</y><w>108</w><h>117</h></coordinates><panel_attributes>_Permission_
+string fcmToken</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>486</x><y>36</y><w>108</w><h>117</h></coordinates><panel_attributes>_Permission_
 --
 int id
 string module
@@ -31,30 +31,30 @@ string role
 boolean canView
 boolean canCreate
 boolean canEdit
-boolean canDelete</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>990</x><y>144</y><w>99</w><h>81</h></coordinates><panel_attributes>_Bloc_
+boolean canDelete</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>990</x><y>126</y><w>99</w><h>81</h></coordinates><panel_attributes>_Bloc_
 --
 int id
 string nom
 string code
-string description</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1017</x><y>306</y><w>108</w><h>99</h></coordinates><panel_attributes>_Departement_
+string description</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1017</x><y>288</y><w>108</w><h>99</h></coordinates><panel_attributes>_Departement_
 --
 int id
 string nom
 string code
-string description</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>837</x><y>162</y><w>81</w><h>90</h></coordinates><panel_attributes>_Salle_
+string description</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>837</x><y>144</y><w>81</w><h>90</h></coordinates><panel_attributes>_Salle_
 --
 int id
 string nom
 string type
 string etage
-int capacite</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>657</x><y>162</y><w>126</w><h>108</h></coordinates><panel_attributes>_Assignment_
+int capacite</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>657</x><y>144</y><w>126</w><h>108</h></coordinates><panel_attributes>_Assignment_
 --
 int id
 string assignmentType
 date assignedAt
 string signature
 string notes
-boolean active</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>810</x><y>324</y><w>189</w><h>117</h></coordinates><panel_attributes>_Transfer_
+boolean active</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>810</x><y>306</y><w>189</w><h>117</h></coordinates><panel_attributes>_Transfer_
 --
 int id
 string sourceType
@@ -62,7 +62,7 @@ string destinationType
 date transferredAt
 string responsibleSourceName
 string responsibleDestinationName
-string notes</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>27</x><y>513</y><w>117</w><h>162</h></coordinates><panel_attributes>_Ticket_
+string notes</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>27</x><y>495</y><w>117</w><h>162</h></coordinates><panel_attributes>_Ticket_
 --
 int id
 string titre
@@ -73,7 +73,7 @@ string imagePath
 date dateCreation
 date dateAssignation
 date dateResolution
-date dateCloture</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>234</x><y>90</y><w>135</w><h>144</h></coordinates><panel_attributes>_Intervention_
+date dateCloture</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>234</x><y>72</y><w>135</w><h>144</h></coordinates><panel_attributes>_Intervention_
 --
 int id
 date dateIntervention
@@ -83,7 +83,7 @@ string diagnostic
 string solution
 int dureeMinutes
 string piecesChangees
-string rapport</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>864</x><y>477</y><w>135</w><h>117</h></coordinates><panel_attributes>_Maintenance_
+string rapport</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>864</x><y>459</y><w>135</w><h>117</h></coordinates><panel_attributes>_Maintenance_
 --
 int id
 string maintenanceType
@@ -91,86 +91,86 @@ string strategy
 string statut
 date operationDate
 string details
-decimal cos</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>198</x><y>585</y><w>144</w><h>108</h></coordinates><panel_attributes>_Logiciel_
+decimal cos</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>198</x><y>567</y><w>144</w><h>108</h></coordinates><panel_attributes>_Logiciel_
 --
 int id
 string nom
 string version
 string editeur
 string typeLicence
-int nombrePostesAutorises</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>459</x><y>585</y><w>108</w><h>99</h></coordinates><panel_attributes>_Licence_
+int nombrePostesAutorises</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>459</x><y>567</y><w>108</w><h>99</h></coordinates><panel_attributes>_Licence_
 --
 int id
 string cleActivation
 date dateAchat
 date dateExpiration
-int nombrePostes</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>603</x><y>495</y><w>126</w><h>81</h></coordinates><panel_attributes>_Installation_
+int nombrePostes</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>603</x><y>477</y><w>126</w><h>81</h></coordinates><panel_attributes>_Installation_
 --
 int id
 date dateInstallation
 string versionInstallee
-string statut</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>99</x><y>189</y><w>117</w><h>108</h></coordinates><panel_attributes>_Rapport_
+string statut</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>99</x><y>171</y><w>117</w><h>108</h></coordinates><panel_attributes>_Rapport_
 --
 int id
 string titre
 string type
 date dateGeneration
 string format
-json payload</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>513</x><y>189</y><w>162</w><h>117</h></coordinates><panel_attributes>lt=-
+json payload</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>513</x><y>171</y><w>162</w><h>117</h></coordinates><panel_attributes>lt=-
 m1=0..*
 m2=1..1
-         historique </panel_attributes><additional_attributes>160;20;30;20;30;110</additional_attributes></element><element><id>Relation</id><coordinates><x>603</x><y>351</y><w>225</w><h>45</h></coordinates><panel_attributes>lt=-
+         historique </panel_attributes><additional_attributes>160;20;30;20;30;110</additional_attributes></element><element><id>Relation</id><coordinates><x>603</x><y>333</y><w>225</w><h>45</h></coordinates><panel_attributes>lt=-
 m1=0..1
 m2=0..* 
-transfère à</panel_attributes><additional_attributes>10;20;230;20</additional_attributes></element><element><id>Relation</id><coordinates><x>90</x><y>387</y><w>162</w><h>144</h></coordinates><panel_attributes>lt=-
+transfère à</panel_attributes><additional_attributes>10;20;230;20</additional_attributes></element><element><id>Relation</id><coordinates><x>90</x><y>369</y><w>162</w><h>144</h></coordinates><panel_attributes>lt=-
 m1=1..1
 m2=0..*
-crée</panel_attributes><additional_attributes>160;20;10;20;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>288</x><y>225</y><w>63</w><h>117</h></coordinates><panel_attributes>lt=-
+crée</panel_attributes><additional_attributes>160;20;10;20;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>288</x><y>207</y><w>54</w><h>117</h></coordinates><panel_attributes>lt=-
 m1=1..1
 m2=0..*
-réalise</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>135</x><y>288</y><w>117</w><h>108</h></coordinates><panel_attributes>lt=-
+réalise</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>117</x><y>270</y><w>135</w><h>108</h></coordinates><panel_attributes>lt=-
 m1=1..1
 m2=0..*
-génère
-</panel_attributes><additional_attributes>110;90;10;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>333</x><y>414</y><w>162</w><h>54</h></coordinates><panel_attributes>lt=-
+          génère
+</panel_attributes><additional_attributes>130;90;30;90;30;10</additional_attributes></element><element><id>Relation</id><coordinates><x>333</x><y>396</y><w>162</w><h>54</h></coordinates><panel_attributes>lt=-
 m1=1..1
 m2=0..*
 
 
-utilise</panel_attributes><additional_attributes>10;20;160;20</additional_attributes></element><element><id>Relation</id><coordinates><x>45</x><y>108</y><w>207</w><h>423</h></coordinates><panel_attributes>lt=-
+utilise</panel_attributes><additional_attributes>10;20;160;20</additional_attributes></element><element><id>Relation</id><coordinates><x>45</x><y>90</y><w>207</w><h>423</h></coordinates><panel_attributes>lt=-
 m1=1..1
 m2=0..*
-génère</panel_attributes><additional_attributes>210;10;10;10;10;450</additional_attributes></element><element><id>Relation</id><coordinates><x>135</x><y>450</y><w>396</w><h>126</h></coordinates><panel_attributes>lt=-
+génère</panel_attributes><additional_attributes>210;10;10;10;10;450</additional_attributes></element><element><id>Relation</id><coordinates><x>135</x><y>432</y><w>396</w><h>126</h></coordinates><panel_attributes>lt=-
 m1=0..*
 m2=1..1
-concerne</panel_attributes><additional_attributes>10;110;400;110;400;10</additional_attributes></element><element><id>Relation</id><coordinates><x>522</x><y>450</y><w>99</w><h>126</h></coordinates><panel_attributes>lt=-
+concerne</panel_attributes><additional_attributes>10;110;400;110;400;10</additional_attributes></element><element><id>Relation</id><coordinates><x>522</x><y>432</y><w>99</w><h>126</h></coordinates><panel_attributes>lt=-
 m1=1..1
 m2=0..*
-reçoit</panel_attributes><additional_attributes>10;10;10;110;90;110</additional_attributes></element><element><id>Relation</id><coordinates><x>1026</x><y>216</y><w>63</w><h>108</h></coordinates><panel_attributes>lt=-
+reçoit</panel_attributes><additional_attributes>10;10;10;110;90;110</additional_attributes></element><element><id>Relation</id><coordinates><x>1026</x><y>198</y><w>63</w><h>108</h></coordinates><panel_attributes>lt=-
 m1=0..*
 m2=1..1
-contient</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>909</x><y>180</y><w>99</w><h>45</h></coordinates><panel_attributes>lt=-
+contient</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>909</x><y>162</y><w>99</w><h>45</h></coordinates><panel_attributes>lt=-
 m1=0..*
 m2=1..1
-contient</panel_attributes><additional_attributes>10;20;90;20</additional_attributes></element><element><id>Relation</id><coordinates><x>603</x><y>171</y><w>279</w><h>189</h></coordinates><panel_attributes>lt=-
+contient</panel_attributes><additional_attributes>10;20;90;20</additional_attributes></element><element><id>Relation</id><coordinates><x>603</x><y>153</y><w>279</w><h>189</h></coordinates><panel_attributes>lt=-
 m1=0..*
 m2=0..1
-héberge                              </panel_attributes><additional_attributes>10;180;220;180;220;10;260;10</additional_attributes></element><element><id>Relation</id><coordinates><x>333</x><y>585</y><w>144</w><h>45</h></coordinates><panel_attributes>lt=-
+héberge                              </panel_attributes><additional_attributes>10;180;220;180;220;10;260;10</additional_attributes></element><element><id>Relation</id><coordinates><x>333</x><y>567</y><w>144</w><h>45</h></coordinates><panel_attributes>lt=-
 m1=0..1
 m2=1..*
-possède</panel_attributes><additional_attributes>10;20;140;20</additional_attributes></element><element><id>Relation</id><coordinates><x>558</x><y>567</y><w>126</w><h>99</h></coordinates><panel_attributes>lt=-
+possède</panel_attributes><additional_attributes>10;20;140;20</additional_attributes></element><element><id>Relation</id><coordinates><x>558</x><y>549</y><w>153</w><h>99</h></coordinates><panel_attributes>lt=-
 m1=0..*
 m2=0..1
-autorise</panel_attributes><additional_attributes>100;10;100;80;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>333</x><y>171</y><w>342</w><h>252</h></coordinates><panel_attributes>lt=-
+                          autorise</panel_attributes><additional_attributes>100;10;100;80;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>333</x><y>153</y><w>342</w><h>252</h></coordinates><panel_attributes>lt=-
 m1=0..*
 m2=1..1
-affecte à</panel_attributes><additional_attributes>360;10;140;10;140;250;10;250</additional_attributes></element><element><id>Relation</id><coordinates><x>693</x><y>108</y><w>216</w><h>72</h></coordinates><panel_attributes>lt=-
+affecte à</panel_attributes><additional_attributes>360;10;140;10;140;250;10;250</additional_attributes></element><element><id>Relation</id><coordinates><x>693</x><y>90</y><w>216</w><h>72</h></coordinates><panel_attributes>lt=-
 m1=1..1
 m2=1..1
-affecte à</panel_attributes><additional_attributes>10;60;10;20;200;20;200;60</additional_attributes></element><element><id>Relation</id><coordinates><x>333</x><y>108</y><w>171</w><h>279</h></coordinates><panel_attributes>lt=-
+affecte à</panel_attributes><additional_attributes>10;60;10;20;200;20;200;60</additional_attributes></element><element><id>Relation</id><coordinates><x>333</x><y>90</y><w>171</w><h>279</h></coordinates><panel_attributes>lt=-
 m1=0..*
 m2=1..1
-affecte à</panel_attributes><additional_attributes>170;10;70;10;70;280;10;280</additional_attributes></element><element><id>Relation</id><coordinates><x>603</x><y>369</y><w>279</w><h>171</h></coordinates><panel_attributes>lt=-
+affecte à</panel_attributes><additional_attributes>170;10;70;10;70;280;10;280</additional_attributes></element><element><id>Relation</id><coordinates><x>603</x><y>351</y><w>279</w><h>171</h></coordinates><panel_attributes>lt=-
 m1=0..1
 m2=0..* 
 

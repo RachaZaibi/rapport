@@ -165,31 +165,38 @@
 \newcommand{\glennchapter}[2]{%
   \newpage
   \thispagestyle{plain}
-  \vspace*{0.5cm}
-  
+  % \vspace*{0.5cm}
+
   % Top decorative line
   {\color{black!60}\hrule height 3pt}
-  
-  \vspace{1.5cm}
-  
-  % Chapter title box with Glenn style
+
+  % \vspace{0.5cm}
+
   \begin{center}
     \begin{minipage}[t]{0.9\textwidth}
       \vspace{0pt}
-      % Chapter number watermark (light gray background)
-      \hspace{-0.5cm}\makebox[0pt][l]{\fontsize{80}{80}\selectfont\color{black!12}\bfseries #1}%
-      
-      % Chapter title (overlaid)
-      \hfill{\fontsize{28}{32}\selectfont\bfseries\color{black} #2}\hfill
-      
-      \vspace{1cm}
+
+      % Watermark
+      \hspace{-0.5cm}\makebox[0pt][l]{%
+        \fontsize{70}{70}\selectfont\color{black!30}\bfseries #1%
+      }
+
+      % Title (FIXED)
+      \begin{center}
+      \raisebox{-1.7em}{%
+      \parbox{0.85\textwidth}{%
+      \centering
+      \fontsize{28}{32}\selectfont\bfseries #2
+      }}
+      \end{center}
+
+      % \vspace{0.5cm}
+
     \end{minipage}
   \end{center}
-  
+
   % Bottom decorative line
   {\color{black!60}\hrule height 1pt}
-  
-  \vspace{1.5cm}
 }
   
 
@@ -199,14 +206,14 @@
 \newcommand{\chapteroverview}[1]{%
   \newpage
   \thispagestyle{plain}
-  \vspace*{1cm}
+  % \vspace*{0.5cm}
   \begin{center}
     {\Large\bfseries Sommaire du chapitre}
   \end{center}
-  \vspace{1.5cm}
+  % \vspace{0.5cm}
   \noindent
   #1
-  \vspace{2cm}
+  % \vspace{2cm}
 }
 
 % ------------------------------------------------

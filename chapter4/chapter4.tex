@@ -1,6 +1,6 @@
 % \chapter{Planification et préparation du projet Parc Informatique FMM}
 % \label{chap:sprint0}
-\glennchapter{CHAPITRE 4}{Planification et préparation du projet Parc Informatique FMM}
+\glennchapter{CHAPITRE 4}{Planification et préparation  du projet Parc Informatique FMM}
 \vspace{1cm}
 \markboth{Chapitre 4 : Planification et préparation du projet Parc Informatique FMM}{}
 \label{chap:sprint0}
@@ -102,18 +102,18 @@ Le projet est structuré en trois sprints de trois semaines chacun. Le tableau c
 \endhead
 % Sprint 1
 \textbf{Sprint 1 \newline Mise en place de l'architecture et gestion des équipements} &
-\begin{itemize}[leftmargin=8pt]
+\begin{itemize}[leftmargin=4pt]
     \item Backend API REST avec Express.js.
     \item Base de données MySQL configurée.
     \item Module de gestion des équipements fonctionnel.
 \end{itemize} &
-\begin{itemize}[leftmargin=8pt]
+\begin{itemize}[leftmargin=4pt]
     \item Configuration du serveur backend.
     \item Création des schémas de base de données.
     \item Développement des endpoints pour CRUD des équipements.
     \item Validation fonctionnelle des fonctionnalités.
 \end{itemize} &
-\begin{itemize}[leftmargin=8pt]
+\begin{itemize}[leftmargin=4pt]
     \item Équipements ajoutés, modifiés et supprimés via API.
     \item Données persistées correctement en base.
     \item Interface web basique pour visualisation.
@@ -121,18 +121,18 @@ Le projet est structuré en trois sprints de trois semaines chacun. Le tableau c
 \hline
 % Sprint 2
 \textbf{Sprint 2 \newline Gestion des incidents et maintenances} &
-\begin{itemize}[leftmargin=8pt]
+\begin{itemize}[leftmargin=4pt]
     \item Système de ticketing opérationnel.
     \item Module de maintenances implémenté.
     \item Notifications push intégrées.
 \end{itemize} &
-\begin{itemize}[leftmargin=8pt]
+\begin{itemize}[leftmargin=4pt]
     \item Développement des endpoints pour tickets et maintenances.
     \item Intégration de Firebase FCM pour notifications.
     \item Gestion de l'état des tickets et affectation.
     \item Validation fonctionnelle par tests manuels.
 \end{itemize} &
-\begin{itemize}[leftmargin=8pt]
+\begin{itemize}[leftmargin=4pt]
     \item Tickets créés et assignés aux techniciens.
     \item Maintenances générées lors de la clôture des interventions.
     \item Notifications envoyées en temps réel.
@@ -140,18 +140,18 @@ Le projet est structuré en trois sprints de trois semaines chacun. Le tableau c
 \hline
 % Sprint 3
 \textbf{Sprint 3 \newline Finalisation et rapports} &
-\begin{itemize}[leftmargin=8pt]
+\begin{itemize}[leftmargin=4pt]
     \item Interface web fonctionnelle avec React.
     \item Système de rapports fonctionnel.
     \item Authentification et autorisation protégées.
 \end{itemize} &
-\begin{itemize}[leftmargin=8pt]
+\begin{itemize}[leftmargin=4pt]
     \item Développement de l'interface web.
     \item Implémentation de l'authentification JWT.
     \item Génération de rapports PDF/JSON.
     \item Validation de la sécurité et des performances.
 \end{itemize} &
-\begin{itemize}[leftmargin=8pt]
+\begin{itemize}[leftmargin=4pt]
     \item Interface utilisateur intuitive et responsive.
     \item Rapports générés sur demande.
     \item Accès protégé selon les rôles.
@@ -217,20 +217,48 @@ L’éditeur principal utilisé est Visual Studio Code, choisi pour sa légèret
 \includegraphics[height=2.5cm]{chapter4/images/vscode_logo.jpg}
 \end{center}
 
-Le backend repose sur Node.js accompagné de npm, qui constitue le gestionnaire de paquets permettant l’installation et la gestion des dépendances du projet.
+% L'environnement repose sur Node.js accompagné de npm, qui constitue le gestionnaire de paquets permettant l’installation et la gestion des dépendances du projet.
+% speak about ern as mysql express react node 
 
-\begin{center}
-\includegraphics[height=2.5cm]{chapter4/images/javascript_logo.png}
-\end{center}
+% \begin{center}
+% \includegraphics[height=2.5cm]{chapter4/images/javascript_logo.png}
+% \end{center}
 
-Plusieurs outils s’ajoutent à l’environnement de développement afin d’améliorer la productivité et la qualité du code :
+L'environnement de développement du projet repose sur une architecture JavaScript Full Stack illustrée par la figure \ref{fig:architecture_technique}. Cette architecture combine plusieurs technologies complémentaires permettant de couvrir l'ensemble des besoins de l'application.
+
+Du côté serveur, \textbf{Node.js} est utilisé comme environnement d'exécution JavaScript, tandis que \textbf{Express.js} fournit les mécanismes nécessaires à la conception des services Web REST assurant la communication entre les différentes couches du système. La couche de présentation est développée à l'aide de \textbf{React.js}, une bibliothèque JavaScript moderne facilitant la création d'interfaces utilisateur interactives, réactives et modulaires.
+
+Pour la persistance des données, le projet s'appuie sur le système de gestion de bases de données relationnelles \textbf{MySQL}. L'accès aux données est assuré par \textbf{Sequelize ORM}, qui permet de manipuler les entités métier sous forme d'objets tout en simplifiant les opérations de gestion de la base de données. Cette approche améliore la maintenabilité du code et réduit la complexité liée à l'écriture des requêtes SQL.
+
+L'adoption de cette architecture garantit une séparation claire des responsabilités entre les différentes couches du système, favorise la réutilisabilité du code et facilite l'évolution future de l'application.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{chapter4/images/architecture_technique.jpg}
+\caption{Architecture technologique }
+\label{fig:architecture_technique}
+\end{figure}
+
+Afin d'améliorer la productivité de l'équipe de développement et de garantir la qualité du logiciel réalisé, plusieurs outils complémentaires ont été intégrés à l'environnement de travail :
+
 \begin{itemize}
-    \item \textbf{Nodemon} : outil de rechargement automatique du serveur backend lors des modifications du code.
-    \item \textbf{Vite} : outil moderne de développement frontend offrant un démarrage rapide et le Hot Module Replacement (HMR).
-    \item \textbf{ESLint} : outil d’analyse statique permettant de détecter les erreurs et d’assurer la qualité du code JavaScript.
-    \item \textbf{Git} : système de contrôle de version utilisé pour le suivi des modifications et la collaboration.
-    \item \textbf{Swagger UI} : interface de documentation interactive permettant de tester et visualiser les endpoints de l’API REST.
+\item \textbf{Nodemon} : outil permettant le redémarrage automatique du serveur backend à chaque modification du code source, ce qui accélère les cycles de développement et de test.
+
+\item \textbf{Vite} : environnement moderne de développement frontend offrant un temps de démarrage très rapide ainsi qu'un mécanisme de \textit{Hot Module Replacement (HMR)} permettant d'appliquer instantanément les modifications effectuées dans l'interface utilisateur.
+
+\item \textbf{ESLint} : outil d'analyse statique du code JavaScript utilisé pour détecter les erreurs potentielles, appliquer les conventions de codage et maintenir une qualité de code homogène tout au long du projet.
+
+\item \textbf{Git} : système de gestion de versions distribué utilisé pour le suivi des modifications du code source, la gestion des différentes versions du projet ainsi que la collaboration entre les membres de l'équipe.
+
+\item \textbf{Swagger UI} : interface de documentation interactive permettant de visualiser, tester et valider les différents endpoints exposés par l'API REST développée dans le cadre du projet.
+
+\item \textbf{Visual Studio Code} : environnement de développement intégré utilisé pour l'implémentation du frontend, du backend et la gestion des différents fichiers constituant l'application.
+
+\item \textbf{Postman} : outil de test et de validation des services Web REST permettant de vérifier le bon fonctionnement des requêtes HTTP et des réponses retournées par l'API.
+```
+
 \end{itemize}
+
 
 \subsection{Environnement logiciel}
 \label{subsec:logiciel}
